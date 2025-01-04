@@ -1256,7 +1256,7 @@ export class NpcQuickBuildData {
         for (const slot of Object.keys(this.party)) {
             if (!this.party[slot].configured) {
                 // get the uuid of the pokemon
-                const uuid = this.party[slot]?.species?.uuid || this.party[slot]?.species?.selected?.at(0)?.value;
+                const uuid = this.party[slot]?.species?.uuid || this.party[slot]?.species?.selected?.at(0)?.uuid;
                 if (!uuid) continue;
                 await this.configurePokemonSpecies(slot, { uuid });
             };
