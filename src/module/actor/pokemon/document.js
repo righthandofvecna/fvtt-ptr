@@ -299,9 +299,36 @@ class PTUPokemonActor extends PTUActor {
         this.attributes.health.max = system.health.max;
 
         const calcLevelCap = (friendship) => Math.ceil(5 + (1.58 * ((this.trainer?.system.level.current ?? 0) * (["data-revamp", "short-track"].includes(game.settings.get("ptu", "variant.trainerAdvancement")) ? 2 : ["long-track"].includes(game.settings.get("ptu", "variant.trainerAdvancement")) ? 0.5 : 1))) + ((4 / 3) * (friendship) * Math.pow(1 + (((this.trainer?.system.level.current ?? 0) * (["data-revamp", "short-track"].includes(game.settings.get("ptu", "variant.trainerAdvancement")) ? 2 : ["long-track"].includes(game.settings.get("ptu", "variant.trainerAdvancement")) ? 0.5 : 1)) / 34), 2)));
+        
+        // Calculate EXP Training Level Cap: Trainer Level × Milestone Multiplier
+        // Milestone Multiplier = 2 + 2 × Milestones earned
+        const calcExpTrainingLevelCap = () => {
+            try {
+                const trainer = this.trainer;
+                if (!trainer) {
+                    return 6;
+                }
+                
+                // Use the trainer's dedicated EXP Training data method
+                const expData = trainer.getExpTrainingData();
+                
+                // Return the pre-calculated EXP Training Level Cap
+                const result = expData.expTrainingLevelCap;
+                
+                // Handle edge cases
+                if (isNaN(result) || result === null || result === undefined) {
+                    return 6;
+                }
+                
+                return result;
+            } catch (error) {
+                return 6;
+            }
+        };
+
         this.attributes.level.cap = {
             current: calcLevelCap(system.friendship ?? 0),
-            training: calcLevelCap(0),
+            training: calcExpTrainingLevelCap(),
         }
 
         /* The Corner of Exceptions */

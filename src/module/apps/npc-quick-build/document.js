@@ -721,12 +721,18 @@ export class NpcQuickBuildData {
             species = await fromUuid(uuid);
         }
 
+        // Check if species is valid before proceeding
+        if (!species) {
+            console.warn(`PTU NPC Quick Build: Could not find species for UUID: ${uuid}`);
+            return;
+        }
+
         pkmn.species.uuid = uuid;
         pkmn.species.object = species;
         pkmn.species.name = species.name;
         // set available genders
         const genders = [];
-        const genderRatio = species.system.breeding.genderRatio;
+        const genderRatio = species.system?.breeding?.genderRatio ?? 50; // Default to 50/50 if undefined
         if (genderRatio == -1) {
             genders.push({
                 label: "PTU.Genderless",
@@ -756,7 +762,7 @@ export class NpcQuickBuildData {
         pkmn.species.gender.choosable = genders.length > 1;
 
         // get minimum level for this evolution
-        pkmn.level.min = species.system.evolutions.find(e => e.slug == species.system.slug)?.level ?? 1;
+        pkmn.level.min = species.system?.evolutions?.find(e => e.slug == species.system?.slug)?.level ?? 1;
         if (pkmn.level.value < pkmn.level.min) {
             pkmn.level.value = pkmn.level.min;
         }
