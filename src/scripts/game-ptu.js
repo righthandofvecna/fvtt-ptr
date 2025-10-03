@@ -14,6 +14,7 @@ import { pokedex } from "./macros/pokedex.js"
 import { changeRotomForm } from "./macros/rotom-form-change.js"
 import { TypeMatrix } from "../module/apps/type-matrix.js";
 import { Weather } from "../module/apps/weather.js";
+import { PTUPokemonTrainingSheet } from "../module/apps/pokemon-training/index.js";
 
 const GamePTU = {
     onInit() {
@@ -41,6 +42,7 @@ const GamePTU = {
                 MigrationSummary
             },
             weather: Weather,
+            pokemonTraining: PTUPokemonTrainingSheet,
             macros: {
                 changeRotomForm,
                 pokedex,
@@ -52,7 +54,17 @@ const GamePTU = {
         
                     const folder = await Folder.create({ name: "Actor Notes", type: "JournalEntry" });
                     return game.settings.set("ptu", "worldNotesFolder", folder.id)
-                })
+                }),
+                openPokemonTraining: (actor) => {
+                    if (!actor) {
+                        if (game.user.character === null) {
+                            ui.notifications.error("No Character was set for this user.", { localize: true });
+                            return;
+                        }
+                        actor = game.user.character;
+                    }
+                    new PTUPokemonTrainingSheet({actor}).render(true);
+                }
             },
             tokenPanel: new TokenPanel()
         }
