@@ -10,6 +10,47 @@ class PTUTrainerActor extends PTUActor {
         return ["feat", "edge", "move", "contestmove", "ability", "item", "capability", "effect", "condition", "dexentry"]
     }
 
+    /**
+     * Get EXP Training data without side effects and duplicating other data effects
+     * Calculates trainer level and milestone data for Pokemon EXP Training Level Cap
+     * @returns {Object} Object with level, milestones, milestoneMultiplier, and expTrainingLevelCap
+     */
+    getExpTrainingData() {
+        // Calculate trainer level using the same logic as prepareBaseData
+        const levelUpRequirement = game.settings.get("ptu", "variant.trainerAdvancement") === "short-track" ? 20 : 10;
+        const maxLevel = {
+            "original": 50,
+            "data-revamp": 25,
+            "short-track": 25,
+            "ptr-update": 50,
+            "long-track": 100,
+        };
+        
+        const dexexp = game.settings.get("ptu", "variant.useDexExp") == true
+            ? (this.system.dex?.owned?.length || 0)
+            : 0;
+        
+        const level = Math.clamp(
+            1
+            + Number(this.system.level.milestones)
+            + Math.trunc((Number(this.system.level.miscexp) / levelUpRequirement) + (Number(dexexp) / levelUpRequirement)),
+            1,
+            maxLevel[game.settings.get("ptu", "variant.trainerAdvancement")] ?? 50
+        );
+        
+        // Training milestones are based on trainer level (every 5 levels = 1 milestone)
+        // Training milestones =/= milestones exp
+        const trainingMilestones = Math.floor(level / 5);
+        const milestoneMultiplier = 2 + (2 * trainingMilestones);
+        
+        return {
+            level,
+            milestones: trainingMilestones,
+            milestoneMultiplier,
+            expTrainingLevelCap: level * milestoneMultiplier
+        };
+    }
+
     /** @override */
     prepareBaseData() {
         super.prepareBaseData();

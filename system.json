@@ -6,7 +6,7 @@
     "minimum": "13.345",
     "verified": "13.348"
   },
-  "version": "4.4.1",
+  "version": "4.4.2",
   "templateVersion": 2,
   "authors": [
     {
@@ -32,7 +32,8 @@
       "url": "https://www.youtube.com/channel/UCiUTs4FV0HtdoziFogJAdEw"
     },
     {
-      "name": "p-arth"
+      "name": "UmcaraAí",
+      "url": "https://github.com/p-arth"
     }
   ],
   "esmodules": ["src/ptr.js"],

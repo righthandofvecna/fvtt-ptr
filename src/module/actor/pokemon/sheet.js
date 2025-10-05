@@ -86,6 +86,12 @@ export class PTUPokemonSheet extends PTUActorSheet {
 
 		if (this.actor.isOwner) {
 			buttons.unshift({
+				label: "Training",
+				class: "training-screen",
+				icon: "fas fa-dumbbell",
+				onclick: () => new CONFIG.PTU.ui.pokemonTraining.sheetClass({ actor: this.actor }).render(true)
+			});
+			buttons.unshift({
 				label: "Party",
 				class: "part-screen",
 				icon: "fas fa-users",

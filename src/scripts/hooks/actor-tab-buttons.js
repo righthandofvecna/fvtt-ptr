@@ -15,6 +15,7 @@ export const ActorButtons = {
             secondRowDiv.append(`<button class="mass-generator"><i class="fas fa-users"></i>Pkmn Generator</button>`);
             
             thirdRowDiv.append(`<button class="quick-build"><i class="fas fa-users"></i>NPC Quick Build</button>`);
+            thirdRowDiv.append(`<button class="pokemon-training"><i class="fas fa-dumbbell"></i>Pokemon Training</button>`);
             
             // Append the new rows to the action buttons container
             sidebarButtons.append(secondRowDiv);
@@ -32,6 +33,9 @@ export const ActorButtons = {
                 return npcQuickBuild.preload().then(()=>npcQuickBuild.renderAsync(true)).finally(()=>{
                     event.target.disabled = false;
                 });
+            });
+            $("#sidebar #actors .directory-header .action-buttons .pokemon-training").on("click", async (event) => {
+                game.ptu.macros.openPokemonTraining();
             });
         });
 

@@ -482,10 +482,16 @@
                             <div class="fb-48">
                                 <b>{{localize "PTU.LevelCapTraining"}}</b>
                             </div>
+                            <div class="fb-48">
+                                <b>{{localize "PTU.ExpCapAmount"}}</b>
+                            </div>
                         </div>
-                        <div class="swsh-body d-flex align-items-center justify-content-center pt-1 pb-1 center-text">
+                        <div class="swsh-body d-flex align-items-center justify-content-between pt-1 pb-1 center-text">
                             <div class="fb-48">
                                 <input type="number" value="{{actor.attributes.level.cap.training}}" disabled/>
+                            </div>
+                            <div class="fb-48">
+                                <input type="number" value="{{actor.attributes.level.cap.amount}}" disabled/>
                             </div>
                         </div>
                     </div>

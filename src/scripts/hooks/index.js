@@ -11,6 +11,7 @@ import { CompendiumBrowserInlineEnricher } from "./compendium-browser-inline-enr
 import { TagifySheets } from "./tagify-sheets.js";
 import { PokeDollarEnricher } from "./pokedollar-enricher.js";
 import { RenderChatMessage } from "./render-chat-message.js";
+import { TrainerPokemonSync } from "./trainer-pokemon-sync.js";
 
 export const PtuHooks = {
     listen() {
@@ -28,7 +29,8 @@ export const PtuHooks = {
             CompendiumBrowserInlineEnricher,
             TagifySheets,
             PokeDollarEnricher,
-            RenderChatMessage
+            RenderChatMessage,
+            TrainerPokemonSync
         ]
         for(const listener of listeners) listener.listen();
     }

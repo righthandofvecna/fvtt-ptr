@@ -427,6 +427,10 @@
     "PartySheet.NoTrainer": "This Pokémon does not belong to any party, please assign one from a trainer's sheet.",
     "PartySheet.NoFolder": "The trainer needs to have its own folder in the actor's directory.",
     "PartySheet.Title": "Party Sheet",
+    "PokemonTrainingSheet.NoActor": "An actor needs to be provided to the form",
+    "PokemonTrainingSheet.Title": "Pokemon Training Sheet",
+    "PokemonTrainingSheet.AutoDistributeXP": "Auto Distribute XP",
+    "ExpCapAmount": "EXP Cap Amount",
     "DexSheet": {
       "Title": "Dex",
       "Notifications": {
@@ -527,7 +531,9 @@
       "Nickname": "Nickname",
       "Alliance": "Alliance",
       "TrainerLevel": "Trainer Level",
+      "Image": "Image",
       "Classes": "Classes",
+      "ClassesRestricted": "Restrict to Chosen Classes",
       "Features": "Features",
       "Edges": "Edges",
       "Skills": "Skills",

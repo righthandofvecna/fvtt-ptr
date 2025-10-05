@@ -1,0 +1,61 @@
+<form onsubmit="_updateObject()" class="{{cssClass}} container-fluid" autocomplete="off">
+    <div class="d-flex flex-column w-100 h-100">
+        {{#if trainer}}
+            <div class="d-flex flex-column mb-2 trainer">
+                <h3>Trainer</h3>
+                <div class="d-flex flex-row party-list">
+                    <div class="party-item" data-actor-uuid="{{trainer.uuid}}">
+                        <img src="{{trainer.img}}" alt="{{trainer.name}}" title="{{trainer.name}}" />
+                        <div class="labels">
+                            <label>{{trainer.name}}</label>
+                            <small>Level: {{trainer.system.level.current}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/if}}
+        {{#each boxes as |box name|}}
+            <div class="d-flex flex-column mb-2">
+                <h3>{{formatSlug name}}<span style="float:right;">{{#if (is name "training")}}{{box.instances}} instances of {{box.xpinstance}} EXP for a Total EXP of: {{else}}Average Level: {{/if}}{{#if box.metric}}{{box.metric}}{{/if}}</span></h3>
+                {{#if (is name "training")}}
+                    <div style="text-align: center; margin-bottom: 10px;">
+                        <input type="radio" id="none" value="none" name="training" checked="checked">
+                        <label for="none">None</label>
+                        <input type="radio" id="agility-training" name="training" value="agility-training">
+                        <label for="agility-training">Agility Training</label>
+                        <input type="radio" id="brutal-training" name="training" value="brutal-training">
+                        <label for="brutal-training">Brutal Training</label>
+                        <input type="radio" id="focused-training" name="training" value="focused-training">
+                        <label for="focused-training">Focused Training</label>
+                        <input type="radio" id="inspired-training" name="training" value="inspired-training">
+                        <label for="inspired-training">Inspired Training</label>
+                    </div>
+                    <div style="text-align: center; margin-bottom: 10px;">
+                        <button type="submit">Train!</button>
+                    </div>
+                {{/if}}
+                <div class="d-flex flex-row party-list droppable" data-party-status="{{name}}">
+                    {{#each box.contents as |actor|}}
+                        <div class="party-item draggable" data-actor-uuid="{{actor.uuid}}" data-party-status="{{#if (is name "training")}}training{{else}}{{#if (is name "party")}}party{{else}}{{#if (is name "available")}}available{{else}}boxed{{/if}}{{/if}}{{/if}}" data-actor-index="{{@index}}">
+                            <img src="{{actor.img}}" alt="{{actor.name}}" title="{{actor.name}}" />
+                            <div class="labels">
+                                <label>{{actor.name}}</label>
+                                <small>Level: {{actor.system.level.current}}</small>
+                                {{#if (is name "training")}}
+                                    <input id="xp-for-{{actor.id}}" name="{{actor.id}}" type="number" style="width: 80px; margin-top: 5px;" placeholder="EXP">
+                                {{/if}}
+                            </div>
+                        </div>
+                    {{/each}}
+                    {{#unless box.contents}}
+                        <div class="party-item empty">
+                            <div class="item-name">
+                                <small><i>Drop actor here</i></small>
+                            </div>
+                        </div>
+                    {{/unless}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</form>
