@@ -16,7 +16,8 @@ class PTUCombat extends Combat {
 
     /** @override */
     _sortCombatants(a, b) {
-        const { leagueBattle } = game.settings.get("core", PTUCombat.CONFIG_SETTING);
+        const leagueBattle = game.settings.get("ptu", "leagueBattle");
+        
         const resolveTie = () => {
             const [priorityA, priorityB] = [a, b].map(
                 (combatant) => ({

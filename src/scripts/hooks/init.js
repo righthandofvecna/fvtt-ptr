@@ -30,6 +30,9 @@ export const Init = {
             CONFIG.Combat.defeatedStatusId = PTUCONFIG.combat.defeatedStatusId;
             CONFIG.Combatant.documentClass = PTUCONFIG.combatant.documentClass;
             CONFIG.ui.combat = PTUCONFIG.combat.uiClass;
+            
+            // Register combat config hooks to inject League Battle setting
+            PTUCONFIG.combat.sheetClass.registerHooks();
 
             // Define custom Entity classes
             CONFIG.Actor.documentClass = PTUCONFIG.Actor.proxy;

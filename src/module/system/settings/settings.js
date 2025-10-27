@@ -82,6 +82,23 @@ export function registerSettings() {
     })
     TypeSettings.registerSettings();
 
+    game.settings.register("ptu", "leagueBattle", {
+        name: "League Battle Initiative",
+        hint: "Sort player characters in inverted order before pokémon in combat.",
+        scope: "world",
+        config: false,  // Don't show in normal settings menu
+        type: Boolean,
+        default: false,
+        onChange: async (value) => {
+            // Reset and re-sort all active combats when the setting changes
+            for (const combat of game.combats) {
+                // Use resetAll() to clear all initiatives and trigger a re-sort
+                // This is the same method used by the "Reset Initiative" button
+                await combat.resetAll();
+            }
+        }
+    });
+
     game.settings.register("ptu", "skipRollDialog", {
         name: "Skip roll dialog",
         hint: "Skip the roll dialog and automatically roll the dice.",
