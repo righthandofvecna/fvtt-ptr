@@ -42,7 +42,7 @@
                                 <label>{{actor.name}}</label>
                                 <small>Level: {{actor.system.level.current}}</small>
                                 {{#if (is name "training")}}
-                                    <input id="xp-for-{{actor.id}}" name="{{actor.id}}" type="number" style="width: 80px; margin-top: 5px;" placeholder="EXP">
+                                    <input id="xp-for-{{actor.id}}" name="{{actor.id}}" type="number" style="width: 80px; margin-top: 5px;" placeholder="Instances" min="0">
                                 {{/if}}
                             </div>
                         </div>

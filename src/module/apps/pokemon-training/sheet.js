@@ -584,18 +584,18 @@ class PTUPokemonTrainingSheet extends FormApplication {
     }
 
     autoDistributeXP() {
-        // Auto Distributes the XP across the selected pokemon evenly for each instances.
+        // Auto Distributes the training instances across the selected pokemon evenly
         let inputFields = document.querySelectorAll('[id*="xp-for-"]');
         if (inputFields.length === 0) {
             return;
         }
 
         let totalNumberOfPokemon = inputFields.length;
-        let xpToDistribute = this.xpToDistribute * (Math.floor(this.instancesOfTraining / totalNumberOfPokemon));
+        let instancesPerPokemon = Math.floor(this.instancesOfTraining / totalNumberOfPokemon);
         let extraInstances = this.instancesOfTraining % totalNumberOfPokemon;
         for (let i = 0; i < totalNumberOfPokemon; i++) {
-            let xpForPokemon = (i < extraInstances) ? xpToDistribute + (this.xpToDistribute) : xpToDistribute;
-            inputFields[i].value = xpForPokemon;
+            let instancesForPokemon = (i < extraInstances) ? instancesPerPokemon + 1 : instancesPerPokemon;
+            inputFields[i].value = instancesForPokemon;
         }
     }
 
@@ -604,30 +604,26 @@ class PTUPokemonTrainingSheet extends FormApplication {
         let trainingEffectID = this.getTrainingEffect(trainingType);
         let message = this.trainer.name + " has completed their daily training!<br>";
         Object.entries(trainingData).forEach(([key, value]) => {
-            console.log(key, value);
             let actor = game.actors.get(key);
             
             // Check if Pokemon is eligible for training
             const currentLevel = actor.system.level.current;
             const trainingLevelCap = actor.attributes.level.cap.training;
-            const trainingAmountCap = actor.attributes.level.cap.amount;
-            const expValue = parseInt(value) || 0;
+            
+            // Parse the number of instances to apply
+            const instancesValue = parseInt(value) || 0;
+            if (instancesValue === 0) return;
+            
+            // Calculate total EXP: instances × EXP per instance
+            const expValue = instancesValue * this.xpToDistribute;
             
             if (currentLevel > trainingLevelCap) {
                 message += `${actor.name} is too high level (${currentLevel}) for training (cap: ${trainingLevelCap})<br>`;
                 return;
             }
             
-            // Cap the EXP to the training amount limit
-            const actualExpGained = Math.min(expValue, trainingAmountCap);
-            if (actualExpGained < expValue) {
-                message += `${actor.name} EXP capped from ${expValue} to ${actualExpGained} (training cap: ${trainingAmountCap})<br>`;
-            }
-            
-            console.log(actor.name, actor.xp);
-            console.log(actor.system.level.exp, actor.system.level.exp + actualExpGained);
-            let updatedXP = actor.system.level.exp + actualExpGained;
-            message += actor.name + " gained " + actualExpGained + " EXP totaling to " + updatedXP + " EXP<br>";
+            let updatedXP = actor.system.level.exp + expValue;
+            message += actor.name + " gained " + expValue + " EXP (" + instancesValue + " instances) totaling to " + updatedXP + " EXP<br>";
             actor.update({'system.level.exp' : updatedXP});
             
             if (trainingEffectID !== "") {
