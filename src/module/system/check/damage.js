@@ -332,24 +332,35 @@ class PTUDamageCheck extends PTUDiceCheck {
 
         // Add the dice modifier to the total modifier
         const diceModifierParts = this.diceModifiers.reduce((a, b) => {
-            if (!b.ignored && !a[b.slug]) a[b.slug] = b.modifier;
+            if (!b.ignored && !a[b.slug]) a[b.slug] = b.value;
             return a;
         }, {});
 
-        const diceModifierTotal = Object.values(diceModifierParts).reduce((a, b) => a + b, 0);
-        const totalModifier = (this.statistic.totalModifier ?? 0) + diceModifierTotal;
+        // Build dice string with all dice modifiers properly concatenated
+        let fullDiceString = diceString;
+        for (const diceValue of Object.values(diceModifierParts)) {
+            fullDiceString += `+${diceValue}`;
+        }
 
         // Fix for +0 modifier concatenation issue
         let rollFormula;
+        const totalModifier = this.statistic.totalModifier ?? 0;
         if (totalModifier === 0) {
-            rollFormula = diceString;
+            rollFormula = fullDiceString;
         } else {
             const signedModifier = totalModifier > 0 ? `+${totalModifier}` : `${totalModifier}`;
-            rollFormula = `${diceString}${signedModifier}`;
+            rollFormula = `${fullDiceString}${signedModifier}`;
         }
         const roll = await new DamageRoll(rollFormula, {}, options).evaluate();
 
+        // For critical hits, double the base dice but not the ability dice modifiers
         const critDice = `${diceString}+${diceString}`;
+        
+        // Add dice modifiers once (not doubled) to crit formula
+        let critFullDiceString = critDice;
+        for (const diceValue of Object.values(diceModifierParts)) {
+            critFullDiceString += `+${diceValue}`;
+        }
         
         // Use the original damageBaseModifier value for critical hit calculation
         // This represents the damage base modifier that should be doubled
@@ -361,9 +372,9 @@ class PTUDamageCheck extends PTUDiceCheck {
         // Fix for +0 modifier concatenation issue in crit roll
         let critRollFormula;
         if (totalModifiersPartCrit === "+0" || totalModifiersPartCrit === "0") {
-            critRollFormula = critDice;
+            critRollFormula = critFullDiceString;
         } else {
-            critRollFormula = `${critDice}${totalModifiersPartCrit}`;
+            critRollFormula = `${critFullDiceString}${totalModifiersPartCrit}`;
         }
 
         const diceResult = roll.terms.find(t => t instanceof foundry.dice.terms.DiceTerm);
