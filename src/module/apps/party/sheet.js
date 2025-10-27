@@ -489,35 +489,34 @@ class PTUPartySheet extends FormApplication {
     }
 
     downloadParty() {
-        const data = {
-            trainer: this.trainer.toCompendium(null, {}),
-            party: this.party.map(p => {
-                const data = p.toCompendium(null, {});
-                data.flags.exportSource = {
-                    world: game.world.id,
-                    system: game.system.id,
-                    coreVersion: game.version,
-                    systemVersion: game.system.version
-                };
-                return data;
-            }),
-            boxed: this.boxed.map(p => {
-                const data = p.toCompendium(null, {});
-                data.flags.exportSource = {
-                    world: game.world.id,
-                    system: game.system.id,
-                    coreVersion: game.version,
-                    systemVersion: game.system.version
-                };
-                return data;
-            }),
-        }
-        data.trainer.flags.exportSource = {
+        const exportSource = {
             world: game.world.id,
             system: game.system.id,
             coreVersion: game.version,
             systemVersion: game.system.version
         };
+        
+        const data = {
+            trainer: this.trainer.toCompendium(null, {}),
+            party: this.party.map(p => {
+                const actorData = p.toCompendium(null, {});
+                // Store export source in a custom namespace to avoid V13 read-only property
+                if (!actorData.flags.ptu) actorData.flags.ptu = {};
+                actorData.flags.ptu.exportSource = exportSource;
+                return actorData;
+            }),
+            boxed: this.boxed.map(p => {
+                const actorData = p.toCompendium(null, {});
+                // Store export source in a custom namespace to avoid V13 read-only property
+                if (!actorData.flags.ptu) actorData.flags.ptu = {};
+                actorData.flags.ptu.exportSource = exportSource;
+                return actorData;
+            }),
+        }
+        
+        // Store export source in a custom namespace to avoid V13 read-only property
+        if (!data.trainer.flags.ptu) data.trainer.flags.ptu = {};
+        data.trainer.flags.ptu.exportSource = exportSource;
 
         const filename = ["fvtt", "ptuParty", this.trainer.name?.slugify(), foundry.utils.randomID()].filterJoin("-");
         saveDataToFile(JSON.stringify(data, null, 2), "text/json", `${filename}.json`);
