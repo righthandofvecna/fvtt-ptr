@@ -53,7 +53,7 @@
     },
     "stackSlugs": false,
     "keywords": [],
-    "frequency": "Static",
+    "frequency": "Statics",
     "tier": "",
     "name": "",
     "automation": [],
@@ -67,12 +67,13 @@
   "sort": 3100000,
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.6",
+    "coreVersion": "13.351",
     "createdTime": 1689606908412,
-    "modifiedTime": 1712497854607,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1776295534198,
+    "lastModifiedBy": "16jpY9ItlOGDLcol",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }
