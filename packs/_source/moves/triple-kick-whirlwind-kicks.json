@@ -1,15 +1,15 @@
 {
-  "name": "Triple Kick",
+  "name": "Triple Kick (Whirlwind Kicks)",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "After attacking with Triple Kick, hit or miss, the user may Disengage 2m and attack a different target with Triple Kick. This effect may be repeated a second time, targeting a creature that has not been targeted by either prior attack. Before making each attack roll, the user can elect to give up triggering all remaining additional shifts and attacks. Triple Kick gains 1 Accuracy and 1 Damage Base for each attack that is given up. Triple Kick always benefits from the Technician Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "triple-kick",
+    "slug": "triple-kick-whirlwind-kicks",
     "schema": {
       "version": 0.11,
       "lastMigration": null
@@ -20,7 +20,7 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1"
+      "Burst 1"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -35,18 +35,17 @@
     "damageBase": "4",
     "frequency": "At-Will",
     "ac": "3",
-    "range": "Melee",
+    "range": "Burst 1",
     "contestType": "Cool - Reliable",
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
     "automation": []
   },
-  "_id": "87puwvWzfGqdOQVN",
   "effects": [],
-  "sort": 10300000,
   "ownership": {
-    "default": 0
+    "default": 0,
+    "izk1pNEkJuVFmrxW": 3
   },
   "flags": {
     "ptu": {
@@ -54,14 +53,16 @@
     }
   },
   "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.6",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1776294157819,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW",
+    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "compendiumSource": null
-  }
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.6",
+    "createdTime": 1776294192781,
+    "modifiedTime": 1776294266442,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+  },
+  "_id": "dVfouioNj802Rjhp",
+  "sort": 0
 }
