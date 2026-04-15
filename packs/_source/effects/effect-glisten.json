@@ -1,6 +1,6 @@
 {
-  "folder": "HRqCxFWWCw7BDgyP",
-  "name": "Effect: Kampfgeist",
+  "folder": "HTNFGIxy9zsCONjI",
+  "name": "Effect: Glisten",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
@@ -9,26 +9,31 @@
     "snippet": "",
     "rules": [
       {
-        "key": "Effectiveness",
-        "predicate": [],
-        "type": "bug",
-        "value": 0.5
+        "key": "ChoiceSet",
+        "flag": "glisten",
+        "choices": [
+          {
+            "label": "Defense",
+            "value": "def"
+          },
+          {
+            "label": "Special Defense",
+            "value": "spdef"
+          }
+        ]
       },
       {
-        "key": "Effectiveness",
+        "key": "ActiveEffectLike",
         "predicate": [],
-        "type": "dark",
-        "value": 0.5
-      },
-      {
-        "key": "Effectiveness",
-        "predicate": [],
-        "type": "rock",
-        "value": 0.5
+        "mode": "add",
+        "path": "system.stats.{item|flags.ptu.rulesSelections.glisten}.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-kampfgeist",
+    "slug": "effect-glisten",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -62,20 +67,29 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.6",
+    "systemVersion": "4.3.7",
     "coreVersion": "13.351",
-    "createdTime": 1711637539454,
-    "modifiedTime": 1776290434896,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW",
+    "createdTime": 1711638633514,
+    "modifiedTime": 1737552227310,
+    "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null,
     "compendiumSource": null
   },
-  "_id": "2hJ0LF3cQVtq6EhD",
+  "_id": "E13uQmGpA3YVRpaP",
   "sort": 0,
   "ownership": {
     "default": 0

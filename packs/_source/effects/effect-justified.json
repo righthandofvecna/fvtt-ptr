@@ -1,34 +1,24 @@
 {
-  "folder": "HRqCxFWWCw7BDgyP",
-  "name": "Effect: Kampfgeist",
+  "name": "Effect: Justified",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "@Embed[Compendium.ptu.abilities.Item.TWqOpCg6UmlH5dy9]",
     "snippet": "",
     "rules": [
       {
-        "key": "Effectiveness",
+        "key": "ActiveEffectLike",
         "predicate": [],
-        "type": "bug",
-        "value": 0.5
-      },
-      {
-        "key": "Effectiveness",
-        "predicate": [],
-        "type": "dark",
-        "value": 0.5
-      },
-      {
-        "key": "Effectiveness",
-        "predicate": [],
-        "type": "rock",
-        "value": 0.5
+        "mode": "add",
+        "path": "system.stats.atk.stages.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-kampfgeist",
+    "slug": "effect-justified",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -44,8 +34,8 @@
     },
     "duration": {
       "value": -1,
-      "unit": "unlimited",
-      "expiry": null
+      "unit": "encounter",
+      "expiry": "turn-start"
     },
     "start": {
       "value": 0,
@@ -59,6 +49,7 @@
     "context": null
   },
   "effects": [],
+  "folder": "HTNFGIxy9zsCONjI",
   "flags": {
     "ptu": {
       "showInTokenPanel": true
@@ -66,18 +57,24 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.6",
-    "coreVersion": "13.351",
+    "systemVersion": "4.2.6",
+    "coreVersion": "13.350",
     "createdTime": 1711637539454,
-    "modifiedTime": 1776290434896,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW",
+    "modifiedTime": 1712499651437,
+    "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
-    "exportSource": null,
+    "exportSource": {
+      "worldId": "testing",
+      "uuid": null,
+      "coreVersion": "11.315",
+      "systemId": "ptu",
+      "systemVersion": "4.2.5"
+    },
     "compendiumSource": null
   },
-  "_id": "2hJ0LF3cQVtq6EhD",
-  "sort": 0,
   "ownership": {
     "default": 0
-  }
+  },
+  "_id": "oWoo3iPRRLEUYkZU",
+  "sort": 4100000
 }

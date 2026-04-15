@@ -1,61 +1,48 @@
 {
-  "folder": "FUe0anCATLQvSKVs",
-  "name": "Effect: Commander",
+  "folder": "HTNFGIxy9zsCONjI",
+  "name": "Effect: Shell Cannon",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "@Embed[Compendium.ptu.abilities.Item.su90TtsmN1w7QqyN]",
     "snippet": "",
     "rules": [
       {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "attack-roll",
+        "value": 2
+      },
+      {
         "key": "ActiveEffectLike",
         "predicate": [],
         "mode": "add",
-        "path": "system.stats.spatk.stage.mod",
+        "path": "system.modifiers.capabilities.overland",
         "phase": "applyAEs",
         "value": 2,
         "priority": null
       },
       {
         "key": "ActiveEffectLike",
-        "predicate": [],
         "mode": "add",
-        "path": "system.stats.spdef.stage.mod",
+        "path": "system.modifiers.capabilities.swim",
         "phase": "applyAEs",
         "value": 2,
-        "priority": null
+        "priority": null,
+        "predicate": []
       },
       {
-        "key": "ActiveEffectLike",
-        "predicate": [],
-        "mode": "add",
-        "path": "system.stats.atk.stage.mod",
-        "phase": "applyAEs",
-        "value": 2,
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": [],
-        "mode": "add",
-        "path": "system.stats.def.stage.mod",
-        "phase": "applyAEs",
-        "value": 2,
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": [],
-        "mode": "add",
-        "path": "system.stats.spd.stage.mod",
-        "phase": "applyAEs",
-        "value": 2,
-        "priority": null
+        "key": "FlatModifier",
+        "hideIfDisabled": false,
+        "selectors": "damage-roll",
+        "value": 4,
+        "predicate": []
       }
     ],
     "enabled": true,
-    "slug": "effect-commander",
+    "slug": "effect-shell-cannon",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -64,15 +51,15 @@
     "source": {
       "value": "Homebrew"
     },
-    "stackSlugs": true,
+    "stackSlugs": false,
     "keywords": [],
     "level": {
       "value": 1
     },
     "duration": {
-      "value": 0,
-      "unit": "encounter",
-      "expiry": "turn-start"
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -93,18 +80,24 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
+    "systemVersion": "4.4.3.6",
     "coreVersion": "13.351",
-    "createdTime": 1706572433995,
-    "modifiedTime": 1712520280411,
-    "lastModifiedBy": "ptubuilder000000",
+    "createdTime": 1711902225880,
+    "modifiedTime": 1776291310728,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW",
     "duplicateSource": null,
-    "exportSource": null,
+    "exportSource": {
+      "worldId": "kanto-adventures",
+      "uuid": null,
+      "coreVersion": "11.315",
+      "systemId": "ptu",
+      "systemVersion": "4.2.5"
+    },
     "compendiumSource": null
   },
-  "_id": "9SvqiJfdzypiiSPT",
-  "sort": 0,
   "ownership": {
     "default": 0
-  }
+  },
+  "_id": "UOwQkZpkwdU7kCHU",
+  "sort": 600000
 }
