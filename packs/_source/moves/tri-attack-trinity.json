@@ -1,15 +1,15 @@
 {
-  "name": "Tri Attack",
+  "name": "Tri Attack (Trinity)",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
-    "effect": "Tri Attack gives the target a Status ailment on 17+. If this effect is triggered, roll 1d3; on 1 the target is Paralyzed; on 2 the target is Burned; on 3 the target is Frozen.",
+    "effect": "Make a different attack roll for each target. \n\nIf Tri-Attack’s effect range is activated, do not roll for the effect; the first target can only be Frozen, the second can only be Burned, and the third can only be Paralyzed. \n\nAdditionally, you may use Tri-Attack as a Physical Attack if you wish.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": null,
+    "slug": "tri-attack",
     "schema": {
       "version": 0.11,
       "lastMigration": null
@@ -20,7 +20,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1"
+      "Melee",
+      "Target 3"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -32,9 +33,9 @@
     "strongJaw": false,
     "type": "Normal",
     "category": "Special",
-    "damageBase": 8,
+    "damageBase": "8",
     "frequency": "EOT",
-    "ac": 2,
+    "ac": "2",
     "range": "Range 6",
     "contestType": "Beauty - Steady Performance",
     "stab": false,
@@ -47,6 +48,11 @@
   "sort": 24100000,
   "ownership": {
     "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
   },
   "_stats": {
     "systemId": "ptu",
