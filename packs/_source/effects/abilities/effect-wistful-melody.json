@@ -1,34 +1,36 @@
 {
-  "name": "Effect: Rapid Spin",
+  "name": "Effect: Wistful Melody",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "Speed +1 CS",
-    "snippet": "Speed +1 CS",
+    "effect": "",
+    "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
-        "mode": "add",
-        "path": "system.stats.spd.stage.mod",
-        "value": 1,
         "predicate": [],
+        "mode": "subtract",
+        "path": "system.stats.atk.stage.mod",
         "phase": "applyAEs",
+        "value": 2,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "subtract",
+        "path": "system.stats.spatk.stage.mod",
+        "phase": "applyAEs",
+        "value": 2,
         "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-rapid-spin",
+    "slug": "effect-wistful-melody",
     "schema": {
-      "version": 0.11,
-      "lastMigration": {
-        "datetime": "2023-09-18T08:52:04.636Z",
-        "version": {
-          "schema": null,
-          "foundry": "11.308",
-          "system": "4.0.0.beta.3"
-        }
-      }
+      "version": null,
+      "lastMigration": null
     },
     "referenceEffect": "",
     "source": {
@@ -56,14 +58,14 @@
     "context": null
   },
   "effects": [],
-  "folder": "vvYHstuSI4986bjM",
+  "folder": "HTNFGIxy9zsCONjI",
   "flags": {
     "ptu": {
       "showInTokenPanel": true
     },
     "scene-packer": {
-      "hash": "990e3779bba589eda775665517f4a638f69ebc74",
-      "sourceId": "Item.Gl0VbvAkFxBMSP2C"
+      "hash": "15d3779099155c65fec16a965857ba9549322c16",
+      "sourceId": "Item.xrRH2C6lCXxgbmIh"
     },
     "LocknKey": {
       "IDKeysFlag": "",
@@ -75,26 +77,21 @@
       "ReplacementItemFlag": ""
     }
   },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.2.2",
-    "coreVersion": "13.350",
-    "createdTime": 1694440845174,
-    "modifiedTime": 1710851809956,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": {
-      "worldId": "pokemon-test-world",
-      "uuid": null,
-      "coreVersion": "11.315",
-      "systemId": "ptu",
-      "systemVersion": "4.2.2"
-    },
-    "compendiumSource": null
-  },
-  "_id": "Hh6VvJMUarY6SCQP",
-  "sort": 1600000,
   "ownership": {
-    "default": 0
-  }
+    "default": 0,
+    "izk1pNEkJuVFmrxW": 3
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.6",
+    "createdTime": 1776294799991,
+    "modifiedTime": 1776295219574,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+  },
+  "_id": "1ECxBbebP97Qez4T",
+  "sort": 1200000
 }

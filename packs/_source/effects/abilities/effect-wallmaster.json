@@ -1,25 +1,24 @@
 {
-  "folder": "HTNFGIxy9zsCONjI",
-  "name": "Effect: Storm Drain",
+  "name": "Effect: Wallmaster",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "@Embed[Compendium.ptu.abilities.Item.gPFOWD8FeI5TQrum]",
+    "effect": "",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "predicate": [],
         "mode": "add",
-        "path": "system.stats.spatk.stage.mod",
+        "path": "system.stats.def.stage.mod",
         "phase": "applyAEs",
-        "value": 1,
+        "value": 2,
         "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-storm-drain",
+    "slug": "effect-wallmaster",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -35,7 +34,7 @@
     },
     "duration": {
       "value": -1,
-      "unit": "encounter",
+      "unit": "unlimited",
       "expiry": null
     },
     "start": {
@@ -50,31 +49,27 @@
     "context": null
   },
   "effects": [],
+  "folder": "HTNFGIxy9zsCONjI",
   "flags": {
     "ptu": {
       "showInTokenPanel": true
     }
   },
   "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.2.6",
-    "coreVersion": "13.351",
-    "createdTime": 1706572433995,
-    "modifiedTime": 1776295219574,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW",
+    "compendiumSource": null,
     "duplicateSource": null,
-    "exportSource": {
-      "worldId": "kanto-adventures",
-      "uuid": null,
-      "coreVersion": "11.315",
-      "systemId": "ptu",
-      "systemVersion": "4.2.5"
-    },
-    "compendiumSource": null
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.6",
+    "createdTime": 1776293916587,
+    "modifiedTime": 1776295219574,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW"
   },
   "ownership": {
-    "default": 0
+    "default": 0,
+    "izk1pNEkJuVFmrxW": 3
   },
-  "_id": "HzuXzHaliXLwU4Sm",
-  "sort": 500000
+  "_id": "8XU6F9upn0984cQv",
+  "sort": 900000
 }
