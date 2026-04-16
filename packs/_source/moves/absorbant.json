@@ -1,0 +1,68 @@
+{
+  "name": "Absorbant",
+  "type": "move",
+  "img": "/systems/ptu/static/css/images/types2/GrassIC_Icon.png",
+  "folder": "lWQOqDm2AOGwGM16",
+  "system": {
+    "origin": "",
+    "effect": "After the target takes damage, the user gains HP equal to half of the damage they dealt to the target.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "absorb",
+    "schema": {
+      "version": 0.11,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Target 1"
+    ],
+    "sheerForce": false,
+    "toughClaws": false,
+    "technician": false,
+    "reckless": false,
+    "ironFist": false,
+    "megaLauncher": false,
+    "punkRock": false,
+    "strongJaw": false,
+    "type": "Grass",
+    "category": "Special",
+    "damageBase": "2",
+    "frequency": "At-Will",
+    "ac": "2",
+    "range": "Range 4",
+    "contestType": "Smart - Good Show!",
+    "stab": false,
+    "damageBonus": 0,
+    "isStruggle": false,
+    "automation": []
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "16jpY9ItlOGDLcol": 3
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.8",
+    "createdTime": 1776300303439,
+    "modifiedTime": 1776300303439,
+    "lastModifiedBy": "16jpY9ItlOGDLcol"
+  },
+  "_id": "IsfXwiPuRW2CEgP9",
+  "sort": 0
+}
