@@ -1,14 +1,14 @@
 {
-  "name": "Mold Breaker",
+  "name": "Piercing Drill",
   "type": "ability",
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "The user ignores the effect of enemies’ Defensive Abilities.",
+    "effect": "Reactions, Interrupts, and Blessings may not be activated in response to the user’s Melee Attacks.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "mold-breaker",
+    "slug": "piercing-drill",
     "schema": {
       "version": 0.11,
       "lastMigration": null
@@ -23,12 +23,11 @@
     "tier": "",
     "automation": []
   },
-  "_id": "XUKqSH4Bt2Ofps47",
   "effects": [],
   "folder": null,
-  "sort": 29600000,
   "ownership": {
-    "default": 0
+    "default": 0,
+    "izk1pNEkJuVFmrxW": 3
   },
   "flags": {
     "ptu": {
@@ -36,14 +35,16 @@
     }
   },
   "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.12",
-    "coreVersion": "13.351",
-    "createdTime": 1692968394056,
-    "modifiedTime": 1776551708379,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW",
+    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "compendiumSource": null
-  }
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.12",
+    "createdTime": 1776552138766,
+    "modifiedTime": 1776552825647,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+  },
+  "_id": "v1b8OFRPmjjQnXNv",
+  "sort": 0
 }
