@@ -346,12 +346,13 @@ class GithubSyncManager {
                         { data: blob.data, diff: blob.diff, flags: { new: true } }
                     );
                     if (!result?.success) {
+                        ui.notifications.error(`Failed to stage dependency "${dep.name}". See console for details.`, { permanent: true });
                         console.error(`GithubSync | Failed to stage dependency "${dep.name}".`, result);
                     }
                 }
             }
         } catch (error) {
-            ui.notifications.error("An unexpected error occurred.");
+            ui.notifications.error("An unexpected error occurred.", { permanent: true });
             console.error("GithubSync |", error);
             return;
         }
@@ -691,9 +692,9 @@ class GithubSyncManager {
         if (result?.success) {
             ui.notifications.info("Successfully added file to next commit.");
         } else if (result?.error) {
-            ui.notifications.error(`GitHub sync error: ${result.error}`);
+            ui.notifications.error(`GitHub sync error: ${result.error}`, { permanent: true });
         } else if (!result) {
-            ui.notifications.error("An unexpected error occurred.");
+            ui.notifications.error("An unexpected error occurred.", { permanent: true });
         }
 
         return result;
@@ -731,8 +732,8 @@ class GithubSyncManager {
         const result = await GithubSyncManager.#authenticatedFetch(identity, { flags });
 
         if (result && !result.success) {
-            if (result.error) ui.notifications.error(`GitHub sync error: ${result.error}`);
-            else ui.notifications.error("An unexpected error occurred.");
+            if (result.error) ui.notifications.error(`GitHub sync error: ${result.error}`, { permanent: true });
+            else ui.notifications.error("An unexpected error occurred.", { permanent: true });
         }
 
         return result;
@@ -745,7 +746,7 @@ class GithubSyncManager {
     static async getCommitStatus() {
         const identity = await GithubSyncManager.getIdentity();
         if (!identity) {
-            ui.notifications.error("Unable to identify user for GitHub commit.");
+            ui.notifications.error("Unable to identify user for GitHub commit.", { permanent: true });
             return null;
         }
 
@@ -755,14 +756,17 @@ class GithubSyncManager {
         );
 
         if (!result) {
-            ui.notifications.error("An unexpected error occurred.");
+            ui.notifications.error("An unexpected error occurred.", { permanent: true });
             return { success: true, blobs: [] };
         }
         if (!result.success) {
             // 404 means no pending commit — treat as empty, not an error
-            if (result.status === 404) return { success: true, blobs: [] };
-            if (result.error) ui.notifications.error(`GitHub sync error: ${result.error}`);
-            else ui.notifications.error("An unexpected error occurred.");
+            if (result.status === 404) {
+                ui.notifications.info("Nothing sent to the server: it may already be up to date?", { permanent: true });
+                return { success: true, blobs: [] };
+            }
+            if (result.error) ui.notifications.error(`GitHub sync error: ${result.error}`, { permanent: true });
+            else ui.notifications.error("An unexpected error occurred.", { permanent: true });
         }
 
         return result;
