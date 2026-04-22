@@ -1,17 +1,26 @@
+{{!-- Affects --}}
 <div class="form-group">
     <label class="short">{{localize "PTU.RuleEditor.General.Affects"}}</label>
     <div class="d-flex flex-row justify-content-evenly">
-        <label class="">
+        <label title="{{localize "PTU.RuleEditor.Reminder.AffectsTargetHint"}}">
             {{localize "PTU.RuleEditor.General.Target"}}
             <input type="radio" name="system.rules.{{index}}.affects" value="target" {{#if (is rule.affects "target")}}checked{{/if}}>
         </label>
-        <label class="">
+        <label title="{{localize "PTU.RuleEditor.Reminder.AffectsOriginHint"}}">
             {{localize "PTU.RuleEditor.General.Origin"}}
             <input type="radio" name="system.rules.{{index}}.affects" value="origin" {{#if (is rule.affects "origin")}}checked{{/if}}>
         </label>
     </div>
+    <p class="hint">
+        {{#if (is rule.affects "target")}}
+            {{localize "PTU.RuleEditor.Reminder.AffectsTargetHint"}}
+        {{else}}
+            {{localize "PTU.RuleEditor.Reminder.AffectsOriginHint"}}
+        {{/if}}
+    </p>
 </div>
 
+{{!-- Selectors --}}
 <div class="form-group">
     <label class="short">{{localize "PTU.RuleEditor.General.Selectors"}}</label>
     <div class="attached-input">
@@ -24,15 +33,19 @@
             <input type="text" name="system.rules.{{index}}.selectors" value="{{rule.selectors}}" />
         {{/if}}
     </div>
+    <p class="hint">{{localize "PTU.RuleEditor.Reminder.SelectorsHint"}}</p>
 </div>
 
+{{!-- Message --}}
 <div class="form-group">
     <label class="short">{{localize "PTU.RuleEditor.Reminder.Message"}}</label>
     <div class="spaced-fields details-container-flex-row">
         <textarea name="system.rules.{{index}}.message" rows="3">{{rule.message}}</textarea>
     </div>
+    <p class="hint">{{localize "PTU.RuleEditor.Reminder.MessageHint"}}</p>
 </div>
 
+{{!-- Frequency --}}
 <div class="form-group">
     <label class="short">{{localize "PTU.RuleEditor.Reminder.Frequency.Label"}}</label>
     <div class="spaced-fields details-container-flex-row">
@@ -44,6 +57,7 @@
     </div>
 </div>
 
+{{!-- Predicate --}}
 <div class="form-group">
     <label class="short">{{localize "PTU.RuleEditor.General.Predicate"}}</label>
     <div class="attached-input">
@@ -56,4 +70,5 @@
             <input type="text" name="system.rules.{{index}}.predicate" value="{{json rule.predicate}}" />
         {{/if}}
     </div>
+    <p class="hint">{{localize "PTU.RuleEditor.Reminder.PredicateHint"}}</p>
 </div>
