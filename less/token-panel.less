@@ -10,6 +10,25 @@
   height: calc(100vh - @totalTokenPanelHeight);
 }
 
+// Restore the sidebar to full height when the token panel is minimized
+.token-panel-minimized #interface #ui-right {
+  height: 100vh;
+}
+.token-panel-minimized.token-panel-open #interface #ui-right {
+  height: calc(100vh - @tokenNavHeight);
+}
+
+// Hide the panel body; only the tab-strip peek remains visible
+body.token-panel-minimized .token-panel {
+  .main-panel {
+    display: none;
+  }
+
+  .top-panel {
+    display: none;
+  }
+}
+
 .token-panel {
   pointer-events: initial;
   z-index: var(--z-index-app);
@@ -389,6 +408,28 @@
           background: rgba(255, 255, 255, 0.1);
           color: whitesmoke;
         }
+      }
+    }
+
+    .tab-strip-minimize {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      width: 20px;
+      height: 100%;
+      cursor: pointer;
+      color: #ffffffaa;
+      border-radius: 5px;
+      flex-shrink: 0;
+
+      i {
+        font-size: 14px;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: whitesmoke;
       }
     }
   }
