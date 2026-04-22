@@ -157,7 +157,8 @@ export class TokenPanel extends Application {
             capabilities,
             abilities,
             heldItem,
-            movement
+            movement,
+            minimized: game.user.settings.tokenPanelMinimized ?? false,
         }
     }
 
@@ -171,6 +172,14 @@ export class TokenPanel extends Application {
                 const isShown = game.user.getFlag("ptu", `TokenPanel.show.${target}`);
                 game.user.setFlag("ptu", `TokenPanel.show.${target}`, !isShown);
                 this.refresh();
+            });
+        }
+
+        const minimizeBtn = $html.find(".tab-strip-minimize")[0];
+        if (minimizeBtn) {
+            minimizeBtn.addEventListener("click", () => {
+                const isMinimized = game.user.settings.tokenPanelMinimized ?? false;
+                game.user.setFlag("ptu", "settings.tokenPanelMinimized", !isMinimized);
             });
         }
 
@@ -421,8 +430,14 @@ export class TokenPanel extends Application {
         // check if this.actor exists
         if (!this.shouldShow) {
             document.querySelector("body").classList.remove("token-panel-open");
+            document.querySelector("body").classList.remove("token-panel-minimized");
         } else {
             document.querySelector("body").classList.add("token-panel-open");
+            if (game.user.settings.tokenPanelMinimized) {
+                document.querySelector("body").classList.add("token-panel-minimized");
+            } else {
+                document.querySelector("body").classList.remove("token-panel-minimized");
+            }
         }
         return super.render(...arguments);
     }
