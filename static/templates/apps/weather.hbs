@@ -4,7 +4,7 @@
 </div>
 <div class="effects">
     {{#each effects}}
-        <div class="effect {{#if (is mode 'disabled')}}disabled{{/if}}" data-id="{{id}}">
+        <div class="effect" data-id="{{id}}">
             <img src="{{icon}}" alt="{{name}}" class="icon">
             <span class="name">{{name}}</span>
             <select name="mode" class="mode-select">
