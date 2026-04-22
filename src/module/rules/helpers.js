@@ -59,6 +59,34 @@ async function extractApplyEffects({ affects, origin, target, item, domains, opt
     ).flatMap(e => e ?? [])
 }
 
+async function extractReminders({ affects, origin, target, item, domains, options, roll }) {
+    if (!(origin && target)) return [];
+
+    const [effectsFrom, effectsTo] = affects === "target" ? [origin, target] : [target, origin];
+    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(effectsFrom, domains) ?? [])];
+    const resolvables = item?.type == "move" ? { move: item } : {};
+
+    const factories = domains.flatMap(s => effectsTo.synthetics.reminders?.[s]?.[affects] ?? []);
+    console.debug("PTU | Reminder debug — extractReminders", {
+        affects,
+        originName: origin?.name,
+        targetName: target?.name,
+        effectsToName: effectsTo?.name,
+        domains,
+        factoryCount: factories.length,
+        registeredBuckets: Object.fromEntries(
+            Object.entries(effectsTo.synthetics.reminders ?? {}).map(([k, v]) => [k, { target: v.target?.length, origin: v.origin?.length }])
+        ),
+    });
+
+    return (
+        await Promise.all(
+            factories
+                .map(d => d({ test: fullOptions, resolvables, roll }))
+        )
+    ).flatMap(e => e ?? [])
+}
+
 function extractRollSubstitutions(substitutions, domains, rollOptions) {
     return domains
         .flatMap((d) => foundry.utils.deepClone(substitutions?.[d] ?? []))
@@ -99,9 +127,10 @@ async function processPreUpdateActorHooks(changed, { pack }) {
     await actor.deleteEmbeddedDocuments("Item", createDeletes.delete, { render: false });
 }
 
-export { extractEphemeralEffects, extractApplyEffects, extractDamageDice, extractNotes, extractModifierAdjustments, extractRollSubstitutions, extractModifiers, processPreUpdateActorHooks }
+export { extractEphemeralEffects, extractApplyEffects, extractReminders, extractDamageDice, extractNotes, extractModifierAdjustments, extractRollSubstitutions, extractModifiers, processPreUpdateActorHooks }
 
 globalThis.extractEphemeralEffects = extractEphemeralEffects;
+globalThis.extractReminders = extractReminders;
 globalThis.extractDamageDice = extractDamageDice;
 globalThis.extractNotes = extractNotes;
 globalThis.extractModifierAdjustments = extractModifierAdjustments;

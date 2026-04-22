@@ -6,6 +6,7 @@ import { EphemeralEffectForm } from "./ephemeral-effect-form.js"
 import { FlatModifierForm } from "./flat-modifier-form.js"
 import { GrantItemForm } from "./grant-item-form.js"
 import { RollOptionForm } from "./roll-option-form.js"
+import { ReminderForm } from "./reminder-form.js"
 
 const RULE_ELEMENT_FORMS = {
     GrantItem: GrantItemForm,
@@ -14,7 +15,8 @@ const RULE_ELEMENT_FORMS = {
     ActiveEffectLike: AELikeForm,
     Effectiveness: EffectivenessForm,
     EphemeralEffect: EphemeralEffectForm,
-    ApplyEffect: ApplyEffectForm
+    ApplyEffect: ApplyEffectForm,
+    Reminder: ReminderForm
 }
 
 export { RULE_ELEMENT_FORMS, RuleElementForm}

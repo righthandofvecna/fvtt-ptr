@@ -240,7 +240,8 @@ class PTUActor extends Actor {
             typeOverride: {},
             effectiveness: [],
             apAdjustments: { drained: [], bound: [] },
-            applyEffects: {}
+            applyEffects: {},
+            reminders: {}
         }
 
         super._initialize();

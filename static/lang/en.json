@@ -682,7 +682,9 @@
     "UI": {
       "ShiftModifyDamageTitle": "Adjust the rolled damage/healing",
       "ShiftModifyDamageLabel": "Adjust Damage/Healing",
-      "ShiftModifySkipIWRLabel": "Skip Immunities/Weaknesses/Resistances"
+      "ShiftModifySkipIWRLabel": "Skip Immunities/Weaknesses/Resistances",
+      "MuteUntilEndOfCombat": "Mute until end of combat",
+      "Muted": "Muted"
     },
     "Type": {
       "normal": "Normal",
@@ -834,6 +836,15 @@
         "AllowDuplicate": "Allow Duplicates",
         "ReevaluateOnUpdate": "Reevaluate on Update",
         "ReplaceSelf": "Replace Self"
+      },
+      "Reminder": {
+        "Message": "Message",
+        "Frequency": {
+          "Label": "Frequency",
+          "Always": "Always",
+          "OncePerCombat": "Once per combat",
+          "OncePerRest": "Once per rest"
+        }
       }
     },
     "Check": {

@@ -19,6 +19,10 @@ export function registerTemplates() {
 
         // GitHub Sync
         "systems/ptu/static/templates/apps/github-sync.hbs",
+        // Chat templates
+        "systems/ptu/static/templates/chat/reminder.hbs",
+        // Item rule templates
+        "systems/ptu/static/templates/item/rules/reminder.hbs",
 
         // Charactermancer Partials
         // "systems/ptu/templates/partials/charactermancer-evolution-partial.hbs",
