@@ -14,7 +14,8 @@ export class PTUUser extends User {
             {
                 ptu: {
                     settings: {
-                        showTokenPanel: true
+                        showTokenPanel: true,
+                        tokenPanelMinimized: false
                     }
                 }
             },
