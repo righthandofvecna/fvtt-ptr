@@ -144,6 +144,18 @@ class PTUPokemonActor extends PTUActor {
                 (system.level.expTillNextLevel - CONFIG.PTU.data.levelProgression[system.level.current])
             ) * 100);
 
+        // Compute effective XP (applied + pending) for display purposes on the sheet
+        const pendingExp = system.level.pendingExp ?? 0;
+        system.level.totalEffectiveExp = system.level.exp + pendingExp;
+        system.level.effectivePercent = pendingExp > 0
+            ? Math.min(Math.round(
+                (
+                    (system.level.totalEffectiveExp - CONFIG.PTU.data.levelProgression[system.level.current])
+                    /
+                    (system.level.expTillNextLevel - CONFIG.PTU.data.levelProgression[system.level.current])
+                ) * 100), 100)
+            : system.level.percent;
+
 
         // Set attributes which are underrived data
         this.attributes = {

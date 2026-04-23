@@ -234,6 +234,16 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		// Everything below here is only needed if the sheet is editable
 		if (!this.options.editable) return;
 
+		html.find('.apply-pending-xp').click(async (event) => {
+			event.preventDefault();
+			const { exp, pendingExp } = this.actor.system.level;
+			if (!pendingExp) return;
+			await this.actor.update({
+				"system.level.exp": exp + pendingExp,
+				"system.level.pendingExp": 0,
+			});
+		});
+
 		html.find('.rollable.skill').click(this._onSkillRoll.bind(this));
 		html.find('.rollable.move').click(async (event) => {
 			const attackId = $(event.currentTarget).closest("li.item").data("item-id");

@@ -189,6 +189,9 @@
                                         <div class="fb-45">
                                             <input type="text" name="system.level.exp"
                                                 value="{{actor.system.level.exp}}" data-dtype="Number" />
+                                            {{#if actor.system.level.pendingExp}}
+                                            <span class="pending-exp">(+{{actor.system.level.pendingExp}})</span>
+                                            {{/if}}
                                         </div>
                                         <div class="fb-10">
                                             <span style="font-size: 20px;"> / </span>
@@ -199,9 +202,14 @@
                                                 disabled />
                                         </div>
                                         <div class="options fb-100 pb-1 pt-1 mt-1">
-                                            <div class="progress-bar p{{actor.system.level.percent}}" id="progressBar">
+                                            <div class="progress-bar p{{actor.system.level.effectivePercent}}" id="progressBar">
                                             </div>
                                         </div>
+                                        {{#if actor.system.level.pendingExp}}
+                                        <div class="options fb-100 pb-1 pt-1">
+                                            <button type="button" class="apply-pending-xp">{{localize "PTU.ApplyXP"}}</button>
+                                        </div>
+                                        {{/if}}
                                     </div>
                                 </div>
                                 <div class="swsh-header ball-themes {{ballStyle}} highlight">
