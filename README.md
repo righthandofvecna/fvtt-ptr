@@ -38,6 +38,11 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Made the Weather panel not have disabled controls
+- Added a "minimize" button to the token panel, which persists per user
+- Make Type and Value of the "Effectiveness" rule element resolve injected properties
+- Add XP awarding automation post-combat
+- Let "Flat Modifier" rule elements access its own injected item properties
 - Redesigned Token Panel moved from Top Right to Bottom Right (near old position) beneath the sidebar
 - Add `move:super-effective` and `move:not-very-effective` Roll Options
 - Fix rolling a skill while targeting a pokemon
