@@ -1,14 +1,14 @@
 {
-  "name": "Trace",
+  "name": "Spicy Spray",
   "type": "ability",
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "Target - A Trainer or Pokémon within 10 meters\nThe Pokémon gains an Ability known by the Target for the remainder of the encounter, or until it is Fainted.",
+    "effect": "Trigger - The user is hit by a damaging Attack\nThe attacking foe becomes Burned.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "trace",
+    "slug": "spicy-spray",
     "schema": {
       "version": 0.11,
       "lastMigration": null
@@ -19,16 +19,15 @@
     },
     "stackSlugs": false,
     "keywords": [],
-    "frequency": "Scene - Free Action",
+    "frequency": "Scene x2 - Free Action",
     "tier": "",
     "automation": []
   },
-  "_id": "OUq8IyTrVPZQHgiW",
   "effects": [],
   "folder": null,
-  "sort": 22500000,
   "ownership": {
-    "default": 0
+    "default": 0,
+    "izk1pNEkJuVFmrxW": 3
   },
   "flags": {
     "ptu": {
@@ -36,14 +35,16 @@
     }
   },
   "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.15",
-    "coreVersion": "13.351",
-    "createdTime": 1692968394056,
-    "modifiedTime": 1776977652809,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW",
+    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "compendiumSource": null
-  }
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.15",
+    "createdTime": 1776980994896,
+    "modifiedTime": 1776981074258,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+  },
+  "_id": "muTd18oZ7TFP81tP",
+  "sort": 0
 }
