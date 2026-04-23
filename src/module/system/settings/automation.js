@@ -72,6 +72,12 @@ const AutomationSettingsConfig = {
         config: true,
         default: 50,
         type: Number,
+    },
+    "xpToTrainerPool": {
+        name: "PTU.Settings.Automation.XpToTrainerPool.Name",
+        hint: "PTU.Settings.Automation.XpToTrainerPool.Hint",
+        type: Boolean,
+        default: false,
     }
 }
 

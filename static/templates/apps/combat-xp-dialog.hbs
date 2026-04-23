@@ -1,0 +1,53 @@
+<form class="ptu combat-xp" autocomplete="off">
+    <div class="swsh-box">
+        <div class="swsh-header highlight">
+            <h3 class="m-auto">{{localize "PTU.CombatXP.Title"}}</h3>
+        </div>
+        <div class="swsh-body">
+            <div class="d-flex align-items-center justify-content-between pt-1 pb-1">
+                <span>{{localize "PTU.CombatXP.BudgetLabel"}}: <strong>{{budget}}</strong></span>
+                {{#if useTrainerPool}}
+                    <span class="hint">{{localize "PTU.CombatXP.TrainerPoolNote"}}</span>
+                {{/if}}
+            </div>
+
+            {{#if pokemon}}
+            <div class="d-flex align-items-center justify-content-between pt-1 pb-1">
+                <label class="flex-grow-1">{{localize "PTU.CombatXP.SetAllLabel"}}</label>
+                <input class="combat-xp-bulk-amount" type="number" value="{{defaultXP}}" min="0" />
+                <button type="button" class="combat-xp-set-all">{{localize "PTU.CombatXP.SetAllButton"}}</button>
+            </div>
+
+            <table class="combat-xp-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>{{localize "PTU.CombatXP.PokemonLabel"}}</th>
+                        <th>{{localize "PTU.CombatXP.XPLabel"}}</th>
+                        <th>{{localize "PTU.CombatXP.ExcludeLabel"}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each pokemon as |p|}}
+                    <tr class="combat-xp-row">
+                        <td><img src="{{p.img}}" width="32" height="32" /></td>
+                        <td>{{p.name}}</td>
+                        <td>
+                            <input type="number" name="xp-{{p.actorId}}" value="{{../defaultXP}}" min="0" class="combat-xp-amount" />
+                        </td>
+                        <td class="center-text">
+                            <input type="checkbox" name="exclude-{{p.actorId}}" />
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            {{else}}
+            <p class="hint">{{localize "PTU.CombatXP.NoPokemon"}}</p>
+            {{/if}}
+        </div>
+        <div class="swsh-header highlight d-flex justify-content-end pt-1 pb-1">
+            <button type="submit">{{localize "PTU.CombatXP.AwardButton"}}</button>
+        </div>
+    </div>
+</form>

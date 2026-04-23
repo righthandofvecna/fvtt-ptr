@@ -431,6 +431,26 @@
     "PokemonTrainingSheet.Title": "Pokemon Training Sheet",
     "PokemonTrainingSheet.AutoDistributeXP": "Auto Distribute XP",
     "ExpCapAmount": "EXP Cap Amount",
+
+    "CombatXP": {
+      "Title": "Award Combat XP",
+      "BudgetLabel": "EXP Budget",
+      "SetAllLabel": "Set all to",
+      "SetAllButton": "Apply",
+      "PokemonLabel": "Pokémon",
+      "XPLabel": "XP",
+      "ExcludeLabel": "Exclude",
+      "AwardButton": "Award XP",
+      "NoPokemon": "No player-owned Pokémon found in this combat.",
+      "TrainerPoolNote": "XP will be sent to trainer pools",
+      "NoPartyPokemon": "This trainer has no party Pokémon to assign XP to.",
+      "AssignXPHint": "Assign {amount} XP to which Pokémon?"
+    },
+    "PendingExp": "Pending XP",
+    "ApplyXP": "Apply XP",
+    "XPPool": "XP Pool",
+    "AssignXP": "Assign to Pokémon",
+
     "DexSheet": {
       "Title": "Dex",
       "Notifications": {
@@ -949,6 +969,10 @@
         "HpInjuryGateInterval": {
           "Name": "Injury HP Interval (%)",
           "Hint": "Down from 100% max HP, reaching every interval of this percentage causes an injury. E.g. 50% => 50%, 0%, -50%, ... (A huge percentage like 10000 practically disables Injuries from this source)"
+        },
+        "XpToTrainerPool": {
+          "Name": "Route Combat XP to Trainer Pool",
+          "Hint": "When enabled, XP awarded at the end of combat is sent as discrete chunks to the owning trainer's XP pool instead of directly to the Pokémon. Trainers can then assign each chunk to one of their Pokémon."
         }
       },
       "Generation": {

@@ -1,3 +1,5 @@
+import { CombatXPDialog } from "../apps/combat-xp-dialog/sheet.js";
+
 class PTUCombat extends Combat {
     get expBudget() {
         let budget = 0;
@@ -233,6 +235,10 @@ class PTUCombat extends Combat {
         if (this.started) {
             Hooks.callAll("ptu.endTurn", this.combatant ?? null, this, userId);
             game.ptu.effectTracker.onEncounterEnd(this);
+
+            if (game.user.isGM) {
+                new CombatXPDialog(this).render(true);
+            }
         }
 
         game.user.targets.clear();

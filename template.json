@@ -469,7 +469,8 @@
 
       "level": {
         "milestones": 0,
-        "miscexp": 0
+        "miscexp": 0,
+        "xpPool": []
       },
       "health": {
         "value": 0,
@@ -525,7 +526,8 @@
       "heldItem": "None",
 
       "level": {
-        "exp": 40
+        "exp": 40,
+        "pendingExp": 0
       },
       "health": {
         "value": null,
