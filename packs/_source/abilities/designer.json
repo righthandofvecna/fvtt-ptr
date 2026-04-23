@@ -6,7 +6,176 @@
     "origin": "",
     "effect": "The user is adept at crafting clothes for itself out of common leaves. When activating this ability to create a leaf suit, the user may choose two Types; the user resists the chosen types one step further while wearing that suit. The user may only have one leaf suit at a time, and creating a new suit destroys the old one.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "designer1",
+        "choices": [
+          {
+            "label": "Bug",
+            "value": "bug"
+          },
+          {
+            "label": "Dark",
+            "value": "dark"
+          },
+          {
+            "label": "Dragon",
+            "value": "dragon"
+          },
+          {
+            "label": "Electric",
+            "value": "electric"
+          },
+          {
+            "label": "Fairy",
+            "value": "fairy"
+          },
+          {
+            "label": "Fighting",
+            "value": "fighting"
+          },
+          {
+            "label": "Fire",
+            "value": "fire"
+          },
+          {
+            "label": "Flying",
+            "value": "flying"
+          },
+          {
+            "label": "Ghost",
+            "value": "ghost"
+          },
+          {
+            "label": "Grass",
+            "value": "grass"
+          },
+          {
+            "label": "Ground",
+            "value": "ground"
+          },
+          {
+            "label": "Ice",
+            "value": "ice"
+          },
+          {
+            "label": "Normal",
+            "value": "normal"
+          },
+          {
+            "label": "Poison",
+            "value": "poison"
+          },
+          {
+            "label": "Psychic",
+            "value": "psychic"
+          },
+          {
+            "label": "Rock",
+            "value": "rock"
+          },
+          {
+            "label": "Steel",
+            "value": "steel"
+          },
+          {
+            "label": "Water",
+            "value": "water"
+          }
+        ]
+      },
+      {
+        "key": "Effectiveness",
+        "predicate": [],
+        "type": "{item|flags.ptu.rulesSelections.designer1}",
+        "value": 0.5
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "designer2",
+        "choices": [
+          {
+            "label": "Bug",
+            "value": "bug"
+          },
+          {
+            "label": "Dark",
+            "value": "dark"
+          },
+          {
+            "label": "Dragon",
+            "value": "dragon"
+          },
+          {
+            "label": "Electric",
+            "value": "electric"
+          },
+          {
+            "label": "Fairy",
+            "value": "fairy"
+          },
+          {
+            "label": "Fighting",
+            "value": "fighting"
+          },
+          {
+            "label": "Fire",
+            "value": "fire"
+          },
+          {
+            "label": "Flying",
+            "value": "flying"
+          },
+          {
+            "label": "Ghost",
+            "value": "ghost"
+          },
+          {
+            "label": "Grass",
+            "value": "grass"
+          },
+          {
+            "label": "Ground",
+            "value": "ground"
+          },
+          {
+            "label": "Ice",
+            "value": "ice"
+          },
+          {
+            "label": "Normal",
+            "value": "normal"
+          },
+          {
+            "label": "Poison",
+            "value": "poison"
+          },
+          {
+            "label": "Psychic",
+            "value": "psychic"
+          },
+          {
+            "label": "Rock",
+            "value": "rock"
+          },
+          {
+            "label": "Steel",
+            "value": "steel"
+          },
+          {
+            "label": "Water",
+            "value": "water"
+          }
+        ]
+      },
+      {
+        "key": "Effectiveness",
+        "predicate": [],
+        "type": "{item|flags.ptu.rulesSelections.designer2}",
+        "value": 0.5
+      }
+    ],
     "enabled": true,
     "slug": "designer",
     "schema": {
@@ -30,15 +199,20 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.15",
+    "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1707761783909,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1776984446072,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }
