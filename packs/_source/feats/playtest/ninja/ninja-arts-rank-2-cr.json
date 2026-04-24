@@ -1,0 +1,70 @@
+{
+  "name": "Ninja Arts Rank 2 [CR]",
+  "system": {
+    "origin": "Class Rework",
+    "effect": "Effect: You learn two of the following Moves:\nDouble Team, Substitute, Toxic, Venom Drench, Trick, Role Play, and Mat Block.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spd.mod",
+        "value": 1,
+        "priority": 20,
+        "predicate": [],
+        "phase": "applyAEs"
+      }
+    ],
+    "enabled": true,
+    "slug": "bag-of-tricks-rank-2-cr",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "+Speed",
+      "Ranked 2",
+      "Playtest",
+      "Class Rework"
+    ],
+    "prerequisites": [
+      "Ninja",
+      "Adept Stealth"
+    ],
+    "frequency": "Static",
+    "notes": "",
+    "free": false,
+    "class": "Ninja [CR]",
+    "name": "Bag of Tricks [CR]Rank 1 [CR]"
+  },
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "type": "feat",
+  "folder": "Oh9iNhjBAL6rHEpw",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.1.4",
+    "coreVersion": "13.351",
+    "createdTime": 1699736627730,
+    "modifiedTime": 1777005284364,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW",
+    "duplicateSource": null,
+    "exportSource": null,
+    "compendiumSource": null
+  },
+  "_id": "uVC41TTZ8KCr0TYP"
+}
