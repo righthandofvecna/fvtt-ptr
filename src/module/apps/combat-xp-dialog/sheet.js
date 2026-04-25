@@ -39,11 +39,9 @@ class CombatXPDialog extends FormApplication {
             });
         }
 
-        const defaultXP = pokemonRows.length > 0 ? Math.floor(budget / pokemonRows.length) : 0;
-
         return {
             budget,
-            defaultXP,
+            defaultXP: budget,
             pokemon: pokemonRows,
             useTrainerPool: game.settings.get("ptu", "automation.xpToTrainerPool"),
         };
