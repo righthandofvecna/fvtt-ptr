@@ -30,7 +30,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.1.4",
@@ -39,6 +38,7 @@
     "modifiedTime": 1707761783909,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }
