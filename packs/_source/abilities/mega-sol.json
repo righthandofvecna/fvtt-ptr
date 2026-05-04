@@ -49,7 +49,6 @@
     }
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -57,11 +56,10 @@
     "systemVersion": "4.4.3.12",
     "createdTime": 1776549401008,
     "modifiedTime": 1776549434648,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "_id": "NV6vPdo3BL6go3vi",
   "sort": 0

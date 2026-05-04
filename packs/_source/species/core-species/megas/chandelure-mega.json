@@ -526,11 +526,9 @@
   "name": "Chandelure-Mega",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -538,8 +536,9 @@
     "systemVersion": "4.4.3.12",
     "createdTime": 1776554726491,
     "modifiedTime": 1776554816767,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "EACMg8Ou6ulsC0wp",
-  "sort": 0
+  "sort": 0,
+  "flags": {}
 }

@@ -599,11 +599,9 @@
   "name": "Chesnaught-Mega",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -611,8 +609,9 @@
     "systemVersion": "4.4.3.15",
     "createdTime": 1776975889164,
     "modifiedTime": 1776975895887,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "9SkMvQos4PuwVb3m",
-  "sort": 3700000
+  "sort": 3700000,
+  "flags": {}
 }

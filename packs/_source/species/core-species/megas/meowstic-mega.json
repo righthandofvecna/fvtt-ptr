@@ -556,11 +556,9 @@
   "name": "Meowstic-Mega",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -568,8 +566,9 @@
     "systemVersion": "4.4.3.15",
     "createdTime": 1776977482952,
     "modifiedTime": 1776977666912,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "y20A2Rc4VoEB84v7",
-  "sort": 0
+  "sort": 0,
+  "flags": {}
 }

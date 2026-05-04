@@ -26,8 +26,7 @@
   "effects": [],
   "folder": null,
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "flags": {
     "ptu": {
@@ -35,7 +34,6 @@
     }
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -43,7 +41,7 @@
     "systemVersion": "4.4.3.15",
     "createdTime": 1776980994896,
     "modifiedTime": 1776981074258,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "muTd18oZ7TFP81tP",
   "sort": 0

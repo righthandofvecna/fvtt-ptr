@@ -574,11 +574,9 @@
   "name": "Emboar-Mega",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -586,8 +584,9 @@
     "systemVersion": "4.4.3.12",
     "createdTime": 1776551606831,
     "modifiedTime": 1776551690095,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "gYigDveb7LR7Fudt",
-  "sort": 0
+  "sort": 0,
+  "flags": {}
 }

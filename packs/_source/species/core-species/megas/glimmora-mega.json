@@ -560,11 +560,9 @@
   "name": "Glimmora-Mega",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -572,8 +570,9 @@
     "systemVersion": "4.4.3.15",
     "createdTime": 1776981772904,
     "modifiedTime": 1776981894529,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "AUTBtkTLkwnQpJgG",
-  "sort": 0
+  "sort": 0,
+  "flags": {}
 }

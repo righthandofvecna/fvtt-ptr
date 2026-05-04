@@ -585,11 +585,9 @@
   "name": "Hawlucha-Mega",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -597,8 +595,9 @@
     "systemVersion": "4.4.3.15",
     "createdTime": 1776978429118,
     "modifiedTime": 1776978806483,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "dDoq7Y52Kijuf4cv",
-  "sort": 0
+  "sort": 0,
+  "flags": {}
 }

@@ -481,11 +481,9 @@
   "name": "Excadrill-Mega",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -493,8 +491,9 @@
     "systemVersion": "4.4.3.12",
     "createdTime": 1776553455439,
     "modifiedTime": 1776553519266,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "u34ibC6Y5nNkz7s5",
-  "sort": 650000
+  "sort": 650000,
+  "flags": {}
 }

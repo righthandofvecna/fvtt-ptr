@@ -48,12 +48,12 @@
     "coreVersion": "13.351",
     "createdTime": 1683368833618,
     "modifiedTime": 1777860797412,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW",
+    "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
-    "exportSource": null,
-    "compendiumSource": null
+    "exportSource": null
   },
   "folder": "3aYHO5npuCcYqxoX",
   "sort": 103125,
-  "_id": "lenOAEawRWO3Ecnc"
+  "_id": "lenOAEawRWO3Ecnc",
+  "flags": {}
 }

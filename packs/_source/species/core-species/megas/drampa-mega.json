@@ -590,11 +590,9 @@
   "name": "Drampa-Mega",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -602,8 +600,9 @@
     "systemVersion": "4.4.3.15",
     "createdTime": 1776980678030,
     "modifiedTime": 1776980738420,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "1gf8F36XhOTzHazg",
-  "sort": 0
+  "sort": 0,
+  "flags": {}
 }

@@ -545,11 +545,9 @@
   "name": "Skarmory-Mega",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -557,8 +555,9 @@
     "systemVersion": "4.4.3.12",
     "createdTime": 1776550258700,
     "modifiedTime": 1776550271796,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "V5j9qKxlYdDQPYs6",
-  "sort": 0
+  "sort": 0,
+  "flags": {}
 }

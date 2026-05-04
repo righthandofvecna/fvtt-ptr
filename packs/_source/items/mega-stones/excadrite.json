@@ -40,8 +40,7 @@
   "img": "/systems/ptu/static/images/item_icons/excadrite.webp",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "flags": {
     "ptu": {
@@ -49,7 +48,6 @@
     }
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -57,7 +55,7 @@
     "systemVersion": "4.4.3.12",
     "createdTime": 1776553555817,
     "modifiedTime": 1776553555817,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "folder": "3aYHO5npuCcYqxoX",
   "_id": "9vWAj9zrrSlrlZE2",
