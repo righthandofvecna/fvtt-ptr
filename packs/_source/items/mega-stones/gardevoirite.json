@@ -18,7 +18,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.snMin5prFGzRDQ85",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -37,21 +37,21 @@
     "useCount": 0
   },
   "type": "item",
-  "img": "systems/ptu/static/images/item_icons/gardevoirite.webp",
+  "img": "/systems/ptu/static/images/item_icons/gardevoirite.webp",
   "effects": [],
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
+    "systemVersion": "4.4.3.16",
     "coreVersion": "13.351",
     "createdTime": 1683368833618,
-    "modifiedTime": 1776524598878,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1777860797412,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   },
   "folder": "3aYHO5npuCcYqxoX",
   "sort": 103125,
