@@ -1000,6 +1000,26 @@ class PTUActor extends Actor {
         }
     }
 
+    /**
+     * When combat ends, do cleanup
+     */
+    async onDeleteCombat() {
+        if (this.primaryUpdater === game.user) {
+            // remove Effect items
+            const effectsToRemove = this.itemTypes.effect.filter(e => e.system.duration?.unit !== "unlimited");
+            await this.deleteEmbeddedDocuments("Item", effectsToRemove.map(e => e.id));
+
+            // Remove EOT flags
+            const itemsWithEOTFlags = this.items.filter(i => i.flags.ptu?.eot);
+            await this.updateEmbeddedDocuments("Item", itemsWithEOTFlags.map(i => ({
+                _id: i.id,
+                "flags.ptu.-=eot": null
+            })));
+        }
+
+        await this.reset();
+    }
+
     /* -------------------------------------------- */
     /* Moves                                        */
     /* -------------------------------------------- */

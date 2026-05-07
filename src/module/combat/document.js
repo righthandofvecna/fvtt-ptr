@@ -164,7 +164,7 @@ class PTUCombat extends Combat {
     }
 
     async resetActors() {
-        for (const actor of this.combatants.contents.flatMap(c => c.actor ?? [])) actor.reset();
+        return Promise.all(this.combatants.contents.flatMap(c => c.actor ?? []).map(actor => actor.reset()));
     }
 
     /** @override */
@@ -253,8 +253,8 @@ class PTUCombat extends Combat {
 
         game.user.targets.clear();
 
-        // Clear encounter-related roll options
-        this.resetActors();
+        // post combat actor cleanup
+        this.combatants.contents.flatMap(c => c.actor ?? []).map(actor => actor.onDeleteCombat())
     }
 
     async _manageTurnEvents(adjustedTurn) {
