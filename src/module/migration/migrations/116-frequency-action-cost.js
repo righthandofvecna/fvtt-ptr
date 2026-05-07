@@ -7,16 +7,18 @@ const AFFECTED_TYPES = ["feat", "move", "ability", "contestmove", "edge", "pokee
  * new structured fields: frequency object, actionCost flags, and ap number.
  *
  * @param {string | null} str
- * @returns {{ frequency: {type: string, max: number}, actionCost: {standard: boolean, swift: boolean, move: boolean, free: boolean}, ap: number }}
+ * @returns {{ frequency: {type: string, max: number, custom: string}, actionCost: {standard: boolean, rapid: boolean, shift: boolean, free: boolean, extended: boolean}, ap: number }}
  */
 function parseFrequencyString(str) {
     const result = {
-        frequency: { type: "at-will", max: 0 },
+        frequency: { type: "at-will", max: 0, custom: "" },
         actionCost: { standard: false, rapid: false, shift: false, free: false, extended: false },
         ap: 0,
     };
 
     if (!str || typeof str !== "string") return result;
+    
+    result.frequency.custom = str;
 
     // Split on " - " or " – " (em dash), allowing optional surrounding spaces
     const parts = str.split(/\s*[-–]\s*/);
@@ -91,8 +93,6 @@ export class Migration116FrequencyActionCost extends MigrationBase {
         if (typeof item.system.frequency !== "string") return;
 
         const parsed = parseFrequencyString(item.system.frequency);
-        item.flags.ptu ??= {};
-        item.flags.ptu.migratedFrequency = item.system.frequency;
         item.system.frequency = parsed.frequency;
         item.system.actionCost = parsed.actionCost;
         item.system.ap = parsed.ap;

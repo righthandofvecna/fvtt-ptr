@@ -149,6 +149,11 @@ const data = {
       eot: false,
       limited: false,
     },
+    "custom": {
+      label: "PTU.Frequency.Custom",
+      eot: false,
+      limited: false,
+    }
   },
   actionCosts: {
     "standard": "PTU.ActionCost.Standard",

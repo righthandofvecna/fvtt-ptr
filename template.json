@@ -627,13 +627,15 @@
       "frequencyTracked": {
         "frequency": {
           "type": "at-will",
-          "max": 0
+          "max": 0,
+          "custom": ""
         },
         "actionCost": {
           "standard": false,
-          "swift": false,
-          "move": false,
-          "free": false
+          "rapid": false,
+          "shift": false,
+          "free": false,
+          "extended": false
         },
         "ap": 0
       }

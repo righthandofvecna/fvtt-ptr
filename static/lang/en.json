@@ -1210,7 +1210,8 @@
       "EOT": "EOT",
       "Scene": "Scene",
       "Daily": "Daily",
-      "Static": "Static"
+      "Static": "Static",
+      "Custom": "Custom"
     },
     "ActionCost": {
       "Standard": "Standard",
