@@ -623,6 +623,19 @@
         "megaLauncher": false,
         "punkRock": false,
         "strongJaw": false
+      },
+      "frequencyTracked": {
+        "frequency": {
+          "type": "at-will",
+          "max": 0
+        },
+        "actionCost": {
+          "standard": false,
+          "swift": false,
+          "move": false,
+          "free": false
+        },
+        "ap": 0
       }
     },
     "dexentry": {
@@ -631,15 +644,14 @@
       "owned": false
     },
     "feat": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "prerequisites": [],
-      "frequency": "At Will - Standard Action",
       "notes": "",
       "free": false,
       "class": ""
     },
     "edge": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "prerequisites": [],
       "notes": "",
       "free": false
@@ -686,16 +698,14 @@
       "persistent": null
     },
     "ability": {
-      "templates": ["base"],
-      "frequency": "",
+      "templates": ["base", "frequencyTracked"],
       "tier": ""
     },
     "move": {
-      "templates": ["base", "interactions"],
+      "templates": ["base", "interactions", "frequencyTracked"],
       "type": "Untyped",
       "category": "",
       "damageBase": "",
-      "frequency": "",
       "ac": "",
       "range": "",
       "contestType": "",
@@ -704,21 +714,20 @@
       "isStruggle": false
     },
     "contestmove": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "type": "Cool",
-      "frequency": "",
       "dice": 0
     },
     "capability": {
-      "templates": ["base"]
+      "templates": ["base", "frequencyTracked"]
     },
     "pokeedge": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "prerequisites": [],
       "cost": 0
     },
     "item": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "quantity": 1,
       "category": "",
       "cost": 0,
@@ -874,7 +883,7 @@
       "templates": ["base"]
     },
     "spiritaction": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "cost": 0,
       "trigger": "",
       "active": false

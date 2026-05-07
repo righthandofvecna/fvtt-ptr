@@ -252,6 +252,7 @@ export class PTUPokemonSheet extends PTUActorSheet {
 
 			await attack.roll?.({
 				event, callback: async (rolls, targets, msg, event) => {
+					await attack?.consume?.();
 					if (!game.settings.get("ptu", "autoRollDamage")) return;
 
 					const params = {

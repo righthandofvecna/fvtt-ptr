@@ -73,7 +73,7 @@ class PTUAttackCheck extends PTUDiceCheck {
             `${this.item.slug}-crit-range`,
             `${sluggify(this.item.system.category)}-crit-range`,
             `${sluggify(this.item.system.type)}-crit-range`,
-            `${sluggify(this.item.system.frequency)}-crit-range`
+            `${this.item.system.frequency?.type ?? "at-will"}-crit-range`
         ], { test: this.options }));
 
         this.critRangeModifiers = critRangeModifiers;

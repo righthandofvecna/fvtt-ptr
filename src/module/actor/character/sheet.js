@@ -312,6 +312,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 
 			await attack.roll?.({
 				event, callback: async (rolls, targets, msg, event) => {
+					await attack?.consume?.();
 					if (!game.settings.get("ptu", "autoRollDamage")) return;
 
 					const params = {
@@ -336,6 +337,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 			const item = this.actor.items.get(itemId);
 			if (!item) return;
 
+			item.consume?.();
 			return item.roll?.(event);
 		})
 

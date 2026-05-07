@@ -26,7 +26,7 @@
             {{#if show.actions}}
             {{#if (gt attacks.length 0)}}
             {{#each attacks as |attack|}}
-                <div class="action attack {{#if attack.rollable}}rollable{{else}}sendtochat{{/if}}" data-id="{{attack.id}}"
+                <div class="action attack {{#if attack.rollable}}rollable{{else}}sendtochat{{/if}} {{#if attack.onCooldown}}on-cooldown{{/if}}" data-id="{{attack.id}}"
                     data-tooltip="<div class='effect-popup'><div class='d-flex justify-content-center'><div class='effect-range'>{{attack.range}}</div>{{#each attack.keywords}}<div class='effect-range'>{{this}}</div>{{/each}}</div><div class='effect-effect'>{{attack.effect}}</div></div>" data-tooltip-direction="LEFT">
                     <div class="icon {{#if attack.category}}with-category{{/if}}">
                         <img class="icon" src="{{attack.img}}" alt="{{attack.name}}">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="tags">
                         {{#if attack.frequency}}
-                            <div class="tag frequency" title="{{attack.frequency}}"><span>{{attack.frequency}}</span></div>
+                            <div class="tag frequency" title="{{shortFrequency attack.frequency}}"><span>{{shortFrequency attack.frequency}}</span></div>
                         {{/if}}
                         {{#if attack.db}}
                             <div class="tag db" title="{{attack.db}}"><span>DB: {{attack.db}}</span></div>
@@ -62,7 +62,7 @@
             {{/if}}
             {{#if (gt struggles.length 0)}}
             {{#each struggles as |struggle|}}
-            <div class="action struggle {{#if struggle.rollable}}rollable{{else}}sendtochat{{/if}}" data-id="{{struggle.id}}">
+            <div class="action struggle {{#if struggle.rollable}}rollable{{else}}sendtochat{{/if}} {{#if struggle.onCooldown}}on-cooldown{{/if}}" data-id="{{struggle.id}}">
                 <div class="icon {{#if struggle.category}}with-category{{/if}}">
                     <img class="icon" src="{{struggle.img}}" alt="{{struggle.name}}">
                     {{#if struggle.rollable}}
@@ -79,7 +79,7 @@
                 </div>
                 <div class="tags">
                     {{#if struggle.frequency}}
-                    <div class="tag frequency" title="{{struggle.frequency}}"><span>{{struggle.frequency}}</span></div>
+                    <div class="tag frequency" title="{{shortFrequency struggle.frequency}}"><span>{{shortFrequency struggle.frequency}}</span></div>
                     {{/if}}
                     {{#if struggle.db}}
                     <div class="tag db" title="{{struggle.db}}"><span>DB: {{struggle.db}}</span></div>
@@ -95,7 +95,7 @@
 
             {{#if (and (and (is actor.type "character") show.feats) (gt feats.length 0))}}
             {{#each feats as |feat|}}
-                <div class="action feat {{#if feat.rollable}}rollable{{else}}sendtochat{{/if}}" data-id="{{feat.id}}"
+                <div class="action feat {{#if feat.rollable}}rollable{{else}}sendtochat{{/if}} {{#if feat.onCooldown}}on-cooldown{{/if}}" data-id="{{feat.id}}"
                     data-tooltip="<div class='effect-popup'>{{#if feat.keywords}}<div class='d-flex justify-content-center'>{{#each feat.keywords}}<div class='effect-range'>{{this}}</div>{{/each}}</div>{{/if}}<div class='effect-effect'>{{feat.effect}}</div></div>" data-tooltip-direction="LEFT">
                     <div class="icon">
                         <img class="icon" src="{{feat.img}}" alt="{{feat.name}}">
@@ -110,8 +110,8 @@
                     </div>
                     <div class="tags">
                         {{#if feat.frequency}}
-                            <div class="tag frequency" title="{{feat.frequency}}">
-                                <span>{{feat.frequency}}</span>
+                            <div class="tag frequency" title="{{shortFrequency feat.frequency}}">
+                                <span>{{shortFrequency feat.frequency}}</span>
                             </div>
                         {{/if}}
                     </div>
@@ -121,7 +121,7 @@
 
             {{#if (and show.abilities (gt abilities.length 0))}}
             {{#each abilities as |ability|}}
-                <div class="action ability {{#if ability.rollable}}rollable{{else}}sendtochat{{/if}}" data-id="{{ability.id}}"
+                <div class="action ability {{#if ability.rollable}}rollable{{else}}sendtochat{{/if}} {{#if ability.onCooldown}}on-cooldown{{/if}}" data-id="{{ability.id}}"
                     data-tooltip="{{ability.effect}}" data-tooltip-direction="LEFT">
                     <div class="icon">
                         <img class="icon" src="{{ability.img}}" alt="{{ability.name}}">
@@ -136,7 +136,7 @@
                     </div>
                     <div class="tags">
                         {{#if ability.frequency}}
-                            <div class="tag frequency" title="{{ability.frequency}}"><span>{{ability.frequency}}</span></div>
+                            <div class="tag frequency" title="{{shortFrequency ability.frequency}}"><span>{{shortFrequency ability.frequency}}</span></div>
                         {{/if}}
                     </div>
                 </div>
@@ -146,7 +146,7 @@
 
             {{#if (and show.edges (gt edges.length 0))}}
             {{#each edges as |edge|}}
-                <div class="action edge {{#if edge.rollable}}rollable{{else}}sendtochat{{/if}}" data-id="{{edge.id}}"
+                <div class="action edge {{#if edge.rollable}}rollable{{else}}sendtochat{{/if}} {{#if edge.onCooldown}}on-cooldown{{/if}}" data-id="{{edge.id}}"
                     data-tooltip="{{edge.effect}}" data-tooltip-direction="LEFT">
                     <div class="icon">
                         <img class="icon" src="{{edge.img}}" alt="{{edge.name}}">
@@ -161,7 +161,7 @@
                     </div>
                     <div class="tags">
                         {{#if edge.frequency}}
-                            <div class="tag frequency" title="{{edge.frequency}}"><span>{{edge.frequency}}</span></div>
+                            <div class="tag frequency" title="{{shortFrequency edge.frequency}}"><span>{{shortFrequency edge.frequency}}</span></div>
                         {{/if}}
                     </div>
                 </div>
@@ -170,7 +170,7 @@
 
             {{#if (and show.capabilities (gt capabilities.length 0))}}
             {{#each capabilities as |capability|}}
-                <div class="action capability {{#if capability.rollable}}rollable{{else}}sendtochat{{/if}}" data-id="{{capability.id}}"
+                <div class="action capability {{#if capability.rollable}}rollable{{else}}sendtochat{{/if}} {{#if capability.onCooldown}}on-cooldown{{/if}}" data-id="{{capability.id}}"
                     data-tooltip="{{capability.effect}}" data-tooltip-direction="LEFT">
                     <div class="icon">
                         <img class="icon" src="{{capability.img}}" alt="{{capability.name}}">
@@ -185,7 +185,7 @@
                     </div>
                     <div class="tags">
                         {{#if capability.frequency}}
-                            <div class="tag frequency" title="{{capability.frequency}}"><span>{{capability.frequency}}</span></div>
+                            <div class="tag frequency" title="{{shortFrequency capability.frequency}}"><span>{{shortFrequency capability.frequency}}</span></div>
                         {{/if}}
                     </div>
                 </div>
@@ -195,7 +195,7 @@
             {{#if (and show.items (or (gt items.balls.length 0) (gt items.other.length 0)))}}
             {{#if (gt items.balls.length 0)}}
             {{#each items.balls as |ball|}}
-                <div class="action item pokeball {{#if ball.rollable}}rollable{{else}}sendtochat{{/if}}" data-id="{{ball.id}}"
+                <div class="action item pokeball {{#if ball.rollable}}rollable{{else}}sendtochat{{/if}} {{#if ball.onCooldown}}on-cooldown{{/if}}" data-id="{{ball.id}}"
                     data-tooltip="{{ball.system.effect}}" data-tooltip-direction="LEFT">
                     <div class="icon">
                         <img class="icon" src="{{ball.img}}" alt="{{ball.name}}">
@@ -213,7 +213,7 @@
             {{/if}}
             {{#if (gt items.other.length 0)}}
             {{#each items.other as |item|}}
-                <div class="action item other {{#if item.rollable}}rollable{{else}}sendtochat{{/if}}" data-id="{{item.id}}"
+                <div class="action item other {{#if item.rollable}}rollable{{else}}sendtochat{{/if}} {{#if item.onCooldown}}on-cooldown{{/if}}" data-id="{{item.id}}"
                     data-tooltip="{{item.effect}}" data-tooltip-direction="LEFT">
                     <div class="icon">
                         <img class="icon" src="{{item.img}}" alt="{{item.name}}">
@@ -290,8 +290,11 @@
         <div class="tab-strip-minimize" title="{{#if minimized}}Expand Token Panel{{else}}Minimize Token Panel{{/if}}">
             <i class="fas {{#if minimized}}fa-chevron-up{{else}}fa-chevron-down{{/if}}"></i>
         </div>
+        {{#if user.isGM}}
+        <button class="frequency-reset-scene" title="Reset Scene Uses" type="button"><i class="fas fa-undo"></i> Scene</button>
+        <button class="frequency-reset-daily" title="Reset Daily Uses" type="button"><i class="fas fa-undo"></i> Daily</button>
+        {{/if}}
     </div>
-    
 
     {{#if (or party.trainer (gt conditions.length 0) (gt effects.length 0))}}
     <div class="top-panel">

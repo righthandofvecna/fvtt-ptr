@@ -6,7 +6,7 @@ class PTUMove extends PTUItem {
     }
 
     get usable() {
-        return !this.rollable && this.system.frequency !== "Static";
+        return !this.rollable && this.system.frequency?.type !== "static";
     }
 
     /** @override */
@@ -68,7 +68,7 @@ class PTUMove extends PTUItem {
             all: {
                 [`move:type:${sluggify(this.system.type)}`]: true,
                 [`move:category:${sluggify(this.system.category)}`]: true,
-                [`move:frequency:${sluggify(this.system.frequency)}`]: true,
+                [`move:frequency:${this.system.frequency?.type ?? "at-will"}`]: true,
             },
         }
 
@@ -109,7 +109,7 @@ class PTUMove extends PTUItem {
 
     /** @override */
     async use(options = {}) {
-        if (this.isDamaging || this.system.frequency === "Static") return;
+        if (this.isDamaging || this.system.frequency?.type === "static") return;
 
         let didSomething = false;
         const conditions = new Set(this.actor.getFilteredRollOptions("condition"))

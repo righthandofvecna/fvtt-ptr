@@ -33,8 +33,9 @@ export class TokenPanel extends Application {
             img: item.img,
             id: item.id,
             effect: effectText ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(effectText), {async: true}) : "",
-            frequency: item.system.frequency,
+            frequency: item.system.frequency ?? null,
             rollable: !!item.roll,
+            onCooldown: item.onCooldown ?? false,
         }
     }
 
@@ -55,9 +56,10 @@ export class TokenPanel extends Application {
                 img: attack.img,
                 db: attack.item?.damageBase ? attack.item.damageBase.postStab : null,
                 ac: attack.item?.system.ac > 0 ? attack.item.system.ac : null,
-                frequency: attack.item?.system.frequency ?? "At-Will",
+                frequency: attack.item?.system.frequency ?? { type: "at-will", max: 0 },
                 id,
                 rollable: !!attack.roll,
+                onCooldown: attack.onCooldown ?? false,
                 effect: attack.item?.system.effect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(attack.item.system.effect), {async: true}) : "",
                 range: attack.item?.system.range ?? "",
                 keywords: attack.item?.system.keywords ?? [],
@@ -183,6 +185,14 @@ export class TokenPanel extends Application {
             });
         }
 
+        if (game.user.isGM) {
+            const resetSceneBtn = $html.find(".frequency-reset-scene")[0];
+            if (resetSceneBtn) resetSceneBtn.addEventListener("click", this._onResetSceneUses.bind(this));
+
+            const resetDailyBtn = $html.find(".frequency-reset-daily")[0];
+            if (resetDailyBtn) resetDailyBtn.addEventListener("click", this._onResetDailyUses.bind(this));
+        }
+
         for (const action of $html.find(".action.attack, .action.struggle")) {
             action.addEventListener("click", (event) => {
                 const id = event.currentTarget.dataset.id;
@@ -191,6 +201,7 @@ export class TokenPanel extends Application {
 
                 if (attack.roll) attack.roll({
                     event, callback: async (rolls, targets, msg, event) => {
+                        await attack?.consume?.();
                         if (!game.settings.get("ptu", "autoRollDamage")) return;
 
                         const params = {
@@ -206,7 +217,10 @@ export class TokenPanel extends Application {
                         }
                     }
                 });
-                else attack.item?.sendToChat?.();
+                else {
+                    attack?.consume?.();
+                    attack.item?.sendToChat?.();
+                }
             });
             action.addEventListener("contextmenu", (event) => {
                 const id = event.currentTarget.dataset.id;
@@ -232,8 +246,12 @@ export class TokenPanel extends Application {
                 const item = this.actor.items.get(id);
                 if (!item) return;
 
-                if (item.roll) item.roll({event});
-                else item.sendToChat?.();
+                if (item.roll) {
+                    item.roll({event}).then(() => item?.consume?.());
+                } else {
+                    item?.consume?.();
+                    item.sendToChat?.();
+                }
             });
             action.addEventListener("dblclick", (event) => {
                 const id = event.currentTarget.dataset.id;
@@ -423,6 +441,36 @@ export class TokenPanel extends Application {
 
         if (pokemon.length > 0) party.pokemon = pokemon;
         return party;
+    }
+
+    async _onResetSceneUses(event) {
+        event.preventDefault();
+        const updates = [];
+        for (const actor of game.actors.values()) {
+            for (const item of actor.items.values()) {
+                if (item.system.frequency?.type !== "scene") continue;
+                const max = item.system.frequency?.max ?? 0;
+                if (!max) continue;
+                updates.push(item.setFlag("ptu", "used", 0));
+            }
+        }
+        await Promise.all(updates);
+        this.refresh();
+    }
+
+    async _onResetDailyUses(event) {
+        event.preventDefault();
+        const updates = [];
+        for (const actor of game.actors.values()) {
+            for (const item of actor.items.values()) {
+                if (item.system.frequency?.type !== "daily") continue;
+                const max = item.system.frequency?.max ?? 0;
+                if (!max) continue;
+                updates.push(item.setFlag("ptu", "used", 0));
+            }
+        }
+        await Promise.all(updates);
+        this.refresh();
     }
 
     /** @override */

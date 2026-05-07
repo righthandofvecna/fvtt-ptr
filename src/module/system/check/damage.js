@@ -140,7 +140,7 @@ class PTUDamageCheck extends PTUDiceCheck {
                 `${this.item.slug}-damage-base`,
                 `${sluggify(this.item.system.category)}-damage-base`,
                 `${sluggify(this.item.system.type)}-damage-base`,
-                `${sluggify(this.item.system.frequency)}-damage-base`
+                `${sluggify(this.item.system.frequency?.type ?? "at-will")}-damage-base`
             ], { injectables: { move: this.item, item: this.item, actor: this.actor }, test: this.targetOptions })
         )
         diceModifiers.push(
@@ -150,7 +150,7 @@ class PTUDamageCheck extends PTUDiceCheck {
                 `${this.item.slug}-damage-dice`,
                 `${sluggify(this.item.system.category)}-damage-dice`,
                 `${sluggify(this.item.system.type)}-damage-dice`,
-                `${sluggify(this.item.system.frequency)}-damage-dice`
+                `${sluggify(this.item.system.frequency?.type ?? "at-will")}-damage-dice`
             ], { injectables: { move: this.item, item: this.item, actor: this.actor }, test: this.targetOptions })
         )
 

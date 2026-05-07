@@ -123,6 +123,39 @@ const data = {
       "Special": "PTU.Move.Category.Special",
     }
   },
+  frequencies: {
+    "at-will": {
+      label: "PTU.Frequency.AtWill",
+      eot: false,
+      limited: false,
+    },
+    "eot": {
+      label: "PTU.Frequency.EOT",
+      eot: true,
+      limited: false,
+    },
+    "scene": {
+      label: "PTU.Frequency.Scene",
+      eot: true,
+      limited: true,
+    },
+    "daily": {
+      label: "PTU.Frequency.Daily",
+      eot: true,
+      limited: true,
+    },
+    "static": {
+      label: "PTU.Frequency.Static",
+      eot: false,
+      limited: false,
+    },
+  },
+  actionCosts: {
+    "standard": "PTU.ActionCost.Standard",
+    "rapid": "PTU.ActionCost.Rapid",
+    "shift": "PTU.ActionCost.Shift",
+    "free": "PTU.ActionCost.Free",
+  },
   weather: {
     modeOptions: {
       "disabled": "PTU.Weather.Mode.Off",

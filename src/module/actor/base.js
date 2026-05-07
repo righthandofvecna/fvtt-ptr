@@ -1027,7 +1027,9 @@ class PTUActor extends Actor {
                         ac: isStrugglePlus ? 3 : 4,
                         damageBase: isStrugglePlus ? 5 : 4,
                         stab: false,
-                        frequency: "At-Will",
+                        frequency: { type: "at-will", max: 0 },
+                        actionCost: { standard: false, swift: false, move: false, free: false },
+                        ap: 0,
                         isStruggle: true,
                         isRangedStruggle: isRangedStruggle,
                         category: category,
@@ -1120,7 +1122,7 @@ class PTUActor extends Actor {
             `${move.slug}-attack`,
             `${move.system.category.toLocaleLowerCase(game.i18n.lang)}-attack`,
             `${move.system.type.toLocaleLowerCase(game.i18n.lang)}-attack`,
-            `${sluggify(move.system.frequency)}-attack`,
+            `${move.system.frequency?.type ?? "at-will"}-attack`,
             "attack-roll",
             "attack",
             "all"
@@ -1147,7 +1149,9 @@ class PTUActor extends Actor {
             item: move,
             type: "move",
             category: move.system.category,
-            options: move.system.options?.value ?? []
+            options: move.system.options?.value ?? [],
+            consume: async ()=>await move.consume(),
+            onCooldown: move.onCooldown,
         });
 
         /** TODO: Add Attack Traits if we decide to add those */

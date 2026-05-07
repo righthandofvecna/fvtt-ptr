@@ -15,26 +15,33 @@ function _registerPTUHelpers() {
     Handlebars.registerHelper("json", function (context) { return JSON.stringify(context); });
 
     Handlebars.registerHelper("shortFrequency", function (frequency) {
-        switch (frequency.toLowerCase()) {
-            case "at-will":
-                return "At-Will";
-            case "eot":
-                return "EOT";
-            case "scene":
-                return "1x Scene";
-            case "scene x2":
-                return "2x S";
-            case "scene x3":
-                return "3x S";
-            case "daily":
-                return "1x D";
-            case "daily x2":
-                return "2x D";
-            case "daily x3":
-                return "3x D";
-            default:
-                return frequency;
+        // New object format: { type, max }
+        if (frequency && typeof frequency === "object") {
+            const { type, max } = frequency;
+            switch (type) {
+                case "at-will": return "At-Will";
+                case "eot": return "EOT";
+                case "static": return "Static";
+                case "scene": return max > 1 ? `${max}x S` : "1x Scene";
+                case "daily": return max > 1 ? `${max}x D` : "1x D";
+                default: return type || "";
+            }
         }
+        // Legacy string format (pack source files not yet migrated)
+        if (typeof frequency === "string") {
+            switch (frequency.toLowerCase()) {
+                case "at-will": return "At-Will";
+                case "eot": return "EOT";
+                case "scene": return "1x Scene";
+                case "scene x2": return "2x S";
+                case "scene x3": return "3x S";
+                case "daily": return "1x D";
+                case "daily x2": return "2x D";
+                case "daily x3": return "3x D";
+                default: return frequency;
+            }
+        }
+        return "";
     })
 
     Handlebars.registerHelper("calcHeight", function (percent) {

@@ -21,6 +21,8 @@
   "TYPES.Item.reference": "Reference",
   "TYPES.Item.spiritaction": "Spirit Action",
   "ITEM": {
+    "ActionCost": "Action Cost",
+    "AP": "Action Point Cost",
     "StackSlugs": "Stack Slugs",
     "AddButton": "Add",
     "AddRulesButton": "New Rule Element",
@@ -1201,7 +1203,21 @@
       "Opposition": "Opposition",
       "Party": "Party"
     },
-    "RulebookJournalSheetName": "Rulebook Sheet"
+    "RulebookJournalSheetName": "Rulebook Sheet",
+    "Frequency": {
+      "AtWill": "At Will",
+      "EOT": "EOT",
+      "Scene": "Scene",
+      "Daily": "Daily",
+      "Static": "Static"
+    },
+    "ActionCost": {
+      "Standard": "Standard",
+      "Rapid": "Rapid",
+      "Shift": "Shift",
+      "Free": "Free",
+      "Extended": "Extended"
+    }
   },
 
   "physical-evasion": "Physical Evasion",

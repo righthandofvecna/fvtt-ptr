@@ -72,7 +72,7 @@ class ApplyEffectRuleElement extends RuleElementPTU {
                                 this.item?.slug ? `${this.item.slug}-effect-range` : [],
                                 this.item?.system?.category ? `${sluggify(this.item.system.category)}-effect-range` : [],
                                 this.item?.system?.type ? `${sluggify(this.item.system.type)}-effect-range` : [],
-                                this.item?.system?.frequency ? `${sluggify(this.item.system.frequency)}-effect-range` : [],
+                                this.item?.system?.frequency?.type ? `${this.item.system.frequency.type}-effect-range` : [],
                             ].flat(), { test: options.test ?? this.actor.getRollOptions() })
                         )
                     }

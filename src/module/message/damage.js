@@ -197,7 +197,7 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
             itemDomains.push(
                 `${originItem.system.category.toLocaleLowerCase(game.i18n.lang)}-damage-received`,
                 `${originItem.system.type.toLocaleLowerCase(game.i18n.lang)}-damage-received`,
-                `${sluggify(originItem.system.frequency)}-damage-received`,
+                `${(originItem.system.frequency?.type ?? "at-will")}-damage-received`,
             )
         }
     }
