@@ -5979,5 +5979,35 @@ a.content-link {
 				}
 			}
 		}
+
+		/** Level-up Pending Indicator in Sidebar */
+		.entry-name .advancement-pending {
+			color: #f0a000;
+			font-size: 0.75em;
+			flex-shrink: 0;
+			filter: drop-shadow(0 0 3px rgba(240, 160, 0, 0.6));
+			padding-right: 0.5em;
+		}
+
+		li[data-entry-id].has-advancement-pending {
+			border-left: 3px solid #f0a000;
+			background: rgba(240, 160, 0, 0.08);
+		}
+
+		li.folder.has-advancement-pending {
+			> .folder-header, > header {
+				background: rgba(240, 160, 0, 0.12);
+
+				.advancement-pending {
+					color: #f0a000;
+					font-size: 0.75em;
+					margin-left: auto;
+					filter: drop-shadow(0 0 3px rgba(240, 160, 0, 0.6));
+					&:before {
+					  content: var(--fa);
+					}
+				}
+			}
+		}
 	}
 }
