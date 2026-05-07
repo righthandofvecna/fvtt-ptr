@@ -463,7 +463,7 @@ export class TokenPanel extends Application {
         const updates = [];
         for (const actor of game.actors.values()) {
             for (const item of actor.items.values()) {
-                if (item.system.frequency?.type !== "daily") continue;
+                if (!["daily", "scene"].includes(item.system.frequency?.type)) continue;
                 const max = item.system.frequency?.max ?? 0;
                 if (!max) continue;
                 updates.push(item.setFlag("ptu", "used", 0));
