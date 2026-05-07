@@ -9,6 +9,7 @@ export function registerTemplates() {
         // Item Sheet Partials
         "systems/ptu/static/templates/partials/rules/rule-partial.hbs",
         "systems/ptu/static/templates/partials/species-item-partial.hbs",
+        "systems/ptu/static/templates/partials/item-frequency-partial.hbs",
 
         // Token Sheet partials
         "systems/ptu/static/templates/config/token/appearance-partial.hbs",

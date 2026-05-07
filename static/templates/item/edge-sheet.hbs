@@ -94,31 +94,7 @@
                 <label for="system.prerequisites">{{localize "ITEM.Prerequisites"}}</label>
                 <input type="text" class="ptu-tagify system-prerequisites" name="system.prerequisites" value="{{json item.system.prerequisites}}" data-dtype="JSON"/>
             </div>
-            <div class="item-row">
-                <label for="system.frequency.type">{{localize "ITEM.Frequency"}}</label>
-                <select class="ml-1 mr-1" name="system.frequency.type" {{#if editLocked}}disabled{{/if}}>
-                    {{selectOptions config.frequencies selected=item.system.frequency.type localize=true}}
-                </select>
-                {{#if (or (is item.system.frequency.type "scene") (is item.system.frequency.type "daily"))}}
-                <input class="ml-1 frequency" name="system.frequency.max" type="number" value="{{item.system.frequency.max}}" style="flex: 0.25;" min="1" {{#if editLocked}}disabled{{/if}}/><label class="unit">Max Uses</label>
-                <input class="ml-1 used" name="flags.ptu.used" type="number" value="{{item.flags.ptu.used}}" style="flex: 0.25;" min="0" max="{{item.system.frequency.max}}" {{#if editLocked}}disabled{{/if}}/><label class="unit">Used</label>
-                {{/if}}
-            </div>
-            <div class="item-row">
-                <label>{{localize "ITEM.ActionCost"}}</label>
-                <div class="d-flex ml-1" style="gap: 0.5rem; flex-wrap: wrap;">
-                    <label>{{localize "PTU.ActionCost.Standard"}}</label>
-                    <input type="checkbox" name="system.actionCost.standard" {{checked item.system.actionCost.standard}} {{#if editLocked}}disabled{{/if}}/>
-                    <label>{{localize "PTU.ActionCost.Rapid"}}</label>
-                    <input type="checkbox" name="system.actionCost.rapid" {{checked item.system.actionCost.rapid}} {{#if editLocked}}disabled{{/if}}/>
-                    <label>{{localize "PTU.ActionCost.Shift"}}</label>
-                    <input type="checkbox" name="system.actionCost.shift" {{checked item.system.actionCost.shift}} {{#if editLocked}}disabled{{/if}}/>
-                    <label>{{localize "PTU.ActionCost.Free"}}</label>
-                    <input type="checkbox" name="system.actionCost.free" {{checked item.system.actionCost.free}} {{#if editLocked}}disabled{{/if}}/>
-                    <label>{{localize "PTU.ActionCost.Extended"}}</label>
-                    <input type="checkbox" name="system.actionCost.extended" {{checked item.system.actionCost.extended}} {{#if editLocked}}disabled{{/if}}/>
-                </div>
-            </div>
+            {{> systems/ptu/static/templates/partials/item-frequency-partial.hbs}}
             <div class="item-row">
                 <label for="system.ap">{{localize "ITEM.AP"}}</label>
                 <input class="ml-1 mr-1" name="system.ap" type="number" value="{{item.system.ap}}" placeholder="0" min="0" {{#if editLocked}}disabled{{/if}}/>
