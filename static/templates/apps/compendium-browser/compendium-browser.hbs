@@ -2,9 +2,8 @@
     <nav data-group="primary">
         <a data-tab="landing-page" style="display:none"></a>
         <a data-tab="abilities" class="{{#if (is tab "abilities")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Abilities"}}</a>
-        {{!-- <a data-tab="capabilities" class="{{#if (is tab "capabilities")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Capabilities"}}</a> --}}
+        <a data-tab="capabilities" class="{{#if (is tab "capabilities")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Capabilities"}}</a>
         <a data-tab="edges" class="{{#if (is tab "edges")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Edges"}}</a>
-        {{!-- <a data-tab="effects {{#if (is tab "effects")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Effects"}}</a> --}}
         <a data-tab="feats" class="{{#if (is tab "feats")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Feats"}}</a>
         <a data-tab="items" class="{{#if (is tab "items")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Items"}}</a>
         <a data-tab="moves" class="{{#if (is tab "moves")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Moves"}}</a>
@@ -22,6 +21,15 @@
 
         {{#with abilities}}
             <div class="tab browser" data-group="primary" data-tab="abilities">
+                <div class="content-grid"> 
+                    {{> "systems/ptu/static/templates/apps/compendium-browser/filters.hbs"}}
+                    <ul class="item-list result-list"></ul>
+                </div>
+            </div>
+        {{/with}}
+
+        {{#with capabilities}}
+            <div class="tab browser" data-group="primary" data-tab="capabilities">
                 <div class="content-grid"> 
                     {{> "systems/ptu/static/templates/apps/compendium-browser/filters.hbs"}}
                     <ul class="item-list result-list"></ul>

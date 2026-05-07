@@ -211,6 +211,7 @@ class CompendiumBrowser extends Application {
             items: new browserTabs.Items(this),
             moves: new browserTabs.Moves(this),
             pokeEdges: new browserTabs.PokeEdges(this),
+            capabilities: new browserTabs.Capabilities(this),
             species: new browserTabs.Species(this),
             effects: new browserTabs.Effects(this),
         }
@@ -229,7 +230,7 @@ class CompendiumBrowser extends Application {
             id: "compendium-browser",
             classes: [],
             template: "systems/ptu/static/templates/apps/compendium-browser/compendium-browser.hbs",
-            width: 800,
+            width: 900,
             height: 700,
             resizable: true,
             dragDrop: [{ dragSelector: "ul.item-list > li.item" }],
@@ -277,7 +278,7 @@ class CompendiumBrowser extends Application {
 
         const loadDefault = {
             "ptu.abilities": true,
-            "ptu.capabilities": false,
+            "ptu.capabilities": true,
             "ptu.edges": true,
             "ptu.effects": true,
             "ptu.feats": true,

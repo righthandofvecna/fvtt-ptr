@@ -11,14 +11,14 @@
                 </dl>
             </div>
 
-            {{!-- <div class="setting-section">
+            <div class="setting-section">
                 <h3>{{localize "PTU.CompendiumBrowser.Tabs.Capabilities"}}</h3>
                 <dl>
                     {{#each settings.capabilities as |conf pack|}}
-                        <label><dt><input type="checkbox" name="capabilities-{{pack}}" {{checked conf.load}}></dt><dd>{{conf.name}}</dd></label>
+                        <label><dt><input type="checkbox" name="{{pack}}" {{checked conf.load}}></dt><dd>{{conf.name}}</dd></label>
                     {{/each}}
                 </dl>
-            </div> --}}
+            </div>
 
             <div class="setting-section">
                 <h3>{{localize "PTU.CompendiumBrowser.Tabs.Edges"}}</h3>
