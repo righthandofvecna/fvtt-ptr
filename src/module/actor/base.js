@@ -903,7 +903,6 @@ class PTUActor extends Actor {
         super._onUpdate(data, options, userId);
 
         // After a level-up, adjust current HP by the difference in max HP
-        console.log("PTU | Actor updated:", { data, options, userId, isPrimaryUpdater: this.primaryUpdater?.id === game.user.id });
         if (options.ptu?.oldMaxHp !== undefined && this.primaryUpdater?.id === game.user.id) {
             const diff = this.system.health.max - options.ptu.oldMaxHp;
             if (diff !== 0 && this.system.health.value !== null) {
