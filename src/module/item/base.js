@@ -81,8 +81,9 @@ class PTUItem extends Item {
 
     get frequency() {
         if (!this.system.frequency?.type) return null;
-        let fq = game.i18n.localize(CONFIG.PTU.data.frequencies[this.system.frequency.type]?.label ?? "");
-        if ((this.system.frequency.max ?? 1) > 1) fq += ` ×${this.system.frequency.max}`;
+        const freq = CONFIG.PTU.data.frequencies[this.system.frequency.type];
+        let fq = game.i18n.localize(freq?.label ?? "");
+        if (freq?.limited && (this.system.frequency.max ?? 1) > 1) fq += ` ×${this.system.frequency.max}`;
         if (this.system.actionCost.rapid || this.system.actionCost.shift || this.system.actionCost.free || this.system.actionCost.extended) {
             fq += " - " + ["standard", "rapid", "shift", "free", "extended"].filter(at=>this.system.actionCost[at]).map(at => game.i18n.localize(CONFIG.PTU.data.actionCosts[at])).join(" + ")
         }

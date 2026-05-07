@@ -83,7 +83,8 @@
         "TurnEnd": "End of Turn",
         "RoundStart": "Start of Round"
       }
-    }
+    },
+    "ResetEOT": "Reset EOT Tracking"
   },
 
   "SPECIES.Height": "Height",

@@ -3745,6 +3745,19 @@ a.content-link {
 					display: none;
 				}
 			}
+
+
+
+			&.on-cooldown {
+				background-color: rgba(0,0,0, 0.3);
+				cursor: not-allowed;
+				&:hover {
+					cursor: not-allowed;
+				}
+				&:nth-child(odd) {
+					background-color: rgba(0,0,0, 0.37);
+				}
+			}
 		}
 		.item.disabled {
 			filter: opacity(0.7) grayscale(100%);
@@ -4742,6 +4755,9 @@ a.content-link {
 							flex: 0 0 30%;
 							align-self: center;
 							font-weight: bold;
+						}
+						.unit {
+							flex: 0 0 max-content;
 						}
 						input {
 							flex: 1 0 0;

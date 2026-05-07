@@ -81,6 +81,8 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
             )
         }
 
+        data.eotCooldown = Boolean(this.item.flags.ptu?.eot);
+
         if(this.item.flags.ptu?.showInTokenPanel === undefined) {
             if(this.item.type === "item" && this.item.roll) data.item.flags.ptu.showInTokenPanel = true;
             if (["move", "ability", "feat", "effect"].includes(this.item.type)) data.item.flags.ptu.showInTokenPanel = true;
@@ -170,6 +172,13 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
                 form.activateListeners(ruleSection);
             }
         }
+
+        html.find('button[data-action="resetEOT"]').click(async (event) => {
+            event.preventDefault();
+            if(this.item.flags?.ptu?.eot) {
+                await this.item.update({"flags.ptu.-=eot": null});
+            }
+        });
 
         html.find('a[data-clipboard]').click((event) => {
             const clipText = event.currentTarget.dataset.clipboard;

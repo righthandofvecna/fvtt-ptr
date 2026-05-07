@@ -61,6 +61,9 @@
                                         placeholder=""
                                         disabled
                                     />
+                                    {{#if eotCooldown}}
+                                    <button type="button" data-action="resetEOT" class="ml-1" data-tooltip="ITEM.ResetEOT"><i class="fas fa-undo"></i></button>
+                                    {{/if}}
                                 </span>
                                 <span class="d-flex justify-content-between" style="flex: 0 0 100%">
                                     KEYWORDS 
@@ -101,7 +104,8 @@
                     {{selectOptions config.frequencies selected=item.system.frequency.type localize=true}}
                 </select>
                 {{#if (or (is item.system.frequency.type "scene") (is item.system.frequency.type "daily"))}}
-                <input class="ml-1" name="system.frequency.max" type="number" value="{{item.system.frequency.max}}" style="width: 3.5rem;" min="1" {{#if editLocked}}disabled{{/if}}/>
+                <input class="ml-1 frequency" name="system.frequency.max" type="number" value="{{item.system.frequency.max}}" style="flex: 0.25;" min="1" {{#if editLocked}}disabled{{/if}}/><label class="unit">Max Uses</label>
+                <input class="ml-1 used" name="flags.ptu.used" type="number" value="{{item.flags.ptu.used}}" style="flex: 0.25;" min="0" max="{{item.system.frequency.max}}" {{#if editLocked}}disabled{{/if}}/><label class="unit">Used</label>
                 {{/if}}
             </div>
             <div class="item-row">
