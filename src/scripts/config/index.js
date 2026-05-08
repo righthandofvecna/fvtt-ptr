@@ -152,7 +152,7 @@ const data = {
     "custom": {
       label: "PTU.Frequency.Custom",
       eot: false,
-      limited: false,
+      limited: true,
     }
   },
   actionCosts: {

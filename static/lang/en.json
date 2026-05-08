@@ -1049,6 +1049,10 @@
         "ShadowType": {
           "Name": "Enable Shadow Type",
           "Hint": "Adds Pokémon Colosseum's Shadow Type to the game based on PTR Ruleset's Shadow Type."
+        },
+        "SceneDailyEOT": {
+          "Name": "Scene/Daily Every Other Turn Automation",
+          "Hint": "Whether Scene and Daily-frequency items should be restricted to being used every other turn (the default for PTU/PTR1e)."
         }
       },
       "Type": {

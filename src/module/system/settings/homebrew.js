@@ -14,7 +14,14 @@ const HomebrewSettingsConfig = {
         type: Boolean,
         default: false,
         requiresReload: true
-    }
+    },
+    "sceneDailyEOT": {
+        name: "PTU.Settings.Homebrew.SceneDailyEOT.Name",
+        hint: "PTU.Settings.Homebrew.SceneDailyEOT.Hint",
+        type: Boolean,
+        default: true,
+        requiresReload: true
+    },
 }
 
 export class HomebrewSettings extends PTUSettingsMenu {

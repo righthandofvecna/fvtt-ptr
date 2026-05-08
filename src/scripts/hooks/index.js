@@ -13,6 +13,7 @@ import { PokeDollarEnricher } from "./pokedollar-enricher.js";
 import { RenderChatMessage } from "./render-chat-message.js";
 import { TrainerPokemonSync } from "./trainer-pokemon-sync.js";
 import { AdvancementPending } from "./advancement-pending.js";
+import { HomebrewConfigSettings } from "./homebrew-config-settings.js";
 
 export const PtuHooks = {
     listen() {
@@ -32,7 +33,8 @@ export const PtuHooks = {
             PokeDollarEnricher,
             RenderChatMessage,
             TrainerPokemonSync,
-            AdvancementPending
+            AdvancementPending,
+            HomebrewConfigSettings,
         ]
         for(const listener of listeners) listener.listen();
     }

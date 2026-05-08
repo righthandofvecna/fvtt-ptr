@@ -3,8 +3,8 @@
     <select class="ml-1 mr-1" name="system.frequency.type" {{#if editLocked}}disabled{{/if}}>
         {{selectOptions config.frequencies selected=item.system.frequency.type localize=true}}
     </select>
+    {{#if freqConst.limited}}
     <input class="ml-1 frequency" name="system.frequency.max" type="number" value="{{item.system.frequency.max}}" style="flex: 0.25;" min="1" {{#if editLocked}}disabled{{/if}}/><label class="unit">Max Uses</label>
-    {{#if system.frequency.max}}
     <input class="ml-1 used" name="flags.ptu.used" type="number" value="{{item.flags.ptu.used}}" style="flex: 0.25;" min="0" max="{{item.system.frequency.max}}" placeholder="0" {{#if editLocked}}disabled{{/if}}/><label class="unit">Used</label>
     {{/if}}
 </div>

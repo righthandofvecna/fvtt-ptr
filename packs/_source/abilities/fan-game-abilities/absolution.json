@@ -39,9 +39,9 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "static",
+      "type": "scene",
       "max": 2,
-      "custom": "Static x2 - Rapid Action",
+      "custom": "Scene x2 - Rapid Action",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
