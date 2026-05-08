@@ -145,6 +145,7 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
         const data = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
         const actor = this.actor;
         const allowed = Hooks.call("dropActorSheetData", actor, this, data);
+        const target = event.target;
         if (allowed === false) return;
 
         // Case 1 - Money
@@ -201,6 +202,9 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
             }
             // For other items, use the standard drop handling
             const fakeEvent = new Event("drop"); // For some reason, the event loses its data when passed to the item drop handler, so we have to create a new one and attach the data manually
+            Object.defineProperty(fakeEvent, "target", {
+                get: () => target,
+            })
             Object.defineProperty(fakeEvent, "dataTransfer", {
                 value: {
                     getData: () => JSON.stringify({ type: "Item", uuid: data.uuid }),
