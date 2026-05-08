@@ -287,13 +287,10 @@ class PTUDamageCheck extends PTUDiceCheck {
         const attack = (() => {
             if (!this.item || !this.actor) return null;
 
-            const attack = this.actor.system.attacks.get(this.item.realId);
-            if (!attack) return null;
-
             return {
                 actor: this.actor.uuid,
-                id: attack.item.realId ?? attack.item._id,
-                name: attack.item.name,
+                id: this.item.realId ?? this.item._id,
+                name: this.item.name,
                 targets: (() => {
                     const targets = this.contexts;
                     if (!targets) return null;

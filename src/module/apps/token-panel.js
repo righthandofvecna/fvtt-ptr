@@ -49,24 +49,24 @@ export class TokenPanel extends Application {
 
         const attacks = [];
         const struggles = [];
-        for (const [id, attack] of actor.attacks.entries()) {
-            if (attack.item.getFlag("ptu", "showInTokenPanel") === false) continue;
+        for (const [id, move] of actor.attacks.entries()) {
+            if (move.getFlag("ptu", "showInTokenPanel") === false) continue;
             const data = {
-                name: attack.label,
-                img: attack.img,
-                db: attack.item?.damageBase ? attack.item.damageBase.postStab : null,
-                ac: attack.item?.system.ac > 0 ? attack.item.system.ac : null,
-                frequency: attack.item?.system.frequency ?? { type: "at-will", max: 0 },
+                name: move.name,
+                img: move.img,
+                db: move.damageBase ? move.damageBase.postStab : null,
+                ac: move.system.ac > 0 ? move.system.ac : null,
+                frequency: move.system.frequency ?? { type: "at-will", max: 0 },
                 id,
-                rollable: !!attack.roll,
-                onCooldown: attack.onCooldown ?? false,
-                effect: attack.item?.system.effect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(attack.item.system.effect), {async: true}) : "",
-                range: attack.item?.system.range ?? "",
-                keywords: attack.item?.system.keywords ?? [],
-                sort: attack.item?.sort ?? 0,
+                rollable: move.rollable,
+                onCooldown: move.onCooldown ?? false,
+                effect: move.system.effect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(move.system.effect), {async: true}) : "",
+                range: move.system.range ?? "",
+                keywords: move.system.keywords ?? [],
+                sort: move.sort ?? 0,
             };
-            if (attack.item?.system.category) data.category = `/systems/ptu/static/css/images/types2/${attack.item?.system.category}IC_Icon.png`;
-            if (attack.item.system.isStruggle) struggles.push(data);
+            if (move.system.category) data.category = `/systems/ptu/static/css/images/types2/${move.system.category}IC_Icon.png`;
+            if (move.system.isStruggle) struggles.push(data);
             else attacks.push(data);
         }
 
@@ -196,36 +196,20 @@ export class TokenPanel extends Application {
         for (const action of $html.find(".action.attack, .action.struggle")) {
             action.addEventListener("click", (event) => {
                 const id = event.currentTarget.dataset.id;
-                const attack = this.actor.attacks.get(id);
-                if (!attack) return;
+                const move = this.actor.attacks.get(id);
+                if (!move) return;
 
-                if (attack.roll) attack.roll({
-                    event, callback: async (rolls, targets, msg, event) => {
-                        await attack?.consume?.();
-                        if (!game.settings.get("ptu", "autoRollDamage")) return;
-
-                        const params = {
-                            event,
-                            options: msg.context.options ?? [],
-                            actor: msg.actor,
-                            targets: msg.targets,
-                            rollResult: msg.context.rollResult ?? null,
-                        }
-                        const result = await attack.damage?.(params);
-                        if (result === null) {
-                            return await msg.update({ "flags.ptu.resolved": false })
-                        }
-                    }
-                });
-                else {
-                    attack?.consume?.();
-                    attack.item?.sendToChat?.();
+                if (move.rollable) {
+                    move.use({ event });
+                } else {
+                    move.consume?.();
+                    move.sendToChat?.();
                 }
             });
             action.addEventListener("contextmenu", (event) => {
                 const id = event.currentTarget.dataset.id;
-                const attack = this.actor.attacks.get(id);
-                return attack?.item?.sendToChat?.();
+                const move = this.actor.attacks.get(id);
+                return move?.sendToChat?.();
             });
         }
 

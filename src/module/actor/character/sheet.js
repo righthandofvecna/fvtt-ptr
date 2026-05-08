@@ -193,12 +193,12 @@ export class PTUCharacterSheet extends PTUActorSheet {
 			const struggles = [];
 			const effects = {}
 
-			for (const statistic of this.actor.attacks) {
-				if (statistic.item.system.isStruggle) struggles.push(statistic.item);
-				else moves.push(statistic.item);
+			for (const move of this.actor.attacks) {
+				if (move.system.isStruggle) struggles.push(move);
+				else moves.push(move);
 
-				const effect = statistic.item.system.effect + (statistic.item.effectReference ? "<br/></br>" + statistic.item.effectReference : "");
-				//effects[statistic.item.id] = await TextEditor.enrichHTML(effect, {async: true});
+				const effect = move.system.effect + (move.effectReference ? "<br/></br>" + move.effectReference : "");
+				//effects[move.id] = await TextEditor.enrichHTML(effect, {async: true});
 			}
 
 			return {
@@ -307,27 +307,9 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		html.find('.rollable.skill').click(this._onSkillRoll.bind(this));
 		html.find('.rollable.move').click(async (event) => {
 			const attackId = $(event.currentTarget).closest("li.item").data("item-id");
-			const attack = this.actor.attacks.get(attackId);
-			if (!attack) return;
-
-			await attack.roll?.({
-				event, callback: async (rolls, targets, msg, event) => {
-					await attack?.consume?.();
-					if (!game.settings.get("ptu", "autoRollDamage")) return;
-
-					const params = {
-						event,
-						options: msg.context.options ?? [],
-						actor: msg.actor,
-						targets: msg.targets,
-						rollResult: msg.context.rollResult ?? null,
-					}
-					const result = await attack.damage?.(params);
-					if (result === null) {
-						return await msg.update({ "flags.ptu.resolved": false })
-					}
-				}
-			});
+			const move = this.actor.attacks.get(attackId);
+			if (!move) return;
+			await move.use({ event });
 		});
 		html.find('.rollable.save').click(this._onSaveRoll.bind(this));
 
