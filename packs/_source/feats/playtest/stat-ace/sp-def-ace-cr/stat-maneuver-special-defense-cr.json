@@ -11,8 +11,15 @@
     "enabled": true,
     "slug": "stat-maneuver-special-defense-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.128Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -24,11 +31,33 @@
       "Playtest",
       "CR"
     ],
+    "frequency": {
+      "type": "eot",
+      "max": null,
+      "custom": "EOT",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Expert Command or Focus",
       "Stat Ace (Special Defense) [CR]"
     ],
-    "frequency": "EOT",
     "notes": "",
     "free": false,
     "class": "Stat Ace (Special Defense) [CR]"
@@ -45,11 +74,11 @@
     "default": 0
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710766876180,
-    "modifiedTime": 1710766876180,
+    "modifiedTime": 1778200831195,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

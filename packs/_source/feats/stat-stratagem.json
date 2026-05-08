@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "stat-stratagem",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.850Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -22,12 +29,34 @@
       "Stratagem",
       "Legacy"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "2 AP - Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": false
+    },
     "prerequisites": [
       "Stat Link",
       "Stat Training",
       "Master Focus or Command"
     ],
-    "frequency": "2 AP - Standard Action",
     "notes": "",
     "free": false,
     "class": "Stat Ace",
@@ -49,10 +78,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.1",
+    "systemVersion": "4.4.3.16",
     "coreVersion": "13.351",
     "createdTime": 1683368078877,
-    "modifiedTime": 1776088875589,
+    "modifiedTime": 1778200830876,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

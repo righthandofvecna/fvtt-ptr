@@ -21,8 +21,15 @@
     "enabled": true,
     "slug": "rapid-spin-whirlwind-kicks",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:24.219Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "Compendium.ptu.effects.Item.Hh6VvJMUarY6SCQP",
     "source": {
@@ -41,10 +48,32 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Normal",
     "category": "Physical",
     "damageBase": "5",
-    "frequency": "At-Will",
     "ac": "2",
     "range": "Burst 1",
     "contestType": "Cool - Exhausting Act",
@@ -67,9 +96,9 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.6",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1776294094154,
-    "modifiedTime": 1776294275995,
+    "modifiedTime": 1778200824271,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "RGT5L0tkI9I8l6eu",

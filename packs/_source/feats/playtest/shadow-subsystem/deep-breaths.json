@@ -12,8 +12,15 @@
     "enabled": true,
     "slug": "deep-breaths",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.932Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -23,10 +30,32 @@
     "keywords": [
       "+Defense or Special Defense"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 - Free Action, Interrupt",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": true
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Redeemer"
     ],
-    "frequency": "Scene x2 - Free Action, Interrupt",
     "notes": "",
     "free": false,
     "class": "Redeemer"
@@ -43,10 +72,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.1",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1697669108909,
-    "modifiedTime": 1708646466530,
+    "modifiedTime": 1778200829000,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

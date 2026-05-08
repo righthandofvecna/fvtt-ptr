@@ -12,13 +12,13 @@
     "enabled": true,
     "slug": "inferno-overdrive",
     "schema": {
-      "version": 0.112,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2024-01-15T14:33:35.189Z",
+        "datetime": "2026-05-08T00:40:22.989Z",
         "version": {
-          "schema": null,
-          "foundry": "11.315",
-          "system": "4.0.9"
+          "schema": 0.112,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -38,10 +38,32 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "daily",
+      "max": 1,
+      "custom": "Daily",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Fire",
     "category": "Physical",
     "damageBase": "18",
-    "frequency": "Daily",
     "ac": "2",
     "range": "Line 5",
     "contestType": "",
@@ -61,10 +83,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1704880689253,
-    "modifiedTime": 1707815126463,
+    "modifiedTime": 1778200823027,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

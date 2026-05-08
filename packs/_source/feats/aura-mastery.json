@@ -131,8 +131,15 @@
     "enabled": true,
     "slug": "aura-mastery",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.849Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -143,11 +150,33 @@
       "+Attack or Special Attack",
       "Legacy"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Aura Guardian",
       "Expert Intuition"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
     "class": "Aura Guardian",
@@ -169,10 +198,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.1",
+    "systemVersion": "4.4.3.16",
     "coreVersion": "13.351",
     "createdTime": 1683368079312,
-    "modifiedTime": 1776088264045,
+    "modifiedTime": 1778200830876,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

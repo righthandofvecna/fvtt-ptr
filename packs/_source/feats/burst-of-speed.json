@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "burst-of-speed",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.475Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -30,11 +37,33 @@
       "+Speed",
       "Legacy"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 1,
+      "custom": "Scene - Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "5 Tumbler Features",
       "Master Acrobatics"
     ],
-    "frequency": "Scene - Free Action",
     "notes": "",
     "free": false,
     "class": "Tumbler",
@@ -56,10 +85,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.1",
+    "systemVersion": "4.4.3.16",
     "coreVersion": "13.351",
     "createdTime": 1683368079344,
-    "modifiedTime": 1776088898333,
+    "modifiedTime": 1778200831544,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

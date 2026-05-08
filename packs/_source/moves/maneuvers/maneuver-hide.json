@@ -11,8 +11,15 @@
     "enabled": true,
     "slug": "maneuver-hide",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:26.093Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "Compendium.ptu.effects.Item.pOjZ3iQZyoz82ZJZ",
     "source": {
@@ -28,10 +35,32 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "eot",
+      "max": null,
+      "custom": "EOT - Shift Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": true,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Untyped",
     "category": "Status",
     "damageBase": "",
-    "frequency": "EOT - Shift Action",
     "ac": "--",
     "range": "Self",
     "contestType": "",
@@ -46,11 +75,11 @@
     }
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.0",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1708348808126,
-    "modifiedTime": 1708348809118,
+    "modifiedTime": 1778200826150,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

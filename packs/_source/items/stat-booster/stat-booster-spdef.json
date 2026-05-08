@@ -18,13 +18,13 @@
     "enabled": true,
     "slug": "stat-booster-sp-def",
     "schema": {
-      "version": 0.114,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2024-02-17T17:08:16.394Z",
+        "datetime": "2026-05-08T00:40:40.996Z",
         "version": {
-          "schema": 0.11,
-          "foundry": "11.315",
-          "system": "4.2.0"
+          "schema": 0.114,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -34,6 +34,29 @@
     },
     "stackSlugs": false,
     "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "quantity": "1",
     "category": "",
     "cost": "6000",
@@ -59,11 +82,11 @@
   "_id": "3TjY0hxdF9Kwe1yw",
   "sort": 0,
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710773392624,
-    "modifiedTime": 1710773415087,
+    "modifiedTime": 1778200841040,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -19,13 +19,13 @@
     "enabled": true,
     "slug": "poisonium-z",
     "schema": {
-      "version": 0.112,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2024-01-15T14:33:35.250Z",
+        "datetime": "2026-05-08T00:40:42.373Z",
         "version": {
-          "schema": null,
-          "foundry": "11.315",
-          "system": "4.0.9"
+          "schema": 0.112,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -35,6 +35,29 @@
     },
     "stackSlugs": false,
     "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "quantity": "1",
     "category": "",
     "cost": "0",
@@ -54,10 +77,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.0.12",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1704878644277,
-    "modifiedTime": 1705330354458,
+    "modifiedTime": 1778200842391,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

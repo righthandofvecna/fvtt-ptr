@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "stat-embodiment-speed",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.599Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -19,11 +26,33 @@
     "keywords": [
       "Legacy"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1 AP - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
     "prerequisites": [
       "4 Stat Ace Features",
       "Expert Command or Focus"
     ],
-    "frequency": "1 AP - Rapid Action",
     "notes": "",
     "free": false,
     "class": "Stat Ace (Speed)",
@@ -42,11 +71,11 @@
     }
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.0",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1708348212239,
-    "modifiedTime": 1708348212239,
+    "modifiedTime": 1778200830629,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

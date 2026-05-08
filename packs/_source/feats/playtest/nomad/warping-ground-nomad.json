@@ -29,13 +29,13 @@
     "enabled": true,
     "slug": "warping-ground-nomad",
     "schema": {
-      "version": 0.11,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2023-09-15T22:09:46.290Z",
+        "datetime": "2026-05-08T00:40:32.180Z",
         "version": {
-          "schema": null,
-          "foundry": "11.308",
-          "system": "4.0.0.beta.3"
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -47,11 +47,33 @@
     "keywords": [
       "+Speed"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Nomad",
       "Adept Focus"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
     "class": "Nomad",
@@ -77,10 +99,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1683368079166,
-    "modifiedTime": 1707818613949,
+    "modifiedTime": 1778200832242,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

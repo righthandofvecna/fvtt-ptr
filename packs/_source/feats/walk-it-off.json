@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "walk-it-off",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.766Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -30,11 +37,33 @@
       "+HP",
       "Legacy"
     ],
+    "frequency": {
+      "type": "daily",
+      "max": 1,
+      "custom": "Daily - Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Adept Athletics",
       "Novice Focus"
     ],
-    "frequency": "Daily - Extended Action",
     "notes": "",
     "free": false,
     "class": "Enduring Soul",
@@ -56,10 +85,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.1",
+    "systemVersion": "4.4.3.16",
     "coreVersion": "13.351",
     "createdTime": 1683368079041,
-    "modifiedTime": 1776088622509,
+    "modifiedTime": 1778200829837,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
