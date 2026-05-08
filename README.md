@@ -38,6 +38,13 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Added automatic Frequency tracking for moves, abilities, etc](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/878)
+- [Boss multiple-initiatives now don't fail to roll](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/903)
+- [On Level-Up, increase current HP by max HP difference](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/850)
+- [Adds Advancement pending indicator](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/901)
+- [Add Capabilities tab to the Compendium Browser](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/898) - you still need to enable it in the compendium browser settings
+- [Dragging Items onto a Character Sheet now works the first time](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/892)
+- [Temporary effects are now removed after combat ends](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/902)
 - Made the Weather panel not have disabled controls
 - Added a "minimize" button to the token panel, which persists per user
 - [Make Type and Value of the "Effectiveness" rule element resolve injected properties](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/888)
