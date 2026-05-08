@@ -34,6 +34,8 @@ export class TokenPanel extends Application {
             id: item.id,
             effect: effectText ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(effectText), {async: true}) : "",
             frequency: item.system.frequency ?? null,
+            actionCost: item.system.actionCost ?? null,
+            ap: item.system.ap ?? null,
             rollable: !!item.roll,
             onCooldown: item.onCooldown ?? false,
         }
@@ -57,6 +59,8 @@ export class TokenPanel extends Application {
                 db: move.damageBase ? move.damageBase.postStab : null,
                 ac: move.system.ac > 0 ? move.system.ac : null,
                 frequency: move.system.frequency ?? { type: "at-will", max: 0 },
+                actionCost: move.system.actionCost ?? null,
+                ap: move.system.ap ?? null,
                 id,
                 rollable: move.rollable,
                 onCooldown: move.onCooldown ?? false,
