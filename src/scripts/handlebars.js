@@ -15,9 +15,9 @@ function _registerPTUHelpers() {
     Handlebars.registerHelper("json", function (context) { return JSON.stringify(context); });
 
     Handlebars.registerHelper("shortFrequency", function (item) {
-        const frequency = item.system.frequency;
-        const actionCost = item.system?.actionCost;
-        const ap = item.system?.ap;
+        const frequency = item.system?.frequency ?? item?.frequency;
+        const actionCost = item.system?.actionCost ?? item?.actionCost;
+        const ap = item.system?.ap ?? item?.ap;
         // New object format: { type, max }
         if (frequency && typeof frequency === "object") {
             const { type, max } = frequency;
@@ -34,7 +34,7 @@ function _registerPTUHelpers() {
             })();
             const actionString = (()=>{
                 if (!actionCost) return "";
-                const costs = Object.entries(actionCost).filter(([_, v]) => v).map(([k, _]) => game.i18n.localize(CONFIG.PTU.data.actionCosts?.[k]));
+                const costs = Object.entries(actionCost).filter(([_, v]) => v).map(([k, _]) => game.i18n.localize(CONFIG.PTU.data.actionCosts?.[k])).filter(s => s);
                 if (costs.length == 1 && actionCost.standard) return "";
                 return costs.length ? costs.join(" + ") : "";
             })();
@@ -46,7 +46,7 @@ function _registerPTUHelpers() {
             })();
             const freqModString = (()=>{
                 if (!frequency.modifiers) return "";
-                const mods = Object.entries(frequency.modifiers).filter(([_, v]) => v).map(([k, _]) => game.i18n.localize(CONFIG.PTU.data.frequencyModifiers?.[k]));
+                const mods = Object.entries(frequency.modifiers).filter(([_, v]) => v).map(([k, _]) => game.i18n.localize(CONFIG.PTU.data.frequencyModifiers?.[k])).filter(s => s);
                 return mods.length ? `${mods.join(", ")}` : "";
             })();
             
