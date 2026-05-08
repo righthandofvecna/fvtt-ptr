@@ -160,6 +160,14 @@ const data = {
     "rapid": "PTU.ActionCost.Rapid",
     "shift": "PTU.ActionCost.Shift",
     "free": "PTU.ActionCost.Free",
+    "extended": "PTU.ActionCost.Extended",
+  },
+  frequencyModifiers: {
+    "priorityLimited": "PTU.FrequencyModifier.PriorityLimited",
+    "priorityAdvanced": "PTU.FrequencyModifier.PriorityAdvanced",
+    "priority": "PTU.FrequencyModifier.Priority",
+    "reaction": "PTU.FrequencyModifier.Reaction",
+    "interrupt": "PTU.FrequencyModifier.Interrupt"
   },
   weather: {
     modeOptions: {

@@ -45,7 +45,7 @@
                                     <input
                                         class="ml-1 mr-1"
                                         type="text"
-                                        value="{{shortFrequency item.system.frequency}}"
+                                        value="{{shortFrequency item}}"
                                         disabled
                                     />
                                     {{#if eotCooldown}}
@@ -93,10 +93,6 @@
         </div>
         <div class="tab details h-100" data-group="primary" data-tab="details">
             {{> systems/ptu/static/templates/partials/item-frequency-partial.hbs}}
-            <div class="item-row">
-                <label for="system.ap">{{localize "ITEM.AP"}}</label>
-                <input class="ml-1 mr-1" name="system.ap" type="number" value="{{item.system.ap}}" placeholder="0" min="0" {{#if editLocked}}disabled{{/if}}/>
-            </div>
             <div class="item-row">
                 <label for="system.trigger">{{localize "ITEM.Trigger"}}</label>
                 <input class="ml-1 mr-1" name="system.trigger" type="text" value="{{item.system.trigger}}" placeholder="{{localize "ITEM.Trigger"}}"/>

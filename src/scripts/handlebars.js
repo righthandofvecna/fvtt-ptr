@@ -14,30 +14,58 @@ function _registerPTUHelpers() {
 
     Handlebars.registerHelper("json", function (context) { return JSON.stringify(context); });
 
-    Handlebars.registerHelper("shortFrequency", function (frequency) {
+    Handlebars.registerHelper("shortFrequency", function (item) {
+        const frequency = item.system.frequency;
+        const actionCost = item.system?.actionCost;
+        const ap = item.system?.ap;
         // New object format: { type, max }
         if (frequency && typeof frequency === "object") {
             const { type, max } = frequency;
-            switch (type) {
-                case "at-will": return "At-Will";
-                case "eot": return "EOT";
-                case "static": return "Static";
-                case "scene": return max > 1 ? `${max}x S` : "1x Scene";
-                case "daily": return max > 1 ? `${max}x D` : "1x D";
-                default: return type || "";
-            }
+            if (type === "custom") return frequency.custom || "";
+
+            const freqString = (() => {
+                switch (type) {
+                    case "eot": return "EOT";
+                    case "static": return "Static";
+                    case "scene": return max > 1 ? `${max}× S` : "S";
+                    case "daily": return max > 1 ? `${max}× D` : "D";
+                    default: return "";
+                }
+            })();
+            const actionString = (()=>{
+                if (!actionCost) return "";
+                const costs = Object.entries(actionCost).filter(([_, v]) => v).map(([k, _]) => game.i18n.localize(CONFIG.PTU.data.actionCosts?.[k]));
+                if (costs.length == 1 && actionCost.standard) return "";
+                return costs.length ? costs.join(" + ") : "";
+            })();
+            const apString = (()=>{
+                if (!ap || !ap?.cost) return "";
+                let apString = `${ap.cost} AP`;
+                if (ap.bind) apString = "Bind " + apString;
+                return apString;
+            })();
+            const freqModString = (()=>{
+                if (!frequency.modifiers) return "";
+                const mods = Object.entries(frequency.modifiers).filter(([_, v]) => v).map(([k, _]) => game.i18n.localize(CONFIG.PTU.data.frequencyModifiers?.[k]));
+                return mods.length ? `${mods.join(", ")}` : "";
+            })();
+            
+            if (!freqString && !actionString && !apString && !freqModString) return "At-Will";
+            let combinedString = [apString, freqString, actionString].filter(s => s).join(" - ");
+            if (freqModString) combinedString += (combinedString ? ", " : "At-Will, ") + freqModString;
+            return combinedString;
         }
         // Legacy string format (pack source files not yet migrated)
         if (typeof frequency === "string") {
             switch (frequency.toLowerCase()) {
                 case "at-will": return "At-Will";
                 case "eot": return "EOT";
-                case "scene": return "1x Scene";
-                case "scene x2": return "2x S";
-                case "scene x3": return "3x S";
-                case "daily": return "1x D";
-                case "daily x2": return "2x D";
-                case "daily x3": return "3x D";
+                case "scene": return "S";
+                case "scene x2": return "2× S";
+                case "scene x3": return "3× S";
+                case "daily": return "D";
+                case "daily x2": return "2× D";
+                case "daily x3": return "3× D";
                 default: return frequency;
             }
         }

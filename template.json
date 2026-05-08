@@ -628,7 +628,14 @@
         "frequency": {
           "type": "at-will",
           "max": 0,
-          "custom": ""
+          "custom": "",
+          "modifiers": {
+            "priorityLimited": false,
+            "priorityAdvanced": false,
+            "priority": false,
+            "reaction": false,
+            "interrupt": false
+          }
         },
         "actionCost": {
           "standard": false,
@@ -637,7 +644,10 @@
           "free": false,
           "extended": false
         },
-        "ap": 0
+        "ap": {
+          "cost": 0,
+          "bind": false
+        }
       }
     },
     "dexentry": {

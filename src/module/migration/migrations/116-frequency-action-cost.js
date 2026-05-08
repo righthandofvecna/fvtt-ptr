@@ -7,21 +7,25 @@ const AFFECTED_TYPES = ["feat", "move", "ability", "contestmove", "edge", "pokee
  * new structured fields: frequency object, actionCost flags, and ap number.
  *
  * @param {string | null} str
- * @returns {{ frequency: {type: string, max: number, custom: string}, actionCost: {standard: boolean, rapid: boolean, shift: boolean, free: boolean, extended: boolean}, ap: number }}
+ * @returns {{
+ *          frequency: {type: string, max: number, custom: string, modifiers: { priorityLimited: boolean, priorityAdvanced: boolean, priority: boolean, reaction: boolean, interrupt: boolean }},
+ *          actionCost: {standard: boolean, rapid: boolean, shift: boolean, free: boolean, extended: boolean},
+ *          ap: { cost: number, bind: boolean}
+ *          }}
  */
 function parseFrequencyString(str) {
     const result = {
-        frequency: { type: "at-will", max: 0, custom: "" },
+        frequency: { type: "at-will", max: 0, custom: "", modifiers: { priorityLimited: false, priorityAdvanced: false, priority: false, reaction: false, interrupt: false }, },
         actionCost: { standard: false, rapid: false, shift: false, free: false, extended: false },
-        ap: 0,
+        ap: { cost: 0, bind: false },
     };
 
     if (!str || typeof str !== "string") return result;
     
     result.frequency.custom = str;
 
-    // Split on " - " or " – " (em dash), allowing optional surrounding spaces
-    const parts = str.split(/\s*[-–]\s*/);
+    // Split on " - " or " – " (em dash) or "," allowing optional surrounding spaces
+    const parts = str.split(/\s*[-–,]\s*/);
 
     for (const part of parts) {
         const trimmed = part.trim();
@@ -29,7 +33,8 @@ function parseFrequencyString(str) {
         // AP cost: "2 AP", "Bind 1 AP"
         const apMatch = trimmed.match(/^(?:Bind\s+)?(\d+)\s*AP$/i);
         if (apMatch) {
-            result.ap = parseInt(apMatch[1], 10);
+            result.ap.cost = parseInt(apMatch[1], 10);
+            result.ap.bind = /^Bind\s+/i.test(trimmed);
             continue;
         }
 
@@ -65,6 +70,13 @@ function parseFrequencyString(str) {
         if (/\b(?:move|shift)\s+action/i.test(trimmed)) result.actionCost.shift = true;
         if (/free\s+action/i.test(trimmed)) result.actionCost.free = true;
         if (/extended\s+action/i.test(trimmed)) result.actionCost.extended = true;
+
+        // Modifiers (e.g. Priority (Limited), Priority (Advanced), Priority, Reaction, Interrupt)
+        if (/\bPriority (Limited)\b/i.test(trimmed)) result.frequency.modifiers.priorityLimited = true;
+        if (/\bPriority (Advanced)\b/i.test(trimmed)) result.frequency.modifiers.priorityAdvanced = true;
+        if (/\bPriority\b/i.test(trimmed)) result.frequency.modifiers.priority = true;
+        if (/\bReaction\b/i.test(trimmed)) result.frequency.modifiers.reaction = true;
+        if (/\bInterrupt\b/i.test(trimmed)) result.frequency.modifiers.interrupt = true;
     }
 
     // if no action cost flags were set and the type isn't Static, default to standard action

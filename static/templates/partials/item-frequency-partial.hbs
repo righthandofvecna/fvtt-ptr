@@ -41,3 +41,37 @@
         </label>
     </div>
 </div>
+<div class="item-row">
+    <label>{{localize "ITEM.FrequencyModifiers"}}</label>
+    <div class="d-flex ml-1" style="gap: 0.5rem; flex-wrap: wrap;">
+        <label class="action-cost-label" data-tooltip="PTU.FrequencyModifier.PriorityLimited">
+          <input type="checkbox" name="system.frequency.modifiers.priorityLimited" {{checked item.system.frequency.modifiers.priorityLimited}} {{#if editLocked}}disabled{{/if}}/>
+          <span style="flex: 1">{{localize "PTU.FrequencyModifier.PriorityLimited"}}</span>
+        </label>
+        <label class="action-cost-label" data-tooltip="PTU.FrequencyModifier.PriorityAdvanced">
+          <input type="checkbox" name="system.frequency.modifiers.priorityAdvanced" {{checked item.system.frequency.modifiers.priorityAdvanced}} {{#if editLocked}}disabled{{/if}}/>
+          <span style="flex: 1">{{localize "PTU.FrequencyModifier.PriorityAdvanced"}}</span>
+        </label>
+        <label class="action-cost-label" data-tooltip="PTU.FrequencyModifier.Priority">
+          <input type="checkbox" name="system.frequency.modifiers.priority" {{checked item.system.frequency.modifiers.priority}} {{#if editLocked}}disabled{{/if}}/>
+          <span style="flex: 1">{{localize "PTU.FrequencyModifier.Priority"}}</span>
+        </label>
+        <label class="action-cost-label" data-tooltip="PTU.FrequencyModifier.Reaction">
+          <input type="checkbox" name="system.frequency.modifiers.reaction" {{checked item.system.frequency.modifiers.reaction}} {{#if editLocked}}disabled{{/if}}/>
+          <span style="flex: 1">{{localize "PTU.FrequencyModifier.Reaction"}}</span>
+        </label>
+        <label class="action-cost-label" data-tooltip="PTU.FrequencyModifier.Interrupt">
+          <input type="checkbox" name="system.frequency.modifiers.interrupt" {{checked item.system.frequency.modifiers.interrupt}} {{#if editLocked}}disabled{{/if}}/>
+          <span style="flex: 1">{{localize "PTU.FrequencyModifier.Interrupt"}}</span>
+        </label>
+    </div>
+</div>
+{{#if hasAP}}
+<div class="item-row">
+    <label for="system.ap.cost">{{localize "ITEM.AP"}}</label>
+    <input class="ml-1 mr-1" name="system.ap.cost" type="number" value="{{item.system.ap.cost}}" placeholder="0" min="0" {{#if editLocked}}disabled{{/if}}/>
+    {{#if item.system.ap.cost}}
+    <input type="checkbox" name="system.ap.bind" {{checked item.system.ap.bind}} {{#if editLocked}}disabled{{/if}}/><label class="unit">{{localize "ITEM.APBind"}}</label>
+    {{/if}}
+</div>
+{{/if}}
