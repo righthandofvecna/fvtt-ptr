@@ -5,7 +5,7 @@
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
-    "effect": "The User switches out, and the Field becomes Hail for 5 turns.",
+    "effect": "The User switches out, and the weather becomes Snowy for 5 rounds.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.kdMo2CqufGgmJUyg",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -75,15 +75,20 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.18",
     "coreVersion": "13.351",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200826150,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1778269178630,
+    "lastModifiedBy": "6NxJcTpPL5gpFpqf",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }
