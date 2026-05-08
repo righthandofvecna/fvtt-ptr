@@ -1,12 +1,32 @@
 {
+  "folder": "eWRhszFP5Db0FUK4",
   "name": "Effect: Clangorous Soulblaze",
   "type": "effect",
+  "_id": "soUP3guuJRRlB4eP",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "+1 All Stats CS",
-    "snippet": "+1 All Stats CS",
+    "effect": "Raises each of the user's stats by +1 CS.",
+    "snippet": "+1 CS all stats",
     "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.atk.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.def.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
       {
         "key": "ActiveEffectLike",
         "predicate": [],
@@ -33,24 +53,6 @@
         "phase": "applyAEs",
         "value": 1,
         "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": [],
-        "mode": "add",
-        "path": "system.stats.atk.stage.mod",
-        "phase": "applyAEs",
-        "value": 1,
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": [],
-        "mode": "add",
-        "path": "system.stats.def.stage.mod",
-        "phase": "applyAEs",
-        "value": 1,
-        "priority": null
       }
     ],
     "enabled": true,
@@ -63,7 +65,7 @@
     "source": {
       "value": "Homebrew"
     },
-    "stackSlugs": true,
+    "stackSlugs": false,
     "keywords": [],
     "level": {
       "value": 1
@@ -85,44 +87,25 @@
     "context": null
   },
   "effects": [],
-  "folder": "eWRhszFP5Db0FUK4",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "6NxJcTpPL5gpFpqf": 3
+  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true
-    },
-    "scene-packer": {
-      "hash": "1cf4f555f4fa1207128ba054b73b4400a1c3c942",
-      "sourceId": "Item.nT9LwiQcqua4ztQ1"
-    },
-    "LocknKey": {
-      "IDKeysFlag": "",
-      "RemoveKeyonUseFlag": false,
-      "LPFormulaFlag": "",
-      "LPFormulaOverrideFlag": false,
-      "LBFormulaFlag": "",
-      "LBFormulaOverrideFlag": false,
-      "ReplacementItemFlag": ""
     }
   },
-  "ownership": {
-    "default": 0
-  },
-  "_id": "1t5B7vZKw4aHLXoR",
-  "sort": 300000,
   "_stats": {
-    "coreVersion": "13.350",
-    "systemId": "ptu",
-    "systemVersion": "4.2.1",
-    "createdTime": 1709370184167,
-    "modifiedTime": 1709370186457,
-    "lastModifiedBy": "ptubuilder000000",
+    "compendiumSource": null,
     "duplicateSource": null,
-    "exportSource": {
-      "worldId": "pokemon-test-world",
-      "uuid": null,
-      "coreVersion": "11.315",
-      "systemId": "ptu",
-      "systemVersion": "4.2.1"
-    }
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.18",
+    "createdTime": 1778269558556,
+    "modifiedTime": 1778269798068,
+    "lastModifiedBy": "6NxJcTpPL5gpFpqf"
   }
 }
