@@ -39,16 +39,22 @@ function parseFrequencyString(str) {
         }
 
         // Frequency types
-        if (/^at.?will$/i.test(trimmed)) {
+        const atWillMatch = trimmed.match(/^at.?will(?:\s+x(\d+))?$/i);
+        if (atWillMatch) {
             result.frequency.type = "at-will";
+            result.frequency.max = atWillMatch[1] ? parseInt(atWillMatch[1], 10) : null;
             continue;
         }
-        if (/^static$/i.test(trimmed)) {
+        const staticMatch = trimmed.match(/^static(?:\s+x(\d+))?$/i);
+        if (staticMatch) {
             result.frequency.type = "static";
+            result.frequency.max = staticMatch[1] ? parseInt(staticMatch[1], 10) : null;
             continue;
         }
-        if (/^eot$/i.test(trimmed)) {
+        const eotMatch = trimmed.match(/^eot(?:\s+x(\d+))?$/i);
+        if (eotMatch) {
             result.frequency.type = "eot";
+            result.frequency.max = eotMatch[1] ? parseInt(eotMatch[1], 10) : null;
             continue;
         }
         const sceneMatch = trimmed.match(/^Scene(?:\s+x(\d+))?$/i);
