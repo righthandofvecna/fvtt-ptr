@@ -42,7 +42,13 @@ class PTUMove extends PTUItem {
     }
 
     get isDamaging() {
-        return !!String(this.system.damageBase ?? "").trim();
+        const raw = String(this.system.damageBase ?? "").trim();
+        if (!raw) return false;
+        if (raw === "--") return false;
+        if (!isNaN(Number(raw))) return true;
+        // non-numeric and non-arithmetic without a {{...}} token = not a valid formula
+        if ((/[^0-9 +\-\*\/\(\)]/i).test(raw) && !/\{\{.*\}\}/.test(raw)) return false;
+        return true;
     }
 
     get isFiveStrike() {
@@ -65,14 +71,15 @@ class PTUMove extends PTUItem {
 
     get damageBase() {
         if (!this.isDamaging) return null;
-        if (isNaN(Number(this.system.damageBase))) {
+        const raw = String(this.system.damageBase).trim();
+        if (isNaN(Number(raw))) {
             // Formula DB — preStab/postStab are resolved at roll time
             return {
                 preStab: null,
                 postStab: null,
                 isStab: !this.system.isStruggle && !!this.actor?.types.includes(this.system.type),
                 isFormula: true,
-                formula: this.system.damageBase,
+                formula: raw,
             };
         }
         const result = {

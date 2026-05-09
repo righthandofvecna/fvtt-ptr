@@ -6,14 +6,17 @@ import { resolveDbFormula } from "../../../util/value-resolver.js";
 class PTUMoveDamage {
     static async calculate({move, actor, context, modifiers = [], target = null}) {
         if(!move || !actor) return null;
+        if (!move.isDamaging) return null;
 
         const damageBaseModifiers = [];
-        const rawDb = move.system.damageBase;
-        if (!String(rawDb ?? "").trim()) return null;
-        const isFormulaDb = isNaN(Number(rawDb));
-        const resolvedDb = isFormulaDb
-            ? resolveDbFormula(rawDb, { target })
-            : Number(rawDb);
+        const rawDb = String(move.system.damageBase ?? "").trim();
+        if (!rawDb) return null;
+        const resolvedDb = (()=>{
+            if (!isNaN(Number(rawDb))) return Number(rawDb);
+            if ((/[^0-9 +\-\*\/\(\)]/i).test(rawDb) && !/\{\{.*\}\}/.test(rawDb)) return null;
+            return resolveDbFormula(rawDb, { target });
+        })();
+
         if (resolvedDb === null || isNaN(resolvedDb)) return null;
         damageBaseModifiers.push(new PTUModifier({
             slug: "damage-base",
