@@ -425,7 +425,7 @@ function _registerBasicHelpers() {
     Handlebars.registerHelper("bigger", function (a, b) { return a > b });
     Handlebars.registerHelper("biggerOrEqual", function (a, b) { return a >= b });
     Handlebars.registerHelper("and", function (a, b) { return a && b });
-    Handlebars.registerHelper("or", function (a, b) { return a || b });
+    Handlebars.registerHelper("or", function () { return arguments.length > 1 && Array.from(arguments).slice(0, -1).some(arg => arg) });
     Handlebars.registerHelper("notEqual", function (a, b = false) { return a != b });
     Handlebars.registerHelper("divide", (value1, value2) => Number(value1) / Number(value2));
     Handlebars.registerHelper("multiply", (value1, value2) => Number(value1) * Number(value2));
