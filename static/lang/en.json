@@ -1216,19 +1216,52 @@
     },
     "RulebookJournalSheetName": "Rulebook Sheet",
     "Frequency": {
-      "AtWill": "At Will",
-      "EOT": "EOT",
-      "Scene": "Scene",
-      "Daily": "Daily",
-      "Static": "Static",
-      "Custom": "Custom"
+      "AtWill": {
+        "label": "At Will",
+        "short": "AtW"
+      },
+      "EOT": {
+        "label": "EOT",
+        "short": "EOT"
+      },
+      "Scene": {
+        "label": "Scene",
+        "short": "Scn"
+      },
+      "Daily": {
+        "label": "Daily",
+        "short": "Dly"
+      },
+      "Static": {
+        "label": "Static",
+        "short": "Stc"
+      },
+      "Custom": {
+        "label": "Custom",
+        "short": "Cst"
+      }
     },
     "ActionCost": {
-      "Standard": "Standard",
-      "Rapid": "Rapid",
-      "Shift": "Shift",
-      "Free": "Free",
-      "Extended": "Extended"
+      "Standard": {
+        "label": "Standard",
+        "short": "Std"
+      },
+      "Rapid": {
+        "label": "Rapid",
+        "short": "Rpd"
+      },
+      "Shift": {
+        "label": "Shift",
+        "short": "Sft"
+      },
+      "Free": {
+        "label": "Free",
+        "short": "Fr"
+      },
+      "Extended": {
+        "label": "Extended",
+        "short": "Ext"
+      }
     },
     "FrequencyModifier": {
       "PriorityLimited": "Priority (Limited)",

@@ -24,17 +24,16 @@ function _registerPTUHelpers() {
             if (type === "custom") return frequency.custom || "";
 
             const freqString = (() => {
-                switch (type) {
-                    case "eot": return "EOT";
-                    case "static": return "Static";
-                    case "scene": return max > 1 ? `${max}× S` : "S";
-                    case "daily": return max > 1 ? `${max}× D` : "D";
-                    default: return "";
-                }
+                if (type == "atwill") return "";
+                const freq = CONFIG.PTU.data.frequencies[type];
+                const short = game.i18n.localize(freq?.label ?? type[0].toUpperCase());
+                // if (!freq?.limited) return short;
+                // return `${max ?? 1}× ${short}`;
+                return short;
             })();
             const actionString = (()=>{
                 if (!actionCost) return "";
-                const costs = Object.entries(actionCost).filter(([_, v]) => v).map(([k, _]) => game.i18n.localize(CONFIG.PTU.data.actionCosts?.[k])).filter(s => s);
+                const costs = Object.entries(actionCost).filter(([_, v]) => v).map(([k, _]) => game.i18n.localize(CONFIG.PTU.data.actionCosts?.[k]?.label)).filter(s => s);
                 if (costs.length == 1 && actionCost.standard) return "";
                 return costs.length ? costs.join(" + ") : "";
             })();

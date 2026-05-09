@@ -125,42 +125,63 @@ const data = {
   },
   frequencies: {
     "at-will": {
-      label: "PTU.Frequency.AtWill",
+      label: "PTU.Frequency.AtWill.label",
+      short: "PTU.Frequency.AtWill.short",
       eot: false,
       limited: false,
     },
     "eot": {
-      label: "PTU.Frequency.EOT",
+      label: "PTU.Frequency.EOT.label",
+      short: "PTU.Frequency.EOT.short",
       eot: true,
       limited: false,
     },
     "scene": {
-      label: "PTU.Frequency.Scene",
+      label: "PTU.Frequency.Scene.label",
+      short: "PTU.Frequency.Scene.short",
       eot: true,
       limited: true,
     },
     "daily": {
-      label: "PTU.Frequency.Daily",
+      label: "PTU.Frequency.Daily.label",
+      short: "PTU.Frequency.Daily.short",
       eot: true,
       limited: true,
     },
     "static": {
-      label: "PTU.Frequency.Static",
+      label: "PTU.Frequency.Static.label",
+      short: "PTU.Frequency.Static.short",
       eot: false,
       limited: false,
     },
     "custom": {
-      label: "PTU.Frequency.Custom",
+      label: "PTU.Frequency.Custom.label",
+      short: "PTU.Frequency.Custom.short",
       eot: false,
       limited: true,
     }
   },
   actionCosts: {
-    "standard": "PTU.ActionCost.Standard",
-    "rapid": "PTU.ActionCost.Rapid",
-    "shift": "PTU.ActionCost.Shift",
-    "free": "PTU.ActionCost.Free",
-    "extended": "PTU.ActionCost.Extended",
+    "standard": {
+      label: "PTU.ActionCost.Standard.label",
+      short: "PTU.ActionCost.Standard.short"
+    },
+    "rapid": {
+      label: "PTU.ActionCost.Rapid.label",
+      short: "PTU.ActionCost.Rapid.short"
+    },
+    "shift": {
+      label: "PTU.ActionCost.Shift.label",
+      short: "PTU.ActionCost.Shift.short"
+    },
+    "free": {
+      label: "PTU.ActionCost.Free.label",
+      short: "PTU.ActionCost.Free.short"
+    },
+    "extended": {
+      label: "PTU.ActionCost.Extended.label",
+      short: "PTU.ActionCost.Extended.short"
+    },
   },
   frequencyModifiers: {
     "priorityLimited": "PTU.FrequencyModifier.PriorityLimited",
