@@ -98,7 +98,7 @@
                 <label for="system.prerequisites">{{localize "ITEM.Prerequisites"}}</label>
                 <input type="text" class="ptu-tagify system-prerequisites" name="system.prerequisites" value="{{json item.system.prerequisites}}" data-dtype="JSON"/>
             </div>
-            {{> systems/ptu/static/templates/partials/item-frequency-partial.hbs}}
+            {{> systems/ptu/static/templates/partials/item-frequency-partial.hbs hasAP=true}}
             <div class="item-row">
                 <label for="system.class">{{localize "ITEM.Class"}}</label>
                 <input class="ml-1 mr-1" name="system.class" type="text" value="{{item.system.class}}" placeholder="{{localize "ITEM.Class"}}"/>
