@@ -213,6 +213,7 @@
             {{#each items.balls as |ball|}}
                 <div class="action item pokeball {{#if ball.rollable}}rollable{{else}}sendtochat{{/if}} {{#if ball.onCooldown}}on-cooldown{{/if}}" data-id="{{ball.id}}"
                     data-tooltip="{{ball.system.effect}}" data-tooltip-direction="LEFT">
+                    <div class="usage-badge"><span>{{ball.system.quantity}} Remaining</span></div>
                     <div class="icon">
                         <img class="icon" src="{{ball.img}}" alt="{{ball.name}}">
                         {{#if ball.rollable}}
