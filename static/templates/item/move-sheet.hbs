@@ -99,6 +99,17 @@
                                             value="{{item.system.damageBonus}}"
                                             disabled
                                         />
+                                    {{else if item.damageBase.isFormula}}
+                                        <span>
+                                            {{#if item.dbPreviewNumber}}{{getDb item.dbPreviewNumber}}{{else}}?{{/if}}*
+                                        </span>
+                                        +
+                                        <input
+                                            class="ml-1 mr-1"
+                                            type="number"
+                                            value="{{item.system.damageBonus}}"
+                                            disabled
+                                        />
                                     {{else}}
                                         
                                     {{/if}}

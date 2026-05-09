@@ -1,5 +1,6 @@
 import { sluggify } from '../../../util/misc.js';
 import { PTUCondition, PTUItem } from '../index.js';
+import { resolveDbFormula } from '../../../util/value-resolver.js';
 class PTUMove extends PTUItem {
     get rollable() {
         return !(isNaN(Number(this.system.ac ?? undefined)) && !this.isDamaging);
@@ -46,6 +47,20 @@ class PTUMove extends PTUItem {
 
     get isFiveStrike() {
         return (!!this.rollOptions.item["move:range:five-strike"]) || (!!this.rollOptions.item["move:five-strike"]);
+    }
+
+    /**
+     * Numeric DB value suitable for UI display — formula resolved with no target (using fallback defaults), STAB applied.
+     * Returns null if undamaging or formula is unresolvable.
+     * @returns {number|null}
+     */
+    get dbPreviewNumber() {
+        const db = this.damageBase;
+        if (!db) return null;
+        if (!db.isFormula) return db.postStab;
+        const resolved = resolveDbFormula(db.formula, {});
+        if (resolved === null) return null;
+        return resolved + (db.isStab ? 2 : 0);
     }
 
     get damageBase() {

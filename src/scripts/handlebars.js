@@ -180,8 +180,11 @@ function _registerPTUHelpers() {
     });
 
     Handlebars.registerHelper("moveDbToDice", (item, actor) => {
-        const dbNumber = Number(item.damageBase.postStab ?? item);
-        if (isNaN(dbNumber)) return "Not a valid DB";
+        const db = item.damageBase;
+        if (!db) return "";
+        // For formula DB, use the preview number (resolved with no target); for numeric, use postStab
+        const dbNumber = db.isFormula ? item.dbPreviewNumber : Number(db.postStab ?? item);
+        if (dbNumber === null || isNaN(dbNumber)) return "Not a valid DB";
 
         const realDb = Math.clamp(dbNumber, 0, 28);
         const dbString = CONFIG.PTU.data.dbData[realDb];

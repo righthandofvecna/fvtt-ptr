@@ -79,8 +79,8 @@
                         {{/if}}
                         {{#if item.damageBase}}
                             {{!-- {{#unless (is item.system.category "Status")}} --}}
-                                <div class="tag tooltip gradient" title="DB: {{item.damageBase.postStab}} ({{moveDbToDice item ../actor}})">
-                                    <span>DB: {{item.damageBase.postStab}}</span>
+                                <div class="tag tooltip gradient" title="DB: {{#if item.damageBase.isFormula}}{{item.dbPreviewNumber}}*{{else}}{{item.damageBase.postStab}}{{/if}} ({{moveDbToDice item ../actor}})">
+                                    <span>DB: {{#if item.damageBase.isFormula}}{{item.dbPreviewNumber}}*{{else}}{{item.damageBase.postStab}}{{/if}}</span>
                                 </div>
                             {{!-- {{/unless}} --}}
                         {{/if}}

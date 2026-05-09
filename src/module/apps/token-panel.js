@@ -105,7 +105,13 @@ export class TokenPanel extends Application {
             const data = {
                 name: attack.label,
                 img: attack.img,
-                db: attack.item?.damageBase ? attack.item.damageBase.postStab : null,
+                db: (() => {
+                    const db = attack.item?.damageBase;
+                    if (!db) return null;
+                    if (!db.isFormula) return db.postStab;
+                    const preview = attack.item.dbPreviewNumber;
+                    return preview !== null ? `${preview}*` : "?*";
+                })(),
                 ac: attack.item?.system.ac > 0 ? attack.item.system.ac : null,
                 frequency: attack.item?.system.frequency ?? { type: "at-will", max: 0 },
                 actionCost: attack.item?.system.actionCost ?? null,
