@@ -482,7 +482,10 @@ class PTUActor extends Actor {
                 changed.system.spirit.max ?? this.system.spirit.max
             );
         }
-
+        options.ptu ??= {};
+        options.ptu[this.id] = {
+            oldMaxHp: this.system.health.max,
+        };
         await super._preUpdate(changed, options, user);
     }
 
@@ -891,20 +894,13 @@ class PTUActor extends Actor {
     /* -------------------------------------------- */
     /* Event Handlers                               */
     /* -------------------------------------------- */
-
-    async _preUpdate(changed, options, userId) {
-        options.ptu ??= {};
-        options.ptu.oldMaxHp = this.system.health.max;
-        return super._preUpdate(changed, options, userId);
-    }
-
     /** @override */
     _onUpdate(data, options, userId) {
         super._onUpdate(data, options, userId);
 
         // After a level-up, adjust current HP by the difference in max HP
-        if (options.ptu?.oldMaxHp !== undefined && this.primaryUpdater?.id === game.user.id) {
-            const diff = this.system.health.max - options.ptu.oldMaxHp;
+        if (options.ptu?.[this.id]?.oldMaxHp !== undefined && this.primaryUpdater?.id === game.user.id) {
+            const diff = this.system.health.max - options.ptu[this.id].oldMaxHp;
             if (diff !== 0 && this.system.health.value !== null) {
                 this.update({ "system.health.value": Math.max(0, this.system.health.value + diff) });
             }
