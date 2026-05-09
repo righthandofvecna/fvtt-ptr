@@ -1,0 +1,142 @@
+{
+  "folder": "iE9Vclt5juqIikWq",
+  "name": "Effect: Fabulous Trim",
+  "type": "effect",
+  "_id": "Xl7xGDvrkenry3eF",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "@embed[Compendium.ptu.abilities.Item.RLJQhr4xA1lE0ZfM]",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "fabuloustrim",
+        "adjustName": true,
+        "choices": [
+          {
+            "label": "Celebrate",
+            "value": "Compendium.ptu.abilities.Item.xhjgbopRyNS1nOHB",
+            "predicate": {
+              "not": "ability:celebrate"
+            }
+          },
+          {
+            "label": "Defiant",
+            "value": "Compendium.ptu.abilities.Item.IKiA2uqsUeMpDYji",
+            "predicate": {
+              "not": "ability:defiant"
+            }
+          },
+          {
+            "label": "Cute Tears",
+            "value": "Compendium.ptu.abilities.Item.dlVPTqac1upNqHFb",
+            "predicate": {
+              "not": "ability:cute-tears"
+            }
+          },
+          {
+            "label": "Sand Veil",
+            "value": "Compendium.ptu.abilities.Item.Ewr9Oh7DddMKcWLZ",
+            "predicate": {
+              "not": "ability:sand-veil"
+            }
+          },
+          {
+            "label": "Inner Focus",
+            "value": "Compendium.ptu.abilities.Item.uM561WHxXwcdrMWl",
+            "predicate": {
+              "not": "ability:inner-focus"
+            }
+          },
+          {
+            "label": "Intimidate",
+            "value": "Compendium.ptu.abilities.Item.NnYU42v8Ge5lmPQF",
+            "predicate": {
+              "not": "ability:intimidate"
+            }
+          },
+          {
+            "label": "Friend Guard",
+            "value": "Compendium.ptu.abilities.Item.i0XQhctF8P16Pkg9",
+            "predicate": {
+              "not": "ability:friend-guard"
+            }
+          },
+          {
+            "label": "Moxie",
+            "value": "Compendium.ptu.abilities.Item.LKlXsNHcGUO0NVKe",
+            "predicate": {
+              "not": "ability:moxie"
+            }
+          },
+          {
+            "label": "Confidence",
+            "value": "Compendium.ptu.abilities.Item.dnokBxCkJAn5nqHN",
+            "predicate": {
+              "not": "ability:confidence"
+            }
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.fabuloustrim}"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-fabulous-trim",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Lg5uUS2PQEN8Jxas": 3
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.18",
+    "createdTime": 1778299393076,
+    "modifiedTime": 1778300196326,
+    "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
+  }
+}
