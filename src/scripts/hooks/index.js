@@ -1,3 +1,4 @@
+import { DefineCustomElements } from "./define-custom-elements.js";
 import { Init } from "./init.js";
 import { ActorButtons } from "./actor-tab-buttons.js";
 import { RenderTokenHUD } from "./render-token-hud.js";
@@ -19,6 +20,7 @@ export const PtuHooks = {
     listen() {
         const listeners = [
             // Add your listeners here
+            DefineCustomElements,
             Init,
             ActorButtons,
             RenderTokenHUD,

@@ -132,6 +132,7 @@ export class TokenPanel extends Application {
                     }
                     return Object.keys(ud).length > 0 ? ud : null;
                 })(),
+                typeClass: attack.item?.system.type ? `type-${attack.item.system.type.toLowerCase()}` : "",
             };
             if (attack.item?.system.category) data.category = `/systems/ptu/static/css/images/types2/${attack.item?.system.category}IC_Icon.png`;
             if (attack.item?.system.type) data.type = { icon: `/systems/ptu/static/css/images/types2/${attack.item.system.type}IC_Icon.png`, name: attack.item.system.type };
