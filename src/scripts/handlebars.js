@@ -27,9 +27,8 @@ function _registerPTUHelpers() {
                 if (type == "atwill") return "";
                 const freq = CONFIG.PTU.data.frequencies[type];
                 const short = game.i18n.localize(freq?.label ?? type[0].toUpperCase());
-                // if (!freq?.limited) return short;
-                // return `${max ?? 1}× ${short}`;
-                return short;
+                if (!freq?.limited) return short;
+                return `${max ?? 1}× ${short}`;
             })();
             const actionString = (()=>{
                 if (!actionCost) return "";
