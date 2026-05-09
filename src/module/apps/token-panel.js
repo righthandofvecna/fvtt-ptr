@@ -169,7 +169,9 @@ export class TokenPanel extends Application {
         
         for (const pokeedge of actor.itemTypes.pokeedge?.sort((a, b) => a.sort - b.sort) ?? []) {
             if (!(pokeedge.getFlag("ptu", "showInTokenPanel") ?? false)) continue;
-            edges.push(await this._getItemData(pokeedge));
+            const edgeData = await this._getItemData(pokeedge);
+            edgeData.pokeedge = true;
+            edges.push(edgeData);
         }
 
         const capabilities = [];

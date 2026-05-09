@@ -268,57 +268,6 @@ body.token-panel-minimized .token-panel {
         }
       }
 
-      // ── other items (feats, pokeballs, etc) ───────────────────────────
-      .action.ability,
-      .action.feat,
-      .action.edge,
-      .action.capability,
-      .action.item {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 3px;
-        padding: 3px;
-
-        .icon {
-          flex: 0 0 33px;
-          display: flex;
-
-          img {
-            height: 33px;
-            width: 33px;
-            object-fit: fill;
-            border: unset;
-            border-radius: 5px 0 0 0;
-          }
-
-          .dice {
-            display: none;
-            background: lightslategray;
-          }
-        }
-
-        .action-costs .cost-icon {
-          --icon-color: black;
-        }
-
-        &.rollable:hover,
-        &.sendtochat:hover {
-          img.icon  { display: none; }
-          img.dice  { display: block; }
-        }
-
-        .name {
-          flex: 1;
-          min-width: 0;
-          font-size: 12px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          color: #222224;
-        }
-      }
-
       // ── on-cooldown ───────────────────────────────────────────────────
       .action.on-cooldown {
         background: #222224aa;
@@ -352,6 +301,10 @@ body.token-panel-minimized .token-panel {
         &.edge {
           --gradient-start: #E58800;
           --gradient-end: color-mix(in srgb, #E58800 30%, black);
+        }
+        &.pokeedge {
+          --gradient-start: #E86257;
+          --gradient-end: color-mix(in srgb, #E86257 30%, black);
         }
         &.capability {
           --gradient-start: #D4B8F9;

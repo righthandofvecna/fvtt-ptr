@@ -111,12 +111,14 @@
                             </div>
                         </div>
                         <div class="name">{{feat.name}}</div>
-                        {{#if feat.frequency}}<div class="freq-tag">{{shortFrequency feat}}</div>{{/if}}
                         {{#if (gt feat.actionCostIcons.length 0)}}
                         <div class="action-costs">
                             {{#each feat.actionCostIcons}}<ptu-icon src="{{this.src}}" title="{{this.label}}" class="cost-icon" alt="{{this.label}}"></ptu-icon>{{/each}}
                         </div>
                         {{/if}}
+                    </div>
+                    <div class="row-meta">
+                        {{#if feat.frequency}}<div class="freq-tag">{{shortFrequency feat}}</div>{{/if}}
                         {{#if feat.usageDisplay}}<div class="usage-badge">{{#if feat.usageDisplay.limited}}<span>{{feat.usageDisplay.remaining}}/{{feat.usageDisplay.max}} Uses</span>{{/if}}{{#if feat.usageDisplay.eot}}<span>EOT</span>{{/if}}</div>{{/if}}
                     </div>
                 </div>
@@ -139,12 +141,14 @@
                             </div>
                         </div>
                         <div class="name">{{ability.name}}</div>
-                        {{#if ability.frequency}}<div class="freq-tag">{{shortFrequency ability}}</div>{{/if}}
                         {{#if (gt ability.actionCostIcons.length 0)}}
                         <div class="action-costs">
                             {{#each ability.actionCostIcons}}<ptu-icon src="{{this.src}}" title="{{this.label}}" class="cost-icon" alt="{{this.label}}"></ptu-icon>{{/each}}
                         </div>
                         {{/if}}
+                    </div>
+                    <div class="row-meta">
+                        {{#if ability.frequency}}<div class="freq-tag">{{shortFrequency ability}}</div>{{/if}}
                         {{#if ability.usageDisplay}}<div class="usage-badge">{{#if ability.usageDisplay.limited}}<span>{{ability.usageDisplay.remaining}}/{{ability.usageDisplay.max}} Uses</span>{{/if}}{{#if ability.usageDisplay.eot}}<span>EOT</span>{{/if}}</div>{{/if}}
                     </div>
                 </div>
@@ -154,7 +158,7 @@
 
             {{#if (and show.edges (gt edges.length 0))}}
             {{#each edges as |edge|}}
-                <div class="action edge {{#if edge.rollable}}rollable{{else}}sendtochat{{/if}} {{#if edge.onCooldown}}on-cooldown{{/if}}" data-id="{{edge.id}}"
+                <div class="action edge {{#if edge.pokeedge}}pokeedge{{/if}} {{#if edge.rollable}}rollable{{else}}sendtochat{{/if}} {{#if edge.onCooldown}}on-cooldown{{/if}}" data-id="{{edge.id}}"
                     data-tooltip="{{edge.effect}}" data-tooltip-direction="LEFT">
                     <div class="row-main">
                         <div class="icon-wrap">
@@ -168,12 +172,14 @@
                             </div>
                         </div>
                         <div class="name">{{edge.name}}</div>
-                        {{#if edge.frequency}}<div class="freq-tag">{{shortFrequency edge}}</div>{{/if}}
                         {{#if (gt edge.actionCostIcons.length 0)}}
                         <div class="action-costs">
                             {{#each edge.actionCostIcons}}<ptu-icon src="{{this.src}}" title="{{this.label}}" class="cost-icon" alt="{{this.label}}"></ptu-icon>{{/each}}
                         </div>
                         {{/if}}
+                    </div>
+                    <div class="row-meta">
+                        {{#if edge.frequency}}<div class="freq-tag">{{shortFrequency edge}}</div>{{/if}}
                         {{#if edge.usageDisplay}}<div class="usage-badge">{{#if edge.usageDisplay.limited}}<span>{{edge.usageDisplay.remaining}}/{{edge.usageDisplay.max}} Uses</span>{{/if}}{{#if edge.usageDisplay.eot}}<span>EOT</span>{{/if}}</div>{{/if}}
                     </div>
                 </div>
@@ -196,12 +202,14 @@
                             </div>
                         </div>
                         <div class="name">{{capability.name}}</div>
-                        {{#if capability.frequency}}<div class="freq-tag">{{shortFrequency capability}}</div>{{/if}}
                         {{#if (gt capability.actionCostIcons.length 0)}}
                         <div class="action-costs">
                             {{#each capability.actionCostIcons}}<ptu-icon src="{{this.src}}" title="{{this.label}}" class="cost-icon" alt="{{this.label}}"></ptu-icon>{{/each}}
                         </div>
                         {{/if}}
+                    </div>
+                    <div class="row-meta">
+                        {{#if capability.frequency}}<div class="freq-tag">{{shortFrequency capability}}</div>{{/if}}
                         {{#if capability.usageDisplay}}<div class="usage-badge">{{#if capability.usageDisplay.limited}}<span>{{capability.usageDisplay.remaining}}/{{capability.usageDisplay.max}} Uses</span>{{/if}}{{#if capability.usageDisplay.eot}}<span>EOT</span>{{/if}}</div>{{/if}}
                     </div>
                 </div>
@@ -213,18 +221,22 @@
             {{#each items.balls as |ball|}}
                 <div class="action item pokeball {{#if ball.rollable}}rollable{{else}}sendtochat{{/if}} {{#if ball.onCooldown}}on-cooldown{{/if}}" data-id="{{ball.id}}"
                     data-tooltip="{{ball.system.effect}}" data-tooltip-direction="LEFT">
-                    <div class="icon">
-                        <img class="icon" src="{{ball.img}}" alt="{{ball.name}}">
-                        {{#if ball.rollable}}
-                            <img class="dice" src="/icons/svg/d20.svg" title="Roll {{ball.name}}">
-                        {{else}}
-                            <img class="dice" src="systems/ptu/static/images/svg/chat.svg" title="Send {{ball.name}} to chat">
-                        {{/if}}
+                    <div class="row-main">
+                        <div class="icon-wrap">
+                            <img class="move-img" src="{{ball.img}}" alt="{{ball.name}}">
+                            <div class="dice-overlay">
+                                {{#if ball.rollable}}
+                                    <img src="/icons/svg/d20.svg" title="Roll {{ball.name}}" alt="Roll">
+                                {{else}}
+                                    <img src="systems/ptu/static/images/svg/chat.svg" title="Send {{ball.name}} to chat" alt="Chat">
+                                {{/if}}
+                            </div>
+                        </div>
+                        <div class="name">{{ball.name}}</div>
                     </div>
-                    <div class="name">
-                        {{ball.name}}
+                    <div class="row-meta">
+                        <div class="usage-badge"><span>{{ball.system.quantity}} Remaining</span></div>
                     </div>
-                    <div class="usage-badge"><span>{{ball.system.quantity}} Remaining</span></div>
                 </div>
             {{/each}}
             {{/if}}
@@ -232,16 +244,18 @@
             {{#each items.other as |item|}}
                 <div class="action item other {{#if item.rollable}}rollable{{else}}sendtochat{{/if}} {{#if item.onCooldown}}on-cooldown{{/if}}" data-id="{{item.id}}"
                     data-tooltip="{{item.effect}}" data-tooltip-direction="LEFT">
-                    <div class="icon">
-                        <img class="icon" src="{{item.img}}" alt="{{item.name}}">
-                        {{#if item.rollable}}
-                            <img class="dice" src="/icons/svg/d20.svg" title="Roll {{item.name}}">
-                        {{else}}
-                            <img class="dice" src="systems/ptu/static/images/svg/chat.svg" title="Send {{item.name}} to chat">
-                        {{/if}}
-                    </div>
-                    <div class="name">
-                        {{item.name}}
+                    <div class="row-main">
+                        <div class="icon-wrap">
+                            <img class="move-img" src="{{item.img}}" alt="{{item.name}}">
+                            <div class="dice-overlay">
+                                {{#if item.rollable}}
+                                    <img src="/icons/svg/d20.svg" title="Roll {{item.name}}" alt="Roll">
+                                {{else}}
+                                    <img src="systems/ptu/static/images/svg/chat.svg" title="Send {{item.name}} to chat" alt="Chat">
+                                {{/if}}
+                            </div>
+                        </div>
+                        <div class="name">{{item.name}}</div>
                     </div>
                 </div>
             {{/each}}
