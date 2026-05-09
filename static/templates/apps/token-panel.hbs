@@ -60,6 +60,9 @@
                             <div class="tag ac" style="visibility: hidden;"></div>
                         {{/if}}
                     </div>
+                    {{#if attack.effectiveness}}
+                        <div class="effectiveness-bar {{attack.effectiveness.key}}">{{attack.effectiveness.label}}</div>
+                    {{/if}}
                 </div>
             {{/each}}
             {{/if}}
@@ -94,6 +97,9 @@
                     <div class="tag ac" title="{{struggle.ac}}"><span>AC: {{struggle.ac}}</span></div>
                     {{/if}}
                 </div>
+                {{#if struggle.effectiveness}}
+                    <div class="effectiveness-bar {{struggle.effectiveness.key}}">{{struggle.effectiveness.label}}</div>
+                {{/if}}
             </div>
             {{/each}}
             {{/if}}

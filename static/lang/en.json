@@ -1036,6 +1036,10 @@
         "AllowPlayersToEditSpecies": {
           "Name": "Allow Players to Edit Species",
           "Hint": "Allow players to edit the species of their Pokémon."
+        },
+        "ShowTypeEffectiveness": {
+          "Name": "Show Type Effectiveness in Token Panel",
+          "Hint": "Display type effectiveness (Immune, Not Very Effective, Normal, Supereffective, Ultraeffective) for moves in the Token Panel based on the current target."
         }
       },
       "Homebrew": {

@@ -82,7 +82,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
         }
 
         data.eotCooldown = Boolean(this.item.flags.ptu?.eot);
-        data.freqConst = CONFIG.PTU.data.frequencies[this.item.system.frequency.type] ?? {};
+        data.freqConst = CONFIG.PTU.data.frequencies[this.item.system.frequency?.type] ?? {};
 
         if(this.item.flags.ptu?.showInTokenPanel === undefined) {
             if(this.item.type === "item" && this.item.roll) data.item.flags.ptu.showInTokenPanel = true;

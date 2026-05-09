@@ -96,9 +96,9 @@
                                 <span>{{item.frequency}}</span>
                             </div>
                             {{#if item.system.frequency.max}}
-                                <div class="tag gradient usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
+                                {{!-- <div class="tag gradient usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
                                     <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
-                                </div>
+                                </div> --}}
                             {{else if item.onCooldown}}
                                 <div class="tag gradient usage-tag exhausted" title="On Cooldown (EOT)">
                                     <span>EOT</span>

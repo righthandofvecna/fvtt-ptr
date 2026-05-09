@@ -64,6 +64,25 @@ export class TokenPanel extends Application {
             actor: null,
         };
 
+        const showEffectiveness = game.settings.get("ptu", "metagame.showTypeEffectiveness");
+        const targetActors = showEffectiveness
+            ? [...game.user.targets].map(t => t.actor).filter(Boolean)
+            : [];
+
+        const getEffectivenessData = (type) => {
+            if (!targetActors.length || !type) return null;
+            const getTier = (val) => {
+                if (val === 0) return { key: "immune", label: "Immune (0x)" };
+                if (val < 1) return { key: "resist", label: "Not Very Effective (<1x)" };
+                if (val === 1) return { key: "normal", label: "Normal (1x)" };
+                if (val === 1.5) return { key: "super", label: "Supereffective (1.5x)" };
+                return { key: "ultra", label: "Ultraeffective (2x+)" };
+            };
+            const tiers = targetActors.map(a => getTier(a.iwr?.getRealValue(type) ?? 1));
+            if (tiers.some(t => t.key !== tiers[0].key)) return null;
+            return tiers[0];
+        };
+
         const attacks = [];
         const struggles = [];
         for (const [id, attack] of actor.attacks.entries()) {
@@ -83,6 +102,7 @@ export class TokenPanel extends Application {
                 range: attack.item?.system.range ?? "",
                 keywords: attack.item?.system.keywords ?? [],
                 sort: attack.item?.sort ?? 0,
+                effectiveness: getEffectivenessData(attack.item?.system.type),
                 usageDisplay: (() => {
                     const freq = attack.item?.system.frequency?.type ? CONFIG.PTU.data.frequencies[attack.item.system.frequency.type] : null;
                     if (!freq) return null;
