@@ -74,6 +74,7 @@ body.token-panel-minimized .token-panel {
         flex-direction: column;
         overflow: hidden;
         border-radius: 5px;
+        --text-color: #222224;
         --gradient-start: #ecdbeb;
         --gradient-end: #dffffe;
         background: linear-gradient(125deg, var(--gradient-start), var(--gradient-start), var(--gradient-end));
@@ -166,7 +167,7 @@ body.token-panel-minimized .token-panel {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          color: #222224;
+          color: var(--text-color);
           line-height: 1.2;
         }
 
@@ -255,6 +256,7 @@ body.token-panel-minimized .token-panel {
         &.sendtochat {
           &:hover {
             background: linear-gradient(45deg, #e6bfe3, #c2fffd);
+            --text-color: #222224;
             cursor: pointer;
 
             .icon-wrap {
@@ -271,10 +273,12 @@ body.token-panel-minimized .token-panel {
       // ── on-cooldown ───────────────────────────────────────────────────
       .action.on-cooldown {
         background: #222224aa;
+        --text-color: #ffffffaa;
         cursor: not-allowed;
 
         &:hover {
           background: #222224aa;
+          --text-color: #ffffffaa;
           cursor: not-allowed;
 
           .icon-wrap {
@@ -283,7 +287,6 @@ body.token-panel-minimized .token-panel {
           }
         }
 
-        .name      { color: #ffffffaa; }
         .chip      { opacity: 0.6; }
         .freq-tag  { opacity: 0.6; }
       }
@@ -305,6 +308,7 @@ body.token-panel-minimized .token-panel {
         &.pokeedge {
           --gradient-start: #E86257;
           --gradient-end: color-mix(in srgb, #E86257 30%, black);
+          --text-color: #ffffff;
         }
         &.capability {
           --gradient-start: #D4B8F9;
@@ -315,6 +319,7 @@ body.token-panel-minimized .token-panel {
         &.type-normal {
           --gradient-start: var(--type-color-normal);
           --gradient-end: color-mix(in srgb, var(--type-color-normal, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-fire {
@@ -325,6 +330,7 @@ body.token-panel-minimized .token-panel {
         &.type-water {
           --gradient-start: var(--type-color-water);
           --gradient-end: color-mix(in srgb, var(--type-color-water, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-electric {
@@ -335,6 +341,7 @@ body.token-panel-minimized .token-panel {
         &.type-grass {
           --gradient-start: var(--type-color-grass);
           --gradient-end: color-mix(in srgb, var(--type-color-grass, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-ice {
@@ -345,31 +352,37 @@ body.token-panel-minimized .token-panel {
         &.type-fighting {
           --gradient-start: var(--type-color-fighting);
           --gradient-end: color-mix(in srgb, var(--type-color-fighting, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-poison {
           --gradient-start: var(--type-color-poison);
           --gradient-end: color-mix(in srgb, var(--type-color-poison, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-ground {
           --gradient-start: var(--type-color-ground);
           --gradient-end: color-mix(in srgb, var(--type-color-ground, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-flying {
           --gradient-start: var(--type-color-flying);
           --gradient-end: color-mix(in srgb, var(--type-color-flying, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-psychic {
           --gradient-start: var(--type-color-psychic);
           --gradient-end: color-mix(in srgb, var(--type-color-psychic, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-bug {
           --gradient-start: var(--type-color-bug);
           --gradient-end: color-mix(in srgb, var(--type-color-bug, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-rock {
@@ -380,21 +393,25 @@ body.token-panel-minimized .token-panel {
         &.type-ghost {
           --gradient-start: var(--type-color-ghost);
           --gradient-end: color-mix(in srgb, var(--type-color-ghost, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-dragon {
           --gradient-start: var(--type-color-dragon);
           --gradient-end: color-mix(in srgb, var(--type-color-dragon, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-dark {
           --gradient-start: var(--type-color-dark);
           --gradient-end: color-mix(in srgb, var(--type-color-dark, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-steel {
           --gradient-start: var(--type-color-steel);
           --gradient-end: color-mix(in srgb, var(--type-color-steel, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-fairy {
@@ -406,6 +423,7 @@ body.token-panel-minimized .token-panel {
         &.type-shadow {
           --gradient-start: var(--type-color-shadow);
           --gradient-end: color-mix(in srgb, var(--type-color-shadow, #fff) 30%, black);
+          --text-color: #ffffff;
         }
 
         &.type-nuclear {
