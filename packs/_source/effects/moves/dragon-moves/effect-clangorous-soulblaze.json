@@ -89,8 +89,7 @@
   "effects": [],
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "6NxJcTpPL5gpFpqf": 3
+    "default": 0
   },
   "flags": {
     "ptu": {
@@ -98,7 +97,6 @@
     }
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -106,6 +104,6 @@
     "systemVersion": "4.4.3.18",
     "createdTime": 1778269558556,
     "modifiedTime": 1778269798068,
-    "lastModifiedBy": "6NxJcTpPL5gpFpqf"
+    "lastModifiedBy": "ptubuilder000000"
   }
 }
