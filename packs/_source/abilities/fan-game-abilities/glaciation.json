@@ -12,7 +12,38 @@
     "origin": "",
     "effect": "The user gains +5 DR in Hail or on snowy terrain. In addition, the user is immune to Hit Point loss from Hail.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "or": [
+            "effect:snowy",
+            "effect:hailstorm",
+            "effect:whiteout"
+          ]
+        },
+        "mode": "add",
+        "path": "system.modifiers.damageReduction.physical.mod",
+        "phase": "applyAEs",
+        "value": 5,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "or": [
+            "effect:snowy",
+            "effect:hailstorm",
+            "effect:whiteout"
+          ]
+        },
+        "mode": "add",
+        "path": "system.modifiers.damageReduction.special.mod",
+        "phase": "applyAEs",
+        "value": 5,
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "glaciation",
     "schema": {
@@ -68,12 +99,13 @@
   "sort": 1100000,
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.18",
     "coreVersion": "13.351",
     "createdTime": 1689606908412,
-    "modifiedTime": 1778200816053,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1778303145907,
+    "lastModifiedBy": "Lg5uUS2PQEN8Jxas",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }

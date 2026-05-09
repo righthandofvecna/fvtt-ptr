@@ -1,0 +1,154 @@
+{
+  "folder": "tq0yvC5SuOcPIjJn",
+  "name": "Effect: Flower Gift (Self)",
+  "type": "effect",
+  "_id": "OQIh9CkdGQrtOGOi",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "@embed[Compendium.ptu.abilities.Item.xnDCbGOzFKtyi4LL]",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "flowergift1",
+        "rollOption": "flowergift1",
+        "adjustName": true,
+        "choices": [
+          {
+            "label": "Attack",
+            "value": "atk"
+          },
+          {
+            "label": "Defense",
+            "value": "def"
+          },
+          {
+            "label": "Special Attack",
+            "value": "spatk"
+          },
+          {
+            "label": "Special Defense",
+            "value": "spdef"
+          },
+          {
+            "label": "Speed",
+            "value": "spd"
+          }
+        ]
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "flowergift2",
+        "adjustName": true,
+        "choices": [
+          {
+            "label": "Attack",
+            "value": "atk",
+            "predicate": {
+              "not": "flowergift1:atk"
+            }
+          },
+          {
+            "label": "Defense",
+            "value": "def",
+            "predicate": {
+              "not": "flowergift1:def"
+            }
+          },
+          {
+            "label": "Special Attack",
+            "value": "spatk",
+            "predicate": {
+              "not": "flowergift1:spatk"
+            }
+          },
+          {
+            "label": "Special Defense",
+            "value": "spdef",
+            "predicate": {
+              "not": "flowergift1:spdef"
+            }
+          },
+          {
+            "label": "Speed",
+            "value": "spd",
+            "predicate": {
+              "not": "flowergift1:spd"
+            }
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.{item|flags.ptu.rulesSelections.flowergift1}.stage.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.{item|flags.ptu.rulesSelections.flowergift2}.stage.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-flower-gift",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "encounter",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Lg5uUS2PQEN8Jxas": 3
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.ptu.effects.Item.OQIh9CkdGQrtOGOi",
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.18",
+    "createdTime": 1778301808142,
+    "modifiedTime": 1778302504919,
+    "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
+  }
+}
