@@ -1,0 +1,88 @@
+<div class="form-group">
+    <label class="short">Choices Mode</label>
+    <div class="attached-input">
+        <select data-action="choices-mode">
+            <option value="array" {{#if (eq choicesMode "array")}}selected{{/if}}>Array of Choices</option>
+            <option value="path" {{#if (eq choicesMode "path")}}selected{{/if}}>Config Path</option>
+            <option value="ownedItems" {{#if (eq choicesMode "ownedItems")}}selected{{/if}}>Owned Items</option>
+        </select>
+    </div>
+</div>
+
+{{#if (eq choicesMode "array")}}
+    <div class="form-group">
+        <label class="short">Choices</label>
+        <div class="choices-list">
+            {{#each choices}}
+                <div class="d-flex flex-row" data-idx="{{@index}}">
+                    <input type="text" name="system.rules.{{@root.index}}.choices.{{@index}}.value" value="{{this.value}}" placeholder="Value or UUID"/>
+                    {{#if this.link}}
+                        <span class="ml-1">{{{this.link}}}</span>
+                    {{/if}}
+                    <input type="text" name="system.rules.{{@root.index}}.choices.{{@index}}.label" value="{{this.label}}" placeholder="Display label"/>
+                    <a data-action="choice-remove" data-idx="{{@index}}" title="Remove"><i class="fas fa-fw fa-trash"></i></a>
+                </div>
+            {{/each}}
+            <div class="d-flex flex-row" data-action="drop-choice" style="border:1px dashed #888;padding:4px 6px;margin-top:2px;cursor:default;">
+                <span style="flex:1;color:#888;">Drop an item here to add as a choice</span>
+                <a data-action="choice-add" title="Add blank entry"><i class="fas fa-fw fa-plus"></i> Add</a>
+            </div>
+        </div>
+    </div>
+{{else if (eq choicesMode "path")}}
+    <div class="form-group">
+        <label class="short">Config Path</label>
+        <div class="attached-input">
+            <input type="text" name="system.rules.{{index}}.choices" value="{{rule.choices}}" placeholder="e.g. data.typeEffectiveness"/>
+        </div>
+    </div>
+{{else if (eq choicesMode "ownedItems")}}
+    <div class="form-group">
+        <label class="short">Item Types</label>
+        <div class="attached-input">
+            <input type="text" class="ptu-tagify types-list" name="system.rules.{{index}}.choices.types" value="{{json rule.choices.types}}" data-dtype="JSON" placeholder="move, feat, ability…"/>
+        </div>
+    </div>
+    <input type="hidden" name="system.rules.{{index}}.choices.ownedItems" value="true"/>
+{{/if}}
+
+<div class="form-group">
+    <label class="short">Flag</label>
+    <div class="attached-input">
+        <input type="text" name="system.rules.{{index}}.flag" value="{{rule.flag}}" placeholder="Auto-generated from item name"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">Roll Option</label>
+    <div class="attached-input">
+        <input type="text" name="system.rules.{{index}}.rollOption" value="{{rule.rollOption}}" placeholder="Optional roll option prefix"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">Prompt</label>
+    <div class="attached-input">
+        <input type="text" name="system.rules.{{index}}.prompt" value="{{rule.prompt}}" placeholder="{{localize "PTU.RuleElement.Prompt.Default"}}"/>
+    </div>
+</div>
+
+<div class="d-flex flex-row justify-content-between">
+    <label class="fill">
+        Adjust item name with selection
+        <input type="checkbox" name="system.rules.{{index}}.adjustName" {{checked adjustName}}>
+    </label>
+    <label class="fill">
+        Allow no selection
+        <input type="checkbox" name="system.rules.{{index}}.allowNoSelection" {{checked rule.allowNoSelection}}>
+    </label>
+</div>
+
+{{#if rule.selection}}
+    <div class="form-group">
+        <label class="short">Selection</label>
+        <div class="attached-input">
+            <input type="text" value="{{rule.selection}}" disabled title="Current selection — clear via JSON if needed"/>
+        </div>
+    </div>
+{{/if}}
