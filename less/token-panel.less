@@ -78,6 +78,26 @@ body.token-panel-minimized .token-panel {
         padding-bottom: 1px;
         border-radius: 5px;
         background: linear-gradient(45deg, #ecdbeb, #dffffe);
+        position: relative;
+
+        .usage-badge {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.6);
+          color: #fff;
+          font-size: 9px;
+          font-weight: bold;
+          line-height: 1;
+          padding: 2px 4px;
+          border-radius: 0 5px 0 3px;
+          pointer-events: none;
+          z-index: 1;
+
+          span + span {
+            margin-left: 4px;
+          }
+        }
 
         .icon {
           display: block;

@@ -28,6 +28,20 @@ export class TokenPanel extends Application {
 
     async _getItemData(item) {
         const effectText = item.system.snippet || item.system.effect || "";
+        const freq = item.system.frequency?.type ? CONFIG.PTU.data.frequencies[item.system.frequency.type] : null;
+        const usageDisplay = (() => {
+            if (!freq) return null;
+            const ud = {};
+            if (freq.limited) {
+                ud.limited = true;
+                ud.remaining = Math.max(0, (item.system.frequency?.max ?? 1) - (item.flags?.ptu?.used ?? 0));
+                ud.max = item.system.frequency?.max ?? 1;
+            }
+            if (freq.eot) {
+                ud.eot = item.flags?.ptu?.eot > 0;
+            }
+            return Object.keys(ud).length > 0 ? ud : null;
+        })();
         return {
             name: item.name,
             img: item.img,
@@ -38,6 +52,7 @@ export class TokenPanel extends Application {
             ap: item.system.ap ?? null,
             rollable: !!item.roll,
             onCooldown: item.onCooldown ?? false,
+            usageDisplay,
         }
     }
 
@@ -68,6 +83,20 @@ export class TokenPanel extends Application {
                 range: attack.item?.system.range ?? "",
                 keywords: attack.item?.system.keywords ?? [],
                 sort: attack.item?.sort ?? 0,
+                usageDisplay: (() => {
+                    const freq = attack.item?.system.frequency?.type ? CONFIG.PTU.data.frequencies[attack.item.system.frequency.type] : null;
+                    if (!freq) return null;
+                    const ud = {};
+                    if (freq.limited) {
+                        ud.limited = true;
+                        ud.remaining = Math.max(0, (attack.item.system.frequency?.max ?? 1) - (attack.item.flags?.ptu?.used ?? 0));
+                        ud.max = attack.item.system.frequency?.max ?? 1;
+                    }
+                    if (freq.eot) {
+                        ud.eot = attack.item.flags?.ptu?.eot > 0;
+                    }
+                    return Object.keys(ud).length > 0 ? ud : null;
+                })(),
             };
             if (attack.item?.system.category) data.category = `/systems/ptu/static/css/images/types2/${attack.item?.system.category}IC_Icon.png`;
             if (attack.item.system.isStruggle) struggles.push(data);

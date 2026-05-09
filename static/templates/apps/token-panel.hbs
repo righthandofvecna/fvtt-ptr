@@ -28,6 +28,9 @@
             {{#each attacks as |attack|}}
                 <div class="action attack {{#if attack.rollable}}rollable{{else}}sendtochat{{/if}} {{#if attack.onCooldown}}on-cooldown{{/if}}" data-id="{{attack.id}}"
                     data-tooltip="<div class='effect-popup'><div class='d-flex justify-content-center'><div class='effect-range'>{{attack.range}}</div>{{#each attack.keywords}}<div class='effect-range'>{{this}}</div>{{/each}}</div><div class='effect-effect'>{{attack.effect}}</div></div>" data-tooltip-direction="LEFT">
+                    {{#if attack.usageDisplay}}
+                        <div class="usage-badge">{{#if attack.usageDisplay.limited}}<span>{{attack.usageDisplay.remaining}}/{{attack.usageDisplay.max}} Uses</span>{{/if}}{{#if attack.usageDisplay.eot}}<span>EOT</span>{{/if}}</div>
+                    {{/if}}
                     <div class="icon {{#if attack.category}}with-category{{/if}}">
                         <img class="icon" src="{{attack.img}}" alt="{{attack.name}}">
                         {{#if attack.rollable}}
@@ -63,6 +66,9 @@
             {{#if (gt struggles.length 0)}}
             {{#each struggles as |struggle|}}
             <div class="action struggle {{#if struggle.rollable}}rollable{{else}}sendtochat{{/if}} {{#if struggle.onCooldown}}on-cooldown{{/if}}" data-id="{{struggle.id}}">
+                    {{#if struggle.usageDisplay}}
+                        <div class="usage-badge">{{#if struggle.usageDisplay.limited}}<span>{{struggle.usageDisplay.remaining}}/{{struggle.usageDisplay.max}} Uses</span>{{/if}}{{#if struggle.usageDisplay.eot}}<span>EOT</span>{{/if}}</div>
+                    {{/if}}
                 <div class="icon {{#if struggle.category}}with-category{{/if}}">
                     <img class="icon" src="{{struggle.img}}" alt="{{struggle.name}}">
                     {{#if struggle.rollable}}
@@ -97,6 +103,9 @@
             {{#each feats as |feat|}}
                 <div class="action feat {{#if feat.rollable}}rollable{{else}}sendtochat{{/if}} {{#if feat.onCooldown}}on-cooldown{{/if}}" data-id="{{feat.id}}"
                     data-tooltip="<div class='effect-popup'>{{#if feat.keywords}}<div class='d-flex justify-content-center'>{{#each feat.keywords}}<div class='effect-range'>{{this}}</div>{{/each}}</div>{{/if}}<div class='effect-effect'>{{feat.effect}}</div></div>" data-tooltip-direction="LEFT">
+                    {{#if feat.usageDisplay}}
+                        <div class="usage-badge">{{#if feat.usageDisplay.limited}}<span>{{feat.usageDisplay.remaining}}/{{feat.usageDisplay.max}} Uses</span>{{/if}}{{#if feat.usageDisplay.eot}}<span>EOT</span>{{/if}}</div>
+                    {{/if}}
                     <div class="icon">
                         <img class="icon" src="{{feat.img}}" alt="{{feat.name}}">
                         {{#if feat.rollable}}
@@ -121,6 +130,9 @@
             {{#each abilities as |ability|}}
                 <div class="action ability {{#if ability.rollable}}rollable{{else}}sendtochat{{/if}} {{#if ability.onCooldown}}on-cooldown{{/if}}" data-id="{{ability.id}}"
                     data-tooltip="{{ability.effect}}" data-tooltip-direction="LEFT">
+                    {{#if ability.usageDisplay}}
+                        <div class="usage-badge">{{#if ability.usageDisplay.limited}}<span>{{ability.usageDisplay.remaining}}/{{ability.usageDisplay.max}} Uses</span>{{/if}}{{#if ability.usageDisplay.eot}}<span>EOT</span>{{/if}}</div>
+                    {{/if}}
                     <div class="icon">
                         <img class="icon" src="{{ability.img}}" alt="{{ability.name}}">
                         {{#if ability.rollable}}
@@ -146,6 +158,9 @@
             {{#each edges as |edge|}}
                 <div class="action edge {{#if edge.rollable}}rollable{{else}}sendtochat{{/if}} {{#if edge.onCooldown}}on-cooldown{{/if}}" data-id="{{edge.id}}"
                     data-tooltip="{{edge.effect}}" data-tooltip-direction="LEFT">
+                    {{#if edge.usageDisplay}}
+                        <div class="usage-badge">{{#if edge.usageDisplay.limited}}<span>{{edge.usageDisplay.remaining}}/{{edge.usageDisplay.max}} Uses</span>{{/if}}{{#if edge.usageDisplay.eot}}<span>EOT</span>{{/if}}</div>
+                    {{/if}}
                     <div class="icon">
                         <img class="icon" src="{{edge.img}}" alt="{{edge.name}}">
                         {{#if edge.rollable}}
@@ -170,6 +185,9 @@
             {{#each capabilities as |capability|}}
                 <div class="action capability {{#if capability.rollable}}rollable{{else}}sendtochat{{/if}} {{#if capability.onCooldown}}on-cooldown{{/if}}" data-id="{{capability.id}}"
                     data-tooltip="{{capability.effect}}" data-tooltip-direction="LEFT">
+                    {{#if capability.usageDisplay}}
+                        <div class="usage-badge">{{#if capability.usageDisplay.limited}}<span>{{capability.usageDisplay.remaining}}/{{capability.usageDisplay.max}} Uses</span>{{/if}}{{#if capability.usageDisplay.eot}}<span>EOT</span>{{/if}}</div>
+                    {{/if}}
                     <div class="icon">
                         <img class="icon" src="{{capability.img}}" alt="{{capability.name}}">
                         {{#if capability.rollable}}
