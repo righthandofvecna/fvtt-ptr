@@ -38,6 +38,10 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Improved the Frequency Tracking UI, added house rule settings](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/912)
+- Added a GM Control panel (accessible via the little shield icon on the right, in the sidebar controls) for resetting move frequencies and healing all actors
+- Added a new system for formulaic Damage Bases (work-in-progress)
+- Display type effectiveness in the token panel
 - [Added automatic Frequency tracking for moves, abilities, etc](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/878)
 - [Boss multiple-initiatives now don't fail to roll](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/903)
 - [On Level-Up, increase current HP by max HP difference](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/850)
