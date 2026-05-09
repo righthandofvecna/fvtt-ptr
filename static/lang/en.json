@@ -1077,6 +1077,12 @@
           "Title": "Reset Type Effectiveness",
           "Content": "Are you sure you want to reset the type effectiveness to the default values?"
         }
+      },
+      "User": {
+        "AdvancementPendingIndicator": {
+          "Name": "Show Pending Advancement Indicator",
+          "Hint": "Show an indicator on Trainers/Pokémon that have pending level-ups or level-up tasks in the Actors sidebar."
+        }
       }
     },
     "Contests": {

@@ -126,6 +126,16 @@ export function registerSettings() {
         default: true
     });
 
+    game.settings.register("ptu", "advancementPendingIndicator", {
+        name: "PTU.Settings.User.AdvancementPendingIndicator.Name",
+        hint: "PTU.Settings.User.AdvancementPendingIndicator.Hint",
+        type: Boolean,
+        default: true,
+        scope: "user",
+        config: true,
+        requiresReload: true,
+    })
+
     game.settings.register("ptu", "transferOwnershipDefaultValue", {
         name: "Transfer Ownership Preference",
         hint: "After ownership of a mon is transfered, would you like for it to also set default permissions for other players?",
