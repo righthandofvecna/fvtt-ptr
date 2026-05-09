@@ -1,3 +1,17 @@
+const ACTION_COST_ICONS = {
+    standard: "systems/ptu/static/images/icons/StandardAction.svg",
+    rapid:    "systems/ptu/static/images/icons/RapidAction.svg",
+    shift:    "systems/ptu/static/images/icons/ShiftAction.svg",
+    free:     "systems/ptu/static/images/icons/FreeAction.svg",
+};
+
+function buildActionCostIcons(actionCost) {
+    if (!actionCost) return [];
+    return Object.entries(ACTION_COST_ICONS)
+        .filter(([key]) => actionCost[key])
+        .map(([key, src]) => ({ src, label: key.charAt(0).toUpperCase() + key.slice(1) + " Action" }));
+}
+
 export class TokenPanel extends Application {
     get token() {
         return canvas.tokens.controlled.at(0)?.document ?? null;
@@ -37,8 +51,8 @@ export class TokenPanel extends Application {
                 ud.remaining = Math.max(0, (item.system.frequency?.max ?? 1) - (item.flags?.ptu?.used ?? 0));
                 ud.max = item.system.frequency?.max ?? 1;
             }
-            if (freq.eot) {
-                ud.eot = item.flags?.ptu?.eot > 0;
+            if (freq.eot && item.flags?.ptu?.eot > 0) {
+                ud.eot = true;
             }
             return Object.keys(ud).length > 0 ? ud : null;
         })();
@@ -53,6 +67,7 @@ export class TokenPanel extends Application {
             rollable: !!item.roll,
             onCooldown: item.onCooldown ?? false,
             usageDisplay,
+            actionCostIcons: buildActionCostIcons(item.system.actionCost ?? null),
         }
     }
 
@@ -112,13 +127,15 @@ export class TokenPanel extends Application {
                         ud.remaining = Math.max(0, (attack.item.system.frequency?.max ?? 1) - (attack.item.flags?.ptu?.used ?? 0));
                         ud.max = attack.item.system.frequency?.max ?? 1;
                     }
-                    if (freq.eot) {
-                        ud.eot = attack.item.flags?.ptu?.eot > 0;
+                    if (freq.eot && attack.item.flags?.ptu?.eot > 0) {
+                        ud.eot = true;
                     }
                     return Object.keys(ud).length > 0 ? ud : null;
                 })(),
             };
             if (attack.item?.system.category) data.category = `/systems/ptu/static/css/images/types2/${attack.item?.system.category}IC_Icon.png`;
+            if (attack.item?.system.type) data.type = { icon: `/systems/ptu/static/css/images/types2/${attack.item.system.type}IC_Icon.png`, name: attack.item.system.type };
+            data.actionCostIcons = buildActionCostIcons(attack.item?.system.actionCost ?? null);
             if (attack.item.system.isStruggle) struggles.push(data);
             else attacks.push(data);
         }

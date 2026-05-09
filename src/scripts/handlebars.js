@@ -14,7 +14,7 @@ function _registerPTUHelpers() {
 
     Handlebars.registerHelper("json", function (context) { return JSON.stringify(context); });
 
-    Handlebars.registerHelper("shortFrequency", function (item) {
+    Handlebars.registerHelper("combinedFrequency", function (item) {
         const frequency = item.system?.frequency ?? item?.frequency;
         const actionCost = item.system?.actionCost ?? item?.actionCost;
         const ap = item.system?.ap ?? item?.ap;
@@ -69,7 +69,33 @@ function _registerPTUHelpers() {
             }
         }
         return "";
-    })
+    });
+
+    Handlebars.registerHelper("shortFrequency", function (item) {
+        const frequency = item.system?.frequency ?? item?.frequency;
+        // New object format: { type, max }
+        if (frequency && typeof frequency === "object") {
+            const { type, max } = frequency;
+            if (type === "custom") return frequency.custom || "";
+            const freq = CONFIG.PTU.data.frequencies[type];
+            return game.i18n.localize(freq?.label) ?? type[0].toUpperCase();
+        }
+        // Legacy string format (pack source files not yet migrated)
+        if (typeof frequency === "string") {
+            switch (frequency.toLowerCase()) {
+                case "at-will": return "At-Will";
+                case "eot": return "EOT";
+                case "scene": return "S";
+                case "scene x2": return "2× S";
+                case "scene x3": return "3× S";
+                case "daily": return "D";
+                case "daily x2": return "2× D";
+                case "daily x3": return "3× D";
+                default: return frequency;
+            }
+        }
+        return "";
+    });
 
     Handlebars.registerHelper("calcHeight", function (percent) {
         return Math.clamp(Math.round((100 - percent) / 100 * 48), 0, 48);

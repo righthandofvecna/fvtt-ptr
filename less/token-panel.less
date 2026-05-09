@@ -71,221 +71,262 @@ body.token-panel-minimized .token-panel {
 
       .action {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         overflow: hidden;
-        gap: 3px;
-        padding-bottom: 1px;
         border-radius: 5px;
         background: linear-gradient(45deg, #ecdbeb, #dffffe);
         position: relative;
 
+        // ── shared usage badge ──────────────────────────────────────────
         .usage-badge {
-          position: absolute;
-          top: 0;
-          right: 0;
+          display: inline-flex;
+          align-items: center;
+          flex-shrink: 0;
+          margin-left: auto;
           background: rgba(0, 0, 0, 0.6);
           color: #fff;
           font-size: 9px;
           font-weight: bold;
           line-height: 1;
           padding: 2px 4px;
-          border-radius: 0 5px 0 3px;
-          pointer-events: none;
-          z-index: 1;
+          border-radius: 3px;
+          white-space: nowrap;
 
           span + span {
             margin-left: 4px;
           }
         }
 
-        .icon {
-          display: block;
-          flex: 0 0 25px;
-          display: flex;
-
-          img {
-            height: 25px;
-            width: 25px;
-            object-fit: fill;
-            border: unset;
-            border-radius: 5px 0 0 0;
-          }
-        }
-
-        .dice {
-          display: none;
-          background: lightslategray;
-        }
-
-        .tags {
+        // ── main row (icon + name + chips + action costs) ───────────────
+        .row-main {
           display: flex;
           flex-direction: row;
-          justify-content: space-evenly;
-          flex: 0 0 100%;
-          height: 20px;
+          align-items: center;
+          gap: 3px;
+          padding: 3px 3px 1px 3px;
+          min-height: 28px;
+        }
 
-          .tag {
-            height: 20px;
-            font-size: 11px;
-            margin: 0;
-            color: #222224;
+        // ── meta row (type + category + freq + eff pill) ─────────────────
+        .row-meta {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 3px;
+          padding: 1px 3px 3px 3px;
+          min-height: 20px;
+          flex-wrap: nowrap;
+        }
+
+        // ── icon with hover overlay ───────────────────────────────────────
+        .icon-wrap {
+          position: relative;
+          flex: 0 0 26px;
+          width: 26px;
+          height: 26px;
+          border-radius: 4px 0 0 0;
+          overflow: hidden;
+
+          .move-img {
+            display: block;
+            width: 26px;
+            height: 26px;
+            object-fit: fill;
+            border: unset;
+            transition: opacity 0.12s;
+          }
+
+          .dice-overlay {
+            position: absolute;
+            inset: 0;
             display: flex;
-            border-radius: 3px;
-            span {
-              display: inline-block;
-              min-width: 45px;
-              max-width: 140px;
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              text-align: center;
-              align-self: center;
-              padding: 0px 5px;
+            align-items: center;
+            justify-content: center;
+            background: rgba(75, 75, 90, 0.55);
+            opacity: 0;
+            transition: opacity 0.12s;
+
+            img {
+              width: 18px;
+              height: 18px;
+              border: none;
+              filter: drop-shadow(0 1px 2px rgba(0,0,0,0.7));
             }
           }
+        }
 
-          .tag.frequency {
-            background: #ffe599aa;
-            border: 1px solid #6b6040aa;
-          }
+        // ── name ──────────────────────────────────────────────────────────
+        .name {
+          flex: 1;
+          min-width: 0;
+          font-size: 12px;
+          font-weight: 600;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #222224;
+          line-height: 1.2;
+        }
 
-          .tag.ac {
-            background: #55e9b8aa;
+        // ── stat chips (AC / DB) ──────────────────────────────────────────
+        .stat-chips {
+          display: flex;
+          flex-direction: row;
+          gap: 2px;
+          flex-shrink: 0;
+        }
+
+        .chip {
+          font-size: 10px;
+          font-weight: bold;
+          line-height: 1;
+          padding: 2px 4px;
+          border-radius: 3px;
+          white-space: nowrap;
+          color: #222224;
+
+          &.ac {
+            background: #55e9b8cc;
             border: 1px solid #2c7a60aa;
           }
 
-          .tag.db {
-            background: #cf81d6aa;
+          &.db {
+            background: #cf81d6cc;
             border: 1px solid #563558aa;
           }
         }
 
-        .effectiveness-bar {
-          flex: 0 0 100%;
-          text-align: center;
+        // ── action cost icons ─────────────────────────────────────────────
+        .action-costs {
+          display: flex;
+          flex-direction: row;
+          gap: 1px;
+          flex-shrink: 0;
+          align-items: center;
+
+          .cost-icon {
+            width: 25px;
+            height: 25px;
+            border: none;
+            object-fit: contain;
+            filter: drop-shadow(0 1px 1px white);
+          }
+        }
+
+        // ── meta row elements ─────────────────────────────────────────────
+        .category-icon {
+          width: 18px;
+          height: 18px;
+          border: none;
+          object-fit: contain;
+          flex-shrink: 0;
+        }
+
+        .freq-tag {
           font-size: 10px;
           font-weight: bold;
-          line-height: 14px;
-          border-radius: 0 0 5px 5px;
+          line-height: 1;
+          padding: 2px 5px;
+          border-radius: 3px;
+          white-space: nowrap;
+          background: #ffe599bb;
+          border: 1px solid #6b6040aa;
+          color: #222224;
+        }
+
+        .eff-pill {
+          margin-left: auto;
+          font-size: 10px;
+          font-weight: bold;
+          line-height: 1;
+          padding: 2px 5px;
+          border-radius: 3px;
+          white-space: nowrap;
           color: #fff;
           text-shadow: 0 1px 2px rgba(0,0,0,0.6);
 
           &.immune { background: rgba(255, 50, 50, 0.85); }
-          &.resist  { background: rgba(255, 255, 100, 0.85); }
-          &.normal  { background: rgba(110, 110, 110, 0.55); text-shadow: none; }
+          &.resist  { background: rgba(180, 160, 0, 0.85); color: #fff; }
           &.super   { background: rgba(65, 200, 0, 0.85); }
           &.ultra   { background: rgba(127, 50, 200, 0.85); }
         }
 
-        .icon.with-category {
-          flex: 0 0 44px;
+        // ── hover interaction ─────────────────────────────────────────────
+        &.rollable,
+        &.sendtochat {
+          &:hover {
+            background: linear-gradient(45deg, #e6bfe3, #c2fffd);
+            cursor: pointer;
 
-          img {
-            height: 22px;
-            width: 22px;
-            flex: 0 0 22px;
-          }
-
-          img.category {
-            border-radius: 0 5px 5px 0;
+            .icon-wrap {
+              .move-img    { opacity: 0.25; }
+              .dice-overlay { opacity: 1; }
+            }
           }
         }
 
+        // ── on-cooldown ───────────────────────────────────────────────────
+        &.on-cooldown {
+          background: #222224aa;
+          cursor: not-allowed;
+
+          &:hover {
+            background: #222224aa;
+            cursor: not-allowed;
+
+            .icon-wrap {
+              .move-img    { opacity: 0.25; }
+              .dice-overlay { opacity: 1; }
+            }
+          }
+
+          .name      { color: #ffffffaa; }
+          .chip      { opacity: 0.6; }
+          .freq-tag  { opacity: 0.6; }
+        }
+      }
+
+      // ── items (pokeballs / other) ─────────────────────────────────────
+      .action.item {
+        // items use the legacy .icon structure, no row-main
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3px;
+        padding: 3px;
+
+        .icon {
+          flex: 0 0 33px;
+          display: flex;
+
+          img {
+            height: 33px;
+            width: 33px;
+            object-fit: fill;
+            border: unset;
+            border-radius: 5px 0 0 0;
+          }
+
+          .dice {
+            display: none;
+            background: lightslategray;
+          }
+        }
+
+        &.rollable:hover,
+        &.sendtochat:hover {
+          img.icon  { display: none; }
+          img.dice  { display: block; }
+        }
+
         .name {
-          align-self: center;
+          flex: 1;
+          min-width: 0;
           font-size: 12px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
           color: #222224;
-        }
-
-        &.rollable {
-          &:hover {
-            background: linear-gradient(45deg, #e6bfe3, #c2fffd);
-            cursor: pointer;
-
-            img.icon {
-              display: none;
-            }
-
-            img.dice {
-              display: block;
-            }
-
-            .icon {
-              flex: 0 0 25px;
-            }
-
-            .name {
-              flex: 0 0 120px;
-            }
-          }
-        }
-        &.sendtochat {
-          &:hover {
-            background: linear-gradient(45deg, #e6bfe3, #c2fffd) !important;
-            cursor: pointer;
-
-            img.icon {
-              display: none;
-            }
-
-            img.dice {
-              display: block;
-            }
-
-            .icon {
-              flex: 0 0 25px;
-            }
-
-            .name {
-              flex: 0 0 120px;
-            }
-          }
-        }
-        &.on-cooldown {
-          background: #222224aa;
-          color: #ffffffaa;
-          cursor: not-allowed;
-          &:hover {
-            background: #222224aa;
-            color: #ffffffaa;
-            cursor: not-allowed;
-          }
-          .name {
-            color: #ffffffaa;
-          }
-        }
-      }
-
-      .action.attack,
-      .action.struggle {
-        .name {
-          flex: 0 0 100px;
-        }
-      }
-
-      .action.item {
-        .icon {
-          flex: 0 0 33px;
-
-          img {
-            height: 33px;
-            width: 33px;
-          }
-        }
-
-        .name {
-          flex: 0 0 100px;
-        }
-      }
-
-      .action.feat,
-      .action.ability {
-        .name {
-          flex: 1;
         }
       }
 
