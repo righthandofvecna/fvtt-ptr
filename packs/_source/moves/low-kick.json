@@ -63,7 +63,7 @@
     },
     "type": "Fighting",
     "category": "Physical",
-    "damageBase": "X, See Effect",
+    "damageBase": "{{target|species.system.size.weightClass|3}}*2",
     "ac": "2",
     "range": "Melee",
     "contestType": "Tough - Steady Performance",
