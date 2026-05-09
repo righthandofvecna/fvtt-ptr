@@ -13,7 +13,8 @@
         "mode": "add",
         "path": "system.modifiers.evasion.physical.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -21,7 +22,8 @@
         "mode": "add",
         "path": "system.modifiers.evasion.special.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -29,7 +31,8 @@
         "mode": "add",
         "path": "system.modifiers.evasion.speed.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -91,12 +94,13 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.18",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816158,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1778297927072,
+    "lastModifiedBy": "Lg5uUS2PQEN8Jxas",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }
