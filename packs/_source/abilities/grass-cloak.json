@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "The users Evasion is increased by +2 while in a Grassy Terrain. The user and allies adjacent to the user gain double the health from Grassy Terrain. Defensive",
+    "effect": "The user's Evasion is increased by +2 while in Grassy Terrain. The user and allies adjacent to the user gain double the health from Grassy Terrain. Defensive",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -20,7 +20,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.O5RbIykzWfECl2kS",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -66,12 +66,13 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.18",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816827,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1778331491363,
+    "lastModifiedBy": "Lg5uUS2PQEN8Jxas",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }

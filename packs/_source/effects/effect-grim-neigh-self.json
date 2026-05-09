@@ -1,31 +1,26 @@
 {
-  "folder": "HXvrV3SrrNwVovjT",
-  "name": "Effect: Flavorful Aroma",
+  "folder": "Trx6YDoKe7yP0Wpp",
+  "name": "Effect: Grim Neigh (Self)",
   "type": "effect",
-  "_id": "SOyq2of4F9ZRUcte",
+  "_id": "TI2IsRK7kf2oy9oJ",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "@embed[Compendium.ptu.abilities.Item.WMQkJ7hckztY6xFF]",
+    "effect": "@embed[Compendium.ptu.abilities.Item.AvclTZSnxJN5PAJg]",
     "snippet": "",
     "rules": [
       {
-        "key": "FlatModifier",
+        "key": "ActiveEffectLike",
         "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "attack-roll",
-        "value": 1
-      },
-      {
-        "key": "FlatModifier",
-        "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "damage-roll",
-        "value": 5
+        "mode": "add",
+        "path": "system.stats.spatk.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-flavorful-aroma",
+    "slug": "effect-grim-neigh-self",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -40,9 +35,9 @@
       "value": 1
     },
     "duration": {
-      "value": 1,
-      "unit": "rounds",
-      "expiry": "turn-end"
+      "value": -1,
+      "unit": "encounter",
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -67,14 +62,14 @@
     }
   },
   "_stats": {
-    "compendiumSource": null,
+    "compendiumSource": "Compendium.ptu.effects.Item.TI2IsRK7kf2oy9oJ",
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "ptu",
     "systemVersion": "4.4.3.18",
-    "createdTime": 1778301427586,
-    "modifiedTime": 1778331836774,
+    "createdTime": 1778331622273,
+    "modifiedTime": 1778331755866,
     "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
   }
 }

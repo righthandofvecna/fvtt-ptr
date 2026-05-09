@@ -1,12 +1,11 @@
 {
-  "folder": "HXvrV3SrrNwVovjT",
-  "name": "Effect: Flavorful Aroma",
+  "folder": "Trx6YDoKe7yP0Wpp",
+  "name": "Effect: Grim Neigh (Foe)",
   "type": "effect",
-  "_id": "SOyq2of4F9ZRUcte",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "@embed[Compendium.ptu.abilities.Item.WMQkJ7hckztY6xFF]",
+    "effect": "@embed[Compendium.ptu.abilities.Item.AvclTZSnxJN5PAJg]",
     "snippet": "",
     "rules": [
       {
@@ -14,18 +13,11 @@
         "predicate": [],
         "hideIfDisabled": false,
         "selectors": "attack-roll",
-        "value": 1
-      },
-      {
-        "key": "FlatModifier",
-        "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "damage-roll",
-        "value": 5
+        "value": -2
       }
     ],
     "enabled": true,
-    "slug": "effect-flavorful-aroma",
+    "slug": "effect-grim-neigh-foe",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -56,7 +48,6 @@
     "context": null
   },
   "effects": [],
-  "sort": 0,
   "ownership": {
     "default": 0,
     "Lg5uUS2PQEN8Jxas": 3
@@ -73,8 +64,10 @@
     "coreVersion": "13.351",
     "systemId": "ptu",
     "systemVersion": "4.4.3.18",
-    "createdTime": 1778301427586,
-    "modifiedTime": 1778331836774,
+    "createdTime": 1778331747269,
+    "modifiedTime": 1778331747269,
     "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
-  }
+  },
+  "_id": "43e3GWmenSKbUgkc",
+  "sort": 0
 }
