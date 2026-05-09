@@ -1,35 +1,44 @@
 {
-  "folder": "9GZLm7BLHeMR3rDb",
-  "name": "Effect: Flare Boost",
+  "folder": "5V9TjFVBCkUJQnIb",
+  "name": "Effect: Grass Cloak",
   "type": "effect",
-  "_id": "Nk1VMhhq5dSPdRMI",
+  "_id": "O5RbIykzWfECl2kS",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "@embed[Compendium.ptu.abilities.Item.LpHNuODReZXbp1Md]",
+    "effect": "@embed[Compendium.ptu.abilities.Item.mMKZsoPpjSxInDZQ]",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "predicate": [],
         "mode": "add",
-        "path": "system.stats.atk.stage.mod",
+        "path": "system.modifiers.evasion.physical.mod",
         "phase": "applyAEs",
-        "value": 3,
+        "value": 2,
         "priority": null
       },
       {
         "key": "ActiveEffectLike",
         "predicate": [],
         "mode": "add",
-        "path": "system.stats.spatk.stage.mod",
+        "path": "system.modifiers.evasion.speed.mod",
         "phase": "applyAEs",
-        "value": 3,
+        "value": 2,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.evasion.special.mod",
+        "phase": "applyAEs",
+        "value": 2,
         "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-flare-boost",
+    "slug": "effect-grass-cloak",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -38,7 +47,7 @@
     "source": {
       "value": "PTR Compendiums"
     },
-    "stackSlugs": true,
+    "stackSlugs": false,
     "keywords": [],
     "level": {
       "value": 1
@@ -62,7 +71,8 @@
   "effects": [],
   "sort": 0,
   "ownership": {
-    "default": 0
+    "default": 0,
+    "Lg5uUS2PQEN8Jxas": 3
   },
   "flags": {
     "ptu": {
@@ -70,13 +80,14 @@
     }
   },
   "_stats": {
+    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "ptu",
     "systemVersion": "4.4.3.18",
-    "createdTime": 1778301258486,
-    "modifiedTime": 1778331833109,
+    "createdTime": 1778331335930,
+    "modifiedTime": 1778331465956,
     "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
   }
 }

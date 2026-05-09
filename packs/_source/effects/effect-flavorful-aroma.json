@@ -34,7 +34,7 @@
     "source": {
       "value": "PTR Compendiums"
     },
-    "stackSlugs": false,
+    "stackSlugs": true,
     "keywords": [],
     "level": {
       "value": 1
@@ -72,7 +72,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.18",
     "createdTime": 1778301427586,
-    "modifiedTime": 1778301569848,
-    "lastModifiedBy": "ptubuilder000000"
+    "modifiedTime": 1778331836774,
+    "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
   }
 }

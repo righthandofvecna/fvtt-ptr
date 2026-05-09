@@ -1,35 +1,25 @@
 {
-  "folder": "9GZLm7BLHeMR3rDb",
-  "name": "Effect: Flare Boost",
+  "folder": "FXwRmpX2n4BsPCSu",
+  "name": "Effect: Gooey",
   "type": "effect",
-  "_id": "Nk1VMhhq5dSPdRMI",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "@embed[Compendium.ptu.abilities.Item.LpHNuODReZXbp1Md]",
+    "effect": "@embed[Compendium.ptu.abilities.Item.bu0EeMn7eyjLc0gB]",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "predicate": [],
         "mode": "add",
-        "path": "system.stats.atk.stage.mod",
+        "path": "system.stats.spd.stage.mod",
         "phase": "applyAEs",
-        "value": 3,
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": [],
-        "mode": "add",
-        "path": "system.stats.spatk.stage.mod",
-        "phase": "applyAEs",
-        "value": 3,
+        "value": 1,
         "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-flare-boost",
+    "slug": "effect-gooey",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -60,9 +50,9 @@
     "context": null
   },
   "effects": [],
-  "sort": 0,
   "ownership": {
-    "default": 0
+    "default": 0,
+    "Lg5uUS2PQEN8Jxas": 3
   },
   "flags": {
     "ptu": {
@@ -70,13 +60,16 @@
     }
   },
   "_stats": {
+    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "ptu",
     "systemVersion": "4.4.3.18",
-    "createdTime": 1778301258486,
-    "modifiedTime": 1778331833109,
+    "createdTime": 1778330676506,
+    "modifiedTime": 1778331848420,
     "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
-  }
+  },
+  "_id": "uxVD0vKOOOe9yNhp",
+  "sort": 0
 }

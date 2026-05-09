@@ -1,35 +1,23 @@
 {
-  "folder": "9GZLm7BLHeMR3rDb",
-  "name": "Effect: Flare Boost",
+  "folder": "Trx6YDoKe7yP0Wpp",
+  "name": "Effect: Grim Neigh (Foe)",
   "type": "effect",
-  "_id": "Nk1VMhhq5dSPdRMI",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "@embed[Compendium.ptu.abilities.Item.LpHNuODReZXbp1Md]",
+    "effect": "@embed[Compendium.ptu.abilities.Item.AvclTZSnxJN5PAJg]",
     "snippet": "",
     "rules": [
       {
-        "key": "ActiveEffectLike",
+        "key": "FlatModifier",
         "predicate": [],
-        "mode": "add",
-        "path": "system.stats.atk.stage.mod",
-        "phase": "applyAEs",
-        "value": 3,
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": [],
-        "mode": "add",
-        "path": "system.stats.spatk.stage.mod",
-        "phase": "applyAEs",
-        "value": 3,
-        "priority": null
+        "hideIfDisabled": false,
+        "selectors": "attack-roll",
+        "value": -2
       }
     ],
     "enabled": true,
-    "slug": "effect-flare-boost",
+    "slug": "effect-grim-neigh-foe",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -44,9 +32,9 @@
       "value": 1
     },
     "duration": {
-      "value": -1,
-      "unit": "encounter",
-      "expiry": null
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-end"
     },
     "start": {
       "value": 0,
@@ -60,9 +48,9 @@
     "context": null
   },
   "effects": [],
-  "sort": 0,
   "ownership": {
-    "default": 0
+    "default": 0,
+    "Lg5uUS2PQEN8Jxas": 3
   },
   "flags": {
     "ptu": {
@@ -70,13 +58,16 @@
     }
   },
   "_stats": {
+    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "ptu",
     "systemVersion": "4.4.3.18",
-    "createdTime": 1778301258486,
-    "modifiedTime": 1778331833109,
+    "createdTime": 1778331747269,
+    "modifiedTime": 1778331747269,
     "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
-  }
+  },
+  "_id": "43e3GWmenSKbUgkc",
+  "sort": 0
 }
