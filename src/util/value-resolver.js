@@ -137,4 +137,37 @@ function resolveValue(valueData, injectionData, defaultValue = 0, { evaluate = t
             : value;
 }
 
-export { resolveInjectedProperties, resolveValue };
+/**
+ * Resolves a damage-base formula string that may contain `{{target|<path>|<default>}}` tokens.
+ * Each token is replaced with the numeric value at `path` on the target actor (if available and numeric),
+ * or with `defaultValue` otherwise. The resulting expression is evaluated as a numeric formula.
+ *
+ * Example: `"{{target|species.system.size.weightClass|1}} * 2 + 1"` with a target whose weightClass is 3 → 7
+ *
+ * @param {string} formula - The formula string to resolve.
+ * @param {{ target?: object|null }} [options]
+ * @returns {number|null} The evaluated number, or null if the formula cannot be evaluated.
+ */
+function resolveDbFormula(formula, { target = null } = {}) {
+    if (typeof formula !== "string") return null;
+
+    const tokenRegex = /\{\{target\|([^|{}]+)\|([^|{}]+)\}\}/g;
+
+    const resolved = formula.replace(tokenRegex, (_match, path, fallback) => {
+        if (target) {
+            const value = foundry.utils.getProperty(target, path);
+            if (typeof value === "number" && !isNaN(value)) return String(value);
+        }
+        return fallback.trim();
+    });
+
+    try {
+        const result = Roll.safeEval(resolved);
+        return typeof result === "number" && !isNaN(result) ? result : null;
+    } catch {
+        console.error(`PTU | resolveDbFormula: failed to evaluate formula "${resolved}" (original: "${formula}")`);
+        return null;
+    }
+}
+
+export { resolveInjectedProperties, resolveValue, resolveDbFormula };

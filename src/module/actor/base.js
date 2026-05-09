@@ -1267,7 +1267,8 @@ class PTUActor extends Actor {
             const damage = await PTUMoveDamage.calculate({
                 move,
                 actor: damageContext.actor,
-                context: damageContext
+                context: damageContext,
+                target: contexts[0]?.target?.actor ?? null,
             });
             if (!damage) return null;
 
