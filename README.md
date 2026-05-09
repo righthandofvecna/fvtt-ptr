@@ -38,6 +38,7 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Added a user setting to disable the Advancement Pending indicator in the sidebar
 - [Improved the Frequency Tracking UI, added house rule settings](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/912)
 - Added a GM Control panel (accessible via the little shield icon on the right, in the sidebar controls) for resetting move frequencies and healing all actors
 - Added a new system for formulaic Damage Bases (work-in-progress)
