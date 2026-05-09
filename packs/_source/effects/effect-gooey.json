@@ -1,31 +1,25 @@
 {
-  "folder": "HXvrV3SrrNwVovjT",
-  "name": "Effect: Flavorful Aroma",
+  "folder": "FXwRmpX2n4BsPCSu",
+  "name": "Effect: Gooey",
   "type": "effect",
-  "_id": "SOyq2of4F9ZRUcte",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "@embed[Compendium.ptu.abilities.Item.WMQkJ7hckztY6xFF]",
+    "effect": "@embed[Compendium.ptu.abilities.Item.bu0EeMn7eyjLc0gB]",
     "snippet": "",
     "rules": [
       {
-        "key": "FlatModifier",
+        "key": "ActiveEffectLike",
         "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "attack-roll",
-        "value": 1
-      },
-      {
-        "key": "FlatModifier",
-        "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "damage-roll",
-        "value": 5
+        "mode": "add",
+        "path": "system.stats.spd.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-flavorful-aroma",
+    "slug": "effect-gooey",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -40,9 +34,9 @@
       "value": 1
     },
     "duration": {
-      "value": 1,
-      "unit": "rounds",
-      "expiry": "turn-end"
+      "value": -1,
+      "unit": "encounter",
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -56,7 +50,6 @@
     "context": null
   },
   "effects": [],
-  "sort": 0,
   "ownership": {
     "default": 0,
     "Lg5uUS2PQEN8Jxas": 3
@@ -73,8 +66,10 @@
     "coreVersion": "13.351",
     "systemId": "ptu",
     "systemVersion": "4.4.3.18",
-    "createdTime": 1778301427586,
-    "modifiedTime": 1778331836774,
+    "createdTime": 1778330676506,
+    "modifiedTime": 1778331848420,
     "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
-  }
+  },
+  "_id": "uxVD0vKOOOe9yNhp",
+  "sort": 0
 }

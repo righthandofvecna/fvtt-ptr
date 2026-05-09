@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "Trigger - The user causes a foe to Faint with a damaging attack\nThe user’s Special Attack is raised by 1 Combat Stage. In addition, all foes within 3m of the user take a -2 penalty to Accuracy for one full round.",
+    "effect": "Trigger - The user causes a foe to Faint with a damaging attack\nThe user’s Special Attack is raised by 1 Combat Stage. In addition, all foes within 3m of the user take a -2 penalty to Accuracy for one full round.\n\n@UUID[Compendium.ptu.effects.Item.TI2IsRK7kf2oy9oJ]\n\n@UUID[Compendium.ptu.effects.Item.43e3GWmenSKbUgkc]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,15 +59,20 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.18",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816158,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1778331968165,
+    "lastModifiedBy": "Lg5uUS2PQEN8Jxas",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }

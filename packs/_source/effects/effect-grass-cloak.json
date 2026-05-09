@@ -1,31 +1,44 @@
 {
-  "folder": "HXvrV3SrrNwVovjT",
-  "name": "Effect: Flavorful Aroma",
+  "folder": "5V9TjFVBCkUJQnIb",
+  "name": "Effect: Grass Cloak",
   "type": "effect",
-  "_id": "SOyq2of4F9ZRUcte",
+  "_id": "O5RbIykzWfECl2kS",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "@embed[Compendium.ptu.abilities.Item.WMQkJ7hckztY6xFF]",
+    "effect": "@embed[Compendium.ptu.abilities.Item.mMKZsoPpjSxInDZQ]",
     "snippet": "",
     "rules": [
       {
-        "key": "FlatModifier",
+        "key": "ActiveEffectLike",
         "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "attack-roll",
-        "value": 1
+        "mode": "add",
+        "path": "system.modifiers.evasion.physical.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
       },
       {
-        "key": "FlatModifier",
+        "key": "ActiveEffectLike",
         "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "damage-roll",
-        "value": 5
+        "mode": "add",
+        "path": "system.modifiers.evasion.speed.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.evasion.special.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-flavorful-aroma",
+    "slug": "effect-grass-cloak",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -34,15 +47,15 @@
     "source": {
       "value": "PTR Compendiums"
     },
-    "stackSlugs": true,
+    "stackSlugs": false,
     "keywords": [],
     "level": {
       "value": 1
     },
     "duration": {
-      "value": 1,
-      "unit": "rounds",
-      "expiry": "turn-end"
+      "value": -1,
+      "unit": "encounter",
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -73,8 +86,8 @@
     "coreVersion": "13.351",
     "systemId": "ptu",
     "systemVersion": "4.4.3.18",
-    "createdTime": 1778301427586,
-    "modifiedTime": 1778331836774,
+    "createdTime": 1778331335930,
+    "modifiedTime": 1778331465956,
     "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
   }
 }

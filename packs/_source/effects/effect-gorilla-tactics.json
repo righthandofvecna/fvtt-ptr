@@ -1,31 +1,27 @@
 {
-  "folder": "HXvrV3SrrNwVovjT",
-  "name": "Effect: Flavorful Aroma",
+  "folder": "e7HPOUFRGKBqqyfm",
+  "name": "Effect: Gorilla Tactics",
   "type": "effect",
-  "_id": "SOyq2of4F9ZRUcte",
+  "_id": "fjl4D6clzZEG9Wjd",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "@embed[Compendium.ptu.abilities.Item.WMQkJ7hckztY6xFF]",
+    "effect": "@embed[Compendium.ptu.abilities.Item.SAXDCOWxO9V5Q9kk]",
     "snippet": "",
     "rules": [
       {
         "key": "FlatModifier",
-        "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "attack-roll",
-        "value": 1
-      },
-      {
-        "key": "FlatModifier",
-        "predicate": [],
+        "predicate": [
+          "manual"
+        ],
         "hideIfDisabled": false,
         "selectors": "damage-roll",
-        "value": 5
+        "value": 10,
+        "label": "Used Move?"
       }
     ],
     "enabled": true,
-    "slug": "effect-flavorful-aroma",
+    "slug": "effect-gorilla-tactics",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -40,9 +36,9 @@
       "value": 1
     },
     "duration": {
-      "value": 1,
-      "unit": "rounds",
-      "expiry": "turn-end"
+      "value": -1,
+      "unit": "encounter",
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -67,14 +63,14 @@
     }
   },
   "_stats": {
-    "compendiumSource": null,
+    "compendiumSource": "Compendium.ptu.effects.Item.fjl4D6clzZEG9Wjd",
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "ptu",
     "systemVersion": "4.4.3.18",
-    "createdTime": 1778301427586,
-    "modifiedTime": 1778331836774,
+    "createdTime": 1778330823493,
+    "modifiedTime": 1778331884110,
     "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
   }
 }
