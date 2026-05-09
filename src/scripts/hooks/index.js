@@ -15,6 +15,7 @@ import { RenderChatMessage } from "./render-chat-message.js";
 import { TrainerPokemonSync } from "./trainer-pokemon-sync.js";
 import { AdvancementPending } from "./advancement-pending.js";
 import { HomebrewConfigSettings } from "./homebrew-config-settings.js";
+import { GMControlPanelHook } from "./gm-control-panel.js";
 
 export const PtuHooks = {
     listen() {
@@ -37,6 +38,7 @@ export const PtuHooks = {
             TrainerPokemonSync,
             AdvancementPending,
             HomebrewConfigSettings,
+            GMControlPanelHook,
         ]
         for(const listener of listeners) listener.listen();
     }

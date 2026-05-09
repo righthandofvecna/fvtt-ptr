@@ -258,14 +258,6 @@ export class TokenPanel extends Application {
             });
         }
 
-        if (game.user.isGM) {
-            const resetSceneBtn = $html.find(".frequency-reset-scene")[0];
-            if (resetSceneBtn) resetSceneBtn.addEventListener("click", this._onResetSceneUses.bind(this));
-
-            const resetDailyBtn = $html.find(".frequency-reset-daily")[0];
-            if (resetDailyBtn) resetDailyBtn.addEventListener("click", this._onResetDailyUses.bind(this));
-        }
-
         for (const action of $html.find(".action.attack, .action.struggle")) {
             action.addEventListener("click", (event) => {
                 const id = event.currentTarget.dataset.id;
@@ -514,36 +506,6 @@ export class TokenPanel extends Application {
 
         if (pokemon.length > 0) party.pokemon = pokemon;
         return party;
-    }
-
-    async _onResetSceneUses(event) {
-        event.preventDefault();
-        const updates = [];
-        for (const actor of game.actors.values()) {
-            for (const item of actor.items.values()) {
-                if (item.system.frequency?.type !== "scene") continue;
-                const max = item.system.frequency?.max ?? 0;
-                if (!max) continue;
-                updates.push(item.setFlag("ptu", "used", 0));
-            }
-        }
-        await Promise.all(updates);
-        this.refresh();
-    }
-
-    async _onResetDailyUses(event) {
-        event.preventDefault();
-        const updates = [];
-        for (const actor of game.actors.values()) {
-            for (const item of actor.items.values()) {
-                if (!["daily", "scene"].includes(item.system.frequency?.type)) continue;
-                const max = item.system.frequency?.max ?? 0;
-                if (!max) continue;
-                updates.push(item.setFlag("ptu", "used", 0));
-            }
-        }
-        await Promise.all(updates);
-        this.refresh();
     }
 
     /** @override */

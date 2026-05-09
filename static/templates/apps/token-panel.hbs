@@ -321,10 +321,6 @@
         <div class="tab-strip-minimize" title="{{#if minimized}}Expand Token Panel{{else}}Minimize Token Panel{{/if}}">
             <i class="fas {{#if minimized}}fa-chevron-up{{else}}fa-chevron-down{{/if}}"></i>
         </div>
-        {{#if user.isGM}}
-        <button class="frequency-reset-scene" title="Reset Scene Uses" type="button"><i class="fas fa-undo"></i> Scene</button>
-        <button class="frequency-reset-daily" title="Reset Daily Uses" type="button"><i class="fas fa-undo"></i> Daily</button>
-        {{/if}}
     </div>
 
     {{#if (or party.trainer (gt conditions.length 0) (gt effects.length 0))}}

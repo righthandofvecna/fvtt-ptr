@@ -95,11 +95,11 @@
                             <div class="tag gradient">
                                 <span>{{item.frequency}}</span>
                             </div>
-                            {{#if item.system.frequency.max}}
-                                {{!-- <div class="tag gradient usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
+                            {{!-- {{#if item.system.frequency.max}}
+                                <div class="tag gradient usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
                                     <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
                                 </div> --}}
-                            {{else if item.onCooldown}}
+                            {{#if item.onCooldown}}
                                 <div class="tag gradient usage-tag exhausted" title="On Cooldown (EOT)">
                                     <span>EOT</span>
                                 </div>
@@ -173,11 +173,11 @@
                                         </div>
                                     {{/if}}
                                 {{/if}}
-                                {{#if item.system.frequency.max}}
+                                {{!-- {{#if item.system.frequency.max}}
                                     <div class="tag usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
                                         <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
-                                    </div>
-                                {{else if item.onCooldown}}
+                                    </div> --}}
+                                {{#if item.onCooldown}}
                                     <div class="tag usage-tag exhausted" title="On Cooldown (EOT)">
                                         <span>EOT</span>
                                     </div>
