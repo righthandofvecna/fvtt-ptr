@@ -68,6 +68,24 @@ class PTUActor extends Actor {
         return !(this.permission >= CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER);
     }
 
+    /**
+     * Returns true if the current user is the "proper" owner of this actor:
+     * - For characters: the user has this actor set as their selected character.
+     * - For pokemon: the user's selected character is this pokemon's trainer
+     *   (whether the pokemon is in the party or boxed).
+     */
+    get isProperOwner() {
+        if (this.type === "character") {
+            return game.user.character?.id === this.id;
+        }
+        if (this.type === "pokemon") {
+            const trainerId = this.flags?.ptu?.party?.trainer;
+            if (!trainerId) return false;
+            return game.user.character?.id === trainerId;
+        }
+        return false;
+    }
+
     get types() {
         return this.synthetics.typeOverride.typing
             || this.system.typing
