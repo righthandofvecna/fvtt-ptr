@@ -77,6 +77,17 @@
  *   `slugify(item.name)`.
  */
 
+
+/**
+ * Standardize name format.
+ * @param {string} name
+ * @returns {string}
+ */
+function slugify(name) {
+  let startsNegativeNumber = name.trim().match(/^-\d/) !== null;
+  return (startsNegativeNumber ? "-" : "") + name.toLowerCase().replace("'", "").replace(/[^a-z0-9]+/gi, " ").trim().replace(/\s+|-{2,}/g, "-");
+}
+
 /**
  * Creates a `GithubSyncConfig` object with defaults applied.
  *
@@ -99,12 +110,7 @@ function createGithubSyncConfig(options) {
         validateDocument: () => ({ valid: true, errors: [], warnings: [] }),
         getReferencedDocuments: () => [],
         transform: (data) => data,
-        slugify: (name) =>
-            name
-                .toLowerCase()
-                .replace(/['']/g, "")
-                .replace(/\s+/g, "-")
-                .replace(/[^a-z0-9-]/g, ""),
+        slugify,
         getItemSlug: (item) => item.system?.slug ?? null,
         ...options,
     };
