@@ -14,13 +14,25 @@
         <label class="short">Choices</label>
         <div class="choices-list">
             {{#each choices}}
-                <div class="d-flex flex-row" data-idx="{{@index}}">
-                    <input type="text" name="system.rules.{{@root.index}}.choices.{{@index}}.value" value="{{this.value}}" placeholder="Value or UUID"/>
-                    {{#if this.link}}
-                        <span class="ml-1">{{{this.link}}}</span>
-                    {{/if}}
-                    <input type="text" name="system.rules.{{@root.index}}.choices.{{@index}}.label" value="{{this.label}}" placeholder="Display label"/>
-                    <a data-action="choice-remove" data-idx="{{@index}}" title="Remove"><i class="fas fa-fw fa-trash"></i></a>
+                <div class="d-flex flex-column" data-idx="{{@index}}">
+                    <div class="d-flex flex-row">
+                        <input type="text" name="system.rules.{{@root.index}}.choices.{{@index}}.value" value="{{this.value}}" placeholder="Value or UUID"/>
+                        {{#if this.link}}
+                            <span class="ml-1">{{{this.link}}}</span>
+                        {{/if}}
+                        <input type="text" name="system.rules.{{@root.index}}.choices.{{@index}}.label" value="{{this.label}}" placeholder="Display label"/>
+                        <a data-action="choice-remove" data-idx="{{@index}}" title="Remove"><i class="fas fa-fw fa-trash"></i></a>
+                    </div>
+                    <div class="d-flex flex-row attached-input">
+                        <button type="button" class="attachment" data-action="toggle-choice-predicate" data-idx="{{@index}}">
+                            {{#if this.predicateIsMultiple}}Multiple{{else}}Complex{{/if}}
+                        </button>
+                        {{#if this.predicateIsMultiple}}
+                            <input type="text" class="ptu-tagify predicate-list" name="system.rules.{{@root.index}}.choices.{{@index}}.predicate" value="{{json this.predicate}}" data-dtype="JSON" placeholder="Predicate (optional)"/>
+                        {{else}}
+                            <input type="text" name="system.rules.{{@root.index}}.choices.{{@index}}.predicate" value="{{json this.predicate}}" placeholder="Predicate (JSON, optional)"/>
+                        {{/if}}
+                    </div>
                 </div>
             {{/each}}
             <div class="d-flex flex-row" data-action="drop-choice" style="border:1px dashed #888;padding:4px 6px;margin-top:2px;cursor:default;">
@@ -45,6 +57,27 @@
     </div>
     <input type="hidden" name="system.rules.{{index}}.choices.ownedItems" value="true"/>
 {{/if}}
+
+<div class="form-group">
+    <label class="short">Allowed Drops Label</label>
+    <div class="attached-input">
+        <input type="text" name="system.rules.{{index}}.allowedDrops.label" value="{{rule.allowedDrops.label}}" placeholder="e.g. Abilities only"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">Allowed Drops Predicate</label>
+    <div class="attached-input">
+        <button type="button" class="attachment" data-action="toggle-allowed-drops-predicate">
+            {{#if allowedDropsPredicateIsMultiple}}Multiple{{else}}Complex{{/if}}
+        </button>
+        {{#if allowedDropsPredicateIsMultiple}}
+            <input type="text" class="ptu-tagify predicate-list" name="system.rules.{{index}}.allowedDrops.predicate" value="{{json rule.allowedDrops.predicate}}" data-dtype="JSON"/>
+        {{else}}
+            <input type="text" name="system.rules.{{index}}.allowedDrops.predicate" value="{{json rule.allowedDrops.predicate}}" />
+        {{/if}}
+    </div>
+</div>
 
 <div class="form-group">
     <label class="short">Flag</label>

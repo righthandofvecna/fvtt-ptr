@@ -21,6 +21,7 @@ class ChoiceSetForm extends RuleElementForm {
       choices = await Promise.all(this.rule.choices.map(async (c) => ({
         ...c,
         link: await fromUuid(c.value).then(item=>item.linkHtml).catch(() => ""),
+        predicateIsMultiple: Array.isArray(c.predicate) && c.predicate.every(p => typeof p === "string" || (isObject(p) && Object.keys(p).length === 1 && typeof p.value === "string")),
       })));
     }
     else if (typeof choices === "string") choicesMode = "path";
@@ -33,6 +34,7 @@ class ChoiceSetForm extends RuleElementForm {
       choices,
       // adjustName defaults to true in the schema; make that explicit for the template
       adjustName: this.rule.adjustName !== false,
+      allowedDropsPredicateIsMultiple: Array.isArray(this.rule.allowedDrops?.predicate) && this.rule.allowedDrops.predicate.every(p => typeof p === "string" || (isObject(p) && Object.keys(p).length === 1 && typeof p.value === "string")),
     };
   }
 
@@ -63,6 +65,29 @@ class ChoiceSetForm extends RuleElementForm {
         choices.splice(idx, 1);
         this.updateItem({ choices });
       });
+    });
+
+    // Toggle each choice's predicate between tagify (Multiple) and raw JSON (Complex)
+    html.querySelectorAll("[data-action=toggle-choice-predicate]").forEach((el) => {
+      el.addEventListener("click", (event) => {
+        const idx = Number(event.currentTarget.dataset.idx);
+        const choices = Array.isArray(this.rule.choices) ? [...this.rule.choices] : [];
+        const predicate = choices[idx]?.predicate ?? [];
+        const newPredicate = Array.isArray(predicate)
+          ? { and: predicate.length ? predicate : [] }
+          : predicate?.and?.length ? predicate.and : [];
+        choices[idx] = { ...choices[idx], predicate: newPredicate };
+        this.updateItem({ choices });
+      });
+    });
+
+    // Toggle allowedDrops predicate between tagify (Multiple) and raw JSON (Complex)
+    html.querySelector("[data-action=toggle-allowed-drops-predicate]")?.addEventListener("click", () => {
+      const predicate = this.rule.allowedDrops?.predicate ?? [];
+      const newValue = Array.isArray(predicate)
+        ? { and: predicate.length ? predicate : [] }
+        : predicate?.and?.length ? predicate.and : [];
+      this.updateItem({ allowedDrops: { ...(this.rule.allowedDrops ?? {}), predicate: newValue } });
     });
 
     // Drop zone: drag an Item from the sidebar/compendium → adds a UUID choice
@@ -108,7 +133,20 @@ class ChoiceSetForm extends RuleElementForm {
         }
       } else if (isObject(c)) {
         // Array mode: choices came in as object with numeric string keys from form expansion
-        formData.choices = Object.values(c).filter((entry) => entry?.value);
+        formData.choices = Object.values(c).filter((entry) => entry?.value).map((entry) => {
+          if (typeof entry.predicate === "string") {
+            if (entry.predicate.trim() === "") {
+              delete entry.predicate;
+            } else {
+              try {
+                entry.predicate = JSON.parse(entry.predicate);
+              } catch {
+                // Leave as-is; invalid JSON will be reported upstream
+              }
+            }
+          }
+          return entry;
+        });
       }
     }
 
@@ -120,6 +158,26 @@ class ChoiceSetForm extends RuleElementForm {
     // Booleans: delete when at their defaults to keep data clean
     if (formData.adjustName !== false) delete formData.adjustName;
     if (!formData.allowNoSelection) delete formData.allowNoSelection;
+
+    // Parse allowedDrops.predicate from string to JSON
+    if (formData.allowedDrops && typeof formData.allowedDrops === "object") {
+      const adPred = formData.allowedDrops.predicate;
+      if (typeof adPred === "string") {
+        if (adPred.trim() === "") {
+          delete formData.allowedDrops.predicate;
+        } else {
+          try {
+            formData.allowedDrops.predicate = JSON.parse(adPred);
+          } catch {
+            // Leave as-is
+          }
+        }
+      }
+      // If label and predicate are both empty, clear allowedDrops entirely
+      if (!formData.allowedDrops.label && (!Array.isArray(formData.allowedDrops.predicate) || !formData.allowedDrops.predicate.length)) {
+        formData.allowedDrops = null;
+      }
+    }
   }
 }
 
