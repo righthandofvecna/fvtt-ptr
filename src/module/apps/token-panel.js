@@ -122,6 +122,7 @@ export class TokenPanel extends Application {
                 effect: attack.item?.system.effect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(attack.item.system.effect), {async: true}) : "",
                 range: attack.item?.system.range ?? "",
                 keywords: attack.item?.system.keywords ?? [],
+                hasAllyKeyword: (attack.item?.system.keywords ?? []).some(k => typeof k === "string" && k.toLowerCase() === "ally"),
                 sort: attack.item?.sort ?? 0,
                 effectiveness: getEffectivenessData(attack.item?.system.type),
                 usageDisplay: (() => {
@@ -244,9 +245,29 @@ export class TokenPanel extends Application {
     }
 
     /** @override */
+    async _render(force, options) {
+        const scrollPositions = new Map();
+        if (this.element?.length) {
+            for (const el of this.element[0].querySelectorAll("[data-scroll-key]")) {
+                scrollPositions.set(el.dataset.scrollKey, el.scrollTop);
+            }
+        }
+        await super._render(force, options);
+        if (this.element?.length) {
+            for (const el of this.element[0].querySelectorAll("[data-scroll-key]")) {
+                const saved = scrollPositions.get(el.dataset.scrollKey);
+                if (saved !== undefined) el.scrollTop = saved;
+            }
+        }
+    }
+
+    /** @override */
     activateListeners($html) {
         super.activateListeners($html);
+        this._activateContentListeners($html);
+    }
 
+    _activateContentListeners($html) {
         for (const toggle of $html.find(".tab-strip-tab, .top-panel-toggle")) {
             toggle.addEventListener("click", (event) => {
                 const target = event.currentTarget.dataset.target;
@@ -297,6 +318,37 @@ export class TokenPanel extends Application {
                 const id = event.currentTarget.dataset.id;
                 const attack = this.actor.attacks.get(id);
                 return attack?.item?.sendToChat?.();
+            });
+            // TODO: hover to highlight valid targets on the canvas
+            // This isn't quite working how I wanted, but it's a start
+            // leaving this commented here for future use
+            // action.addEventListener("mouseover", (event) => {
+            //     if (!canvas.ready) return;
+            //     const isAlly = event.currentTarget.dataset.ally === "true";
+            //     const tokens = canvas.tokens.placeables.filter(t => {
+            //         if (!t.isVisible || !t.actor) return false;
+            //         return isAlly ? this.actor.isFriendOf(t.actor) : this.actor.isEnemyOf(t.actor);
+            //     });
+            //     tokens.forEach(t => t._onHoverIn(event));
+            //     this.moveHighlights = tokens;
+            // });
+            // action.addEventListener("mouseout", (event) => {
+            //     if (this.moveHighlights?.length > 0) {
+            //         this.moveHighlights.forEach(t => t._onHoverOut(event));
+            //         this.moveHighlights = [];
+            //     }
+            // });
+        }
+
+        const dexBtn = $html.find(".tab-strip-dex")[0];
+        if (dexBtn) {
+            dexBtn.addEventListener("click", () => game.ptu.macros.pokedex());
+        }
+
+        const undockBtn = $html.find(".tab-strip-undock")[0];
+        if (undockBtn) {
+            undockBtn.addEventListener("click", () => {
+                game.user.setFlag("ptu", "settings.tokenPanelUndocked", true);
             });
         }
 
@@ -516,7 +568,18 @@ export class TokenPanel extends Application {
 
     /** @override */
     async render() {
-        // check if this.actor exists
+        const undocked = game.user.getFlag("ptu", "settings.tokenPanelUndocked") ?? false;
+        if (undocked && this.shouldShow) {
+            // Remove the docked element from the DOM if it is currently rendered
+            if (this.rendered) await super.close({ force: true });
+            document.querySelector("body").classList.remove("token-panel-open");
+            document.querySelector("body").classList.remove("token-panel-minimized");
+            // Create window lazily once; keep the instance alive so its position survives close/re-open cycles
+            if (!this._window) this._window = new TokenPanelWindow();
+            return this._window.render(true);
+        }
+        // Docked mode: close floating window if rendered, but keep the instance for position memory
+        if (this._window?.rendered) this._window.close({ force: true });
         if (!this.shouldShow) {
             document.querySelector("body").classList.remove("token-panel-open");
             document.querySelector("body").classList.remove("token-panel-minimized");
@@ -529,5 +592,45 @@ export class TokenPanel extends Application {
             }
         }
         return super.render(...arguments);
+    }
+}
+
+class TokenPanelWindow extends Application {
+    static get defaultOptions() {
+        return foundry.utils.mergeObject(super.defaultOptions, {
+            id: "ptu-token-panel-window",
+            title: "Token Panel",
+            template: "systems/ptu/static/templates/apps/token-panel-window.hbs",
+            popOut: true,
+            resizable: true,
+            width: 560,
+            height: 520,
+            classes: ["ptu", "token-panel-window"],
+        });
+    }
+
+    async getData(options = {}) {
+        return game.ptu.tokenPanel.getData(options);
+    }
+
+    activateListeners($html) {
+        super.activateListeners($html);
+        game.ptu.tokenPanel._activateContentListeners($html);
+        const dockBtn = $html.find(".tab-strip-dock")[0];
+        if (dockBtn) {
+            dockBtn.addEventListener("click", async () => {
+                await game.user.setFlag("ptu", "settings.tokenPanelUndocked", false);
+                game.ptu.tokenPanel.render(true);
+            });
+        }
+    }
+
+    async close(options = {}) {
+        await super.close(options);
+        // When user closes the window manually (not a forced close from docking), revert to docked
+        if (!options.force) {
+            await game.user.setFlag("ptu", "settings.tokenPanelUndocked", false);
+            game.ptu.tokenPanel.render(true);
+        }
     }
 }

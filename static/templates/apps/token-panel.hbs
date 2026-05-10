@@ -21,12 +21,12 @@
             {{/each}}
         </div>
         <div class="separator"></div>
-        <div class="items-body">
+        <div class="items-body" data-scroll-key="items-body">
 
             {{#if show.actions}}
             {{#if (gt attacks.length 0)}}
             {{#each attacks as |attack|}}
-                <div class="action attack {{attack.typeClass}} {{#if attack.rollable}}rollable{{else}}sendtochat{{/if}} {{#if attack.onCooldown}}on-cooldown{{/if}}" data-id="{{attack.id}}"
+                <div class="action attack {{attack.typeClass}} {{#if attack.rollable}}rollable{{else}}sendtochat{{/if}} {{#if attack.onCooldown}}on-cooldown{{/if}}" data-id="{{attack.id}}" {{#if attack.hasAllyKeyword}}data-ally="true"{{/if}}
                     data-tooltip="<div class='effect-popup'><div class='d-flex justify-content-center'><div class='effect-range'>{{attack.range}}</div>{{#each attack.keywords}}<div class='effect-range'>{{this}}</div>{{/each}}</div><div class='effect-effect'>{{attack.effect}}</div></div>" data-tooltip-direction="LEFT">
                     <div class="row-main">
                         <div class="icon-wrap">
@@ -61,7 +61,7 @@
             {{/if}}
             {{#if (gt struggles.length 0)}}
             {{#each struggles as |struggle|}}
-            <div class="action struggle {{struggle.typeClass}} {{#if struggle.rollable}}rollable{{else}}sendtochat{{/if}} {{#if struggle.onCooldown}}on-cooldown{{/if}}" data-id="{{struggle.id}}">
+            <div class="action struggle {{struggle.typeClass}} {{#if struggle.rollable}}rollable{{else}}sendtochat{{/if}} {{#if struggle.onCooldown}}on-cooldown{{/if}}" data-id="{{struggle.id}}" {{#if struggle.hasAllyKeyword}}data-ally="true"{{/if}}>
                 <div class="row-main">
                     <div class="icon-wrap">
                         <img class="move-img" src="{{struggle.img}}" alt="{{struggle.name}}">
@@ -318,6 +318,12 @@
         {{/if}}
         {{/if}}
 
+        <div class="tab-strip-dex" title="Scan targeted Pokémon to Dex">
+            <i class="fas fa-tablet-alt"></i>
+        </div>
+        <div class="tab-strip-undock" title="Pop out Token Panel">
+            <i class="fas fa-up-right-from-square"></i>
+        </div>
         <div class="tab-strip-minimize" title="{{#if minimized}}Expand Token Panel{{else}}Minimize Token Panel{{/if}}">
             <i class="fas {{#if minimized}}fa-chevron-up{{else}}fa-chevron-down{{/if}}"></i>
         </div>

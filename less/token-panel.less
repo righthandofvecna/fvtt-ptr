@@ -51,7 +51,7 @@ body.token-panel-minimized .token-panel {
 
     .items-body {
       @itemsGap: 3px;
-      width: 220px;
+      width: 300px;
       max-height: 160px;
       height: 160px - ((2 * @itemsGap));
       max-width: calc(100vw - 100px - 130px - 320px - 205px);
@@ -553,9 +553,9 @@ body.token-panel-minimized .token-panel {
   .tab-strip {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
-    width: 220px;
+    width: 300px;
     height: @tokenNavHeight;
     background: #222224bb;
     gap: 2px;
@@ -603,12 +603,13 @@ body.token-panel-minimized .token-panel {
       }
     }
 
+    .tab-strip-dex,
+    .tab-strip-undock,
     .tab-strip-minimize {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: auto;
-      width: 20px;
+      width: 24px;
       height: 100%;
       cursor: pointer;
       color: #ffffffaa;
@@ -623,6 +624,10 @@ body.token-panel-minimized .token-panel {
         background: rgba(255, 255, 255, 0.1);
         color: whitesmoke;
       }
+    }
+
+    .tab-strip-dex {
+      margin-left: auto;
     }
   }
 
@@ -926,5 +931,331 @@ body.token-panel-minimized .token-panel {
     .main-panel {
       border-top-left-radius: 5px;
     }
+  }
+}
+
+// ── Undocked / pop-out window ─────────────────────────────────────────────────
+.app.token-panel-window {
+  .window-content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    overflow: hidden;
+    gap: 0;
+  }
+
+  .tpw-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    gap: 6px;
+  }
+
+  // ── Left column: actor info + movement + status ──────────────────────────
+  .tpw-left {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 5px;
+  }
+
+  // ── Right column: tab-strip + scrollable items body ────────────────────────
+  .tpw-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    gap: 4px;
+  }
+
+  // Header: avatar + name + HP
+  .tpw-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(45deg, #ecdbeb, #dffffe);
+    border-radius: 5px;
+    padding: 4px;
+    flex-shrink: 0;
+  }
+
+  .tpw-avatar {
+    flex-shrink: 0;
+    img {
+      width: 52px;
+      height: 52px;
+      object-fit: cover;
+      border: none;
+      border-radius: 4px;
+    }
+    &.pokemon img {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  .tpw-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+
+  .tpw-name {
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #222224;
+  }
+
+  .tpw-hp-wrap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .tpw-hp-bar {
+    height: 7px;
+    flex: 1;
+    background: #555;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .tpw-hp-fill {
+      height: 100%;
+      background: #4caf50;
+      border-radius: 4px;
+      transition: width 0.3s;
+    }
+  }
+
+  .tpw-hp-text {
+    font-size: 10px;
+    font-weight: bold;
+    color: #222224;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .tpw-held-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      border: none;
+    }
+    span {
+      font-size: 10px;
+      color: #222224;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  // Movement row
+  .tpw-movement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3px;
+    flex-shrink: 0;
+
+    .movement-card {
+      border: 1px solid #222224aa;
+      background: #222224aa;
+      color: #ffffffcd;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 2px 6px;
+      height: 22px;
+      font-size: 11px;
+    }
+  }
+
+  // Tab strip
+  .tpw-tab-strip {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2px;
+    background: #222224bb;
+    border-radius: 5px;
+    padding: 3px;
+    flex-shrink: 0;
+
+    .tab-strip-tab {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      gap: 2px;
+      border-radius: 4px;
+      width: 38px;
+      padding: 2px 0;
+
+      i { font-size: 14px; }
+
+      .tab-label {
+        font-size: 9px;
+        white-space: nowrap;
+      }
+
+      &.active {
+        background: linear-gradient(45deg, #ecdbeb, #dffffe);
+        color: #222224;
+        box-shadow: inset 0 0 8px rgba(34, 34, 36, 0.25);
+      }
+
+      &.inactive {
+        color: #ffffffaa;
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          color: whitesmoke;
+        }
+      }
+    }
+
+    .tab-strip-dex {
+      margin-left: auto;
+    }
+
+    .tab-strip-dex,
+    .tab-strip-dock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      cursor: pointer;
+      color: #ffffffaa;
+      border-radius: 4px;
+      flex-shrink: 0;
+      padding: 2px;
+
+      i { font-size: 14px; }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: whitesmoke;
+      }
+    }
+  }
+
+  // Items body — inherit action card styles from docked panel
+  .items-body {
+    &:extend(.token-panel .main-panel .items-body all);
+    width: auto;
+    max-width: none;
+    height: auto;
+    max-height: none;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 60px;
+  }
+
+  // Status panel: party / conditions / effects
+  .tpw-status-panel {
+    flex-shrink: 0;
+    background: #222224aa;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .tpw-toggle {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 8px;
+      cursor: pointer;
+      color: whitesmoke;
+      font-size: 11px;
+      font-weight: bold;
+
+      &:hover { background: rgba(255, 255, 255, 0.08); }
+    }
+
+    .tpw-status-body {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 5px;
+      overflow-y: auto;
+
+      .block {
+        .header {
+          color: whitesmoke;
+          text-align: center;
+          margin: 0 0 3px 0;
+          font-size: 11px;
+          line-height: 16px;
+        }
+      }
+
+      .condition,
+      .effect {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 2px;
+
+        .icon {
+          height: 24px;
+          width: 24px;
+          object-fit: cover;
+          border: none;
+          background: #222224;
+          flex-shrink: 0;
+        }
+
+        .name {
+          font-size: 11px;
+          color: whitesmoke;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .party-overview {
+        width: auto;
+
+        > img.trainer {
+          border: unset;
+          width: 32px;
+          height: 32px;
+          background: white;
+          box-shadow: inset 0 0 5px #222224;
+          object-fit: contain;
+          margin-bottom: 4px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .tpw-no-actor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #888;
+    font-style: italic;
+    font-size: 12px;
   }
 }
