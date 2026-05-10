@@ -38,6 +38,17 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Added new roll options (`self:spdef:stage:2`) for more automation (and automated Defensive Charm with them)
+- Removed the range field for action points (so scrolling on the character sheet doesn't edit your action point total accidentally)
+- [Fixed a bug that was turning features in the token panel back on automatically](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/899)
+- Re-added the AP cost field for feats and edges
+- Fixed a bug that meant that half the stage change effects were excluded from the compendium
+- [Token panel improvements - Undock and resize, pokedex button](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/924)
+- [Dragging moves directly off species sheets](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/893)
+- [Improving the daily pokemon training sheet](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/920)
+- Fixed overhealing due to clearing injuries bug
+- [Fine tuned the advancement reminder settings - exclude NPCs and other people's pokemon](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/926)
+- Finished adding the proper UI editors for all of the remaining Rule Element types
 - Added a user setting to disable the Advancement Pending indicator in the sidebar
 - [Improved the Frequency Tracking UI, added house rule settings](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/912)
 - Added a GM Control panel (accessible via the little shield icon on the right, in the sidebar controls) for resetting move frequencies and healing all actors
