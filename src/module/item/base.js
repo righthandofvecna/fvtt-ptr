@@ -90,6 +90,10 @@ class PTUItem extends Item {
         return fq || null;
     }
 
+    get linkHtml() {
+        return this.toAnchor({ name: this.name })?.outerHTML ?? "";
+    }
+
     /** Change state of whether items automation should be enabled or disabled. If called
      *  without argument, toggles between on and off.
      * @param newState

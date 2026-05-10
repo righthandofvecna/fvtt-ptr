@@ -20,7 +20,7 @@ class ChoiceSetForm extends RuleElementForm {
       choicesMode = "array";
       choices = await Promise.all(this.rule.choices.map(async (c) => ({
         ...c,
-        link: await fromUuid(c.value).then(async (item) => foundry.applications.ux.TextEditor.implementation.enrichHTML(item?.link ?? "")).catch(() => ""),
+        link: await fromUuid(c.value).then(item=>item.linkHtml).catch(() => ""),
       })));
     }
     else if (typeof choices === "string") choicesMode = "path";
