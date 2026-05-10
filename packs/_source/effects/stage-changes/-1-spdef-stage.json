@@ -1,6 +1,6 @@
 {
   "folder": "5JYnxAF0NlgrFybG",
-  "name": "SpDef Stage -1",
+  "name": "-1 SpDef Stage",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
@@ -19,7 +19,7 @@
       }
     ],
     "enabled": true,
-    "slug": "sp-def-stage-1",
+    "slug": "-1-sp-def-stage",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -57,10 +57,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.20",
+    "coreVersion": "13.351",
     "createdTime": 1706572433995,
-    "modifiedTime": 1712493557646,
+    "modifiedTime": 1778387536860,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

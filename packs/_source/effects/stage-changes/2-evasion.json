@@ -1,6 +1,5 @@
 {
-  "folder": "5JYnxAF0NlgrFybG",
-  "name": "Accuracy +2",
+  "name": "+2 Evasion",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
@@ -9,18 +8,45 @@
     "snippet": "",
     "rules": [
       {
-        "key": "FlatModifier",
+        "key": "ActiveEffectLike",
         "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "attack-roll",
-        "value": 2
+        "mode": "add",
+        "path": "system.modifiers.evasion.physical.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.evasion.special.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.evasion.speed.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
       }
     ],
     "enabled": true,
-    "slug": "accuracy-2",
+    "slug": "2-evasion",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.112,
+      "lastMigration": {
+        "datetime": "2024-01-16T22:16:23.693Z",
+        "version": {
+          "schema": null,
+          "foundry": "11.315",
+          "system": "4.0.13"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -48,6 +74,7 @@
     "context": null
   },
   "effects": [],
+  "folder": "5JYnxAF0NlgrFybG",
   "flags": {
     "ptu": {
       "showInTokenPanel": true
@@ -55,10 +82,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
-    "coreVersion": "13.350",
-    "createdTime": 1706572433995,
-    "modifiedTime": 1712493557646,
+    "systemVersion": "4.4.3.20",
+    "coreVersion": "13.351",
+    "createdTime": 1703925083394,
+    "modifiedTime": 1778387710015,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {
@@ -69,7 +96,7 @@
       "systemVersion": "4.2.5"
     }
   },
-  "_id": "qd3ks0VbFiQ7il4K",
+  "_id": "vBiex63aqzArKYpm",
   "sort": 0,
   "ownership": {
     "default": 0

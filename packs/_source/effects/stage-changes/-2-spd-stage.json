@@ -1,6 +1,6 @@
 {
   "folder": "5JYnxAF0NlgrFybG",
-  "name": "Atk Stage -1",
+  "name": "-2 Spd Stage",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
@@ -12,14 +12,14 @@
         "key": "ActiveEffectLike",
         "predicate": [],
         "mode": "subtract",
-        "path": "system.stats.atk.stage.mod",
+        "path": "system.stats.spd.stage.mod",
         "phase": "applyAEs",
-        "value": 1,
+        "value": 2,
         "priority": null
       }
     ],
     "enabled": true,
-    "slug": "atk-stage-1",
+    "slug": "-2-spd-stage",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -57,10 +57,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.20",
+    "coreVersion": "13.351",
     "createdTime": 1706572433995,
-    "modifiedTime": 1712493557646,
+    "modifiedTime": 1778387566545,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {
@@ -71,7 +71,7 @@
       "systemVersion": "4.2.5"
     }
   },
-  "_id": "jXQVrfXExzmUeloG",
+  "_id": "SGvCzHCYB80Qac0W",
   "sort": 0,
   "ownership": {
     "default": 0

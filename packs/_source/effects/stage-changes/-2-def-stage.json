@@ -1,5 +1,6 @@
 {
-  "name": "Evasion -1",
+  "folder": "5JYnxAF0NlgrFybG",
+  "name": "-2 Def Stage",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
@@ -11,42 +12,17 @@
         "key": "ActiveEffectLike",
         "predicate": [],
         "mode": "subtract",
-        "path": "system.modifiers.evasion.physical.mod",
+        "path": "system.stats.def.stage.mod",
         "phase": "applyAEs",
-        "value": 1,
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": [],
-        "mode": "subtract",
-        "path": "system.modifiers.evasion.special.mod",
-        "phase": "applyAEs",
-        "value": 1,
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": [],
-        "mode": "subtract",
-        "path": "system.modifiers.evasion.speed.mod",
-        "phase": "applyAEs",
-        "value": 1,
+        "value": 2,
         "priority": null
       }
     ],
     "enabled": true,
-    "slug": "evasion-1",
+    "slug": "-2-def-stage",
     "schema": {
-      "version": 0.112,
-      "lastMigration": {
-        "datetime": "2024-01-16T22:16:23.693Z",
-        "version": {
-          "schema": null,
-          "foundry": "11.315",
-          "system": "4.0.13"
-        }
-      }
+      "version": null,
+      "lastMigration": null
     },
     "referenceEffect": "",
     "source": {
@@ -74,7 +50,6 @@
     "context": null
   },
   "effects": [],
-  "folder": "5JYnxAF0NlgrFybG",
   "flags": {
     "ptu": {
       "showInTokenPanel": true
@@ -82,10 +57,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
-    "coreVersion": "13.350",
-    "createdTime": 1703925083394,
-    "modifiedTime": 1712493557646,
+    "systemVersion": "4.4.3.20",
+    "coreVersion": "13.351",
+    "createdTime": 1706572433995,
+    "modifiedTime": 1778387766386,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {
@@ -96,7 +71,7 @@
       "systemVersion": "4.2.5"
     }
   },
-  "_id": "dchJyUBRJ6WVuOi1",
+  "_id": "Q7GY6cl2ZTSzT1Ms",
   "sort": 0,
   "ownership": {
     "default": 0

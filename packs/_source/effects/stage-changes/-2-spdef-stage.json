@@ -1,6 +1,6 @@
 {
   "folder": "5JYnxAF0NlgrFybG",
-  "name": "Accuracy -1",
+  "name": "-2 SpDef Stage",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
@@ -9,15 +9,17 @@
     "snippet": "",
     "rules": [
       {
-        "key": "FlatModifier",
+        "key": "ActiveEffectLike",
         "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "attack-roll",
-        "value": -1
+        "mode": "subtract",
+        "path": "system.stats.spdef.stage.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
       }
     ],
     "enabled": true,
-    "slug": "accuracy-1",
+    "slug": "-2-sp-def-stage",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -55,10 +57,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.20",
+    "coreVersion": "13.351",
     "createdTime": 1706572433995,
-    "modifiedTime": 1712493557646,
+    "modifiedTime": 1778387528476,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {
@@ -69,7 +71,7 @@
       "systemVersion": "4.2.5"
     }
   },
-  "_id": "tqo4qXcZGSXqcHkZ",
+  "_id": "DSXd33NkJkdeFnnc",
   "sort": 0,
   "ownership": {
     "default": 0
