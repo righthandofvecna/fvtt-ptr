@@ -136,6 +136,13 @@ export function registerSettings() {
         requiresReload: true,
     })
 
+    game.settings.register("ptu", "training.lastSession", {
+        scope: "client",
+        config: false,
+        type: Object,
+        default: { trainerId: null, pokeUuids: [], trainingOption: "none" }
+    })
+
     game.settings.register("ptu", "transferOwnershipDefaultValue", {
         name: "Transfer Ownership Preference",
         hint: "After ownership of a mon is transfered, would you like for it to also set default permissions for other players?",

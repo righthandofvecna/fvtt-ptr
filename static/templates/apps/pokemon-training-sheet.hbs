@@ -19,16 +19,24 @@
                 <h3>{{formatSlug name}}<span style="float:right;">{{#if (is name "training")}}{{box.instances}} instances of {{box.xpinstance}} EXP for a Total EXP of: {{else}}Average Level: {{/if}}{{#if box.metric}}{{box.metric}}{{/if}}</span></h3>
                 {{#if (is name "training")}}
                     <div style="text-align: center; margin-bottom: 10px;">
-                        <input type="radio" id="none" value="none" name="training" checked="checked">
+                        <input type="radio" id="none" value="none" name="training" {{#if (or (is ../lastTrainingOption "none") (not ../lastTrainingOption))}}checked="checked"{{/if}}>
                         <label for="none">None</label>
-                        <input type="radio" id="agility-training" name="training" value="agility-training">
+                        {{#if ../availableTrainingOptions.agility}}
+                        <input type="radio" id="agility-training" name="training" value="agility-training" {{#if (is ../lastTrainingOption "agility-training")}}checked="checked"{{/if}}>
                         <label for="agility-training">Agility Training</label>
-                        <input type="radio" id="brutal-training" name="training" value="brutal-training">
+                        {{/if}}
+                        {{#if ../availableTrainingOptions.brutal}}
+                        <input type="radio" id="brutal-training" name="training" value="brutal-training" {{#if (is ../lastTrainingOption "brutal-training")}}checked="checked"{{/if}}>
                         <label for="brutal-training">Brutal Training</label>
-                        <input type="radio" id="focused-training" name="training" value="focused-training">
+                        {{/if}}
+                        {{#if ../availableTrainingOptions.focused}}
+                        <input type="radio" id="focused-training" name="training" value="focused-training" {{#if (is ../lastTrainingOption "focused-training")}}checked="checked"{{/if}}>
                         <label for="focused-training">Focused Training</label>
-                        <input type="radio" id="inspired-training" name="training" value="inspired-training">
+                        {{/if}}
+                        {{#if ../availableTrainingOptions.inspired}}
+                        <input type="radio" id="inspired-training" name="training" value="inspired-training" {{#if (is ../lastTrainingOption "inspired-training")}}checked="checked"{{/if}}>
                         <label for="inspired-training">Inspired Training</label>
+                        {{/if}}
                     </div>
                     <div style="text-align: center; margin-bottom: 10px;">
                         <button type="submit">Train!</button>
@@ -42,7 +50,7 @@
                                 <label>{{actor.name}}</label>
                                 <small>Level: {{actor.system.level.current}}</small>
                                 {{#if (is name "training")}}
-                                    <input id="xp-for-{{actor.id}}" name="{{actor.id}}" type="number" style="width: 80px; margin-top: 5px;" placeholder="Instances" min="0">
+                                    <input id="xp-for-{{actor.id}}" name="{{actor.id}}" type="number" style="width: 80px; margin-top: 5px;" placeholder="{{lookup @root/trainingPlaceholders actor.id}}" value="{{lookup @root/trainingInstances actor.id}}" min="0">
                                 {{/if}}
                             </div>
                         </div>
