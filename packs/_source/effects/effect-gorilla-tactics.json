@@ -54,8 +54,7 @@
   "effects": [],
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "Lg5uUS2PQEN8Jxas": 3
+    "default": 0
   },
   "flags": {
     "ptu": {
@@ -63,7 +62,6 @@
     }
   },
   "_stats": {
-    "compendiumSource": "Compendium.ptu.effects.Item.fjl4D6clzZEG9Wjd",
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -71,6 +69,6 @@
     "systemVersion": "4.4.3.18",
     "createdTime": 1778330823493,
     "modifiedTime": 1778331884110,
-    "lastModifiedBy": "Lg5uUS2PQEN8Jxas"
+    "lastModifiedBy": "ptubuilder000000"
   }
 }

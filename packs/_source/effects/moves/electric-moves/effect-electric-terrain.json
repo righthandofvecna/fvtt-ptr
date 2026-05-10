@@ -77,7 +77,7 @@
     "systemVersion": "4.4.3.20",
     "createdTime": 1709370611402,
     "modifiedTime": 1778386953374,
-    "lastModifiedBy": "Lg5uUS2PQEN8Jxas",
+    "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {
       "worldId": "pokemon-test-world",
@@ -85,7 +85,6 @@
       "coreVersion": "11.315",
       "systemId": "ptu",
       "systemVersion": "4.2.1"
-    },
-    "compendiumSource": null
+    }
   }
 }
