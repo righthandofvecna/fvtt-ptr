@@ -262,6 +262,11 @@ class PTUActor extends Actor {
 
         this.prepareDerivedData();
 
+        // combat stage roll options
+        for (const statName of Object.keys(this.system.stats)) {
+            this.flags.ptu.rollOptions.all[`self:${statName}:stage:${this.system.stats[statName]?.stage?.total ?? 0}`] = true;
+        }
+
         this.initiative = this.prepareInitiative();//new ActorInitiative(this);
 
         // Set origins

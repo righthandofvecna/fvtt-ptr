@@ -6,7 +6,7 @@
   "img": "systems/ptu/static/css/images/types2/FairyIC_Icon.png",
   "system": {
     "origin": "",
-    "effect": "Raise the Target's Defense or Special Defense by 1 stage, whichever has lower CS, if its tied, raise both.",
+    "effect": "Raise the Target's Defense or Special Defense by 1 stage, whichever has lower CS. If it's tied, raise both.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -22,7 +22,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.7q5bbZ3iZH3WXYNp",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -84,9 +84,9 @@
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.20",
     "createdTime": 1706121462813,
-    "modifiedTime": 1778200823277,
+    "modifiedTime": 1778389917854,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
