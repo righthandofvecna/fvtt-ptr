@@ -487,10 +487,15 @@ class PTUActor extends Actor {
                 changed.system.spirit.max ?? this.system.spirit.max
             );
         }
-        options.ptu ??= {};
-        options.ptu[this.id] = {
-            oldMaxHp: this.system.health.max,
-        };
+        // if base stats are the only thing changing, this is a "soft" level up
+        // so we should update the HP along with the max HP if it changes
+        const flatChanged = Object.entries(foundry.utils.flattenObject(changed)).filter(([k, v]) => v !== foundry.utils.getProperty(this._source, k));
+        if (flatChanged.filter(([k, v]) => !CONFIG.PTU.data.stats.keys.some(s => k.startsWith(`system.stats.${s}.value`) || k.startsWith(`system.modifiers.baseStats.${s}.value`))).length == 0) {
+            options.ptu ??= {};
+            options.ptu[this.id] = {
+                oldMaxHp: this.system.health.max,
+            };
+        }
         await super._preUpdate(changed, options, user);
     }
 

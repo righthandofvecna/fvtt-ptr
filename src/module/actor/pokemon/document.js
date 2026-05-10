@@ -586,6 +586,10 @@ class PTUPokemonActor extends PTUActor {
 
         if (result) {
             if (result.changed) foundry.utils.mergeObject(changed, result.changed);
+            options.ptu ??= {};
+            options.ptu[this.id] = {
+                oldMaxHp: this.system.health.max,
+            };
         }
 
         await super._preUpdate(changed, options, userId);
