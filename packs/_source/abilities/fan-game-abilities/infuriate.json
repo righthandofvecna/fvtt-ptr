@@ -1,7 +1,6 @@
 {
   "name": "Infuriate",
   "type": "ability",
-  "flags": {},
   "effects": [],
   "_id": "Nq7IDqMOXUEmkwDb",
   "system": {
@@ -22,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.69SvphhJJG1N2inF",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -64,12 +63,13 @@
   "sort": 2200000,
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.20",
     "coreVersion": "13.351",
     "createdTime": 1689606908412,
-    "modifiedTime": 1778200816393,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1778422872321,
+    "lastModifiedBy": "Lg5uUS2PQEN8Jxas",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }
