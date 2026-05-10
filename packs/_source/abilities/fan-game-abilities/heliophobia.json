@@ -6,7 +6,14 @@
     "origin": "",
     "effect": "Whenever the user ends their turn in Sunny Weather, they lose a Tick of Hit Points. The user is immune to the damage and effects of Dark-Type Moves, and whenever the user is hit by a damaging Dark-Type Move or ends their turn in a New Moon, they gain a Tick of Hit Points.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "Effectiveness",
+        "predicate": [],
+        "type": "dark",
+        "value": 0
+      }
+    ],
     "enabled": true,
     "slug": "heliophobia",
     "schema": {
@@ -66,13 +73,14 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.20",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816693,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1778387398958,
+    "lastModifiedBy": "Lg5uUS2PQEN8Jxas",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   },
   "_id": "Z0sHuCVJPHO1KTra",
   "sort": 200000

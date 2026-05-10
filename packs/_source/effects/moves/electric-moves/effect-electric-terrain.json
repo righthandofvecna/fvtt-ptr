@@ -34,7 +34,7 @@
     "duration": {
       "value": -1,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -72,12 +72,12 @@
   "_id": "oMC7M6N3hUs3m1eG",
   "sort": 200000,
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.1",
+    "systemVersion": "4.4.3.20",
     "createdTime": 1709370611402,
-    "modifiedTime": 1709370615436,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1778386953374,
+    "lastModifiedBy": "Lg5uUS2PQEN8Jxas",
     "duplicateSource": null,
     "exportSource": {
       "worldId": "pokemon-test-world",
@@ -85,6 +85,7 @@
       "coreVersion": "11.315",
       "systemId": "ptu",
       "systemVersion": "4.2.1"
-    }
+    },
+    "compendiumSource": null
   }
 }
