@@ -3,10 +3,8 @@
     <div class="d-flex flex-row" data-action="uuid-drop">
         <input type="text" name="system.rules.{{index}}.uuid" value="{{rule.uuid}}" placeholder="Drag a Pokémon actor here, or paste UUID"/>
         {{#if species}}
-            <a class="content-link ml-1" data-uuid="{{species.uuid}}">
-                <img src="{{species.img}}"/>
-                {{species.name}}
-            </a>
+        {{!--  TODO use actual links for this and all similar things! --}}
+            <a class="content-link ml-1" data-uuid="{{species.uuid}}">{{species.name}}</a>
         {{/if}}
     </div>
 </div>
