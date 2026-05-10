@@ -99,7 +99,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
 
         if(data.type === "Item" && data.uuid) {
             const item = await fromUuid(data.uuid);
-            if(!["effect", "condition".includes(item.type)]) return;
+            if(!["effect", "condition"].includes(item.type)) return;
 
             this.object.update({"system.referenceEffect": item.uuid});
         }
