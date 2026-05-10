@@ -8,7 +8,16 @@
     "origin": "Z Moves",
     "effect": "The user has each of its stats raised by +1 Combat Stage. Requires Clangorous Soul.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "damage-taken",
+        "uuid": "Compendium.ptu.effects.Item.soUP3guuJRRlB4eP",
+        "range": "",
+        "value": ""
+      }
+    ],
     "enabled": true,
     "slug": "clangorous-soulblaze",
     "schema": {
@@ -22,7 +31,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.soUP3guuJRRlB4eP",
     "source": {
       "value": "Homebrew"
     },
@@ -79,17 +88,19 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": null
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.20",
     "coreVersion": "13.351",
     "createdTime": 1704887446049,
-    "modifiedTime": 1778200823571,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1778447418392,
+    "lastModifiedBy": "6NxJcTpPL5gpFpqf",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }

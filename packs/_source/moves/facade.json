@@ -7,7 +7,23 @@
     "origin": "",
     "effect": "If the user is afflicted with a Persistent Status Affliction, Facade's Damage Base is doubled to Damage Base 14 (4d10+15 / 40).",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": {
+          "or": [
+            "condition:sleep",
+            "condition:paralysis",
+            "condition:burned",
+            "condition:frozen",
+            "condition:poisoned"
+          ]
+        },
+        "hideIfDisabled": false,
+        "selectors": "{item|id}-damage-base",
+        "value": 7
+      }
+    ],
     "enabled": true,
     "slug": "facade",
     "schema": {
@@ -62,8 +78,8 @@
     },
     "type": "Normal",
     "category": "Physical",
-    "damageBase": 7,
-    "ac": 2,
+    "damageBase": "7",
+    "ac": "2",
     "range": "Melee",
     "contestType": "Cute - Double Time",
     "stab": false,
@@ -77,15 +93,20 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.20",
     "coreVersion": "13.351",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200824271,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1778448603603,
+    "lastModifiedBy": "6NxJcTpPL5gpFpqf",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }
