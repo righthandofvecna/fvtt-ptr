@@ -1,0 +1,43 @@
+{{#if (or (gt attacks.length 0) (gt struggles.length 0))}}
+    <div class="tab-strip-tab {{#if show.actions}}active{{else}}inactive{{/if}}" data-target="actions">
+        <i class="fas fa-burst"></i>
+        <span class="tab-label">Moves</span>
+    </div>
+{{/if}}
+{{#if (is actor.type "character")}}
+{{#if (gt feats.length 0)}}
+    <div class="tab-strip-tab {{#if show.feats}}active{{else}}inactive{{/if}}" data-target="feats">
+        <i class="fas fa-crown"></i>
+        <span class="tab-label">Feats</span>
+    </div>
+{{/if}}
+{{/if}}
+{{#if (gt abilities.length 0)}}
+    <div class="tab-strip-tab {{#if show.abilities}}active{{else}}inactive{{/if}}" data-target="abilities">
+        <i class="fas fa-star"></i>
+        <span class="tab-label">Abil.</span>
+    </div>
+{{/if}}
+{{#if (gt edges.length 0)}}
+    <div class="tab-strip-tab {{#if show.edges}}active{{else}}inactive{{/if}}" data-target="edges">
+        <i class="fas fa-rhombus"></i>
+        <span class="tab-label">Edges</span>
+    </div>
+{{/if}}
+{{#if (gt capabilities.length 0)}}
+    <div class="tab-strip-tab {{#if show.capabilities}}active{{else}}inactive{{/if}}" data-target="capabilities">
+        <i class="fas fa-arrow-up"></i>
+        <span class="tab-label">Capa.</span>
+    </div>
+{{/if}}
+{{#if (is actor.type "character")}}
+{{#if (or (gt items.balls.length 0) (gt items.other.length 0))}}
+    <div class="tab-strip-tab {{#if show.items}}active{{else}}inactive{{/if}}" data-target="items">
+        <i class="fas fa-backpack"></i>
+        <span class="tab-label">Items</span>
+    </div>
+{{/if}}
+{{/if}}
+<div class="tab-strip-dex" title="Scan targeted Pokémon to Dex">
+    <i class="fas fa-tablet-alt"></i>
+</div>
