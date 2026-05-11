@@ -1083,6 +1083,15 @@
           "Name": "Show Pending Advancement Indicator",
           "Hint": "Show an indicator on Trainers/Pokémon that have pending level-ups or level-up tasks in the Actors sidebar."
         }
+      },
+      "Development": {
+        "Name": "Development",
+        "Label": "Development Settings",
+        "Hint": "Settings related to development and debugging.",
+        "AllowUnlinkedTokens": {
+          "Name": "Allow Unlinked Tokens",
+          "Hint": "Allow tokens to be unlinked from their base actor, giving each token its own independent copy of the actor's data. Warning: this is highly experimental and likely to cause spooky bugs. Turn this on at your own peril, and always make a backup of your world before enabling this setting."
+        }
       }
     },
     "Contests": {
