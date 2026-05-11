@@ -14,9 +14,9 @@
     "stats": {
       "hp": 9,
       "atk": 9,
-      "def": 9,
+      "def": 16,
       "spatk": 9,
-      "spdef": 16,
+      "spdef": 9,
       "spd": 9
     },
     "types": [
@@ -386,16 +386,16 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.5",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.21",
+    "coreVersion": "13.351",
     "createdTime": 1705605464835,
-    "modifiedTime": 1712491443027,
-    "lastModifiedBy": "ptubuilder000000",
+    "modifiedTime": 1778466052015,
+    "lastModifiedBy": "6NxJcTpPL5gpFpqf",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   },
   "_id": "nL07b6Ou0whtA8p6",
   "sort": 1100000
