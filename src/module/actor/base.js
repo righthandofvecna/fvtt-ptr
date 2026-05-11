@@ -456,7 +456,7 @@ class PTUActor extends Actor {
     /** @override */
     static async createDocuments(data = [], context = {}) {
         for (const actorData of data) {
-            if (actorData.prototypeToken?.actorLink !== true) {
+            if (actorData.prototypeToken?.actorLink !== true && !foundry.utils.getProperty(foundry.utils.flattenObject(actorData), "flags.item-piles.data.enabled")) {
                 actorData.prototypeToken ??= {};
                 actorData.prototypeToken.actorLink = true;
             }

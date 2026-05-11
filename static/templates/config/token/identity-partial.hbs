@@ -22,10 +22,12 @@
     </div>
     {{/unless}}
 
+    {{#unless object.flags.item-piles?.data?.enabled}}
     <div class="form-group">
         <label>{{localize "TOKEN.CharLink"}}<span class='readable p10'>Unlinked actors are not supported by the system</span></label>
         <input type="checkbox" name="actorLink" checked="true" disabled/>
     </div>
+    {{/unless}}
     {{#if isPrototype}}
     <hr>
 

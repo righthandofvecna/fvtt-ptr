@@ -8,7 +8,7 @@ export class Migration110ActorLink extends MigrationBase {
      * @type {MigrationBase['updateActor']}
      */
     async updateActor(actor) {
-        if(actor.prototypeToken?.actorLink !== true) {
+        if(actor.prototypeToken?.actorLink !== true && !foundry.utils.getProperty(actor || {}, "flags.item-piles.data.enabled")) {
             actor.prototypeToken ??= {};
             actor.prototypeToken.actorLink = true;
         }
