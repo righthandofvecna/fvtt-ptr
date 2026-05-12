@@ -59,13 +59,17 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.18",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816782,
+    "modifiedTime": 1778298118756,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

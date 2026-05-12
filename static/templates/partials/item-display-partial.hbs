@@ -79,8 +79,8 @@
                         {{/if}}
                         {{#if item.damageBase}}
                             {{!-- {{#unless (is item.system.category "Status")}} --}}
-                                <div class="tag tooltip gradient" title="DB: {{item.damageBase.postStab}} ({{moveDbToDice item ../actor}})">
-                                    <span>DB: {{item.damageBase.postStab}}</span>
+                                <div class="tag tooltip gradient" title="DB: {{#if item.damageBase.isFormula}}{{item.dbPreviewNumber}}*{{else}}{{item.damageBase.postStab}}{{/if}} ({{moveDbToDice item ../actor}})">
+                                    <span>DB: {{#if item.damageBase.isFormula}}{{item.dbPreviewNumber}}*{{else}}{{item.damageBase.postStab}}{{/if}}</span>
                                 </div>
                             {{!-- {{/unless}} --}}
                         {{/if}}
@@ -95,6 +95,15 @@
                             <div class="tag gradient">
                                 <span>{{item.frequency}}</span>
                             </div>
+                            {{!-- {{#if item.system.frequency.max}}
+                                <div class="tag gradient usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
+                                    <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
+                                </div> --}}
+                            {{#if item.onCooldown}}
+                                <div class="tag gradient usage-tag exhausted" title="On Cooldown (EOT)">
+                                    <span>EOT</span>
+                                </div>
+                            {{/if}}
                         {{/if}}
                         {{#if item.system.range}}
                             {{#each (split item.system.range ",") as | range |}}
@@ -163,6 +172,15 @@
                                             <img src="/systems/ptu/static/css/images/icons/automated_disabled_icon.png" style="opacity: 0.5"/>
                                         </div>
                                     {{/if}}
+                                {{/if}}
+                                {{!-- {{#if item.system.frequency.max}}
+                                    <div class="tag usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
+                                        <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
+                                    </div> --}}
+                                {{#if item.onCooldown}}
+                                    <div class="tag usage-tag exhausted" title="On Cooldown (EOT)">
+                                        <span>EOT</span>
+                                    </div>
                                 {{/if}}
                             {{/unless}}
                         </div>

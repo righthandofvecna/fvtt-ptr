@@ -82,12 +82,8 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
         }
 
         data.eotCooldown = Boolean(this.item.flags.ptu?.eot);
+        data.freqConst = CONFIG.PTU.data.frequencies[this.item.system.frequency?.type] ?? {};
 
-        if(this.item.flags.ptu?.showInTokenPanel === undefined) {
-            if(this.item.type === "item" && this.item.roll) data.item.flags.ptu.showInTokenPanel = true;
-            if (["move", "ability", "feat", "effect"].includes(this.item.type)) data.item.flags.ptu.showInTokenPanel = true;
-        }
-        
         return data;
     }
 
@@ -103,7 +99,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
 
         if(data.type === "Item" && data.uuid) {
             const item = await fromUuid(data.uuid);
-            if(!["effect", "condition".includes(item.type)]) return;
+            if(!["effect", "condition"].includes(item.type)) return;
 
             this.object.update({"system.referenceEffect": item.uuid});
         }

@@ -6,7 +6,16 @@
     "origin": "",
     "effect": "Connection - Electric Terrain. The user uses Electric Terrain as Rapid Action, ignoring Frequency and as if the Move was on its Movelist.\nBonus: While this Pokemon is in Electric Terrain, the user gains +2 Special Attack Combat Stages.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": {
+          "not": "move:electric-terrain"
+        },
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.j1LhD3Z6maB3Y9pi"
+      }
+    ],
     "enabled": true,
     "slug": "hadron-engine",
     "schema": {
@@ -20,7 +29,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.rprXQjHtUroJns9B",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -61,17 +70,19 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": null
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.20",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816827,
+    "modifiedTime": 1778387757696,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   }
 }

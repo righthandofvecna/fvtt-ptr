@@ -2,9 +2,10 @@ import { sluggify } from '../../../util/misc.js';
 import { PTUCondition, PTUItem } from '../index.js';
 import { PTUAttackCheck } from '../../system/check/attack.js';
 import { PTUDamageCheck } from '../../system/check/damage.js';
+import { resolveDbFormula } from '../../../util/value-resolver.js';
 class PTUMove extends PTUItem {
     get rollable() {
-        return !(isNaN(Number(this.system.ac ?? undefined)) && isNaN(Number(this.system.damageBase ?? undefined)));
+        return !(isNaN(Number(this.system.ac ?? undefined)) && !this.isDamaging);
     }
 
     get usable() {
@@ -18,7 +19,7 @@ class PTUMove extends PTUItem {
             options.all['move:is-stab'] = true;
             options.item['move:is-stab'] = true;
         }
-        if (this.isDamaging && this.damageBase.isStab && !!options.all[`move:damage-base:${this.damageBase.preStab}`]) {
+        if (this.isDamaging && !this.damageBase.isFormula && this.damageBase.isStab && !!options.all[`move:damage-base:${this.damageBase.preStab}`]) {
             delete this.flags.ptu.rollOptions.all[`move:damage-base:${this.damageBase.preStab}`];
             delete this.flags.ptu.rollOptions.item[`move:damage-base:${this.damageBase.preStab}`];
 
@@ -43,19 +44,51 @@ class PTUMove extends PTUItem {
     }
 
     get isDamaging() {
-        return !isNaN(Number(this.system.damageBase ?? undefined));
+        const raw = String(this.system.damageBase ?? "").trim();
+        if (!raw) return false;
+        if (raw === "--") return false;
+        if (!isNaN(Number(raw))) return true;
+        // non-numeric and non-arithmetic without a {{...}} token = not a valid formula
+        if ((/[^0-9 +\-\*\/\(\)]/i).test(raw) && !/\{\{.*\}\}/.test(raw)) return false;
+        return true;
     }
 
     get isFiveStrike() {
         return (!!this.rollOptions.item["move:range:five-strike"]) || (!!this.rollOptions.item["move:five-strike"]);
     }
 
+    /**
+     * Numeric DB value suitable for UI display — formula resolved with no target (using fallback defaults), STAB applied.
+     * Returns null if undamaging or formula is unresolvable.
+     * @returns {number|null}
+     */
+    get dbPreviewNumber() {
+        const db = this.damageBase;
+        if (!db) return null;
+        if (!db.isFormula) return db.postStab;
+        const resolved = resolveDbFormula(db.formula, {});
+        if (resolved === null) return null;
+        return resolved + (db.isStab ? 2 : 0);
+    }
+
     get damageBase() {
         if (!this.isDamaging) return null;
+        const raw = String(this.system.damageBase).trim();
+        if (isNaN(Number(raw))) {
+            // Formula DB — preStab/postStab are resolved at roll time
+            return {
+                preStab: null,
+                postStab: null,
+                isStab: !this.system.isStruggle && !!this.actor?.types.includes(this.system.type),
+                isFormula: true,
+                formula: raw,
+            };
+        }
         const result = {
-            preStab: isNaN(Number(this.system.damageBase)) ? 0 : Number(this.system.damageBase),
+            preStab: Number(this.system.damageBase),
             postStab: 0,
             isStab: false,
+            isFormula: false,
         }
         result.postStab = result.preStab + (!this.system.isStruggle && this.actor?.types.includes(this.system.type) ? 2 : 0);
         result.isStab = result.preStab !== result.postStab;
@@ -212,7 +245,7 @@ class PTUMove extends PTUItem {
             rollOptions.all[`move:range:${sluggify(range)}`] = true;
         }
 
-        if (this.isDamaging) {
+        if (this.isDamaging && !this.damageBase.isFormula) {
             rollOptions.all[`move:damage-base:${this.damageBase.postStab}`] = true;
             rollOptions.all[`move:damage-base:pre-stab:${this.damageBase.preStab}`] = true;
         }

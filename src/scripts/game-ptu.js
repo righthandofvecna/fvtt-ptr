@@ -82,6 +82,10 @@ const GamePTU = {
         game.ptu.compendiumBrowser = new CompendiumBrowser();
         game.ptu.typeMatrix = new TypeMatrix()
 
+        Hooks.on("targetToken", (user, _token, _targeted) => {
+            if (user.id === game.user.id) game.ptu.tokenPanel.refresh();
+        });
+
         if (game.user.isGM) {
             if (!game.settings.get("ptu", "worldNotesFolder")) {
                 game.ptu.macros.initializeWorldNotes();

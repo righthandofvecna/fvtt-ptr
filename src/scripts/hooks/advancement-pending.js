@@ -63,11 +63,12 @@ function markFolder(el) {
 export const AdvancementPending = {
   listen() {
     Hooks.on("renderActorDirectory", (_app, html) => {
+      if (!game.settings.get("ptu", "advancementPendingIndicator")) return;
       // Mark individual actor entries
       html.querySelectorAll("li[data-entry-id]").forEach((el) => {
         const actorId = el.dataset.entryId;
         const actor = game.actors.get(actorId);
-        if (!actor?.isOwner) return;
+        if (!actor?.isProperOwner && !(game.user.isGM && actor?.hasPlayerOwner)) return;
         if (!hasAdvancementPending(actor)) return;
         markEntry(el, true);
       });
@@ -79,7 +80,8 @@ export const AdvancementPending = {
     });
 
     Hooks.on("updateActor", (actor, updateData) => {
-      if (!actor.isOwner) return;
+      if (!game.settings.get("ptu", "advancementPendingIndicator")) return;
+      if (!actor.isProperOwner && !(game.user.isGM && actor.hasPlayerOwner)) return;
 
       const hasPending = hasAdvancementPending(actor);
       const entryEl = document.querySelector(`.directory-list li[data-entry-id="${actor.id}"]`);

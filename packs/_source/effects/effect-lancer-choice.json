@@ -1,0 +1,86 @@
+{
+  "folder": "1qgsmtnAED6QR1AK",
+  "name": "Effect: Lancer (Choice)",
+  "type": "effect",
+  "_id": "KtoaDlyaC34wVNGV",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "@embed[Compendium.ptu.abilities.Item.Pa0AfSlUnIRrorkc]",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "lancer",
+        "adjustName": false,
+        "choices": [
+          {
+            "label": "Shifted 3m or more+?",
+            "value": "Compendium.ptu.effects.Item.WwDt5HmDuCgWUgaI"
+          },
+          {
+            "label": "Didn't Shift or Disengage",
+            "value": "Compendium.ptu.effects.Item.PE01NYklcaLRsZ6y"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "replaceSelf": true,
+        "uuid": "{item|flags.ptu.rulesSelections.lancer}"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-lancer-choice",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.20",
+    "createdTime": 1778423246376,
+    "modifiedTime": 1778423802307,
+    "lastModifiedBy": "ptubuilder000000"
+  }
+}

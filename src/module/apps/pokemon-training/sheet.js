@@ -8,6 +8,9 @@ class PTUPokemonTrainingSheet extends FormApplication {
         this.trainer = null;
         this.party = null;
         this.training = [];
+        this.trainingInstances = {};
+        this.lastTrainingOption = "none";
+        this.trainingPlaceholders = {};
         this.instancesOfTraining = 6;
         this._prepare(actor, options.strict);
     }
@@ -63,6 +66,40 @@ class PTUPokemonTrainingSheet extends FormApplication {
         data.trainer = this.trainer;
         data.selectedToTrain = {};
         data.xpToDistribute = this.xpToDistribute;
+        data.lastTrainingOption = this.lastTrainingOption;
+
+        // Determine which training options the trainer has feats for
+        const trainerSlugs = new Set(this.trainer.items.filter(i => i.type === "feat").map(i => i.system.slug));
+        data.availableTrainingOptions = {
+            agility:  trainerSlugs.has("agility-training"),
+            brutal:   trainerSlugs.has("brutal-training"),
+            focused:  trainerSlugs.has("focused-training"),
+            inspired: trainerSlugs.has("inspired-training"),
+        };
+
+        // Compute per-pokemon placeholder counts: even split, leftovers to lowest total XP pokemon
+        if (this.training.length > 0) {
+            const count = this.training.length;
+            const base = Math.floor(this.instancesOfTraining / count);
+            const remainder = this.instancesOfTraining % count;
+            const sorted = [...this.training].sort((a, b) => {
+                const aXp = (a.system.level.exp ?? 0) + (a.system.level.pendingExp ?? 0);
+                const bXp = (b.system.level.exp ?? 0) + (b.system.level.pendingExp ?? 0);
+                return aXp - bXp;
+            });
+            data.trainingPlaceholders = {};
+            for (const actor of this.training) {
+                const rank = sorted.indexOf(actor);
+                data.trainingPlaceholders[actor.id] = base + (rank < remainder ? 1 : 0);
+            }
+            this.trainingPlaceholders = data.trainingPlaceholders;
+        } else {
+            data.trainingPlaceholders = {};
+            this.trainingPlaceholders = {};
+        }
+
+        data.trainingInstances = this.trainingInstances;
+
         data.boxes = {
             training: {
                 contents: this.training,
@@ -298,22 +335,22 @@ class PTUPokemonTrainingSheet extends FormApplication {
     }
 
     #setPokemonToTrain() {
-        // Initializes the selected pokemon
+        // Initializes the selected pokemon, restoring last session if available
         this.selectedPokemon = [];
-    }
-
-    /** @override */
-    _getHeaderButtons() {
-        let buttons = super._getHeaderButtons();
-
-        buttons.unshift({
-            label: "PTU.PokemonTrainingSheet.AutoDistributeXP",
-            class: "training-autoexp",
-            icon: "fas fa-robot",
-            onclick: this.autoDistributeXP.bind(this)
-        });
-
-        return buttons;
+        try {
+            const lastSession = game.settings.get("ptu", "training.lastSession");
+            if (lastSession?.trainerId === this.trainer?.id && Array.isArray(lastSession.pokeUuids)) {
+                for (const uuid of lastSession.pokeUuids) {
+                    const actor = fromUuidSync(uuid);
+                    if (!actor || actor.type !== "pokemon") continue;
+                    if (actor.flags?.ptu?.party?.trainer !== this.trainer.id) continue;
+                    if (this.training.indexOf(actor) === -1) this.training.push(actor);
+                }
+            }
+            this.lastTrainingOption = lastSession?.trainingOption ?? "none";
+        } catch (e) {
+            // settings not yet available; start fresh
+        }
     }
 
     /** @override */
@@ -335,6 +372,17 @@ class PTUPokemonTrainingSheet extends FormApplication {
             const actor = await fromUuid(event.currentTarget.dataset.actorUuid);
             actor?.sheet?.render(true);
         })
+
+        // Persist user-entered instance counts across re-renders
+        html.find('input[id^="xp-for-"]').on('change', (event) => {
+            const actorId = event.target.name;
+            const val = event.target.value;
+            if (val === "" || val === null) {
+                delete this.trainingInstances[actorId];
+            } else {
+                this.trainingInstances[actorId] = val;
+            }
+        });
     }
 
     /** @override */
@@ -497,6 +545,7 @@ class PTUPokemonTrainingSheet extends FormApplication {
                     }
                     this.training.splice(pokemonIndex, 1);
                 }
+                delete this.trainingInstances[actor.id];
             }
             return this.render();
         }
@@ -583,58 +632,64 @@ class PTUPokemonTrainingSheet extends FormApplication {
         }
     }
 
-    autoDistributeXP() {
-        // Auto Distributes the training instances across the selected pokemon evenly
-        let inputFields = document.querySelectorAll('[id*="xp-for-"]');
-        if (inputFields.length === 0) {
-            return;
-        }
-
-        let totalNumberOfPokemon = inputFields.length;
-        let instancesPerPokemon = Math.floor(this.instancesOfTraining / totalNumberOfPokemon);
-        let extraInstances = this.instancesOfTraining % totalNumberOfPokemon;
-        for (let i = 0; i < totalNumberOfPokemon; i++) {
-            let instancesForPokemon = (i < extraInstances) ? instancesPerPokemon + 1 : instancesPerPokemon;
-            inputFields[i].value = instancesForPokemon;
-        }
-    }
-
-    completeTraining(trainingType, trainingData) {
+    async completeTraining(trainingType, trainingData) {
         // Finalizes the training and messages the GM
-        let trainingEffectID = this.getTrainingEffect(trainingType);
+        const trainingEffectID = this.getTrainingEffect(trainingType);
         let message = this.trainer.name + " has completed their daily training!<br>";
-        Object.entries(trainingData).forEach(([key, value]) => {
-            let actor = game.actors.get(key);
-            
+        const updates = [];
+
+        for (const [key, value] of Object.entries(trainingData)) {
+            const actor = game.actors.get(key);
+            if (!actor) continue;
+
             // Check if Pokemon is eligible for training
             const currentLevel = actor.system.level.current;
             const trainingLevelCap = actor.attributes.level.cap.training;
-            
-            // Parse the number of instances to apply
-            const instancesValue = parseInt(value) || 0;
-            if (instancesValue === 0) return;
-            
+
+            // Use the submitted value, or fall back to the auto-distribution placeholder
+            const instancesValue = parseInt(value) || (this.trainingPlaceholders?.[key] ?? 0);
+            if (instancesValue === 0) continue;
+
             // Calculate total EXP: instances × EXP per instance
             const expValue = instancesValue * this.xpToDistribute;
-            
+
             if (currentLevel > trainingLevelCap) {
                 message += `${actor.name} is too high level (${currentLevel}) for training (cap: ${trainingLevelCap})<br>`;
-                return;
+                continue;
             }
-            
-            let updatedXP = actor.system.level.exp + expValue;
-            message += actor.name + " gained " + expValue + " EXP (" + instancesValue + " instances) totaling to " + updatedXP + " EXP<br>";
-            actor.update({'system.level.exp' : updatedXP});
-            
+
+            const newPending = (actor.system.level.pendingExp ?? 0) + expValue;
+            message += actor.name + " gained " + expValue + " EXP (" + instancesValue + " instances) as pending EXP (total pending: " + newPending + ")<br>";
+
+            const actorUpdates = [actor.update({'system.level.pendingExp': newPending})];
+
             if (trainingEffectID !== "") {
-                (async (effect) => {
-                    effect = await game.packs.get("ptu.effects").getDocument(trainingEffectID);
-                    await actor.createEmbeddedDocuments('Item', [effect]);
-                })(trainingEffectID);
+                // TODO: this doesn't work
+                // Do something better to dedup this
+                const compUuid = `Compendium.ptu.effects.Item.${trainingEffectID}`;
+                const alreadyHasEffect = actor.items.some(i => i.sourceId === compUuid || i.flags?.core?.sourceId === compUuid);
+                if (!alreadyHasEffect) {
+                    actorUpdates.push(
+                        game.packs.get("ptu.effects").getDocument(trainingEffectID)
+                            .then(effect => actor.createEmbeddedDocuments('Item', [foundry.utils.mergeObject(effect.toObject(), {"flags": { "core": { "sourceId": compUuid }}, "ptu": { "trainingEffect": true }})]))
+                    );
+                }
             }
+
+            updates.push(...actorUpdates);
+        }
+
+        await Promise.all(updates);
+
+        // Save this session for next time
+        await game.settings.set("ptu", "training.lastSession", {
+            trainerId: this.trainer.id,
+            pokeUuids: this.training.map(a => a.uuid),
+            trainingOption: trainingType
         });
 
         this.sendChatMessage(message);
+        await this.close();
     }
 
     getTrainingEffect(trainingType) {

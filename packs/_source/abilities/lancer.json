@@ -20,7 +20,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.KtoaDlyaC34wVNGV",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -59,15 +59,15 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.20",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816498,
+    "modifiedTime": 1778423682832,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "flags": {}
 }

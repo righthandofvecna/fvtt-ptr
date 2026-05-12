@@ -37,6 +37,9 @@ export function transform(data) {
   if (ForgeRE.test(data.img)) {
     data.img = data.img.replace(ForgeRE, "/systems/ptu/");
   }
+  if (data?._stats?.compendiumSource) delete data._stats.compendiumSource;
+  if (data?.system?.exportSource) data._stats.exportSource = null;
+  if (data?.system?.lastModifiedBy) data._stats.lastModifiedBy = "ptubuilder000000";
   return data;
 }
 

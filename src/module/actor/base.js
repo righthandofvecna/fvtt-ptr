@@ -68,6 +68,24 @@ class PTUActor extends Actor {
         return !(this.permission >= CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER);
     }
 
+    /**
+     * Returns true if the current user is the "proper" owner of this actor:
+     * - For characters: the user has this actor set as their selected character.
+     * - For pokemon: the user's selected character is this pokemon's trainer
+     *   (whether the pokemon is in the party or boxed).
+     */
+    get isProperOwner() {
+        if (this.type === "character") {
+            return game.user.character?.id === this.id;
+        }
+        if (this.type === "pokemon") {
+            const trainerId = this.flags?.ptu?.party?.trainer;
+            if (!trainerId) return false;
+            return game.user.character?.id === trainerId;
+        }
+        return false;
+    }
+
     get types() {
         return this.synthetics.typeOverride.typing
             || this.system.typing
@@ -262,6 +280,11 @@ class PTUActor extends Actor {
 
         this.prepareDerivedData();
 
+        // combat stage roll options
+        for (const statName of Object.keys(this.system.stats)) {
+            this.flags.ptu.rollOptions.all[`self:${statName}:stage:${this.system.stats[statName]?.stage?.total ?? 0}`] = true;
+        }
+
         this.initiative = this.prepareInitiative();//new ActorInitiative(this);
 
         // Set origins
@@ -432,10 +455,12 @@ class PTUActor extends Actor {
 
     /** @override */
     static async createDocuments(data = [], context = {}) {
-        for (const actorData of data) {
-            if (actorData.prototypeToken?.actorLink !== true) {
-                actorData.prototypeToken ??= {};
-                actorData.prototypeToken.actorLink = true;
+        if (!game.settings.get("ptu", "development.allowUnlinkedTokens")) {
+            for (const actorData of data) {
+                if (actorData.prototypeToken?.actorLink !== true && !foundry.utils.getProperty(foundry.utils.flattenObject(actorData), "flags.item-piles.data.enabled")) {
+                    actorData.prototypeToken ??= {};
+                    actorData.prototypeToken.actorLink = true;
+                }
             }
         }
         return super.createDocuments(data, context);
@@ -482,7 +507,15 @@ class PTUActor extends Actor {
                 changed.system.spirit.max ?? this.system.spirit.max
             );
         }
-
+        // if base stats are the only thing changing, this is a "soft" level up
+        // so we should update the HP along with the max HP if it changes
+        const flatChanged = Object.entries(foundry.utils.flattenObject(changed)).filter(([k, v]) => v !== foundry.utils.getProperty(this._source, k));
+        if (flatChanged.filter(([k, v]) => !CONFIG.PTU.data.stats.keys.some(s => k.startsWith(`system.stats.${s}.value`) || k.startsWith(`system.modifiers.baseStats.${s}.value`))).length == 0) {
+            options.ptu ??= {};
+            options.ptu[this.id] = {
+                oldMaxHp: this.system.health.max,
+            };
+        }
         await super._preUpdate(changed, options, user);
     }
 
@@ -891,20 +924,13 @@ class PTUActor extends Actor {
     /* -------------------------------------------- */
     /* Event Handlers                               */
     /* -------------------------------------------- */
-
-    async _preUpdate(changed, options, userId) {
-        options.ptu ??= {};
-        options.ptu.oldMaxHp = this.system.health.max;
-        return super._preUpdate(changed, options, userId);
-    }
-
     /** @override */
     _onUpdate(data, options, userId) {
         super._onUpdate(data, options, userId);
 
         // After a level-up, adjust current HP by the difference in max HP
-        if (options.ptu?.oldMaxHp !== undefined && this.primaryUpdater?.id === game.user.id) {
-            const diff = this.system.health.max - options.ptu.oldMaxHp;
+        if (options.ptu?.[this.id]?.oldMaxHp !== undefined && this.primaryUpdater?.id === game.user.id) {
+            const diff = this.system.health.max - options.ptu[this.id].oldMaxHp;
             if (diff !== 0 && this.system.health.value !== null) {
                 this.update({ "system.health.value": Math.max(0, this.system.health.value + diff) });
             }

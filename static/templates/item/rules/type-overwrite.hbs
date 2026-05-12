@@ -1,0 +1,25 @@
+<div class="form-group">
+    <label class="short">Type(s)</label>
+    <div class="attached-input">
+        <button type="button" class="attachment" data-action="toggle-value">
+            {{#if valueIsArray}}Multiple{{else}}Single{{/if}}
+        </button>
+        {{#if valueIsArray}}
+            <input type="text" class="ptu-tagify value-list" name="system.rules.{{index}}.value" value="{{json rule.value}}" data-dtype="JSON"/>
+        {{else}}
+            <input type="text" name="system.rules.{{index}}.value" value="{{rule.value}}" list="type-options-{{index}}" placeholder="e.g. Fire"/>
+            <datalist id="type-options-{{index}}">
+                {{#each types}}
+                    <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </datalist>
+        {{/if}}
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="fill">
+        Overwrite existing types (replace rather than add)
+        <input type="checkbox" name="system.rules.{{index}}.overwrite" {{checked rule.overwrite}}>
+    </label>
+</div>

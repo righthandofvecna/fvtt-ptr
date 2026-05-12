@@ -1036,6 +1036,10 @@
         "AllowPlayersToEditSpecies": {
           "Name": "Allow Players to Edit Species",
           "Hint": "Allow players to edit the species of their Pokémon."
+        },
+        "ShowTypeEffectiveness": {
+          "Name": "Show Type Effectiveness in Token Panel",
+          "Hint": "Display type effectiveness (Immune, Not Very Effective, Normal, Supereffective, Ultraeffective) for moves in the Token Panel based on the current target."
         }
       },
       "Homebrew": {
@@ -1049,6 +1053,10 @@
         "ShadowType": {
           "Name": "Enable Shadow Type",
           "Hint": "Adds Pokémon Colosseum's Shadow Type to the game based on PTR Ruleset's Shadow Type."
+        },
+        "SceneDailyEOT": {
+          "Name": "Scene/Daily Every Other Turn Automation",
+          "Hint": "Whether Scene and Daily-frequency items should be restricted to being used every other turn (the default for PTU/PTR1e)."
         }
       },
       "Type": {
@@ -1068,6 +1076,21 @@
         "Reset": {
           "Title": "Reset Type Effectiveness",
           "Content": "Are you sure you want to reset the type effectiveness to the default values?"
+        }
+      },
+      "User": {
+        "AdvancementPendingIndicator": {
+          "Name": "Show Pending Advancement Indicator",
+          "Hint": "Show an indicator on Trainers/Pokémon that have pending level-ups or level-up tasks in the Actors sidebar."
+        }
+      },
+      "Development": {
+        "Name": "Development",
+        "Label": "Development Settings",
+        "Hint": "Settings related to development and debugging.",
+        "AllowUnlinkedTokens": {
+          "Name": "Allow Unlinked Tokens",
+          "Hint": "Allow tokens to be unlinked from their base actor, giving each token its own independent copy of the actor's data. Warning: this is highly experimental and likely to cause spooky bugs. Turn this on at your own peril, and always make a backup of your world before enabling this setting."
         }
       }
     },
@@ -1208,19 +1231,52 @@
     },
     "RulebookJournalSheetName": "Rulebook Sheet",
     "Frequency": {
-      "AtWill": "At Will",
-      "EOT": "EOT",
-      "Scene": "Scene",
-      "Daily": "Daily",
-      "Static": "Static",
-      "Custom": "Custom"
+      "AtWill": {
+        "label": "At Will",
+        "short": "AtW"
+      },
+      "EOT": {
+        "label": "EOT",
+        "short": "EOT"
+      },
+      "Scene": {
+        "label": "Scene",
+        "short": "Scn"
+      },
+      "Daily": {
+        "label": "Daily",
+        "short": "Dly"
+      },
+      "Static": {
+        "label": "Static",
+        "short": "Stc"
+      },
+      "Custom": {
+        "label": "Custom",
+        "short": "Cst"
+      }
     },
     "ActionCost": {
-      "Standard": "Standard",
-      "Rapid": "Rapid",
-      "Shift": "Shift",
-      "Free": "Free",
-      "Extended": "Extended"
+      "Standard": {
+        "label": "Standard",
+        "short": "Std"
+      },
+      "Rapid": {
+        "label": "Rapid",
+        "short": "Rpd"
+      },
+      "Shift": {
+        "label": "Shift",
+        "short": "Sft"
+      },
+      "Free": {
+        "label": "Free",
+        "short": "Fr"
+      },
+      "Extended": {
+        "label": "Extended",
+        "short": "Ext"
+      }
     },
     "FrequencyModifier": {
       "PriorityLimited": "Priority (Limited)",

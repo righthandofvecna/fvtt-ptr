@@ -85,9 +85,13 @@ class PTUItem extends Item {
         let fq = game.i18n.localize(freq?.label ?? "");
         if (freq?.limited && (this.system.frequency.max ?? 1) > 1) fq += ` ×${this.system.frequency.max}`;
         if (this.system.actionCost.rapid || this.system.actionCost.shift || this.system.actionCost.free || this.system.actionCost.extended) {
-            fq += " - " + ["standard", "rapid", "shift", "free", "extended"].filter(at=>this.system.actionCost[at]).map(at => game.i18n.localize(CONFIG.PTU.data.actionCosts[at])).join(" + ")
+            fq += " - " + ["standard", "rapid", "shift", "free", "extended"].filter(at=>this.system.actionCost[at]).map(at => game.i18n.localize(CONFIG.PTU.data.actionCosts[at]?.label)).join(" + ")
         }
         return fq || null;
+    }
+
+    get linkHtml() {
+        return this.toAnchor({ name: this.name })?.outerHTML ?? "";
     }
 
     /** Change state of whether items automation should be enabled or disabled. If called

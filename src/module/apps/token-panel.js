@@ -1,3 +1,17 @@
+const ACTION_COST_ICONS = {
+    standard: "systems/ptu/static/images/icons/StandardAction.svg",
+    rapid:    "systems/ptu/static/images/icons/RapidAction.svg",
+    shift:    "systems/ptu/static/images/icons/ShiftAction.svg",
+    free:     "systems/ptu/static/images/icons/FreeAction.svg",
+};
+
+function buildActionCostIcons(actionCost) {
+    if (!actionCost) return [];
+    return Object.entries(ACTION_COST_ICONS)
+        .filter(([key]) => actionCost[key])
+        .map(([key, src]) => ({ src, label: key.charAt(0).toUpperCase() + key.slice(1) + " Action" }));
+}
+
 export class TokenPanel extends Application {
     get token() {
         return canvas.tokens.controlled.at(0)?.document ?? null;
@@ -28,6 +42,20 @@ export class TokenPanel extends Application {
 
     async _getItemData(item) {
         const effectText = item.system.snippet || item.system.effect || "";
+        const freq = item.system.frequency?.type ? CONFIG.PTU.data.frequencies[item.system.frequency.type] : null;
+        const usageDisplay = (() => {
+            if (!freq) return null;
+            const ud = {};
+            if (freq.limited) {
+                ud.limited = true;
+                ud.remaining = Math.max(0, (item.system.frequency?.max ?? 1) - (item.flags?.ptu?.used ?? 0));
+                ud.max = item.system.frequency?.max ?? 1;
+            }
+            if (freq.eot && item.flags?.ptu?.eot > 0) {
+                ud.eot = true;
+            }
+            return Object.keys(ud).length > 0 ? ud : null;
+        })();
         return {
             name: item.name,
             img: item.img,
@@ -38,6 +66,8 @@ export class TokenPanel extends Application {
             ap: item.system.ap ?? null,
             rollable: !!item.roll,
             onCooldown: item.onCooldown ?? false,
+            usageDisplay,
+            actionCostIcons: buildActionCostIcons(item.system.actionCost ?? null),
         }
     }
 
@@ -49,6 +79,25 @@ export class TokenPanel extends Application {
             actor: null,
         };
 
+        const showEffectiveness = game.settings.get("ptu", "metagame.showTypeEffectiveness");
+        const targetActors = showEffectiveness
+            ? [...game.user.targets].map(t => t.actor).filter(Boolean)
+            : [];
+
+        const getEffectivenessData = (type) => {
+            if (!targetActors.length || !type) return null;
+            const getTier = (val) => {
+                if (val === 0) return { key: "immune", label: "Immune (0x)" };
+                if (val < 1) return { key: "resist", label: "Not Very Effective (<1x)" };
+                if (val === 1) return { key: "normal", label: "Normal (1x)" };
+                if (val === 1.5) return { key: "super", label: "Supereffective (1.5x)" };
+                return { key: "ultra", label: "Ultraeffective (2x+)" };
+            };
+            const tiers = targetActors.map(a => getTier(a.iwr?.getRealValue(type) ?? 1));
+            if (tiers.some(t => t.key !== tiers[0].key)) return null;
+            return tiers[0];
+        };
+
         const attacks = [];
         const struggles = [];
         for (const [id, move] of actor.attacks.entries()) {
@@ -56,7 +105,13 @@ export class TokenPanel extends Application {
             const data = {
                 name: move.name,
                 img: move.img,
-                db: move.damageBase ? move.damageBase.postStab : null,
+                db: (() => {
+                    const db = move.damageBase;
+                    if (!db) return null;
+                    if (!db.isFormula) return db.postStab;
+                    const preview = move.dbPreviewNumber;
+                    return preview !== null ? `${preview}*` : "?*";
+                })(),
                 ac: move.system.ac > 0 ? move.system.ac : null,
                 frequency: move.system.frequency ?? { type: "at-will", max: 0 },
                 actionCost: move.system.actionCost ?? null,
@@ -67,9 +122,28 @@ export class TokenPanel extends Application {
                 effect: move.system.effect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(move.system.effect), {async: true}) : "",
                 range: move.system.range ?? "",
                 keywords: move.system.keywords ?? [],
+                hasAllyKeyword: (move.system.keywords ?? []).some(k => typeof k === "string" && k.toLowerCase() === "ally"),
                 sort: move.sort ?? 0,
+                effectiveness: getEffectivenessData(move.system.type),
+                usageDisplay: (() => {
+                    const freq = move.system.frequency?.type ? CONFIG.PTU.data.frequencies[move.system.frequency.type] : null;
+                    if (!freq) return null;
+                    const ud = {};
+                    if (freq.limited) {
+                        ud.limited = true;
+                        ud.remaining = Math.max(0, (move.system.frequency?.max ?? 1) - (move.flags?.ptu?.used ?? 0));
+                        ud.max = move.system.frequency?.max ?? 1;
+                    }
+                    if (freq.eot && move.flags?.ptu?.eot > 0) {
+                        ud.eot = true;
+                    }
+                    return Object.keys(ud).length > 0 ? ud : null;
+                })(),
+                typeClass: move.system.type ? `type-${move.system.type.toLowerCase()}` : "",
             };
             if (move.system.category) data.category = `/systems/ptu/static/css/images/types2/${move.system.category}IC_Icon.png`;
+            if (move.system.type) data.type = { icon: `/systems/ptu/static/css/images/types2/${move.system.type}IC_Icon.png`, name: move.system.type };
+            data.actionCostIcons = buildActionCostIcons(move.system.actionCost ?? null);
             if (move.system.isStruggle) struggles.push(data);
             else attacks.push(data);
         }
@@ -102,7 +176,9 @@ export class TokenPanel extends Application {
         
         for (const pokeedge of actor.itemTypes.pokeedge?.sort((a, b) => a.sort - b.sort) ?? []) {
             if (!(pokeedge.getFlag("ptu", "showInTokenPanel") ?? false)) continue;
-            edges.push(await this._getItemData(pokeedge));
+            const edgeData = await this._getItemData(pokeedge);
+            edgeData.pokeedge = true;
+            edges.push(edgeData);
         }
 
         const capabilities = [];
@@ -169,9 +245,29 @@ export class TokenPanel extends Application {
     }
 
     /** @override */
+    async _render(force, options) {
+        const scrollPositions = new Map();
+        if (this.element?.length) {
+            for (const el of this.element[0].querySelectorAll("[data-scroll-key]")) {
+                scrollPositions.set(el.dataset.scrollKey, el.scrollTop);
+            }
+        }
+        await super._render(force, options);
+        if (this.element?.length) {
+            for (const el of this.element[0].querySelectorAll("[data-scroll-key]")) {
+                const saved = scrollPositions.get(el.dataset.scrollKey);
+                if (saved !== undefined) el.scrollTop = saved;
+            }
+        }
+    }
+
+    /** @override */
     activateListeners($html) {
         super.activateListeners($html);
+        this._activateContentListeners($html);
+    }
 
+    _activateContentListeners($html) {
         for (const toggle of $html.find(".tab-strip-tab, .top-panel-toggle")) {
             toggle.addEventListener("click", (event) => {
                 const target = event.currentTarget.dataset.target;
@@ -187,14 +283,6 @@ export class TokenPanel extends Application {
                 const isMinimized = game.user.settings.tokenPanelMinimized ?? false;
                 game.user.setFlag("ptu", "settings.tokenPanelMinimized", !isMinimized);
             });
-        }
-
-        if (game.user.isGM) {
-            const resetSceneBtn = $html.find(".frequency-reset-scene")[0];
-            if (resetSceneBtn) resetSceneBtn.addEventListener("click", this._onResetSceneUses.bind(this));
-
-            const resetDailyBtn = $html.find(".frequency-reset-daily")[0];
-            if (resetDailyBtn) resetDailyBtn.addEventListener("click", this._onResetDailyUses.bind(this));
         }
 
         for (const action of $html.find(".action.attack, .action.struggle")) {
@@ -214,6 +302,37 @@ export class TokenPanel extends Application {
                 const id = event.currentTarget.dataset.id;
                 const move = this.actor.attacks.get(id);
                 return move?.sendToChat?.();
+            });
+            // TODO: hover to highlight valid targets on the canvas
+            // This isn't quite working how I wanted, but it's a start
+            // leaving this commented here for future use
+            // action.addEventListener("mouseover", (event) => {
+            //     if (!canvas.ready) return;
+            //     const isAlly = event.currentTarget.dataset.ally === "true";
+            //     const tokens = canvas.tokens.placeables.filter(t => {
+            //         if (!t.isVisible || !t.actor) return false;
+            //         return isAlly ? this.actor.isFriendOf(t.actor) : this.actor.isEnemyOf(t.actor);
+            //     });
+            //     tokens.forEach(t => t._onHoverIn(event));
+            //     this.moveHighlights = tokens;
+            // });
+            // action.addEventListener("mouseout", (event) => {
+            //     if (this.moveHighlights?.length > 0) {
+            //         this.moveHighlights.forEach(t => t._onHoverOut(event));
+            //         this.moveHighlights = [];
+            //     }
+            // });
+        }
+
+        const dexBtn = $html.find(".tab-strip-dex")[0];
+        if (dexBtn) {
+            dexBtn.addEventListener("click", () => game.ptu.macros.pokedex());
+        }
+
+        const undockBtn = $html.find(".tab-strip-undock")[0];
+        if (undockBtn) {
+            undockBtn.addEventListener("click", () => {
+                game.user.setFlag("ptu", "settings.tokenPanelUndocked", true);
             });
         }
 
@@ -431,39 +550,20 @@ export class TokenPanel extends Application {
         return party;
     }
 
-    async _onResetSceneUses(event) {
-        event.preventDefault();
-        const updates = [];
-        for (const actor of game.actors.values()) {
-            for (const item of actor.items.values()) {
-                if (item.system.frequency?.type !== "scene") continue;
-                const max = item.system.frequency?.max ?? 0;
-                if (!max) continue;
-                updates.push(item.setFlag("ptu", "used", 0));
-            }
-        }
-        await Promise.all(updates);
-        this.refresh();
-    }
-
-    async _onResetDailyUses(event) {
-        event.preventDefault();
-        const updates = [];
-        for (const actor of game.actors.values()) {
-            for (const item of actor.items.values()) {
-                if (!["daily", "scene"].includes(item.system.frequency?.type)) continue;
-                const max = item.system.frequency?.max ?? 0;
-                if (!max) continue;
-                updates.push(item.setFlag("ptu", "used", 0));
-            }
-        }
-        await Promise.all(updates);
-        this.refresh();
-    }
-
     /** @override */
     async render() {
-        // check if this.actor exists
+        const undocked = game.user.getFlag("ptu", "settings.tokenPanelUndocked") ?? false;
+        if (undocked && this.shouldShow) {
+            // Remove the docked element from the DOM if it is currently rendered
+            if (this.rendered) await super.close({ force: true });
+            document.querySelector("body").classList.remove("token-panel-open");
+            document.querySelector("body").classList.remove("token-panel-minimized");
+            // Create window lazily once; keep the instance alive so its position survives close/re-open cycles
+            if (!this._window) this._window = new TokenPanelWindow();
+            return this._window.render(true);
+        }
+        // Docked mode: close floating window if rendered, but keep the instance for position memory
+        if (this._window?.rendered) this._window.close({ force: true });
         if (!this.shouldShow) {
             document.querySelector("body").classList.remove("token-panel-open");
             document.querySelector("body").classList.remove("token-panel-minimized");
@@ -476,5 +576,45 @@ export class TokenPanel extends Application {
             }
         }
         return super.render(...arguments);
+    }
+}
+
+class TokenPanelWindow extends Application {
+    static get defaultOptions() {
+        return foundry.utils.mergeObject(super.defaultOptions, {
+            id: "ptu-token-panel-window",
+            title: "Token Panel",
+            template: "systems/ptu/static/templates/apps/token-panel-window.hbs",
+            popOut: true,
+            resizable: true,
+            width: 560,
+            height: 520,
+            classes: ["ptu", "token-panel-window"],
+        });
+    }
+
+    async getData(options = {}) {
+        return game.ptu.tokenPanel.getData(options);
+    }
+
+    activateListeners($html) {
+        super.activateListeners($html);
+        game.ptu.tokenPanel._activateContentListeners($html);
+        const dockBtn = $html.find(".tab-strip-dock")[0];
+        if (dockBtn) {
+            dockBtn.addEventListener("click", async () => {
+                await game.user.setFlag("ptu", "settings.tokenPanelUndocked", false);
+                game.ptu.tokenPanel.render(true);
+            });
+        }
+    }
+
+    async close(options = {}) {
+        await super.close(options);
+        // When user closes the window manually (not a forced close from docking), revert to docked
+        if (!options.force) {
+            await game.user.setFlag("ptu", "settings.tokenPanelUndocked", false);
+            game.ptu.tokenPanel.render(true);
+        }
     }
 }

@@ -7,7 +7,18 @@
     "origin": "",
     "effect": "Bolt Beak deals +10 damage against targets with a lower initiative that have not yet acted this round.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "manual"
+        ],
+        "label": "Bolt Beak: Target hasn't acted?",
+        "hideIfDisabled": false,
+        "selectors": "damage-roll",
+        "value": 10
+      }
+    ],
     "enabled": true,
     "slug": "bolt-beak",
     "schema": {
@@ -62,8 +73,8 @@
     },
     "type": "Electric",
     "category": "Physical",
-    "damageBase": 9,
-    "ac": 2,
+    "damageBase": "9",
+    "ac": "2",
     "range": "Melee",
     "contestType": "Cool - Catching Up",
     "stab": false,
@@ -77,13 +88,17 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.18",
     "coreVersion": "13.351",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200823571,
+    "modifiedTime": 1778268126894,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

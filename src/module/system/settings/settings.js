@@ -9,6 +9,7 @@ import { HomebrewSettings } from "./homebrew.js";
 import { MetagameSettings } from "./metagame.js";
 import { TypeSettings } from "./types.js";
 import { VariantSettings } from "./variant.js";
+import { DevelopmentSettings } from "./development.js";
 
 export function registerSettings() {
     // // game.settings.register("ptu", "errata", {
@@ -82,6 +83,27 @@ export function registerSettings() {
     })
     TypeSettings.registerSettings();
 
+    game.settings.register("ptu", "devMode", {
+        name: "Development Mode",
+        hint: "Enables certain behavior that is undesirable for normal play, but useful for development.",
+        scope: "world",
+        config: true,
+        type: Boolean,
+        requiresReload: true
+    });
+
+    if (game.settings.get("ptu", "devMode")) {
+        game.settings.registerMenu("ptu", "development", {
+            name: "PTU.Settings.Development.Name",
+            label: "PTU.Settings.Development.Label",
+            hint: "PTU.Settings.Development.Hint",
+            icon: "fas fa-cogs",
+            type: DevelopmentSettings,
+            restricted: true
+        });
+    };
+    DevelopmentSettings.registerSettings();
+
     game.settings.register("ptu", "leagueBattle", {
         name: "League Battle Initiative",
         hint: "Sort player characters in inverted order before pokémon in combat.",
@@ -126,6 +148,23 @@ export function registerSettings() {
         default: true
     });
 
+    game.settings.register("ptu", "advancementPendingIndicator", {
+        name: "PTU.Settings.User.AdvancementPendingIndicator.Name",
+        hint: "PTU.Settings.User.AdvancementPendingIndicator.Hint",
+        type: Boolean,
+        default: true,
+        scope: "user",
+        config: true,
+        requiresReload: true,
+    })
+
+    game.settings.register("ptu", "training.lastSession", {
+        scope: "client",
+        config: false,
+        type: Object,
+        default: { trainerId: null, pokeUuids: [], trainingOption: "none" }
+    })
+
     game.settings.register("ptu", "transferOwnershipDefaultValue", {
         name: "Transfer Ownership Preference",
         hint: "After ownership of a mon is transfered, would you like for it to also set default permissions for other players?",
@@ -153,15 +192,6 @@ export function registerSettings() {
             "available": "Available"
         },
         default: "available"
-    });
-    
-    game.settings.register("ptu", "devMode", {
-        name: "Development Mode",
-        hint: "Enables certain behavior that is undesirable for normal play, but useful for development.",
-        scope: "world",
-        config: true,
-        type: Boolean,
-        requiresReload: true
     });
 
     game.settings.register("ptu", "compendiumBrowserPacks", {

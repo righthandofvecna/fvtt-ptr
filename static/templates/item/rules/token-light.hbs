@@ -1,0 +1,64 @@
+<div class="form-group">
+    <label class="short">Dim Radius</label>
+    <div class="attached-input">
+        <input type="number" name="system.rules.{{index}}.value.dim" value="{{lightValue.dim}}" placeholder="Units"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">Bright Radius</label>
+    <div class="attached-input">
+        <input type="number" name="system.rules.{{index}}.value.bright" value="{{lightValue.bright}}" placeholder="Units"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">Angle</label>
+    <div class="attached-input">
+        <input type="number" min="0" max="360" name="system.rules.{{index}}.value.angle" value="{{lightValue.angle}}" placeholder="360 (full circle)"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">Color</label>
+    <div class="attached-input">
+        <input type="text" name="system.rules.{{index}}.value.color" value="{{lightValue.color}}" placeholder="#rrggbb"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">Color Intensity</label>
+    <div class="attached-input">
+        <input type="number" min="0" max="1" step="0.05" name="system.rules.{{index}}.value.alpha" value="{{lightValue.alpha}}" placeholder="0–1"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">Animation Type</label>
+    <div class="attached-input">
+        <input type="text" name="system.rules.{{index}}.value.animation.type" value="{{lightValue.animation.type}}" placeholder="e.g. torch, pulse, chroma"/>
+    </div>
+</div>
+
+{{#if lightValue.animation.type}}
+<div class="form-group">
+    <label class="short">Anim. Speed</label>
+    <div class="attached-input">
+        <input type="number" min="1" max="10" name="system.rules.{{index}}.value.animation.speed" value="{{lightValue.animation.speed}}" placeholder="1–10"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">Anim. Intensity</label>
+    <div class="attached-input">
+        <input type="number" min="1" max="10" name="system.rules.{{index}}.value.animation.intensity" value="{{lightValue.animation.intensity}}" placeholder="1–10"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="fill">
+        Reverse Animation
+        <input type="checkbox" name="system.rules.{{index}}.value.animation.reverse" {{checked lightValue.animation.reverse}}>
+    </label>
+</div>
+{{/if}}

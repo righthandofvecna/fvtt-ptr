@@ -6,7 +6,16 @@
     "origin": "",
     "effect": "Connection - Present. After rolling to determine Present’s Damage Base, you may choose to ignore the roll and act as if you had rolled a 1 or a 5. The user may know any number of TM and Tutor Moves, instead of a maximum of three.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": {
+          "not": "move:present"
+        },
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.94z8W0FoKrzOGZFS"
+      }
+    ],
     "enabled": true,
     "slug": "giver",
     "schema": {
@@ -66,10 +75,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.18",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816595,
+    "modifiedTime": 1778302946606,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

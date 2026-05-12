@@ -391,5 +391,6 @@ async function extractPacks(packName, entryName) {
  * @returns {string}
  */
 function slugify(name) {
-  return name.toLowerCase().replace("'", "").replace(/[^a-z0-9]+/gi, " ").trim().replace(/\s+|-{2,}/g, "-");
+  let startsNegativeNumber = name.trim().match(/^-\d/) !== null;
+  return (startsNegativeNumber ? "-" : "") + name.toLowerCase().replace("'", "").replace(/[^a-z0-9]+/gi, " ").trim().replace(/\s+|-{2,}/g, "-");
 }

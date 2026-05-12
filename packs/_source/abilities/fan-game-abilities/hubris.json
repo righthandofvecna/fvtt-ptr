@@ -20,7 +20,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.U8yR1TZVrg5OQUiR",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -64,13 +64,14 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.20",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816261,
+    "modifiedTime": 1778387879988,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
-    "exportSource": null
+    "exportSource": null,
+    "compendiumSource": null
   },
   "_id": "HSDsgPn31Eiovovp",
   "sort": 400000

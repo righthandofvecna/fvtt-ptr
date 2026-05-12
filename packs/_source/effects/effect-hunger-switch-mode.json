@@ -1,0 +1,86 @@
+{
+  "folder": "qXvDHbaNpMlPES8M",
+  "name": "Effect: Hunger Switch (Mode)",
+  "type": "effect",
+  "_id": "3RSULKrJc56j6y2o",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "@embed[Compendium.ptu.abilities.Item.puTGxpPSu6cws6KB]",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "hungerswitch",
+        "adjustName": false,
+        "choices": [
+          {
+            "label": "Full Belly",
+            "value": "Compendium.ptu.effects.Item.3BcJmWtUMFe6ZF2P"
+          },
+          {
+            "label": "Hangry",
+            "value": "Compendium.ptu.effects.Item.C3ZeYERzKEqyWIeT"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "replaceSelf": true,
+        "uuid": "{item|flags.ptu.rulesSelections.hungerswitch}"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-hunger-switch-mode",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.20",
+    "createdTime": 1778421966128,
+    "modifiedTime": 1778422267299,
+    "lastModifiedBy": "ptubuilder000000"
+  }
+}

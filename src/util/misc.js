@@ -25,8 +25,10 @@ export function sluggify(text, { camel } = { camel: null }) {
     // A hyphen by its lonesome would be wiped: return it as-is
     if (text === "-") return text;
 
+    const startsNegativeNumber = text.trim().match(/^-\d/) !== null;
+
     if (camel === null)
-        return text
+        return (startsNegativeNumber ? "-" : "") + text
             .replace(lowerCaseThenUpperCaseRE, "$1-$2")
             .toLowerCase()
             .replace(/['’]/g, "")
@@ -40,7 +42,7 @@ export function sluggify(text, { camel } = { camel: null }) {
     }
 
     if (camel === "dromedary")
-        return text
+        return (startsNegativeNumber ? "-" : "") + text
             .replace(nonWordCharacterHyphenOrSpaceRE, "")
             .replace(/[-_]+/g, " ")
             .replace(upperOrWordBoundariedLowerRE, (part, index) =>

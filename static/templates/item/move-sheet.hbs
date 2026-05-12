@@ -62,7 +62,7 @@
                                     <input
                                         class="ml-1 mr-1"
                                         type="text"
-                                        value="{{shortFrequency item}}"
+                                        value="{{combinedFrequency item}}"
                                         disabled
                                     />
                                     {{#if eotCooldown}}
@@ -91,6 +91,17 @@
                                     {{#if (bigger item.system.damageBase 0)}}
                                         <span>
                                             {{getDb (calcDb item.system)}}
+                                        </span>
+                                        +
+                                        <input
+                                            class="ml-1 mr-1"
+                                            type="number"
+                                            value="{{item.system.damageBonus}}"
+                                            disabled
+                                        />
+                                    {{else if item.damageBase.isFormula}}
+                                        <span>
+                                            {{#if item.dbPreviewNumber}}{{getDb item.dbPreviewNumber}}{{else}}?{{/if}}*
                                         </span>
                                         +
                                         <input
