@@ -70,7 +70,10 @@
       "grantedBy": {
         "id": "clN70mmp5f0qNjZT",
         "onDelete": "detach"
-      }
+      },
+      "automationStatus": "needs-automation",
+      "devNote": "Linked effect is missing",
+      "used": null
     },
     "LocknKey": {
       "IDKeysFlag": "",
@@ -84,10 +87,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1778200830795,
+    "modifiedTime": 1778569275359,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -65,7 +65,9 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "8MddVltNQSurblOp",
@@ -76,9 +78,9 @@
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.21",
     "createdTime": 1710766944910,
-    "modifiedTime": 1778200828835,
+    "modifiedTime": 1778569218118,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

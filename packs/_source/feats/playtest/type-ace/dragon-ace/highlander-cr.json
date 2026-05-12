@@ -70,7 +70,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Tyrant's Roar, Type-Linked Skill at Adept",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "folder": "6meG7SeyLvR39TI3",
@@ -82,9 +84,9 @@
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.21",
     "createdTime": 1710766944910,
-    "modifiedTime": 1778200829165,
+    "modifiedTime": 1778569243028,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

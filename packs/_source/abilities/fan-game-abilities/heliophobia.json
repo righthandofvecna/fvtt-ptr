@@ -68,19 +68,20 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "requires-system-changes",
+      "devNote": "joehisaishi - added Ability Automation\ndylan - ending turn in sunny weather or new moon is not automated"
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.20",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778387398958,
+    "modifiedTime": 1778568746358,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
-    "exportSource": null,
-    "compendiumSource": null
+    "exportSource": null
   },
   "_id": "Z0sHuCVJPHO1KTra",
   "sort": 200000

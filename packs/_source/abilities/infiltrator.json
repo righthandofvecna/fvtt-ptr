@@ -71,15 +71,17 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "requires-system-changes",
+      "devNote": "+2 stealth is completed, the others aren't currently automated"
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.20",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778422542728,
+    "modifiedTime": 1778568939324,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

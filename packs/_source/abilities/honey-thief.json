@@ -70,18 +70,19 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "requires-system-changes",
+      "devNote": "Connection is automated, extra tick of temps is not"
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.20",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778387792860,
+    "modifiedTime": 1778568829509,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
-    "exportSource": null,
-    "compendiumSource": null
+    "exportSource": null
   }
 }

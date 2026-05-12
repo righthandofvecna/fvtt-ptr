@@ -63,8 +63,8 @@
     },
     "type": "Dragon",
     "category": "Special",
-    "damageBase": 9,
-    "ac": 2,
+    "damageBase": "9",
+    "ac": "2",
     "range": "Range 8",
     "contestType": "Smart - Incentives",
     "stab": false,
@@ -78,13 +78,19 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200825844,
+    "modifiedTime": 1778567956246,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

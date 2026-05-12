@@ -3,7 +3,8 @@
   "type": "move",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed"
     }
   },
   "effects": [],

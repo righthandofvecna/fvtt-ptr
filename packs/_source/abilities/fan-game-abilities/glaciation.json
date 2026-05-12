@@ -3,7 +3,9 @@
   "type": "ability",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "requires-system-changes",
+      "devNote": "joehisaishi - snowy terrain aspect cannot be automated"
     }
   },
   "effects": [],
@@ -99,10 +101,10 @@
   "sort": 1100000,
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.18",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1689606908412,
-    "modifiedTime": 1778303145907,
+    "modifiedTime": 1778568559584,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

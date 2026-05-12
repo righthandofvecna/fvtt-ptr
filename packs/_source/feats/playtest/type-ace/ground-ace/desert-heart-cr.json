@@ -70,7 +70,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Mold the Earth, Type-Linked Skill at Adept",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "folder": "mgQuQp95v3EdrKC1",
@@ -82,9 +84,9 @@
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.21",
     "createdTime": 1710767103373,
-    "modifiedTime": 1778200830478,
+    "modifiedTime": 1778569258370,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

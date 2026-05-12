@@ -70,15 +70,18 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "Is this right? It looks like it's giving spite?",
+      "used": null
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.18",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778300479414,
+    "modifiedTime": 1778568440158,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

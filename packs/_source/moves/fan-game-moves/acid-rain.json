@@ -2,7 +2,14 @@
   "_id": "DCkAucGSEBcq5a7v",
   "name": "Acid Rain",
   "type": "move",
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "requires-system-changes",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "effects": [],
   "system": {
     "origin": "",
@@ -82,10 +89,10 @@
   "sort": 1400000,
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1689606523899,
-    "modifiedTime": 1778200823571,
+    "modifiedTime": 1778567753767,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

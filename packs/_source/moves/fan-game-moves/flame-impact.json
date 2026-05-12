@@ -1,7 +1,11 @@
 {
   "name": "Flame Impact",
   "type": "move",
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed"
+    }
+  },
   "effects": [],
   "_id": "fDDIS07qJXgFPE5b",
   "system": {

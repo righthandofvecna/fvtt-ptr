@@ -68,7 +68,10 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Potent Venom, Type-Linked Skill at Expert",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "requires-system-changes",
+      "devNote": "dylan - add a reminder element to this guy when I add those",
+      "used": null
     }
   },
   "folder": "E8wJQDEhEHa6JamL",
@@ -80,9 +83,9 @@
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.21",
     "createdTime": 1710767150956,
-    "modifiedTime": 1778200830795,
+    "modifiedTime": 1778569191787,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

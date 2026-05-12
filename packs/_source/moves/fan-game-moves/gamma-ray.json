@@ -1,7 +1,11 @@
 {
   "name": "Gamma Ray",
   "type": "move",
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed"
+    }
+  },
   "effects": [],
   "_id": "o1lyzqVWmCiSsRXY",
   "system": {

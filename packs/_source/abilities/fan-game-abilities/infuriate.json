@@ -63,13 +63,20 @@
   "sort": 2200000,
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.20",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1689606908412,
-    "modifiedTime": 1778422872321,
+    "modifiedTime": 1778568994269,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
   },
-  "flags": {}
+  "flags": {
+    "ptu": {
+      "automationStatus": "requires-system-changes",
+      "devNote": "dylan - Let's add a reminder rule element once I actually get that in the system",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  }
 }

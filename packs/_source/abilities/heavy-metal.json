@@ -84,7 +84,9 @@
   "folder": "06ruPVyiZCvpjUpG",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     },
     "LocknKey": {
       "IDKeysFlag": "",
@@ -99,9 +101,9 @@
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.21",
     "createdTime": 1751011898309,
-    "modifiedTime": 1778200816693,
+    "modifiedTime": 1778568680440,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

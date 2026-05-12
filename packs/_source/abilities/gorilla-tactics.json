@@ -61,15 +61,18 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.18",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778330905544,
+    "modifiedTime": 1778568582568,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

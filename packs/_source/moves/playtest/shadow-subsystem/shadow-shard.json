@@ -73,7 +73,8 @@
   "folder": "O2vsL1IY0u9DOERr",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed"
     }
   },
   "_stats": {

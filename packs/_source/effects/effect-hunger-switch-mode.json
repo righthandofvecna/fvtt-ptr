@@ -15,14 +15,15 @@
         "adjustName": false,
         "choices": [
           {
-            "label": "Full Belly",
-            "value": "Compendium.ptu.effects.Item.3BcJmWtUMFe6ZF2P"
+            "value": "Compendium.ptu.effects.Item.3BcJmWtUMFe6ZF2P",
+            "label": "Full Belly"
           },
           {
-            "label": "Hangry",
-            "value": "Compendium.ptu.effects.Item.C3ZeYERzKEqyWIeT"
+            "value": "Compendium.ptu.effects.Item.C3ZeYERzKEqyWIeT",
+            "label": "Hangry"
           }
-        ]
+        ],
+        "allowedDrops": null
       },
       {
         "key": "GrantItem",
@@ -70,7 +71,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -78,9 +81,9 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.20",
+    "systemVersion": "4.4.3.21",
     "createdTime": 1778421966128,
-    "modifiedTime": 1778422267299,
+    "modifiedTime": 1778568879837,
     "lastModifiedBy": "ptubuilder000000"
   }
 }

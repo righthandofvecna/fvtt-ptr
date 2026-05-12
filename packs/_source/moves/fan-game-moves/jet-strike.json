@@ -1,7 +1,11 @@
 {
   "name": "Jet Strike",
   "type": "move",
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed"
+    }
+  },
   "effects": [],
   "_id": "BGWnbEiXRNuFYyfE",
   "system": {

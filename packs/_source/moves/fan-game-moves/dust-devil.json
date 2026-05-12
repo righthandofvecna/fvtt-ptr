@@ -3,7 +3,10 @@
   "type": "move",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     },
     "LocknKey": {
       "IDKeysFlag": "",
@@ -98,10 +101,10 @@
   "folder": "CKiVqPT3ASdUeaM0",
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1689606523899,
-    "modifiedTime": 1778200823854,
+    "modifiedTime": 1778567966867,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

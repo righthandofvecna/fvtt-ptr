@@ -71,18 +71,19 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "used": null
+      "used": null,
+      "automationStatus": "requires-system-changes",
+      "devNote": "joehisaishi - added Effect, this one's weird because it wants Electric Terrain in the user's Move Lists, but it's also a Connection Move. not going to make a new Electric Terrain just for this."
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.20",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778387757696,
+    "modifiedTime": 1778568646480,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
-    "exportSource": null,
-    "compendiumSource": null
+    "exportSource": null
   }
 }

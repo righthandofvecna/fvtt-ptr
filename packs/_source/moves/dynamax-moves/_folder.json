@@ -6,7 +6,11 @@
   "_id": "8tcCd3dOnqridsEG",
   "sort": 100000,
   "color": "#b74e4e",
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed"
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.0.12",

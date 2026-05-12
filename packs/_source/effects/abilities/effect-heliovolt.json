@@ -81,7 +81,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -89,9 +91,9 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.20",
+    "systemVersion": "4.4.3.21",
     "createdTime": 1778387439496,
-    "modifiedTime": 1778387526444,
+    "modifiedTime": 1778568794852,
     "lastModifiedBy": "ptubuilder000000"
   }
 }

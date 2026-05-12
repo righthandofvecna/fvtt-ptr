@@ -1,7 +1,11 @@
 {
   "name": "Psybolt",
   "type": "move",
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed"
+    }
+  },
   "effects": [],
   "_id": "1zqnnv3jjmSyC8hn",
   "system": {
