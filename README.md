@@ -38,6 +38,9 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Item Piles Compatibility Fix](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/443)
+- Dev Option to allow Unlinked Tokens - NOT currently ready to test in a live world. Turn on at your own risk
+- Add a system for showing content devs if a move has been automated in system (and searching by that in the compendium browser)
 - Added new roll options (`self:spdef:stage:2`) for more automation (and automated Defensive Charm with them)
 - Removed the range field for action points (so scrolling on the character sheet doesn't edit your action point total accidentally)
 - [Fixed a bug that was turning features in the token panel back on automatically](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/899)
