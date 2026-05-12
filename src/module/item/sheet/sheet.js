@@ -84,6 +84,15 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
         data.eotCooldown = Boolean(this.item.flags.ptu?.eot);
         data.freqConst = CONFIG.PTU.data.frequencies[this.item.system.frequency?.type] ?? {};
 
+        data.automationStatus = this.item.getFlag("ptu", "automationStatus") ?? "needs-automation";
+        data.devNote = this.item.getFlag("ptu", "devNote") ?? "";
+        data.automationStatusOptions = {
+            "needs-automation": "PTU.DevAutomation.Status.NeedsAutomation",
+            "completed": "PTU.DevAutomation.Status.Completed",
+            "requires-system-changes": "PTU.DevAutomation.Status.RequiresSystemChanges",
+            "no-automation-needed": "PTU.DevAutomation.Status.NoAutomationNeeded"
+        };
+
         return data;
     }
 

@@ -531,6 +531,18 @@ class CompendiumBrowser extends Application {
             });
         }
 
+        // Generic handler for any select whose name matches a key in filterData.selects
+        if (currentTab.filterData.selects) {
+            for (const [selectName, selectData] of Object.entries(currentTab.filterData.selects)) {
+                const el = controlArea.querySelector(`select[name=${selectName}]`);
+                if (el) el.addEventListener("change", () => {
+                    if (!currentTab.filterData.selects?.[selectName]) return;
+                    currentTab.filterData.selects[selectName].selected = el.value;
+                    this.#clearScrollLimit(true);
+                });
+            }
+        }
+
         // Clear all filters button
         controlArea.querySelector("button.clear-filters")?.addEventListener("click", () => {
             this.#resetFilters();

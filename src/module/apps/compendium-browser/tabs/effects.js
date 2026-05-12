@@ -6,9 +6,9 @@ export class CompendiumBrowserEffectsTab extends CompendiumBrowserTab {
         super(browser);
 
         this.searchFields = ["name"]
-        this.storeFields = ["name", "uuid", "type", "source", "img", "cost", "subtype", "keywords"];
+        this.storeFields = ["name", "uuid", "type", "source", "img", "cost", "subtype", "keywords", "automationStatus"];
 
-        this.index = ["img", "system.source.value", "system.keywords"];
+        this.index = ["img", "system.source.value", "system.keywords", "flags.ptu.automationStatus"];
 
         this.filterData = this.prepareFilterData();
     }
@@ -50,7 +50,8 @@ export class CompendiumBrowserEffectsTab extends CompendiumBrowserTab {
                     img: itemData.img,
                     uuid: `Compendium.${pack.collection}.${itemData._id}`,
                     source: sourceSlug,
-                    keywords: itemData.system.keywords
+                    keywords: itemData.system.keywords,
+                    automationStatus: itemData.flags?.ptu?.automationStatus ?? "needs-automation"
                 })
             }
         }
@@ -70,6 +71,10 @@ export class CompendiumBrowserEffectsTab extends CompendiumBrowserTab {
         }
 
         if (!this.isEntryHonoringMultiselect(multiselects.keywords, entry.keywords)) return false;
+
+        if (this.filterData.selects?.automationStatus?.selected) {
+            if (entry.automationStatus !== this.filterData.selects.automationStatus.selected) return false;
+        }
 
         return true;
     }
@@ -107,6 +112,20 @@ export class CompendiumBrowserEffectsTab extends CompendiumBrowserTab {
                     selected: []
                 }
             },
+            ...(game.settings.get("ptu", "devMode") ? {
+                selects: {
+                    automationStatus: {
+                        label: "PTU.CompendiumBrowser.FilterOptions.AutomationStatus",
+                        options: {
+                            "needs-automation": "Needs Automation",
+                            "completed": "Completed",
+                            "requires-system-changes": "Requires System Changes",
+                            "no-automation-needed": "No Automation Needed"
+                        },
+                        selected: ""
+                    }
+                }
+            } : {}),
             multiselects: {
                 keywords: {
                     conjunction: "and",

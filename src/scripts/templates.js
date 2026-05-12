@@ -10,6 +10,7 @@ export function registerTemplates() {
         "systems/ptu/static/templates/partials/rules/rule-partial.hbs",
         "systems/ptu/static/templates/partials/species-item-partial.hbs",
         "systems/ptu/static/templates/partials/item-frequency-partial.hbs",
+        "systems/ptu/static/templates/partials/dev-automation.hbs",
 
         // Token Panel partials
         "systems/ptu/static/templates/partials/token-panel/tab-strip-tabs-partial.hbs",

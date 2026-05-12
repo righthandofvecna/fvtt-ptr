@@ -237,6 +237,7 @@ export class CompendiumBrowserTab {
     hasAllIndexFields(data, indexFields) {
         for(const field of indexFields) {
             if(["system.source", "system.source.value"].includes(field)) continue;
+            if(field.startsWith("flags.")) continue;
             if(foundry.utils.getProperty(data, field) === undefined) return false;
         }
         return true;

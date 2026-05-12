@@ -1210,7 +1210,8 @@
         "Capabilities": "Obtainable Capabilities",
         "Keywords":"Keywords",
         "Habitats": "Habitats",
-        "EggGroups": "Egg Groups"
+        "EggGroups": "Egg Groups",
+        "AutomationStatus": "Automation Status"
       },
       "Search": {
         "Placeholder": "Your query...",
@@ -1228,6 +1229,19 @@
       "Neutral": "Neutral",
       "Opposition": "Opposition",
       "Party": "Party"
+    },
+    "DevAutomation": {
+      "Status": {
+        "Label": "Automation Status",
+        "NeedsAutomation": "Needs Automation",
+        "Completed": "Completed",
+        "RequiresSystemChanges": "Requires System Changes",
+        "NoAutomationNeeded": "No Automation Needed"
+      },
+      "Note": {
+        "Label": "Dev Note",
+        "Placeholder": "Development notes (only visible in dev mode)..."
+      }
     },
     "RulebookJournalSheetName": "Rulebook Sheet",
     "Frequency": {
