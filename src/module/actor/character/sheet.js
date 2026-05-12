@@ -313,7 +313,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		});
 		html.find('.rollable.save').click(this._onSaveRoll.bind(this));
 
-		html.find('.item .item-icon.rollable').click((event) => {
+		html.find('.item .item-icon.rollable:not(.move)').click((event) => {
 			event.preventDefault();
 			const itemId = $(event.currentTarget).closest("li.item").data("item-id");
 			const item = this.actor.items.get(itemId);
