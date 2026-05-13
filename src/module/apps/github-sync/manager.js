@@ -95,6 +95,22 @@ class GithubSyncManager {
 
         // return false;
     }
+
+    /**
+     * Returns true if this JournalEntry is eligible to be committed:
+     *  - "journal" is configured in `documentTypes`, AND
+     *  - The journal lives inside that configured compendium pack.
+     *
+     * @param {JournalEntry} journal
+     * @returns {boolean}
+     */
+    static isCommittableJournal(journal) {
+        const { documentTypes } = GithubSyncManager.config;
+        const journalPackId = documentTypes.journal;
+        if (!journalPackId) return false;
+        if (!journal.pack) return false;
+        return journal.pack === journalPackId;
+    }
     // ─────────────────────────────────────────────────────────────────────────
 
     /**
@@ -127,6 +143,31 @@ class GithubSyncManager {
         const match = index.find(
             (i) => itemSlug === (getItemSlug(i) ?? slugify(i.name))
         );
+        if (match) return pack.getDocument(match._id);
+
+        return null;
+    }
+
+    /**
+     * Find the compendium journal that corresponds to a live world journal.
+     * If already in the pack, returns it directly. Falls back to name matching.
+     *
+     * @param {JournalEntry} journal
+     * @param {CompendiumCollection} pack
+     * @returns {Promise<JournalEntry|null>}
+     */
+    static async getExistingJournal(journal, pack) {
+        if (journal.pack) return journal;
+
+        const sourceId = journal.flags?.core?.sourceId ?? journal._stats?.compendiumSource;
+        if (sourceId) {
+            const id = sourceId.split(".").at(-1);
+            const found = await pack.getDocument(id);
+            if (found) return found;
+        }
+
+        const index = await pack.getIndex();
+        const match = index.find((i) => i.name === journal.name);
         if (match) return pack.getDocument(match._id);
 
         return null;
@@ -201,6 +242,48 @@ class GithubSyncManager {
         return data;
     }
 
+    /**
+     * Compute a diff between a live journal and its compendium source in a way
+     * that is insensitive to page array ordering and ignores `_stats` on both
+     * the journal and each of its pages.
+     *
+     * @param {object} journalData      Raw journal source (.toObject())
+     * @param {object} packJournalData  Raw pack source
+     * @returns {object} Cleaned diff
+     */
+    static getDiffableJournal(journalData, packJournalData) {
+        /**
+         * Produce a normalised copy of a journal for stable diffing:
+         *  - Strips journal-level metadata noise.
+         *  - Strips _stats and ownership from every page (volatile, auto-updated).
+         *  - Sorts pages by _id so order differences are never reported as changes.
+         */
+        const normalize = (data) => {
+            const d = fu.deepClone(data);
+            delete d._id;
+            delete d._key;
+            delete d._stats;
+            delete d.sort;
+            delete d.folder;
+            delete d.ownership;
+            if (d.flags?.core) {
+                delete d.flags.core;
+                if (fu.isEmpty(d.flags)) delete d.flags;
+            }
+            if (Array.isArray(d.pages)) {
+                for (const page of d.pages) {
+                    delete page._stats;
+                    delete page.ownership;
+                }
+                d.pages = d.pages.slice().sort((a, b) => (a._id < b._id ? -1 : 1));
+            }
+            return d;
+        };
+
+        const diff = fu.diffObject(normalize(packJournalData), normalize(journalData));
+        return GithubSyncManager.config.diffCleanup(diff, packJournalData);
+    }
+
     // ─────────────────────────────────────────────────────────────────────────
     //  Commit flow
     // ─────────────────────────────────────────────────────────────────────────
@@ -249,19 +332,16 @@ class GithubSyncManager {
             document.uuid
         );
 
-        // Verify the primary item isn't blocked
-        // (We can't check blockedItems for deps without their pack counterpart;
-        //  #prepareItemBlob resolves that anyway, so we check the primary here.)
-        const primaryPackId = GithubSyncManager.config.documentTypes[document.type];
-        const primaryPack = game.packs.get(primaryPackId);
-        if (!primaryPack) {
-            ui.notifications.error(
-                `Compendium pack "${primaryPackId}" not found. Check your documentTypes config.`
-            );
+        // Verify the primary item isn't blocked, using the server's copy as the baseline.
+        let primaryServerData;
+        try {
+            primaryServerData = await GithubSyncManager.fetchServerDocument(document.type, document.id);
+        } catch (error) {
+            ui.notifications.error("Failed to reach the GitHub sync server.");
+            console.error("GithubSync |", error);
             return;
         }
-        const primaryExisting = await GithubSyncManager.getExistingItem(document, primaryPack);
-        if (primaryExisting && blockedItems(document, primaryExisting)) {
+        if (primaryServerData && blockedItems(document.toObject?.() ?? document, primaryServerData)) {
             ui.notifications.error("This item cannot be committed to GitHub.");
             return;
         }
@@ -351,6 +431,56 @@ class GithubSyncManager {
                     }
                 }
             }
+        } catch (error) {
+            ui.notifications.error("An unexpected error occurred.", { permanent: true });
+            console.error("GithubSync |", error);
+            return;
+        }
+
+        GithubSyncManager.#openSheet();
+    }
+
+    /**
+     * Main entry point for committing a JournalEntry to GitHub.
+     *
+     * Unlike items, journals have no transitive dependencies, so the pipeline
+     * is simpler: prepare → validate → stage → open sheet.
+     *
+     * @param {JournalEntry} journal  The live Foundry JournalEntry to commit
+     */
+    static async commitJournalToGithub(journal) {
+        if (!GithubSyncManager.isCommittableJournal(journal)) {
+            ui.notifications.error(
+                "Cannot commit this journal to GitHub — it must be opened directly from the configured journals compendium pack."
+            );
+            return;
+        }
+
+        let blob;
+        try {
+            blob = await GithubSyncManager.#prepareJournalBlob(journal);
+        } catch (error) {
+            ui.notifications.error("An unexpected error occurred while preparing the journal.");
+            console.error("GithubSync |", error);
+            return;
+        }
+        if (!blob) return;
+
+        if (blob.errors.length) {
+            for (const err of blob.errors) ui.notifications.error(err);
+            return;
+        }
+
+        GithubSyncManager.#lastWarnings = blob.warnings;
+
+        if (blob.data === null) {
+            ui.notifications.info("No changes detected — nothing to commit.");
+            return;
+        }
+
+        try {
+            const result = await GithubSyncManager.saveBlobToGithub(blob.data, blob.diff, { source: "journal" });
+            if (!result) return;
         } catch (error) {
             ui.notifications.error("An unexpected error occurred.", { permanent: true });
             console.error("GithubSync |", error);
@@ -490,43 +620,39 @@ class GithubSyncManager {
      *   already been shown.
      */
     static async #prepareItemBlob(item) {
-        const { documentTypes, transform, validateDocument } = GithubSyncManager.config;
+        const { transform, validateDocument } = GithubSyncManager.config;
 
-        const packId = documentTypes[item.type];
-        const pack = game.packs.get(packId);
-        if (!pack) {
-            ui.notifications.error(
-                `Compendium pack "${packId}" not found. Check your documentTypes config.`
-            );
+        let serverData;
+        try {
+            serverData = await GithubSyncManager.fetchServerDocument(item.type, item.id);
+        } catch (error) {
+            ui.notifications.error("Failed to reach the GitHub sync server.");
+            console.error("GithubSync |", error);
             return null;
         }
 
-        const existing = await GithubSyncManager.getExistingItem(item, pack);
-
         let data, diff;
-        if (!existing) {
-            // New item — no pack counterpart to diff against
+        if (!serverData) {
+            // New item — not on the server yet
             data = GithubSyncManager.#stripMetadata(item.toObject());
             diff = {};
         } else {
-            const isPack = item === existing;
             const itemData = item.toObject();
-            const existingData = existing.toObject();
 
-            diff = isPack ? itemData : GithubSyncManager.getDiffableItem(itemData, existingData);
+            diff = GithubSyncManager.getDiffableItem(itemData, serverData);
 
             if (fu.isEmpty(diff)) {
                 // No changes — skip this item silently
                 return { data: null, diff: null, errors: [], warnings: [] };
             }
 
-            data = GithubSyncManager.prepareUpdateData(diff, existingData);
+            data = GithubSyncManager.prepareUpdateData(diff, serverData);
             if (data === null) {
                 return { data: null, diff: null, errors: ["mergeCleanup returned null."], warnings: [] };
             }
 
             // Track renames so the server can move the file
-            if (diff.name) diff.old_name = existingData.name;
+            if (diff.name) diff.old_name = serverData.name;
         }
 
         // Apply system-specific transform (e.g. strip Forge/Sqyre image URLs)
@@ -558,6 +684,123 @@ class GithubSyncManager {
         if (data.flags?.core?.sourceId) delete data.flags.core.sourceId;
         if (fu.isEmpty(data.flags?.core)) delete data.flags?.core;
         if (fu.isEmpty(data.flags)) delete data.flags;
+        return data;
+    }
+
+    /**
+     * Prepare a single journal blob for staging: resolves the pack counterpart,
+     * diffs using page-aware logic, applies `transform`, then validates.
+     * Does NOT stage anything.
+     *
+     * @param {JournalEntry} journal
+     * @returns {Promise<{ data: object, diff: object, errors: string[], warnings: string[] }|null>}
+     */
+    static async #prepareJournalBlob(journal) {
+        const { transform, validateDocument } = GithubSyncManager.config;
+
+        let serverData;
+        try {
+            serverData = await GithubSyncManager.fetchServerDocument("journal", journal.id);
+        } catch (error) {
+            ui.notifications.error("Failed to reach the GitHub sync server.");
+            console.error("GithubSync |", error);
+            return null;
+        }
+
+        let data, diff;
+        if (!serverData) {
+            // New journal — not on the server yet
+            data = GithubSyncManager.#stripJournalMetadata(journal.toObject());
+            diff = {};
+        } else {
+            const journalData = journal.toObject();
+
+            diff = GithubSyncManager.getDiffableJournal(journalData, serverData);
+
+            if (fu.isEmpty(diff)) {
+                return { data: null, diff: null, errors: [], warnings: [] };
+            }
+
+            data = GithubSyncManager.#buildJournalData(journalData, serverData);
+
+            // Track renames so the server can move the file
+            if (diff.name) diff.old_name = serverData.name;
+        }
+
+        data = transform(data);
+
+        const result = validateDocument(data);
+        return {
+            data,
+            diff: diff ?? {},
+            errors: result.errors ?? [],
+            warnings: result.warnings ?? [],
+        };
+    }
+
+    /**
+     * Build the final journal data to send to the server.
+     *  - Restores journal-level metadata from the pack version.
+     *  - Restores each page's `_stats` and `ownership` from the corresponding
+     *    pack page (matched by `_id`). New pages have those fields stripped.
+     *
+     * @param {object} journalData      Raw live journal (.toObject())
+     * @param {object} packJournalData  Raw pack journal (.toObject())
+     * @returns {object}
+     */
+    static #buildJournalData(journalData, packJournalData) {
+        const data = fu.deepClone(journalData);
+
+        // Restore journal-level metadata from pack (same logic as prepareUpdateData)
+        for (const field of ["_id", "_key", "_stats", "ownership", "folder", "sort"]) {
+            if (Object.hasOwn(packJournalData, field)) data[field] = packJournalData[field];
+            else delete data[field];
+        }
+
+        if (data.flags?.core?.sourceId) delete data.flags.core.sourceId;
+        if (fu.isEmpty(data.flags?.core)) delete data.flags?.core;
+        if (fu.isEmpty(data.flags)) delete data.flags;
+
+        // Restore each page's _stats and ownership from the pack (keyed by _id).
+        // Pages that are new (not in the pack) have those fields stripped.
+        const packPageById = new Map(
+            (packJournalData.pages ?? []).map((p) => [p._id, p])
+        );
+        for (const page of data.pages ?? []) {
+            const packPage = packPageById.get(page._id);
+            if (packPage) {
+                if (Object.hasOwn(packPage, "_stats")) page._stats = packPage._stats;
+                else delete page._stats;
+                if (Object.hasOwn(packPage, "ownership")) page.ownership = packPage.ownership;
+                else delete page.ownership;
+            } else {
+                delete page._stats;
+                delete page.ownership;
+            }
+        }
+
+        return data;
+    }
+
+    /**
+     * Strip Foundry metadata from a new journal that has no pack counterpart.
+     * @param {object} data  Result of journal.toObject()
+     * @returns {object}
+     */
+    static #stripJournalMetadata(data) {
+        delete data._id;
+        delete data._key;
+        delete data._stats;
+        delete data.sort;
+        delete data.folder;
+        delete data.ownership;
+        if (data.flags?.core?.sourceId) delete data.flags.core.sourceId;
+        if (fu.isEmpty(data.flags?.core)) delete data.flags?.core;
+        if (fu.isEmpty(data.flags)) delete data.flags;
+        for (const page of data.pages ?? []) {
+            delete page._stats;
+            delete page.ownership;
+        }
         return data;
     }
 
@@ -671,13 +914,57 @@ class GithubSyncManager {
     // ─────────────────────────────────────────────────────────────────────────
 
     /**
+     * Fetch the server's current version of a document from the GitHub source
+     * repository. This is the baseline used for all diff computations.
+     *
+     * Returns `null` when the document does not yet exist on the server
+     * (i.e. it is a new document). Throws on unexpected server errors so
+     * callers can surface a meaningful notification and abort.
+     *
+     * @param {string} type  Document type key from `documentTypes` (e.g. "move", "journal")
+     * @param {string} id    The document's `_id`
+     * @returns {Promise<object|null>}  Raw document JSON as stored on the server, or null if new
+     * @throws {Error} If the server returns an unexpected non-404 error
+     */
+    static async fetchServerDocument(type, id) {
+        const identity = await GithubSyncManager.getIdentity();
+        if (!identity) {
+            throw new Error("GithubSync: unable to identify user.");
+        }
+
+        const { apiUrl, poweredByHeader } = GithubSyncManager.config;
+        const url = new URL(`${apiUrl}/document`);
+        url.searchParams.set("type", type);
+        url.searchParams.set("id", id);
+
+        const response = await fetch(url.toString(), {
+            method: "GET",
+            headers: {
+                "X-Powered-By": poweredByHeader,
+                identity: btoa(identity),
+            },
+        });
+
+        if (response.status === 404) return null;
+
+        if (!response.ok) {
+            const body = await response.text().catch(() => "(unreadable)");
+            throw new Error(`GithubSync: /document returned HTTP ${response.status}: ${body}`);
+        }
+
+        const json = await response.json();
+        return json.data ?? null;
+    }
+
+    /**
      * Stage a single document blob on the backend server.
      *
      * @param {object} data  Fully resolved document (output of prepareUpdateData)
      * @param {object} [diff] Slim diff (with optional old_name for renames)
+     * @param {object} [extraFlags] Additional flags merged into the request's `flags` object
      * @returns {Promise<object|null>}
      */
-    static async saveBlobToGithub(data, diff = {}) {
+    static async saveBlobToGithub(data, diff = {}, extraFlags = {}) {
         const identity = await GithubSyncManager.getIdentity();
         if (!identity) {
             ui.notifications.error("Unable to identify user for GitHub commit.");
@@ -686,7 +973,7 @@ class GithubSyncManager {
 
         const result = await GithubSyncManager.#authenticatedFetch(
             identity,
-            { data, diff, flags: { new: true } }
+            { data, diff, flags: { new: true, ...extraFlags } }
         );
 
         if (result?.success) {
@@ -825,13 +1112,34 @@ class GithubSyncManager {
 
     /**
      * Wait for a popup window to close (polling every 2.5 s, up to 250 s).
+     * Also resolves immediately if the OAuth callback sends a postMessage.
+     * On timeout the promise resolves rather than rejects, so the auth retry
+     * still runs — which succeeds if the server already stored the token.
      * @param {Window|null} popup
      */
     static #waitForPopup(popup) {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
+            let resolved = false;
+
+            function resolveOnce() {
+                if (resolved) return;
+                resolved = true;
+                window.removeEventListener("message", onMessage);
+                resolve(true);
+            }
+
+            function onMessage(event) {
+                if (event.data === "oauth_complete" || event.data?.type === "oauth_complete") {
+                    resolveOnce();
+                }
+            }
+
+            window.addEventListener("message", onMessage);
+
             function poll(depth = 0) {
-                if (popup?.closed) return resolve(true);
-                if (depth > 100) return reject(new Error("OAuth popup timed out"));
+                if (resolved) return;
+                if (popup?.closed) return resolveOnce();
+                if (depth > 100) return resolveOnce();
                 setTimeout(() => poll(depth + 1), 2500);
             }
             poll();
