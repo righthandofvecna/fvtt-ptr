@@ -39,6 +39,9 @@ export class CompendiumBrowserTab {
     async init() {
         await this.loadData();
 
+        // Apply content set filtering after data is loaded
+        this.indexData = this.browser.packLoader.applyContentSetFilter(this.indexData);
+
         this.searchEngine = new MiniSearch({
             fields: this.searchFields,
             idField: "uuid",

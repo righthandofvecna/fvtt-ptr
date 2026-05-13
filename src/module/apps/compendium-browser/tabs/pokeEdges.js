@@ -8,7 +8,7 @@ export class CompendiumBrowserPokeEdgesTab extends CompendiumBrowserTab {
         this.searchFields = ["name", "prerequisites.label", "prerequisites.tier"]
         this.storeFields = ["name", "uuid", "type", "source", "img", "prerequisites", "keywords", "automationStatus"];
 
-        this.index = ["img", "system.source.value", "system.prerequisites", "system.keywords", "flags.ptu.automationStatus"];
+        this.index = ["img", "system.source.value", "system.prerequisites", "system.keywords", "system.slug", "system.contentSet", "system.replacesSlug", "flags.ptu.automationStatus"];
 
         this.filterData = this.prepareFilterData();
     }
@@ -55,6 +55,9 @@ export class CompendiumBrowserPokeEdgesTab extends CompendiumBrowserTab {
                     source: sourceSlug,
                     prerequisites: this.#prerequisitesStringToEntries(prerequisites),
                     keywords: edgeData.system.keywords,
+                    slug: edgeData.system.slug ?? "",
+                    contentSet: edgeData.system.contentSet ?? "",
+                    replacesSlug: edgeData.system.replacesSlug ?? "",
                     automationStatus: edgeData.flags?.ptu?.automationStatus ?? "needs-automation"
                 })
             }

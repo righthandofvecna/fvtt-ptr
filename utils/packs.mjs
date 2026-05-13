@@ -374,7 +374,7 @@ async function extractPacks(packName, entryName) {
     for ( const doc of docs ) {
       if ( entryName && doc.name?.toLowerCase() !== entryName ) continue;
       cleanPackEntry(doc);
-      const outputName = slugify(doc.name);
+      const outputName = doc.system?.slug || slugify(doc.name);
       const parent = containers[doc.system?.container] ?? (doc.folder ? { path: folderPaths[doc.folder] ?? "" } : null);
       const filePath = path.join(dest, parent?.path ?? "", `${outputName}.json`);
       fs.mkdirSync(path.dirname(filePath), { recursive: true });

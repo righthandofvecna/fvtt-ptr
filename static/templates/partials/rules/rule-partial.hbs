@@ -21,6 +21,18 @@
         <input class="ml-1 mr-1" type="text" name="system.source.value" value="{{item.system.source.value}}"/>
         <div class="item-controls"></div>
     </div>
+    <div class="item content-set">
+        <label>{{localize "ITEM.ContentSet"}}</label>
+        <select class="ml-1 mr-1" name="system.contentSet">
+            <option value="" {{#unless item.system.contentSet}}selected{{/unless}}>{{localize "PTU.ContentSets.None"}}</option>
+            {{#each contentSets as |set key|}}
+                <option value="{{key}}" {{#if (eq @root.item.system.contentSet key)}}selected{{/if}}>{{localize set.label}}</option>
+            {{/each}}
+        </select>
+        <label>{{localize "ITEM.ReplacesSlug"}}</label>
+        <input class="ml-1 mr-1" name="system.replacesSlug" type="text" value="{{item.system.replacesSlug}}"/>
+        <div class="item-controls"></div>
+    </div>
     <div class="item slug">
         <label for="system.slug">Slug</label>
         <input class="ml-1 mr-1" name="system.slug" type="text" value="{{item.system.slug}}"/>

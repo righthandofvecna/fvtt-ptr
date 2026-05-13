@@ -8,7 +8,7 @@ export class CompendiumBrowserItemsTab extends CompendiumBrowserTab {
         this.searchFields = ["name"]
         this.storeFields = ["name", "uuid", "type", "source", "img", "cost", "subtype", "keywords", "automationStatus"];
 
-        this.index = ["img", "system.source.value", "system.cost", "system.subtype", "system.keywords", "flags.ptu.automationStatus"];
+        this.index = ["img", "system.source.value", "system.cost", "system.subtype", "system.keywords", "system.slug", "system.contentSet", "system.replacesSlug", "flags.ptu.automationStatus"];
 
         this.filterData = this.prepareFilterData();
     }
@@ -53,6 +53,9 @@ export class CompendiumBrowserItemsTab extends CompendiumBrowserTab {
                     cost: itemData.system.cost || 0,
                     subtype: itemData.system.subtype || "",
                     keywords: itemData.system.keywords,
+                    slug: itemData.system.slug ?? "",
+                    contentSet: itemData.system.contentSet ?? "",
+                    replacesSlug: itemData.system.replacesSlug ?? "",
                     automationStatus: itemData.flags?.ptu?.automationStatus ?? "needs-automation"
                 })
             }

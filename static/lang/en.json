@@ -86,7 +86,9 @@
         "RoundStart": "Start of Round"
       }
     },
-    "ResetEOT": "Reset EOT Tracking"
+    "ResetEOT": "Reset EOT Tracking",
+    "ContentSet": "Content Set",
+    "ReplacesSlug": "Replaces Slug"
   },
 
   "SPECIES.Height": "Height",
@@ -1226,6 +1228,12 @@
         "ClearFilters": "Clear Filters",
         "AndLabel": "All of above",
         "OrLabel": "Any of above"
+      },
+      "ContentSets": {
+        "Title": "Content Sets",
+        "Hint": "Content Sets are collections of Class Features, Moves, etc, that can be toggled on and off in the Compendium Browser based on which playtest content you want to include in your game.",
+        "EnableFiltering": "Enable filtering by Content Sets (if disabled, you'll see multiple copies of each Item if multiple Content Sets made changes to it)",
+        "ReloadRequired": "Content Set settings changed — reload to apply changes."
       }
     },
     "Alliance": {
@@ -1302,6 +1310,12 @@
       "Priority": "Priority",
       "Reaction": "Reaction",
       "Interrupt": "Interrupt"
+    },
+    "ContentSet": {
+      "None": "Original PTU",
+      "ClassRework": "Class Rework",
+      "WeatherPlaytest": "Weather Playtest",
+      "FriendshipSpirit": "Friendship & Spirit Playtest"
     }
   },
 

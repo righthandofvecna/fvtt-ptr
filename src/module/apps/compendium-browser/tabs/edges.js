@@ -8,7 +8,7 @@ export class CompendiumBrowserEdgesTab extends CompendiumBrowserTab {
         this.searchFields = ["name", "prerequisites.label", "prerequisites.tier"]
         this.storeFields = ["name", "uuid", "type", "source", "img", "prerequisites", "keywords", "automationStatus"];
 
-        this.index = ["img", "system.source.value", "system.prerequisites", "system.keywords", "flags.ptu.automationStatus"];
+        this.index = ["img", "system.source.value", "system.prerequisites", "system.keywords", "system.slug", "system.contentSet", "system.replacesSlug", "flags.ptu.automationStatus"];
 
         this.filterData = this.prepareFilterData();
     }

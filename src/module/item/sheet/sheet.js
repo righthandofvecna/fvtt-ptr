@@ -92,6 +92,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
             "requires-system-changes": "PTU.DevAutomation.Status.RequiresSystemChanges",
             "no-automation-needed": "PTU.DevAutomation.Status.NoAutomationNeeded"
         };
+        data.contentSets = CONFIG.PTU.contentSets;
 
         return data;
     }
@@ -201,12 +202,18 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
             html.find("a[data-action='regenerate-slug']").click(() => {
                 if(this._submitting) return;
 
-                slugInput.value = sluggify(this.item.name);
+                const baseName = this.item.name.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
+                const contentSet = this.item.system.contentSet;
+                const suffix = contentSet ? (game.ptu?.config?.contentSets?.[contentSet]?.suffix ?? "") : "";
+                slugInput.value = sluggify(baseName) + suffix;
                 const event = new Event("change");
                 slugInput.dispatchEvent(event);
             });
             if(!slugInput.value) {
-                slugInput.value = sluggify(this.item.name);
+                const baseName = this.item.name.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
+                const contentSet = this.item.system.contentSet;
+                const suffix = contentSet ? (game.ptu?.config?.contentSets?.[contentSet]?.suffix ?? "") : "";
+                slugInput.value = sluggify(baseName) + suffix;
                 const event = new Event("change");
                 slugInput.dispatchEvent(event);
             }

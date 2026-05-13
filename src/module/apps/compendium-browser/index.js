@@ -93,6 +93,42 @@ class PackLoader {
     }
 
     /**
+     * When content set filtering is active, removes lower-priority duplicates from the index data.
+     * Items whose slug is overridden by a higher-priority content set item are excluded.
+     * @template T
+     * @param {T[]} indexData  Array of index entries that each have `contentSet` and `replacesSlug` fields.
+     * @returns {T[]}
+     */
+    applyContentSetFilter(indexData) {
+        if (!game.settings.get("ptu", "contentSetsEnabled")) return indexData;
+
+        const enabledContentSets = game.settings.get("ptu", "enabledContentSets");
+        const contentSetsConfig = CONFIG.PTU.contentSets;
+
+        // Only consider sets that are both defined in config and enabled in settings
+        const activeSetKeys = Object.keys(contentSetsConfig).filter(k => enabledContentSets[k]);
+
+        // Build the set of slugs that should be hidden:
+        // 1. replacesSlug from every active override item
+        // 2. static removal lists from every active content set config
+        const hiddenSlugs = new Set();
+
+        for (const entry of indexData) {
+            if (entry.contentSet && activeSetKeys.includes(entry.contentSet) && entry.replacesSlug) {
+                hiddenSlugs.add(entry.replacesSlug);
+            }
+        }
+
+        for (const key of activeSetKeys) {
+            for (const slug of (contentSetsConfig[key].removals ?? [])) {
+                hiddenSlugs.add(slug);
+            }
+        }
+
+        return indexData.filter(entry => !hiddenSlugs.has(entry.slug) && (!entry.contentSet || activeSetKeys.includes(entry.contentSet)));
+    }
+
+    /**
      * @param {string[]} packs 
      */
     async hardReset(packs) {
@@ -414,12 +450,35 @@ class CompendiumBrowser extends Application {
             if (form) {
                 html.querySelector(".compendium-browser-settings button.save-settings")?.addEventListener("click", async () => {
                     const formData = foundry.utils.flattenObject(new FormDataExtended(form).object);
+
+                    // Save compendium pack load settings
                     for (const [t, packs] of Object.entries(this.settings)) {
                         for (const [key, pack] of Object.entries(packs)) {
                             pack.load = formData[key] ?? pack.load;
                         }
                     }
                     await game.settings.set("ptu", "compendiumBrowserPacks", this.settings);
+
+                    // Save content set settings and reload if anything changed
+                    const prevEnabled = game.settings.get("ptu", "contentSetsEnabled");
+                    const newEnabled = !!(formData["content-sets-enabled"]);
+                    const prevSets = game.settings.get("ptu", "enabledContentSets");
+                    const newSets = {};
+                    for (const key of Object.keys(CONFIG.PTU.contentSets)) {
+                        newSets[key] = !!(formData[`content-set-${key}`]);
+                    }
+
+                    const contentSetsChanged =
+                        prevEnabled !== newEnabled ||
+                        Object.keys(newSets).some(k => !!prevSets[k] !== newSets[k]);
+
+                    await game.settings.set("ptu", "contentSetsEnabled", newEnabled);
+                    await game.settings.set("ptu", "enabledContentSets", newSets);
+
+                    if (contentSetsChanged) {
+                        ui.notifications.info("PTU.CompendiumBrowser.ContentSets.ReloadRequired", { permanent: true, localize: true });
+                        return;
+                    }
 
                     // for (const [key, source] of Object.entries(this.packLoader.sourcesSettings.sources)) {
                     //     if (!source || source.name === null || source.name === undefined || source.name.trim() === "") {
@@ -922,12 +981,26 @@ class CompendiumBrowser extends Application {
 
     getData() {
         const activeTab = this.activeTab;
-        if (activeTab === "settings") return {
-            tab: "settings",
-            user: game.user,
-            settings: {
-                settings: this.settings,
-                sources: this.packLoader.sourcesSettings,
+        if (activeTab === "settings") {
+            const contentSetsConfig = CONFIG.PTU.contentSets;
+            const enabledContentSets = game.settings.get("ptu", "enabledContentSets");
+            const contentSetsEnabled = game.settings.get("ptu", "contentSetsEnabled");
+            const sets = Object.fromEntries(
+                Object.entries(contentSetsConfig)
+                    .sort(([, a], [, b]) => a.priority - b.priority)
+                    .map(([key, cfg]) => [key, { label: cfg.label, enabled: !!enabledContentSets[key] }])
+            );
+            return {
+                tab: "settings",
+                user: game.user,
+                settings: {
+                    settings: this.settings,
+                    sources: this.packLoader.sourcesSettings,
+                    contentSets: {
+                        enabled: contentSetsEnabled,
+                        sets,
+                    }
+                },
             }
         }
 
