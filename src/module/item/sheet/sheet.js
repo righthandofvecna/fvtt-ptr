@@ -131,7 +131,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
                 label: "Commit to GitHub",
                 class: "commit-to-github",
                 icon: "fa-solid fa-upload",
-                onclick: () => GithubSyncManager.commitItemToGithub(this.object),
+                onclick: (event) => GithubSyncManager.commitItemToGithub(this.object, event.currentTarget),
             });
         }
 

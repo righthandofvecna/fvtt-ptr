@@ -18,7 +18,7 @@ export default class PTURuleBookJournal extends foundry.appv1.sheets.JournalShee
           label: "Commit to GitHub",
           class: "commit-to-github",
           icon: "fa-solid fa-upload",
-          onclick: () => GithubSyncManager.commitJournalToGithub(this.object),
+          onclick: (event) => GithubSyncManager.commitJournalToGithub(this.object, event.currentTarget),
         });
       }
 

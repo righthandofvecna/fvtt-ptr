@@ -314,7 +314,7 @@ class GithubSyncManager {
      * @param {Item} document  The live Foundry Item to commit
      */
 
-    static async commitItemToGithub(document) {
+    static async commitItemToGithub(document, button = null) {
         const { blockedItems } = GithubSyncManager.config;
 
         if (!GithubSyncManager.isCommittableItem(document)) {
@@ -323,6 +323,14 @@ class GithubSyncManager {
             );
             return;
         }
+
+        const _origButtonHTML = button?.innerHTML ?? null;
+        if (button) button.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Committing…`;
+        try {
+
+        // ── Authenticate first, before any server document fetches ──────────────────
+        const identity = await GithubSyncManager.#ensureAuthenticated();
+        if (!identity) return; // #ensureAuthenticated already notified
 
         // ── Resolve transitive dependencies ───────────────────────────────────
         const { committable, invalid } = await GithubSyncManager.#collectReferencedItems(
@@ -438,6 +446,9 @@ class GithubSyncManager {
         }
 
         GithubSyncManager.#openSheet();
+        } finally {
+            if (button) button.innerHTML = _origButtonHTML;
+        }
     }
 
     /**
@@ -448,13 +459,21 @@ class GithubSyncManager {
      *
      * @param {JournalEntry} journal  The live Foundry JournalEntry to commit
      */
-    static async commitJournalToGithub(journal) {
+    static async commitJournalToGithub(journal, button = null) {
         if (!GithubSyncManager.isCommittableJournal(journal)) {
             ui.notifications.error(
                 "Cannot commit this journal to GitHub — it must be opened directly from the configured journals compendium pack."
             );
             return;
         }
+
+        const _origButtonHTML = button?.innerHTML ?? null;
+        if (button) button.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Committing…`;
+        try {
+
+        // ── Authenticate first, before any server document fetches ──────────────────
+        const identity = await GithubSyncManager.#ensureAuthenticated();
+        if (!identity) return; // #ensureAuthenticated already notified
 
         let blob;
         try {
@@ -488,6 +507,9 @@ class GithubSyncManager {
         }
 
         GithubSyncManager.#openSheet();
+        } finally {
+            if (button) button.innerHTML = _origButtonHTML;
+        }
     }
 
     /**
@@ -829,6 +851,34 @@ class GithubSyncManager {
      *
      * @returns {Promise<string|null>}
      */
+    /**
+     * Ensure the user is authenticated with GitHub before making any server
+     * document fetches. Sends a lightweight status probe via #authenticatedFetch,
+     * which triggers the OAuth popup and retries until the user completes sign-in
+     * (or we time out). This must be called before any fetchServerDocument calls
+     * so that unauthenticated requests are never made.
+     *
+     * @returns {Promise<string|null>}  The identity token, or null if auth failed
+     */
+    static async #ensureAuthenticated() {
+        const identity = await GithubSyncManager.getIdentity();
+        if (!identity) {
+            ui.notifications.error("Unable to identify user for GitHub commit.");
+            return null;
+        }
+        // A status probe via #authenticatedFetch triggers OAuth if the token
+        // is not yet linked to a GitHub account, and waits until it is.
+        const probe = await GithubSyncManager.#authenticatedFetch(
+            identity,
+            { flags: { new: true, status: true } }
+        );
+        if (!probe) {
+            ui.notifications.error("GitHub authentication failed — please try again.");
+            return null;
+        }
+        return identity;
+    }
+
     static async getIdentity() {
         const { systemId, apiUrl, poweredByHeader, identitySettingKey } =
             GithubSyncManager.config;
@@ -1072,7 +1122,7 @@ class GithubSyncManager {
      * @param {boolean} [retry]   Internal — true on the second attempt
      * @returns {Promise<object|null>}
      */
-    static async #authenticatedFetch(identity, body, retry = false) {
+    static async #authenticatedFetch(identity, body, retries = 0) {
         const { apiUrl, poweredByHeader } = GithubSyncManager.config;
 
         const response = await fetch(`${apiUrl}/commit`, {
@@ -1098,53 +1148,27 @@ class GithubSyncManager {
 
         // Server requests GitHub OAuth before it can proceed
         if (json.auth_url) {
-            if (retry) {
-                ui.notifications.error("GitHub authentication failed — please try again.");
+            if (retries === 0) {
+                // First encounter — open the URL and start polling.
+                // We do NOT wait for the popup to close: in Electron the URL
+                // opens in a separate external browser, so popup.closed is never
+                // reliable. Instead we just poll until the server accepts the request.
+                window.open(json.auth_url, "_blank");
+                ui.notifications.info("GitHub sign-in required — complete authentication in the browser window that just opened. Your commit will resume automatically.");
+            }
+            if (retries >= 60) {
+                // ~5 minutes of polling (60 × 5 s)
+                ui.notifications.error("GitHub authentication timed out — please try again.");
                 return null;
             }
-            const popup = window.open(json.auth_url, identity, "popup=true");
-            await GithubSyncManager.#waitForPopup(popup);
-            return GithubSyncManager.#authenticatedFetch(identity, body, true);
+            // Poll every 5 seconds until the server's OAuth callback has completed.
+            await new Promise((r) => setTimeout(r, 5000));
+            return GithubSyncManager.#authenticatedFetch(identity, body, retries + 1);
         }
 
         return json;
     }
 
-    /**
-     * Wait for a popup window to close (polling every 2.5 s, up to 250 s).
-     * Also resolves immediately if the OAuth callback sends a postMessage.
-     * On timeout the promise resolves rather than rejects, so the auth retry
-     * still runs — which succeeds if the server already stored the token.
-     * @param {Window|null} popup
-     */
-    static #waitForPopup(popup) {
-        return new Promise((resolve) => {
-            let resolved = false;
-
-            function resolveOnce() {
-                if (resolved) return;
-                resolved = true;
-                window.removeEventListener("message", onMessage);
-                resolve(true);
-            }
-
-            function onMessage(event) {
-                if (event.data === "oauth_complete" || event.data?.type === "oauth_complete") {
-                    resolveOnce();
-                }
-            }
-
-            window.addEventListener("message", onMessage);
-
-            function poll(depth = 0) {
-                if (resolved) return;
-                if (popup?.closed) return resolveOnce();
-                if (depth > 100) return resolveOnce();
-                setTimeout(() => poll(depth + 1), 2500);
-            }
-            poll();
-        });
-    }
 }
 
 export { GithubSyncManager };
