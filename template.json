@@ -604,7 +604,7 @@
         "enabled": true,
         "slug": null,
         "contentSet": "",
-        "replacesId": "",
+        "replacesSlug": "",
         "schema": {
           "version": null,
           "lastMigration": null

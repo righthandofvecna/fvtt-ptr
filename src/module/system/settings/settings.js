@@ -209,7 +209,7 @@ export function registerSettings() {
         hint: "When enabled, only the highest-priority version of each item will be shown in the Compendium Browser.",
         scope: "world",
         config: false,
-        default: false,
+        default: true,
         type: Boolean,
         onChange: () => {
             game.ptu.compendiumBrowser.packLoader.reset();
@@ -222,7 +222,11 @@ export function registerSettings() {
         hint: "Which content sets are currently active.",
         scope: "world",
         config: false,
-        default: {},
+        default: {
+            "class-rework": true,
+            "weather-playtest": true,
+            "friendship-spirit": game.settings.get("ptu", "variant.spiritPlaytest"),
+        },
         type: Object,
         onChange: () => {
             game.ptu.compendiumBrowser.packLoader.reset();

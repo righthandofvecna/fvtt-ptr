@@ -24,7 +24,7 @@
     <div class="item content-set">
         <label>{{localize "ITEM.ContentSet"}}</label>
         <select class="ml-1 mr-1" name="system.contentSet">
-            <option value="" {{#unless item.system.contentSet}}selected{{/unless}}>{{localize "PTU.ContentSets.None"}}</option>
+            <option value="" {{#unless item.system.contentSet}}selected{{/unless}}>{{localize "PTU.ContentSet.None"}}</option>
             {{#each contentSets as |set key|}}
                 <option value="{{key}}" {{#if (eq @root.item.system.contentSet key)}}selected{{/if}}>{{localize set.label}}</option>
             {{/each}}
