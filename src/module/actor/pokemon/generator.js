@@ -54,9 +54,17 @@ export class PokemonGenerator {
         if (!this.form) this.prepareForm();
 
         this.img = await PokemonGenerator.getImage(this.species, { gender: this.gender, shiny: this.shiny });
-        this.tokenImg = (() => {
+        this.tokenImg = await (async () => {
             if(!this.img) return;
             const tokenImageExtension = game.settings.get("ptu", "generation.defaultTokenImageExtension");
+            // Change: If the configured extension is .webm, use the fallback chain via getTokenImage
+            if (tokenImageExtension === ".webm") {
+                const tokenImg = await PokemonGenerator.getTokenImage(this.species, { gender: this.gender, shiny: this.shiny });
+                if (tokenImg) return tokenImg;
+                // Default Behavior: If no token-specific image found, fall back to actor image
+                return this.img;
+            }
+            // Original logic for non WEBM extensions
             if(this.img.endsWith(tokenImageExtension)) return this.img;
             const actorImageExtension = game.settings.get("ptu", "generation.defaultImageExtension");
             return this.img.replace(actorImageExtension, tokenImageExtension);
@@ -368,6 +376,28 @@ export class PokemonGenerator {
                 }
             }
         }
+    }
+
+    static async getTokenImage(species, { gender = game.i18n.localize("PTU.Male"), shiny = false } = {}) {
+        const tokenImageExtension = game.settings.get("ptu", "generation.defaultTokenImageExtension");
+
+        // Fallback chain for WEBM tokens
+        if (tokenImageExtension === ".webm") {
+            const fallbackOrder = [".webm", ".webp", ".png", ".jpg"];
+            for (const ext of fallbackOrder) {
+                const path = species.getImagePath({ gender, shiny, extension: ext });
+                const result = await fetch(path);
+                if (result.status !== 404) return path;
+            }
+            // No token image found with any of the fallback extensions, so we go back to the normal getImage logic
+            return undefined;
+        }
+
+        // Original logic
+        const path = species.getImagePath({ gender, shiny, extension: tokenImageExtension });
+        const result = await fetch(path);
+        if (result.status !== 404) return path;
+        return undefined;
     }
 
     static async getImage(species, { gender = game.i18n.localize("PTU.Male"), shiny = false, extension = game.settings.get("ptu", "generation.defaultImageExtension"), suffix = "" } = {}) {
