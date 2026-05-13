@@ -1,5 +1,6 @@
 import { sluggify } from "../../../util/misc.js";
 import { Progress } from "../../../util/progress.js";
+import { getActiveContentSetKeys, buildHiddenSlugs, isHiddenByContentSet } from "../../../util/content-sets.js";
 import * as browserTabs from "./tabs/index.js";
 import noUiSlider from "../../../../static/js/nouislider.mjs"
 class PackLoader {
@@ -96,36 +97,14 @@ class PackLoader {
      * When content set filtering is active, removes lower-priority duplicates from the index data.
      * Items whose slug is overridden by a higher-priority content set item are excluded.
      * @template T
-     * @param {T[]} indexData  Array of index entries that each have `contentSet` and `replacesSlug` fields.
+     * @param {T[]} indexData  Array of index entries that each have `slug`, `contentSet`, and `replacesSlug` fields.
      * @returns {T[]}
      */
     applyContentSetFilter(indexData) {
         if (!game.settings.get("ptu", "contentSetsEnabled")) return indexData;
-
-        const enabledContentSets = game.settings.get("ptu", "enabledContentSets");
-        const contentSetsConfig = CONFIG.PTU.contentSets;
-
-        // Only consider sets that are both defined in config and enabled in settings
-        const activeSetKeys = Object.keys(contentSetsConfig).filter(k => enabledContentSets[k]);
-
-        // Build the set of slugs that should be hidden:
-        // 1. replacesSlug from every active override item
-        // 2. static removal lists from every active content set config
-        const hiddenSlugs = new Set();
-
-        for (const entry of indexData) {
-            if (entry.contentSet && activeSetKeys.includes(entry.contentSet) && entry.replacesSlug) {
-                hiddenSlugs.add(entry.replacesSlug);
-            }
-        }
-
-        for (const key of activeSetKeys) {
-            for (const slug of (contentSetsConfig[key].removals ?? [])) {
-                hiddenSlugs.add(slug);
-            }
-        }
-
-        return indexData.filter(entry => !hiddenSlugs.has(entry.slug) && (!entry.contentSet || activeSetKeys.includes(entry.contentSet)));
+        const activeSetKeys = getActiveContentSetKeys();
+        const hiddenSlugs = buildHiddenSlugs(activeSetKeys, indexData);
+        return indexData.filter(entry => !isHiddenByContentSet(entry.slug, entry.contentSet, hiddenSlugs, activeSetKeys));
     }
 
     /**
