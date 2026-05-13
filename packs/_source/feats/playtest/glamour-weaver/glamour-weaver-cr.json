@@ -1,5 +1,5 @@
 {
-  "name": "Glamour Weaver [CR]",
+  "name": "Glamour Weaver",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Sweet Kiss and Disarming Voice.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Glamour Weaver [CR]",
-    "name": "Glamour Weaver [CR]"
+    "class": "Glamour Weaver",
+    "name": "Glamour Weaver [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "glamour-weaver"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

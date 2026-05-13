@@ -1,5 +1,5 @@
 {
-  "name": "Corrupt Blood [CR]",
+  "name": "Corrupt Blood",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You are immune to the Poisoned and Badly Poisoned statuses and resist Poison-type attacks one step further.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Miasmic [CR]",
-    "name": "Corrupt Blood [CR]"
+    "class": "Miasmic",
+    "name": "Corrupt Blood [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "corrupt-blood"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

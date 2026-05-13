@@ -14,7 +14,11 @@ class PTUItem extends Item {
     }
 
     get slug() {
-        return this.system.slug || sluggify(this.name);
+        if (this.system.slug) return this.system.slug;
+        const baseName = this.name.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
+        const contentSet = this.system.contentSet;
+        const suffix = contentSet ? (game.ptu?.config?.contentSets?.[contentSet]?.suffix ?? "") : "";
+        return sluggify(baseName) + suffix;
     }
 
     get grantedBy() {

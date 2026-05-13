@@ -44,7 +44,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "vnVIDDp4I8voMJGY",

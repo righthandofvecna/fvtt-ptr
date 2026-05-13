@@ -48,7 +48,9 @@
     "ap": {
       "cost": 0,
       "bind": false
-    }
+    },
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "PF8l9ZktxlX86Gz0",
   "effects": [],

@@ -1,5 +1,5 @@
 {
-  "name": "Steel Wind [CR]",
+  "name": "Steel Wind",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Bullet Punch, Metal Claw, and Shift Gear. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Steelheart [CR]",
-    "name": "Steel Wind [CR]"
+    "class": "Steelheart",
+    "name": "Steel Wind [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "steel-wind"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

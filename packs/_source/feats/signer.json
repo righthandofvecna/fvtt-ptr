@@ -7,6 +7,7 @@
     "rules": [],
     "enabled": true,
     "slug": "signer",
+    "contentSet": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -24,7 +25,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Patron Stat"
+      "Patron Stat",
+      "Class"
     ],
     "frequency": {
       "type": "static",
@@ -55,28 +57,32 @@
     ],
     "notes": "",
     "free": false,
-    "class": "",
+    "class": "Signer",
     "name": "Signer",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "replacesSlug": ""
   },
   "type": "feat",
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "img": "systems/ptu/static/css/images/icons/class_feat_icon.png",
   "effects": [],
   "ownership": {
     "default": 0
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Touched, GM Permission"
+      "prereqBackup": "Touched, GM Permission",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.23",
     "coreVersion": "13.351",
     "createdTime": 1683368078931,
-    "modifiedTime": 1778200828680,
+    "modifiedTime": 1778665350070,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

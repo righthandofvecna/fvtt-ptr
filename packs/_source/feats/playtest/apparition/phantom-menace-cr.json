@@ -1,5 +1,5 @@
 {
-  "name": "Phantom Menace [CR]",
+  "name": "Phantom Menace",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Moves Last Respects, Phantom Force, and Poltergeist. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Apparition [CR]",
-    "name": "Phantom Menace [CR]"
+    "class": "Apparition",
+    "name": "Phantom Menace [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "phantom-menace"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

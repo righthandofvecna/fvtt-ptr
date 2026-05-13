@@ -28,6 +28,8 @@
     "default": 0
   },
   "system": {
-    "slug": "first-aid-expert"
+    "slug": "first-aid-expert",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

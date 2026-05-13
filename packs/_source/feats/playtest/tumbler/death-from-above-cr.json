@@ -1,5 +1,5 @@
 {
-  "name": "Death From Above [CR]",
+  "name": "Death From Above",
   "system": {
     "origin": "",
     "effect": "You learn the Moves Acrobatics and Bounce.",
@@ -73,15 +73,17 @@
       "bind": false
     },
     "prerequisites": [
-      "Aerialist [CR]",
+      "Aerialist",
       "Expert Acrobatics"
     ],
     "notes": "",
     "free": false,
-    "class": "Tumbler [CR]",
+    "class": "Tumbler",
     "automation": [],
     "name": "Death From Above",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "class-rework",
+    "replacesSlug": "death-from-above"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

@@ -81,7 +81,9 @@
     "contestType": "Tough - Unsettling",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": null,

@@ -50,7 +50,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "8m9FR9xTLgOLRRZY",
   "effects": [],

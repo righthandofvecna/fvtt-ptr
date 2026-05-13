@@ -1,5 +1,5 @@
 {
-  "name": "Rider [CR]",
+  "name": "Rider",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: While you are Mounted on a Pokemon under the effects of Agility Training, the bonuses from Agility Training are doubled. All Rider features require you to be Mounted to take effect.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Rider [CR]",
-    "name": "Rider [CR]"
+    "class": "Rider",
+    "name": "Rider [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "rider"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

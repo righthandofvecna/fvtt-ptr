@@ -1,6 +1,6 @@
 {
   "folder": "VrgkSS17WexYz7or",
-  "name": "Move Sync (Psychic) [CR]",
+  "name": "Move Sync (Psychic)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Psychic) [CR]"
+    "class": "Type Ace (Psychic)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-psychic"
   },
   "effects": [],
   "flags": {

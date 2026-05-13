@@ -1,6 +1,6 @@
 {
   "folder": "LYUraCjoNX1k9wjl",
-  "name": "Slick [CR]",
+  "name": "Slick",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
@@ -68,7 +68,9 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "slick"
   },
   "effects": [],
   "sort": 0,

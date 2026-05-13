@@ -67,7 +67,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Nomad"
+    "class": "Nomad",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

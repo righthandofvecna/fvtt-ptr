@@ -1,5 +1,5 @@
 {
-  "name": "Winter is Coming [CR]",
+  "name": "Winter is Coming",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Frostbite Ability.",
@@ -81,8 +81,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Frost Touched [CR]",
-    "name": "Winter is Coming [CR]"
+    "class": "Frost Touched",
+    "name": "Winter is Coming [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "winter-is-coming"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

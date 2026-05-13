@@ -112,7 +112,9 @@
     ],
     "cost": "3 TP",
     "name": "Ability Mastery",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",

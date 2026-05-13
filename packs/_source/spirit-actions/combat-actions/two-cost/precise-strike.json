@@ -52,7 +52,9 @@
     },
     "cost": "2",
     "trigger": "You are about to make an attack",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "ykvK3xDuqmfQc0YS",
   "effects": [],

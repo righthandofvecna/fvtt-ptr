@@ -25,7 +25,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-hyper-mode-iwr",
+    "slug": "ephemeral-effect-hyper-mode-iwr",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -53,7 +53,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "dDpOEXjREUS6rAWH",

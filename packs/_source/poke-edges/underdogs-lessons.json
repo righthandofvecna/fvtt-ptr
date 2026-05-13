@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "underdog-s-lessons",
+    "slug": "underdogs-lessons",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -52,7 +52,9 @@
     ],
     "cost": "1 TP",
     "name": "Underdog's Lessons",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",

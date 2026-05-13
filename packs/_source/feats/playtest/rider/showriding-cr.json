@@ -1,5 +1,5 @@
 {
-  "name": "Showriding [CR]",
+  "name": "Showriding",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may roll an additional Xd6 during the Introduction Stage of a Contest, where X is half of your Athletics Rank. You may choose any Contest Stat to attempt to gain Dice for with this roll.⠀",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Rider [CR]",
-    "name": "Showriding [CR]"
+    "class": "Rider",
+    "name": "Showriding [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "showriding"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

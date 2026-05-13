@@ -1,0 +1,100 @@
+{
+  "name": "Wind Rider",
+  "type": "ability",
+  "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "The user is immune to the damage and effects of Flying-Type and @CompSearch[moves keywords=Wind]{Wind Attacks}. If the user is hit by these attacks, the user gains +1 Speed CS.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "Effectiveness",
+        "predicate": [],
+        "type": "flying",
+        "value": 0
+      },
+      {
+        "key": "ApplyEffect",
+        "predicate": [
+          "move:wind"
+        ],
+        "selectors": "damage-received",
+        "uuid": "Compendium.ptu.effects.Item.tX1gPdGIpP9k4jwv",
+        "range": "2",
+        "value": ""
+      }
+    ],
+    "enabled": true,
+    "slug": "wind-rider-wp",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:16.755Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "Compendium.ptu.effects.Item.tX1gPdGIpP9k4jwv",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Weather",
+      "Playtest",
+      "Defensive"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "tier": "",
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "wind-rider"
+  },
+  "effects": [],
+  "folder": "MsdL8dYgE7JbY1ya",
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "createdTime": 1707854107379,
+    "modifiedTime": 1778200816782,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "gZSorPchELl6j7pu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -603,6 +603,8 @@
         "rules": [],
         "enabled": true,
         "slug": null,
+        "contentSet": "",
+        "replacesSlug": "",
         "schema": {
           "version": null,
           "lastMigration": null

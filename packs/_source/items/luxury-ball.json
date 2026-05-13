@@ -58,7 +58,9 @@
     "automation": [],
     "name": "Luxury Ball",
     "useCount": 0,
-    "modifier": -5
+    "modifier": -5,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/luxury ball.webp",

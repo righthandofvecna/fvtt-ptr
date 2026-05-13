@@ -1,5 +1,5 @@
 {
-  "name": "Round Trip [CR]",
+  "name": "Round Trip",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: Your Pokémon uses a Move.\nEffect: You may immediately switch your Pokémon that just performed a Move for another of your Pokémon. This effect lets Pokémon with the Trapped condition switch out.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Juggler [CR]",
-    "name": "Round Trip [CR]"
+    "class": "Juggler",
+    "name": "Round Trip [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "round-trip"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

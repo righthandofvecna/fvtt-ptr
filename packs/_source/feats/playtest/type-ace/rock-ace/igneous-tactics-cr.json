@@ -1,6 +1,6 @@
 {
   "folder": "F8TUNvOCEnUFlpxZ",
-  "name": "Igneous Tactics [CR]",
+  "name": "Igneous Tactics",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Bedrock Foundation [CR]",
+      "Bedrock Foundation",
       "Type-Linked Skill at Master Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Rock) [CR]"
+    "class": "Type Ace (Rock)",
+    "contentSet": "class-rework",
+    "replacesSlug": "igneous-tactics"
   },
   "effects": [],
   "flags": {

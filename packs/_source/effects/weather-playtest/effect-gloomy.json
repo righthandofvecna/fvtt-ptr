@@ -21,7 +21,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-new-moon",
+    "slug": "effect-gloomy",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -52,7 +52,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,

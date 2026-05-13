@@ -1,5 +1,5 @@
 {
-  "name": "Chemist [CR]",
+  "name": "Chemist",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may craft any Chemistry Recipe for which you qualify using your Chemistry Set.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Chemist [CR]"
+    "class": "Researcher",
+    "name": "Chemist [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "chemist"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

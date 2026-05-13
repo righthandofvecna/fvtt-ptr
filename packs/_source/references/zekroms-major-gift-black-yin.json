@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "zekrom-s-major-gift-black-yin",
+    "slug": "zekroms-major-gift-black-yin",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +25,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "HOsbAdKCs99HqHKK",

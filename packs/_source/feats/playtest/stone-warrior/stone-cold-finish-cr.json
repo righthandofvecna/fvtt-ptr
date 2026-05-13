@@ -1,5 +1,5 @@
 {
-  "name": "Stone Cold Finish [CR]",
+  "name": "Stone Cold Finish",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose two of Head Smash, Rock Wrecker, and Stone Edge. You gain the chosen Moves.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Stone Warrior [CR]",
-    "name": "Stone Cold Finish [CR]"
+    "class": "Stone Warrior",
+    "name": "Stone Cold Finish [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "stone-cold-finish"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

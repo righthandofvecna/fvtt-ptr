@@ -1,5 +1,5 @@
 {
-  "name": "Maintain the Momentum [CR]",
+  "name": "Maintain the Momentum",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon under the effects of Focused Training.\nEffect: The target immediately spends 2 Momentum. Then, it automatically rolls an 11 on one d20 Roll of your choice on their next turn.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Duelist [CR]",
-    "name": "Maintain the Momentum [CR]"
+    "class": "Duelist",
+    "name": "Maintain the Momentum [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "maintain-the-momentum"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

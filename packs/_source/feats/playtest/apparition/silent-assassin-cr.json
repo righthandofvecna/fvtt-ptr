@@ -1,5 +1,5 @@
 {
-  "name": "Silent Assassin [CR]",
+  "name": "Silent Assassin",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: While this Feature is Bound, your Struggle Attacks and Weapon Attacks Flinch targets on 18+ (if the Attack already has a chance of Flinching, extend the that Effect Range by +3), and they may deal Ghost-Type Damage if you wish.\nBonus: You gain the Dead Silent Capability, and a bonus to Stealth checks equal to half your Intimidate or Occult Education Rank.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Apparition [CR]",
-    "name": "Silent Assassin [CR]"
+    "class": "Apparition",
+    "name": "Silent Assassin [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "silent-assassin"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

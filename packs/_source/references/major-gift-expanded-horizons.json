@@ -25,7 +25,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "mlvWV2f3Jzmkffs2",
   "effects": [],

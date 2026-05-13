@@ -1,5 +1,5 @@
 {
-  "name": "Scheme Twist [CR]",
+  "name": "Scheme Twist",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Rally Ability. When you give [Orders], you may pay 1 AP to activate Rally, ignoring Frequency, targeting only the targets of the [Orders]. A target may only be affected by Rally in this way once per Scene.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Commander [CR]",
-    "name": "Scheme Twist [CR]"
+    "class": "Commander",
+    "name": "Scheme Twist [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "scheme-twist"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

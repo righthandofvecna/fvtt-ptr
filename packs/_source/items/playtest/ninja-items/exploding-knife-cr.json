@@ -1,6 +1,6 @@
 {
   "folder": "erOegeCoXbG55V50",
-  "name": "Exploding Knife [CR]",
+  "name": "Exploding Knife",
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/generic item.webp",
   "system": {
@@ -55,7 +55,9 @@
     "cost": "1500",
     "consumable": 0,
     "subtype": "",
-    "container": false
+    "container": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "exploding-knife"
   },
   "effects": [],
   "sort": 0,

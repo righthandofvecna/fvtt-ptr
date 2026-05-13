@@ -1,5 +1,5 @@
 {
-  "name": "Tag In [CR]",
+  "name": "Tag In",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You recall a Pokémon\nEffect: The next Pokémon you send out is treated as if the recalled Pokémon had used Baton Pass on it.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Juggler [CR]",
-    "name": "Tag In [CR]"
+    "class": "Juggler",
+    "name": "Tag In [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "tag-in"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

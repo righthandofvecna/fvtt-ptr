@@ -72,7 +72,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "8hCWD8uK48dEZI9Y",

@@ -1,5 +1,5 @@
 {
-  "name": "Terrain Talent Rank 1 [CR]",
+  "name": "Terrain Talent Rank 1",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Each Rank, you gain two Terrain Talents, chosen from the Terrains for which you gained Naturewalk from Survivalist.\nNote: You do not have to be in the corresponding terrain to take advantage of Terrain Talents! They work everywhere.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Survivalist [CR]",
-    "name": "Terrain Talent [CR]Rank 1 [CR]"
+    "class": "Survivalist",
+    "name": "Terrain Talent [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "terrain-talent-rank-1"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

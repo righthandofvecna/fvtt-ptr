@@ -1,6 +1,6 @@
 {
   "folder": "h7hcbbq0jjRT9ACS",
-  "name": "Stat Link (Defense) [CR]",
+  "name": "Stat Link (Defense)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Stat Ace (Defense) [CR]"
+      "Stat Ace (Defense)"
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Defense) [CR]"
+    "class": "Stat Ace (Defense)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-link-defense"
   },
   "effects": [],
   "flags": {

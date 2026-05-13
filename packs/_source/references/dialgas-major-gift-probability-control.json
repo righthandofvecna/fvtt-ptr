@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "dialga-s-major-gift-probability-control",
+    "slug": "dialgas-major-gift-probability-control",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +25,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "263d64y5esphacQA",
   "effects": [],

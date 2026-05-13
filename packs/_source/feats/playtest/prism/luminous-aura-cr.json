@@ -1,5 +1,5 @@
 {
-  "name": "Luminous Aura [CR]",
+  "name": "Luminous Aura",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Starlight or Sunglow. You gain the Chosen Ability.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Prism [CR]",
-    "name": "Luminous Aura [CR]"
+    "class": "Prism",
+    "name": "Luminous Aura [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "luminous-aura"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

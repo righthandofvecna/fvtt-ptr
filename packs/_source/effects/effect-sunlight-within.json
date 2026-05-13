@@ -75,7 +75,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "xqvAUwE5uJFqu1hr",

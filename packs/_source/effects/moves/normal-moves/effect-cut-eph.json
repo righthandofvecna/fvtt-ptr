@@ -27,7 +27,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-cut",
+    "slug": "effect-cut-eph",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -55,7 +55,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "vvYHstuSI4986bjM",

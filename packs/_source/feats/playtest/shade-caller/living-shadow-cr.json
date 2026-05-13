@@ -1,5 +1,5 @@
 {
-  "name": "Living Shadow [CR]",
+  "name": "Living Shadow",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your own Shadow can attack others; you may have your Dark Type Moves originate from any Square adjacent to you. If you are fighting among complete darkness, you may have your Dark Type Moves originate from any square within X meters that is completely dark, where X is the higher of your Guile or Stealth Rank. Attacks originating from Living Shadow do not trigger effects that rely on being hit with a melee attack.",
@@ -81,8 +81,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Shade Caller [CR]",
-    "name": "Living Shadow [CR]"
+    "class": "Shade Caller",
+    "name": "Living Shadow [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "living-shadow"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

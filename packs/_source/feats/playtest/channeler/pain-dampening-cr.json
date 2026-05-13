@@ -1,5 +1,5 @@
 {
-  "name": "Pain Dampening [CR]",
+  "name": "Pain Dampening",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: A Channeled creature would be Fainted by a damaging attack\nEffect: Choose any number of Channeled creatures, which must include the triggering creature. Instead of resolving the attack normally, divide the damage from the attack by the number of chosen creatures. Each chosen creature then loses that many Hit Points. For each chosen creature that Resists or is Immune to the Type of the triggering attack, subtract your Intuition Rank from the damage of the attack before all calculations.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Channeler [CR]",
-    "name": "Pain Dampening [CR]"
+    "class": "Channeler",
+    "name": "Pain Dampening [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "pain-dampening"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

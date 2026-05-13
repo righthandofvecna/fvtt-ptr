@@ -54,7 +54,9 @@
     "prerequisites": [
       "Malevolent"
     ],
-    "cost": 0
+    "cost": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,

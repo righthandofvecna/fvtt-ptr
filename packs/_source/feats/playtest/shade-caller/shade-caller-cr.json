@@ -1,5 +1,5 @@
 {
-  "name": "Shade Caller [CR]",
+  "name": "Shade Caller",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose three of the following Moves, and learn them:\nFaint Attack, Knock Off, New Moon, Snarl, and Sudden Strike.",
@@ -83,8 +83,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Shade Caller [CR]",
-    "name": "Shade Caller [CR]"
+    "class": "Shade Caller",
+    "name": "Shade Caller [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "shade-caller"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

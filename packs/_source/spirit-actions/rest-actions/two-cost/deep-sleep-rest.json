@@ -52,7 +52,9 @@
     },
     "cost": "2",
     "trigger": "Extended Action",
-    "active": false
+    "active": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "tMaPsmK6LOK4H1ww",
   "effects": [],

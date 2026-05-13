@@ -1,5 +1,5 @@
 {
-  "name": "Earth Shaker [CR]",
+  "name": "Earth Shaker",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Pick three of Bulldoze, Mud Shot, Mud-Slap, Mud Sport, or Sand-Attack. You learn the chosen Moves.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Earth Shaker [CR]",
-    "name": "Earth Shaker [CR]"
+    "class": "Earth Shaker",
+    "name": "Earth Shaker [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "earth-shaker"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

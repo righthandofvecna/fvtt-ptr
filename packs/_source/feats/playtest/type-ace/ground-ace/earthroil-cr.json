@@ -1,12 +1,12 @@
 {
-  "name": "Earthroil [CR]",
+  "name": "Earthroil",
   "system": {
     "origin": "",
     "effect": "Your Ground-Type Pokémon may activate Earthroil as a Shift Action to use a damaging Ground-Type Move as it had a range of Line 4 or Burst 1 instead of its usual range, and as if it had the Groundsource keyword. 1-Target Moves performed this way take a -5 penalty to their Damage Rolls.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "earthroil",
+    "slug": "earthroil-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -53,14 +53,16 @@
     },
     "prerequisites": [
       "Type-Linked Skill at Expert",
-      "Geothermal Energy [CR]"
+      "Geothermal Energy"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ground) [CR]",
+    "class": "Type Ace (Ground)",
     "name": "Earthroil",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "earthroil"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

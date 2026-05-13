@@ -55,7 +55,9 @@
     "cost": "3500",
     "consumable": 0,
     "subtype": "",
-    "container": false
+    "container": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

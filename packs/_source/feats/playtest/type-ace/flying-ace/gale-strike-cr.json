@@ -1,5 +1,5 @@
 {
-  "name": "Gale Strike [CR]",
+  "name": "Gale Strike",
   "system": {
     "origin": "",
     "effect": "Trigger - Your Pokémon uses a Flying-Type Move with an Accuracy Check\nEffect: You may roll the Accuracy Check twice, and resolve using either result. If both results would hit and you resolve the attack using the lower result, Gale Strike’s Frequency is not expended.",
@@ -57,10 +57,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Flying) [CR]",
+    "class": "Type Ace (Flying)",
     "name": "Gale Strike",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "gale-strike"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

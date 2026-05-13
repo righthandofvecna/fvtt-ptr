@@ -53,7 +53,7 @@
       }
     ],
     "enabled": true,
-    "slug": "milestone-elite-trainer",
+    "slug": "milestone-champion",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -81,7 +81,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,

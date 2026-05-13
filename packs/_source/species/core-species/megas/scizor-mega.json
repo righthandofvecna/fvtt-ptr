@@ -489,7 +489,7 @@
         "type": "body"
       }
     },
-    "slug": "scizor",
+    "slug": "scizor-mega",
     "rules": [],
     "type": {
       "0": "Bug",
@@ -506,7 +506,9 @@
       "Johto"
     ],
     "stackSlugs": false,
-    "enabled": false
+    "enabled": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

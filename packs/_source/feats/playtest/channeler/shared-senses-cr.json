@@ -1,5 +1,5 @@
 {
-  "name": "Shared Senses [CR]",
+  "name": "Shared Senses",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A willing Pokémon that you have Channeled.\nEffect: You Imprint the target for the duration of this Feature. You receive all current sensory information being sensed by an Imprinted target, including gaining a vague knowledge of what the target has experienced in the past hour as though that knowledge were part of your own conscious and unconscious memories. Additionally, Imprinted Pokémon are not subject to the distance limit on Channeling.\nWhen you try to Imprint more than one creature, you may only concentrate on the senses and memories of one Imprinted target at a time, and may only change the target of this concentration once per round. If you stop Channeling an Imprinted creature, they are no longer Imprinted.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Channeler [CR]",
-    "name": "Shared Senses [CR]"
+    "class": "Channeler",
+    "name": "Shared Senses [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "shared-senses"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

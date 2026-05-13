@@ -1,5 +1,5 @@
 {
-  "name": "Jailbreaker [CR]",
+  "name": "Jailbreaker",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may craft any Poké Ball Case Recipe for which you qualify.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Jailbreaker [CR]"
+    "class": "Researcher",
+    "name": "Jailbreaker [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "jailbreaker"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Doom Prophecy [CR]",
+  "name": "Doom Prophecy",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the move Future Sight and gain the ability Probability Control.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Oracle [CR]",
-    "name": "Doom Prophecy [CR]"
+    "class": "Oracle",
+    "name": "Doom Prophecy [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "doom-prophecy"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

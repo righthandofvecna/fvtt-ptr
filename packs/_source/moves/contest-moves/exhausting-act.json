@@ -49,7 +49,9 @@
       "bind": false
     },
     "type": "cool",
-    "dice": 4
+    "dice": 4,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/types2/CoolIC_Icon.png",
   "folder": "Ud4fHEQ32UJKeOPC",

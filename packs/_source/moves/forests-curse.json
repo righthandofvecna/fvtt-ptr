@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "forest-s-curse",
+    "slug": "forests-curse",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -69,7 +69,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "tx9xc6m8Z6bTqBcv",
   "effects": [],

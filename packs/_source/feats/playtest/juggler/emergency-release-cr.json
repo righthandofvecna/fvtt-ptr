@@ -1,5 +1,5 @@
 {
-  "name": "Emergency Release [CR]",
+  "name": "Emergency Release",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may Release or Switch a Pokémon as an Interrupt.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Juggler [CR]",
-    "name": "Emergency Release [CR]"
+    "class": "Juggler",
+    "name": "Emergency Release [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "emergency-release"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

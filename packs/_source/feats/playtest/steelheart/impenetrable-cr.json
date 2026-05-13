@@ -1,5 +1,5 @@
 {
-  "name": "Impenetrable [CR]",
+  "name": "Impenetrable",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Bulletproof Ability.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Steelheart [CR]",
-    "name": "Impenetrable [CR]"
+    "class": "Steelheart",
+    "name": "Impenetrable [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "impenetrable"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

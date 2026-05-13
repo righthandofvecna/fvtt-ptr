@@ -1,5 +1,5 @@
 {
-  "name": "Flood! [CR]",
+  "name": "Flood!",
   "system": {
     "origin": "",
     "effect": "Your Water-Type Pokemon may activate Flood! as a Rapid Action to use a damaging Water-Type Move as if had a range of Line 4 or Close Blast 2 instead of its usual range.",
@@ -57,10 +57,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Water) [CR]",
+    "class": "Type Ace (Water)",
     "name": "Flood!",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "flood"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

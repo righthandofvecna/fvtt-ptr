@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "uxie-s-minor-gift-fount-of-knowledge",
+    "slug": "uxies-minor-gift-fount-of-knowledge",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +25,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "0mQPu5ju3Sn4JgHu",
   "effects": [],

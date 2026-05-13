@@ -1,5 +1,5 @@
 {
-  "name": "Hex Maniac [CR]",
+  "name": "Hex Maniac",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Cursed Body or Omen. You gain the Chosen Ability.",
@@ -91,8 +91,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Hex Maniac [CR]",
-    "name": "Hex Maniac [CR]"
+    "class": "Hex Maniac",
+    "name": "Hex Maniac [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "hex-maniac"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

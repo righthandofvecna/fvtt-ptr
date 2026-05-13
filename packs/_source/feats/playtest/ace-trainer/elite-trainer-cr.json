@@ -1,5 +1,5 @@
 {
-  "name": "Elite Trainer [CR]",
+  "name": "Elite Trainer",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Agility Training, Brutal Training, Focused Training, or Inspired Training. You gain the chosen Feature, even if you do not meet the prerequisites. When training, you may apply up to two different [Training] Features on each of your Pokémon. If you already have all of these Features, instead pick another Feature for which you qualify.",
@@ -93,8 +93,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Ace Trainer [CR]",
-    "name": "Elite Trainer [CR]"
+    "class": "Ace Trainer",
+    "name": "Elite Trainer [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "elite-trainer"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

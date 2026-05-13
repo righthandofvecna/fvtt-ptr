@@ -1,5 +1,5 @@
 {
-  "name": "Futuretech [CR]",
+  "name": "Futuretech",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You can create and install Wired Compatibility Cores for Pokébots.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Futuretech [CR]"
+    "class": "Researcher",
+    "name": "Futuretech [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "futuretech"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

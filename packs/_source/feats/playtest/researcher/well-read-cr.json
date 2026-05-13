@@ -1,5 +1,5 @@
 {
-  "name": "Well Read [CR]",
+  "name": "Well Read",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may use your General Education Rank to qualify for Books, instead of the Book’s usual Skill Prerequisites, provided you have the normal Prerequisite at least Novice Rank.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Well Read [CR]"
+    "class": "Researcher",
+    "name": "Well Read [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "well-read"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

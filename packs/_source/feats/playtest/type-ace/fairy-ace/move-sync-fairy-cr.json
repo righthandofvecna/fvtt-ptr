@@ -1,6 +1,6 @@
 {
   "folder": "w35DF6VSIfHAuHeM",
-  "name": "Move Sync (Fairy) [CR]",
+  "name": "Move Sync (Fairy)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "move-sync-cr",
+    "slug": "move-sync-fairy-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fairy) [CR]"
+    "class": "Type Ace (Fairy)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-fairy"
   },
   "effects": [],
   "flags": {

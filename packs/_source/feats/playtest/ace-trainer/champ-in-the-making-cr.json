@@ -1,5 +1,5 @@
 {
-  "name": "Champ in the Making [CR]",
+  "name": "Champ in the Making",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You use Ace Trainer to give Pokémon Trained Stats\nEffect: The default State of Trained Stats is +2 Combat Stages instead of +1.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Ace Trainer [CR]",
-    "name": "Champ in the Making [CR]"
+    "class": "Ace Trainer",
+    "name": "Champ in the Making [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "champ-in-the-making"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

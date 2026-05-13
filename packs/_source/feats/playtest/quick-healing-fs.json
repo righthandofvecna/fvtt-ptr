@@ -1,0 +1,96 @@
+{
+  "name": "Quick Healing",
+  "system": {
+    "origin": "[F&S Playtest]",
+    "effect": "Your Hardened Pokémon may use Quick Healing to remove up to three injuries, and gains two Ticks of Hit Points for each Injury removed this way.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "quick-healing-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.474Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Playtest",
+      "F&S"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will - Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "prerequisites": [
+      "Taskmaster"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Taskmaster",
+    "name": "Quick Healing",
+    "useCount": 0,
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "quick-healing"
+  },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "prereqBackup": "Taskmaster"
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368079322,
+    "modifiedTime": 1778200831544,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "folder": "NlEB7XJnDWyGbZnQ",
+  "_id": "qIgrnLvvbQbMhCTo",
+  "sort": 4600000,
+  "ownership": {
+    "default": 0
+  }
+}

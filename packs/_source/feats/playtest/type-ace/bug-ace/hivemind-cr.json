@@ -1,6 +1,6 @@
 {
   "folder": "lzFJtoNPVQVKSXNe",
-  "name": "Hivemind [CR]",
+  "name": "Hivemind",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Type Ace (Bug) [CR]"
+      "Type Ace (Bug)"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Bug) [CR]"
+    "class": "Type Ace (Bug)",
+    "contentSet": "class-rework",
+    "replacesSlug": "hivemind"
   },
   "effects": [],
   "flags": {

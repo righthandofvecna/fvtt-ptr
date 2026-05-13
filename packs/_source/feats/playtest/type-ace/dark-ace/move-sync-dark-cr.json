@@ -1,6 +1,6 @@
 {
   "folder": "WkzYl2eCkah61zli",
-  "name": "Move Sync (Dark) [CR]",
+  "name": "Move Sync (Dark)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Dark) [CR]"
+    "class": "Type Ace (Dark)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-dark"
   },
   "effects": [],
   "flags": {

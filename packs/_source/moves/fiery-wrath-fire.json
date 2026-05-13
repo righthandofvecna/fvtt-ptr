@@ -19,7 +19,7 @@
       }
     ],
     "enabled": true,
-    "slug": "fiery-wrath-copy",
+    "slug": "fiery-wrath-fire",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -79,7 +79,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

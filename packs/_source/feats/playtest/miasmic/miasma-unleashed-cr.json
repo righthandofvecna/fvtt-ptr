@@ -1,5 +1,5 @@
 {
-  "name": "Miasma Unleashed [CR]",
+  "name": "Miasma Unleashed",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the moves Sludge Wave and Toxic.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Miasmic [CR]",
-    "name": "Miasma Unleashed [CR]"
+    "class": "Miasmic",
+    "name": "Miasma Unleashed [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "miasma-unleashed"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

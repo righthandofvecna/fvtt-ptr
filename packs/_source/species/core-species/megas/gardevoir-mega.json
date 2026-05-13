@@ -614,7 +614,7 @@
         "type": "body"
       }
     },
-    "slug": "gardevoir",
+    "slug": "gardevoir-mega",
     "rules": [],
     "type": {
       "0": "Psychic",
@@ -629,7 +629,9 @@
       "Galar",
       "Sinnoh",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

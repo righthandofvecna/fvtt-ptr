@@ -13,7 +13,7 @@
       }
     ],
     "enabled": true,
-    "slug": "mixed-power",
+    "slug": "mixed-power-obsolete",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -61,7 +61,9 @@
     ],
     "cost": "2 TP",
     "name": "Mixed Power",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",

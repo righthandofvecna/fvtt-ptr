@@ -1,5 +1,5 @@
 {
-  "name": "Idol [CR]",
+  "name": "Idol",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A Pokémon with at least 1 Tutor Point.\nEffect: You gain the Cute Charm ability. You may also teach this ability to a Pokemon at the cost of 2 Tutor Points.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Coordinator [CR]",
-    "name": "Idol [CR]"
+    "class": "Coordinator",
+    "name": "Idol [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "idol"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

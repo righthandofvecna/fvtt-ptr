@@ -1,5 +1,5 @@
 {
-  "name": "Polar Vortex [CR]",
+  "name": "Polar Vortex",
   "system": {
     "origin": "",
     "effect": "Target: Your Pokémon\nEffect: While this Stratagem is bound, the target may activate Moves and Abilities as if they were in a Hail Weather Condition. In Hail Weather Conditions, the target gains +10 Initiative and deal a Tick of HP to a foe when their Damaging Ice-Type Moves trigger an Effect Range.",
@@ -55,14 +55,16 @@
     },
     "prerequisites": [
       "Type-Linked Skill at Adept",
-      "Glacial Floe [CR]"
+      "Glacial Floe"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ice) [CR]",
+    "class": "Type Ace (Ice)",
     "name": "Polar Vortex",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "polar-vortex"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

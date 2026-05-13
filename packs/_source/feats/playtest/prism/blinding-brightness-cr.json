@@ -1,5 +1,5 @@
 {
-  "name": "Blinding Brightness [CR]",
+  "name": "Blinding Brightness",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Dazzling and Illuminate Abilites.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Prism [CR]",
-    "name": "Blinding Brightness [CR]"
+    "class": "Prism",
+    "name": "Blinding Brightness [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "blinding-brightness"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

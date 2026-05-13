@@ -1,6 +1,6 @@
 {
   "folder": "w35DF6VSIfHAuHeM",
-  "name": "Fey Power [CR]",
+  "name": "Fey Power",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -57,12 +57,14 @@
       "bind": true
     },
     "prerequisites": [
-      "Fairy Lights [CR]",
+      "Fairy Lights",
       "Type-Linked Skill at Expert"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fairy) [CR]"
+    "class": "Type Ace (Fairy)",
+    "contentSet": "class-rework",
+    "replacesSlug": "fey-power"
   },
   "effects": [],
   "flags": {

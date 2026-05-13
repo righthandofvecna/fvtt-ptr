@@ -1,5 +1,5 @@
 {
-  "name": "Double Shot [CR]",
+  "name": "Double Shot",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You make a Ranged Struggle Attack, with the following changes:\n- The Move gains +2 AC.\n- The Move gains the Double Strike Keyword.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Marksman [CR]",
-    "name": "Double Shot [CR]"
+    "class": "Marksman",
+    "name": "Double Shot [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "double-shot"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

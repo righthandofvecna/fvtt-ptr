@@ -1,5 +1,5 @@
 {
-  "name": "Shocking Speed [CR]",
+  "name": "Shocking Speed",
   "system": {
     "origin": "",
     "effect": "You may activate this Feature to have your Electric-Type Pokémon may use an Electric-Type Move with a Frequency of At-Will as if it had Priority (Advanced).",
@@ -53,14 +53,16 @@
     },
     "prerequisites": [
       "Type-Linked Skill at Expert",
-      "High Voltage [CR]"
+      "High Voltage"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Electric) [CR]",
+    "class": "Type Ace (Electric)",
     "name": "Shocking Speed",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "shocking-speed"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

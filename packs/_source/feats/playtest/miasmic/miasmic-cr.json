@@ -1,5 +1,5 @@
 {
-  "name": "Miasmic [CR]",
+  "name": "Miasmic",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Acid and Clear Smog.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Miasmic [CR]",
-    "name": "Miasmic [CR]"
+    "class": "Miasmic",
+    "name": "Miasmic [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "miasmic"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

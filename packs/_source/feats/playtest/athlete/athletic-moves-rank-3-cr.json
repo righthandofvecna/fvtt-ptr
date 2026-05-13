@@ -1,5 +1,5 @@
 {
-  "name": "Athletic Moves Rank 3 [CR]",
+  "name": "Athletic Moves Rank 3",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower.\nRank 1: Blind, Block, Slam, Strenght\nRank 2: Body Slam, Take Down, Extreme Speed\nRank 3: Mega Kick, Facade, Retaliate",
@@ -57,8 +57,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Athlete [CR]",
-    "name": "Athletic Moves [CR]Rank 1 [CR]"
+    "class": "Athlete",
+    "name": "Athletic Moves [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "athletic-moves-rank-3"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

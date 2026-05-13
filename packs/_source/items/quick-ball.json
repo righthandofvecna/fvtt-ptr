@@ -58,7 +58,9 @@
     "automation": [],
     "name": "Quick Ball",
     "useCount": 0,
-    "modifier": -25
+    "modifier": -25,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/quick ball.webp",

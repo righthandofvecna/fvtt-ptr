@@ -1,5 +1,5 @@
 {
-  "name": "Earthen Bond [CR]",
+  "name": "Earthen Bond",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Tremorsense and Groundshaper Capabilities, and you gain Naturewalk for Cave, Mountain and Desert.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Earth Shaker [CR]",
-    "name": "Earthen Bond [CR]"
+    "class": "Earth Shaker",
+    "name": "Earthen Bond [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "earthen-bond"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

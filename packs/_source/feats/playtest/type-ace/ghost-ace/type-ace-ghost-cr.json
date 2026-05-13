@@ -1,5 +1,5 @@
 {
-  "name": "Type Ace (Ghost) [CR]",
+  "name": "Type Ace (Ghost)",
   "system": {
     "origin": "",
     "effect": "Target: Your Pokémon with at least 2 Tutor Points remaining.\nEffect: The target loses 2 Tutor Points and learns the Last Chance or Type Strategist Ability for your Chosen Type. You may target a Pokémon only once with Type Ace.\n@Embed[Compendium.ptu.abilities.Item.jhOa5RNWvY7t958b] @Embed[Compendium.ptu.abilities.Item.Rp2iYtEMxDsbRm0g]",
@@ -65,7 +65,9 @@
     "class": "",
     "name": "Type Ace",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "type-ace-ghost"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",

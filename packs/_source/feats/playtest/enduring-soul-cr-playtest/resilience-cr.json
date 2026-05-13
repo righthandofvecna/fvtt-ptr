@@ -1,6 +1,6 @@
 {
   "folder": "cwHgKZ5JJwLWPzJM",
-  "name": "Resilience [CR]",
+  "name": "Resilience",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -54,11 +54,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Enduring Soul [CR]"
+      "Enduring Soul"
     ],
     "notes": "",
     "free": false,
-    "class": "Enduring Soul [CR]"
+    "class": "Enduring Soul",
+    "contentSet": "class-rework",
+    "replacesSlug": "resilience"
   },
   "effects": [],
   "flags": {

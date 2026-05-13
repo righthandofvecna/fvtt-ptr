@@ -1,5 +1,5 @@
 {
-  "name": "The Cold Never Bothered Me Anyway [CR]",
+  "name": "The Cold Never Bothered Me Anyway",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Naturewalk (Tundra) Capability, are immune to being Frozen, and do not lose Hit Points from Hail.",
@@ -81,8 +81,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Frost Touched [CR]",
-    "name": "The Cold Never Bothered Me Anyway [CR]"
+    "class": "Frost Touched",
+    "name": "The Cold Never Bothered Me Anyway [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "the-cold-never-bothered-me-anyway"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

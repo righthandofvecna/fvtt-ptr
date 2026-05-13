@@ -1,5 +1,5 @@
 {
-  "name": "Critical Moment [CR]",
+  "name": "Critical Moment",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokemon with [Training] Features applied\nEffect: The bonuses from your Pokemon’s [Training] are tripled until the end of your next turn.\n@UUID[Item.HuC1TXnposDVE87A]",
@@ -57,8 +57,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Ace Trainer [CR]",
-    "name": "Critical Moment [CR]"
+    "class": "Ace Trainer",
+    "name": "Critical Moment [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "critical-moment"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

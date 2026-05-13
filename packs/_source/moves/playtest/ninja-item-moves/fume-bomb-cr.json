@@ -1,6 +1,6 @@
 {
   "folder": "LYUraCjoNX1k9wjl",
-  "name": "Fume Bomb [CR]",
+  "name": "Fume Bomb",
   "type": "move",
   "_id": "qWhz5Z5CCjZ1I4ma",
   "img": "systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
@@ -69,7 +69,9 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "fume-bomb"
   },
   "effects": [],
   "sort": 0,

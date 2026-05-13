@@ -1,5 +1,5 @@
 {
-  "name": "World of Darkness [CR]",
+  "name": "World of Darkness",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the encounter. All targets without Darkvision attacking from or into the Shifting Darkness receive a -3 penalty to Accuracy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability.",
@@ -82,8 +82,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Shade Caller [CR]",
-    "name": "World of Darkness [CR]"
+    "class": "Shade Caller",
+    "name": "World of Darkness [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "world-of-darkness"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

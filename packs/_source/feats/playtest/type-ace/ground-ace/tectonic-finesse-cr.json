@@ -1,6 +1,6 @@
 {
   "folder": "mgQuQp95v3EdrKC1",
-  "name": "Tectonic Finesse [CR]",
+  "name": "Tectonic Finesse",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -56,11 +56,13 @@
     },
     "prerequisites": [
       "Type-Linked Skill at Master Rank",
-      "Geothermal Energy [CR]"
+      "Geothermal Energy"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ground) [CR]"
+    "class": "Type Ace (Ground)",
+    "contentSet": "class-rework",
+    "replacesSlug": "tectonic-finesse"
   },
   "effects": [],
   "flags": {

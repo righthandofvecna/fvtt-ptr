@@ -20,7 +20,7 @@
       }
     ],
     "enabled": true,
-    "slug": "g-max-bolt-crash",
+    "slug": "g-max-volt-crash",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -77,7 +77,9 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 2800000,

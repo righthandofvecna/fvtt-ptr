@@ -1,5 +1,5 @@
 {
-  "name": "Moving Wall [CR]",
+  "name": "Moving Wall",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Battle Armor and the Bodyguard Abilites.\nBonus: When you use and resolve Bodyguard, the foe whose attack triggered Bodyguard is Challenged until the end of your next turn.",
@@ -81,8 +81,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Fortress [CR]",
-    "name": "Moving Wall [CR]"
+    "class": "Fortress",
+    "name": "Moving Wall [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "moving-wall"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

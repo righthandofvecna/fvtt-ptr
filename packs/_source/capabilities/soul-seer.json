@@ -49,7 +49,9 @@
     "ap": {
       "cost": 0,
       "bind": false
-    }
+    },
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

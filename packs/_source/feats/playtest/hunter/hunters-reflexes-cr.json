@@ -1,5 +1,5 @@
 {
-  "name": "Hunter's Reflexes [CR]",
+  "name": "Hunter's Reflexes",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your attacks always consider you to be adjacent to your target for the purposes of benefiting from your Pokémon’s Teamwork Ability, and count as Melee attacks for the purposes of triggering their Pack Hunt Ability.",
@@ -16,7 +16,7 @@
       }
     ],
     "enabled": true,
-    "slug": "hunter-s-reflexes-cr",
+    "slug": "hunters-reflexes-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Hunter [CR]",
-    "name": "Hunter's Reflexes [CR]"
+    "class": "Hunter",
+    "name": "Hunter's Reflexes [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "hunters-reflexes"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

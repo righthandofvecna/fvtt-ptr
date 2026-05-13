@@ -1,0 +1,79 @@
+{
+  "name": "Volatile Bomb",
+  "type": "capability",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "The Pokémon loses 1 less spirit from using Self-Destruct or Explosion.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "volatile-bomb-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:49.972Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "volatile-bomb"
+  },
+  "effects": [],
+  "folder": "4yLFZsM42OJ7FDLn",
+  "flags": {},
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1693042188180,
+    "modifiedTime": 1778200849992,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "_id": "kRSSXHrlw9CbaRRt",
+  "sort": 400000,
+  "ownership": {
+    "default": 0
+  }
+}

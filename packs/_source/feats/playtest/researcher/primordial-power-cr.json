@@ -1,5 +1,5 @@
 {
-  "name": "Primordial Power [CR]",
+  "name": "Primordial Power",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Fossil Pokémon with at least 2 Tutor Points remaining\nEffect: The target loses 2 Tutor Points and gains your choice of the Solid Rock or Mountain Peak Ability. You may only target a Pokemon once with Primordial Power.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Primordial Power [CR]"
+    "class": "Researcher",
+    "name": "Primordial Power [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "primordial-power"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

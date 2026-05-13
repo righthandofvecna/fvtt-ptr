@@ -1,5 +1,5 @@
 {
-  "name": "Don't Look Away [CR]",
+  "name": "Don't Look Away",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You or your Pokémon with Pack Hunt or Teamwork hits with an Attack of Opportunity or with any Move while Hidden\nEffect: The hit foe loses a Tick of Hit Points, and is Slowed for 1 round. Don’t Look Away may be triggered once per round.",
@@ -16,7 +16,7 @@
       }
     ],
     "enabled": true,
-    "slug": "don-t-look-away-cr",
+    "slug": "dont-look-away-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Hunter [CR]",
-    "name": "Don’t Look Away [CR]"
+    "class": "Hunter",
+    "name": "Don’t Look Away [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "dont-look-away"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

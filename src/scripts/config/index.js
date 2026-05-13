@@ -423,5 +423,30 @@ export const PTUCONFIG = {
   Capabilities: {
     numericNonMovement: ["highJump", "longJump", "power", "weightClass", "throwingRange"],
     stringArray: ["naturewalk", "other"],
+  },
+  /**
+   * Content sets that can override base PTU content.
+   * Priority order: higher number = higher priority, wins over lower-priority versions.
+   * "PTU" is the implicit base (contentSet = "") and is not listed here.
+   */
+  contentSets: {
+    "class-rework": {
+      label: "PTU.ContentSet.ClassRework",
+      priority: 2,
+      suffix: "-cr",
+      removals: []
+    },
+    "weather-playtest": {
+      label: "PTU.ContentSet.WeatherPlaytest",
+      priority: 3,
+      suffix: "-wp",
+      removals: []
+    },
+    "friendship-spirit": {
+      label: "PTU.ContentSet.FriendshipSpirit",
+      priority: 4,
+      suffix: "-fs",
+      removals: []
+    }
   }
 }

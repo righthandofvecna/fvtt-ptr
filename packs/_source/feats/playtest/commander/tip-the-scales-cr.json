@@ -1,5 +1,5 @@
 {
-  "name": "Tip The Scales [CR]",
+  "name": "Tip The Scales",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You give [Orders] that have Targets.\nEffect: All targets of the [Orders] gain +1 Combat Stage in their choice of Attack, Special Attack, or Speed, and +1 Combat Stage in Defense or Special Defense. Different targets may choose different stats.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Commander [CR]",
-    "name": "Tip The Scales [CR]"
+    "class": "Commander",
+    "name": "Tip The Scales [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "tip-the-scales"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,6 +1,6 @@
 {
   "folder": "erOegeCoXbG55V50",
-  "name": "Oil Slick [CR]",
+  "name": "Oil Slick",
   "type": "item",
   "_id": "Lg2H85KsccKeve6F",
   "img": "systems/ptu/static/images/item_icons/generic item.webp",
@@ -56,7 +56,9 @@
     "cost": "500",
     "consumable": 0,
     "subtype": "",
-    "container": false
+    "container": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "oil-slick"
   },
   "effects": [],
   "sort": 0,

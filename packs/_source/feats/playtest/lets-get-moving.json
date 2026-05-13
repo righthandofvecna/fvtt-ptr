@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "let-s-get-moving",
+    "slug": "lets-get-moving",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -57,7 +57,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Hustler"
+    "class": "Hustler",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

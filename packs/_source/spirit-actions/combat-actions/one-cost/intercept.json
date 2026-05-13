@@ -52,7 +52,9 @@
     },
     "cost": "1",
     "trigger": "At-Will",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "E48L5So0QCNB2H65",
   "effects": [],

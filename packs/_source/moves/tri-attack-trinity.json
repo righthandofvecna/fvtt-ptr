@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "tri-attack",
+    "slug": "tri-attack-trinity",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -70,7 +70,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "4lOlChzAwzi1lG9v",
   "effects": [],

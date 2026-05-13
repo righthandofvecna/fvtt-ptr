@@ -1,5 +1,5 @@
 {
-  "name": "Glamour Mastery [CR]",
+  "name": "Glamour Mastery",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose two of Magic Guard, Magic Bounce, and Multiscale. You gain the Chosen Abilities.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Glamour Weaver [CR]",
-    "name": "Glamour Mastery [CR]"
+    "class": "Glamour Weaver",
+    "name": "Glamour Mastery [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "glamour-mastery"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

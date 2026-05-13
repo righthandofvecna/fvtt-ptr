@@ -1,0 +1,97 @@
+{
+  "name": "Power Conduit",
+  "system": {
+    "origin": " [F&S Playtest]",
+    "effect": "Target: Channeled Pokémon \nChoose One Effect:\n»» Trade all Combat Stages for a single Stat between two Channeled Pokémon\n»» Transfer a Coat from one Channeled Pokémon to another.\n»» Give up a use of Scene or Daily Move from one willing Channeled Pokémon to regain use of a Scene Move which another Channeled Pokémon has used. This effect may only refresh a Move for each Pokémon once per Scene.\n»» Trade Spirit between two Channeled Pokémon.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "power-conduit-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.446Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Playtest",
+      "F&S"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "2 AP - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": false
+    },
+    "prerequisites": [
+      "Channeler",
+      "Adept Intuition"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Channeler",
+    "name": "Power Conduit",
+    "useCount": 0,
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "power-conduit"
+  },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "prereqBackup": "Channeler, Adept Intuition"
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368078948,
+    "modifiedTime": 1778200830478,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "folder": "NlEB7XJnDWyGbZnQ",
+  "_id": "WOzcMeW9ZAp9ojr9",
+  "sort": 2800000,
+  "ownership": {
+    "default": 0
+  }
+}

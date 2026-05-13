@@ -16,7 +16,7 @@
       }
     ],
     "enabled": true,
-    "slug": "demoralized",
+    "slug": "effect-demoralized",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -43,7 +43,9 @@
       "overriddenBy": []
     },
     "overrides": [],
-    "persistent": null
+    "persistent": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {},

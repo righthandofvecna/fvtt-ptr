@@ -1,5 +1,5 @@
 {
-  "name": "Type Methodology [CR]",
+  "name": "Type Methodology",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: See Effect\nEffect: Effects depend on whether your Pokémon has the Tolerance or Exploit ability.\n- Whenever your Pokémon with Tolerance takes Super-Effective damage from a Tagged foe, your Pokémon may spend 2 Momentum to Resist that attack one step.\n- Whenever your Pokémon with Exploit deals Resisted damage to a Tagged foe, your Pokémon may spend 2 Momentum to increase the effectiveness of the attack one step.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Duelist [CR]",
-    "name": "Type Methodology [CR]"
+    "class": "Duelist",
+    "name": "Type Methodology [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "type-methodology"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

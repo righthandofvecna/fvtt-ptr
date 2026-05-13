@@ -65,7 +65,9 @@
     "container": false,
     "automation": [],
     "name": "Full Incense",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/full incense.webp",

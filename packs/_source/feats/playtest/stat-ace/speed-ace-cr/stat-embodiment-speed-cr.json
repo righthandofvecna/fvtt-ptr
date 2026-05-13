@@ -1,6 +1,6 @@
 {
   "folder": "5f17VczTuQGcOBWv",
-  "name": "Stat Embodiment (Speed) [CR]",
+  "name": "Stat Embodiment (Speed)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -60,7 +60,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Speed) [CR]"
+    "class": "Stat Ace (Speed)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-embodiment-speed"
   },
   "effects": [],
   "flags": {

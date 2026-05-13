@@ -1,5 +1,5 @@
 {
-  "name": "Lucky Clover Grand Finale [CR]",
+  "name": "Lucky Clover Grand Finale",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Moonblast and Aromatic Mist.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Glamour Weaver [CR]",
-    "name": "Lucky Clover Grand Finale [CR]"
+    "class": "Glamour Weaver",
+    "name": "Lucky Clover Grand Finale [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "lucky-clover-grand-finale"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

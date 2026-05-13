@@ -1,5 +1,5 @@
 {
-  "name": "Coordinator [CR]",
+  "name": "Coordinator",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your Pokémon may reroll a single Appeal Roll or Damage Roll. This Ability may be used only once per Contest, and once per Pokémon per Scene.",
@@ -57,8 +57,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Coordinator [CR]",
-    "name": "Coordinator [CR]"
+    "class": "Coordinator",
+    "name": "Coordinator [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "coordinator"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

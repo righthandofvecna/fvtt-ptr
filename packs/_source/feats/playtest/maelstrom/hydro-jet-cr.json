@@ -1,5 +1,5 @@
 {
-  "name": "Hydro Jet [CR]",
+  "name": "Hydro Jet",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You use a damaging single target Water-Type Move\nEffect: Hydro Jet’s effect depends on if the triggering Move was Melee or Ranged.\n- If Melee, the Move gains the Pass keyword and you may change direction during the four meters of Pass (but may still only target any given Pokémon or Trainer once).\n- If Ranged, the Move becomes a Line 4 instead of its usual range.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Maelstrom [CR]",
-    "name": "Hydro Jet [CR]"
+    "class": "Maelstrom",
+    "name": "Hydro Jet [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "hydro-jet"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

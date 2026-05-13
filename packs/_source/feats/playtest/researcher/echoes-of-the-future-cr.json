@@ -1,5 +1,5 @@
 {
-  "name": "Echoes of the Future [CR]",
+  "name": "Echoes of the Future",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You or your Pokémon make a roll\nEffect: You may roll twice and keep the best result.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Echoes of the Future [CR]"
+    "class": "Researcher",
+    "name": "Echoes of the Future [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "echoes-of-the-future"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

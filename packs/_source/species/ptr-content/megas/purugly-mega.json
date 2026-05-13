@@ -490,7 +490,7 @@
         "type": "body"
       }
     },
-    "slug": "purugly",
+    "slug": "purugly-mega",
     "rules": [],
     "source": {
       "value": "PTR Core Dex"
@@ -500,7 +500,9 @@
       "1": "Fairy",
       "2": ""
     },
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "LCXOG6QHNh9gd0Nv",

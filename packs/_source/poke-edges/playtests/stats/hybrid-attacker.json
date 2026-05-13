@@ -54,7 +54,9 @@
       "Do not have Hybrid Defender"
     ],
     "cost": 0,
-    "category": ""
+    "category": "",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

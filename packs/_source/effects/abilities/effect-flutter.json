@@ -36,7 +36,7 @@
       }
     ],
     "enabled": true,
-    "slug": "evasion-2",
+    "slug": "effect-flutter",
     "schema": {
       "version": 0.112,
       "lastMigration": {
@@ -71,7 +71,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "HTNFGIxy9zsCONjI",

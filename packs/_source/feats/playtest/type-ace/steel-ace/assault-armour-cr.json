@@ -1,6 +1,6 @@
 {
   "folder": "RMAMRG8asLGzYdN3",
-  "name": "Assault Armour [CR]",
+  "name": "Assault Armour",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -57,12 +57,14 @@
       "bind": true
     },
     "prerequisites": [
-      "Polished Shine [CR]",
+      "Polished Shine",
       "Type-Linked Skill at Expert Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Steel) [CR]"
+    "class": "Type Ace (Steel)",
+    "contentSet": "class-rework",
+    "replacesSlug": "assault-armour"
   },
   "effects": [],
   "flags": {

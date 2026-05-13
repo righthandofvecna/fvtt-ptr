@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "let-s-be-friends",
+    "slug": "lets-be-friends",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -55,7 +55,9 @@
     "class": "Style Expert (Cute)",
     "name": "Let's Be Friends!",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

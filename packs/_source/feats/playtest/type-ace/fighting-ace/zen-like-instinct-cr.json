@@ -1,6 +1,6 @@
 {
   "folder": "2JCGsdCpOqDxjk8e",
-  "name": "Zen-Like Instinct [CR]",
+  "name": "Zen-Like Instinct",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Bend Like Reeds [CR]",
+      "Bend Like Reeds",
       "Type-Linked Skill at Master"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fighting) [CR]"
+    "class": "Type Ace (Fighting)",
+    "contentSet": "class-rework",
+    "replacesSlug": "zen-like-instinct"
   },
   "effects": [],
   "flags": {

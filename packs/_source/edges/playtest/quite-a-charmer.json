@@ -54,7 +54,9 @@
       "Adept Charm"
     ],
     "notes": "",
-    "free": false
+    "free": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

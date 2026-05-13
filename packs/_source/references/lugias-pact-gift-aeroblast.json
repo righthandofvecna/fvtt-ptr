@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "lugia-s-pact-gift-aeroblast",
+    "slug": "lugias-pact-gift-aeroblast",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +25,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "t9m4Sty2XqVzSiGR",
   "effects": [],

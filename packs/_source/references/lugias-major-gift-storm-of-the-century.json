@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "lugia-s-major-gift-storm-of-the-century",
+    "slug": "lugias-major-gift-storm-of-the-century",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +25,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "5pwIdUM1B6m55V7s",
   "effects": [],

@@ -1,5 +1,5 @@
 {
-  "name": "Devious [CR]",
+  "name": "Devious",
   "system": {
     "origin": "",
     "effect": "Trigger - Your Dark-Type Pokémon uses a Move with the Social keyword.\nEffect: Your Pokémon may immediately use a naturally Dark-Typed Status-Class Move or a Move with the Social keyword as a Free Action. This must be a different Move than the triggering Move, and must follow all Frequency limitations. Devious may be used only once per Scene per Pokémon. While a New Moon Weather Condition is present, this Feature's Frequency becomes \"EOT\", and the Move used through the Feature may be used ignoring Frequency.",
@@ -53,14 +53,16 @@
     },
     "prerequisites": [
       "Type-Linked Skill at Expert",
-      "Life Isn't Fair [CR]"
+      "Life Isn't Fair"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Dark) [CR]",
+    "class": "Type Ace (Dark)",
     "name": "Devious",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "devious"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

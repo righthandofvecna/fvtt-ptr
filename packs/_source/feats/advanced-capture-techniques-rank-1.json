@@ -252,7 +252,9 @@
     "class": "Capture Specialist",
     "automation": [],
     "name": "Advanced Capture Techniques Rank 1",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

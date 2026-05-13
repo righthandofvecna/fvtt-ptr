@@ -1,5 +1,5 @@
 {
-  "name": "Push Buttons [CR]",
+  "name": "Push Buttons",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your Social Moves’ Frequency is not Expended if they miss. You gain the Demoralize Edge, even if you do not meet the prerequisites. Its effects for Status Moves now trigger on 18+, and Social Moves that activate this “Crit” Range cause their targets to lose a tick of Hit Points. If you already have Demoralize, you may gain another Edge for which you meet the prerequisites.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Provocateur [CR]",
-    "name": "Push Buttons [CR]"
+    "class": "Provocateur",
+    "name": "Push Buttons [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "push-buttons"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

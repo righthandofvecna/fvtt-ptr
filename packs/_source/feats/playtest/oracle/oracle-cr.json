@@ -1,5 +1,5 @@
 {
-  "name": "Oracle [CR]",
+  "name": "Oracle",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Roll a number of d20s equal to half your Perception Skill Rank and note the results as your Prophecies. Whenever a d20 roll is made by any creature, you may force the result of that roll to be any of the Prophecies you generated as an Interrupt Action. Unused Prophecies disappear after an Extended Rest.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Oracle [CR]",
-    "name": "Oracle [CR]"
+    "class": "Oracle",
+    "name": "Oracle [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "oracle"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

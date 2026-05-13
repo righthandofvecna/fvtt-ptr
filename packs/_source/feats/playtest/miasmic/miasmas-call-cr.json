@@ -1,5 +1,5 @@
 {
-  "name": "Miasma's Call [CR]",
+  "name": "Miasma's Call",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the moves Acid Armor and Sludge Bomb.\nBonus: You learn the move Acid Rain.",
@@ -16,7 +16,7 @@
       }
     ],
     "enabled": true,
-    "slug": "miasma-s-call-cr",
+    "slug": "miasmas-call-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Miasmic [CR]",
-    "name": "Miasma’s Call [CR]"
+    "class": "Miasmic",
+    "name": "Miasma’s Call [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "miasmas-call"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

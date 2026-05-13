@@ -1,5 +1,5 @@
 {
-  "name": "Magnetize [CR]",
+  "name": "Magnetize",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Magnetic Capability and may use this magnetism to stick to surfaces with significant metal content (ex: metal walls obviously, concrete with metal I-beams inside, etc). You may use your Overland to  traverse any such surfaces, even if that means walking vertically up a wall or upside down on a ceiling. You may choose not to be Pushed when on such a surface.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Spark Master [CR]",
-    "name": "Magnetize [CR]"
+    "class": "Spark Master",
+    "name": "Magnetize [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "magnetize"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

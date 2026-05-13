@@ -501,7 +501,7 @@
         "type": "body"
       }
     },
-    "slug": "pinsir",
+    "slug": "pinsir-mega",
     "rules": [],
     "type": {
       "0": "Bug",
@@ -518,7 +518,9 @@
       "Alola",
       "Kanto",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

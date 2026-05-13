@@ -1,5 +1,5 @@
 {
-  "name": "Sparkle [CR]",
+  "name": "Sparkle",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Tri-Attack and Weather Ball.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Prism [CR]",
-    "name": "Sparkle [CR]"
+    "class": "Prism",
+    "name": "Sparkle [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "sparkle"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

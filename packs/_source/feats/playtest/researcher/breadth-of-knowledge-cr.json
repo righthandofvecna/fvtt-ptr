@@ -1,5 +1,5 @@
 {
-  "name": "Breadth of Knowledge [CR]",
+  "name": "Breadth of Knowledge",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain three Edges for which you qualify. These Edges must be used to gain a Skill Edge with an Education Skill, or to gain an Edge that has an Education Skill as a Prerequisite that you meet.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Breadth of Knowledge [CR]"
+    "class": "Researcher",
+    "name": "Breadth of Knowledge [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "breadth-of-knowledge"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

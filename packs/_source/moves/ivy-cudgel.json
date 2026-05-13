@@ -76,7 +76,9 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

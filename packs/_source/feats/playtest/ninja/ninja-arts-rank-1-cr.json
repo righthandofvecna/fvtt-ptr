@@ -1,5 +1,5 @@
 {
-  "name": "Ninja Arts Rank 1 [CR]",
+  "name": "Ninja Arts Rank 1",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn two of the following Moves:\nDouble Team, Substitute, Toxic, Venom Drench, Trick, Role Play, and Mat Block.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Ninja [CR]",
-    "name": "Ninja Arts [CR]Rank 1 [CR]"
+    "class": "Ninja",
+    "name": "Ninja Arts [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "ninja-arts-rank-1"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

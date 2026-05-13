@@ -60,7 +60,9 @@
     "notes": "",
     "free": false,
     "name": "Swimmer",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",

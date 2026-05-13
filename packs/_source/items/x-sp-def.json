@@ -58,7 +58,9 @@
     "container": false,
     "automation": [],
     "name": "X Sp. Def.",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/x sp. def..webp",

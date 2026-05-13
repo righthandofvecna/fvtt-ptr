@@ -52,7 +52,9 @@
     },
     "cost": "2",
     "trigger": "When you're about to faint",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "93qZOZHrm18pdrKd",
   "effects": [],

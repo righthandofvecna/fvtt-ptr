@@ -8,6 +8,7 @@ import { insurgenceData, sageData, uraniumData } from "../config/data/fangame-sp
 import { measureDistances } from "../../module/canvas/helpers.js"
 import { registerGithubSync, ptr1eGH } from "../../module/apps/github-sync/index.js"
 import TokenRulerPTU from '../../module/canvas/ruler.js'
+import { ContentSetRedirects } from "./content-set-redirects.js"
 
 export const Init = {
     listen() {
@@ -85,18 +86,19 @@ export const Init = {
                 systemId: "ptu",
                 apiUrl: "https://vecna.ddns.net/ptr1e-github-foundry-sync",
                 documentTypes: {
-                    move:        "ptu.moves",
-                    ability:     "ptu.abilities",
-                    feat:        "ptu.feats",
-                    edge:        "ptu.edges",
-                    effect:      "ptu.effects",
-                    condition:   "ptu.effects",
-                    species:     "ptu.species",
-                    item:        "ptu.items",
-                    capability:  "ptu.capabilities",
-                    pokeedge:    "ptu.poke-edges",
-                    reference:   "ptu.references",
+                    move:         "ptu.moves",
+                    ability:      "ptu.abilities",
+                    feat:         "ptu.feats",
+                    edge:         "ptu.edges",
+                    effect:       "ptu.effects",
+                    condition:    "ptu.effects",
+                    species:      "ptu.species",
+                    item:         "ptu.items",
+                    capability:   "ptu.capabilities",
+                    pokeedge:     "ptu.poke-edges",
+                    reference:    "ptu.references",
                     spiritaction: "ptu.spirit-actions",
+                    journal:      "ptu.journals",
                 },
                 // Reuse PTU's existing devMode setting rather than registering a new one
                 devModeSettingKey: "devMode",
@@ -117,6 +119,9 @@ export const Init = {
             // Create and populate initial game.ptu interface
             GamePTU.onInit();
         })
+
+        // Register UUID redirects for active content sets (must run before ready)
+        ContentSetRedirects.listen();
         Hooks.on("canvasInit", function () {
             // Extend Diagonal Measurement
             foundry.grid.SquareGrid.prototype.measureDistances = measureDistances;

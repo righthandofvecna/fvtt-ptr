@@ -69,7 +69,9 @@
     "consumable": 0,
     "subtype": "pokeball",
     "container": false,
-    "modifier": 0
+    "modifier": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,

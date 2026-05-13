@@ -33,7 +33,7 @@
       }
     ],
     "enabled": true,
-    "slug": "last-chance",
+    "slug": "shadow-call",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -75,7 +75,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": null,

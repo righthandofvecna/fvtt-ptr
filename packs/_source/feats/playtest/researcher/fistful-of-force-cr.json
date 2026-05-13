@@ -1,5 +1,5 @@
 {
-  "name": "Fistful of Force [CR]",
+  "name": "Fistful of Force",
   "system": {
     "origin": "Class Rework",
     "effect": "Condition: You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force.\nEffect: You may destroy the Shard to use the Move Judgment. Judgment’s Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Fistful of Force [CR]"
+    "class": "Researcher",
+    "name": "Fistful of Force [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "fistful-of-force"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

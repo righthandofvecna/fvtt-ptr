@@ -86,7 +86,9 @@
         "RoundStart": "Start of Round"
       }
     },
-    "ResetEOT": "Reset EOT Tracking"
+    "ResetEOT": "Reset EOT Tracking",
+    "ContentSet": "Content Set",
+    "ReplacesSlug": "Replaces Slug"
   },
 
   "SPECIES.Height": "Height",
@@ -978,6 +980,10 @@
         "XpToTrainerPool": {
           "Name": "Route Combat XP to Trainer Pool",
           "Hint": "When enabled, XP awarded at the end of combat is sent as discrete chunks to the owning trainer's XP pool instead of directly to the Pokémon. Trainers can then assign each chunk to one of their Pokémon."
+        },
+        "DexOnScan": {
+          "Name": "Update PokéDex on Scan",
+          "Hint": "When enabled, scanning a Pokémon with the PokéDex will mark it as Seen in the trainer's PokéDex and announce the scan in chat."
         }
       },
       "Generation": {
@@ -1222,6 +1228,12 @@
         "ClearFilters": "Clear Filters",
         "AndLabel": "All of above",
         "OrLabel": "Any of above"
+      },
+      "ContentSets": {
+        "Title": "Content Sets",
+        "Hint": "Content Sets are collections of Class Features, Moves, etc, that can be toggled on and off in the Compendium Browser based on which playtest content you want to include in your game.",
+        "EnableFiltering": "Enable filtering by Content Sets (if disabled, you'll see multiple copies of each Item if multiple Content Sets made changes to it)",
+        "ReloadRequired": "Content Set settings changed — reload to apply changes."
       }
     },
     "Alliance": {
@@ -1298,6 +1310,12 @@
       "Priority": "Priority",
       "Reaction": "Reaction",
       "Interrupt": "Interrupt"
+    },
+    "ContentSet": {
+      "None": "Original PTU",
+      "ClassRework": "Class Rework",
+      "WeatherPlaytest": "Weather Playtest",
+      "FriendshipSpirit": "Friendship & Spirit Playtest"
     }
   },
 

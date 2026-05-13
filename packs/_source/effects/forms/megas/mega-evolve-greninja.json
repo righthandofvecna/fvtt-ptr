@@ -45,7 +45,7 @@
       }
     ],
     "enabled": true,
-    "slug": "mega-evolve-delphox",
+    "slug": "mega-evolve-greninja",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -73,7 +73,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

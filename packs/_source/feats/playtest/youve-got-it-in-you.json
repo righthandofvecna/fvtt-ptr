@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "you-ve-got-it-in-you",
+    "slug": "youve-got-it-in-you",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -56,7 +56,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Mystic"
+    "class": "Mystic",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

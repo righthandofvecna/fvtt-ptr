@@ -1,5 +1,5 @@
 {
-  "name": "Prescience [CR]",
+  "name": "Prescience",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You are hit by an attack\nEffect: The attack instead misses.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Oracle [CR]",
-    "name": "Prescience [CR]"
+    "class": "Oracle",
+    "name": "Prescience [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "prescience"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

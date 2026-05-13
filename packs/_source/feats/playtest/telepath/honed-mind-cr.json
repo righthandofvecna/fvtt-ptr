@@ -1,5 +1,5 @@
 {
-  "name": "Honed Mind [CR]",
+  "name": "Honed Mind",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Calm Mind, Mind Reader, and Miracle Eye.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Telepath [CR]",
-    "name": "Honed Mind [CR]"
+    "class": "Telepath",
+    "name": "Honed Mind [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "honed-mind"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

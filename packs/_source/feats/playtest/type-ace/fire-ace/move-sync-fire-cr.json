@@ -1,6 +1,6 @@
 {
   "folder": "kqDGppFdQVcjw8uO",
-  "name": "Move Sync (Fire) [CR]",
+  "name": "Move Sync (Fire)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fire) [CR]"
+    "class": "Type Ace (Fire)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-fire"
   },
   "effects": [],
   "flags": {

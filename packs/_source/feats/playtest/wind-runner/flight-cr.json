@@ -1,5 +1,5 @@
 {
-  "name": "Flight [CR]",
+  "name": "Flight",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain a Sky Speed equal to your Levitate Speed plus half of the higher of your Acrobatics or Perception Rank for the remainder of the round.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Wind Runner [CR]",
-    "name": "Flight [CR]"
+    "class": "Wind Runner",
+    "name": "Flight [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "flight"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

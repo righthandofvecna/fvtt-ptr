@@ -1,5 +1,5 @@
 {
-  "name": "Robofighter [CR]",
+  "name": "Robofighter",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: As long as this feature is Bound, you can command your Pokébot using a Standard Action rather than a Pokémon turn. Your Pokébots may still only act once a round.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Robofighter [CR]"
+    "class": "Researcher",
+    "name": "Robofighter [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "robofighter"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

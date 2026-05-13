@@ -1,6 +1,6 @@
 {
   "folder": "QoPoCi8w8GC1CwOW",
-  "name": "Move Sync (Ghost) [CR]",
+  "name": "Move Sync (Ghost)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ghost) [CR]"
+    "class": "Type Ace (Ghost)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-ghost"
   },
   "effects": [],
   "flags": {

@@ -1,5 +1,5 @@
 {
-  "name": "Too Spooky [CR]",
+  "name": "Too Spooky",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Pressure or Frighten. You gain the chosen Ability.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Apparition [CR]",
-    "name": "Too Spooky [CR]"
+    "class": "Apparition",
+    "name": "Too Spooky [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "too-spooky"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

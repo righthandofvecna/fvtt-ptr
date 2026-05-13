@@ -1,6 +1,6 @@
 {
   "folder": "laXYP0SFSLCeWOcn",
-  "name": "Arcane Empowerment [CR]",
+  "name": "Arcane Empowerment",
   "type": "move",
   "_id": "jJtmV7xAHo1xz9b3",
   "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
@@ -67,7 +67,9 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "arcane-empowerment"
   },
   "effects": [],
   "sort": 100000,

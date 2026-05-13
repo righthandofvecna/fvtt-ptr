@@ -511,7 +511,7 @@
         "type": "body"
       }
     },
-    "slug": "venusaur",
+    "slug": "venusaur-mega",
     "rules": [],
     "type": {
       "0": "Grass",
@@ -525,7 +525,9 @@
       "Kanto",
       "Kalos",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

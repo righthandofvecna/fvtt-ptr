@@ -1,5 +1,5 @@
 {
-  "name": "Weather Systems [CR]",
+  "name": "Weather Systems",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokemon with at least 2 Tutor Point\nEffect: Your Pokemon loses 2 Tutor Points, and learns\nyour choice of Hail, Rain Dance, Sandstorm, or Sunny Day. The target must be able to learn the chosen Move through Level-Up, TM, or Tutor Moves. If the target has the chosen Move in their Level-Up List, Weather Systems costs no Tutor Points.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Weather Systems [CR]"
+    "class": "Researcher",
+    "name": "Weather Systems [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "weather-systems"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

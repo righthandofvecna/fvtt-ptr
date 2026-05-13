@@ -1,5 +1,5 @@
 {
-  "name": "Signature Technique [CR]",
+  "name": "Signature Technique",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon 1 Tutor Slot remaining\nEffect: The target fills 1 Tutor Slot. Choose one Move on the Target’s Move List. That Move becomes the target’s Signature Technique, and you may apply one of the modifications on the next page to the Move. The Move being modified must fit the category of the modification.\nA Pokémon may only have one Signature Technique at a time; the TS is refunded if the Move is forgotten, or if you choose to make a different Move a Signature Technique.\n> Note: Be sure to give a cool name to your Pokémon’s Signature Technique!",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Ace Trainer [CR]",
-    "name": "Signature Technique [CR]"
+    "class": "Ace Trainer",
+    "name": "Signature Technique [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "signature-technique"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

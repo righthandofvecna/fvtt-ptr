@@ -1,5 +1,5 @@
 {
-  "name": "Raging Winds Rank 1 [CR]",
+  "name": "Raging Winds Rank 1",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may learn three Moves from the list below, marked with the Raging Winds Rank you are gaining or lower.\nRank 1: Air Cutter, Dual Wingbeat, Gust, Tailwind, Wind Dance\nRank 2: Air Slash, Defog, Feather Dance, Tempest, Wind Shear\nRank 3: Brave Bird, Flying Press, Mirror Move, Sky Attack, Hurricane",
@@ -176,8 +176,10 @@
     "prerequisites": [],
     "notes": "",
     "free": false,
-    "class": "Wind Runner [CR]",
-    "name": "Raging Winds [CR]Rank 1 [CR]"
+    "class": "Wind Runner",
+    "name": "Raging Winds [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "raging-winds-rank-1"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

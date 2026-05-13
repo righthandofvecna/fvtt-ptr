@@ -1,0 +1,94 @@
+{
+  "name": "Weaponized Weather",
+  "system": {
+    "origin": "Class Rework",
+    "effect": "You learn the Move @UUID[Compendium.ptu.moves.Item.GWZv0em5fcIPGnFo], and may use it as though it was either Physical or Special.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.GWZv0em5fcIPGnFo"
+      }
+    ],
+    "enabled": true,
+    "slug": "weaponized-weather-wp",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.300Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Playtest",
+      "Weather"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "prerequisites": [
+      "Climatology"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Researcher (Climatology)",
+    "name": "Climatology [CR]",
+    "contentSet": "weather-playtest",
+    "replacesSlug": "weaponized-weather"
+  },
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "type": "feat",
+  "folder": "Ow5iSsvFs5T6mK95",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "createdTime": 1707854214449,
+    "modifiedTime": 1778200831368,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "lu9Y4YUEKDri0cro",
+  "sort": 0
+}

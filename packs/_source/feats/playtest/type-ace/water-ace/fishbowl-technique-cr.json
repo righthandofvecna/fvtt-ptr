@@ -1,5 +1,5 @@
 {
-  "name": "Fishbowl Technique [CR]",
+  "name": "Fishbowl Technique",
   "system": {
     "origin": "",
     "effect": "Target: Your Pokémon\nEffect: While this Stratagem is bound, your Pokémon may activate Moves and Abilities as if they were in Rainy Weather.",
@@ -59,10 +59,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Water) [CR]",
+    "class": "Type Ace (Water)",
     "name": "Fishbowl Technique",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "fishbowl-technique"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

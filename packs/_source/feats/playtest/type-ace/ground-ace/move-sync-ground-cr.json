@@ -1,6 +1,6 @@
 {
   "folder": "mgQuQp95v3EdrKC1",
-  "name": "Move Sync (Ground) [CR]",
+  "name": "Move Sync (Ground)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ground) [CR]"
+    "class": "Type Ace (Ground)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-ground"
   },
   "effects": [],
   "flags": {

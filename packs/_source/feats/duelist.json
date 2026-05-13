@@ -59,7 +59,9 @@
     "class": "",
     "name": "Duelist",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",

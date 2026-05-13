@@ -1,6 +1,6 @@
 {
   "folder": "mS7fmuAZxBzZ1J7B",
-  "name": "Inconceivable [CR]",
+  "name": "Inconceivable",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -65,12 +65,14 @@
       "bind": false
     },
     "prerequisites": [
-      "One of the Classic Blunders [CR]",
+      "One of the Classic Blunders",
       "a Provocateur Skill at Expert Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Provocateur [CR]"
+    "class": "Provocateur",
+    "contentSet": "class-rework",
+    "replacesSlug": "inconceivable"
   },
   "effects": [],
   "flags": {

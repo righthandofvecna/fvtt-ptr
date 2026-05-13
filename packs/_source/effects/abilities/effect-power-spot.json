@@ -17,7 +17,7 @@
       }
     ],
     "enabled": true,
-    "slug": "power-spot",
+    "slug": "effect-power-spot",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -45,7 +45,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

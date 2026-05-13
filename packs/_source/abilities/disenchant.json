@@ -64,7 +64,9 @@
     "tier": "",
     "name": "",
     "automation": [],
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "folder": "V0UOlIuCzlpuaONb",

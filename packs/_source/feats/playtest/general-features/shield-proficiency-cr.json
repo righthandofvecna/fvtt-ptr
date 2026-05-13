@@ -1,5 +1,5 @@
 {
-  "name": "Shield Proficiency [CR]",
+  "name": "Shield Proficiency",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: When you have a Shield equipped, you gain +2 Evasion. While you have a Shield readied, you gain an additional +2 Evasion and +5 additional Damage Reduction.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Fortress [CR]",
-    "name": "Shield Proficiency [CR]"
+    "class": "Fortress",
+    "name": "Shield Proficiency [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "shield-proficiency"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

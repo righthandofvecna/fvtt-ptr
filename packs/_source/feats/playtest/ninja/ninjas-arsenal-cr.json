@@ -1,12 +1,12 @@
 {
-  "name": "Ninja's Arsenal [CR]",
+  "name": "Ninja's Arsenal",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may craft an Antidote, Smoke Ball, Caltrops, Toxic Caltrops, Oil Slick, and Shuriken for $100. Starting at Expert Stealth, you may also craft Poison Gas Bombs, Net Bombs, Exploding Knife, or a batch of Blinding Ink for $250.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "ninja-s-arsenal-cr",
+    "slug": "ninjas-arsenal-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Ninja [CR]",
-    "name": "Ninja’s Arsenal [CR]"
+    "class": "Ninja",
+    "name": "Ninja’s Arsenal [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "ninjas-arsenal"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Plainly Perfect [CR]",
+  "name": "Plainly Perfect",
   "system": {
     "origin": "",
     "effect": "Target: Your Pokémon\nEffect: While this Feature is bound, instead of rolling for damage with Normal-Type Moves, your Pokémon acts as if they rolled the maximum value on their Damage Dice Roll. Plainly Perfect only works for the first instance of the Damage Dice Roll on Critical Hits.",
@@ -59,10 +59,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Normal) [CR]",
+    "class": "Type Ace (Normal)",
     "name": "Plainly Perfect",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "plainly-perfect"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

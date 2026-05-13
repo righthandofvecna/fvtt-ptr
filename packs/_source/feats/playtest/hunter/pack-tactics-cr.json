@@ -1,5 +1,5 @@
 {
-  "name": "Pack Tactics [CR]",
+  "name": "Pack Tactics",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon with at least 2 Tutor Points\nEffect: The target loses 2 Tutor Points, and gains the Pack Hunt or Teamwork Ability. You may target a Pokémon with Pack Tactics only once.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Hunter [CR]",
-    "name": "Pack Tactics [CR]"
+    "class": "Hunter",
+    "name": "Pack Tactics [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "pack-tactics"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

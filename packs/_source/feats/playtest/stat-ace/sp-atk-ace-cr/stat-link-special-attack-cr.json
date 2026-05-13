@@ -1,6 +1,6 @@
 {
   "folder": "Z5GifJRRPRuXnCPG",
-  "name": "Stat Link (Special Attack) [CR]",
+  "name": "Stat Link (Special Attack)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "stat-link-cr",
+    "slug": "stat-link-special-attack-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Stat Ace (Special Attack) [CR]"
+      "Stat Ace (Special Attack)"
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Special Attack) [CR]"
+    "class": "Stat Ace (Special Attack)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-link-special-attack"
   },
   "effects": [],
   "flags": {

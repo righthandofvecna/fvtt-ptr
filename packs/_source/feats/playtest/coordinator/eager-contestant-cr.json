@@ -1,5 +1,5 @@
 {
-  "name": "Eager Contestant [CR]",
+  "name": "Eager Contestant",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon\nEffect: Your Pokemon count Performance checks as Skill Checks for the purpose of Spirit Bonuses.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Coordinator [CR]",
-    "name": "Eager Contestant [CR]"
+    "class": "Coordinator",
+    "name": "Eager Contestant [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "eager-contestant"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

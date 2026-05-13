@@ -1,6 +1,6 @@
 {
   "folder": "tzJULEy7cf2YZw4J",
-  "name": "Stat Stratagem (Attack) [CR]",
+  "name": "Stat Stratagem (Attack)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,13 +55,15 @@
       "bind": true
     },
     "prerequisites": [
-      "Stat Link [CR]",
-      "Stat Training [CR]",
+      "Stat Link",
+      "Stat Training",
       "Master Command And Focus"
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Attack) [CR]"
+    "class": "Stat Ace (Attack)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-stratagem-attack"
   },
   "effects": [],
   "flags": {

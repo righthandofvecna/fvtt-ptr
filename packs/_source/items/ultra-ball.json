@@ -58,7 +58,9 @@
     "automation": [],
     "name": "Ultra Ball",
     "useCount": 0,
-    "modifier": -20
+    "modifier": -20,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/ultra ball.webp",

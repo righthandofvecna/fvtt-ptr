@@ -1,5 +1,5 @@
 {
-  "name": "Apparition [CR]",
+  "name": "Apparition",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: When wielding Melee Weapons, you may use Occult Education or Intimidate instead of Combat to determine the Damage Base of your Struggle Attacks, to resist Disarm Maneuvers, and to qualify for a Weapon’s Moves. Your Weapon Attacks always treat you as having the Reach Capability, and foes may not activate Reaction effects against them that specify being hit by a Melee Attack.",
@@ -69,8 +69,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Apparition [CR]",
-    "name": "Apparition [CR]"
+    "class": "Apparition",
+    "name": "Apparition [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "apparition"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

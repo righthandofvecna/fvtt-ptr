@@ -1,5 +1,5 @@
 {
-  "name": "PK Alpha [CR]",
+  "name": "PK Alpha",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Barrier, Kinesis and Meditate.",
@@ -82,8 +82,10 @@
     "prerequisites": [],
     "notes": "",
     "free": false,
-    "class": "Telekinetic [CR]",
-    "name": "PK Alpha [CR]"
+    "class": "Telekinetic",
+    "name": "PK Alpha [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "pk-alpha"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

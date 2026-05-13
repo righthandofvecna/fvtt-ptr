@@ -1,6 +1,6 @@
 {
   "folder": "WFnk0S5IBTgc21Ft",
-  "name": "Glacial Floe [CR]",
+  "name": "Glacial Floe",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Type Ace (Ice) [CR]"
+      "Type Ace (Ice)"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ice) [CR]"
+    "class": "Type Ace (Ice)",
+    "contentSet": "class-rework",
+    "replacesSlug": "glacial-floe"
   },
   "effects": [],
   "flags": {

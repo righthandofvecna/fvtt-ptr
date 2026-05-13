@@ -1,5 +1,5 @@
 {
-  "name": "Tectonic Shift [CR]",
+  "name": "Tectonic Shift",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Pick three of Dig, Earthquake, Earth Power, Sand Tomb, or Scorching Sands. You learn the chosen Moves.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Earth Shaker [CR]",
-    "name": "Tectonic Shift [CR]"
+    "class": "Earth Shaker",
+    "name": "Tectonic Shift [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "tectonic-shift"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Vile Body [CR]",
+  "name": "Vile Body",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose two of Absorb Force, Poison Point, or Poison Touch. You gain the chosen Abilities.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Miasmic [CR]",
-    "name": "Vile Body [CR]"
+    "class": "Miasmic",
+    "name": "Vile Body [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "vile-body"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

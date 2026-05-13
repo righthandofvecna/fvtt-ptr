@@ -1,5 +1,5 @@
 {
-  "name": "Tough as Nails [CR]",
+  "name": "Tough as Nails",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Endure and Slack Off.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Roughneck [CR]",
-    "name": "Tough as Nails [CR]"
+    "class": "Roughneck",
+    "name": "Tough as Nails [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "tough-as-nails"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

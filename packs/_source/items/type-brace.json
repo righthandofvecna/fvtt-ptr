@@ -146,7 +146,9 @@
     "container": false,
     "automation": [],
     "name": "Type Brace",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",

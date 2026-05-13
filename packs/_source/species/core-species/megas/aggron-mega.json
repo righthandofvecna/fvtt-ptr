@@ -646,7 +646,7 @@
         "type": "body"
       }
     },
-    "slug": "aggron",
+    "slug": "aggron-mega",
     "rules": [],
     "type": {
       "0": "Steel",
@@ -660,7 +660,9 @@
       "Hoenn",
       "Unova",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

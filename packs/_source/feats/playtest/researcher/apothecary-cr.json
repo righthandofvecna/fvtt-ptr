@@ -1,5 +1,5 @@
 {
-  "name": "Apothecary [CR]",
+  "name": "Apothecary",
   "system": {
     "origin": "Class Rework",
     "effect": "Effects: You gain use any Apothecary Recipe for which\nyou qualify.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Apothecary [CR]"
+    "class": "Researcher",
+    "name": "Apothecary [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "apothecary"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

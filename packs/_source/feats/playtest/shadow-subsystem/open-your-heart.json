@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Redeemer"
+    "class": "Redeemer",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,

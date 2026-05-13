@@ -204,6 +204,38 @@ export function registerSettings() {
         onChange: () => game.ptu.compendiumBrowser.initCompendiumList()
     });
 
+    game.settings.register("ptu", "contentSetsEnabled", {
+        name: "Content Sets Enabled",
+        hint: "When enabled, only the highest-priority version of each item will be shown in the Compendium Browser.",
+        scope: "world",
+        config: false,
+        default: true,
+        type: Boolean,
+        onChange: () => {
+            game.ptu.compendiumBrowser.packLoader.reset();
+            game.ptu.compendiumBrowser.initCompendiumList();
+            globalThis.QuickInsert?.forceIndex();
+        }
+    });
+
+    game.settings.register("ptu", "enabledContentSets", {
+        name: "Enabled Content Sets",
+        hint: "Which content sets are currently active.",
+        scope: "world",
+        config: false,
+        default: {
+            "class-rework": true,
+            "weather-playtest": true,
+            "friendship-spirit": game.settings.get("ptu", "variant.spiritPlaytest"),
+        },
+        type: Object,
+        onChange: () => {
+            game.ptu.compendiumBrowser.packLoader.reset();
+            game.ptu.compendiumBrowser.initCompendiumList();
+            globalThis.QuickInsert?.forceIndex();
+        }
+    });
+
     game.settings.register("ptu", "compendiumBrowserSources", {
         name: "Included Sources",
         hint: "Settings to display only entries with specified sources in the compendium browser.",

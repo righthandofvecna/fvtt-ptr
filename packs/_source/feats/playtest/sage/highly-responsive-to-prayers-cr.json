@@ -1,5 +1,5 @@
 {
-  "name": "Highly Responsive to Prayers [CR]",
+  "name": "Highly Responsive to Prayers",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You use Wish or Heal Bell, or an ally receives an Injury\nEffect: You may apply the [Stratagem] of the Sage Feature as a Free Action on the triggering ally. This effect lasts until the start of your next turn, does not require you to Bind AP to use.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Sage [CR]",
-    "name": "Highly Responsive to Prayers [CR]"
+    "class": "Sage",
+    "name": "Highly Responsive to Prayers [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "highly-responsive-to-prayers"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

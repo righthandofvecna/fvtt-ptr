@@ -489,7 +489,7 @@
         "type": "body"
       }
     },
-    "slug": "camerupt",
+    "slug": "camerupt-mega",
     "rules": [],
     "type": {
       "0": "Fire",
@@ -502,7 +502,9 @@
     "keywords": [
       "Hoenn",
       "Unova"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

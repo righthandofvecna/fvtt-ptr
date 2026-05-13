@@ -23,6 +23,8 @@
   "_id": "HAtYcPnHQzB8JzY8",
   "sort": 200000,
   "system": {
-    "slug": "update-tokens-to-default-sprite"
+    "slug": "update-tokens-to-default-sprite",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

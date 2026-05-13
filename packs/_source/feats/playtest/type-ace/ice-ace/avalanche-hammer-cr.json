@@ -1,6 +1,6 @@
 {
   "folder": "WFnk0S5IBTgc21Ft",
-  "name": "Avalanche Hammer [CR]",
+  "name": "Avalanche Hammer",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Glacial Floe [CR]",
+      "Glacial Floe",
       "Type-Linked Skill at Expert Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ice) [CR]"
+    "class": "Type Ace (Ice)",
+    "contentSet": "class-rework",
+    "replacesSlug": "avalanche-hammer"
   },
   "effects": [],
   "flags": {

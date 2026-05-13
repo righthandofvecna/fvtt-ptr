@@ -1,6 +1,6 @@
 {
   "folder": "p9yRJ8QVFrEtl0mK",
-  "name": "Aura of Life [CR]",
+  "name": "Aura of Life",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -84,7 +84,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Aura Guardian [CR]"
+    "class": "Aura Guardian",
+    "contentSet": "class-rework",
+    "replacesSlug": "aura-of-life"
   },
   "effects": [],
   "sort": 0,

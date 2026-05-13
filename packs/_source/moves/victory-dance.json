@@ -70,7 +70,9 @@
     "damageBonus": 0,
     "isStruggle": false,
     "automation": [],
-    "damagebase": "--"
+    "damagebase": "--",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "1bTs14SEhSkdDxxE",
   "effects": [],

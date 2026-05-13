@@ -1,5 +1,5 @@
 {
-  "name": "Affliction Techniques [CR]",
+  "name": "Affliction Techniques",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You use an Antidote, Burn Heal, Ice Heal, or Paralyze Heal\nEffect: If the target successfully cures the target of its linked Status Affliction, the item has additional effects.\n- Antidote: The target gains +1 Special Defense Combat Stage\n- Burn Heal: The target gains +1 Defense Combat Stage.\n- Ice Heal: The target gains +1 Attack or Special Attack Combat Stage.\n- Paralyze Heal: The target gains +1 Speed Combat Stage.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Affliction Techniques [CR]"
+    "class": "Researcher",
+    "name": "Affliction Techniques [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "affliction-techniques"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

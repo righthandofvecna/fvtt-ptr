@@ -1,0 +1,116 @@
+{
+  "name": "Honed Mind",
+  "system": {
+    "origin": "[F&S Playtest]",
+    "effect": "You learn the Moves Mind Reader and Calm Mind.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.IB7f6qhUE3A1k07u"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.fTu9Cq4z0G7PDH2x"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spdef.mod",
+        "value": 1
+      }
+    ],
+    "enabled": true,
+    "slug": "honed-mind-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.423Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "+Special Defense",
+      "Playtest",
+      "F&S"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "prerequisites": [
+      "Telepath"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Telepath",
+    "automation": [],
+    "name": "Honed Mind",
+    "useCount": 0,
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "honed-mind"
+  },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "prereqBackup": "Telepath"
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368079056,
+    "modifiedTime": 1778200829484,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "folder": "NlEB7XJnDWyGbZnQ",
+  "_id": "IgRQXGmoSeeEeV1I",
+  "sort": 1700000,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,6 +1,6 @@
 {
   "folder": "mgQuQp95v3EdrKC1",
-  "name": "Geothermal Energy [CR]",
+  "name": "Geothermal Energy",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Type Ace (Ground) [CR]"
+      "Type Ace (Ground)"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ground) [CR]"
+    "class": "Type Ace (Ground)",
+    "contentSet": "class-rework",
+    "replacesSlug": "geothermal-energy"
   },
   "effects": [],
   "flags": {

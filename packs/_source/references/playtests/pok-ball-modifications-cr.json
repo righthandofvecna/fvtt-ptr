@@ -1,6 +1,6 @@
 {
   "folder": "3mspjPD8gPzP1jmO",
-  "name": "Poké Ball Modifications [CR]",
+  "name": "Poké Ball Modifications",
   "type": "reference",
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "poke-ball-modifications-cr",
+    "slug": "pok-ball-modifications-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -26,7 +26,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "pok-ball-modifications"
   },
   "effects": [],
   "ownership": {

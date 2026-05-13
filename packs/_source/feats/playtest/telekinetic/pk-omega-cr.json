@@ -1,5 +1,5 @@
 {
-  "name": "PK Omega [CR]",
+  "name": "PK Omega",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Psychic, Telekinesis, and Twin Beam.",
@@ -82,8 +82,10 @@
     "prerequisites": [],
     "notes": "",
     "free": false,
-    "class": "Telekinetic [CR]",
-    "name": "PK Omega [CR]"
+    "class": "Telekinetic",
+    "name": "PK Omega [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "pk-omega"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

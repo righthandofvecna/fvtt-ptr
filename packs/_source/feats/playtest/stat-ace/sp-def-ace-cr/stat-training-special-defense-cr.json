@@ -1,6 +1,6 @@
 {
   "folder": "KlbLuc2juXKYPRSb",
-  "name": "Stat Training (Special Defense) [CR]",
+  "name": "Stat Training (Special Defense)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Stat Ace (Special Defense) [CR]"
+      "Stat Ace (Special Defense)"
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Special Defense) [CR]"
+    "class": "Stat Ace (Special Defense)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-training-special-defense"
   },
   "effects": [],
   "flags": {

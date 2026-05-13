@@ -1,5 +1,5 @@
 {
-  "name": "Musical Ability [CR]",
+  "name": "Musical Ability",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Punk Rock or Sound Lance. You gain the chosen Ability.",
@@ -83,8 +83,10 @@
     "prerequisites": [],
     "notes": "",
     "free": false,
-    "class": "Musician [CR]",
-    "name": "Musical Ability [CR]"
+    "class": "Musician",
+    "name": "Musical Ability [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "musical-ability"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

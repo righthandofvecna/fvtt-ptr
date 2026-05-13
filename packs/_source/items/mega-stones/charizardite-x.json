@@ -57,7 +57,9 @@
     "container": false,
     "automation": [],
     "name": "Charizardite X",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/charizardite x.webp",

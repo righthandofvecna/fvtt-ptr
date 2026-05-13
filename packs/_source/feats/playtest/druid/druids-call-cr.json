@@ -1,12 +1,12 @@
 {
-  "name": "Druid's Call [CR]",
+  "name": "Druid's Call",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: 6 small saplings, flowery bushes, or mushroom patches (depending on your oath) suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter, and acts as Rough Terrain that blocks line of sight for creatures without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "druid-s-call-cr",
+    "slug": "druids-call-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Druid [CR]",
-    "name": "Druid's Call [CR]"
+    "class": "Druid",
+    "name": "Druid's Call [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "druids-call"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

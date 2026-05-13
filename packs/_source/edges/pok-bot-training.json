@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "pokebot-training",
+    "slug": "pok-bot-training",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -53,7 +53,9 @@
     "notes": "",
     "free": false,
     "name": "Pokébot Training",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",

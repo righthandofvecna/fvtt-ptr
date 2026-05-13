@@ -10,7 +10,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "max-overgrow",
+    "slug": "max-overgrowth",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -69,7 +69,9 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 106250,

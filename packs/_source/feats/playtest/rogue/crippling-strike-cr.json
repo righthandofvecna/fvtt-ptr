@@ -1,5 +1,5 @@
 {
-  "name": "Crippling Strike [CR]",
+  "name": "Crippling Strike",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit with a Rogue Move\nEffect: The target gains the Vortex debuffs, as you inflict a debilitating wound on them.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Rogue [CR]",
-    "name": "Crippling Strike [CR]"
+    "class": "Rogue",
+    "name": "Crippling Strike [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "crippling-strike"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Burning Passion [CR]",
+  "name": "Burning Passion",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Fiery Crash Ability.",
@@ -88,8 +88,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Fire Bringer [CR]",
-    "name": "Burning Passion [CR]"
+    "class": "Fire Bringer",
+    "name": "Burning Passion [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "burning-passion"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

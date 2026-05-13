@@ -59,7 +59,9 @@
     "container": false,
     "automation": [],
     "name": "Helix Fossil Shard",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",

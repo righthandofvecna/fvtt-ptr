@@ -554,7 +554,7 @@
         "type": "body"
       }
     },
-    "slug": "banette",
+    "slug": "banette-mega",
     "rules": [],
     "type": {
       "0": "Ghost",
@@ -568,7 +568,9 @@
       "Unova",
       "Kalos",
       "Alola"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

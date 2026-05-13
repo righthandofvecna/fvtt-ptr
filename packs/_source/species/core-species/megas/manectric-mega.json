@@ -454,7 +454,7 @@
         "type": "body"
       }
     },
-    "slug": "manectric",
+    "slug": "manectric-mega",
     "rules": [],
     "type": {
       "0": "Electric",
@@ -468,7 +468,9 @@
       "Alola",
       "Galar",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

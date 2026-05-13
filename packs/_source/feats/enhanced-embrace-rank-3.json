@@ -427,7 +427,9 @@
     "class": "Swarmlord",
     "name": "Enhanced Embrace Rank 3",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

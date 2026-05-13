@@ -67,7 +67,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "P4TfjlkFU8D8MdEJ",
   "effects": [],

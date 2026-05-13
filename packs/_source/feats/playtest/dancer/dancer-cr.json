@@ -1,5 +1,5 @@
 {
-  "name": "Dancer [CR]",
+  "name": "Dancer",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Spinning Dance or Own Tempo. You gain the chosen Ability.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Dancer [CR]",
-    "name": "Dancer [CR]"
+    "class": "Dancer",
+    "name": "Dancer [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "dancer"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

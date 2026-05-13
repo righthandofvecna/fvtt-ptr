@@ -181,7 +181,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-gale",
+    "slug": "effect-cyclone",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -212,7 +212,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,

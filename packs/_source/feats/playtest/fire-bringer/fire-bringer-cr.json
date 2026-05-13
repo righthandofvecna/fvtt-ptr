@@ -1,5 +1,5 @@
 {
-  "name": "Fire Bringer [CR]",
+  "name": "Fire Bringer",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose three of Flame Burst, Flame Charge, Flame Wheel, Sunny Day, or Will-O-Wisp. You learn the chosen Moves.",
@@ -212,8 +212,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Fire Bringer [CR]",
-    "name": "Fire Bringer [CR]"
+    "class": "Fire Bringer",
+    "name": "Fire Bringer [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "fire-bringer"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

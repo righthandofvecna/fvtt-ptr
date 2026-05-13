@@ -1,5 +1,5 @@
 {
-  "name": "Sage [CR]",
+  "name": "Sage",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: An Ally\nEffect: While this Feature is bound, the target gains Damage Reduction equal to your Occult Education Rank doubled or the target's Tick Value, whichever is higher.",
@@ -69,8 +69,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Sage [CR]",
-    "name": "Sage [CR]"
+    "class": "Sage",
+    "name": "Sage [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "sage"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

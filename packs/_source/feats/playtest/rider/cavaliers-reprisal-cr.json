@@ -1,5 +1,5 @@
 {
-  "name": "Cavalier's Reprisal [CR]",
+  "name": "Cavalier's Reprisal",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: An adjacent foe hits your Mount with an attack\nEffect: You may attempt a Push Maneuver against the attacking enemy. If this Push is successful, the attack misses.",
@@ -16,7 +16,7 @@
       }
     ],
     "enabled": true,
-    "slug": "cavalier-s-reprisal-cr",
+    "slug": "cavaliers-reprisal-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Rider [CR]",
-    "name": "Cavalier’s Reprisal [CR]"
+    "class": "Rider",
+    "name": "Cavalier’s Reprisal [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "cavaliers-reprisal"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

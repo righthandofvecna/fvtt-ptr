@@ -14,3 +14,4 @@ export { Migration113Keywords} from './113-keywords.js';
 export { Migration114Hardened} from './114-hardened.js';
 export { Migration115RulesAutomation} from './115-rules-automation.js';
 export { Migration116FrequencyActionCost } from './116-frequency-action-cost.js';
+export { Migration117ContentSet } from './117-content-set.js';

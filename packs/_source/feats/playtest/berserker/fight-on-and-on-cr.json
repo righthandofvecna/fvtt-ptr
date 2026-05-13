@@ -1,5 +1,5 @@
 {
-  "name": "Fight On and On [CR]",
+  "name": "Fight On and On",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You become Enraged.\nEffect: You gain the Hardened condition. @Embed[Compendium.ptu.effects.Item.ed6GkfPq9AmYTTnf]",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Berserker [CR]",
-    "name": "Fight On and On [CR]"
+    "class": "Berserker",
+    "name": "Fight On and On [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "fight-on-and-on"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Heart of Darkness [CR]",
+  "name": "Heart of Darkness",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose two of the following Moves, and learn them:\nNight Daze, Punishment, Lash Out, and Power Trip",
@@ -82,8 +82,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Shade Caller [CR]",
-    "name": "Heart of Darkness [CR]"
+    "class": "Shade Caller",
+    "name": "Heart of Darkness [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "heart-of-darkness"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

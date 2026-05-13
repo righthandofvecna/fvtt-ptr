@@ -1,6 +1,6 @@
 {
   "folder": "3mspjPD8gPzP1jmO",
-  "name": "Upgrader Recipes [CR]",
+  "name": "Upgrader Recipes",
   "type": "reference",
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
@@ -26,7 +26,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "upgrader-recipes"
   },
   "effects": [],
   "ownership": {

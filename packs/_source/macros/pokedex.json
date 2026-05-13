@@ -23,6 +23,8 @@
     "exportSource": null
   },
   "system": {
-    "slug": "pokedex"
+    "slug": "pokedex",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

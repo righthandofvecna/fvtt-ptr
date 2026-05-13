@@ -13,7 +13,7 @@
       }
     ],
     "enabled": true,
-    "slug": "channel-the-dragon-s-spirit",
+    "slug": "channel-the-dragons-spirit",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -65,7 +65,9 @@
     "class": "Herald of Pride",
     "automation": [],
     "name": "Channel the Dragon's Spirit",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

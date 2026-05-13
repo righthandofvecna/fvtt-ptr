@@ -586,7 +586,7 @@
         "type": "body"
       }
     },
-    "slug": "alakazam",
+    "slug": "alakazam-mega",
     "rules": [],
     "type": {
       "0": "Psychic",
@@ -602,7 +602,9 @@
       "Sinnoh",
       "Kanto",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

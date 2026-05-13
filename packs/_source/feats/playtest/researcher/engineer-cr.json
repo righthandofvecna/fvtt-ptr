@@ -1,5 +1,5 @@
 {
-  "name": "Engineer [CR]",
+  "name": "Engineer",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may craft any Engineer Recipe for which you qualify.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Engineer [CR]"
+    "class": "Researcher",
+    "name": "Engineer [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "engineer"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

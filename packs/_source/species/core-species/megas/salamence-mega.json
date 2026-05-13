@@ -535,7 +535,7 @@
         "type": "body"
       }
     },
-    "slug": "salamence",
+    "slug": "salamence-mega",
     "rules": [],
     "type": {
       "0": "Dragon",
@@ -550,7 +550,9 @@
       "Alola",
       "Kalos"
     ],
-    "stackSlugs": false
+    "stackSlugs": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

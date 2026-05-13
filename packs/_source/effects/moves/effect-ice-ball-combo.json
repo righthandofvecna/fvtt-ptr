@@ -18,7 +18,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-rollout-combo",
+    "slug": "effect-ice-ball-combo",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -46,7 +46,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "cCM0awlDiATvW03q",

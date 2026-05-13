@@ -1,5 +1,28 @@
 <div class="compendium-browser-settings">
     <form autocomplete="off">
+        <h2 class="m-2">{{localize "PTU.CompendiumBrowser.ContentSets.Title"}}</h2>
+        <div class="settings-container">
+            <div class="setting-section single-column">
+                <p>{{localize "PTU.CompendiumBrowser.ContentSets.Hint"}}</p>
+                <dl>
+                    <label>
+                        <dt><input type="checkbox" name="content-sets-enabled" {{checked contentSets.enabled}}></dt>
+                        <dd><strong>{{localize "PTU.CompendiumBrowser.ContentSets.EnableFiltering"}}</strong></dd>
+                    </label>
+                </dl>
+                {{#if contentSets.enabled}}
+                    <dl class="content-set-list">
+                        {{#each contentSets.sets as |set key|}}
+                            <label>
+                                <dt><input type="checkbox" name="content-set-{{key}}" {{checked set.enabled}}></dt>
+                                <dd>{{localize set.label}}</dd>
+                            </label>
+                        {{/each}}
+                    </dl>
+                {{/if}}
+            </div>
+        </div>
+
         <h2 class="m-2">{{localize "PTU.CompendiumBrowser.CompendiumPacks"}}</h2>
         <div class="settings-container">
             <div class="setting-section">

@@ -1,5 +1,5 @@
 {
-  "name": "Tandem Speed [CR]",
+  "name": "Tandem Speed",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon with at least 2 Tutor Points\nEffect: The target loses 2 Tutor Points and gains the Run Up or Run Away Ability.\nRun Up Damage bonus caps at +10.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Rider [CR]",
-    "name": "Tandem Speed [CR]"
+    "class": "Rider",
+    "name": "Tandem Speed [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "tandem-speed"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

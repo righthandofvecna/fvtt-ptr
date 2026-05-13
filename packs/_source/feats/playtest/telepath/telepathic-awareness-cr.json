@@ -1,5 +1,5 @@
 {
-  "name": "Telepathic Awareness [CR]",
+  "name": "Telepathic Awareness",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Forewarn and Telepathy Abilities.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Telepath [CR]",
-    "name": "Telepathic Awareness [CR]"
+    "class": "Telepath",
+    "name": "Telepathic Awareness [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "telepathic-awareness"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

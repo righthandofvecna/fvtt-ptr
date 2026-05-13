@@ -1,5 +1,5 @@
 {
-  "name": "Fossil Restoration [CR]",
+  "name": "Fossil Restoration",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A Fossil that you are Reviving.\nEffect: The Revived Pokémon is created at a higher level, equal to 10 plus double your Pokémon Education Rank, and it receives one free Poké Edge that it qualifies for.\nBonus: Your Revived Pokémon have their Base HP innately increased by 1 plus your Pokémon Education Rank/2.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Fossil Restoration [CR]"
+    "class": "Researcher",
+    "name": "Fossil Restoration [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "fossil-restoration"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

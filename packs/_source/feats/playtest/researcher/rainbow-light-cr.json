@@ -1,5 +1,5 @@
 {
-  "name": "Rainbow Light [CR]",
+  "name": "Rainbow Light",
   "system": {
     "origin": "Class Rework",
     "effect": "Condition: You are wearing a Rainbow Gem\nEffects: You create a Rainbow lasting one full round. While this Rainbow persists, the Effect Range of all Allies is increased by +3.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Rainbow Light [CR]"
+    "class": "Researcher",
+    "name": "Rainbow Light [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "rainbow-light"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -27,7 +27,7 @@
       }
     ],
     "enabled": true,
-    "slug": "hyper-mode",
+    "slug": "condition-hyper-mode",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -71,7 +71,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "dDpOEXjREUS6rAWH",

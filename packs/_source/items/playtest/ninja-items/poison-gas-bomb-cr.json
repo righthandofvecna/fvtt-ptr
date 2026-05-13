@@ -1,6 +1,6 @@
 {
   "folder": "erOegeCoXbG55V50",
-  "name": "Poison Gas Bomb [CR]",
+  "name": "Poison Gas Bomb",
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/generic item.webp",
   "system": {
@@ -55,7 +55,9 @@
     "cost": "1000",
     "consumable": 0,
     "subtype": "",
-    "container": false
+    "container": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "poison-gas-bomb"
   },
   "effects": [],
   "sort": 0,

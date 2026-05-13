@@ -60,7 +60,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "W3vM5lPhAp2PKHsh",
   "effects": [],

@@ -1,0 +1,62 @@
+name: PR Checks (development → release)
+
+on:
+  pull_request:
+    branches:
+      - release
+
+jobs:
+  check-content-sync-merged:
+    name: Content-Sync Merged
+    runs-on: ubuntu-latest
+    if: github.head_ref == 'development'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check content-sync is merged into development
+        run: |
+          git fetch origin content-sync development
+
+          if git merge-base --is-ancestor origin/content-sync origin/development; then
+            echo "content-sync is merged into development."
+          else
+            echo "ERROR: content-sync has not been merged into development."
+            exit 1
+          fi
+
+  check-version-bump:
+    name: Version Bump
+    runs-on: ubuntu-latest
+    if: github.head_ref == 'development'
+    steps:
+      - name: Checkout development (PR head)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          path: head
+
+      - name: Checkout release (PR base)
+        uses: actions/checkout@v4
+        with:
+          ref: release
+          path: base
+
+      - name: Compare versions
+        run: |
+          DEV_VERSION=$(jq -r '.version' head/system.json)
+          REL_VERSION=$(jq -r '.version' base/system.json)
+
+          echo "Development version: $DEV_VERSION"
+          echo "Release version:     $REL_VERSION"
+
+          # Compare versions using sort -V (version sort)
+          HIGHER=$(printf '%s\n%s\n' "$DEV_VERSION" "$REL_VERSION" | sort -V | tail -n1)
+
+          if [ "$HIGHER" = "$DEV_VERSION" ] && [ "$DEV_VERSION" != "$REL_VERSION" ]; then
+            echo "Version check passed: $DEV_VERSION > $REL_VERSION"
+          else
+            echo "ERROR: Development version ($DEV_VERSION) must be higher than release version ($REL_VERSION)."
+            exit 1
+          fi

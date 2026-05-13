@@ -1,5 +1,5 @@
 {
-  "name": "Guardian Angel [CR]",
+  "name": "Guardian Angel",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: An adjacent Ally takes damage\nEffect: The damage your Ally takes is resisted one step further. The foe whose attack caused your Ally to take damage is Challenged until the end of your next turn.",
@@ -81,8 +81,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Fortress [CR]",
-    "name": "Guardian Angel [CR]"
+    "class": "Fortress",
+    "name": "Guardian Angel [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "guardian-angel"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

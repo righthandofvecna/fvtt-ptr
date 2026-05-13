@@ -1,6 +1,6 @@
 {
   "folder": "WVBFF3ZyFObbFqhH",
-  "name": "Move Sync (Normal) [CR]",
+  "name": "Move Sync (Normal)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Normal) [CR]"
+    "class": "Type Ace (Normal)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-normal"
   },
   "effects": [],
   "flags": {

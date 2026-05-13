@@ -490,7 +490,9 @@
     "source": {
       "value": "PTR Exclusive Dex"
     },
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

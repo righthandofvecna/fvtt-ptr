@@ -1,6 +1,6 @@
 {
   "folder": "mS7fmuAZxBzZ1J7B",
-  "name": "One of the Classic Blunders [CR]",
+  "name": "One of the Classic Blunders",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -71,7 +71,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Provocateur [CR]"
+    "class": "Provocateur",
+    "contentSet": "class-rework",
+    "replacesSlug": "one-of-the-classic-blunders"
   },
   "effects": [],
   "flags": {

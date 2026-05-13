@@ -1,5 +1,5 @@
 {
-  "name": "Glacial Defense [CR]",
+  "name": "Glacial Defense",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Ice Shield or Winter's Kiss. You gain the Chosen Ability.",
@@ -81,8 +81,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Frost Touched [CR]",
-    "name": "Glacial Defense [CR]"
+    "class": "Frost Touched",
+    "name": "Glacial Defense [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "glacial-defense"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Telekinetic [CR]",
+  "name": "Telekinetic",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Telekinetic Capability.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Telekinetic [CR]",
-    "name": "Telekinetic [CR]"
+    "class": "Telekinetic",
+    "name": "Telekinetic [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "telekinetic"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

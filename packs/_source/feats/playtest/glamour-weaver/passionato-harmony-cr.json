@@ -1,5 +1,5 @@
 {
-  "name": "Passionato Harmony [CR]",
+  "name": "Passionato Harmony",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Dazzling Gleam and Draining Kiss.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Glamour Weaver [CR]",
-    "name": "Passionato Harmony [CR]"
+    "class": "Glamour Weaver",
+    "name": "Passionato Harmony [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "passionato-harmony"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

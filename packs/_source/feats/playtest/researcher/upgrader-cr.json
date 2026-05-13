@@ -1,5 +1,5 @@
 {
-  "name": "Upgrader [CR]",
+  "name": "Upgrader",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may craft any Augmentation Recipe for which you qualify and install them on yourself and willing Pokémon and Trainers.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Upgrader [CR]"
+    "class": "Researcher",
+    "name": "Upgrader [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "upgrader"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

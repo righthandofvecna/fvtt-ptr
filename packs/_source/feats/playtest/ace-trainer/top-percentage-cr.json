@@ -1,5 +1,5 @@
 {
-  "name": "Top Percentage [CR]",
+  "name": "Top Percentage",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You use Ace Trainer to give Pokémon Trained Stats\nEffect: Choose two Trained Stats for each Pokémon instead of one. A Pokémon may only have two Trained Stats this way.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Ace Trainer [CR]",
-    "name": "Top Percentage [CR]"
+    "class": "Ace Trainer",
+    "name": "Top Percentage [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "top-percentage"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

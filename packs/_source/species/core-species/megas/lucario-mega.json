@@ -537,7 +537,7 @@
         "type": "body"
       }
     },
-    "slug": "lucario",
+    "slug": "lucario-mega",
     "rules": [],
     "type": {
       "0": "Fighting",
@@ -553,7 +553,9 @@
       "Kalos",
       "Alola",
       "Sinnoh"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

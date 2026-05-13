@@ -1,5 +1,5 @@
 {
-  "name": "Channel the Dragon's Spirit [CR]",
+  "name": "Channel the Dragon's Spirit",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You use a Weapon Attack\nEffect: You may have the triggering attack deal Dragon-Type Damage if you wish. On 18+, all targets are Suppressed.",
@@ -16,7 +16,7 @@
       }
     ],
     "enabled": true,
-    "slug": "channel-the-dragon-s-spirit-cr",
+    "slug": "channel-the-dragons-spirit-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Herald of Pride [CR]",
-    "name": "Channel the Dragon’s Spirit [CR]"
+    "class": "Herald of Pride",
+    "name": "Channel the Dragon’s Spirit [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "channel-the-dragons-spirit"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

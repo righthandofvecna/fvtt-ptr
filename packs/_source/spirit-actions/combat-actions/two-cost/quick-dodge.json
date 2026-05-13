@@ -52,7 +52,9 @@
     },
     "cost": "2",
     "trigger": "When you got hit by an attack",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "Sb72t2uSXWhUn8Cx",
   "effects": [],

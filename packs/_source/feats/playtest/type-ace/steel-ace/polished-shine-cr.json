@@ -1,5 +1,5 @@
 {
-  "name": "Polished Shine [CR]",
+  "name": "Polished Shine",
   "system": {
     "origin": "",
     "effect": "Effect: The Critical and Effect Range of your Pokémon’s Steel-Type Moves is increased by +1.",
@@ -57,10 +57,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Steel) [CR]",
+    "class": "Type Ace (Steel)",
     "name": "Polished Shine",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "polished-shine"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

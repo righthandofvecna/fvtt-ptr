@@ -1,5 +1,5 @@
 {
-  "name": "Chemical Warfare [CR]",
+  "name": "Chemical Warfare",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You throw a Pester Ball\nEffect: The Pester Ball creates a Blast 2, affecting all targets in the area.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Chemical Warfare [CR]"
+    "class": "Researcher",
+    "name": "Chemical Warfare [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "chemical-warfare"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

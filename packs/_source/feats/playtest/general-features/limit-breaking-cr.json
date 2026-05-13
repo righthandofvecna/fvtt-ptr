@@ -1,5 +1,5 @@
 {
-  "name": "Limit Breaking [CR]",
+  "name": "Limit Breaking",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon\nEffect: The target gains 3 Tutor Points. A Pokémon may be targeted by Limit Breaking only once.",
@@ -56,7 +56,9 @@
     "notes": "",
     "free": false,
     "class": "",
-    "name": "Surge of Spirit [CR]"
+    "name": "Surge of Spirit [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "limit-breaking"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

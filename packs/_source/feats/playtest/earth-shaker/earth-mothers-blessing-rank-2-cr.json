@@ -1,5 +1,5 @@
 {
-  "name": "Earth Mother's Blessing Rank 2 [CR]",
+  "name": "Earth Mother's Blessing Rank 2",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Each Rank, choose Mud Dweller, Arena Trap, or Lightning Rod. You gain the chosen Ability.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Earth Shaker [CR]",
-    "name": "Earth Mother’s Blessing [CR]Rank 1 [CR]"
+    "class": "Earth Shaker",
+    "name": "Earth Mother’s Blessing [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "earth-mothers-blessing-rank-2"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

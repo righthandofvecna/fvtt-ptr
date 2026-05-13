@@ -1,6 +1,6 @@
 {
   "folder": "F8TUNvOCEnUFlpxZ",
-  "name": "Bigger And Boulder [CR]",
+  "name": "Bigger And Boulder",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Bedrock Foundation [CR]",
+      "Bedrock Foundation",
       "Type-Linked Skill at Adept Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Rock) [CR]"
+    "class": "Type Ace (Rock)",
+    "contentSet": "class-rework",
+    "replacesSlug": "bigger-and-boulder"
   },
   "effects": [],
   "flags": {

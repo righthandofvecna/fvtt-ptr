@@ -512,7 +512,7 @@
         "type": "body"
       }
     },
-    "slug": "houndoom",
+    "slug": "houndoom-mega",
     "rules": [],
     "type": {
       "0": "Dark",
@@ -527,7 +527,9 @@
       "Sinnoh",
       "Kalos",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

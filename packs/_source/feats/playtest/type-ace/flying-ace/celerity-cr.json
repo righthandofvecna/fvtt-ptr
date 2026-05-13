@@ -1,5 +1,5 @@
 {
-  "name": "Celerity [CR]",
+  "name": "Celerity",
   "system": {
     "origin": "",
     "effect": "Target: A Flying-Type Pokémon, or a Pokémon with a Sky or Levitate Speed\nEffect: While this Feature is Bound, add your Type-Linked Skill to the target’s Initiative. Additionally, if the Target uses a Disengage Maneuver, they may Shift as if Slowed instead of shifting only 1 Meter.",
@@ -59,10 +59,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Flying) [CR]",
+    "class": "Type Ace (Flying)",
     "name": "Celerity",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "celerity"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

@@ -1,5 +1,5 @@
 {
-  "name": "Choreographer [CR]",
+  "name": "Choreographer",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon\nEffect: The target learns a Dance Move you know. Choreographer may target a Pokémon multiple times.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Dancer [CR]",
-    "name": "Choreographer [CR]"
+    "class": "Dancer",
+    "name": "Choreographer [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "choreographer"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

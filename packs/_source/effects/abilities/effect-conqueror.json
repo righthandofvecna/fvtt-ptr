@@ -37,7 +37,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-lightning-rod",
+    "slug": "effect-conqueror",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -65,7 +65,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

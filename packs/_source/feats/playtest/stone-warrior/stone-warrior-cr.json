@@ -1,5 +1,5 @@
 {
-  "name": "Stone Warrior [CR]",
+  "name": "Stone Warrior",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose two of Accelerock, Rock Tomb, and Wide Guard. You gain the chosen Moves.",
@@ -130,8 +130,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Stone Warrior [CR]",
-    "name": "Stone Warrior [CR]"
+    "class": "Stone Warrior",
+    "name": "Stone Warrior [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "stone-warrior"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

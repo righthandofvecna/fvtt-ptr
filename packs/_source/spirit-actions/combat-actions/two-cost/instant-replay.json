@@ -52,7 +52,9 @@
     },
     "cost": "2",
     "trigger": "When you roll to-hit, or someone rolls to-hit against you",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "p4LVprqufESgJa6C",
   "effects": [],

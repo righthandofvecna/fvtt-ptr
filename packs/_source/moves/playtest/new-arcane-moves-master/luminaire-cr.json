@@ -1,6 +1,6 @@
 {
   "folder": "tpnj35nZR172ENQ2",
-  "name": "Luminaire [CR]",
+  "name": "Luminaire",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
@@ -76,7 +76,9 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "luminaire"
   },
   "effects": [],
   "sort": 100000,

@@ -1,5 +1,5 @@
 {
-  "name": "Rock Power Rank 1 [CR]",
+  "name": "Rock Power Rank 1",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Each Rank, choose one of Cave Crasher, Sturdy, Rock Head, or Sand Veil. You gain the chosen Ability. If you choose Sand Veil, you may consider sand a \"solid surface\" for the purposes of Stone Stance.",
@@ -104,8 +104,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Stone Warrior [CR]",
-    "name": "Rock Power [CR]Rank 1 [CR]"
+    "class": "Stone Warrior",
+    "name": "Rock Power [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "rock-power-rank-1"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

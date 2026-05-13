@@ -56,7 +56,9 @@
     "consumable": 0,
     "subtype": "",
     "container": true,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": null,

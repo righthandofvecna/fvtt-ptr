@@ -1,5 +1,5 @@
 {
-  "name": "Mountain of Faith [CR]",
+  "name": "Mountain of Faith",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Wishmaster or Soothing Tone. You gain the Chosen Ability and learn its Connected Move.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Sage [CR]",
-    "name": "Mountain of Faith [CR]"
+    "class": "Sage",
+    "name": "Mountain of Faith [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "mountain-of-faith"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -626,7 +626,7 @@
         "type": "body"
       }
     },
-    "slug": "tyranitar",
+    "slug": "tyranitar-mega",
     "rules": [],
     "type": {
       "0": "Rock",
@@ -642,7 +642,9 @@
       "Kalos",
       "Alola",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

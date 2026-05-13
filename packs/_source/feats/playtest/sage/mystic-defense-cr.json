@@ -1,5 +1,5 @@
 {
-  "name": "Mystic Defense [CR]",
+  "name": "Mystic Defense",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Light Screen and Safeguard.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Sage [CR]",
-    "name": "Mystic Defense [CR]"
+    "class": "Sage",
+    "name": "Mystic Defense [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "mystic-defense"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

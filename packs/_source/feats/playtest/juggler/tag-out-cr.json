@@ -1,5 +1,5 @@
 {
-  "name": "Tag Out [CR]",
+  "name": "Tag Out",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You recall a Pokémon\nEffect: Your Pokémon may Take A Breather as a Free Action inside it's ball immediately after being recalled.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Juggler [CR]",
-    "name": "Tag Out [CR]"
+    "class": "Juggler",
+    "name": "Tag Out [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "tag-out"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

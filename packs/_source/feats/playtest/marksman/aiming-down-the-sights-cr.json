@@ -1,5 +1,5 @@
 {
-  "name": "Aiming Down The Sights [CR]",
+  "name": "Aiming Down The Sights",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your next Weapon Attack with a Long Range Weapon gains +2 to its Accuracy Roll and Critical Hit Range. This effect lasts until used or until the start of your next turn.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Marksman [CR]",
-    "name": "Aiming Down The Sights [CR]"
+    "class": "Marksman",
+    "name": "Aiming Down The Sights [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "aiming-down-the-sights"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

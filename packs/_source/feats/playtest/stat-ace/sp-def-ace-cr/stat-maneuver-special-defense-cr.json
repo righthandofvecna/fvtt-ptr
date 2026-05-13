@@ -1,6 +1,6 @@
 {
   "folder": "KlbLuc2juXKYPRSb",
-  "name": "Stat Maneuver (Special Defense) [CR]",
+  "name": "Stat Maneuver (Special Defense)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -56,11 +56,13 @@
     },
     "prerequisites": [
       "Expert Command or Focus",
-      "Stat Ace (Special Defense) [CR]"
+      "Stat Ace (Special Defense)"
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Special Defense) [CR]"
+    "class": "Stat Ace (Special Defense)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-maneuver-special-defense"
   },
   "effects": [],
   "flags": {

@@ -1,6 +1,6 @@
 {
   "folder": "ub2kPQbets63XkWw",
-  "name": "Barreling Charge [CR]",
+  "name": "Barreling Charge",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
@@ -69,7 +69,9 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "barreling-charge"
   },
   "effects": [],
   "sort": 100000,

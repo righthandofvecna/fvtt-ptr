@@ -8,7 +8,7 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
         this.searchFields = ["name", "prerequisites.label", "prerequisites.tier", "class"]
         this.storeFields = ["name", "uuid", "type", "source", "img", "prerequisites", "class", "classPretty", "keywords", "automationStatus"];
 
-        this.index = ["img", "system.source.value", "system.prerequisites", "system.class", "system.keywords", "flags.ptu.automationStatus"];
+        this.index = ["img", "system.source.value", "system.prerequisites", "system.class", "system.keywords", "system.slug", "system.contentSet", "system.replacesSlug", "flags.ptu.automationStatus"];
 
         this.filterData = this.prepareFilterData();
     }
@@ -61,6 +61,9 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
                     class: sluggify(_class),
                     classPretty: _class,
                     keywords: featData.system.keywords,
+                    slug: featData.system.slug ?? "",
+                    contentSet: featData.system.contentSet ?? "",
+                    replacesSlug: featData.system.replacesSlug ?? "",
                     automationStatus: featData.flags?.ptu?.automationStatus ?? "needs-automation"
                 })
                 if (_class) classes.add(_class);
@@ -204,7 +207,7 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
                     conjunction: "and",
                     label: "PTU.CompendiumBrowser.FilterOptions.Keywords",
                     options: [],
-                    selected: [{value: 'Obsolete', label: 'Obsolete', not: true}, {value: "Legacy", label: "Legacy", not: true}]
+                    selected: [{value: 'Obsolete', label: 'Obsolete', not: true}]
                 }
             },
             order: {

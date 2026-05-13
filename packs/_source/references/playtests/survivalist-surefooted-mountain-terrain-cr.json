@@ -1,5 +1,5 @@
 {
-  "name": "Survivalist - Surefooted – Mountain Terrain [CR]",
+  "name": "Survivalist - Surefooted – Mountain Terrain",
   "type": "reference",
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
@@ -25,7 +25,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "survivalist-surefooted-mountain-terrain"
   },
   "effects": [],
   "folder": "3mspjPD8gPzP1jmO",

@@ -1,6 +1,6 @@
 {
   "folder": "p9yRJ8QVFrEtl0mK",
-  "name": "The Power of Aura Rank 1 [CR]",
+  "name": "The Power of Aura Rank 1",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -116,7 +116,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Aura Guardian [CR]"
+    "class": "Aura Guardian",
+    "contentSet": "class-rework",
+    "replacesSlug": "the-power-of-aura-rank-1"
   },
   "effects": [],
   "sort": 0,

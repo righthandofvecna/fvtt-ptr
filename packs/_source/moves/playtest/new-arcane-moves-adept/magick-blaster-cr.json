@@ -1,6 +1,6 @@
 {
   "folder": "laXYP0SFSLCeWOcn",
-  "name": "Magick Blaster [CR]",
+  "name": "Magick Blaster",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
@@ -78,7 +78,9 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "magick-blaster"
   },
   "effects": [],
   "sort": 100000,

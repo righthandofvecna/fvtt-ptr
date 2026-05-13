@@ -1,5 +1,5 @@
 {
-  "name": "Quick Reflexes [CR]",
+  "name": "Quick Reflexes",
   "system": {
     "origin": "",
     "effect": "You gain the Dodge Ability.",
@@ -67,15 +67,17 @@
       "bind": false
     },
     "prerequisites": [
-      "Tumbler [CR]",
+      "Tumbler",
       "Expert Acrobatics"
     ],
     "notes": "",
     "free": false,
-    "class": "Tumbler [CR]",
+    "class": "Tumbler",
     "automation": [],
     "name": "Quick Reflexes",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "class-rework",
+    "replacesSlug": "quick-reflexes"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

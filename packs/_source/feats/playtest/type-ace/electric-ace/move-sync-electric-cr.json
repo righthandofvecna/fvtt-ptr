@@ -1,6 +1,6 @@
 {
   "folder": "94Agr4BeMJNpw2nF",
-  "name": "Move Sync (Electric) [CR]",
+  "name": "Move Sync (Electric)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Electric) [CR]"
+    "class": "Type Ace (Electric)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-electric"
   },
   "effects": [],
   "flags": {

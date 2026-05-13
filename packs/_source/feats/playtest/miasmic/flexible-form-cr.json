@@ -1,5 +1,5 @@
 {
-  "name": "Flexible Form [CR]",
+  "name": "Flexible Form",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your body becomes more malleable, and even your bones are able to flex when required. You do not gain Injuries from taking Massive damage, and you gain a +2 Bonus to any Acrobatics or Athletics Check made to bend, squeeze, or otherwise contort your body - including those to avoid Trip or Grapple maneuvers.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Miasmic [CR]",
-    "name": "Flexible Form [CR]"
+    "class": "Miasmic",
+    "name": "Flexible Form [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "flexible-form"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

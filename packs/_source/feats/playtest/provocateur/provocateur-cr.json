@@ -1,5 +1,5 @@
 {
-  "name": "Provocateur [CR]",
+  "name": "Provocateur",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Comeuppance and Taunt.\nNote: The Provocateur Skills are Charm, Guile, and Intimidation.",
@@ -74,8 +74,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Provocateur [CR]",
-    "name": "Provocateur [CR]"
+    "class": "Provocateur",
+    "name": "Provocateur [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "provocateur"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

@@ -1,6 +1,6 @@
 {
   "folder": "5f17VczTuQGcOBWv",
-  "name": "Stat Link (Speed) [CR]",
+  "name": "Stat Link (Speed)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "stat-link-cr",
+    "slug": "stat-link-speed-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Stat Ace (Speed) [CR]"
+      "Stat Ace (Speed)"
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Speed) [CR]"
+    "class": "Stat Ace (Speed)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-link-speed"
   },
   "effects": [],
   "flags": {

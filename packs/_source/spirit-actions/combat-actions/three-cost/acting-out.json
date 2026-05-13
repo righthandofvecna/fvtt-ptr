@@ -52,7 +52,9 @@
     },
     "cost": "3",
     "trigger": "End of Turn",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "RV7lDcq6aptrotLM",
   "effects": [],

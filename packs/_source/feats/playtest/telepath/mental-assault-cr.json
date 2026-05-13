@@ -1,5 +1,5 @@
 {
-  "name": "Mental Assault [CR]",
+  "name": "Mental Assault",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Extrasensory, Psybolt, and Psyshock.\nBonus: When you deal Super Effective Damage, cause an injury, or strike a Critical Hit, your target cannot benefit from Spirit for 1 Full Round.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Telepath [CR]",
-    "name": "Mental Assault [CR]"
+    "class": "Telepath",
+    "name": "Mental Assault [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "mental-assault"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

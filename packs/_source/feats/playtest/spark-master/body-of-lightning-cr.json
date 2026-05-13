@@ -1,5 +1,5 @@
 {
-  "name": "Body of Lightning [CR]",
+  "name": "Body of Lightning",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Volt Absorb or Motor Drive. You gain the Chosen Ability.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Spark Master [CR]",
-    "name": "Body of Lightning [CR]"
+    "class": "Spark Master",
+    "name": "Body of Lightning [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "body-of-lightning"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

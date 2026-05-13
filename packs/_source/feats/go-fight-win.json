@@ -57,7 +57,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Cheerleader"
+    "class": "Cheerleader",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "effects": [],
