@@ -7,6 +7,7 @@
     "rules": [],
     "enabled": true,
     "slug": "branded",
+    "contentSet": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -24,7 +25,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Patron Stat"
+      "Patron Stat",
+      "Class"
     ],
     "frequency": {
       "type": "static",
@@ -58,26 +60,28 @@
     "name": "Branded",
     "useCount": 0,
     "automation": [],
-    "contentSet": "",
     "replacesSlug": ""
   },
   "type": "feat",
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "img": "systems/ptu/static/css/images/icons/class_feat_icon.png",
   "effects": [],
   "ownership": {
     "default": 0
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "GM Permission"
+      "prereqBackup": "GM Permission",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.23",
     "coreVersion": "13.351",
     "createdTime": 1683368079207,
-    "modifiedTime": 1778200828680,
+    "modifiedTime": 1778665123471,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
