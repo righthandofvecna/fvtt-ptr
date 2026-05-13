@@ -1,5 +1,5 @@
 {
-  "name": "Juggler [CR]",
+  "name": "Juggler",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Quick Switch Feature, and using it costs only 1 AP.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Juggler [CR]",
-    "name": "Juggler [CR]"
+    "class": "Juggler",
+    "name": "Juggler [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "juggler"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

@@ -1,6 +1,6 @@
 {
   "folder": "kqDGppFdQVcjw8uO",
-  "name": "Fan The Flames [CR]",
+  "name": "Fan The Flames",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Brightest Flame [CR]",
+      "Brightest Flame",
       "Type-Linked Skill at Master Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fire) [CR]"
+    "class": "Type Ace (Fire)",
+    "contentSet": "class-rework",
+    "replacesSlug": "fan-the-flames"
   },
   "effects": [],
   "flags": {

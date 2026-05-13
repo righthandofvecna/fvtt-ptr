@@ -1,5 +1,5 @@
 {
-  "name": "Voice Lessons [CR]",
+  "name": "Voice Lessons",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You and your Pokémon’s Moves with the Sonic Keyword gain the Friendly keyword (except Perish Song), and you and your Pokémon’s Contest Moves are given the Sonic Keyword. Additionally, whenever your Pokémon make an Appeal Roll using a Contest Move with the Sonic Keyword, they receive +1d6.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Musician [CR]",
-    "name": "Voice Lessons [CR]"
+    "class": "Musician",
+    "name": "Voice Lessons [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "voice-lessons"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

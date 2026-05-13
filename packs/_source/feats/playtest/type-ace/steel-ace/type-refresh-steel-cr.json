@@ -1,5 +1,5 @@
 {
-  "name": "Type Refresh (Steel) [CR]",
+  "name": "Type Refresh (Steel)",
   "system": {
     "origin": "",
     "effect": "Target: Your Pokémon\nEffect: The target regains one use of a Scene-Frequency Move of your Chosen Type, and refreshes the Frequency of all EOT-Frequency Moves of your chosen Type. A Target can be affected by Type Refresh only once per Scene.",
@@ -55,10 +55,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Steel) [CR]",
+    "class": "Type Ace (Steel)",
     "name": "Type Refresh",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "type-refresh-steel"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

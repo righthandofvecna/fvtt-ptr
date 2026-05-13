@@ -32,7 +32,7 @@
       }
     ],
     "enabled": true,
-    "slug": "vortex",
+    "slug": "vortex-thunder-cage",
     "schema": {
       "version": 0.11,
       "lastMigration": {
@@ -75,7 +75,9 @@
     "name": "",
     "tokenIcon": {
       "show": true
-    }
+    },
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "folder": "gpLgMgi7hofskTVt",
   "effects": [],

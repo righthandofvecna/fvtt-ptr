@@ -71,7 +71,9 @@
     "damageBonus": 0,
     "isStruggle": false,
     "automation": [],
-    "damagebase": "--"
+    "damagebase": "--",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "Zp4K6bBn1nKPGlYZ",
   "effects": [],

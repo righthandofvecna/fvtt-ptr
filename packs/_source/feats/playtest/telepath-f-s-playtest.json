@@ -1,5 +1,5 @@
 {
-  "name": "Telepath [F&S Playtest]",
+  "name": "Telepath",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "You gain the Telepathy Capability for the rest of the scene.",
@@ -13,7 +13,7 @@
       }
     ],
     "enabled": true,
-    "slug": "telepath-f-s-playtest",
+    "slug": "telepath-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -69,7 +69,9 @@
     "class": "",
     "automation": [],
     "name": "Telepath",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "telepath"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",

@@ -1,6 +1,6 @@
 {
   "folder": "5f17VczTuQGcOBWv",
-  "name": "Stat Stratagem (Speed) [CR]",
+  "name": "Stat Stratagem (Speed)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,13 +55,15 @@
       "bind": true
     },
     "prerequisites": [
-      "Stat Link [CR]",
-      "Stat Training [CR]",
+      "Stat Link",
+      "Stat Training",
       "Master Command And Focus"
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Speed) [CR]"
+    "class": "Stat Ace (Speed)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-stratagem-speed"
   },
   "effects": [],
   "flags": {

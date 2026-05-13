@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "poke-ball-cannon",
+    "slug": "pok-ball-cannon",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -55,7 +55,9 @@
     "container": false,
     "automation": [],
     "name": "Poké Ball Cannon",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",

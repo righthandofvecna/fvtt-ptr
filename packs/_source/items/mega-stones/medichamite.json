@@ -57,7 +57,9 @@
     "container": false,
     "automation": [],
     "name": "Medichamite",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/medichamite.webp",

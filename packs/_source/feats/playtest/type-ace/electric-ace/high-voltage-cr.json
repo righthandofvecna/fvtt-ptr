@@ -1,6 +1,6 @@
 {
   "folder": "94Agr4BeMJNpw2nF",
-  "name": "High Voltage [CR]",
+  "name": "High Voltage",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Type Ace (Electric) [CR]"
+      "Type Ace (Electric)"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Electric) [CR]"
+    "class": "Type Ace (Electric)",
+    "contentSet": "class-rework",
+    "replacesSlug": "high-voltage"
   },
   "effects": [],
   "flags": {

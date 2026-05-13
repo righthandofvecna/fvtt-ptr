@@ -429,7 +429,7 @@
         "type": "body"
       }
     },
-    "slug": "eternatus",
+    "slug": "eternatus-eternamax",
     "rules": [],
     "source": {
       "value": "PTR Core Dex"
@@ -444,7 +444,9 @@
       "Legendary",
       "Galar"
     ],
-    "enabled": false
+    "enabled": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

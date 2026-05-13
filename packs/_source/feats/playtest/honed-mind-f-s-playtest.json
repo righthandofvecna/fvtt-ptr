@@ -1,5 +1,5 @@
 {
-  "name": "Honed Mind [F&S Playtest]",
+  "name": "Honed Mind",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "You learn the Moves Mind Reader and Calm Mind.",
@@ -25,7 +25,7 @@
       }
     ],
     "enabled": true,
-    "slug": "honed-mind-f-s-playtest",
+    "slug": "honed-mind-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -75,10 +75,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Telepath [F&S Playtest]",
+    "class": "Telepath",
     "automation": [],
     "name": "Honed Mind",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "honed-mind"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

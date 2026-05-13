@@ -3589,6 +3589,8 @@
     "exportSource": null
   },
   "system": {
-    "slug": "mountain"
+    "slug": "mountain",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

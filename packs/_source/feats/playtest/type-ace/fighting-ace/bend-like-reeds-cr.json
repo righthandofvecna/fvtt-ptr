@@ -1,6 +1,6 @@
 {
   "folder": "2JCGsdCpOqDxjk8e",
-  "name": "Bend Like Reeds [CR]",
+  "name": "Bend Like Reeds",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -57,11 +57,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Type Ace (Fighting) [CR]"
+      "Type Ace (Fighting)"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fighting) [CR]"
+    "class": "Type Ace (Fighting)",
+    "contentSet": "class-rework",
+    "replacesSlug": "bend-like-reeds"
   },
   "effects": [],
   "flags": {

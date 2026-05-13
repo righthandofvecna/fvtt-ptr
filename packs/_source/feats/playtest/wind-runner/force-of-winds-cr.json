@@ -1,5 +1,5 @@
 {
-  "name": "Force of Winds [CR]",
+  "name": "Force of Winds",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose @UUID[Compendium.ptu.abilities.Item.rTE4w4C9aplyiUtk]{Windveiled} or @UUID[Compendium.ptu.abilities.Item.C6aRawvdZOrPx2xK]{Wind Rider}. You gain the chosen Ability.",
@@ -40,7 +40,7 @@
       }
     ],
     "enabled": true,
-    "slug": "gale-speed-cr",
+    "slug": "force-of-winds-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -91,8 +91,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Wind Runner [CR]",
-    "name": "Gale Speed [CR]"
+    "class": "Wind Runner",
+    "name": "Gale Speed [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "force-of-winds"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

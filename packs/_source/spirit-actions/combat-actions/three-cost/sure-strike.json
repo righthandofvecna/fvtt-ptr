@@ -52,7 +52,9 @@
     },
     "cost": "3",
     "trigger": "After rolling to-hit",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "RmBqgS42gCUBHE8d",
   "effects": [],

@@ -1,5 +1,5 @@
 {
-  "name": "Top Tier Berries [CR]",
+  "name": "Top Tier Berries",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may grow additional Berries and Herbs, depending on the higher of your General Education or Survival Rank.\n» Novice: You may grow Tier 2 Berries\n» Adept: You may grow Mental Herbs, Power Herbs, White Herbs, and Tiny Mushrooms.\n» Expert: You may grow Revival Herbs, Energy Roots, Big Mushrooms, and Tier 3 Berries\n» Master: Increase the Soil Quality of all your plants by +1.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Top Tier Berries [CR]"
+    "class": "Researcher",
+    "name": "Top Tier Berries [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "top-tier-berries"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

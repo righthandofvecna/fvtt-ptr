@@ -1,5 +1,5 @@
 {
-  "name": "Crystal Artificer [CR]",
+  "name": "Crystal Artificer",
   "system": {
     "origin": "Class Rework",
     "effect": "Effects: You may use any Crystal Artificer Recipe for which you qualify.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Crystal Artificer [CR]"
+    "class": "Researcher",
+    "name": "Crystal Artificer [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "crystal-artificer"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

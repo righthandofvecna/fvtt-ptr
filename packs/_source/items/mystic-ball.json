@@ -71,7 +71,9 @@
     "automation": [],
     "name": "Mystic Ball",
     "useCount": 0,
-    "modifier": null
+    "modifier": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/mystic ball.webp",

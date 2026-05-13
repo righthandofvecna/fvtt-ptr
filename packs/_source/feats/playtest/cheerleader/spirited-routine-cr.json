@@ -1,5 +1,5 @@
 {
-  "name": "Spirited Routine [CR]",
+  "name": "Spirited Routine",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon with Positive Spirit Points\nEffect: Your Pokémon may spend 2 Spirit to use a Cheerleading move from your move list disregarding it's frequency.",
@@ -57,8 +57,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Cheerleader [CR]",
-    "name": "Spirited Routine [CR]"
+    "class": "Cheerleader",
+    "name": "Spirited Routine [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "spirited-routine"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

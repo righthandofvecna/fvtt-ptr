@@ -1,5 +1,5 @@
 {
-  "name": "Weather Ball [Weather Playtest]",
+  "name": "Weather Ball",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "folder": "9RUwT68fcksatpSD",
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "weather-ball-weather-playtest",
+    "slug": "weather-ball-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -71,7 +71,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "weather-ball"
   },
   "_id": "GWZv0em5fcIPGnFo",
   "effects": [],

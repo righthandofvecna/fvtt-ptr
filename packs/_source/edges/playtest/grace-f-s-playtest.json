@@ -1,12 +1,12 @@
 {
-  "name": "Grace [F&S Playtest]",
+  "name": "Grace",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Your Pokémon may consume and benefit from 2 more Poffins each. If this Pokémon is traded to a Trainer without the Grace feature, these extra dice from additional Poffins are not lost, but a Trainer without Grace may not benefit from more than 6 Dice gained from Poffins. You may always use any of the Skills that are prerequisites for Grace in the Introduction Stage of a Contest to roll for Contest Stat Dice of any kind. Pokemon you use Grace on start with an additional Spirit each day this can raise the max to 4 if you are Expert in any of these skills.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "grace-f-s-playtest",
+    "slug": "grace-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -56,7 +56,9 @@
     "notes": "",
     "free": false,
     "name": "Grace",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "grace"
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",

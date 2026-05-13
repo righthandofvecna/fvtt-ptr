@@ -1,6 +1,6 @@
 {
   "folder": "5f17VczTuQGcOBWv",
-  "name": "Stat Training (Speed) [CR]",
+  "name": "Stat Training (Speed)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Stat Ace (Speed) [CR]"
+      "Stat Ace (Speed)"
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Speed) [CR]"
+    "class": "Stat Ace (Speed)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-training-speed"
   },
   "effects": [],
   "flags": {

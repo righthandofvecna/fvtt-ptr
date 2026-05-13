@@ -75,7 +75,9 @@
     "prerequisites": [
       "Type Ace Class"
     ],
-    "cost": 0
+    "cost": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

@@ -1,5 +1,5 @@
 {
-  "name": "Spark Master [CR]",
+  "name": "Spark Master",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Static or Electrodash. You gain the Chosen Ability.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Spark Master [CR]",
-    "name": "Spark Master [CR]"
+    "class": "Spark Master",
+    "name": "Spark Master [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "spark-master"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

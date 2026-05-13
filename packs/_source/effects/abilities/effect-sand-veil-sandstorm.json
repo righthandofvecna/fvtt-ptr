@@ -33,7 +33,7 @@
       }
     ],
     "enabled": true,
-    "slug": "snow-cloak-hail",
+    "slug": "effect-sand-veil-sandstorm",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -61,7 +61,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "HTNFGIxy9zsCONjI",

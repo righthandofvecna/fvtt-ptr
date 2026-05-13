@@ -1,5 +1,5 @@
 {
-  "name": "Firebrand [CR]",
+  "name": "Firebrand",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your Fire-Type Moves Burn Targets on a roll of 19+. If a move already has a chance of Burning foes, Firebrand increases the effect range by +2.",
@@ -82,8 +82,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Fire Bringer [CR]",
-    "name": "Firebrand [CR]"
+    "class": "Fire Bringer",
+    "name": "Firebrand [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "firebrand"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

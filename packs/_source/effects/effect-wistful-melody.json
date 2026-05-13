@@ -28,7 +28,7 @@
       }
     ],
     "enabled": true,
-    "slug": "atk-stage-1",
+    "slug": "effect-wistful-melody",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -56,7 +56,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

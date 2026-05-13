@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "pokedex",
+    "slug": "pok-dex",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -55,7 +55,9 @@
     "container": false,
     "automation": [],
     "name": "Pokédex",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/pokedex.webp",

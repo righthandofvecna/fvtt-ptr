@@ -1,5 +1,5 @@
 {
-  "name": "Overwatch [CR]",
+  "name": "Overwatch",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Create a Wide Line X, where X is equal to your Weapon’s Range minus 2. For one full round, if a foe moves in or out of that area, you may make a Ranged Weapon attack, Frequency allowing, against that foe as a Free Action. You may not attack a specific foe more than once per round this way. While this is in effect, if you Move from your current location, Overwatch’s effect is lost.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Marksman [CR]",
-    "name": "Overwatch [CR]"
+    "class": "Marksman",
+    "name": "Overwatch [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "overwatch"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

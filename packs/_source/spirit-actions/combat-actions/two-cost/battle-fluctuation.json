@@ -52,7 +52,9 @@
     },
     "cost": "2",
     "trigger": "During Damage Resolution",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "xTpuotrKFQVVZOLa",
   "effects": [],

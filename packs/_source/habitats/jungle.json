@@ -2212,6 +2212,8 @@
     "exportSource": null
   },
   "system": {
-    "slug": "jungle"
+    "slug": "jungle",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

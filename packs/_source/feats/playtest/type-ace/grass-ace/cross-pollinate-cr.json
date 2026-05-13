@@ -1,5 +1,5 @@
 {
-  "name": "Cross-Pollinate [CR]",
+  "name": "Cross-Pollinate",
   "system": {
     "origin": "",
     "effect": "Trigger - Your Grass-Type Pokémon uses a damaging Grass-Type Move\nEffect: Your Pokémon may immediately use a Grass-Type Status-Class move as a Free Action.",
@@ -57,10 +57,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Grass) [CR]",
+    "class": "Type Ace (Grass)",
     "name": "Cross-Pollinate",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "cross-pollinate"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

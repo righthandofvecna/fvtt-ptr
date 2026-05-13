@@ -1,5 +1,5 @@
 {
-  "name": "Hobbling Shot [CR]",
+  "name": "Hobbling Shot",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Make a Ranged Struggle Attack attack with a -2 penalty to Accuracy. If you hit, the attack deals Damage as if it was resisted one step, but the target becomes Slowed, loses 1 Speed Combat Stage, and you initiate a Trip Maneuver against the target. You may use your Perception Skill to resolve the Opposed Check if you wish.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Marksman [CR]",
-    "name": "Hobbling Shot [CR]"
+    "class": "Marksman",
+    "name": "Hobbling Shot [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "hobbling-shot"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

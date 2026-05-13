@@ -1,5 +1,5 @@
 {
-  "name": "Lean In [CR]",
+  "name": "Lean In",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You and your Mount both take Damage from a Burst, Blast, Cone, or Line\nEffect: Both you and your Mount Resist the attack one step further.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Rider [CR]",
-    "name": "Lean In [CR]"
+    "class": "Rider",
+    "name": "Lean In [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "lean-in"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

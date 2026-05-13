@@ -1,5 +1,5 @@
 {
-  "name": "Fallout [Weather Playtest]",
+  "name": "Fallout",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/NuclearIC_Icon.png",
   "folder": "9RUwT68fcksatpSD",
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "fallout-weather-playtest",
+    "slug": "fallout-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -70,7 +70,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "fallout"
   },
   "effects": [],
   "sort": 100000,

@@ -1,5 +1,5 @@
 {
-  "name": "Telepathic Awareness [F&S Playtest]",
+  "name": "Telepathic Awareness",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Choose Gentle Vibe or Telepathy. You gain the chosen Ability.",
@@ -32,7 +32,7 @@
       }
     ],
     "enabled": true,
-    "slug": "telepathic-awareness-f-s-playtest",
+    "slug": "telepathic-awareness-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -82,10 +82,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Telepath [F&S Playtest]",
+    "class": "Telepath",
     "automation": [],
     "name": "Telepathic Awareness",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "telepathic-awareness"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

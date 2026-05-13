@@ -1,5 +1,5 @@
 {
-  "name": "Fiery Soul [CR]",
+  "name": "Fiery Soul",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Flash Fire or Flame Body. You gain the chosen Ability.\nBonus: You gain the Heater Capability, and are immune to the Burn condition.",
@@ -112,8 +112,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Fire Bringer [CR]",
-    "name": "Fiery Soul [CR]"
+    "class": "Fire Bringer",
+    "name": "Fiery Soul [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "fiery-soul"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

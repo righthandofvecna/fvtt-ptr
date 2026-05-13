@@ -1,6 +1,6 @@
 {
   "folder": "tzJULEy7cf2YZw4J",
-  "name": "Stat Link (Attack) [CR]",
+  "name": "Stat Link (Attack)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Stat Ace (Attack) [CR]"
+      "Stat Ace (Attack)"
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Attack) [CR]"
+    "class": "Stat Ace (Attack)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-link-attack"
   },
   "effects": [],
   "flags": {

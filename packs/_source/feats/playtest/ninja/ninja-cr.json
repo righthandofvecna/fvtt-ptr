@@ -1,5 +1,5 @@
 {
-  "name": "Ninja [CR]",
+  "name": "Ninja",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Infiltrator Ability and the Stealth Capability.\nBonus: You gain the Sneak's Tricks Edge, even if you do not meet the prerequisites.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Ninja [CR]",
-    "name": "Ninja [CR]"
+    "class": "Ninja",
+    "name": "Ninja [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "ninja"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

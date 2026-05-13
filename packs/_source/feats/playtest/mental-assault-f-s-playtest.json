@@ -1,5 +1,5 @@
 {
-  "name": "Mental Assault [F&S Playtest]",
+  "name": "Mental Assault",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "You learn the Moves Extrasensory and Psyshock.\nBonus: When you deal Super Effective Damage, cause an injury, or strike a Critical Hit, your target cannot benefit from Spirit for 1 Full Round.",
@@ -25,7 +25,7 @@
       }
     ],
     "enabled": true,
-    "slug": "mental-assault-f-s-playtest",
+    "slug": "mental-assault-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -76,10 +76,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Telepath [F&S Playtest]",
+    "class": "Telepath",
     "automation": [],
     "name": "Mental Assault",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "mental-assault"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

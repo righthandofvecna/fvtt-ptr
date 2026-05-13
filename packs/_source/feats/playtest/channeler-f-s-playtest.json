@@ -1,12 +1,12 @@
 {
-  "name": "Channeler [F&S Playtest]",
+  "name": "Channeler",
   "system": {
     "origin": " [F&S Playtest]",
     "effect": "Target: A Pokémon.\nEffect: You Channel the target Pokémon. If you attempt to Channel a Hostile Pokémon, you must make an Intuition Check with a DC of 15 to Channel the target. You may stop Channeling a Pokémon as a Free Action at any time. You may Channel a number of Pokémon at a time up to your Intuition Rank. If a Channeled Pokémon goes further than 20 meters from you, they stop being Channeled.  \n\nBonus: If you channel with a Pokémon before capturing it, that Pokémon starts with +1 Friendship to its base.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "channeler-f-s-playtest",
+    "slug": "channeler-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -59,7 +59,9 @@
     "class": "",
     "name": "Channeler",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "channeler"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",

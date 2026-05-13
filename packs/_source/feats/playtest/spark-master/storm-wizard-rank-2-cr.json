@@ -1,5 +1,5 @@
 {
-  "name": "Storm Wizard Rank 2 [CR]",
+  "name": "Storm Wizard Rank 2",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may learn three Moves from the list below, marked with the Storm Wizard Rank you are gaining or lower.\nRank 1: Charge, Charge Beam, Eerie Impulse, Shock Wave, Spark\nRank 2: Electro Ball, Thunder Punch, Thunder Wave ,Thunderbolt , Wild Charge\nRank 3: Discharge, Rising Voltage, Thunder, Volt Tackle, Zap Cannon",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Spark Master [CR]",
-    "name": "Storm Wizard [CR]Rank 1 [CR]"
+    "class": "Spark Master",
+    "name": "Storm Wizard [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "storm-wizard-rank-2"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Experimental AI [CR]",
+  "name": "Experimental AI",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Increase the maximum complexity of all Pokébots you create by 2, and increase the maximum complexity of Pokébots you can control by 2.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Experimental AI [CR]"
+    "class": "Researcher",
+    "name": "Experimental AI [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "experimental-ai"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Inspirational Support [CR]",
+  "name": "Inspirational Support",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may trigger Cheerleader as a Free Action when you or your Pokémon use a Cheerleading Move.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Cheerleader [CR]",
-    "name": "Inspirational Support [CR]"
+    "class": "Cheerleader",
+    "name": "Inspirational Support [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "inspirational-support"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

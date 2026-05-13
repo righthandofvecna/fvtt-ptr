@@ -1,5 +1,5 @@
 {
-  "name": "Quick Wit [CR]",
+  "name": "Quick Wit",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may make a Manipulate Maneuver or use a Social Move you know, Frequency allowing.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Provocateur [CR]",
-    "name": "Quick Wit [CR]"
+    "class": "Provocateur",
+    "name": "Quick Wit [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "quick-wit"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

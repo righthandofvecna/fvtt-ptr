@@ -59,7 +59,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "25NJNoqly3Vx4LiD",
   "effects": [],

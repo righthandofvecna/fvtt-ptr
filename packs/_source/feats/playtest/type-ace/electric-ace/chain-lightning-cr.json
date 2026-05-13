@@ -1,12 +1,12 @@
 {
-  "name": "Chain Lightning [CR]",
+  "name": "Chain Lightning",
   "system": {
     "origin": "",
     "effect": "Trigger - Your Pokémon hits with a damaging 1-target Electric Attack\nEffect: Pick another Pokémon or Trainer within 3 meters of the target of the attack. You may repeat the triggering attack against the target, with a -5 Damage penalty. If you hit, you may repeat the attack a third time against a foe within 3 meters of the second target, this time with a -10 Damage penalty. The third target cannot be the same as the original target.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "chain-lightning",
+    "slug": "chain-lightning-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -53,14 +53,16 @@
     },
     "prerequisites": [
       "Type-Linked Skill at Master",
-      "High Voltage [CR]"
+      "High Voltage"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Electric) [CR]",
+    "class": "Type Ace (Electric)",
     "name": "Chain Lightning",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "chain-lightning"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

@@ -468,7 +468,7 @@
         "type": "body"
       }
     },
-    "slug": "cobalion",
+    "slug": "cobalion-mega",
     "rules": [],
     "type": {
       "0": "Steel",
@@ -478,7 +478,9 @@
     "source": {
       "value": "PTR Exclusive Dex Megas"
     },
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "LCXOG6QHNh9gd0Nv",

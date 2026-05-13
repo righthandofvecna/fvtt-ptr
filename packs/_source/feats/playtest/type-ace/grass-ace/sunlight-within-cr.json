@@ -1,5 +1,5 @@
 {
-  "name": "Sunlight Within [CR]",
+  "name": "Sunlight Within",
   "system": {
     "origin": "",
     "effect": "Target: Your Pokémon\nEffect: While this Stratagem is bound, the target may activate Moves and Abilities as if they were in a Sun Weather Condition. While in Sun Weather Conditions, the target gains +10 Damage Resistance and deals +10 Bonus Damage with their Damaging Attacks.",
@@ -59,10 +59,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Grass) [CR]",
+    "class": "Type Ace (Grass)",
     "name": "Sunlight Within",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "sunlight-within"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

@@ -1,5 +1,5 @@
 {
-  "name": "Tumbler [CR]",
+  "name": "Tumbler",
   "system": {
     "origin": "",
     "effect": "You gain the Run Away Ability.",
@@ -75,7 +75,9 @@
     "class": "",
     "automation": [],
     "name": "Tumbler",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "class-rework",
+    "replacesSlug": "tumbler"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",

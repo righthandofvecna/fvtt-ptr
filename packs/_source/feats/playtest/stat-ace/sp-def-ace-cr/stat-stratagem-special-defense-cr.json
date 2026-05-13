@@ -1,6 +1,6 @@
 {
   "folder": "KlbLuc2juXKYPRSb",
-  "name": "Stat Stratagem (Special Defense) [CR]",
+  "name": "Stat Stratagem (Special Defense)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "stat-stratagem-cr",
+    "slug": "stat-stratagem-special-defense-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -55,13 +55,15 @@
       "bind": true
     },
     "prerequisites": [
-      "Stat Link [CR]",
-      "Stat Training [CR]",
+      "Stat Link",
+      "Stat Training",
       "Master Command And Focus"
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Special Defense) [CR]"
+    "class": "Stat Ace (Special Defense)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-stratagem-special-defense"
   },
   "effects": [],
   "flags": {

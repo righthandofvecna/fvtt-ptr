@@ -1,6 +1,6 @@
 {
   "folder": "F8TUNvOCEnUFlpxZ",
-  "name": "Move Sync (Rock) [CR]",
+  "name": "Move Sync (Rock)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Rock) [CR]"
+    "class": "Type Ace (Rock)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-rock"
   },
   "effects": [],
   "flags": {

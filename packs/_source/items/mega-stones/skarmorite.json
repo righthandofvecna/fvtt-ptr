@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "meganiumite",
+    "slug": "skarmorite",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -57,7 +57,9 @@
     "container": false,
     "automation": [],
     "name": "Banettite",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "/systems/ptu/static/images/item_icons/skarmorite.webp",

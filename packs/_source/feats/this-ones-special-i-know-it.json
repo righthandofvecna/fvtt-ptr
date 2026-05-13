@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "this-one-s-special-i-know-it",
+    "slug": "this-ones-special-i-know-it",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -58,7 +58,9 @@
     "class": "Researcher (Pokemon Caretaking)",
     "name": "This One's Special, I Know It",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

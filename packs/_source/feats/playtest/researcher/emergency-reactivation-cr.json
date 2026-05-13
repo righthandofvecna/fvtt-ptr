@@ -1,5 +1,5 @@
 {
-  "name": "Emergency Reactivation [CR]",
+  "name": "Emergency Reactivation",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You or your Pokémon suffer Augmentation Shock\nEffect: The triggering user does not suffer Augmentation Shock and their Augmentations are not disabled. This Feature may affect a target only once per Scene.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Emergency Reactivation [CR]"
+    "class": "Researcher",
+    "name": "Emergency Reactivation [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "emergency-reactivation"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

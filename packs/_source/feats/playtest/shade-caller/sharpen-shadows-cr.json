@@ -1,5 +1,5 @@
 {
-  "name": "Sharpen Shadows [CR]",
+  "name": "Sharpen Shadows",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose three of the following Moves, and learn them:\nBrutal Swing, Dark Pulse, Night Slash, Obstruct, Throat Chop",
@@ -82,8 +82,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Shade Caller [CR]",
-    "name": "Sharpen Shadows [CR]"
+    "class": "Shade Caller",
+    "name": "Sharpen Shadows [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "sharpen-shadows"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Tyrant"
+    "class": "Tyrant",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,

@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "yveltal-s-major-gift-touch-of-the-flayed-one",
+    "slug": "yveltals-major-gift-touch-of-the-flayed-one",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +25,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "dCwEbCxqs2FwAMjn",
   "effects": [],

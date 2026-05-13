@@ -1,6 +1,6 @@
 {
   "folder": "I7dKRNMhCe8AHmgT",
-  "name": "Porous Clay [Weather Playtest]",
+  "name": "Porous Clay",
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
@@ -15,7 +15,7 @@
       }
     ],
     "enabled": true,
-    "slug": "porous-clay-weather-playtest",
+    "slug": "porous-clay-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -65,7 +65,9 @@
     "cost": "3000",
     "consumable": 0,
     "subtype": "",
-    "container": false
+    "container": false,
+    "contentSet": "weather-playtest",
+    "replacesSlug": "porous-clay"
   },
   "effects": [],
   "sort": 0,

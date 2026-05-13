@@ -1,6 +1,6 @@
 {
   "folder": "F8TUNvOCEnUFlpxZ",
-  "name": "Bedrock Foundation [CR]",
+  "name": "Bedrock Foundation",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Type Ace (Rock) [CR]"
+      "Type Ace (Rock)"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Rock) [CR]"
+    "class": "Type Ace (Rock)",
+    "contentSet": "class-rework",
+    "replacesSlug": "bedrock-foundation"
   },
   "effects": [],
   "flags": {

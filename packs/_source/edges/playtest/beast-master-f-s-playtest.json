@@ -1,12 +1,12 @@
 {
-  "name": "Beast Master [F&S Playtest]",
+  "name": "Beast Master",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Increase the Spirit spending limit by 1 for your Pokemon (If your Pokemon could normally go to 0, now they can go to -1, etc.) You may also use Command on Pokemon to change their Disposition instead of Charm.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "beast-master-f-s-playtest",
+    "slug": "beast-master-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -56,7 +56,9 @@
     "notes": "",
     "free": false,
     "name": "Beast Master",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "beast-master"
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",

@@ -1,5 +1,5 @@
 {
-  "name": "Sand Stream [Weather Playtest]",
+  "name": "Sand Stream",
   "type": "ability",
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
@@ -16,7 +16,7 @@
       }
     ],
     "enabled": true,
-    "slug": "sand-stream-weather-playtest",
+    "slug": "sand-stream-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -62,7 +62,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "sand-stream"
   },
   "effects": [],
   "folder": "MsdL8dYgE7JbY1ya",

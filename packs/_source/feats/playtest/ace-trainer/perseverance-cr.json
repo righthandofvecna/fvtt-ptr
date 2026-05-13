@@ -1,5 +1,5 @@
 {
-  "name": "Perseverance [CR]",
+  "name": "Perseverance",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: Your Pokémon gains an Injury\nEffect: The target instead does not gain an Injury, and gains Temporary Hit Points equal to your Command Rank. Perseverance may activate only once per Scene per target.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Ace Trainer [CR]",
-    "name": "Perseverance [CR]"
+    "class": "Ace Trainer",
+    "name": "Perseverance [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "perseverance"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

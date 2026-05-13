@@ -1,6 +1,6 @@
 {
   "folder": "lzFJtoNPVQVKSXNe",
-  "name": "Move Sync (Bug) [CR]",
+  "name": "Move Sync (Bug)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Bug) [CR]"
+    "class": "Type Ace (Bug)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-bug"
   },
   "effects": [],
   "flags": {

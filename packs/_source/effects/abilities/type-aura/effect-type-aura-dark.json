@@ -19,7 +19,7 @@
       }
     ],
     "enabled": true,
-    "slug": "type-aura-dark",
+    "slug": "effect-type-aura-dark",
     "schema": {
       "version": 0.111,
       "lastMigration": {
@@ -54,7 +54,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "isENiv6hVGXZFutU",

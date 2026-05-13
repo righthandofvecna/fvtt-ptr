@@ -1,5 +1,5 @@
 {
-  "name": "Champion of Steel [CR]",
+  "name": "Champion of Steel",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You make a Weapon Attack.\nEffect: The attack or Move increases your Defense by 1 Combat Stage on 16+ and you may have it deal Steel-Type Damage if you wish.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Steelheart [CR]",
-    "name": "Champion of Steel [CR]"
+    "class": "Steelheart",
+    "name": "Champion of Steel [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "champion-of-steel"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

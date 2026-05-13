@@ -1,5 +1,5 @@
 {
-  "name": "Black-Out Strike [CR]",
+  "name": "Black-Out Strike",
   "system": {
     "origin": "",
     "effect": "Trigger: Your Pokémon hits with a damaging Dark-Type Move\nEffect: When Black-Out Strike is declared, the triggering attack becomes a Critical Hit. After the attack is resolved, the target of the attack gains an Injury and falls Asleep.",
@@ -53,14 +53,16 @@
     },
     "prerequisites": [
       "Type-Linked Skill at Master",
-      "Life Isn't Fair [CR]"
+      "Life Isn't Fair"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Dark) [CR]",
+    "class": "Type Ace (Dark)",
     "name": "Black-Out Strike",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "black-out-strike"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

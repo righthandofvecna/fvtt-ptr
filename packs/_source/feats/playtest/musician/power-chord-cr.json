@@ -1,5 +1,5 @@
 {
-  "name": "Power Chord [CR]",
+  "name": "Power Chord",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You play a Song\nEffect: Make a Charm or Focus Check, and add your Special Attack. Foes in the area of effect take Special Normal-Type Damage equal to the result.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Musician [CR]",
-    "name": "Power Chord [CR]"
+    "class": "Musician",
+    "name": "Power Chord [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "power-chord"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

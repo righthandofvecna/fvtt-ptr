@@ -1,5 +1,5 @@
 {
-  "name": "Overclock [CR]",
+  "name": "Overclock",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokébot\nEffect: The target is cured of all Persistent Statuses, resets all negative Combat Stages to default, and gains two Ticks of Temporary Hit Points. For the rest of the Scene, it deals and takes additional damage with all attacks equal to your Technology Education Rank.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Overclock [CR]"
+    "class": "Researcher",
+    "name": "Overclock [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "overclock"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

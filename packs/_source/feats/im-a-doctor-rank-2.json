@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "i-m-a-doctor-rank-2",
+    "slug": "im-a-doctor-rank-2",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -58,7 +58,9 @@
     "class": "Medic",
     "name": "I'm A Doctor Rank 2",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

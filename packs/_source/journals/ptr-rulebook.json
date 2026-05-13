@@ -8586,6 +8586,8 @@
   "sort": 0,
   "categories": [],
   "system": {
-    "slug": "ptr-rulebook"
+    "slug": "ptr-rulebook",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

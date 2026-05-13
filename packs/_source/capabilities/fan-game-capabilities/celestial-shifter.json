@@ -52,7 +52,9 @@
       "bind": false
     },
     "name": "",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "ownership": {
     "default": 0

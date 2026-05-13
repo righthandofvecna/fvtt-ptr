@@ -1,6 +1,6 @@
 {
   "folder": "tzJULEy7cf2YZw4J",
-  "name": "Stat Mastery (Attack) [CR]",
+  "name": "Stat Mastery (Attack)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Stat Maneuver (Attack) [CR]"
+      "Stat Maneuver (Attack)"
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Attack) [CR]"
+    "class": "Stat Ace (Attack)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-mastery-attack"
   },
   "effects": [],
   "flags": {

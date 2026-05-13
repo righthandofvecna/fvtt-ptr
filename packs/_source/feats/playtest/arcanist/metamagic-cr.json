@@ -1,5 +1,5 @@
 {
-  "name": "Metamagic [CR]",
+  "name": "Metamagic",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You use a Special Move\nEffect: You may apply a Rank 1 Power Manipulation to your attack.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Arcanist [CR]",
-    "name": "Metamagic [CR]"
+    "class": "Arcanist",
+    "name": "Metamagic [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "metamagic"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

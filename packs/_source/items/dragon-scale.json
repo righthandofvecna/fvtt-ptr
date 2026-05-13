@@ -57,7 +57,9 @@
     "container": false,
     "automation": [],
     "name": "Dragon Scale",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/dragon scale.webp",

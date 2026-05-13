@@ -30,7 +30,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-wishiwashi-schooling",
+    "slug": "form-change-wishiwashi-schooling",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -58,7 +58,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "DJzDYBNllxgyeiok",

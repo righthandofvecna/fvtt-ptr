@@ -1,6 +1,6 @@
 {
   "folder": "94Agr4BeMJNpw2nF",
-  "name": "Short Circuit [CR]",
+  "name": "Short Circuit",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": true
     },
     "prerequisites": [
-      "High Voltage [CR]",
+      "High Voltage",
       "Type-Linked Skill at Adept Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Electric) [CR]"
+    "class": "Type Ace (Electric)",
+    "contentSet": "class-rework",
+    "replacesSlug": "short-circuit"
   },
   "effects": [],
   "flags": {

@@ -1,6 +1,6 @@
 {
   "folder": "iUPvO9hLCBIk2Lgv",
-  "name": "Song of Might [CR]",
+  "name": "Song of Might",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
@@ -66,7 +66,9 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "song-of-might"
   },
   "effects": [],
   "sort": 100000,

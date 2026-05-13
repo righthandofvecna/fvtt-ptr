@@ -118,7 +118,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "pvfbtAhZJdE0W3KN",
   "effects": [],

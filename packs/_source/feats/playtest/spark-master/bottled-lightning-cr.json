@@ -1,5 +1,5 @@
 {
-  "name": "Bottled Lightning [CR]",
+  "name": "Bottled Lightning",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: An item made of conductive material\nEffect: Choose one of your Electric Type Moves with a target. You Charge the target item with this Move. Bot-tled Lightning counts as using the Move for frequency purposes. You may expend this Charge as a Rapid Action on your turn to use the Move the item was charged with, originating from the item. If a Pokémon or Trainer touches a Charged item, you may instead activate this Rapid Action as if it had the Priority keyword. At the end of a Scene, all items lose their Charge, and you may only have X items Charged at a time where X is half your Focus Rank.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Spark Master [CR]",
-    "name": "Bottled Lightning [CR]"
+    "class": "Spark Master",
+    "name": "Bottled Lightning [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "bottled-lightning"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

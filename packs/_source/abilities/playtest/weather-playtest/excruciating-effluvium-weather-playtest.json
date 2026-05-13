@@ -1,5 +1,5 @@
 {
-  "name": "Excruciating Effluvium [Weather Playtest]",
+  "name": "Excruciating Effluvium",
   "type": "ability",
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "excruciating-effluvium-weather-playtest",
+    "slug": "excruciating-effluvium-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -54,7 +54,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "excruciating-effluvium"
   },
   "effects": [],
   "folder": "MsdL8dYgE7JbY1ya",

@@ -1,6 +1,6 @@
 {
   "folder": "WFnk0S5IBTgc21Ft",
-  "name": "Move Sync (Ice) [CR]",
+  "name": "Move Sync (Ice)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ice) [CR]"
+    "class": "Type Ace (Ice)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-ice"
   },
   "effects": [],
   "flags": {

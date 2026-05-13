@@ -1,5 +1,5 @@
 {
-  "name": "Guardian's Punishment [CR]",
+  "name": "Guardian's Punishment",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You get hit by a Damaging Attack\nEffect: You may use the Move Counter or Mirror Coat as if it was on your Move List against the triggering attack. The Move you use is unrestricted by range.",
@@ -82,8 +82,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Fortress [CR]",
-    "name": "Guardian’s Punishment [CR]"
+    "class": "Fortress",
+    "name": "Guardian’s Punishment [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "guardians-punishment"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

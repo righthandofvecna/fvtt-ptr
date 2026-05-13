@@ -1,6 +1,6 @@
 {
   "folder": "F8TUNvOCEnUFlpxZ",
-  "name": "Heavy As Schist [CR]",
+  "name": "Heavy As Schist",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -57,12 +57,14 @@
       "bind": true
     },
     "prerequisites": [
-      "Bedrock Foundation [CR]",
+      "Bedrock Foundation",
       "Type-Linked Skill at Expert Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Rock) [CR]"
+    "class": "Type Ace (Rock)",
+    "contentSet": "class-rework",
+    "replacesSlug": "heavy-as-schist"
   },
   "effects": [],
   "flags": {

@@ -1,5 +1,5 @@
 {
-  "name": "Dirty Fighting [CR]",
+  "name": "Dirty Fighting",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit a foe with Weapon Attack\nEffect: After the attack is Resolved, you may immediately use the Dirty Trick Maneuver if the target is within range. You automatically hit with Dirty Trick, but must still make an Opposed Roll.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Rogue [CR]",
-    "name": "Dirty Fighting [CR]"
+    "class": "Rogue",
+    "name": "Dirty Fighting [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "dirty-fighting"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

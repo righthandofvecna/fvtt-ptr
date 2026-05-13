@@ -1,5 +1,5 @@
 {
-  "name": "Rolling Fog [Weather Playtest]",
+  "name": "Rolling Fog",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
   "folder": "9RUwT68fcksatpSD",
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "rolling-fog-weather-playtest",
+    "slug": "rolling-fog-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -70,7 +70,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "rolling-fog"
   },
   "_id": "8LmPzewqrpdkMjcr",
   "effects": [],

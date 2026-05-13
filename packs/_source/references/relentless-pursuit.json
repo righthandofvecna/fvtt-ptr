@@ -50,7 +50,9 @@
     "ap": {
       "cost": 0,
       "bind": false
-    }
+    },
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "jpLcXij2i9NorfO0",

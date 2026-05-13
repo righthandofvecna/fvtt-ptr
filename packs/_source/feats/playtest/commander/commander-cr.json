@@ -1,5 +1,5 @@
 {
-  "name": "Commander [CR]",
+  "name": "Commander",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may use [Orders] that have targets to target any Ally, even if normally those [Orders] would only let you apply the effect to your own Pokemon. Any other conditions still apply.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Commander [CR]",
-    "name": "Commander [CR]"
+    "class": "Commander",
+    "name": "Commander [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "commander"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

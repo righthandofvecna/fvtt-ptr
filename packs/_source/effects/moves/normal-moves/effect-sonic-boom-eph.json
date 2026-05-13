@@ -81,7 +81,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-sonic-boom",
+    "slug": "effect-sonic-boom-eph",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -109,7 +109,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "vvYHstuSI4986bjM",

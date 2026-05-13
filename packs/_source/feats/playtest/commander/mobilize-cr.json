@@ -1,5 +1,5 @@
 {
-  "name": "Mobilize [CR]",
+  "name": "Mobilize",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Any Ally\nEffect: The target cannot provoke Attacks of Opportunity on their next turn. Mobilize may target an Ally only once per encounter.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Commander [CR]",
-    "name": "Mobilize [CR]"
+    "class": "Commander",
+    "name": "Mobilize [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "mobilize"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

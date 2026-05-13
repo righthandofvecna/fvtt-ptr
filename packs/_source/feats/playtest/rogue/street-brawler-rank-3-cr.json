@@ -1,5 +1,5 @@
 {
-  "name": "Street Brawler Rank 3 [CR]",
+  "name": "Street Brawler Rank 3",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may learn 2 moves per rank from the following list;\nPursuit, Sucker Punch, Assurance, Payback, Spite, Sand Attack, Me First, Throat Chop.",
@@ -189,8 +189,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Rogue [CR]",
-    "name": "Street Brawler [CR]Rank 1 [CR]"
+    "class": "Rogue",
+    "name": "Street Brawler [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "street-brawler-rank-3"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

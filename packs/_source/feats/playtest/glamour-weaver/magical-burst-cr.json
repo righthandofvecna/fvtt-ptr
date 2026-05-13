@@ -1,5 +1,5 @@
 {
-  "name": "Magical Burst [CR]",
+  "name": "Magical Burst",
   "system": {
     "origin": "Class Rework",
     "effect": "Condition: You must have Enchanting Transformation Bound to use Magical Burst\nEffect: Use a Glamour Weaver Move as if it had the range \"Burst 3, Friendly, Exhaust.\" If this Move is a Damaging Move, it also gains the \"Smite\" keyword. Every ally within the area-of-effect chooses to either gain a Tick of Temporary Hit Points or cure themselves of one Volatile Affliction. Enchanting Transformation immediately becomes Unbound, and the AP used to bind it becomes spent instead of becoming available again.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Glamour Weaver [CR]",
-    "name": "Magical Burst [CR]"
+    "class": "Glamour Weaver",
+    "name": "Magical Burst [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "magical-burst"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

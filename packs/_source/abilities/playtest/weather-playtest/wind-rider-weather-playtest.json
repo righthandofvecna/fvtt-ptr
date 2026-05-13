@@ -1,5 +1,5 @@
 {
-  "name": "Wind Rider [Weather Playtest]",
+  "name": "Wind Rider",
   "type": "ability",
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
@@ -25,7 +25,7 @@
       }
     ],
     "enabled": true,
-    "slug": "wind-rider-weather-playtest",
+    "slug": "wind-rider-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -71,7 +71,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "wind-rider"
   },
   "effects": [],
   "folder": "MsdL8dYgE7JbY1ya",

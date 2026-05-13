@@ -1,5 +1,5 @@
 {
-  "name": "Cruel Gaze [CR]",
+  "name": "Cruel Gaze",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Glare and Headbutt",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Roughneck [CR]",
-    "name": "Cruel Gaze [CR]"
+    "class": "Roughneck",
+    "name": "Cruel Gaze [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "cruel-gaze"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

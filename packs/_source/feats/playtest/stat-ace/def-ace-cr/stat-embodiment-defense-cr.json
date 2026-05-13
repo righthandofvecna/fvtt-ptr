@@ -1,6 +1,6 @@
 {
   "folder": "h7hcbbq0jjRT9ACS",
-  "name": "Stat Embodiment (Defense) [CR]",
+  "name": "Stat Embodiment (Defense)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -60,7 +60,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Defense) [CR]"
+    "class": "Stat Ace (Defense)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-embodiment-defense"
   },
   "effects": [],
   "flags": {

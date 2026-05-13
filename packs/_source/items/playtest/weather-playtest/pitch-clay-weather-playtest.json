@@ -1,6 +1,6 @@
 {
   "folder": "I7dKRNMhCe8AHmgT",
-  "name": "Pitch Clay [Weather Playtest]",
+  "name": "Pitch Clay",
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
@@ -15,7 +15,7 @@
       }
     ],
     "enabled": true,
-    "slug": "pitch-clay-weather-playtest",
+    "slug": "pitch-clay-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -65,7 +65,9 @@
     "cost": "3000",
     "consumable": 0,
     "subtype": "",
-    "container": false
+    "container": false,
+    "contentSet": "weather-playtest",
+    "replacesSlug": "pitch-clay"
   },
   "effects": [],
   "sort": 0,

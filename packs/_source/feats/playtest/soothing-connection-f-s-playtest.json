@@ -1,12 +1,12 @@
 {
-  "name": "Soothing Connection [F&S Playtest]",
+  "name": "Soothing Connection",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Target: Channeled Pokémon\nEffect: Distribute 5 points in any way among Pokémon you are Channeling. For each point you assign to a Channeled Pokémon, they gain a Tick of Hit Points and 1 Spirit.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "soothing-connection-f-s-playtest",
+    "slug": "soothing-connection-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -56,10 +56,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Channeler [F&S Playtest]",
+    "class": "Channeler",
     "name": "Soothing Connection",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "soothing-connection"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

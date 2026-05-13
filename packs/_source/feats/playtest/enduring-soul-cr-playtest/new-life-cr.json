@@ -1,6 +1,6 @@
 {
   "folder": "cwHgKZ5JJwLWPzJM",
-  "name": "New Life [CR]",
+  "name": "New Life",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -53,7 +53,9 @@
     "prerequisites": [],
     "notes": "",
     "free": false,
-    "class": "Enduring Soul [CR]"
+    "class": "Enduring Soul",
+    "contentSet": "class-rework",
+    "replacesSlug": "new-life"
   },
   "effects": [],
   "flags": {

@@ -1,5 +1,5 @@
 {
-  "name": "Frustration [F&S Playtest]",
+  "name": "Frustration",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "folder": "fbTx2sE6CN3JvW6S",
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "frustration-f-s-playtest",
+    "slug": "frustration-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -69,7 +69,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "frustration"
   },
   "effects": [],
   "flags": {

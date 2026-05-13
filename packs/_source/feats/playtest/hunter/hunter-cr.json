@@ -1,5 +1,5 @@
 {
-  "name": "Hunter [CR]",
+  "name": "Hunter",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Pack Hunt or Teamwork. You gain the Chosen Ability.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Hunter [CR]",
-    "name": "Hunter [CR]"
+    "class": "Hunter",
+    "name": "Hunter [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "hunter"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

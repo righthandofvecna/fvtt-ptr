@@ -1,5 +1,5 @@
 {
-  "name": "Cheer Brigade [CR]",
+  "name": "Cheer Brigade",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Move Helping Hand and gain the Helper Ability.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Cheerleader [CR]",
-    "name": "Cheer Brigade [CR]"
+    "class": "Cheerleader",
+    "name": "Cheer Brigade [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "cheer-brigade"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

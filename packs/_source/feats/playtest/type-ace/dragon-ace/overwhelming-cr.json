@@ -1,6 +1,6 @@
 {
   "folder": "6meG7SeyLvR39TI3",
-  "name": "Overwhelming [CR]",
+  "name": "Overwhelming",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Tyrant's Roar [CR]",
+      "Tyrant's Roar",
       "Type-Linked Skill at Expert Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Dragon) [CR]"
+    "class": "Type Ace (Dragon)",
+    "contentSet": "class-rework",
+    "replacesSlug": "overwhelming"
   },
   "effects": [],
   "flags": {

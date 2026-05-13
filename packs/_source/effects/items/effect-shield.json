@@ -61,7 +61,7 @@
       }
     ],
     "enabled": true,
-    "slug": "shield",
+    "slug": "effect-shield",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -89,7 +89,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

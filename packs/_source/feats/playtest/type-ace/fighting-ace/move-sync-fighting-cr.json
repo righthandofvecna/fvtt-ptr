@@ -1,6 +1,6 @@
 {
   "folder": "2JCGsdCpOqDxjk8e",
-  "name": "Move Sync (Fighting) [CR]",
+  "name": "Move Sync (Fighting)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fighting) [CR]"
+    "class": "Type Ace (Fighting)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-fighting"
   },
   "effects": [],
   "flags": {

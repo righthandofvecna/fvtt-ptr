@@ -1618,6 +1618,8 @@
     "exportSource": null
   },
   "system": {
-    "slug": "ruin"
+    "slug": "ruin",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

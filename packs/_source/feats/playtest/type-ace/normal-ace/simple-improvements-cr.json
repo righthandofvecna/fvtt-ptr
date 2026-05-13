@@ -1,5 +1,5 @@
 {
-  "name": "Simple Improvements [CR]",
+  "name": "Simple Improvements",
   "system": {
     "origin": "",
     "effect": "Trigger - Your Normal-Type Pokémon gains Initiative\nEffect: Add your Type-Linked Skill Rank to all of your Pokémon’s rolls this turn. Your Pokémon gains Temporary Hit Points equal to twice your Type-Linked Skill Rank. Simple Improvements may only be used once per Scene per Pokémon.",
@@ -57,10 +57,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Normal) [CR]",
+    "class": "Type Ace (Normal)",
     "name": "Simple Improvements",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "simple-improvements"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

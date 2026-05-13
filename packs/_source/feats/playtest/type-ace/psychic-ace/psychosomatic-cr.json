@@ -1,6 +1,6 @@
 {
   "folder": "VrgkSS17WexYz7or",
-  "name": "Psychosomatic [CR]",
+  "name": "Psychosomatic",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Psionic Wellspring [CR]",
+      "Psionic Wellspring",
       "Type-Linked Skill at Master"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Psychic) [CR]"
+    "class": "Type Ace (Psychic)",
+    "contentSet": "class-rework",
+    "replacesSlug": "psychosomatic"
   },
   "effects": [],
   "flags": {

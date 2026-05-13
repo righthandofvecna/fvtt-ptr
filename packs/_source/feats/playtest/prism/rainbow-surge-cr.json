@@ -1,5 +1,5 @@
 {
-  "name": "Rainbow Surge [CR]",
+  "name": "Rainbow Surge",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Hyper Beam and Morning Sun.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Prism [CR]",
-    "name": "Rainbow Surge [CR]"
+    "class": "Prism",
+    "name": "Rainbow Surge [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "rainbow-surge"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

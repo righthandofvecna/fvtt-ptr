@@ -1,5 +1,5 @@
 {
-  "name": "Aqua Vortex [CR]",
+  "name": "Aqua Vortex",
   "system": {
     "origin": "",
     "effect": "Trigger - Your Pokémon hits with a damaging Water- Type attack\nEffect: All targets of the attack are put in a Vortex, and take a penalty to all Damage Rolls equal to your Type-Linked Skill Rank while in the Vortex.",
@@ -57,10 +57,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Water) [CR]",
+    "class": "Type Ace (Water)",
     "name": "Aqua Vortex",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "aqua-vortex"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

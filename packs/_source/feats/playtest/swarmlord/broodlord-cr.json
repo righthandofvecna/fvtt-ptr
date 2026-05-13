@@ -1,5 +1,5 @@
 {
-  "name": "Broodlord [CR]",
+  "name": "Broodlord",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the following Ability based on your Embrace.\n- Arachnid’s Embrace: Tinted Lens\n- Monarch’s Embrace: Compound Eyes",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Swarmlord [CR]",
-    "name": "Broodlord [CR]"
+    "class": "Swarmlord",
+    "name": "Broodlord [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "broodlord"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

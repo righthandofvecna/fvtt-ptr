@@ -151,7 +151,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "jhOa5RNWvY7t958b",
   "effects": [],

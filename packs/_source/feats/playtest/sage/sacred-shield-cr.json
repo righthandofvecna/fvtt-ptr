@@ -1,5 +1,5 @@
 {
-  "name": "Sacred Shield [CR]",
+  "name": "Sacred Shield",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Reflect and Lucky Chant.",
@@ -78,8 +78,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Sage [CR]",
-    "name": "Sacred Shield [CR]"
+    "class": "Sage",
+    "name": "Sacred Shield [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "sacred-shield"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

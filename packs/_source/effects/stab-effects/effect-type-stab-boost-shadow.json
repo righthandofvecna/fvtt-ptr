@@ -19,7 +19,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-type-stab-boost-bug",
+    "slug": "effect-type-stab-boost-shadow",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -47,7 +47,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "eJalVmQbQ22w7p0c",

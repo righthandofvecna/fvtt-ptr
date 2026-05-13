@@ -1,5 +1,5 @@
 {
-  "name": "Fancy Footwork Rank 1 [CR]",
+  "name": "Fancy Footwork Rank 1",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn two Dance Moves marked with the Rank of this Feature you are taking or lower.\nRank 1 : Feather Dance, Fiery Dance, Swords Dance, Teeter Dance\nRank 2: Dragon Dance, Petal Dance, Aqua Step",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Dancer [CR]",
-    "name": "Fancy Footwork [CR]Rank 1 [CR]"
+    "class": "Dancer",
+    "name": "Fancy Footwork [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "fancy-footwork-rank-1"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Nuanced Performance [CR]",
+  "name": "Nuanced Performance",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: Your Pokémon miss all targets with a Move\nEffect: That Move’s Frequency is not expended. This does not work with Moves that may fail to activate, such as moves with the Execute keyword.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Coordinator [CR]",
-    "name": "Nuanced Performance [CR]"
+    "class": "Coordinator",
+    "name": "Nuanced Performance [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "nuanced-performance"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

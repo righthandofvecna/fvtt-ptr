@@ -1,5 +1,5 @@
 {
-  "name": "Rouse the Dragon's Blood [CR]",
+  "name": "Rouse the Dragon's Blood",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You suffer a Critical Hit or gain an Injury from a foe’s attack\nEffect: For 1 full round, the next Herald of Pride Move you use against the triggering foe cannot miss, cannot be Intercepted, and effects that would cause it to miss cannot be activated against it.",
@@ -16,7 +16,7 @@
       }
     ],
     "enabled": true,
-    "slug": "rouse-the-dragon-s-blood-cr",
+    "slug": "rouse-the-dragons-blood-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Herald of Pride [CR]",
-    "name": "Rouse the Dragon’s Blood [CR]"
+    "class": "Herald of Pride",
+    "name": "Rouse the Dragon’s Blood [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "rouse-the-dragons-blood"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

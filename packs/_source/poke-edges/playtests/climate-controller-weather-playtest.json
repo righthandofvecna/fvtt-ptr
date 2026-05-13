@@ -1,6 +1,6 @@
 {
   "folder": "b1UhavwkzmtNgiIb",
-  "name": "Climate Controller [Weather Playtest]",
+  "name": "Climate Controller",
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/pokeedge_icon.png",
   "system": {
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "climate-controller-weather-playtest",
+    "slug": "climate-controller-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -57,7 +57,9 @@
       "Level 30",
       "User knows a Weather Move"
     ],
-    "cost": 0
+    "cost": 0,
+    "contentSet": "weather-playtest",
+    "replacesSlug": "climate-controller"
   },
   "effects": [],
   "ownership": {

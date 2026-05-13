@@ -1,5 +1,5 @@
 {
-  "name": "Forseeable Resources [CR]",
+  "name": "Forseeable Resources",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You have just the right item for the moment, because you predicted it would be useful at this time. You create 1 Consumable item (like a Potion or Pokeball) that costs up to $250 times half your Perception Skill rank. You must use the item before the end of your turn or else the item disappears.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Oracle [CR]",
-    "name": "Forseeable Resources [CR]"
+    "class": "Oracle",
+    "name": "Forseeable Resources [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "forseeable-resources"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

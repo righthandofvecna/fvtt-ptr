@@ -1,6 +1,6 @@
 {
   "folder": "w35DF6VSIfHAuHeM",
-  "name": "Fairy Lights [CR]",
+  "name": "Fairy Lights",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Type Ace (Fairy) [CR]"
+      "Type Ace (Fairy)"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fairy) [CR]"
+    "class": "Type Ace (Fairy)",
+    "contentSet": "class-rework",
+    "replacesSlug": "fairy-lights"
   },
   "effects": [],
   "flags": {

@@ -1,6 +1,6 @@
 {
   "folder": "6meG7SeyLvR39TI3",
-  "name": "This Will Not Stand [CR]",
+  "name": "This Will Not Stand",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Tyrant's Roar [CR]"
+      "Tyrant's Roar"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Dragon) [CR]"
+    "class": "Type Ace (Dragon)",
+    "contentSet": "class-rework",
+    "replacesSlug": "this-will-not-stand"
   },
   "effects": [],
   "flags": {

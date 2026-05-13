@@ -1,6 +1,6 @@
 {
   "folder": "I7dKRNMhCe8AHmgT",
-  "name": "Parched Clay [Weather Playtest]",
+  "name": "Parched Clay",
   "type": "item",
   "_id": "MBlRfGOfQCxz14K7",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -16,7 +16,7 @@
       }
     ],
     "enabled": true,
-    "slug": "parched-clay-weather-playtest",
+    "slug": "parched-clay-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -66,7 +66,9 @@
     "cost": "3000",
     "consumable": 0,
     "subtype": "",
-    "container": false
+    "container": false,
+    "contentSet": "weather-playtest",
+    "replacesSlug": "parched-clay"
   },
   "effects": [],
   "sort": 0,

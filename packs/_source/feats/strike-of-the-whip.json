@@ -56,7 +56,9 @@
     "class": "Taskmaster",
     "name": "Strike of the Whip",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

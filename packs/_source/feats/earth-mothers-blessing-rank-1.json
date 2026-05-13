@@ -32,7 +32,7 @@
       }
     ],
     "enabled": true,
-    "slug": "earth-mother-s-blessing-rank-1",
+    "slug": "earth-mothers-blessing-rank-1",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -85,7 +85,9 @@
     "class": "Earth Shaker",
     "automation": [],
     "name": "Earth Mother's Blessing Rank 1",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

@@ -1,6 +1,6 @@
 {
   "folder": "Ot2b2GN5mLIDAb2Y",
-  "name": "Move Sync (Grass) [CR]",
+  "name": "Move Sync (Grass)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Grass) [CR]"
+    "class": "Type Ace (Grass)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-grass"
   },
   "effects": [],
   "flags": {

@@ -1,5 +1,5 @@
 {
-  "name": "Suggestion [F&S Playtest]",
+  "name": "Suggestion",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Target: Pokémon or Trainers\nEffect: You smoothly plant a thought into the subject’s head that lasts as long as this Feature is Bound. They won’t know exactly why or how they thought of it; they will naturally assume they thought of it themselves, and their brain will attempt to get there as logically as it can. The target may not necessarily act on the Suggestion, especially if it is against their nature. Using Suggestion to plant a specific thought may cause the target to think about a specific subject, dredging up surface thoughts related to the matter. Using this on a target leaves discoverable psychic residue. You may only use Suggestion as long as you have the Telepathy Capability, though you may keep it Bound without having Telepathy active.",
@@ -13,7 +13,7 @@
       }
     ],
     "enabled": true,
-    "slug": "suggestion-f-s-playtest",
+    "slug": "suggestion-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -64,10 +64,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Telepath [F&S Playtest]",
+    "class": "Telepath",
     "automation": [],
     "name": "Suggestion",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "suggestion"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

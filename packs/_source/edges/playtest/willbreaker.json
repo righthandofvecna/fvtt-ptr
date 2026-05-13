@@ -54,7 +54,9 @@
       "Expert Command or Intimidate"
     ],
     "notes": "",
-    "free": false
+    "free": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

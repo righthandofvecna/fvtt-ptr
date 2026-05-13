@@ -1429,6 +1429,8 @@
     "exportSource": null
   },
   "system": {
-    "slug": "tropical-sea"
+    "slug": "tropical-sea",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

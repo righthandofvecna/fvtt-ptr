@@ -1,5 +1,5 @@
 {
-  "name": "Acid Rain [Weather Playtest]",
+  "name": "Acid Rain",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
   "folder": "9RUwT68fcksatpSD",
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "acid-rain-weather-playtest",
+    "slug": "acid-rain-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -70,7 +70,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "acid-rain"
   },
   "effects": [],
   "sort": 100000,

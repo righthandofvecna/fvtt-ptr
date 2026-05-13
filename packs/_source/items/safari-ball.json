@@ -58,7 +58,9 @@
     "automation": [],
     "name": "Safari Ball",
     "useCount": 0,
-    "modifier": -15
+    "modifier": -15,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/safari ball.webp",

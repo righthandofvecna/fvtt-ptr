@@ -1,6 +1,6 @@
 {
   "folder": "tzJULEy7cf2YZw4J",
-  "name": "Stat Embodiment (Attack) [CR]",
+  "name": "Stat Embodiment (Attack)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -60,7 +60,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Attack) [CR]"
+    "class": "Stat Ace (Attack)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-embodiment-attack"
   },
   "effects": [],
   "flags": {

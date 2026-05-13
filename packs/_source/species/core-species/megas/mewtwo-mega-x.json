@@ -692,7 +692,7 @@
         "type": "body"
       }
     },
-    "slug": "mewtwo",
+    "slug": "mewtwo-mega-x",
     "rules": [],
     "type": {
       "0": "Psychic",
@@ -707,7 +707,9 @@
       "Johto",
       "Kanto",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

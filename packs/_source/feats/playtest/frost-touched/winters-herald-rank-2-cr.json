@@ -1,5 +1,5 @@
 {
-  "name": "Winter's Herald Rank 2 [CR]",
+  "name": "Winter's Herald Rank 2",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may learn three Moves from the list below,marked with the Rank of Winter’s Herald you are gaining or lower.\nRank 1: Freeze-Dry, Ice Beam, Ice Punch, Ice Spinner, Icicle Crash\nRank 2: Avalanche, Blizzard, Frost Breath, Glaciate, Icicle Spear",
@@ -82,8 +82,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Frost Touched [CR]",
-    "name": "Winter's Herald [CR]Rank 1 [CR]"
+    "class": "Frost Touched",
+    "name": "Winter's Herald [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "winters-herald-rank-2"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -474,7 +474,7 @@
         "type": "body"
       }
     },
-    "slug": "glalie",
+    "slug": "glalie-mega",
     "rules": [],
     "type": {
       "0": "Ice",
@@ -488,7 +488,9 @@
       "Alola",
       "Galar",
       "Sinnoh"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

@@ -1,5 +1,5 @@
 {
-  "name": "Dominant Soul [CR]",
+  "name": "Dominant Soul",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Conqueror Ability.",
@@ -81,8 +81,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Shade Caller [CR]",
-    "name": "Dominant Soul [CR]"
+    "class": "Shade Caller",
+    "name": "Dominant Soul [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "dominant-soul"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -57,7 +57,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Hustler"
+    "class": "Hustler",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

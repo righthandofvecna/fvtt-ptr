@@ -1,5 +1,5 @@
 {
-  "name": "Boo! [CR]",
+  "name": "Boo!",
   "system": {
     "origin": "",
     "effect": "Trigger: Your Pokémon reappears after using Ghost Step, or starts its turn in the Set-Up phase of Ghost-Type move.\nEffect: The next Ghost-Type attack the target makes this turn gains the Smite keyword and can’t be Intercepted or avoided in any way (Dodge, Parry, Shield Moves, etc).",
@@ -57,10 +57,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ghost) [CR]",
+    "class": "Type Ace (Ghost)",
     "name": "Boo!",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "boo"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

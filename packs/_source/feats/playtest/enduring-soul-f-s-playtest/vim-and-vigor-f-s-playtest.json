@@ -1,5 +1,5 @@
 {
-  "name": "Vim and Vigor [F&S Playtest]",
+  "name": "Vim and Vigor",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Target: Your Pokémon with at least 2 Tutor Points\nEffect: You spend an hour with the target. The target loses 2 Tutor Points, and gains the Vigor Ability. ",
@@ -15,7 +15,7 @@
       }
     ],
     "enabled": true,
-    "slug": "vim-and-vigor-f-s-playtest",
+    "slug": "vim-and-vigor-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -66,10 +66,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Enduring Soul [F&S Playtest]",
+    "class": "Enduring Soul",
     "name": "Vim and Vigor",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "vim-and-vigor"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

@@ -1,6 +1,6 @@
 {
   "folder": "kqDGppFdQVcjw8uO",
-  "name": "White-Hot Flames [CR]",
+  "name": "White-Hot Flames",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "white-hot-flames",
+    "slug": "white-hot-flames-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -57,12 +57,14 @@
       "bind": true
     },
     "prerequisites": [
-      "Brightest Flame [CR]",
+      "Brightest Flame",
       "Type-Linked Skill at Expert Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fire) [CR]"
+    "class": "Type Ace (Fire)",
+    "contentSet": "class-rework",
+    "replacesSlug": "white-hot-flames"
   },
   "effects": [],
   "flags": {

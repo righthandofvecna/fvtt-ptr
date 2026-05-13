@@ -1,5 +1,5 @@
 {
-  "name": "Power of the Mind [CR]",
+  "name": "Power of the Mind",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Interference and Levitate Abilities.",
@@ -78,8 +78,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Telekinetic [CR]",
-    "name": "Power of the Mind [CR]"
+    "class": "Telekinetic",
+    "name": "Power of the Mind [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "power-of-the-mind"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

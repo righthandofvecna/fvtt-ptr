@@ -15,7 +15,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-salt-cure-eph",
+    "slug": "effect-salt-cure-eph-water",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -43,7 +43,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "HaJo7lUbAIbnRUXL",

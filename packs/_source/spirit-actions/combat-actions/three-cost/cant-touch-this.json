@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "can-t-touch-this",
+    "slug": "cant-touch-this",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -52,7 +52,9 @@
     },
     "cost": "3",
     "trigger": "You are hit by an Attack",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "nHCpmsu24Zt1hCEL",
   "effects": [],

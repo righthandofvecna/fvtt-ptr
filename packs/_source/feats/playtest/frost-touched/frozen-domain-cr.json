@@ -1,5 +1,5 @@
 {
-  "name": "Frozen Domain [CR]",
+  "name": "Frozen Domain",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Set 6 square meters of Frozen Domain within range 6. All 6 meters must be adjacent with at least one other space of Frozen Domain. All legal targets passing through these squares must make an Acrobatics check with a DC equal to 4 + twice your Survival Rank. On failure, the target is Tripped. Pokémon who are flying, levitating, or have the Naturewalk (Tundra) Capability are immune to this effect. When standing on a square affected by Frozen Domain, you may act as if you were in Hail weather. When a Fire-Type attack originates from or targets a square of Frozen Domain, that square of Frozen Domain melts and is cleared. Frozen Domain is considered a Hazard.",
@@ -81,8 +81,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Frost Touched [CR]",
-    "name": "Frozen Domain [CR]"
+    "class": "Frost Touched",
+    "name": "Frozen Domain [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "frozen-domain"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

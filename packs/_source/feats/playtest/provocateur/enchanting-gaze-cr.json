@@ -1,5 +1,5 @@
 {
-  "name": "Enchanting Gaze [CR]",
+  "name": "Enchanting Gaze",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose a Manipulate Maneuver effect; apply that Effect to all foes in a Cone 2. This ignores Frequency Limitations with that Maneuver and automatically succeeds against all targets without an opposed roll.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Provocateur [CR]",
-    "name": "Enchanting Gaze [CR]"
+    "class": "Provocateur",
+    "name": "Enchanting Gaze [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "enchanting-gaze"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

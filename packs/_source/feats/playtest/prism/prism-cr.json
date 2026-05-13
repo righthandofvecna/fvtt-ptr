@@ -1,5 +1,5 @@
 {
-  "name": "Prism [CR]",
+  "name": "Prism",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Flash and Swift.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Prism [CR]",
-    "name": "Prism [CR]"
+    "class": "Prism",
+    "name": "Prism [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "prism"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

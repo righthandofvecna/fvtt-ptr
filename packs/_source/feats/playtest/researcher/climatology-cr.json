@@ -1,5 +1,5 @@
 {
-  "name": "Climatology [CR]",
+  "name": "Climatology",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Overcoat Ability.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Climatology [CR]"
+    "class": "Researcher",
+    "name": "Climatology [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "climatology"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

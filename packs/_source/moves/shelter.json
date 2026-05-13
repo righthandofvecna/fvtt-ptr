@@ -68,7 +68,9 @@
     "damageBonus": 0,
     "isStruggle": false,
     "automation": [],
-    "damagebase": "--"
+    "damagebase": "--",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "vqthEMp3pOOhbf5a",
   "effects": [],

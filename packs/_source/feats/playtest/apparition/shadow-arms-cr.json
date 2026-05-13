@@ -1,5 +1,5 @@
 {
-  "name": "Shadow Arms [CR]",
+  "name": "Shadow Arms",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Shadow Claw, Shadow Punch, and Shadow Sneak. You may use these as Weapon Attacks when wielding Melee Weapons.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Apparition [CR]",
-    "name": "Shadow Arms [CR]"
+    "class": "Apparition",
+    "name": "Shadow Arms [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "shadow-arms"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

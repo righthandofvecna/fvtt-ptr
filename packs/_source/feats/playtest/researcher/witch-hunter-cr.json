@@ -1,5 +1,5 @@
 {
-  "name": "Witch Hunter [CR]",
+  "name": "Witch Hunter",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the “Psionic Sight” Feature, even if you do not meet the prerequisites. If you already had the Psionic Sight Feature, you instead gain another Feature for which you qualify. Additionally, you gain the Mindlock Capability, and you and your Pokémon's attacks gain a +2 bonus to Accuracy against Psychic-, Ghost-, Dark-, and Fairy-Types.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Witch Hunter [CR]"
+    "class": "Researcher",
+    "name": "Witch Hunter [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "witch-hunter"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

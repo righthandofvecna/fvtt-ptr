@@ -1,5 +1,5 @@
 {
-  "name": "Bookworm [CR]",
+  "name": "Bookworm",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain X Study Points, where X is equal to 2 plus one more for every other General Research Feature you have. You may Drain Study Points to benefit from studying Books, instead of Draining your Action Points. Study Points are restored to your maximum after an Extended Rest, just like Action Points.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Bookworm [CR]"
+    "class": "Researcher",
+    "name": "Bookworm [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "bookworm"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

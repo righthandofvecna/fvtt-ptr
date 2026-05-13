@@ -1,6 +1,6 @@
 {
   "folder": "VrgkSS17WexYz7or",
-  "name": "Psionic Wellspring [CR]",
+  "name": "Psionic Wellspring",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,11 +55,13 @@
       "bind": false
     },
     "prerequisites": [
-      "Type Ace (Psychic) [CR]"
+      "Type Ace (Psychic)"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Psychic) [CR]"
+    "class": "Type Ace (Psychic)",
+    "contentSet": "class-rework",
+    "replacesSlug": "psionic-wellspring"
   },
   "effects": [],
   "flags": {

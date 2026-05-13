@@ -562,7 +562,7 @@
         "type": "body"
       }
     },
-    "slug": "blastoise",
+    "slug": "blastoise-mega",
     "rules": [],
     "type": {
       "0": "Water",
@@ -575,7 +575,9 @@
       "Kanto",
       "Kalos",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

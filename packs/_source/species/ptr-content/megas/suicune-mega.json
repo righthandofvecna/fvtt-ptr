@@ -492,7 +492,7 @@
         "type": "body"
       }
     },
-    "slug": "suicune",
+    "slug": "suicune-mega",
     "rules": [],
     "type": {
       "0": "Water",
@@ -502,7 +502,9 @@
     "source": {
       "value": "PTR Exclusive Dex Megas"
     },
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "LCXOG6QHNh9gd0Nv",

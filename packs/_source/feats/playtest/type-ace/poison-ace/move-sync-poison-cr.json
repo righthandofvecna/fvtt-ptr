@@ -1,6 +1,6 @@
 {
   "folder": "E8wJQDEhEHa6JamL",
-  "name": "Move Sync (Poison) [CR]",
+  "name": "Move Sync (Poison)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -59,7 +59,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Poison) [CR]"
+    "class": "Type Ace (Poison)",
+    "contentSet": "class-rework",
+    "replacesSlug": "move-sync-poison"
   },
   "effects": [],
   "flags": {

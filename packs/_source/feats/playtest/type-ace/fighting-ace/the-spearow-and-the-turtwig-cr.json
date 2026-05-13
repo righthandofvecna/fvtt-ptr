@@ -1,6 +1,6 @@
 {
   "folder": "2JCGsdCpOqDxjk8e",
-  "name": "The Spearow And The Turtwig [CR]",
+  "name": "The Spearow And The Turtwig",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Bend Like Reeds [CR]",
+      "Bend Like Reeds",
       "Type-Linked Skill at Expert Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fighting) [CR]"
+    "class": "Type Ace (Fighting)",
+    "contentSet": "class-rework",
+    "replacesSlug": "the-spearow-and-the-turtwig"
   },
   "effects": [],
   "flags": {

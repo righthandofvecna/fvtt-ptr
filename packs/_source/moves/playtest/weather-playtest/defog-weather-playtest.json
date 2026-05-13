@@ -1,5 +1,5 @@
 {
-  "name": "Defog [Weather Playtest]",
+  "name": "Defog",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/FlyingIC_Icon.png",
   "folder": "9RUwT68fcksatpSD",
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "defog-weather-playtest",
+    "slug": "defog-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -70,7 +70,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "defog"
   },
   "effects": [],
   "sort": 100000,

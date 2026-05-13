@@ -1,12 +1,12 @@
 {
-  "name": "Stat Maneuver (Speed) [CR]",
+  "name": "Stat Maneuver (Speed)",
   "system": {
     "origin": "",
     "effect": "Stat Maneuver’s Effect depends on your Chosen Stat:\n\nSpeed Effect: You may activate this Feature at any time to cause your Pokémon to use a Move as Priority or a Priority Move as Priority (Advanced).",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "stat-maneuver-speed",
+    "slug": "stat-maneuver-speed-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -53,11 +53,13 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Speed) [CR]",
+    "class": "Stat Ace (Speed)",
     "tags": "[Branch]",
     "name": "Stat Maneuver",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-maneuver-speed"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

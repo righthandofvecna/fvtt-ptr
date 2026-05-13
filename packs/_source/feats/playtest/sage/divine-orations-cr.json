@@ -1,5 +1,5 @@
 {
-  "name": "Divine Orations [CR]",
+  "name": "Divine Orations",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You use a Move with the Blessing Keyword.\nEffect: Spend 1 AP. You may use a Move with the Blessing Keyword as a Free Action. You can choose to instead spend 3 AP to use a Move with the Blessing Keyword, ignoring Frequency.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Sage [CR]",
-    "name": "Divine Orations [CR]"
+    "class": "Sage",
+    "name": "Divine Orations [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "divine-orations"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

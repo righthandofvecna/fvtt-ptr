@@ -1,5 +1,5 @@
 {
-  "name": "Athlete [CR]",
+  "name": "Athlete",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: After an hour of exercise, an Athlete may choose two different Stats besides HP; both of those stats become Trained Stats. The default State of Trained Stats is +1 Combat Stages instead of 0. An Athlete may have two Trained Stats at a time.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Athlete [CR]",
-    "name": "Athlete [CR]"
+    "class": "Athlete",
+    "name": "Athlete [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "athlete"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

@@ -17,7 +17,7 @@
       }
     ],
     "enabled": true,
-    "slug": "teamwork",
+    "slug": "effect-teamwork",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -45,7 +45,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "HTNFGIxy9zsCONjI",

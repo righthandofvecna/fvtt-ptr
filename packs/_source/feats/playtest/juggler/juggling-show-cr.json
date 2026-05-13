@@ -1,5 +1,5 @@
 {
-  "name": "Juggling Show [CR]",
+  "name": "Juggling Show",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may roll an additional Xd6 during the Introduction Stage of a Contest, where X is half of your Acrobatics Rank. You may choose any Contest Stat to attempt to gain Dice for with this roll.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Juggler [CR]",
-    "name": "Juggling Show [CR]"
+    "class": "Juggler",
+    "name": "Juggling Show [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "juggling-show"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

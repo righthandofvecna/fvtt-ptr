@@ -1,5 +1,5 @@
 {
-  "name": "Vampirism [CR]",
+  "name": "Vampirism",
   "system": {
     "origin": "",
     "effect": "Trigger - Your Pokémon hits an adjacent foe with a Ghost-Type Move\nEffect: Choose a Stat. The triggering foe loses a Tick of Hit Points and a Combat Stage in that Stat. Your Pokémon gains 1 Combat Stage in the chosen Stat, and a Tick of Temporary Hit Points.",
@@ -57,10 +57,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ghost) [CR]",
+    "class": "Type Ace (Ghost)",
     "name": "Vampirism",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "vampirism"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

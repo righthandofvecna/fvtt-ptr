@@ -1,5 +1,5 @@
 {
-  "name": "Soothing Connection [CR]",
+  "name": "Soothing Connection",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Any number of creatures you are Channeling\nEffect: Distribute 5 points in any way among the target(s). For each point you assign to a creature, they gain a Tick of Hit Points and 1 Spirit.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Channeler [CR]",
-    "name": "Soothing Connection [CR]"
+    "class": "Channeler",
+    "name": "Soothing Connection [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "soothing-connection"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -78,7 +78,9 @@
     "container": false,
     "automation": [],
     "name": "Pink Pearl",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/pink pearl.webp",

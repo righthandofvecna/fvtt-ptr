@@ -54,7 +54,9 @@
       "Expert Tech Education Or Expert Survival"
     ],
     "notes": "",
-    "free": false
+    "free": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": null,

@@ -533,7 +533,7 @@
         "type": "body"
       }
     },
-    "slug": "metagross",
+    "slug": "metagross-mega",
     "rules": [],
     "type": {
       "0": "Steel",
@@ -547,7 +547,9 @@
       "Hoenn",
       "Unova",
       "Alola"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

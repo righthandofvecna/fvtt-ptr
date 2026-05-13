@@ -1,5 +1,5 @@
 {
-  "name": "Ground Out [CR]",
+  "name": "Ground Out",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Pick three of Drill Run, Magnitude, Mud Bomb, Shore Up, or Stomping Tantrum. You learn the chosen Moves.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Earth Shaker [CR]",
-    "name": "Ground Out [CR]"
+    "class": "Earth Shaker",
+    "name": "Ground Out [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "ground-out"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

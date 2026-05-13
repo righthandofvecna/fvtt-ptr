@@ -1,6 +1,6 @@
 {
   "folder": "cwHgKZ5JJwLWPzJM",
-  "name": "Not Yet! [CR]",
+  "name": "Not Yet!",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -61,7 +61,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Enduring Soul [CR]"
+    "class": "Enduring Soul",
+    "contentSet": "class-rework",
+    "replacesSlug": "not-yet"
   },
   "effects": [],
   "flags": {

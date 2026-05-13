@@ -1,5 +1,5 @@
 {
-  "name": "Stalwart Bastion [CR]",
+  "name": "Stalwart Bastion",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: While this Feature is Bound, you and all adjacent allies gain Physical Damage Reduction equal to your Combat Rank and Special Damage Reduction equal to your Focus Rank.\nBonus: You gain the Shield Proficiency General Feature, even if you don't meet the prerequisites.",
@@ -81,8 +81,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Fortress [CR]",
-    "name": "Stalwart Bastion [CR]"
+    "class": "Fortress",
+    "name": "Stalwart Bastion [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "stalwart-bastion"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,12 +1,12 @@
 {
-  "name": "Pain Dampening  [F&S Playtest]",
+  "name": "Pain Dampening",
   "system": {
     "origin": " [F&S Playtest]",
     "effect": "Trigger - A Channeled Pokémon would be Fainted by a damaging attack\nEffect: Choose any number of Channeled Pokémon, which must include the triggering Pokémon. Instead\\\\ of resolving the attack normally, divide the damage from the attack by the number of chosen Pokémon. Each chosen Pokémon then loses that many Hit Points. For each chosen Pokémon that Resists or is Immune to the Type of the triggering attack, subtract your Intuition Rank from the damage of the attack before all calculations.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "pain-dampening-f-s-playtest",
+    "slug": "pain-dampening-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -56,10 +56,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Channeler [F&S Playtest]",
+    "class": "Channeler",
     "name": "Pain Dampening",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "pain-dampening"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

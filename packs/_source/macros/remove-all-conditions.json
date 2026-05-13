@@ -23,6 +23,8 @@
     "default": 0
   },
   "system": {
-    "slug": "remove-all-conditions"
+    "slug": "remove-all-conditions",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

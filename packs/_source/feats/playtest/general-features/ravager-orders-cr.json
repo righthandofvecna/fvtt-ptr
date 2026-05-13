@@ -1,5 +1,5 @@
 {
-  "name": "Ravager Orders [CR]",
+  "name": "Ravager Orders",
   "system": {
     "origin": "",
     "effect": "You gain the Reckless Advance and Alpha Strike Orders.",
@@ -71,7 +71,9 @@
     "class": "",
     "name": "Ravager Orders",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "ravager-orders"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

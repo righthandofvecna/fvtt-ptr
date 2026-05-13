@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "shuckle-s-berry-juice",
+    "slug": "shuckles-berry-juice",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -59,7 +59,9 @@
     "container": false,
     "automation": [],
     "name": "Shuckle's Berry Juice",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",

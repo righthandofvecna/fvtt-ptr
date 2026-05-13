@@ -1,5 +1,5 @@
 {
-  "name": "Steelheart [CR]",
+  "name": "Steelheart",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: When wielding metal Melee Weapons, you may use Athletics or Focus instead of Combat to determine the Damage Base of your Struggle Attacks, to qualify for a Weapon’s Moves, and to resist Disarm Checks. Whenever your Weapon Attacks hit a foe who has previously hit you with a Melee attack in the same round, the foe loses a Tick of Hit Points.",
@@ -69,8 +69,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Steelheart [CR]",
-    "name": "Steelheart [CR]"
+    "class": "Steelheart",
+    "name": "Steelheart [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "steelheart"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

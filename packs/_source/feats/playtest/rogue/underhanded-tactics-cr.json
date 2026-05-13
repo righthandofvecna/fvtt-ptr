@@ -1,5 +1,5 @@
 {
-  "name": "Underhanded Tactics [CR]",
+  "name": "Underhanded Tactics",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain your choice of Ambush or Cruelty.",
@@ -86,8 +86,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Rogue [CR]",
-    "name": "Underhanded Tactics [CR]"
+    "class": "Rogue",
+    "name": "Underhanded Tactics [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "underhanded-tactics"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

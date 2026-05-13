@@ -1,5 +1,5 @@
 {
-  "name": "Friend Ball [F&S Playtest]",
+  "name": "Friend Ball",
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/friend%20ball.webp",
   "effects": [],
@@ -15,7 +15,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "friend-ball-f-s-playtest",
+    "slug": "friend-ball-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -67,7 +67,9 @@
     "automation": [],
     "name": "Friend Ball",
     "useCount": 0,
-    "modifier": null
+    "modifier": null,
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "friend-ball"
   },
   "_stats": {
     "systemId": "ptu",

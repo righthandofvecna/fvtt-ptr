@@ -1,5 +1,5 @@
 {
-  "name": "Moment of Action [CR]",
+  "name": "Moment of Action",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Up to two Allied Trainers or Pokémon\nEffect: Each target gains 1 Temporary Action Point or 1 Temporary Spirit Point. These Action and Spirit Points disappear after one full Round.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Cheerleader [CR]",
-    "name": "Moment of Action [CR]"
+    "class": "Cheerleader",
+    "name": "Moment of Action [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "moment-of-action"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

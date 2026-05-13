@@ -1,5 +1,5 @@
 {
-  "name": "Honed Potential [CR]",
+  "name": "Honed Potential",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your Pokémon’s base Move List Limit is increased by +1 (Reminder: The default Move List Limit is 6). When either of the two qualifying prerequisite skills reaches Master Rank, your Pokémon may have up to 4 Moves from their Move List come from TMs or Move Tutors.",
@@ -56,7 +56,9 @@
     "notes": "",
     "free": false,
     "class": "",
-    "name": "Surge of Spirit [CR]"
+    "name": "Surge of Spirit [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "honed-potential"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Efficient Installation [CR]",
+  "name": "Efficient Installation",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You and your Pokémon gain a +2 boost to their maximum Augmentation Capacity and count their used Capacity as 2 lower for the purposes of Augmentation Shock. You and your Pokémon can install multiple Augmentations in the same Slot.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Efficient Installation [CR]"
+    "class": "Researcher",
+    "name": "Efficient Installation [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "efficient-installation"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

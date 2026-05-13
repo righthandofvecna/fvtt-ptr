@@ -69,7 +69,9 @@
     "automation": [],
     "name": "Repeat Ball",
     "useCount": 0,
-    "modifier": null
+    "modifier": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/repeat ball.webp",

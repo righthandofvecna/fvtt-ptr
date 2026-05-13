@@ -1,6 +1,6 @@
 {
   "folder": "lzFJtoNPVQVKSXNe",
-  "name": "Iterative Evolution [CR]",
+  "name": "Iterative Evolution",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -57,12 +57,14 @@
       "bind": true
     },
     "prerequisites": [
-      "Hivemind [CR]",
+      "Hivemind",
       "Type-Linked Skill at Adept"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Bug) [CR]"
+    "class": "Type Ace (Bug)",
+    "contentSet": "class-rework",
+    "replacesSlug": "iterative-evolution"
   },
   "effects": [],
   "flags": {

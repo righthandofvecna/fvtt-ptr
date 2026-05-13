@@ -659,7 +659,7 @@
         "type": "body"
       }
     },
-    "slug": "sableye",
+    "slug": "sableye-mega",
     "rules": [],
     "type": {
       "0": "Dark",
@@ -674,7 +674,9 @@
       "Alola",
       "Galar",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

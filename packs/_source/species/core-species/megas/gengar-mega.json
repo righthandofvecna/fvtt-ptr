@@ -602,7 +602,7 @@
         "type": "body"
       }
     },
-    "slug": "gengar",
+    "slug": "gengar-mega",
     "rules": [],
     "type": {
       "0": "Ghost",
@@ -619,7 +619,9 @@
       "Sinnoh",
       "Kanto",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

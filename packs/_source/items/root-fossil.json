@@ -55,7 +55,9 @@
     "container": false,
     "automation": [],
     "name": "Root Fossil",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/root fossil.webp",

@@ -521,7 +521,7 @@
         "type": "body"
       }
     },
-    "slug": "heracross",
+    "slug": "heracross-mega",
     "rules": [],
     "type": {
       "0": "Bug",
@@ -538,7 +538,9 @@
       "Alola",
       "Sinnoh",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

@@ -1,5 +1,5 @@
 {
-  "name": "Push it to the Limit [CR]",
+  "name": "Push it to the Limit",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit with a Berserker Move or Weapon Attack\nEffect: Immediately gain one Injury before resolving the triggering attack. You gain a Tick of Temporary Hit Points and may cure yourself of a Persistent Status Affliction. The triggering attack doubles your damage bonus from Lessons in Rage and Pain.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Berserker [CR]",
-    "name": "Push it to the Limit [CR]"
+    "class": "Berserker",
+    "name": "Push it to the Limit [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "push-it-to-the-limit"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

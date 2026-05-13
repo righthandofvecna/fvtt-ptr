@@ -1,5 +1,5 @@
 {
-  "name": "Very Skilled [CR]",
+  "name": "Very Skilled",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain three Skill Edges for which you qualify. These must be Skill Edges that Rank Up a Skill.",
@@ -57,7 +57,9 @@
     "notes": "",
     "free": false,
     "class": "",
-    "name": "Surge of Spirit [CR]"
+    "name": "Surge of Spirit [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "very-skilled"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

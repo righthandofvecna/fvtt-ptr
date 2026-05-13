@@ -1,5 +1,5 @@
 {
-  "name": "Shrug Off [F&S Playtest]",
+  "name": "Shrug Off",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Target: Your Pokémon at Spirit 1 or more, with a Status Condition\nEffect: Your Pokémon is healed of the Status Condition and gains one Temporary Spirit that disappears at the end of its next turn.\nBonus: While resting, you can spend extra Spirit to supernaturally heal injuries, at a cost of 1 Spirit to 1 Injury.",
@@ -15,7 +15,7 @@
       }
     ],
     "enabled": true,
-    "slug": "shrug-off-f-s-playtest",
+    "slug": "shrug-off-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -65,10 +65,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Enduring Soul [F&S Playtest]",
+    "class": "Enduring Soul",
     "name": "Shrug Off",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "shrug-off"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

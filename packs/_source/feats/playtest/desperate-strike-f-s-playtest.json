@@ -1,12 +1,12 @@
 {
-  "name": "Desperate Strike [F&S Playtest]",
+  "name": "Desperate Strike",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Trigger - Your Pokémon triggers Cruelty, or scores a Critical Hit with damaging attack.\nEffect: Your Pokemon may apply the effects of Cruelty to the attack without expending Cruelty’s Frequency. Cruelty’s effects may be purchased as if the foe had additional injuries equal to the number of injuries on the user. Desperate Strike may be used once per Scene per Pokémon.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "desperate-strike-f-s-playtest",
+    "slug": "desperate-strike-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -56,10 +56,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Taskmaster [F&S Playtest]",
+    "class": "Taskmaster",
     "name": "Desperate Strike",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "desperate-strike"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

@@ -486,7 +486,7 @@
         "type": "body"
       }
     },
-    "slug": "abomasnow",
+    "slug": "abomasnow-mega",
     "rules": [],
     "type": {
       "0": "Grass",
@@ -500,7 +500,9 @@
       "Galar",
       "Sinnoh",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

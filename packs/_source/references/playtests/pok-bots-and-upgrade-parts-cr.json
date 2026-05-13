@@ -1,6 +1,6 @@
 {
   "folder": "3mspjPD8gPzP1jmO",
-  "name": "Pokébots and Upgrade Parts [CR]",
+  "name": "Pokébots and Upgrade Parts",
   "type": "reference",
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "pokebots-and-upgrade-parts-cr",
+    "slug": "pok-bots-and-upgrade-parts-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -26,7 +26,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "pok-bots-and-upgrade-parts"
   },
   "effects": [],
   "ownership": {

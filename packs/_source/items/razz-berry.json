@@ -58,7 +58,9 @@
     "container": false,
     "automation": [],
     "name": "Razz Berry",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/razz berry.webp",

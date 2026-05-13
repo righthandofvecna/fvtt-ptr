@@ -1,5 +1,5 @@
 {
-  "name": "Stone Stance Mastery [CR]",
+  "name": "Stone Stance Mastery",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Whenever you bind Stone Stance, you may choose two Stances and apply the effects of both.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Stone Warrior [CR]",
-    "name": "Stone Stance Mastery [CR]"
+    "class": "Stone Warrior",
+    "name": "Stone Stance Mastery [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "stone-stance-mastery"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

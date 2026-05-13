@@ -1,5 +1,5 @@
 {
-  "name": "Wall of Iron [CR]",
+  "name": "Wall of Iron",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Move Protect, and you learn your choice of Iron Defense, Amnesia, or Cosmic Power.",
@@ -82,8 +82,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Fortress [CR]",
-    "name": "Wall of Iron [CR]"
+    "class": "Fortress",
+    "name": "Wall of Iron [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "wall-of-iron"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

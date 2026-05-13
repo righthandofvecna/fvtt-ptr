@@ -1,12 +1,12 @@
 {
-  "name": "Press [F&S Playtest]",
+  "name": "Press",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Target: Your Pokemon. Effect: You call out to your Pokemon to become careless. Raise any two of the target by +1 CS and it loses a Tick of Hit Points.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "press-f-s-playtest",
+    "slug": "press-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -58,7 +58,9 @@
     "class": "",
     "name": "Press",
     "automation": [],
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "press"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

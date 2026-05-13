@@ -1,5 +1,5 @@
 {
-  "name": "Unstoppable Will [CR]",
+  "name": "Unstoppable Will",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose either Discipline or Stamina. You gain the chosen Ability.",
@@ -82,8 +82,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Fortress [CR]",
-    "name": "Unstoppable Will [CR]"
+    "class": "Fortress",
+    "name": "Unstoppable Will [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "unstoppable-will"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

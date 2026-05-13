@@ -1,5 +1,5 @@
 {
-  "name": "Mentoring [CR]",
+  "name": "Mentoring",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A Pokémon\nEffect: The target learns a Move from its Egg or Tutor list (following the Tutoring Restrictions based on the target’s level) or any move on its level-up list learned at X Level or lower, where X is the target’s current Level plus the sum of your two highest Skill Ranks among this Features’s prerequisite Skills. Moves from the target’s level-up or those from the Tutor List marked with (N) count as if they were “natural” for organizational purposes.",
@@ -56,7 +56,9 @@
     "notes": "",
     "free": false,
     "class": "",
-    "name": "Surge of Spirit [CR]"
+    "name": "Surge of Spirit [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "mentoring"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

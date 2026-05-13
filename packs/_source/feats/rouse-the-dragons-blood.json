@@ -13,7 +13,7 @@
       }
     ],
     "enabled": true,
-    "slug": "rouse-the-dragon-s-blood",
+    "slug": "rouse-the-dragons-blood",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -66,7 +66,9 @@
     "class": "Herald of Pride",
     "automation": [],
     "name": "Rouse the Dragon's Blood",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

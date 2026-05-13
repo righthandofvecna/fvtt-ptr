@@ -1,5 +1,5 @@
 {
-  "name": "Extra Ordinary [CR]",
+  "name": "Extra Ordinary",
   "system": {
     "origin": "",
     "effect": "Target: Your Normal-Type Pokémon with Last Chance or Normal Strategist\nEffect: Your Pokémon gains the Last Chance or Normal Strategist Ability, whichever one they do not already have. Extra Ordinary can target a Pokémon only once.\n\n@Embed[Compendium.ptu.abilities.Item.jhOa5RNWvY7t958b] @Embed[Compendium.ptu.abilities.Item.Rp2iYtEMxDsbRm0g]",
@@ -57,10 +57,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Normal) [CR]",
+    "class": "Type Ace (Normal)",
     "name": "Extra Ordinary",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "extra-ordinary"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

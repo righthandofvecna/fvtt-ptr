@@ -1,5 +1,5 @@
 {
-  "name": "Staying Power [F&S Playtest]",
+  "name": "Staying Power",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Trigger: Your Pokémon gains Spirit\nEffect: Your Pokémon resists the next attack it would be damaged by one step further.\nNote: This is not triggered by Temporary Spirit.",
@@ -15,7 +15,7 @@
       }
     ],
     "enabled": true,
-    "slug": "staying-power-f-s-playtest",
+    "slug": "staying-power-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -65,10 +65,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Enduring Soul [F&S Playtest]",
+    "class": "Enduring Soul",
     "name": "Staying Power",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "staying-power"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

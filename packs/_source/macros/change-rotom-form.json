@@ -23,6 +23,8 @@
   "_id": "H929lnw6f59DTuWQ",
   "sort": 600000,
   "system": {
-    "slug": "change-rotom-form"
+    "slug": "change-rotom-form",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

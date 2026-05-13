@@ -1,6 +1,6 @@
 {
   "folder": "cwHgKZ5JJwLWPzJM",
-  "name": "Shrug Off [CR]",
+  "name": "Shrug Off",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -54,12 +54,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Enduring Soul [CR]",
+      "Enduring Soul",
       "Adept Athletics or Focus"
     ],
     "notes": "",
     "free": false,
-    "class": "Enduring Soul [CR]"
+    "class": "Enduring Soul",
+    "contentSet": "class-rework",
+    "replacesSlug": "shrug-off"
   },
   "effects": [],
   "flags": {

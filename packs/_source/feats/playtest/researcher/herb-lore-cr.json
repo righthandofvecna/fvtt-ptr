@@ -1,5 +1,5 @@
 {
-  "name": "Herb Lore [CR]",
+  "name": "Herb Lore",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may create Energy Powder, Heal Powder, or\nPoultices from ingredients, as listed below.\nEnergy Powder: A Sitrus Berry or Tiny Mushroom creates x2 Energy Powders. An Energy Root creates x3 Energy Powders.\nHeal Powder: A Lum Berry or Big Mushroom creates x2 Heal Powders. A Revival Herb creates x3 Heal Powders.\nPoultice: x1 Energy Powder and x1 Heal Powder create x3 Poultices.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Herb Lore [CR]"
+    "class": "Researcher",
+    "name": "Herb Lore [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "herb-lore"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

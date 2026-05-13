@@ -56,7 +56,9 @@
     "consumable": true,
     "subtype": "",
     "container": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "cam7e3RrBcPR6lCm",
   "img": "systems/ptu/static/images/item_icons/tm.webp",

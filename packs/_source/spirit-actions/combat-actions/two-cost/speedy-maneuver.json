@@ -52,7 +52,9 @@
     },
     "cost": "2",
     "trigger": "When you are targeted for an Attack",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "oPR55qikB6pJGfrb",
   "effects": [],

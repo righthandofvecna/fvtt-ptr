@@ -1,6 +1,6 @@
 {
   "folder": "cwHgKZ5JJwLWPzJM",
-  "name": "Vim and Vigour [CR]",
+  "name": "Vim and Vigour",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -54,12 +54,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Shrug Off [CR]",
+      "Shrug Off",
       "Expert Athletics And Focus"
     ],
     "notes": "",
     "free": false,
-    "class": "Enduring Soul [CR]"
+    "class": "Enduring Soul",
+    "contentSet": "class-rework",
+    "replacesSlug": "vim-and-vigor"
   },
   "effects": [],
   "flags": {

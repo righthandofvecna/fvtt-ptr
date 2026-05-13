@@ -1,5 +1,5 @@
 {
-  "name": "Cutthroat [CR]",
+  "name": "Cutthroat",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may use Rogue Moves as Weapon Moves when wielding Small Melee Weapons or Short Ranged Weapons. If you do, Rogue Moves instead have the same Range as your Weapon. Additionally, you may qualify for Weapon Moves for Small Melee or Short Ranged Weapons and resist Disarm Maneuvers when wielding such Weapons using any Rogue Skill.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Rogue [CR]",
-    "name": "Cutthroat [CR]"
+    "class": "Rogue",
+    "name": "Cutthroat [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "cutthroat"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

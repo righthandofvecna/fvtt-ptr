@@ -1,5 +1,5 @@
 {
-  "name": "Poison Weapons [CR]",
+  "name": "Poison Weapons",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You make a Weapon Attack.\nEffect: The attack or Move Poisons its targets on 16+, and you may have it deal Poison-Type Damage if you wish. If the Move would already inflict Poison, it may now instead inflict Badly Poisoned.\nBonus: You learn the Move Poison Fang, and any Damaging Physical Moves granted by Ninja Features may be used as Weapon Moves.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Ninja [CR]",
-    "name": "Poison Weapons [CR]"
+    "class": "Ninja",
+    "name": "Poison Weapons [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "poison-weapons"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

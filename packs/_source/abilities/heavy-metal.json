@@ -36,7 +36,7 @@
       }
     ],
     "enabled": true,
-    "slug": "light-metal",
+    "slug": "heavy-metal",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -78,7 +78,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "06ruPVyiZCvpjUpG",

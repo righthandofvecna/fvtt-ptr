@@ -1,5 +1,5 @@
 {
-  "name": "From the Sidelines Rank 2 [CR]",
+  "name": "From the Sidelines Rank 2",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: At each rank, choose two moves from the following list.\nAssist, Brace, Heal Pulse, Beguile, Defensive Charm, Dispel, Offensive Charm, Speed Charm.",
@@ -179,8 +179,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Cheerleader [CR]",
-    "name": "From the Sidelines [CR]Rank 1 [CR]"
+    "class": "Cheerleader",
+    "name": "From the Sidelines [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "from-the-sidelines-rank-2"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Flexible Preparations [CR]",
+  "name": "Flexible Preparations",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A Pokémon that has Contest Stats from Poffins\nEffect: The target may reallocate up to 2d6 of Poffin-Derived Contest Stats from one Contest Stat to another. This effect lasts until the end of the day.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Coordinator [CR]",
-    "name": "Flexible Preparations [CR]"
+    "class": "Coordinator",
+    "name": "Flexible Preparations [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "flexible-preparations"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

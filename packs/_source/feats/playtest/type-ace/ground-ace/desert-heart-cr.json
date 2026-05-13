@@ -1,12 +1,12 @@
 {
-  "name": "Desert Heart [CR]",
+  "name": "Desert Heart",
   "system": {
     "origin": "",
     "effect": "Target: Your Pokémon\nEffect: While this Stratagem is bound, the target may activate Moves and Abilities as if they were in a Sand Weather Condition. While in Sand Weather Conditions, the target gains +5 Initiative, and +2 to their Effect and Critical Ranges.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "desert-heart",
+    "slug": "desert-heart-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -55,14 +55,16 @@
     },
     "prerequisites": [
       "Type-Linked Skill at Adept",
-      "Geothermal Energy [CR]"
+      "Geothermal Energy"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Ground) [CR]",
+    "class": "Type Ace (Ground)",
     "name": "Desert Heart",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "desert-heart"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

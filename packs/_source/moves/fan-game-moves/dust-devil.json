@@ -95,7 +95,9 @@
     "isStruggle": false,
     "name": "",
     "automation": [],
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/types2/GroundIC_Icon.png",
   "folder": "CKiVqPT3ASdUeaM0",

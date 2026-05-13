@@ -52,7 +52,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "frxDUj1Z8z3I7HHm",
   "effects": [],

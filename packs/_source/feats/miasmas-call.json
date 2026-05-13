@@ -25,7 +25,7 @@
       }
     ],
     "enabled": true,
-    "slug": "miasma-s-call",
+    "slug": "miasmas-call",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -78,7 +78,9 @@
     "class": "Miasmic",
     "automation": [],
     "name": "Miasma’s Call",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

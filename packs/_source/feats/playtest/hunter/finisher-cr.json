@@ -1,5 +1,5 @@
 {
-  "name": "Finisher [CR]",
+  "name": "Finisher",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You and your Pokémon gain a +5 bonus to Damage Rolls against Fainted, Flinched, Sleeping, Stuck, Slowed, Trapped, or Tripped targets.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Hunter [CR]",
-    "name": "Finisher [CR]"
+    "class": "Hunter",
+    "name": "Finisher [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "finisher"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

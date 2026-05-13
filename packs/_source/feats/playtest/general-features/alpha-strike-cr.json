@@ -1,5 +1,5 @@
 {
-  "name": "Alpha Strike [CR]",
+  "name": "Alpha Strike",
   "system": {
     "origin": "",
     "effect": "Target: Your Pokémon\nEffect: The target may immediately take an additional Standard Action to use an At-Will attack.",
@@ -59,7 +59,9 @@
     "class": "",
     "name": "Strike Again!",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "alpha-strike"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

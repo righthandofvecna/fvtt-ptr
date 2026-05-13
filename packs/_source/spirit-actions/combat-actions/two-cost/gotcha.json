@@ -52,7 +52,9 @@
     },
     "cost": "2",
     "trigger": "When you miss with an attack",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "Es3sSxBbuBS496Uh",
   "effects": [],

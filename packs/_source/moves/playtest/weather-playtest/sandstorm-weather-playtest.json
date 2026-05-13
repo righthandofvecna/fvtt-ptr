@@ -1,5 +1,5 @@
 {
-  "name": "Sandstorm [Weather Playtest]",
+  "name": "Sandstorm",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/RockIC_Icon.png",
   "folder": "9RUwT68fcksatpSD",
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "sandstorm-weather-playtest",
+    "slug": "sandstorm-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -70,7 +70,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "sandstorm"
   },
   "effects": [],
   "sort": 100000,

@@ -1,12 +1,12 @@
 {
-  "name": "Taskmaster [F&S Playtest]",
+  "name": "Taskmaster",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Trigger - You apply Brutal Training as a Training action\nEffect: You may grant your Pokémon up to three injuries. If your Pokémon has at least one Injury, it becomes Hardened.  See Extras - Class Mechanics for Hardened details.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "taskmaster-f-s-playtest",
+    "slug": "taskmaster-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -60,7 +60,9 @@
     "class": "",
     "name": "Taskmaster",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "taskmaster"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",

@@ -1,5 +1,5 @@
 {
-  "name": "Keep Fighting! [CR]",
+  "name": "Keep Fighting!",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: Your Pokémon or an Ally Trainer with over 1 Hit Point is reduced to 0 Hit Points or lower and faints\nEffect: Choose one ally, they recover 3 ticks of Hit Points, remove all Status Conditions and gain a +1 CS in 2 Stats of their choice. Keep Fighting! may target a Pokémon in a Poké Ball.",
@@ -56,8 +56,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Cheerleader [CR]",
-    "name": "Keep Fighting! [CR]"
+    "class": "Cheerleader",
+    "name": "Keep Fighting! [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "keep-fighting"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Dead-Eye Shot [CR]",
+  "name": "Dead-Eye Shot",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit with a Ranged Weapon Attack.\nEffect: The triggering attack becomes a Critical Hit.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Marksman [CR]",
-    "name": "Dead-Eye Shot [CR]"
+    "class": "Marksman",
+    "name": "Dead-Eye Shot [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "dead-eye-shot"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

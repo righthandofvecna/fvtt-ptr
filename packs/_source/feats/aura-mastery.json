@@ -182,7 +182,9 @@
     "class": "Aura Guardian",
     "automation": [],
     "name": "Aura Mastery",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

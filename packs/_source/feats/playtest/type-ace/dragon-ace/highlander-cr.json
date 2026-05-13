@@ -1,5 +1,5 @@
 {
-  "name": "Highlander [CR]",
+  "name": "Highlander",
   "system": {
     "origin": "",
     "effect": "Target: Your Dragon-Type Pokemon\nEffect: While this Feature is Bound, the target resists Dragon-Type attacks one step further, and its attacks targeting Dragon-Type creatures are one step more effective.",
@@ -59,10 +59,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Dragon) [CR]",
+    "class": "Type Ace (Dragon)",
     "name": "Highlander",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "highlander"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

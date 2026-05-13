@@ -13,7 +13,7 @@
       }
     ],
     "enabled": true,
-    "slug": "conqueror-s-march",
+    "slug": "conquerors-march",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -67,7 +67,9 @@
     "class": "Rider",
     "automation": [],
     "name": "Conqueror’s March",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

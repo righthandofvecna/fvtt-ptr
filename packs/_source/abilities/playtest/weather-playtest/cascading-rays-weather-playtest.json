@@ -1,5 +1,5 @@
 {
-  "name": "Cascading Rays [Weather Playtest]",
+  "name": "Cascading Rays",
   "type": "ability",
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "cascading-rays-weather-playtest",
+    "slug": "cascading-rays-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -54,7 +54,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "cascading-rays"
   },
   "effects": [],
   "folder": "MsdL8dYgE7JbY1ya",

@@ -93,7 +93,9 @@
     ],
     "cost": "1 TP",
     "name": "Advanced Mobility",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",

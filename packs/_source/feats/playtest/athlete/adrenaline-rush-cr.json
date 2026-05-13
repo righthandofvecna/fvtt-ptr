@@ -1,5 +1,5 @@
 {
-  "name": "Adrenaline Rush [CR]",
+  "name": "Adrenaline Rush",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You are lowered to half or your Maximum Hit Points or less\nEffect: You gain +1 Combat Stage in each of your Trained Stats, are cured of up to two Status Afflictions, and gain a Tick of Temporary Hit Points. Adrenaline Rush may be used only once per Scene.",
@@ -62,13 +62,15 @@
       "bind": false
     },
     "prerequisites": [
-      "Athlete [CR]",
+      "Athlete",
       "Expert Athletics"
     ],
     "notes": "",
     "free": false,
-    "class": "Athlete [CR]",
-    "name": "Adrenaline Rush [CR]"
+    "class": "Athlete",
+    "name": "Adrenaline Rush [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "adrenaline-rush"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

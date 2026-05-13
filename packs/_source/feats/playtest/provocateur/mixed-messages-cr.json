@@ -1,5 +1,5 @@
 {
-  "name": "Mixed Messages [CR]",
+  "name": "Mixed Messages",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Sweet Kiss, Lovely Kiss and Torment.",
@@ -78,8 +78,10 @@
     "prerequisites": [],
     "notes": "",
     "free": false,
-    "class": "Provocateur [CR]",
-    "name": "Mixed Messages [CR]"
+    "class": "Provocateur",
+    "name": "Mixed Messages [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "mixed-messages"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Shards of Stone [CR]",
+  "name": "Shards of Stone",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose two of Rock Slide, Smack Down, and Stealth Rock. You gain the chosen Moves.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Stone Warrior [CR]",
-    "name": "Shards of Stone [CR]"
+    "class": "Stone Warrior",
+    "name": "Shards of Stone [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "shards-of-stone"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

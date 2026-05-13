@@ -1,5 +1,5 @@
 {
-  "name": "Aerialist [CR]",
+  "name": "Aerialist",
   "system": {
     "origin": "",
     "effect": "You learn the Moves Aerial Ace and Splash.",
@@ -73,14 +73,16 @@
       "bind": false
     },
     "prerequisites": [
-      "Tumbler [CR]"
+      "Tumbler"
     ],
     "notes": "",
     "free": false,
-    "class": "Tumbler [CR]",
+    "class": "Tumbler",
     "automation": [],
     "name": "Aerialist",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "class-rework",
+    "replacesSlug": "aerialist"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

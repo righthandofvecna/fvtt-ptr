@@ -1,5 +1,5 @@
 {
-  "name": "Rogue [CR]",
+  "name": "Rogue",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Feint Attack and Thief.\nNote: Acrobatics, Athletics, and Stealth are referred to as “Rogue Skills” as short-hand.",
@@ -79,8 +79,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Rogue [CR]",
-    "name": "Rogue [CR]"
+    "class": "Rogue",
+    "name": "Rogue [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "rogue"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

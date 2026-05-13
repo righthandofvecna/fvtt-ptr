@@ -1,5 +1,5 @@
 {
-  "name": "Malice [CR]",
+  "name": "Malice",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Mean Look and Chip Away.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Roughneck [CR]",
-    "name": "Malice [CR]"
+    "class": "Roughneck",
+    "name": "Malice [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "malice"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

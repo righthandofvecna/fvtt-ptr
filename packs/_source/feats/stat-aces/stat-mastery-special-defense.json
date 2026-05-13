@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "stat-mastery",
+    "slug": "stat-mastery-special-defense",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -58,7 +58,9 @@
     "tags": "[Branch]",
     "name": "Stat Mastery",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

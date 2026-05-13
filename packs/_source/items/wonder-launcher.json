@@ -60,7 +60,9 @@
     "container": false,
     "automation": [],
     "name": "Wonder Launcher",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/wonder launcher.webp",

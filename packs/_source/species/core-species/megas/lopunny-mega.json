@@ -525,7 +525,7 @@
         "type": "body"
       }
     },
-    "slug": "lopunny",
+    "slug": "lopunny-mega",
     "rules": [],
     "type": {
       "0": "Normal",
@@ -539,7 +539,9 @@
       "Unova",
       "Sinnoh",
       "Alola"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

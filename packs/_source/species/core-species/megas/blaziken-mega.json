@@ -583,7 +583,7 @@
         "type": "body"
       }
     },
-    "slug": "blaziken",
+    "slug": "blaziken-mega",
     "rules": [],
     "type": {
       "0": "Fire",
@@ -595,7 +595,9 @@
     },
     "keywords": [
       "Hoenn"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

@@ -153,7 +153,9 @@
     "container": false,
     "automation": [],
     "name": "Type Plate",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",

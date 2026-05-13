@@ -58,7 +58,9 @@
     "automation": [],
     "name": "Master Ball",
     "useCount": 0,
-    "modifier": -100
+    "modifier": -100,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/master ball.webp",

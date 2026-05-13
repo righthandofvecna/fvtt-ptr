@@ -1,6 +1,6 @@
 {
   "folder": "laXYP0SFSLCeWOcn",
-  "name": "Stagnancy Curse [CR]",
+  "name": "Stagnancy Curse",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
@@ -76,7 +76,9 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "stagnancy-curse"
   },
   "effects": [],
   "sort": 100000,

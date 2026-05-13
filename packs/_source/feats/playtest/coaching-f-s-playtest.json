@@ -1,5 +1,5 @@
 {
-  "name": "Coaching [F&S Playtest]",
+  "name": "Coaching",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Trigger - Your Pokémon makes a Combat Maneuver\nEffect: Your Pokémon gains a bonus based on the type of Combat maneuver they are making. This Feature may be triggered once per Scene per Pokémon.\n»» Your Pokémon gains a +1d6 bonus to Opposed Acrobatics, Athletics, Combat, or Stealth Skill Checks.\n»» If your Pokémon was Sprinting, they double their Movement Capabilities instead of increasing by 50%.\n»» If your Pokémon was making an Attack of Opportunity, they automatically hit.\n»» You may also activate this Feature to let them Intercept for any Ally regardless of Loyalty, and they automatically succeed on the Skill Check to do so.",
@@ -16,7 +16,7 @@
       }
     ],
     "enabled": true,
-    "slug": "coaching-f-s-playtest",
+    "slug": "coaching-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -66,10 +66,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Athlete [CR]",
+    "class": "Athlete",
     "automation": [],
     "name": "Coaching",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "coaching"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

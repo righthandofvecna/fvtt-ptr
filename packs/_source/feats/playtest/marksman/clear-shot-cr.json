@@ -1,5 +1,5 @@
 {
-  "name": "Clear Shot [CR]",
+  "name": "Clear Shot",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You make a ranged Weapon Attack against a target with no other combatants or Rough or Blocking Terrain within 2 meters\nEffect: The target is considered Vulnerable against this attack, and you increase your Critical Hit range by +4 for this attack.",
@@ -68,8 +68,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Marksman [CR]",
-    "name": "Clear Shot [CR]"
+    "class": "Marksman",
+    "name": "Clear Shot [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "clear-shot"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

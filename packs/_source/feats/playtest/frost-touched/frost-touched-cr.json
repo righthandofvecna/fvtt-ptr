@@ -1,5 +1,5 @@
 {
-  "name": "Frost Touched [CR]",
+  "name": "Frost Touched",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose three out of Aurora Beam, Haze, Ice Shard, Mist, and Powder Snow. You learn the Chosen Moves.",
@@ -83,8 +83,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Frost Touched [CR]",
-    "name": "Frost Touched [CR]"
+    "class": "Frost Touched",
+    "name": "Frost Touched [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "frost-touched"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

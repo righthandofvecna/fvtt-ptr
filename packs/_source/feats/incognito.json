@@ -67,7 +67,9 @@
     "notes": "",
     "free": false,
     "class": "Capture Specialist",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

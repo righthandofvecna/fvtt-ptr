@@ -1,5 +1,5 @@
 {
-  "name": "Fortune [F&S Playtest]",
+  "name": "Fortune",
   "type": "capability",
   "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
   "system": {
@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "fortune-f-s-playtest",
+    "slug": "fortune-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -48,7 +48,9 @@
     "ap": {
       "cost": 0,
       "bind": false
-    }
+    },
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "fortune"
   },
   "effects": [],
   "folder": "4yLFZsM42OJ7FDLn",

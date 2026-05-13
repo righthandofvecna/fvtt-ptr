@@ -52,7 +52,9 @@
     },
     "cost": "1",
     "trigger": "When you make a Contested Check",
-    "active": true
+    "active": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "zW8DWXGrCPQAtxWZ",
   "effects": [],

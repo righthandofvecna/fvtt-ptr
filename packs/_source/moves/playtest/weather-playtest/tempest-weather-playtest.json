@@ -1,5 +1,5 @@
 {
-  "name": "Tempest [Weather Playtest]",
+  "name": "Tempest",
   "type": "move",
   "flags": {
     "ptu": {
@@ -17,7 +17,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "tempest-weather-playtest",
+    "slug": "tempest-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -81,7 +81,9 @@
     "isStruggle": false,
     "name": "",
     "automation": [],
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "weather-playtest",
+    "replacesSlug": "tempest"
   },
   "ownership": {
     "default": 0

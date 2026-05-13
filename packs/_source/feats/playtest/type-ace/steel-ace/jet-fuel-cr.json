@@ -1,6 +1,6 @@
 {
   "folder": "RMAMRG8asLGzYdN3",
-  "name": "Jet Fuel [CR]",
+  "name": "Jet Fuel",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Polished Shine [CR]",
+      "Polished Shine",
       "Type-Linked Skill at Adept Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Steel) [CR]"
+    "class": "Type Ace (Steel)",
+    "contentSet": "class-rework",
+    "replacesSlug": "jet-fuel"
   },
   "effects": [],
   "flags": {

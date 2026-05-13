@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "pokemaniac",
+    "slug": "pok-maniac",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -55,7 +55,9 @@
     "class": "",
     "name": "PokéManiac",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

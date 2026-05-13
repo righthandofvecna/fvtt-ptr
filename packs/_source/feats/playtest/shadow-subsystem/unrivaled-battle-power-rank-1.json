@@ -212,7 +212,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Heartless"
+    "class": "Heartless",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,

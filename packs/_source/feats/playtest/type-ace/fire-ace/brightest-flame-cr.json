@@ -1,5 +1,5 @@
 {
-  "name": "Brightest Flame [CR]",
+  "name": "Brightest Flame",
   "type": "feat",
   "system": {
     "origin": "",
@@ -7,7 +7,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "brightest-flame",
+    "slug": "brightest-flame-cr",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -53,12 +53,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Type Ace (Fire) [CR]"
+      "Type Ace (Fire)"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fire) [CR]",
-    "category": ""
+    "class": "Type Ace (Fire)",
+    "category": "",
+    "contentSet": "class-rework",
+    "replacesSlug": "brightest-flame"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "effects": [],

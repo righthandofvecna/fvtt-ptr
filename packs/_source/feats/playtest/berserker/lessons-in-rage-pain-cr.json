@@ -1,5 +1,5 @@
 {
-  "name": "Lessons In Rage & Pain [CR]",
+  "name": "Lessons In Rage & Pain",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect:  You gain the move Revenge and can use it as a Weapon Move.\nWhile you have at least 1 Injury, add +X to your Damage Rolls with Rage, Flail, Double Edge, Thrash, and Weapon Attacks. X is equal to your Intimidate Rank plus the number of Injuries you have. You do not lose Hit Points from being Heavily Injured, and Injuries beyond the 5th do not lower your Maximum Hit Points.",
@@ -60,8 +60,10 @@
     "prerequisites": [],
     "notes": "",
     "free": false,
-    "class": "Berserker [CR]",
-    "name": "Lessons In Rage & Pain [CR]"
+    "class": "Berserker",
+    "name": "Lessons In Rage & Pain [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "lessons-in-rage-pain"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,6 +1,6 @@
 {
   "folder": "I7dKRNMhCe8AHmgT",
-  "name": "Frigid Clay [Weather Playtest]",
+  "name": "Frigid Clay",
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
@@ -15,7 +15,7 @@
       }
     ],
     "enabled": true,
-    "slug": "frigid-clay-weather-playtest",
+    "slug": "frigid-clay-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -65,7 +65,9 @@
     "cost": "3000",
     "consumable": 0,
     "subtype": "",
-    "container": false
+    "container": false,
+    "contentSet": "weather-playtest",
+    "replacesSlug": "frigid-clay"
   },
   "effects": [],
   "sort": 0,

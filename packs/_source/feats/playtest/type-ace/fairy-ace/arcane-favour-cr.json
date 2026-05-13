@@ -1,6 +1,6 @@
 {
   "folder": "w35DF6VSIfHAuHeM",
-  "name": "Arcane Favour [CR]",
+  "name": "Arcane Favour",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Fairy Lights [CR]",
+      "Fairy Lights",
       "Type-Linked Skill at Adept Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fairy) [CR]"
+    "class": "Type Ace (Fairy)",
+    "contentSet": "class-rework",
+    "replacesSlug": "arcane-favour"
   },
   "effects": [],
   "flags": {

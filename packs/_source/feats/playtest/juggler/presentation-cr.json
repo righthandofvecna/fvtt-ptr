@@ -1,5 +1,5 @@
 {
-  "name": "Presentation! [CR]",
+  "name": "Presentation!",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You release a Pokémon from its Poké Ball\nEffect: You may immediately have your Pokémon undergo a Phenomena (Mega Evolution, Dynamax, Gigantamax, Eternamax, Terrastalization) or Forme Change (ignoring location or item dependencies).",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Juggler [CR]",
-    "name": "Presentation! [CR]"
+    "class": "Juggler",
+    "name": "Presentation! [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "presentation"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Directed Focus [CR]",
+  "name": "Directed Focus",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Whenever your Pokémon with the Exploit or Tolerance Ability are targeted by an [Order], deal Super-Effective Damage, or take Super-Effective Damage, they gain +1 Momentum after all effects of the Move or Order are resolved.",
@@ -55,8 +55,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Duelist [CR]",
-    "name": "Directed Focus [CR]"
+    "class": "Duelist",
+    "name": "Directed Focus [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "directed-focus"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,5 @@
 {
-  "name": "Awareness [F&S Playtest]",
+  "name": "Awareness",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Target: Your Pokémon\nEffect: Your Pokémon enters a defensive stance while this is bound. Your Pokémon gains the following benefits while at positive Spirit:\n1 Spirit – Gain DR equal to the Trainers Focus Rank.\n2 Spirit – Intercepting attacks is now a Shift Action.\n3 Spirit – Immunity to Spirit Loss effects.",
@@ -15,7 +15,7 @@
       }
     ],
     "enabled": true,
-    "slug": "awareness-f-s-playtest",
+    "slug": "awareness-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -66,10 +66,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Enduring Soul [F&S Playtest]",
+    "class": "Enduring Soul",
     "name": "Awareness",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "awareness"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

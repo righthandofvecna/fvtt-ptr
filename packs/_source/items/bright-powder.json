@@ -67,7 +67,9 @@
     "container": false,
     "automation": [],
     "name": "Bright Powder",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/bright powder.webp",

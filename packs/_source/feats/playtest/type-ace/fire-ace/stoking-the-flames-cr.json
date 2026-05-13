@@ -1,6 +1,6 @@
 {
   "folder": "kqDGppFdQVcjw8uO",
-  "name": "Stoking the Flames [CR]",
+  "name": "Stoking the Flames",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Type Ace (Fire) [CR]",
+      "Type Ace (Fire)",
       "Type-Linked Skill at Adept"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Fire) [CR]"
+    "class": "Type Ace (Fire)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stoking-the-flames"
   },
   "effects": [],
   "flags": {

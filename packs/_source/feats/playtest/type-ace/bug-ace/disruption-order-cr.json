@@ -1,6 +1,6 @@
 {
   "folder": "lzFJtoNPVQVKSXNe",
-  "name": "Disruption Order [CR]",
+  "name": "Disruption Order",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -55,12 +55,14 @@
       "bind": false
     },
     "prerequisites": [
-      "Hivemind [CR]",
+      "Hivemind",
       "Type-Linked Skill at Master Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Bug) [CR]"
+    "class": "Type Ace (Bug)",
+    "contentSet": "class-rework",
+    "replacesSlug": "disruption-order"
   },
   "effects": [],
   "flags": {

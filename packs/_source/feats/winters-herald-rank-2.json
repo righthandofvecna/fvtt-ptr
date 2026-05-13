@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "winter-s-herald-rank-2",
+    "slug": "winters-herald-rank-2",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -59,7 +59,9 @@
     "class": "Frost Touched",
     "name": "Winter’s Herald Rank 2",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

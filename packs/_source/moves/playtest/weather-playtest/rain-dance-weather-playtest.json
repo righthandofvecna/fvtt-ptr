@@ -1,5 +1,5 @@
 {
-  "name": "Rain Dance [Weather Playtest]",
+  "name": "Rain Dance",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/WaterIC_Icon.png",
   "folder": "9RUwT68fcksatpSD",
@@ -9,7 +9,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "rain-dance-weather-playtest",
+    "slug": "rain-dance-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -70,7 +70,9 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "rain-dance"
   },
   "effects": [],
   "sort": 100000,

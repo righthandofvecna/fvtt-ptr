@@ -52,7 +52,9 @@
       "cost": 0,
       "bind": false
     },
-    "tier": ""
+    "tier": "",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

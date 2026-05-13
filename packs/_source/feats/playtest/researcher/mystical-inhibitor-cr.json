@@ -1,5 +1,5 @@
 {
-  "name": "Mystical Inhibitor [CR]",
+  "name": "Mystical Inhibitor",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain 10 Damage Reduction against Special Psychic-, Ghost-, Dark-, and Fairy-Type damage; and a +3 bonus on checks made to cure Volatile Status Conditions.",
@@ -66,8 +66,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Mystical Inhibitor [CR]"
+    "class": "Researcher",
+    "name": "Mystical Inhibitor [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "mystical-inhibitor"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

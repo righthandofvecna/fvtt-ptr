@@ -555,7 +555,7 @@
         "type": "body"
       }
     },
-    "slug": "steelix",
+    "slug": "steelix-mega",
     "rules": [],
     "type": {
       "0": "Steel",
@@ -571,7 +571,9 @@
       "Kalos",
       "Sinnoh",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

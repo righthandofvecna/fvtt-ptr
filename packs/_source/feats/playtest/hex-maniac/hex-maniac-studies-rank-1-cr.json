@@ -1,5 +1,5 @@
 {
-  "name": "Hex Maniac Studies Rank 1 [CR]",
+  "name": "Hex Maniac Studies Rank 1",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Learn two Hex Maniac Moves. You may choose any Move marked with the Hex Maniac Studies Rank you are taking or lower.\nRank 1: Confuse Ray, Curse, Hypnosis, Spite, Will-O-Wisp,\nRank 3: Hex, Dream Eater\nNote: When using Curse, you must use Curse as if you were a Ghost-Type Pokémon.",
@@ -153,8 +153,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Hex Maniac [CR]",
-    "name": "Hex Maniac Studies [CR]Rank 1 [CR]"
+    "class": "Hex Maniac",
+    "name": "Hex Maniac Studies [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "hex-maniac-studies-rank-1"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

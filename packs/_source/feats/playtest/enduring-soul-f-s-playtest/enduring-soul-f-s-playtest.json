@@ -1,5 +1,5 @@
 {
-  "name": "Enduring Soul [F&S Playtest]",
+  "name": "Enduring Soul",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Your Pokémon gain 1 Tick of Temporary Hit Points at the beginning of each Scene that they have 1 Spirit or more. The first time your Pokémon receive an injury each scene (or drop below 50% HP) they gain 1 Spirit.\nBonus: Your Pokémon gain +1 HP stat and an additional +1 per 10 levels.",
@@ -15,7 +15,7 @@
       }
     ],
     "enabled": true,
-    "slug": "enduring-soul-f-s-playtest",
+    "slug": "enduring-soul-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -69,7 +69,9 @@
     "class": "",
     "name": "Enduring Soul",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "enduring-soul"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",

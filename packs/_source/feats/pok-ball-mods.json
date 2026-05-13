@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "poke-ball-mods",
+    "slug": "pok-ball-mods",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -57,7 +57,9 @@
     "class": "Researcher (Jailbreaker)",
     "name": "Poké Ball Mods",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

@@ -1,5 +1,5 @@
 {
-  "name": "Air Lock [Weather Playtest]",
+  "name": "Air Lock",
   "type": "ability",
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "air-lock-weather-playtest",
+    "slug": "air-lock-wp",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -53,7 +53,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "air-lock"
   },
   "_id": "cnykxARG87kK2zlC",
   "effects": [],

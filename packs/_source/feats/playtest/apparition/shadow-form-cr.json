@@ -1,5 +1,5 @@
 {
-  "name": "Shadow Form [CR]",
+  "name": "Shadow Form",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: While this Feature is Bound, your appearance becomes wan and obviously otherworldly. Your natural Weaknesses, Resistances, and Immunities change to match that of the Ghost Type. Additionally, while in Shadow Form, you are immune to the Cursed Status (if you were previously Cursed, you are instantly cured upon going into Shadow Form) and gain the Phasing Capability. You may unbind this Feature as a Rapid Action, returning to your normal appearance.",
@@ -67,8 +67,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Apparition [CR]",
-    "name": "Shadow Form [CR]"
+    "class": "Apparition",
+    "name": "Shadow Form [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "shadow-form"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

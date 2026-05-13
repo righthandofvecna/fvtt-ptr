@@ -1,5 +1,5 @@
 {
-  "name": "Leadership [CR]",
+  "name": "Leadership",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose one of Ravager Orders, Marksman Orders, Trickster Orders, Guardian Orders, or Precision Orders. You gain the chosen Feature and the Leader Edge, even if you do not meet their prerequisites.",
@@ -98,8 +98,10 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Commander [CR]",
-    "name": "Leadership [CR]"
+    "class": "Commander",
+    "name": "Leadership [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "leadership"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

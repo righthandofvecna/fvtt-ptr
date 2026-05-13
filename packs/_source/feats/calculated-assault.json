@@ -55,7 +55,9 @@
     "class": "Style Expert (Smart)",
     "name": "Calculated Assault",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

@@ -99,7 +99,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-flower-gift",
+    "slug": "effect-flower-gift-self",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -127,7 +127,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,

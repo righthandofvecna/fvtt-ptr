@@ -1,6 +1,6 @@
 {
   "folder": "Z5GifJRRPRuXnCPG",
-  "name": "Stat Embodiment (Special Attack) [CR]",
+  "name": "Stat Embodiment (Special Attack)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -60,7 +60,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Special Attack) [CR]"
+    "class": "Stat Ace (Special Attack)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-embodiment-special-attack"
   },
   "effects": [],
   "flags": {

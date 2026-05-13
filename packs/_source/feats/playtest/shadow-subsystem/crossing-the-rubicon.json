@@ -60,7 +60,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher (Malfeasance)"
+    "class": "Researcher (Malfeasance)",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,

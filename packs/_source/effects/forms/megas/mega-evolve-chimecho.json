@@ -45,7 +45,7 @@
       }
     ],
     "enabled": true,
-    "slug": "mega-evolve-skarmory",
+    "slug": "mega-evolve-chimecho",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -73,7 +73,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

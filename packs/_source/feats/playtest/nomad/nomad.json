@@ -81,7 +81,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": ""
+    "class": "",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

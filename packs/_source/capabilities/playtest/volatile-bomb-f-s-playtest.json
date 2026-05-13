@@ -1,5 +1,5 @@
 {
-  "name": "Volatile Bomb [F&S Playtest]",
+  "name": "Volatile Bomb",
   "type": "capability",
   "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
   "system": {
@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "volatile-bomb-f-s-playtest",
+    "slug": "volatile-bomb-fs",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -48,7 +48,9 @@
     "ap": {
       "cost": 0,
       "bind": false
-    }
+    },
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "volatile-bomb"
   },
   "effects": [],
   "folder": "4yLFZsM42OJ7FDLn",

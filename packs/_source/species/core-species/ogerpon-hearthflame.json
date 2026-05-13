@@ -651,7 +651,7 @@
         "type": "body"
       }
     },
-    "slug": "ogerpon",
+    "slug": "ogerpon-hearthflame",
     "rules": [],
     "type": {
       "0": "Grass",
@@ -665,7 +665,9 @@
       "Legendary"
     ],
     "stackSlugs": false,
-    "enabled": false
+    "enabled": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "dljUGxtO8AR0tERN",
