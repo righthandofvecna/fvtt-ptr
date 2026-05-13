@@ -78,6 +78,12 @@ const AutomationSettingsConfig = {
         hint: "PTU.Settings.Automation.XpToTrainerPool.Hint",
         type: Boolean,
         default: false,
+    },
+    "dexOnScan": {
+        name: "PTU.Settings.Automation.DexOnScan.Name",
+        hint: "PTU.Settings.Automation.DexOnScan.Hint",
+        type: Boolean,
+        default: true,
     }
 }
 
