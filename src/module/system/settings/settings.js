@@ -214,6 +214,7 @@ export function registerSettings() {
         onChange: () => {
             game.ptu.compendiumBrowser.packLoader.reset();
             game.ptu.compendiumBrowser.initCompendiumList();
+            globalThis.QuickInsert?.forceIndex();
         }
     });
 
@@ -231,6 +232,7 @@ export function registerSettings() {
         onChange: () => {
             game.ptu.compendiumBrowser.packLoader.reset();
             game.ptu.compendiumBrowser.initCompendiumList();
+            globalThis.QuickInsert?.forceIndex();
         }
     });
 
