@@ -978,6 +978,10 @@
         "XpToTrainerPool": {
           "Name": "Route Combat XP to Trainer Pool",
           "Hint": "When enabled, XP awarded at the end of combat is sent as discrete chunks to the owning trainer's XP pool instead of directly to the Pokémon. Trainers can then assign each chunk to one of their Pokémon."
+        },
+        "DexOnScan": {
+          "Name": "Update PokéDex on Scan",
+          "Hint": "When enabled, scanning a Pokémon with the PokéDex will mark it as Seen in the trainer's PokéDex and announce the scan in chat."
         }
       },
       "Generation": {
