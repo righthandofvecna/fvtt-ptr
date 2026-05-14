@@ -602,9 +602,7 @@
     "UI": {
       "ShiftModifyDamageTitle": "Ajustar tirada del daño/la curación",
       "ShiftModifyDamageLabel": "Ajustar el daño/curación",
-      "ShiftModifySkipIWRLabel": "Omitir inmunidades/debilidades/resistencias",
-      "MuteUntilEndOfCombat": "Silenciar hasta el fin del combate",
-      "Muted": "Silenciado"
+      "ShiftModifySkipIWRLabel": "Omitir inmunidades/debilidades/resistencias"
     },
     "Type": {
       "normal": "Normal",
@@ -753,15 +751,6 @@
         "AllowDuplicate": "Permitir duplicados",
         "ReevaluateOnUpdate": "Reevaluar en la actualización",
         "ReplaceSelf": "Sustituirse a sí mismo"
-      },
-      "Reminder": {
-        "Message": "Mensaje",
-        "Frequency": {
-          "Label": "Frecuencia",
-          "Always": "Siempre",
-          "OncePerCombat": "Una vez por combate",
-          "OncePerRest": "Una vez por descanso"
-        }
       }
     },
     "Check": {
