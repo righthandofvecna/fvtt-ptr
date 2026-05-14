@@ -1,5 +1,5 @@
 {
-  "name": "Push Buttons [CR]",
+  "name": "Push Buttons",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your Social Moves’ Frequency is not Expended if they miss. You gain the Demoralize Edge, even if you do not meet the prerequisites. Its effects for Status Moves now trigger on 18+, and Social Moves that activate this “Crit” Range cause their targets to lose a tick of Hit Points. If you already have Demoralize, you may gain another Edge for which you meet the prerequisites.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "push-buttons-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:32.006Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Provocateur"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Provocateur [CR]",
-    "name": "Push Buttons [CR]"
+    "class": "Provocateur",
+    "name": "Push Buttons [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "push-buttons"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -52,10 +83,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1710765909004,
+    "modifiedTime": 1778200832080,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

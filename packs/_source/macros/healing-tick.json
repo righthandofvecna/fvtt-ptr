@@ -23,6 +23,8 @@
     "default": 0
   },
   "system": {
-    "slug": "healing-tick"
+    "slug": "healing-tick",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

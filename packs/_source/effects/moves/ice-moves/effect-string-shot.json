@@ -18,7 +18,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-icy-wind",
+    "slug": "effect-string-shot",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -46,7 +46,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "EpWlmkHbtm4Nh2WY",

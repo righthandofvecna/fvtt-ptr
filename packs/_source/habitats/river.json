@@ -1132,6 +1132,8 @@
     "exportSource": null
   },
   "system": {
-    "slug": "river"
+    "slug": "river",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

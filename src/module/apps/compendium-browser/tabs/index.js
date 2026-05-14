@@ -1,4 +1,5 @@
 export { CompendiumBrowserAbilitiesTab as Abilities } from "./abilities.js";
+export { CompendiumBrowserCapabilitiesTab as Capabilities } from "./capabilities.js";
 export { CompendiumBrowserEdgesTab as Edges } from "./edges.js";
 export { CompendiumBrowserFeatsTab as Feats } from "./feats.js";
 export { CompendiumBrowserItemsTab as Items } from "./items.js";

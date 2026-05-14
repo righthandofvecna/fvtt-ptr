@@ -1,5 +1,5 @@
 {
-  "name": "Crystal Resonance [CR]",
+  "name": "Crystal Resonance",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You roll an additional 3d6 when determining how many Shards you find when Dowsing. Additionally, while you have a Shard in your Main Hand and/or Off-Hand, you gain one of the following benefits, depending on the color of the Shard(s):\n- Red: \tYou gain a +5 damage bonus with Special Attacks.\n- Orange: You gain a +5 damage bonus with Physical Attacks.\n- Yellow: You gain 5 DR against Physical Attacks.\n- Green: Your Initiative is increased by +5.\n- Blue: \tYou gain 5 DR against Special Attacks.\n- Violet: \tYou gain +2 Evasion against Status-Class Attacks.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "crystal-resonance-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.256Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Crystal Artificer",
       "Skill Stunt (Dowsing)"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Crystal Resonance [CR]"
+    "class": "Researcher",
+    "name": "Crystal Resonance [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "crystal-resonance"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829324,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

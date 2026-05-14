@@ -81,11 +81,19 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
             )
         }
 
-        if(this.item.flags.ptu?.showInTokenPanel === undefined) {
-            if(this.item.type === "item" && this.item.roll) data.item.flags.ptu.showInTokenPanel = true;
-            if (["move", "ability", "feat", "effect"].includes(this.item.type)) data.item.flags.ptu.showInTokenPanel = true;
-        }
-        
+        data.eotCooldown = Boolean(this.item.flags.ptu?.eot);
+        data.freqConst = CONFIG.PTU.data.frequencies[this.item.system.frequency?.type] ?? {};
+
+        data.automationStatus = this.item.getFlag("ptu", "automationStatus") ?? "needs-automation";
+        data.devNote = this.item.getFlag("ptu", "devNote") ?? "";
+        data.automationStatusOptions = {
+            "needs-automation": "PTU.DevAutomation.Status.NeedsAutomation",
+            "completed": "PTU.DevAutomation.Status.Completed",
+            "requires-system-changes": "PTU.DevAutomation.Status.RequiresSystemChanges",
+            "no-automation-needed": "PTU.DevAutomation.Status.NoAutomationNeeded"
+        };
+        data.contentSets = CONFIG.PTU.contentSets;
+
         return data;
     }
 
@@ -101,7 +109,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
 
         if(data.type === "Item" && data.uuid) {
             const item = await fromUuid(data.uuid);
-            if(!["effect", "condition".includes(item.type)]) return;
+            if(!["effect", "condition"].includes(item.type)) return;
 
             this.object.update({"system.referenceEffect": item.uuid});
         }
@@ -123,7 +131,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
                 label: "Commit to GitHub",
                 class: "commit-to-github",
                 icon: "fa-solid fa-upload",
-                onclick: () => GithubSyncManager.commitItemToGithub(this.object),
+                onclick: (event) => GithubSyncManager.commitItemToGithub(this.object, event.currentTarget),
             });
         }
 
@@ -171,6 +179,13 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
             }
         }
 
+        html.find('button[data-action="resetEOT"]').click(async (event) => {
+            event.preventDefault();
+            if(this.item.flags?.ptu?.eot) {
+                await this.item.update({"flags.ptu.-=eot": null});
+            }
+        });
+
         html.find('a[data-clipboard]').click((event) => {
             const clipText = event.currentTarget.dataset.clipboard;
             if(clipText) {
@@ -187,12 +202,18 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
             html.find("a[data-action='regenerate-slug']").click(() => {
                 if(this._submitting) return;
 
-                slugInput.value = sluggify(this.item.name);
+                const baseName = this.item.name.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
+                const contentSet = this.item.system.contentSet;
+                const suffix = contentSet ? (game.ptu?.config?.contentSets?.[contentSet]?.suffix ?? "") : "";
+                slugInput.value = sluggify(baseName) + suffix;
                 const event = new Event("change");
                 slugInput.dispatchEvent(event);
             });
             if(!slugInput.value) {
-                slugInput.value = sluggify(this.item.name);
+                const baseName = this.item.name.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
+                const contentSet = this.item.system.contentSet;
+                const suffix = contentSet ? (game.ptu?.config?.contentSets?.[contentSet]?.suffix ?? "") : "";
+                slugInput.value = sluggify(baseName) + suffix;
                 const event = new Event("change");
                 slugInput.dispatchEvent(event);
             }

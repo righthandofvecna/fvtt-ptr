@@ -58,7 +58,7 @@
       }
     ],
     "enabled": true,
-    "slug": "mimikyu-disguise-broken",
+    "slug": "form-change-mimikyu-disguise-broken",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -86,7 +86,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "DJzDYBNllxgyeiok",

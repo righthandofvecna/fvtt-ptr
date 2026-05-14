@@ -59,7 +59,7 @@ class ChatMessagePTU extends ChatMessage {
 
     get item() {
         const attack = this.attack;
-        if (attack?.item) return attack.item;
+        if (attack) return attack;
 
         const context = this.context;
         if (context?.item) {

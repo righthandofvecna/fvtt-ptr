@@ -210,6 +210,24 @@
                                 </div>
                             </div>
                         </div>
+
+                        {{#if (and (getGameSetting "automation.xpToTrainerPool") actor.system.level.xpPool.length)}}
+                        <div class="w-100 level-box mt-1 mb-1">
+                            <div class="swsh-box" style="text-align: center; word-break: keep-all;">
+                                <div class="swsh-header ball-themes {{ballStyle}} highlight p-1">
+                                    <h3 class="m-auto">{{localize "PTU.XPPool"}}</h3>
+                                </div>
+                                <div class="swsh-body">
+                                    {{#each actor.system.level.xpPool as |chunk index|}}
+                                    <div class="d-flex align-items-center justify-content-between pt-1 pb-1">
+                                        <span>{{localize "PTU.PendingExp"}}: <strong>{{chunk}}</strong></span>
+                                        <button type="button" class="assign-xp-pool" data-index="{{index}}">{{localize "PTU.AssignXP"}}</button>
+                                    </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                        {{/if}}
                     </div>
                 </div>
             </div>

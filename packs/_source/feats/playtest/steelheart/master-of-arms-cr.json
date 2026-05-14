@@ -1,5 +1,5 @@
 {
-  "name": "Master of Arms [CR]",
+  "name": "Master of Arms",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Call to Arms and Unlimited Steel Works Talents.\n### Call to Arms\nAt-Will – Extended Action\nTarget: A Metal Weapon\nEffect: You create a Steelheart Bond with the target Weapon. You may only have one Steelheart Bond at a time; if you create a new Bond, all old Bonds are lost. As a Shift Action, you may beckon your Steelheart Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Athletics or Focus vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal.\n### Unlimited Steel Works\nAt-Will – Extended Action\nTarget: Your Steelheart Bond Weapon\nEffect: You may replace the Move(s) granted by the target Weapon with any other standard Weapon Moves, within Limitations. Weapons may still only grant one Adept and one Master Move at a maximum.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "master-of-arms-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.302Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -32,15 +39,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Steelheart",
       "Expert Athletics or Focus"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Steelheart [CR]",
-    "name": "Master of Arms [CR]"
+    "class": "Steelheart",
+    "name": "Master of Arms [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "master-of-arms"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -54,10 +85,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831368,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

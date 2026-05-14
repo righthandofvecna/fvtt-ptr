@@ -62,3 +62,13 @@ jobs:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   artifacts: "./system.json,./system.zip"
                   tag: ${{ env.systemVersion }}
+
+            - name: Sync content-sync branch from release
+              run: |
+                  gh api repos/${{ github.repository }}/git/refs/heads/content-sync -X DELETE || true
+                  gh api repos/${{ github.repository }}/git/refs \
+                    --method POST \
+                    -f ref=refs/heads/content-sync \
+                    -f sha=${{ github.sha }}
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

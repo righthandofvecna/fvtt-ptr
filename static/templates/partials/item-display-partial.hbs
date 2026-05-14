@@ -27,7 +27,7 @@
 {{#if (is type "move")}}
     <ol class="item-list move-list pl-1">
         {{#each items as | item |}}
-            <li class="item {{item.type}}-item" data-item-id="{{item.realId}}">
+            <li class="item {{item.type}}-item {{#if item.onCooldown}}on-cooldown{{/if}}" data-item-id="{{item.realId}}">
                 <div class="item-icon {{#if item.rollable}}rollable{{/if}} move">
                     <img class="icon" src="{{item.img}}" title="{{item.name}}"/>
                     <img class="dice" src="/icons/svg/d20.svg" title="Roll {{item.name}}">
@@ -79,8 +79,8 @@
                         {{/if}}
                         {{#if item.damageBase}}
                             {{!-- {{#unless (is item.system.category "Status")}} --}}
-                                <div class="tag tooltip gradient" title="DB: {{item.damageBase.postStab}} ({{moveDbToDice item ../actor}})">
-                                    <span>DB: {{item.damageBase.postStab}}</span>
+                                <div class="tag tooltip gradient" title="DB: {{#if item.damageBase.isFormula}}{{item.dbPreviewNumber}}*{{else}}{{item.damageBase.postStab}}{{/if}} ({{moveDbToDice item ../actor}})">
+                                    <span>DB: {{#if item.damageBase.isFormula}}{{item.dbPreviewNumber}}*{{else}}{{item.damageBase.postStab}}{{/if}}</span>
                                 </div>
                             {{!-- {{/unless}} --}}
                         {{/if}}
@@ -91,10 +91,19 @@
                                 </div>
                             {{/unless}}
                         {{/if}}
-                        {{#if item.system.frequency}}
+                        {{#if item.system.frequency.type}}
                             <div class="tag gradient">
-                                <span>{{item.system.frequency}}</span>
+                                <span>{{item.frequency}}</span>
                             </div>
+                            {{!-- {{#if item.system.frequency.max}}
+                                <div class="tag gradient usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
+                                    <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
+                                </div> --}}
+                            {{#if item.onCooldown}}
+                                <div class="tag gradient usage-tag exhausted" title="On Cooldown (EOT)">
+                                    <span>EOT</span>
+                                </div>
+                            {{/if}}
                         {{/if}}
                         {{#if item.system.range}}
                             {{#each (split item.system.range ",") as | range |}}
@@ -126,7 +135,7 @@
     <ol class="item-list pl-1" {{#if category}}data-category="{{category}}"{{/if}}>
         {{#each items as | item |}}
             {{#unless (and item.grantedBySameType (notEqual type "condition"))}}
-        <li class="item {{item.type}}-item {{#if (is item.active false)}}disabled{{/if}}" data-item-id="{{item._id}}">
+        <li class="item {{item.type}}-item {{#if (is item.active false)}}disabled{{/if}} {{#if item.onCooldown}}on-cooldown{{/if}}" data-item-id="{{item._id}}">
                     {{#if item.rollable}}
                         <div class="item-icon rollable">
                             <img class="icon" src="{{item.img}}" title="{{item.name}} ({{item.type}})"/>
@@ -164,6 +173,15 @@
                                         </div>
                                     {{/if}}
                                 {{/if}}
+                                {{!-- {{#if item.system.frequency.max}}
+                                    <div class="tag usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
+                                        <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
+                                    </div> --}}
+                                {{#if item.onCooldown}}
+                                    <div class="tag usage-tag exhausted" title="On Cooldown (EOT)">
+                                        <span>EOT</span>
+                                    </div>
+                                {{/if}}
                             {{/unless}}
                         </div>
                         {{#if item.system.quantity includeZero=true}}
@@ -198,7 +216,7 @@
     {{#if parent.grants}}
     <ol class="nested-items show">
         {{#each parent.grants as |item|}}
-            <li class="item {{item.type}}-item" data-item-id="{{item._id}}">
+            <li class="item {{item.type}}-item {{#if item.onCooldown}}on-cooldown{{/if}}" data-item-id="{{item._id}}">
                 {{#if (and system.frequency (notEqual system.frequency "Static"))}}
                     <div class="item-icon rollable">
                         <img class="icon" src="{{item.img}}" title="{{item.name}} ({{item.type}})"/>

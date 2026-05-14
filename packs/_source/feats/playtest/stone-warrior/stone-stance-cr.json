@@ -1,5 +1,5 @@
 {
-  "name": "Stone Stance [CR]",
+  "name": "Stone Stance",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You adopt one of the stances below, gaining the effects of the stance while this Feature remains bound. You may switch your active Stance as a Standard Action without rebinding your AP. The benefits from this Feature do not apply if you are not standing on a solid surface, such as deep mud or snow, or if you are outright swimming or even flying.\n- Falling Boulder Stance: You gain a +1 bonus to Accuracy with Rock-type attacks and a +5 bonus to all Damage Rolls, but lose 5 HP from Recoil whenever you hit with an attack.\n- Moon Mountain Stance: Your initiative is lowered by -5, but you gain 5 Damage Reduction and are immune to Push or Pull effects.\n- Roiling Earth Stance: After a successful Intercept action, you may make a Struggle Attack against a foe within range.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "stone-stance-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.423Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 2 AP – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": true
+    },
     "prerequisites": [
       "Stone Warrior"
     ],
-    "frequency": "Bind 2 AP – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Stone Warrior [CR]",
-    "name": "Stone Stance [CR]"
+    "class": "Stone Warrior",
+    "name": "Stone Stance [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "stone-stance"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -52,10 +83,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829484,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

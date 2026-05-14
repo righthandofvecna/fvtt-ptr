@@ -6,7 +6,11 @@
   "_id": "CKiVqPT3ASdUeaM0",
   "sort": 100000,
   "color": null,
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed"
+    }
+  },
   "_stats": {
     "systemId": "ptr",
     "systemVersion": "0.13",

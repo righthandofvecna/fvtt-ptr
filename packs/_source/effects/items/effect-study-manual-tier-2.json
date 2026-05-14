@@ -96,7 +96,7 @@
       }
     ],
     "enabled": true,
-    "slug": "study-manual-tier-2",
+    "slug": "effect-study-manual-tier-2",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -124,7 +124,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "YOFSDHg7L2IrQsvT",

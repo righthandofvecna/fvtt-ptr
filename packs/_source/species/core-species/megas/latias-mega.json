@@ -628,7 +628,7 @@
         "type": "body"
       }
     },
-    "slug": "latias",
+    "slug": "latias-mega",
     "rules": [],
     "type": {
       "0": "Dragon",
@@ -641,7 +641,9 @@
     "keywords": [
       "Legendary",
       "Hoenn"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

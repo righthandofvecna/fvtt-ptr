@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "small-prophecies",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.764Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -30,17 +37,41 @@
       "+Special Defense",
       "Legacy"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1 AP - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
     "prerequisites": [
       "Divination",
       "Adept Perception"
     ],
-    "frequency": "1 AP - Rapid Action",
     "notes": "",
     "free": false,
     "class": "Oracle",
     "automation": [],
     "name": "Small Prophecies",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -56,10 +87,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.1",
+    "systemVersion": "4.4.3.16",
     "coreVersion": "13.351",
     "createdTime": 1683368084413,
-    "modifiedTime": 1776088721238,
+    "modifiedTime": 1778200829837,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

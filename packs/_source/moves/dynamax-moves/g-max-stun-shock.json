@@ -10,10 +10,17 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "g-max-stunshock",
+    "slug": "g-max-stun-shock",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:24.220Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,16 +38,40 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Electric",
     "category": "Physical",
     "damageBase": "12",
-    "frequency": "At-Will",
     "ac": "0",
     "range": "Range 12, Ranged Blast 4",
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 2200000,
@@ -54,10 +85,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1705335970119,
-    "modifiedTime": 1707824829489,
+    "modifiedTime": 1778200824271,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

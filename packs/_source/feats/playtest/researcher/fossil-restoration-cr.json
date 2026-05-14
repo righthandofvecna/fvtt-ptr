@@ -1,5 +1,5 @@
 {
-  "name": "Fossil Restoration [CR]",
+  "name": "Fossil Restoration",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A Fossil that you are Reviving.\nEffect: The Revived Pokémon is created at a higher level, equal to 10 plus double your Pokémon Education Rank, and it receives one free Poké Edge that it qualifies for.\nBonus: Your Revived Pokémon have their Base HP innately increased by 1 plus your Pokémon Education Rank/2.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "fossil-restoration-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.765Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Paleontologist",
       "Novice Pokémon Education"
     ],
-    "frequency": "At-Will – Extended Action",
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Fossil Restoration [CR]"
+    "class": "Researcher",
+    "name": "Fossil Restoration [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "fossil-restoration"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829837,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -21,13 +21,13 @@
     "enabled": true,
     "slug": "mold-ball",
     "schema": {
-      "version": 0.11,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2023-08-16T07:27:02.336Z",
+        "datetime": "2026-05-08T00:40:41.441Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "4.0.0.alpha.4"
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -39,6 +39,29 @@
     "keywords": [
       "Poke Ball"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "quantity": "1",
     "category": "",
     "cost": "300",
@@ -48,7 +71,9 @@
     "automation": [],
     "name": "Mold Ball",
     "useCount": 0,
-    "modifier": null
+    "modifier": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/mold ball.webp",
@@ -59,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1683368808674,
-    "modifiedTime": 1712495896404,
+    "modifiedTime": 1778200841475,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

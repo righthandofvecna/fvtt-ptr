@@ -1,5 +1,5 @@
 {
-  "name": "Raging Winds Rank 3 [CR]",
+  "name": "Raging Winds Rank 3",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may learn three Moves from the list below, marked with the Raging Winds Rank you are gaining or lower.\nRank 1: Air Cutter, Dual Wingbeat, Gust, Tailwind, Wind Dance\nRank 2: Air Slash, Defog, Feather Dance, Tempest, Wind Shear\nRank 3: Brave Bird, Flying Press, Mirror Move, Sky Attack, Hurricane",
@@ -327,8 +327,15 @@
     "enabled": true,
     "slug": "raging-winds-rank-3-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.445Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -341,12 +348,36 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Wind Runner [CR]",
-    "name": "Raging Winds [CR]Rank 1 [CR]"
+    "class": "Wind Runner",
+    "name": "Raging Winds [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "raging-winds-rank-3"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -363,10 +394,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830478,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

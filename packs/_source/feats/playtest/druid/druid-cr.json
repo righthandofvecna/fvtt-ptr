@@ -1,5 +1,5 @@
 {
-  "name": "Druid [CR]",
+  "name": "Druid",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your powers begin to take after either Flowers, Fungi, or Trees. Depending on your oath, you gain an Ability and Stat Tags. Whenever you gain a Druid Feature, you gain the same Stat Tags.\nFlower Oath -> Aroma Veil -> [+Special Attack]\nFungal Oath -> Effect Spore -> [+Special Defense]\nWood Oath -> Effect Spore -> [+Attack]",
@@ -37,8 +37,15 @@
     "enabled": true,
     "slug": "druid-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.314Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -51,15 +58,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Elemental Connection (Grass)",
       "Novice Survival or Novice General Education"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Druid [CR]",
-    "name": "Druid [CR]"
+    "class": "Druid",
+    "name": "Druid [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "druid"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -77,10 +108,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200828364,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

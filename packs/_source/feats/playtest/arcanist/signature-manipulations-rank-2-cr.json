@@ -1,5 +1,5 @@
 {
-  "name": "Signature Manipulations Rank 2 [CR]",
+  "name": "Signature Manipulations Rank 2",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Each Rank, select a Power Manipulation of the same Signature Manipulation Rank you are taking or lower.\n- For Rank 1 Manipulations, this Manipulation may be used twice per Scene without spending AP to activate.\n- For Rank 2 Manipulations, this Manipulation may be used once per Scene without activating Authentic Thaumaturgy’s Frequency.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "signature-manipulations-rank-2-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.935Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -32,14 +39,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Authentic Thaumaturgy"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Arcanist [CR]",
-    "name": "Signature Manipulations [CR]Rank 1 [CR]"
+    "class": "Arcanist",
+    "name": "Signature Manipulations [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "signature-manipulations-rank-2"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -56,10 +87,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829000,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

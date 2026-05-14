@@ -1,5 +1,5 @@
 {
-  "name": "Critical Moment [CR]",
+  "name": "Critical Moment",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokemon with [Training] Features applied\nEffect: The bonuses from your Pokemon’s [Training] are tripled until the end of your next turn.\n@UUID[Item.HuC1TXnposDVE87A]",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "critical-moment-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.732Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -21,15 +28,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Elite Trainer",
       "Adept Command"
     ],
-    "frequency": "Scene x2 – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Ace Trainer [CR]",
-    "name": "Critical Moment [CR]"
+    "class": "Ace Trainer",
+    "name": "Critical Moment [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "critical-moment"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -41,7 +72,10 @@
       "grantedBy": {
         "id": "clN70mmp5f0qNjZT",
         "onDelete": "detach"
-      }
+      },
+      "automationStatus": "needs-automation",
+      "devNote": "Linked effect is missing",
+      "used": null
     },
     "LocknKey": {
       "IDKeysFlag": "",
@@ -55,10 +89,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.3.v12-beta.1",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1748894547850,
+    "modifiedTime": 1778569275359,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

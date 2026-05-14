@@ -1,5 +1,5 @@
 {
-  "name": "Enduring Soul [CR]",
+  "name": "Enduring Soul",
   "system": {
     "origin": "[F&S Playtest]",
     "effect": "Your Pokémon have their HP Base Stat increased by +1, and by +1 more for every 10 Levels they have. Additionally, you gain +1 to the HP Base Stat for every two Milestones you have, plus 1. You and your Pokemon begin each Scene with Temporary HP equal to the sum of your Athletics and Focus Ranks.",
@@ -18,13 +18,13 @@
     "enabled": true,
     "slug": "enduring-soul-cr",
     "schema": {
-      "version": 0.114,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2024-02-17T16:58:32.782Z",
+        "datetime": "2026-05-08T00:40:30.446Z",
         "version": {
-          "schema": 0.11,
-          "foundry": "11.315",
-          "system": "4.2.0"
+          "schema": 0.114,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -39,17 +39,41 @@
       "Playtest",
       "CR"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Novice Focus",
       "Novice Athletics"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
     "class": "",
     "name": "Enduring Soul",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "enduring-soul"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -68,11 +92,11 @@
     "default": 0
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710766706059,
-    "modifiedTime": 1710766706059,
+    "modifiedTime": 1778200830478,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

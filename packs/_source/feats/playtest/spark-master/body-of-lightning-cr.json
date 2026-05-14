@@ -1,5 +1,5 @@
 {
-  "name": "Body of Lightning [CR]",
+  "name": "Body of Lightning",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Volt Absorb or Motor Drive. You gain the Chosen Ability.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "body-of-lightning-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.296Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Master Acrobatics or Focus"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Spark Master [CR]",
-    "name": "Body of Lightning [CR]"
+    "class": "Spark Master",
+    "name": "Body of Lightning [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "body-of-lightning"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -52,10 +83,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830363,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

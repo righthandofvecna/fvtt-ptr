@@ -1,5 +1,5 @@
 {
-  "name": "Maelstrom [CR]",
+  "name": "Maelstrom",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Gilled Capability, and a +2 bonus to your Swim speed. Whenever your Water-Type Moves miss all targets, you gain a Tick of Temporary Hit Points.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "maelstrom-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.730Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -32,15 +39,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Elemental Connection (Water)",
       "Novice Athletics or Novice Acrobatics"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Maelstrom [CR]",
-    "name": "Maelstrom [CR]"
+    "class": "Maelstrom",
+    "name": "Maelstrom [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "maelstrom"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -54,10 +85,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830795,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

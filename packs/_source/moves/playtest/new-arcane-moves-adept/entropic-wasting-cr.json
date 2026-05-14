@@ -1,6 +1,6 @@
 {
   "folder": "laXYP0SFSLCeWOcn",
-  "name": "Entropic Wasting [CR]",
+  "name": "Entropic Wasting",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
@@ -11,8 +11,15 @@
     "enabled": true,
     "slug": "entropic-wasting-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:25.937Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -30,16 +37,40 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "eot",
+      "max": null,
+      "custom": "EOT",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Normal",
     "category": "Special",
     "damageBase": "3",
-    "frequency": "EOT",
     "ac": "--",
     "range": "WR",
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "entropic-wasting"
   },
   "effects": [],
   "sort": 100000,
@@ -53,10 +84,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699701779793,
-    "modifiedTime": 1707822640807,
+    "modifiedTime": 1778200825993,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

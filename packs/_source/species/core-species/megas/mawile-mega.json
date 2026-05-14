@@ -632,7 +632,7 @@
         "type": "body"
       }
     },
-    "slug": "mawile",
+    "slug": "mawile-mega",
     "rules": [],
     "type": {
       "0": "Steel",
@@ -647,7 +647,9 @@
       "Alola",
       "Galar",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

@@ -17,8 +17,15 @@
     "enabled": true,
     "slug": "heatproof",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:15.878Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -26,9 +33,33 @@
     },
     "stackSlugs": false,
     "keywords": [],
-    "frequency": "Static",
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "06ruPVyiZCvpjUpG",
@@ -48,10 +79,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.3.v12-beta.1",
+    "systemVersion": "4.4.3.16",
     "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1748549910289,
+    "modifiedTime": 1778200815925,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

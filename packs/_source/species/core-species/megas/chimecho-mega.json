@@ -548,18 +548,18 @@
       "2": ""
     },
     "stackSlugs": false,
-    "enabled": false
+    "enabled": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "irSNiCnUnI7il9mJ",
   "name": "Chimecho-Mega",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -567,8 +567,9 @@
     "systemVersion": "4.4.3.12",
     "createdTime": 1776550516251,
     "modifiedTime": 1776551309155,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "KfGTG9jMkj8F7OCD",
-  "sort": 1300000
+  "sort": 1300000,
+  "flags": {}
 }

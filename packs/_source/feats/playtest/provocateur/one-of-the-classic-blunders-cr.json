@@ -1,6 +1,6 @@
 {
   "folder": "mS7fmuAZxBzZ1J7B",
-  "name": "One of the Classic Blunders [CR]",
+  "name": "One of the Classic Blunders",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -21,8 +21,15 @@
     "enabled": true,
     "slug": "one-of-the-classic-blunders-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.116Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -35,14 +42,38 @@
       "Class Rework",
       "Interrupt"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1AP - Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
     "prerequisites": [
       "Provocateur",
       "Two Provocateur Skills at Adept Rank"
     ],
-    "frequency": "1AP - Free Action",
     "notes": "",
     "free": false,
-    "class": "Provocateur [CR]"
+    "class": "Provocateur",
+    "contentSet": "class-rework",
+    "replacesSlug": "one-of-the-classic-blunders"
   },
   "effects": [],
   "flags": {
@@ -56,11 +87,11 @@
   "_id": "ST1NH01lICJGG7II",
   "sort": 100000,
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710765908090,
-    "modifiedTime": 1710765909004,
+    "modifiedTime": 1778200830186,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

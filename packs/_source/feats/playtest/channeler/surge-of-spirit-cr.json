@@ -1,5 +1,5 @@
 {
-  "name": "Surge of Spirit [CR]",
+  "name": "Surge of Spirit",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A Channeled target\nEffect: While this Feature is Bound, the target receives +X to Bonus Damage to its Damage Rolls, Damage Reduction and Initiative Modifiers, with X being equal to your Intuition Rank.\nBonus: When bound, the target gains double the effects of Spirit.\n\n@UUID[Compendium.ptu.effects.Item.d8214x5aNOxtEyxX]",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "surge-of-spirit-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.833Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "Compendium.ptu.effects.Item.1Ywb3SQJMtSPYynh",
     "source": {
@@ -22,14 +29,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 2 AP – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": true
+    },
     "prerequisites": [
       "Channeler"
     ],
-    "frequency": "Bind 2 AP – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Channeler [CR]",
-    "name": "Surge of Spirit [CR]"
+    "class": "Channeler",
+    "name": "Surge of Spirit [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "surge-of-spirit"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -47,10 +78,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831899,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

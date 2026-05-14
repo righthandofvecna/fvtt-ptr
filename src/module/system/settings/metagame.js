@@ -26,6 +26,12 @@ const MetagameSettingsConfig = {
         hint: "PTU.Settings.Metagame.AllowPlayersToEditSpecies.Hint",
         type: Boolean,
         default: true
+    },
+    "showTypeEffectiveness": {
+        name: "PTU.Settings.Metagame.ShowTypeEffectiveness.Name",
+        hint: "PTU.Settings.Metagame.ShowTypeEffectiveness.Hint",
+        type: Boolean,
+        default: true
     }
 }
 

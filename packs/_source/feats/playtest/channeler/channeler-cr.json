@@ -1,5 +1,5 @@
 {
-  "name": "Channeler [CR]",
+  "name": "Channeler",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A Pokémon.\nEffect: You Channel the target Pokémon. If you attempt to Channel a Hostile Pokémon, you must make an Intuition Check with a DC of 15 to Channel the target. You may stop Channeling a Pokémon as a Free Action at any time. You may Channel a number of Pokémon at a time up to your Intuition Rank. If a Channeled Pokémon goes further than 20 meters from you, they stop being Channeled.\nBonus: If you channel with a Pokémon before capturing it, that Pokémon starts with +1 Friendship to its base (max 4).\nMechanic: While Channeling a Pokémon, it may choose communicate its intentions, emotions, and motivations to you and you may communicate similarly with them; neither party may be deceitful in this exchange. You also become innately aware of all of its Moves, Abilities, and Capabilities. Allied Channeled Pokémon may always attempt Intercept Maneuvers for each other, at 0 Spirit Cost. If you are Fainted, you stop Channeling all Pokémon.\nNote: Channeler has a couple Features with the [Orders] tag. However, because they require that a Pokémon be Channeled, which isn’t League Legal, they aren’t of any use in League Legal battles!\nNote: Channeled wild Pokémon count as having Friendship Level 3 and have 1 Spirit for the purpose of other features.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "channeler-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:32.006Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -21,14 +28,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Mystic Senses"
     ],
-    "frequency": "At-Will – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Channeler [CR]",
-    "name": "Channeler [CR]"
+    "class": "Channeler",
+    "name": "Channeler [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "channeler"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -46,10 +77,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200832080,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

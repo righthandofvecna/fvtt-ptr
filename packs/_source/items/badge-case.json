@@ -9,13 +9,13 @@
     "enabled": true,
     "slug": "badge-case",
     "schema": {
-      "version": 0.112,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2024-01-15T01:45:48.311Z",
+        "datetime": "2026-05-08T00:40:41.919Z",
         "version": {
-          "schema": null,
-          "foundry": "11.315",
-          "system": "4.0.9"
+          "schema": 0.112,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -25,12 +25,37 @@
     },
     "stackSlugs": false,
     "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "quantity": "1",
     "category": "Key",
     "cost": "0",
     "consumable": 0,
     "subtype": "",
-    "container": true
+    "container": true,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "https://assets.forge-vtt.com/64f9da1fa1bff97542b9dc2f/item512.png",
   "effects": [],
@@ -51,10 +76,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1703192640595,
-    "modifiedTime": 1712494296744,
+    "modifiedTime": 1778200841954,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

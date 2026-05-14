@@ -1,5 +1,5 @@
 {
-  "name": "Headliner Rank 2 [CR]",
+  "name": "Headliner Rank 2",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn two Musician Moves marked with the Rank of this Feature you are taking or lower.\nRank 1: Sing, Supersonic, Sonic Boom\nRank 2: Screech, Metal Sound, Snarl, Echoed Voice\nRank 3: Hyper Voice, Uproar, Round, Chatter\nRank 4: Boomburst, Overdrive, Ancient Roar",
@@ -128,8 +128,15 @@
     "enabled": true,
     "slug": "headliner-rank-2-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.463Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -142,15 +149,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Musician",
       "Adept Charm or Focus"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Musician [CR]",
-    "name": "Headliner [CR]Rank 1 [CR]"
+    "class": "Musician",
+    "name": "Headliner [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "headliner-rank-2"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -167,10 +198,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1710768713764,
+    "modifiedTime": 1778200828533,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

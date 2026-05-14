@@ -11,8 +11,15 @@
     "enabled": true,
     "slug": "maneuver-disengage",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:24.397Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -28,16 +35,40 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Shift",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Untyped",
     "category": "Status",
     "damageBase": "",
-    "frequency": "Shift",
     "ac": "--",
     "range": "Self",
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 500000,
@@ -51,10 +82,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.0",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1696797763032,
-    "modifiedTime": 1708348809118,
+    "modifiedTime": 1778200824437,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

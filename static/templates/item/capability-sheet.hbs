@@ -20,6 +20,7 @@
             />
         </header>
         <div class="tab overview h-100" data-group="primary" data-tab="overview">
+            {{> systems/ptu/static/templates/partials/dev-automation.hbs}}
             <div class="move-row p-2">
                 <div class="move-column">
                     <div class="avatar ml-3 mr-4 mt-2 mb-2">
@@ -60,6 +61,7 @@
             </div>
         </div>
         <div class="tab details h-100" data-group="primary" data-tab="details">
+            {{> systems/ptu/static/templates/partials/item-frequency-partial.hbs hasAP=false}}
             <div class="item-row">
                 <label for="system.keywords">{{localize "ITEM.Keywords"}}</label>
                 <input type="text" class="ptu-tagify system-keywords" name="system.keywords" value="{{json item.system.keywords}}" data-dtype="JSON"/>

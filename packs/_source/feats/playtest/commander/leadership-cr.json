@@ -1,5 +1,5 @@
 {
-  "name": "Leadership [CR]",
+  "name": "Leadership",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose one of Ravager Orders, Marksman Orders, Trickster Orders, Guardian Orders, or Precision Orders. You gain the chosen Feature and the Leader Edge, even if you do not meet their prerequisites.",
@@ -18,26 +18,27 @@
         "prompt": "Which Orders do you want?",
         "choices": [
           {
-            "label": "Ravager Orders",
-            "value": "Item.wGhX5R6txOXOQnFG"
+            "value": "Item.wGhX5R6txOXOQnFG",
+            "label": "Ravager Orders"
           },
           {
-            "label": "Marksman Orders",
-            "value": "Compendium.ptu.feats.Item.m0mQ75HwcMpOL7YS"
+            "value": "Compendium.ptu.feats.Item.m0mQ75HwcMpOL7YS",
+            "label": "Marksman Orders"
           },
           {
-            "label": "Trickster Orders",
-            "value": "Compendium.ptu.feats.Item.KyV5hPmKqaJTvMgK"
+            "value": "Compendium.ptu.feats.Item.KyV5hPmKqaJTvMgK",
+            "label": "Trickster Orders"
           },
           {
-            "label": "Guardian Orders",
-            "value": "Compendium.ptu.feats.Item.zy3F5IZmiosjU2HJ"
+            "value": "Compendium.ptu.feats.Item.zy3F5IZmiosjU2HJ",
+            "label": "Guardian Orders"
           },
           {
-            "label": "Precision Orders",
-            "value": "Compendium.ptu.feats.Item.Phenl8QYGXnXaWm5"
+            "value": "Compendium.ptu.feats.Item.Phenl8QYGXnXaWm5",
+            "label": "Precision Orders"
           }
-        ]
+        ],
+        "allowedDrops": null
       },
       {
         "key": "GrantItem",
@@ -49,8 +50,15 @@
     "enabled": true,
     "slug": "leadership-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.465Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -61,15 +69,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Complex Orders",
       "Expert Command"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Commander [CR]",
-    "name": "Leadership [CR]"
+    "class": "Commander",
+    "name": "Leadership [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "leadership"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +113,9 @@
         "id": "eMm2aHaoScr1TLsj",
         "onDelete": "detach"
       },
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     },
     "LocknKey": {
       "IDKeysFlag": "",
@@ -95,10 +129,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.3.v12-beta.1",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1749406279524,
+    "modifiedTime": 1778569152051,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

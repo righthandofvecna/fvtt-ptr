@@ -1,5 +1,5 @@
 {
-  "name": "Caustic Chemistry [CR]",
+  "name": "Caustic Chemistry",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit with a Pester Ball or apply a Repel to a okémon\nEffect: Make a Technology Education Roll. All targets ffected by this Feature’s trigger lose Hit Points equal to your roll. This may only affect a target once per Scene.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "caustic-chemistry-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.773Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
     "prerequisites": [
       "Chemist",
       "Expert Technology Education"
     ],
-    "frequency": "1 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Caustic Chemistry [CR]"
+    "class": "Researcher",
+    "name": "Caustic Chemistry [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "caustic-chemistry"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200828835,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

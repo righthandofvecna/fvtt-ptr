@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "slowed",
+    "slug": "slowed-shackle",
     "schema": {
       "version": 0.11,
       "lastMigration": {
@@ -46,7 +46,9 @@
     "name": "",
     "tokenIcon": {
       "show": true
-    }
+    },
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "folder": "HTNFGIxy9zsCONjI",
   "effects": [],

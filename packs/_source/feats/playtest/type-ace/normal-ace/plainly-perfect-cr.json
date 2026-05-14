@@ -1,5 +1,5 @@
 {
-  "name": "Plainly Perfect [CR]",
+  "name": "Plainly Perfect",
   "system": {
     "origin": "",
     "effect": "Target: Your Pokémon\nEffect: While this Feature is bound, instead of rolling for damage with Normal-Type Moves, your Pokémon acts as if they rolled the maximum value on their Damage Dice Roll. Plainly Perfect only works for the first instance of the Damage Dice Roll on Critical Hits.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "plainly-perfect-cr",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.583Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -23,17 +30,41 @@
       "Playtest",
       "CR"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 2 AP - Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": true
+    },
     "prerequisites": [
       "Extra Ordinary",
       "Type-Linked Skill at Adept"
     ],
-    "frequency": "Bind 2 AP - Standard Action",
     "notes": "",
     "free": false,
-    "class": "Type Ace (Normal) [CR]",
+    "class": "Type Ace (Normal)",
     "name": "Plainly Perfect",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "plainly-perfect"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -51,11 +82,11 @@
     "default": 0
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710767134914,
-    "modifiedTime": 1710767134914,
+    "modifiedTime": 1778200829656,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

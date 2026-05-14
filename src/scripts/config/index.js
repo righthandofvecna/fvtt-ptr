@@ -123,6 +123,73 @@ const data = {
       "Special": "PTU.Move.Category.Special",
     }
   },
+  frequencies: {
+    "at-will": {
+      label: "PTU.Frequency.AtWill.label",
+      short: "PTU.Frequency.AtWill.short",
+      eot: false,
+      limited: false,
+    },
+    "eot": {
+      label: "PTU.Frequency.EOT.label",
+      short: "PTU.Frequency.EOT.short",
+      eot: true,
+      limited: false,
+    },
+    "scene": {
+      label: "PTU.Frequency.Scene.label",
+      short: "PTU.Frequency.Scene.short",
+      eot: true,
+      limited: true,
+    },
+    "daily": {
+      label: "PTU.Frequency.Daily.label",
+      short: "PTU.Frequency.Daily.short",
+      eot: true,
+      limited: true,
+    },
+    "static": {
+      label: "PTU.Frequency.Static.label",
+      short: "PTU.Frequency.Static.short",
+      eot: false,
+      limited: false,
+    },
+    "custom": {
+      label: "PTU.Frequency.Custom.label",
+      short: "PTU.Frequency.Custom.short",
+      eot: false,
+      limited: true,
+    }
+  },
+  actionCosts: {
+    "standard": {
+      label: "PTU.ActionCost.Standard.label",
+      short: "PTU.ActionCost.Standard.short"
+    },
+    "rapid": {
+      label: "PTU.ActionCost.Rapid.label",
+      short: "PTU.ActionCost.Rapid.short"
+    },
+    "shift": {
+      label: "PTU.ActionCost.Shift.label",
+      short: "PTU.ActionCost.Shift.short"
+    },
+    "free": {
+      label: "PTU.ActionCost.Free.label",
+      short: "PTU.ActionCost.Free.short"
+    },
+    "extended": {
+      label: "PTU.ActionCost.Extended.label",
+      short: "PTU.ActionCost.Extended.short"
+    },
+  },
+  frequencyModifiers: {
+    "priorityLimited": "PTU.FrequencyModifier.PriorityLimited",
+    "priorityAdvanced": "PTU.FrequencyModifier.PriorityAdvanced",
+    "priority": "PTU.FrequencyModifier.Priority",
+    "reaction": "PTU.FrequencyModifier.Reaction",
+    "interrupt": "PTU.FrequencyModifier.Interrupt"
+  },
   weather: {
     modeOptions: {
       "disabled": "PTU.Weather.Mode.Off",
@@ -356,5 +423,30 @@ export const PTUCONFIG = {
   Capabilities: {
     numericNonMovement: ["highJump", "longJump", "power", "weightClass", "throwingRange"],
     stringArray: ["naturewalk", "other"],
+  },
+  /**
+   * Content sets that can override base PTU content.
+   * Priority order: higher number = higher priority, wins over lower-priority versions.
+   * "PTU" is the implicit base (contentSet = "") and is not listed here.
+   */
+  contentSets: {
+    "class-rework": {
+      label: "PTU.ContentSet.ClassRework",
+      priority: 2,
+      suffix: "-cr",
+      removals: []
+    },
+    "weather-playtest": {
+      label: "PTU.ContentSet.WeatherPlaytest",
+      priority: 3,
+      suffix: "-wp",
+      removals: []
+    },
+    "friendship-spirit": {
+      label: "PTU.ContentSet.FriendshipSpirit",
+      priority: 4,
+      suffix: "-fs",
+      removals: []
+    }
   }
 }

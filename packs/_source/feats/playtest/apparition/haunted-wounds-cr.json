@@ -1,5 +1,5 @@
 {
-  "name": "Haunted Wounds [CR]",
+  "name": "Haunted Wounds",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit with an Apparition Move or Ghost-Typed Weapon Attack\nEffect: After one full round, repeat the triggering attack against one target as a Free Action, regardless of range. If this attack hits, it deals damage as if it were resisted one step further. Haunted Wounds may only affect a target once per Scene.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "haunted-wounds-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.850Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -32,15 +39,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Shadow Arms",
       "Master Intimidate or Occult Education"
     ],
-    "frequency": "Scene x2 – Free Action",
     "notes": "",
     "free": false,
-    "class": "Apparition [CR]",
-    "name": "Haunted Wounds [CR]"
+    "class": "Apparition",
+    "name": "Haunted Wounds [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "haunted-wounds"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -54,10 +85,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830876,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "flash",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:25.347Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "Compendium.ptu.effects.Item.MPgTZ8QcPNal4lC3",
     "source": {
@@ -35,17 +42,41 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "eot",
+      "max": null,
+      "custom": "EOT",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Normal",
     "category": "Status",
     "damageBase": "--",
-    "frequency": "EOT",
     "ac": "2",
     "range": "Cone 2",
     "contestType": "Beauty - Unsettling",
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {
@@ -56,9 +87,9 @@
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.3.7",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1749994078262,
-    "modifiedTime": 1749994093454,
+    "modifiedTime": 1778200825400,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

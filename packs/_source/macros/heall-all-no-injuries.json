@@ -28,6 +28,8 @@
     "default": 0
   },
   "system": {
-    "slug": "heall-all-no-injuries"
+    "slug": "heall-all-no-injuries",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

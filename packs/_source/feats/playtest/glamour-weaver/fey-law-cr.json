@@ -1,5 +1,5 @@
 {
-  "name": "Fey Law [CR]",
+  "name": "Fey Law",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit a foe with a damaging Fairy attack\nEffect: Choose one of the following: Status-Class, Combat Maneuver, attacks with an unmodified Damage Base 10 or higher, or an Elemental Type. The triggering foe is Bound; they suffer a -X penalty to all rolls made to use attacks with the chosen trait. X is equal to half your Charm or Occult Education Rank. The Bound condition lasts until the end of a Scene. You may unbind someone as a Free Action at any time. A target may not have multiple instances of Bound applied at once.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "fey-law-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.104Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
     "prerequisites": [
       "Glamour Weaver"
     ],
-    "frequency": "1 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Glamour Weaver [CR]",
-    "name": "Fey Law [CR]"
+    "class": "Glamour Weaver",
+    "name": "Fey Law [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "fey-law"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -56,10 +87,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829165,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

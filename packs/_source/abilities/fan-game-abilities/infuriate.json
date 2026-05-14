@@ -1,7 +1,6 @@
 {
   "name": "Infuriate",
   "type": "ability",
-  "flags": {},
   "effects": [],
   "_id": "Nq7IDqMOXUEmkwDb",
   "system": {
@@ -12,20 +11,51 @@
     "enabled": true,
     "slug": "infuriate",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:16.348Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.69SvphhJJG1N2inF",
     "source": {
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [],
-    "frequency": "Scene x2 – Free Action",
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "tier": "",
     "name": "",
     "automation": [],
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "ownership": {
     "default": 0
@@ -35,12 +65,20 @@
   "sort": 2200000,
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.21",
+    "coreVersion": "13.351",
     "createdTime": 1689606908412,
-    "modifiedTime": 1707761783909,
+    "modifiedTime": 1778568994269,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "requires-system-changes",
+      "devNote": "dylan - Let's add a reminder rule element once I actually get that in the system",
+      "used": null,
+      "showInTokenPanel": false
+    }
   }
 }

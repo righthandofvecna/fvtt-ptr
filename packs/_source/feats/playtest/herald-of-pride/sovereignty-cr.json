@@ -1,5 +1,5 @@
 {
-  "name": "Sovereignty [CR]",
+  "name": "Sovereignty",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: While this Feature is bound, you gain a +3 Bonus to Save Checks against Volatile Status Afflictions, and a +3 Bonus to Opposed Checks when defending against being Disarmed, Grappled, Pushed, or Tripped.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "sovereignty-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.732Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 2 AP – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": true
+    },
     "prerequisites": [
       "Herald of Pride",
       "Expert Command or Intimidate"
     ],
-    "frequency": "Bind 2 AP – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Herald of Pride [CR]",
-    "name": "Sovereignty [CR]"
+    "class": "Herald of Pride",
+    "name": "Sovereignty [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "sovereignty"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830795,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

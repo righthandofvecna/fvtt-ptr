@@ -18,7 +18,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-flash",
+    "slug": "effect-sticky-smoke",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -46,7 +46,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "vvYHstuSI4986bjM",

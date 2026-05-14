@@ -530,7 +530,7 @@
         "type": "body"
       }
     },
-    "slug": "altaria",
+    "slug": "altaria-mega",
     "rules": [],
     "type": {
       "0": "Dragon",
@@ -545,7 +545,9 @@
       "Unova",
       "Sinnoh",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

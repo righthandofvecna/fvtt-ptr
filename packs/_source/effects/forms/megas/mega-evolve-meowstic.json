@@ -1,0 +1,136 @@
+{
+  "folder": "TuFJ2nmx9i2k6KYk",
+  "name": "Mega Evolve: Meowstic",
+  "type": "effect",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "This effect will mega-evolve your Meowstic.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "TokenImage",
+        "predicate": [
+          "species:meowstic-male",
+          "self:pokemon:shiny"
+        ],
+        "value": "/systems/ptu/static/images/sprites/678s_MEGA.webp"
+      },
+      {
+        "key": "TokenImage",
+        "predicate": {
+          "and": [
+            "species:meowstic-male",
+            {
+              "not": "self:pokemon:shiny"
+            }
+          ]
+        },
+        "value": "/systems/ptu/static/images/sprites/678_MEGA.webp"
+      },
+      {
+        "key": "TemporarySpecies",
+        "predicate": [
+          "species:meowstic-male"
+        ],
+        "uuid": "Compendium.ptu.species.Item.y20A2Rc4VoEB84v7"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [
+          "species:meowstic-male"
+        ],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.OUq8IyTrVPZQHgiW"
+      },
+      {
+        "key": "TokenImage",
+        "predicate": [
+          "species:meowstic-female",
+          "self:pokemon:shiny"
+        ],
+        "value": "/systems/ptu/static/images/sprites/678s_MEGA.webp"
+      },
+      {
+        "key": "TokenImage",
+        "predicate": {
+          "and": [
+            "species:meowstic-female",
+            {
+              "not": "self:pokemon:shiny"
+            }
+          ]
+        },
+        "value": "/systems/ptu/static/images/sprites/678_MEGA.webp"
+      },
+      {
+        "key": "TemporarySpecies",
+        "predicate": [
+          "species:meowstic-female"
+        ],
+        "uuid": "Compendium.ptu.species.Item.y20A2Rc4VoEB84v7"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [
+          "species:meowstic-female"
+        ],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.OUq8IyTrVPZQHgiW"
+      }
+    ],
+    "enabled": true,
+    "slug": "mega-evolve-meowstic",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.15",
+    "createdTime": 1776978124185,
+    "modifiedTime": 1776978146703,
+    "lastModifiedBy": "ptubuilder000000"
+  },
+  "_id": "Yf5B6886RYGgatCa",
+  "sort": 0
+}

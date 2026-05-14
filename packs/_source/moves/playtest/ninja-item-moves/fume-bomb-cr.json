@@ -1,6 +1,6 @@
 {
   "folder": "LYUraCjoNX1k9wjl",
-  "name": "Fume Bomb [CR]",
+  "name": "Fume Bomb",
   "type": "move",
   "_id": "qWhz5Z5CCjZ1I4ma",
   "img": "systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
@@ -12,8 +12,15 @@
     "enabled": true,
     "slug": "fume-bomb-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:25.789Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,16 +38,40 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Poison",
     "category": "Status",
     "damageBase": "",
-    "frequency": "At-Will",
     "ac": "--",
     "range": "Range 5, Ranged Blast 3",
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "class-rework",
+    "replacesSlug": "fume-bomb"
   },
   "effects": [],
   "sort": 0,
@@ -54,10 +85,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699739765647,
-    "modifiedTime": 1707824706394,
+    "modifiedTime": 1778200825844,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

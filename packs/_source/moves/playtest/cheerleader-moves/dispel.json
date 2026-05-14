@@ -12,8 +12,15 @@
     "enabled": true,
     "slug": "dispel",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:25.936Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,16 +38,40 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Fairy",
     "category": "Status",
     "damageBase": "",
-    "frequency": "Scene x2",
     "ac": "--",
     "range": "Field",
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,
@@ -53,11 +84,11 @@
     }
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1706121468001,
-    "modifiedTime": 1707825100661,
+    "modifiedTime": 1778200825993,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -473,7 +473,7 @@
         "type": "body"
       }
     },
-    "slug": "victreebel",
+    "slug": "victreebel-mega",
     "rules": [],
     "source": {
       "value": "PTR Core Dex"
@@ -485,7 +485,9 @@
       "2": ""
     },
     "stackSlugs": false,
-    "enabled": false
+    "enabled": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "irSNiCnUnI7il9mJ",
@@ -502,9 +504,9 @@
     "systemVersion": "4.4.3.10",
     "createdTime": 1776463262504,
     "modifiedTime": 1776463296710,
-    "lastModifiedBy": "ptubuilder000000",
-    "compendiumSource": null
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "USpEFFM1LaUEVdLj",
-  "sort": 0
+  "sort": 0,
+  "flags": {}
 }

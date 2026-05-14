@@ -9,8 +9,8 @@ class AttackMessagePTU extends ChatMessagePTU {
     }
 
     async _renderButton($html) {
-        if(!this.attack?.item) return $html;
-        return this.attack.item.isDamaging ? await this._renderDamageButton($html) : await this._renderUseButton($html);
+        if(!this.attack) return $html;
+        return this.attack.isDamaging ? await this._renderDamageButton($html) : await this._renderUseButton($html);
     }
 
     async _renderDamageButton($html) {
@@ -61,7 +61,7 @@ class AttackMessagePTU extends ChatMessagePTU {
                             $("<i></i>")
                                 .addClass("fas fa-sparkles")
                         )
-                        .click(() => this.attack.item.use({targets: this.targets}))
+                        .click(() => this.attack.use({targets: this.targets}))
                 )
             );
 

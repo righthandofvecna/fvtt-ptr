@@ -9,6 +9,13 @@ export function registerTemplates() {
         // Item Sheet Partials
         "systems/ptu/static/templates/partials/rules/rule-partial.hbs",
         "systems/ptu/static/templates/partials/species-item-partial.hbs",
+        "systems/ptu/static/templates/partials/item-frequency-partial.hbs",
+        "systems/ptu/static/templates/partials/dev-automation.hbs",
+
+        // Token Panel partials
+        "systems/ptu/static/templates/partials/token-panel/tab-strip-tabs-partial.hbs",
+        "systems/ptu/static/templates/partials/token-panel/items-body-partial.hbs",
+        "systems/ptu/static/templates/partials/token-panel/status-blocks-partial.hbs",
 
         // Token Sheet partials
         "systems/ptu/static/templates/config/token/appearance-partial.hbs",

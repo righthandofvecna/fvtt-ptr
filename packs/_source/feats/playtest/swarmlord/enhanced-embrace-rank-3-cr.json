@@ -1,5 +1,5 @@
 {
-  "name": "Enhanced Embrace Rank 3 [CR]",
+  "name": "Enhanced Embrace Rank 3",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Learn three Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen.\nRank 1: Defend Order (None), Fell Needle (Arachnid’s Embrace), Fury Cutter (None), Rage Powder (Monarch’s Embrace), Rolling Fog (None), Struggle Bug (Monarch’s Embrace), Sticky Web (Arachnid’s Embrace)\nRank 2: Attack Order (Arachnid’s Embrace), Heal Order (Monarch's Embrace), Infestation (None), Powder (Monarch’s Embrace), Signal Beam (None), Steamroller (None), Spider Web (Arachnid’s Embrace)\nRank 3: Bug Buzz (None), Leech Life (Arachnid’s Embrace), Lunge (None), Megahorn (None), Pollen Puff (Monarch’s Embrace), Quiver Dance (Monarch’s Embrace), Skitter Smack (Arachnid’s Embrace)",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "enhanced-embrace-rank-3-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.314Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Expert Command or Survival",
       "Enhanced Embrace Rank 2"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Swarmlord [CR]",
-    "name": "Enhanced Embrace [CR]Rank 1 [CR]"
+    "class": "Swarmlord",
+    "name": "Enhanced Embrace [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "enhanced-embrace-rank-3"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -45,10 +76,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200828364,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

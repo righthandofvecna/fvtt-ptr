@@ -1,0 +1,50 @@
+{
+  "name": "Articuno's Major Gift - Winter's Kiss",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift - Elemental Soul Static Effect: You gain the Winter’s Kiss Ability",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "articunos-major-gift-winters-kiss",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:41:18.610Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
+  },
+  "_id": "gVCM65BXyPAMJ8r7",
+  "effects": [],
+  "folder": null,
+  "sort": 22800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1693518703759,
+    "modifiedTime": 1778200878630,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

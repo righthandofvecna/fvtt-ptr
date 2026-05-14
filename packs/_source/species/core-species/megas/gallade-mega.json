@@ -694,7 +694,7 @@
         "type": "body"
       }
     },
-    "slug": "gallade",
+    "slug": "gallade-mega",
     "rules": [],
     "type": {
       "0": "Psychic",
@@ -709,7 +709,9 @@
       "Galar",
       "Sinnoh",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

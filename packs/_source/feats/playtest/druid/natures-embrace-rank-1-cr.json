@@ -1,5 +1,5 @@
 {
-  "name": "Nature's Embrace Rank 1 [CR]",
+  "name": "Nature's Embrace Rank 1",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn 3 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\nRank 1: Cotton Spore (None), Forest's Curse (None), Ingrain (Tree Oath), Mega Drain (None), Needle Arm (None), Razor Leaf (None), Stun Spore (Fungal Oath), Sweet Scent (Flower Oath)\nRank 2: Aromatherapy, (Flower Oath), Energy Ball, (None), Giga Drain, (Fungal Oath), Leaf Tornado, (Flower Oath), Magical Leaf, (None), Seed Bomb, (None), Spiky Shield, (Tree Oath), Strength Sap, (Fungal Oath)\nRank 3: Leech Seed (None), Petal Blizzard (Tree Oath), Petal Dance (Flower Oath), Power Whip (None), Solar Beam (None), Solar Blade (None), Spore (Fungal Oath), Wood Hammer (Tree Oath)",
@@ -37,8 +37,15 @@
     "enabled": true,
     "slug": "natures-embrace-rank-1-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.445Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -50,14 +57,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Druid"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Druid [CR]",
-    "name": "Nature's Embrace [CR]Rank 1 [CR]"
+    "class": "Druid",
+    "name": "Nature's Embrace [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "natures-embrace-rank-1"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -75,10 +106,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830478,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

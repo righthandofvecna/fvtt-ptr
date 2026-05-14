@@ -509,7 +509,7 @@
         "type": "body"
       }
     },
-    "slug": "diancie",
+    "slug": "diancie-mega",
     "rules": [],
     "type": {
       "0": "Rock",
@@ -522,7 +522,9 @@
     "keywords": [
       "Legendary",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

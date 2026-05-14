@@ -1,5 +1,5 @@
 {
-  "name": "Maintain the Momentum [CR]",
+  "name": "Maintain the Momentum",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon under the effects of Focused Training.\nEffect: The target immediately spends 2 Momentum. Then, it automatically rolls an 11 on one d20 Roll of your choice on their next turn.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "maintain-the-momentum-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.302Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 3,
+      "custom": "Scene x3 - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Expend Momentum",
       "Expert Focus"
     ],
-    "frequency": "Scene x3 - Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Duelist [CR]",
-    "name": "Maintain the Momentum [CR]"
+    "class": "Duelist",
+    "name": "Maintain the Momentum [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "maintain-the-momentum"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831368,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

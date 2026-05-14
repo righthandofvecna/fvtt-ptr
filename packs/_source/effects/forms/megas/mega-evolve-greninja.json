@@ -1,0 +1,101 @@
+{
+  "folder": "TuFJ2nmx9i2k6KYk",
+  "name": "Mega Evolve: Greninja",
+  "type": "effect",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "This effect will mega-evolve your Greninja.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "TokenImage",
+        "predicate": [
+          "species:greninja",
+          "self:pokemon:shiny"
+        ],
+        "value": "/systems/ptu/static/images/sprites/658s_MEGA.webp"
+      },
+      {
+        "key": "TokenImage",
+        "predicate": {
+          "and": [
+            "species:greninja",
+            {
+              "not": "self:pokemon:shiny"
+            }
+          ]
+        },
+        "value": "/systems/ptu/static/images/sprites/658_MEGA.webp"
+      },
+      {
+        "key": "TemporarySpecies",
+        "predicate": [
+          "species:greninja"
+        ],
+        "uuid": "Compendium.ptu.species.Item.wwe6kAzF8qXJXHYr"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [
+          "species:greninja"
+        ],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.ZdEuIwaLMkKEl7Xt"
+      }
+    ],
+    "enabled": true,
+    "slug": "mega-evolve-greninja",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.15",
+    "createdTime": 1776977188335,
+    "modifiedTime": 1776977188335,
+    "lastModifiedBy": "ptubuilder000000"
+  },
+  "_id": "CUlGkLwb1qi5JUBp",
+  "sort": 0
+}

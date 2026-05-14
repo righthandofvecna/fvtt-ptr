@@ -73,13 +73,14 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.0.0.beta.11",
@@ -91,5 +92,6 @@
     "exportSource": null
   },
   "_id": "snMin5prFGzRDQ85",
-  "sort": 3700000
+  "sort": 3700000,
+  "flags": {}
 }

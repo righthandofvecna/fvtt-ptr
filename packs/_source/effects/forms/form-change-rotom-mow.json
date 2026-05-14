@@ -31,7 +31,7 @@
       }
     ],
     "enabled": true,
-    "slug": "form-change-rotom-heat",
+    "slug": "form-change-rotom-mow",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -59,7 +59,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

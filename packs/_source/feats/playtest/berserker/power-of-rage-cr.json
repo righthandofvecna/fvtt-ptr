@@ -1,5 +1,5 @@
 {
-  "name": "Power of Rage [CR]",
+  "name": "Power of Rage",
   "system": {
     "origin": "Class Rework",
     "effect": "Moves: Choose Enduring Rage, or White Flame. You gain the chosen Ability.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "power-of-rage-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.315Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Berserker"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Berserker [CR]",
-    "name": "Power of Rage [CR]"
+    "class": "Berserker",
+    "name": "Power of Rage [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "power-of-rage"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -56,10 +87,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200828364,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

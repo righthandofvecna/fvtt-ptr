@@ -1,5 +1,5 @@
 {
-  "name": "Gale Strike [CR]",
+  "name": "Gale Strike",
   "system": {
     "origin": "",
     "effect": "Trigger - Your Pokémon uses a Flying-Type Move with an Accuracy Check\nEffect: You may roll the Accuracy Check twice, and resolve using either result. If both results would hit and you resolve the attack using the lower result, Gale Strike’s Frequency is not expended.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "gale-strike-cr",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.257Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -21,17 +28,41 @@
       "Playtest",
       "CR"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 - Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Celerity",
       "Type-Linked Skill at Adept"
     ],
-    "frequency": "Scene x2 - Free Action",
     "notes": "",
     "free": false,
-    "class": "Type Ace (Flying) [CR]",
+    "class": "Type Ace (Flying)",
     "name": "Gale Strike",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "gale-strike"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -49,11 +80,11 @@
     "default": 0
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710767054040,
-    "modifiedTime": 1710767054040,
+    "modifiedTime": 1778200829324,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

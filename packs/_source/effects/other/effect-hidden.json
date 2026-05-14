@@ -41,7 +41,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-invisible",
+    "slug": "effect-hidden",
     "schema": {
       "version": 0.11,
       "lastMigration": {
@@ -76,7 +76,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

@@ -1,5 +1,5 @@
 {
-  "name": "Aiming Down The Sights [CR]",
+  "name": "Aiming Down The Sights",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your next Weapon Attack with a Long Range Weapon gains +2 to its Accuracy Roll and Critical Hit Range. This effect lasts until used or until the start of your next turn.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "aiming-down-the-sights-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.127Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "Compendium.ptu.effects.Item.epkSS2waHGQnfOxM",
     "source": {
@@ -32,14 +39,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": null,
+      "custom": "At Will – Shift Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": true,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Marksman"
     ],
-    "frequency": "At Will – Shift Action",
     "notes": "",
     "free": false,
-    "class": "Marksman [CR]",
-    "name": "Aiming Down The Sights [CR]"
+    "class": "Marksman",
+    "name": "Aiming Down The Sights [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "aiming-down-the-sights"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -57,10 +88,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1710772114885,
+    "modifiedTime": 1778200831195,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

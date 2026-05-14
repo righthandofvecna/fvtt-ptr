@@ -1,0 +1,97 @@
+{
+  "name": "Soothing Connection",
+  "system": {
+    "origin": "[F&S Playtest]",
+    "effect": "Target: Channeled Pokémon\nEffect: Distribute 5 points in any way among Pokémon you are Channeling. For each point you assign to a Channeled Pokémon, they gain a Tick of Hit Points and 1 Spirit.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "soothing-connection-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.972Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Playtest",
+      "F&S"
+    ],
+    "frequency": {
+      "type": "daily",
+      "max": 2,
+      "custom": "Daily x2 - Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "prerequisites": [
+      "Pain Dampening",
+      "Master Intuition"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Channeler",
+    "name": "Soothing Connection",
+    "useCount": 0,
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "soothing-connection"
+  },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "prereqBackup": "Pain Dampening, Master Intuition"
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368079112,
+    "modifiedTime": 1778200831019,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "folder": "NlEB7XJnDWyGbZnQ",
+  "_id": "jqZfSqySK1KsQ7eC",
+  "sort": 4100000,
+  "ownership": {
+    "default": 0
+  }
+}

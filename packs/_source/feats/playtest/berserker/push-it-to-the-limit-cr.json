@@ -1,5 +1,5 @@
 {
-  "name": "Push it to the Limit [CR]",
+  "name": "Push it to the Limit",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit with a Berserker Move or Weapon Attack\nEffect: Immediately gain one Injury before resolving the triggering attack. You gain a Tick of Temporary Hit Points and may cure yourself of a Persistent Status Affliction. The triggering attack doubles your damage bonus from Lessons in Rage and Pain.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "push-it-to-the-limit-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.254Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Lessons in Rage and Pain",
       "Expert Intimidate"
     ],
-    "frequency": "At-Will – Free Action",
     "notes": "",
     "free": false,
-    "class": "Berserker [CR]",
-    "name": "Push it to the Limit [CR]"
+    "class": "Berserker",
+    "name": "Push it to the Limit [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "push-it-to-the-limit"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -57,10 +88,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829324,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

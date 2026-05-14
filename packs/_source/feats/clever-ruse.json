@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "clever-ruse",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.474Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -19,17 +26,41 @@
     "keywords": [
       "Legacy"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will - Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Type Ace",
       "Dark as Chosen Type"
     ],
-    "frequency": "At-Will - Free Action",
     "notes": "",
     "free": false,
     "class": "Type Ace (Dark)",
     "name": "Clever Ruse",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -45,10 +76,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.1",
+    "systemVersion": "4.4.3.16",
     "coreVersion": "13.351",
     "createdTime": 1683368078841,
-    "modifiedTime": 1776089116599,
+    "modifiedTime": 1778200831544,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

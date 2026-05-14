@@ -1,0 +1,75 @@
+{
+  "folder": "FXwRmpX2n4BsPCSu",
+  "name": "Effect: Gooey",
+  "type": "effect",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "@embed[Compendium.ptu.abilities.Item.bu0EeMn7eyjLc0gB]",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.spd.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-gooey",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": true,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "encounter",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.18",
+    "createdTime": 1778330676506,
+    "modifiedTime": 1778331848420,
+    "lastModifiedBy": "ptubuilder000000"
+  },
+  "_id": "uxVD0vKOOOe9yNhp",
+  "sort": 0
+}

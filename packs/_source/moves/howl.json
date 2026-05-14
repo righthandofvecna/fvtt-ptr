@@ -11,8 +11,15 @@
     "enabled": true,
     "slug": "howl",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:23.799Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "Compendium.ptu.effects.Item.eb0gaKKWEKuxSv3x",
     "source": {
@@ -28,17 +35,41 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "eot",
+      "max": null,
+      "custom": "EOT",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Normal",
     "category": "Status",
     "damageBase": "--",
-    "frequency": "EOT",
     "ac": "--",
     "range": "Burst 1",
     "contestType": "Cool - Get Ready!",
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "IcjwAnfajBTDL3IF",
   "effects": [],
@@ -53,10 +84,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1692963260348,
-    "modifiedTime": 1710851613151,
+    "modifiedTime": 1778200823854,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

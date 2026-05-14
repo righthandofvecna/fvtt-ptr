@@ -1,5 +1,5 @@
 {
-  "name": "Spirited Routine [CR]",
+  "name": "Spirited Routine",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon with Positive Spirit Points\nEffect: Your Pokémon may spend 2 Spirit to use a Cheerleading move from your move list disregarding it's frequency.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "spirited-routine-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.296Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -21,15 +28,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Cheer Brigade or From the Sidelines",
       "Adept Charm"
     ],
-    "frequency": "At-Will – Free Action",
     "notes": "",
     "free": false,
-    "class": "Cheerleader [CR]",
-    "name": "Spirited Routine [CR]"
+    "class": "Cheerleader",
+    "name": "Spirited Routine [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "spirited-routine"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -47,10 +78,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830363,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

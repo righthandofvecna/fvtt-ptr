@@ -49,7 +49,9 @@
     "name": "",
     "tokenIcon": {
       "show": true
-    }
+    },
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "folder": "HaJo7lUbAIbnRUXL",
   "effects": [],

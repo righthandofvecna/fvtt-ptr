@@ -98,7 +98,7 @@ async function processPreUpdateActorHooks(changed, { pack }) {
     const actor = pack ? await game.packs.get(pack)?.getDocument(actorId) : game.actors.get(actorId);
     if (!(actor instanceof CONFIG.PTU.Actor.documentClass)) return;
 
-    if (actor.prototypeToken.actorLink !== true) {
+    if (!game.settings.get("ptu", "development.allowUnlinkedTokens") && actor.prototypeToken.actorLink !== true && !(foundry.utils.getProperty(actor || {}, "flags.item-piles.data.enabled") || foundry.utils.getProperty(foundry.utils.flattenObject(changed), "flags.item-piles.data.enabled"))) {
         changed.prototypeToken ??= {};
         changed.prototypeToken.actorLink = true;
     }

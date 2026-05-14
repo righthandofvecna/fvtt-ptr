@@ -1,5 +1,5 @@
 {
-  "name": "Stalwart Bastion [CR]",
+  "name": "Stalwart Bastion",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: While this Feature is Bound, you and all adjacent allies gain Physical Damage Reduction equal to your Combat Rank and Special Damage Reduction equal to your Focus Rank.\nBonus: You gain the Shield Proficiency General Feature, even if you don't meet the prerequisites.",
@@ -33,8 +33,15 @@
     "enabled": true,
     "slug": "stalwart-bastion-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.651Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -46,14 +53,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 2 AP – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": true
+    },
     "prerequisites": [
       "Fortress"
     ],
-    "frequency": "Bind 2 AP – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Fortress [CR]",
-    "name": "Stalwart Bastion [CR]"
+    "class": "Fortress",
+    "name": "Stalwart Bastion [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "stalwart-bastion"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -71,10 +102,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831721,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

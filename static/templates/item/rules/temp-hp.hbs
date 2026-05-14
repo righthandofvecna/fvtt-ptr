@@ -1,0 +1,13 @@
+<div class="form-group">
+    <label class="short">Value</label>
+    <div class="attached-input">
+        <input type="number" name="system.rules.{{index}}.value" value="{{rule.value}}" placeholder="HP amount"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="fill">
+        Remove on item deletion
+        <input type="checkbox" name="system.rules.{{index}}.removeOnDelete" {{checked removeOnDelete}}>
+    </label>
+</div>

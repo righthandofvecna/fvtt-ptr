@@ -1,0 +1,97 @@
+{
+  "name": "Pain Dampening",
+  "system": {
+    "origin": " [F&S Playtest]",
+    "effect": "Trigger - A Channeled Pokémon would be Fainted by a damaging attack\nEffect: Choose any number of Channeled Pokémon, which must include the triggering Pokémon. Instead\\\\ of resolving the attack normally, divide the damage from the attack by the number of chosen Pokémon. Each chosen Pokémon then loses that many Hit Points. For each chosen Pokémon that Resists or is Immune to the Type of the triggering attack, subtract your Intuition Rank from the damage of the attack before all calculations.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "pain-dampening-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.422Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Playtest",
+      "F&S"
+    ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 - Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "prerequisites": [
+      "Channeler",
+      "Expert Intuition"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Channeler",
+    "name": "Pain Dampening",
+    "useCount": 0,
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "pain-dampening"
+  },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "prereqBackup": "Channeler, Expert Intuition"
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368081766,
+    "modifiedTime": 1778200829484,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "folder": "NlEB7XJnDWyGbZnQ",
+  "_id": "Hmfo2PqyuZqKCatK",
+  "sort": 1500000,
+  "ownership": {
+    "default": 0
+  }
+}

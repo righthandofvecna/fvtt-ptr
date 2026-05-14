@@ -4,6 +4,7 @@ import { PTUMove } from "../../item/index.js";
 import { DamageRoll } from "../damage/roll.js";
 import { PTUDiceCheck, eventToRollParams } from "./check.js";
 import { CheckDialog } from "./dialogs/dialog.js";
+import { resolveDbFormula } from "../../../util/value-resolver.js";
 
 class PTUDamageCheck extends PTUDiceCheck {
 
@@ -53,6 +54,12 @@ class PTUDamageCheck extends PTUDiceCheck {
             this._contexts = new Collection([[context.actor.uuid, context]]);
         }
         else await super.prepareContexts(attackStatistic);
+
+        // Resolve formula DB now that we have target context
+        if (this.item.damageBase?.isFormula) {
+            const targetActor = this.contexts[0]?.actor ?? null;
+            this._resolvedDbValue = resolveDbFormula(this.item.damageBase.formula, { target: targetActor });
+        }
     }
 
     /**
@@ -60,11 +67,13 @@ class PTUDamageCheck extends PTUDiceCheck {
      * @returns {PTUDamageCheck}
      */
     prepareModifiers() {
+        const isFormulaDb = this.item.damageBase?.isFormula;
+        const baseDb = isFormulaDb ? (this._resolvedDbValue ?? 0) : this.item.damageBase.preStab;
         const damageBaseModifiers = [
             new PTUModifier({
                 slug: "damage-base",
                 label: "Damage Base",
-                modifier: this.item.damageBase.preStab,
+                modifier: baseDb,
             })
         ]
         if (this.item.damageBase.isStab) {
@@ -72,7 +81,7 @@ class PTUDamageCheck extends PTUDiceCheck {
                 new PTUModifier({
                     slug: "stab",
                     label: "STAB",
-                    modifier: this.item.damageBase.postStab - this.item.damageBase.preStab,
+                    modifier: isFormulaDb ? 2 : (this.item.damageBase.postStab - this.item.damageBase.preStab),
                 })
             )
         }
@@ -140,7 +149,7 @@ class PTUDamageCheck extends PTUDiceCheck {
                 `${this.item.slug}-damage-base`,
                 `${sluggify(this.item.system.category)}-damage-base`,
                 `${sluggify(this.item.system.type)}-damage-base`,
-                `${sluggify(this.item.system.frequency)}-damage-base`
+                `${sluggify(this.item.system.frequency?.type ?? "at-will")}-damage-base`
             ], { injectables: { move: this.item, item: this.item, actor: this.actor }, test: this.targetOptions })
         )
         diceModifiers.push(
@@ -150,7 +159,7 @@ class PTUDamageCheck extends PTUDiceCheck {
                 `${this.item.slug}-damage-dice`,
                 `${sluggify(this.item.system.category)}-damage-dice`,
                 `${sluggify(this.item.system.type)}-damage-dice`,
-                `${sluggify(this.item.system.frequency)}-damage-dice`
+                `${sluggify(this.item.system.frequency?.type ?? "at-will")}-damage-dice`
             ], { injectables: { move: this.item, item: this.item, actor: this.actor }, test: this.targetOptions })
         )
 
@@ -195,7 +204,9 @@ class PTUDamageCheck extends PTUDiceCheck {
         const { isReroll, title, type } = context;
         const dice = await (async () => {
             if (this.isFiveStrike) {
-                const baseDamageBase = this.item.damageBase.preStab;
+                const baseDamageBase = this.item.damageBase?.isFormula
+                    ? (this._resolvedDbValue ?? 0)
+                    : this.item.damageBase.preStab;
                 if (baseDamageBase == 0) return null;
 
                 const otherModifiers = this.damageBaseModifiers.filter(m => m.slug != "damage-base");
@@ -287,13 +298,10 @@ class PTUDamageCheck extends PTUDiceCheck {
         const attack = (() => {
             if (!this.item || !this.actor) return null;
 
-            const attack = this.actor.system.attacks.get(this.item.realId);
-            if (!attack) return null;
-
             return {
                 actor: this.actor.uuid,
-                id: attack.item.realId ?? attack.item._id,
-                name: attack.item.name,
+                id: this.item.realId ?? this.item._id,
+                name: this.item.name,
                 targets: (() => {
                     const targets = this.contexts;
                     if (!targets) return null;
@@ -438,7 +446,8 @@ class PTUDamageCheck extends PTUDiceCheck {
      * @returns {Promise<DamageRoll>}
      */
     async executeDamage(callback = null, attackStatistic = null) {
-        if (!Number.isNumeric(this.item?.damageBase?.preStab) || this.item.damageBase.preStab < 1) return;
+        const db = this.item?.damageBase;
+        if (!db || (!db.isFormula && (!Number.isNumeric(db.preStab) || db.preStab < 1))) return;
 
         await this.prepareContexts(attackStatistic);
 

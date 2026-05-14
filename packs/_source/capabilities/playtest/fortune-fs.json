@@ -1,0 +1,79 @@
+{
+  "name": "Fortune",
+  "type": "capability",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Once a day, a Pokémon of at least Level 20 with this Capability may be allowed to roam freely in a City or Town for at least one hour. The user then returns with an amount of money equal to its Level multiplied by 1d10. Pokemon of Friendship 4 or higher may also roll on the Pickup table. Pokemon of Friendship 1 have a 50% chance of not returning at all.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "fortune-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:49.912Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "fortune"
+  },
+  "effects": [],
+  "folder": "4yLFZsM42OJ7FDLn",
+  "flags": {},
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1693042188180,
+    "modifiedTime": 1778200849928,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "_id": "fDb6udIOaY2owBq0",
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  }
+}

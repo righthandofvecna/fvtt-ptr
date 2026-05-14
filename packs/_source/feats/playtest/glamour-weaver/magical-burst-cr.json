@@ -1,5 +1,5 @@
 {
-  "name": "Magical Burst [CR]",
+  "name": "Magical Burst",
   "system": {
     "origin": "Class Rework",
     "effect": "Condition: You must have Enchanting Transformation Bound to use Magical Burst\nEffect: Use a Glamour Weaver Move as if it had the range \"Burst 3, Friendly, Exhaust.\" If this Move is a Damaging Move, it also gains the \"Smite\" keyword. Every ally within the area-of-effect chooses to either gain a Tick of Temporary Hit Points or cure themselves of one Volatile Affliction. Enchanting Transformation immediately becomes Unbound, and the AP used to bind it becomes spent instead of becoming available again.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "magical-burst-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.314Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 1,
+      "custom": "Scene – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Enchanting Transformation",
       "Passionato Harmony"
     ],
-    "frequency": "Scene – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Glamour Weaver [CR]",
-    "name": "Magical Burst [CR]"
+    "class": "Glamour Weaver",
+    "name": "Magical Burst [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "magical-burst"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -57,10 +88,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200828364,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -1,5 +1,5 @@
 {
-  "name": "Adrenaline Rush [CR]",
+  "name": "Adrenaline Rush",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You are lowered to half or your Maximum Hit Points or less\nEffect: You gain +1 Combat Stage in each of your Trained Stats, are cured of up to two Status Afflictions, and gain a Tick of Temporary Hit Points. Adrenaline Rush may be used only once per Scene.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "adrenaline-rush-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.599Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "Compendium.ptu.effects.Item.gsePGwVgjU3VgjIK",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "daily",
+      "max": 3,
+      "custom": "Daily x3 – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
-      "Athlete [CR]",
+      "Athlete",
       "Expert Athletics"
     ],
-    "frequency": "Daily x3 – Free Action",
     "notes": "",
     "free": false,
-    "class": "Athlete [CR]",
-    "name": "Adrenaline Rush [CR]"
+    "class": "Athlete",
+    "name": "Adrenaline Rush [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "adrenaline-rush"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -57,10 +88,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.3.2",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1721743732747,
+    "modifiedTime": 1778200830629,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -1,5 +1,5 @@
 {
-  "name": "Rainbow Light [CR]",
+  "name": "Rainbow Light",
   "system": {
     "origin": "Class Rework",
     "effect": "Condition: You are wearing a Rainbow Gem\nEffects: You create a Rainbow lasting one full round. While this Rainbow persists, the Effect Range of all Allies is increased by +3.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "rainbow-light-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.421Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "2 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": false
+    },
     "prerequisites": [
       "Crystal Artificer",
       "Expert Occult Education"
     ],
-    "frequency": "2 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Rainbow Light [CR]"
+    "class": "Researcher",
+    "name": "Rainbow Light [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "rainbow-light"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829484,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -1,5 +1,5 @@
 {
-  "name": "Type Refresh (Dragon) [CR]",
+  "name": "Type Refresh (Dragon)",
   "system": {
     "origin": "",
     "effect": "Target: Your Pokémon\nEffect: The target regains one use of a Scene-Frequency Move of your Chosen Type, and refreshes the Frequency of all EOT-Frequency Moves of your chosen Type. A Target can be affected by Type Refresh only once per Scene.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "type-refresh-dragon-cr",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.835Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,16 +27,40 @@
       "Branch",
       "Orders"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "2 AP - Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": false
+    },
     "prerequisites": [
       "Type Ace"
     ],
-    "frequency": "2 AP - Standard Action",
     "notes": "",
     "free": false,
-    "class": "Type Ace (Dragon) [CR]",
+    "class": "Type Ace (Dragon)",
     "name": "Type Refresh",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "type-refresh-dragon"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -47,11 +78,11 @@
     "default": 0
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710766944910,
-    "modifiedTime": 1710766944910,
+    "modifiedTime": 1778200831899,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

@@ -67,7 +67,7 @@
       }
     ],
     "enabled": true,
-    "slug": "shadow-pokemon",
+    "slug": "condition-shadow-pokemon",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -111,7 +111,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "dDpOEXjREUS6rAWH",

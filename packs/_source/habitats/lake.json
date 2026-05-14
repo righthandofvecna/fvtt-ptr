@@ -1348,6 +1348,8 @@
     "exportSource": null
   },
   "system": {
-    "slug": "lake"
+    "slug": "lake",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

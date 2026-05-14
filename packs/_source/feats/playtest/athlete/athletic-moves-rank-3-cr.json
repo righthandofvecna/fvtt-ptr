@@ -1,5 +1,5 @@
 {
-  "name": "Athletic Moves Rank 3 [CR]",
+  "name": "Athletic Moves Rank 3",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower.\nRank 1: Blind, Block, Slam, Strenght\nRank 2: Body Slam, Take Down, Extreme Speed\nRank 3: Mega Kick, Facade, Retaliate",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "athletic-moves-rank-3-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.103Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,16 +27,40 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Athlete",
       "Master Athletics",
       "Athletic Moves Rank 2"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Athlete [CR]",
-    "name": "Athletic Moves [CR]Rank 1 [CR]"
+    "class": "Athlete",
+    "name": "Athletic Moves [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "athletic-moves-rank-3"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -41,15 +72,17 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.21",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778569118374,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

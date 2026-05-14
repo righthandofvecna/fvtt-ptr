@@ -1,0 +1,88 @@
+{
+  "name": "Hawluchanite",
+  "system": {
+    "origin": "",
+    "effect": "Mega Evolves Hawlucha when used in conjunction with a Mega Ring.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "hawluchanite",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:41.814Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "Compendium.ptu.effects.Item.VKmEF9gDLdsJ26hZ",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Mega Stone"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "quantity": "1",
+    "category": "",
+    "cost": "",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Banettite",
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
+  },
+  "type": "item",
+  "img": "/systems/ptu/static/images/item_icons/hawluchanite.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "createdTime": 1776978899729,
+    "modifiedTime": 1778200841850,
+    "lastModifiedBy": "ptubuilder000000"
+  },
+  "folder": "3aYHO5npuCcYqxoX",
+  "_id": "VWPecfQYEBg8Qn0u",
+  "sort": 0
+}

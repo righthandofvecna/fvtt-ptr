@@ -136,6 +136,12 @@ class PTUCombatant extends Combatant {
             }
         }
 
+        // do end-of-turn item cooldowns
+        for (const item of actor.items) {
+            if (item.type === "condition") continue;
+            await item.onTurnEnd?.();
+        }
+
         await this.update({ "flags.ptu.roundOfLastTurnEnd": round });
 
         Hooks.callAll("ptu.endTurn", this, encounter, game.user.id);

@@ -23,6 +23,8 @@
     "default": 0
   },
   "system": {
-    "slug": "healing-half"
+    "slug": "healing-half",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

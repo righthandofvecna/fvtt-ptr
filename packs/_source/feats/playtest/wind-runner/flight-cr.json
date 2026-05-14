@@ -1,5 +1,5 @@
 {
-  "name": "Flight [CR]",
+  "name": "Flight",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain a Sky Speed equal to your Levitate Speed plus half of the higher of your Acrobatics or Perception Rank for the remainder of the round.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "flight-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.583Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
     "prerequisites": [
       "One With the Winds",
       "Adept Acrobatics"
     ],
-    "frequency": "1 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Wind Runner [CR]",
-    "name": "Flight [CR]"
+    "class": "Wind Runner",
+    "name": "Flight [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "flight"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829656,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

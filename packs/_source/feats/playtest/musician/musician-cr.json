@@ -1,5 +1,5 @@
 {
-  "name": "Musician [CR]",
+  "name": "Musician",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may use Musician Songs.\nBonus: You gain the Ability Drown Out.\nMechanic: Songs – Musician Songs can be triggered one of four ways. Regardless of the Area of Effect, Songs always affect the user.\n- When using a Move with the Sonic keyword, Songs may be triggered as a Rapid Action, and the Song’s Area of Effect is the same as the triggering Move’s.\n- When using a Dance Move, Songs may be triggered as a Shift Action with an Area of Effect of Burst 2.\n- As a Standard Action, you may trigger one Song, with an Area of Effect of Burst 4.\n- As a Full Action, you may trigger two Songs, each with an Area of Effect of Burst 4.\n### Song of Courage\n1 AP – Special\nTrigger: Song\nEffect: All Allies in the Area of Effect gain a +2 Bonus to Skill Checks and Save Checks until the end of your next turn.\n### Song of Might\n1 AP – Special\nTrigger: Song\nEffect: All Allies in the Area of Effect gain a +5 Bonus to Damage Rolls until the end of your next turn.\n### Song of Life\n1 AP – Special\nTrigger: Song\nEffect: All Allies in the Area of Effect gain 5 Damage Reduction until the end of your next turn.",
@@ -42,8 +42,15 @@
     "enabled": true,
     "slug": "musician-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.942Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -56,14 +63,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Novice Charm or Novice Focus"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Musician [CR]",
-    "name": "Musician [CR]"
+    "class": "Musician",
+    "name": "Musician [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "musician"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -81,10 +112,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1710768760760,
+    "modifiedTime": 1778200830013,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

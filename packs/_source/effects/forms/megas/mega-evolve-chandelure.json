@@ -1,0 +1,101 @@
+{
+  "folder": "TuFJ2nmx9i2k6KYk",
+  "name": "Mega Evolve: Chandelure",
+  "type": "effect",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "This effect will mega-evolve your Chandelure.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "TokenImage",
+        "predicate": [
+          "species:chandelure",
+          "self:pokemon:shiny"
+        ],
+        "value": "/systems/ptu/static/images/sprites/609s_MEGA.webp"
+      },
+      {
+        "key": "TokenImage",
+        "predicate": {
+          "and": [
+            "species:chandelure",
+            {
+              "not": "self:pokemon:shiny"
+            }
+          ]
+        },
+        "value": "/systems/ptu/static/images/sprites/609_MEGA.webp"
+      },
+      {
+        "key": "TemporarySpecies",
+        "predicate": [
+          "species:chandelure"
+        ],
+        "uuid": "Compendium.ptu.species.Item.EACMg8Ou6ulsC0wp"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [
+          "species:chandelure"
+        ],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.9nkIfAs2uDYCUGfb"
+      }
+    ],
+    "enabled": true,
+    "slug": "mega-evolve-chandelure",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.12",
+    "createdTime": 1776554891062,
+    "modifiedTime": 1776554891062,
+    "lastModifiedBy": "ptubuilder000000"
+  },
+  "_id": "Ljhc8gJyGbzgu2Mc",
+  "sort": 0
+}

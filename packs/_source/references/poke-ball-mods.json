@@ -11,15 +11,24 @@
     "enabled": true,
     "slug": "poke-ball-mods",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:41:18.540Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": null,
@@ -29,11 +38,11 @@
   },
   "flags": {},
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.0.12",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1705264981057,
-    "modifiedTime": 1706021187919,
+    "modifiedTime": 1778200878561,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

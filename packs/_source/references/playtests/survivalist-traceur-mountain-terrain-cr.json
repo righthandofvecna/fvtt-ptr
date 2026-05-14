@@ -1,5 +1,5 @@
 {
-  "name": "Survivalist - Traceur – Mountain Terrain [CR]",
+  "name": "Survivalist - Traceur – Mountain Terrain",
   "type": "reference",
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
@@ -10,15 +10,24 @@
     "enabled": true,
     "slug": "survivalist-traceur-mountain-terrain-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:41:18.418Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "survivalist-traceur-mountain-terrain"
   },
   "effects": [],
   "folder": "3mspjPD8gPzP1jmO",
@@ -28,10 +37,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.0.2",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1693518703759,
-    "modifiedTime": 1699789394393,
+    "modifiedTime": 1778200878430,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

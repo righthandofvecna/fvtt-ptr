@@ -16,8 +16,15 @@
     "enabled": true,
     "slug": "laser-pulse",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:26.094Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -33,10 +40,32 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "scene",
+      "max": 1,
+      "custom": "Scene",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Untyped",
     "category": "Special",
     "damageBase": "9",
-    "frequency": "Scene",
     "ac": "2",
     "range": "Range 6, Ranged Blast 3",
     "contestType": "Smart",
@@ -45,7 +74,9 @@
     "isStruggle": false,
     "name": "",
     "automation": [],
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "ownership": {
     "default": 0
@@ -55,10 +86,10 @@
   "sort": 5800000,
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1689606523899,
-    "modifiedTime": 1707824550717,
+    "modifiedTime": 1778200826150,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

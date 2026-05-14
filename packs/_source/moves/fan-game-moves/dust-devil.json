@@ -3,7 +3,10 @@
   "type": "move",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     },
     "LocknKey": {
       "IDKeysFlag": "",
@@ -32,8 +35,15 @@
     "enabled": true,
     "slug": "dust-devil",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:23.801Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -51,10 +61,32 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "scene",
+      "max": 1,
+      "custom": "Scene",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Ground",
     "category": "Special",
     "damageBase": "9",
-    "frequency": "Scene",
     "ac": "2",
     "range": "Range 6, Ranged Blast 2",
     "contestType": "Cool",
@@ -63,16 +95,18 @@
     "isStruggle": false,
     "name": "",
     "automation": [],
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/types2/GroundIC_Icon.png",
   "folder": "CKiVqPT3ASdUeaM0",
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.3.v12-beta.1",
+    "systemVersion": "4.4.3.21",
     "coreVersion": "13.351",
     "createdTime": 1689606523899,
-    "modifiedTime": 1748549487147,
+    "modifiedTime": 1778567966867,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

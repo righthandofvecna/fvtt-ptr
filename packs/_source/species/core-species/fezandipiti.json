@@ -554,7 +554,7 @@
         "type": "body"
       }
     },
-    "slug": "fezandipity",
+    "slug": "fezandipiti",
     "rules": [],
     "type": {
       "0": "Poison",
@@ -568,7 +568,9 @@
       "Legendary"
     ],
     "stackSlugs": false,
-    "enabled": false
+    "enabled": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

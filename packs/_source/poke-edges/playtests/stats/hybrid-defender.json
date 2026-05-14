@@ -11,13 +11,13 @@
     "enabled": true,
     "slug": "hybrid-defender",
     "schema": {
-      "version": 0.112,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2024-01-14T21:44:47.538Z",
+        "datetime": "2026-05-08T00:41:01.473Z",
         "version": {
-          "schema": null,
-          "foundry": "11.315",
-          "system": "4.0.9"
+          "schema": 0.112,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -27,11 +27,36 @@
     },
     "stackSlugs": false,
     "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Do not have Hybrid Attacker"
     ],
     "cost": 0,
-    "category": ""
+    "category": "",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {
@@ -39,11 +64,11 @@
   },
   "flags": {},
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1706453263165,
-    "modifiedTime": 1707761829447,
+    "modifiedTime": 1778200861487,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

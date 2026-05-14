@@ -18,7 +18,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-supersonic",
+    "slug": "effect-supersonic-miss",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -46,7 +46,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "vvYHstuSI4986bjM",

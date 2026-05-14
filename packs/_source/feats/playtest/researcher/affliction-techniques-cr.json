@@ -1,5 +1,5 @@
 {
-  "name": "Affliction Techniques [CR]",
+  "name": "Affliction Techniques",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You use an Antidote, Burn Heal, Ice Heal, or Paralyze Heal\nEffect: If the target successfully cures the target of its linked Status Affliction, the item has additional effects.\n- Antidote: The target gains +1 Special Defense Combat Stage\n- Burn Heal: The target gains +1 Defense Combat Stage.\n- Ice Heal: The target gains +1 Attack or Special Attack Combat Stage.\n- Paralyze Heal: The target gains +1 Speed Combat Stage.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "affliction-techniques-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.114Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1 AP – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
     "prerequisites": [
       "Patch Cure",
       "Expert Medicine Education"
     ],
-    "frequency": "1 AP – Free Action",
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Affliction Techniques [CR]"
+    "class": "Researcher",
+    "name": "Affliction Techniques [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "affliction-techniques"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830186,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

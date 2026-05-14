@@ -1,5 +1,5 @@
 {
-  "name": "Steelheart [CR]",
+  "name": "Steelheart",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: When wielding metal Melee Weapons, you may use Athletics or Focus instead of Combat to determine the Damage Base of your Struggle Attacks, to qualify for a Weapon’s Moves, and to resist Disarm Checks. Whenever your Weapon Attacks hit a foe who has previously hit you with a Melee attack in the same round, the foe loses a Tick of Hit Points.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "steelheart-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.522Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -33,15 +40,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Elemental Connection (Steel)",
       "Novice Athletics or Novice Focus"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Steelheart [CR]",
-    "name": "Steelheart [CR]"
+    "class": "Steelheart",
+    "name": "Steelheart [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "steelheart"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -55,10 +86,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830555,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

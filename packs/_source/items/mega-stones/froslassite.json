@@ -6,15 +6,15 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "chimechite",
+    "slug": "froslassite",
     "schema": {
-      "version": 0.11,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2023-08-16T07:27:02.335Z",
+        "datetime": "2026-05-08T00:40:41.118Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "4.0.0.alpha.4"
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -26,6 +26,29 @@
     "keywords": [
       "Mega Stone"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "quantity": "1",
     "category": "",
     "cost": "",
@@ -34,14 +57,15 @@
     "container": false,
     "automation": [],
     "name": "Banettite",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "/systems/ptu/static/images/item_icons/froslassite.webp",
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "flags": {
     "ptu": {
@@ -49,15 +73,14 @@
     }
   },
   "_stats": {
-    "compendiumSource": "Compendium.ptu.items.Item.8lIPGbVDqky9MMPz",
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.12",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1776551192332,
-    "modifiedTime": 1776551192332,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "modifiedTime": 1778200841159,
+    "lastModifiedBy": "ptubuilder000000"
   },
   "folder": "3aYHO5npuCcYqxoX",
   "_id": "8lIPGbVDqky9MMPz",

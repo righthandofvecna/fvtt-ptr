@@ -1,5 +1,5 @@
 {
-  "name": "Seize The Moment [CR]",
+  "name": "Seize The Moment",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon with 6 Momentum\nEffect: Your Pokémon loses 6 Momentum, and then gains +1 Momentum. Your Pokémon may immediately make an attack as an Interrupt, but this attack must target only a Tagged Foe. If the attack misses, it still deals damage as if it had the Smite keyword. If the attack hits, it’s automatically a Critical Hit. If it would have already been a Critical Hit, your Pokémon gains 3 Ticks of Hit Points. May be used only once per Scene per Pokémon.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "seize-the-moment-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.832Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Duelist",
       "Master Focus"
     ],
-    "frequency": "Scene x2 – Free Action",
     "notes": "",
     "free": false,
-    "class": "Duelist [CR]",
-    "name": "Seize The Moment [CR]"
+    "class": "Duelist",
+    "name": "Seize The Moment [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "seize-the-moment"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831899,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

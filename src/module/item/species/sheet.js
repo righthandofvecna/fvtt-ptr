@@ -62,13 +62,11 @@ class PTUSpeciesSheet extends PTUItemSheet {
     /** @override */
     activateListeners(html) {
         super.activateListeners(html);
-        
-        html.find('.item[data-item-uuid] .item-name').on('click', async (event) => {
-            event.preventDefault();
-            
-            const uuid = event.currentTarget.parentElement.dataset.itemUuid;
-            if(!uuid) return;
 
+        html.find('.item[data-uuid] .item-name').on('click', async (event) => {
+            event.preventDefault();
+            const uuid = event.currentTarget.closest('[data-uuid]')?.dataset.uuid;
+            if(!uuid) return;
             const item = await fromUuid(uuid);
             if(item) item.sheet.render(true);
         });
@@ -76,7 +74,7 @@ class PTUSpeciesSheet extends PTUItemSheet {
         html.find('.capability-item .item-control.item-delete').on('click', (event) => {
             event.preventDefault();
 
-            const uuid = event.currentTarget.parentElement.parentElement.dataset.itemUuid;
+            const uuid = event.currentTarget.parentElement.parentElement.dataset.uuid;
             if(!uuid) return;
 
             const items = this.item.system.capabilities.other?.filter(item => item.uuid != uuid) ?? [];
@@ -86,41 +84,41 @@ class PTUSpeciesSheet extends PTUItemSheet {
         html.find('.ability-item .item-control.item-delete').on('click', (event) => {
             event.preventDefault();
 
-            const {itemUuid, itemSubtype} = event.currentTarget.parentElement.parentElement.dataset;
-            if(!itemUuid || !itemSubtype) return;
+            const {uuid, itemSubtype} = event.currentTarget.parentElement.parentElement.dataset;
+            if(!uuid || !itemSubtype) return;
 
             const abilities = this.item.system.abilities;
-            abilities[itemSubtype] = abilities[itemSubtype]?.filter(item => item.uuid != itemUuid) ?? [];
+            abilities[itemSubtype] = abilities[itemSubtype]?.filter(item => item.uuid != uuid) ?? [];
             return this.item.update({"system.abilities": abilities});
         });
 
         html.find('.move-item .item-control.item-delete').on('click', (event) => {
             event.preventDefault();
 
-            const {itemUuid, itemSubtype} = event.currentTarget.parentElement.parentElement.dataset;
-            if(!itemUuid || !itemSubtype) return;
+            const {uuid, itemSubtype} = event.currentTarget.parentElement.parentElement.dataset;
+            if(!uuid || !itemSubtype) return;
 
             const moves = this.item.system.moves;
-            moves[itemSubtype] = moves[itemSubtype]?.filter(item => item.uuid != itemUuid) ?? [];
+            moves[itemSubtype] = moves[itemSubtype]?.filter(item => item.uuid != uuid) ?? [];
             return this.item.update({"system.moves": moves});
         });
 
         html.find('.evolution-item .item-control.item-delete').on('click', (event) => {
             event.preventDefault();
 
-            const {itemUuid} = event.currentTarget.parentElement.parentElement.dataset;
-            if(!itemUuid) return;
+            const {uuid} = event.currentTarget.parentElement.parentElement.dataset;
+            if(!uuid) return;
 
             const evolutions = this.item.system.evolutions;
-            evolutions.splice(evolutions.findIndex(e => e.uuid == itemUuid), 1);
+            evolutions.splice(evolutions.findIndex(e => e.uuid == uuid), 1);
             return this.item.update({"system.evolutions": evolutions});
         });
 
         html.find('.evolution-item .item-control.sub-item-delete').on('click', (event) => {
             event.preventDefault();
 
-            const {itemUuid, itemIndex} = event.currentTarget.parentElement.parentElement.dataset;
-            if(!itemUuid || !itemIndex) return;
+            const {uuid, itemIndex} = event.currentTarget.parentElement.parentElement.dataset;
+            if(!uuid || !itemIndex) return;
 
             const evolutions = this.item.system.evolutions;
             if(!evolutions[itemIndex].other?.evolutionItem) return;
@@ -151,15 +149,19 @@ class PTUSpeciesSheet extends PTUItemSheet {
     /** @override */
     _onDragStart(event) {
         const li = event.currentTarget;
-        const { itemUuid, itemSlug, itemType, itemSubtype, itemIndex, itemLevel } = li.dataset;
+        const { uuid, type, itemSlug, itemSubtype, itemIndex, itemLevel } = li.dataset;
 
+        // type: "Item" + uuid makes this recognizable as a standard Foundry item drop on any
+        // other sheet. _category carries the species-sheet-specific routing info so that
+        // _onDrop on this sheet can distinguish intra-sheet reorders from external drops.
         event.dataTransfer.setData('text/plain', JSON.stringify({
-            uuid: itemUuid,
+            type: "Item",
+            uuid,
+            _category: type,
             slug: itemSlug,
-            type: itemType,
             subtype: itemSubtype,
-            index: itemIndex,
-            level: itemLevel
+            index: Number(itemIndex),
+            level: itemLevel,
         }));
     }
 
@@ -168,13 +170,82 @@ class PTUSpeciesSheet extends PTUItemSheet {
         const data = JSON.parse(event.dataTransfer.getData('text/plain'));
         $(event.currentTarget)?.find('.item-list')?.removeClass("dragover");
 
-        // Compendium / World items
+        // Intra-sheet reorder/move: data originated from _onDragStart on this sheet.
+        // _category is the item kind (ability/move/…) used for routing.
+        if(data._category) {
+            const { _category: category, subtype, index } = data;
+            const { type: itemType, itemIndex, itemSubtype: dropSubtype, zone, subZone } = event.currentTarget.dataset;
+            let itemSubtype = dropSubtype;
+
+            if(category == "ability") {
+                if(itemType != "ability") {
+                    if(zone != "ability") return;
+                    if(!itemSubtype) itemSubtype = subZone;
+                }
+
+                // re-order within same subtype
+                if(itemSubtype == subtype) {
+                    const abilities = this.item.system.abilities;
+                    const ability = abilities[subtype][index];
+                    if(!ability) return;
+                    abilities[subtype].splice(index, 1);
+                    abilities[subtype].splice(itemIndex, 0, ability);
+                    return this.item.update({"system.abilities": abilities});
+                }
+                // move to different subtype
+                else {
+                    const abilities = this.item.system.abilities;
+                    const ability = abilities[subtype][index];
+                    if(!ability || abilities[itemSubtype].find(a => a.slug == ability.slug)) return;
+                    abilities[subtype].splice(index, 1);
+                    if(itemIndex) abilities[itemSubtype].splice(itemIndex, 0, ability);
+                    else abilities[itemSubtype].push(ability);
+                    return this.item.update({"system.abilities": abilities});
+                }
+            }
+
+            if(category == "move") {
+                if(itemType != "move") {
+                    if(zone != "move") return;
+                    if(!itemSubtype) itemSubtype = subZone;
+                }
+
+                // re-order within same subtype
+                if(itemSubtype == subtype) {
+                    const moves = this.item.system.moves;
+                    const move = moves[subtype][index];
+                    if(!move) return;
+                    moves[subtype].splice(index, 1);
+                    moves[subtype].splice(itemIndex, 0, move);
+                    return this.item.update({"system.moves": moves});
+                }
+                // move to different subtype
+                else {
+                    const moves = this.item.system.moves;
+                    const move = moves[subtype][index];
+                    if(!move || moves[itemSubtype].find(m => m.slug == move.slug)) return;
+                    if(subtype == "level") {
+                        delete move.level;
+                    }
+                    if(itemSubtype == "level") {
+                        move.level = 1;
+                    }
+                    moves[subtype].splice(index, 1);
+                    if(itemIndex) moves[itemSubtype].splice(itemIndex, 0, move);
+                    else moves[itemSubtype].push(move);
+                    return this.item.update({"system.moves": moves});
+                }
+            }
+
+            return;
+        }
+
+        // External drops: compendium browser, world sidebar, other sheets, etc.
         if(data.type == "Item" && data.uuid) {
             const item = await fromUuid(data.uuid);
 
             if(!item) return;
             if(!this.allowedDropTypes.includes(item.type)) return;
-
 
             switch(item.type) {
                 case "capability": {
@@ -193,11 +264,9 @@ class PTUSpeciesSheet extends PTUItemSheet {
 
                     const {itemType, itemSubtype} = event.currentTarget?.dataset ?? {};
 
-                    // If the drop was targeted on a specific subtype, add the ability to that subtype
                     if(itemType == "ability" && itemSubtype) {
                         abilities[itemSubtype].push({slug: item.slug, uuid: item.uuid});
                     }
-                    // Otherwise add it to basic
                     else {
                         abilities.basic.push({slug: item.slug, uuid: item.uuid});
                     }
@@ -209,14 +278,12 @@ class PTUSpeciesSheet extends PTUItemSheet {
 
                     const {itemType, itemSubtype} = event.currentTarget?.dataset ?? {};
 
-                    // If the drop was targeted on a specific subtype, add the move to that subtype
                     if(itemType == "move" && itemSubtype && itemSubtype != "level") {
                         if(moves[itemSubtype]?.find(m => m.slug == item.slug)) return;
                         moves[itemSubtype].push({uuid: item.uuid, slug: item.slug});
 
                         this.dragMove = item.slug;
                     }
-                    // Otherwise add it to level
                     else {
                         if(moves.level?.find(m => m.slug == item.slug)) return;
                         if(this.dragMove == item.slug) {
@@ -252,96 +319,6 @@ class PTUSpeciesSheet extends PTUItemSheet {
                     evolutions[index].other.evolutionItem = {slug: item.slug, uuid: item.uuid};
                     return this.item.update({"system.evolutions": evolutions});
                 }
-            }
-        }
-
-        // If there is no current Target this already ran so ignore
-        if(!event.currentTarget?.dataset?.itemType && !event.currentTarget?.dataset?.zone) return;
-
-        if(data.type == "ability") {
-            const {subtype, index} = data;
-            const {itemType, itemIndex, zone, subZone} = event.currentTarget.dataset;
-            let {itemSubtype} = event.currentTarget.dataset;
-
-            if(itemType != "ability") {
-                if(zone != "ability") return;
-
-                if(!itemSubtype) itemSubtype = subZone;
-            }
-
-            // re-order
-            if(itemSubtype == subtype) {
-                const abilities = this.item.system.abilities;
-                const ability = abilities[subtype][index];
-                if(!ability) return;
-                abilities[subtype].splice(index, 1);
-                abilities[subtype].splice(itemIndex, 0, ability);
-                return this.item.update({"system.abilities": abilities});
-            }
-            // move to different category
-            else {
-                const abilities = this.item.system.abilities;
-                const ability = abilities[subtype][index];
-                if(!ability || abilities[itemSubtype].find(a => a.slug == ability.slug)) return;
-                abilities[subtype].splice(index, 1);
-                if(itemIndex) abilities[itemSubtype].splice(itemIndex, 0, ability);
-                else abilities[itemSubtype].push(ability);
-                return this.item.update({"system.abilities": abilities});
-            }
-
-        }
-
-        if(data.type == "move") {
-            const {subtype, index} = data;
-            const {itemType, itemIndex, zone, subZone} = event.currentTarget.dataset;
-            let { itemSubtype } = event.currentTarget.dataset;
-
-            const localItem = this.item.system.moves[subtype][index];
-            const realItem = await fromUuid(data.uuid);
-            if(localItem?.slug != realItem?.slug) {
-                if(!realItem || realItem.type != "move") return;
-
-                const moves = this.item.system.moves;
-                if(itemSubtype == "level") {
-                    moves[itemSubtype].unshift({slug: realItem.slug, uuid: realItem.uuid, level: Number(data.level) || 1});
-                    moves[itemSubtype] = moves[itemSubtype].sort((a, b) => a.level - b.level);
-                }
-                else {
-                    moves[itemSubtype].push({slug: realItem.slug, uuid: realItem.uuid});
-                }
-                return this.item.update({"system.moves": moves});
-            }
-
-            if(itemType != "move") {
-                if(zone != "move") return;
-
-                if(!itemSubtype) itemSubtype = subZone;
-            }
-
-            // re-order
-            if(itemSubtype == subtype) {
-                const moves = this.item.system.moves;
-                const move = moves[subtype][index];
-                if(!move) return;
-                moves[subtype].splice(index, 1);
-                moves[subtype].splice(itemIndex, 0, move);
-                return this.item.update({"system.moves": moves});
-            }
-            // move to different category
-            else {
-                const moves = this.item.system.moves;
-                const move = moves[subtype][index];
-                if(!move || moves[itemSubtype].find(m => m.slug == move.slug)) return;
-                if(subtype == "level") {
-                    delete move.level;
-                }
-                if(itemSubtype == "level") {
-                    move.level = 1;
-                }
-                moves[subtype].splice(index, 1);
-                if(itemIndex) moves[itemSubtype].splice(itemIndex, 0, move);
-                else moves[itemSubtype].push(move);
-                return this.item.update({"system.moves": moves});
             }
         }
     }

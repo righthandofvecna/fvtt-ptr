@@ -1,0 +1,12 @@
+{{#if (devMode)}}
+    <div class="item-row dev-automation">
+        <label>{{localize "PTU.DevAutomation.Status.Label"}}</label>
+        <select name="flags.ptu.automationStatus">
+            {{selectOptions automationStatusOptions selected=automationStatus localize=true}}
+        </select>
+    </div>
+    <div class="item-row dev-automation">
+        <label>{{localize "PTU.DevAutomation.Note.Label"}}</label>
+        <textarea name="flags.ptu.devNote" placeholder="{{localize "PTU.DevAutomation.Note.Placeholder"}}">{{devNote}}</textarea>
+    </div>
+{{/if}}

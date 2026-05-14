@@ -1,5 +1,5 @@
 {
-  "name": "Blazing Inferno [CR]",
+  "name": "Blazing Inferno",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You becoming Blazing. While you are Blazing, whenever your Fire-Type Moves Inflict Burn, the Burned target immediately loses a Tick of Hit Points, and loses an additional Combat Stage in Defense. While Blazing, when you hit a foe with a damaging Fire-Type Move, you may choose to automatically burn one target of the Move. If you do, you lose the Blazing Condition after the Move’s effects are resolved.",
@@ -33,8 +33,15 @@
     "enabled": true,
     "slug": "blazing-inferno-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.114Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -46,15 +53,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "2 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": false
+    },
     "prerequisites": [
       "Fire Breather Rank 2",
       "Master Focus or Combat"
     ],
-    "frequency": "2 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Fire Bringer [CR]",
-    "name": "Blazing Inferno [CR]"
+    "class": "Fire Bringer",
+    "name": "Blazing Inferno [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "blazing-inferno"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -68,10 +99,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830186,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

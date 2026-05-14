@@ -12,13 +12,13 @@
     "enabled": true,
     "slug": "thunderclap",
     "schema": {
-      "version": 0.112,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2024-01-15T01:45:48.780Z",
+        "datetime": "2026-05-08T00:40:24.485Z",
         "version": {
-          "schema": null,
-          "foundry": "11.315",
-          "system": "4.0.9"
+          "schema": 0.112,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -40,16 +40,40 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Electric",
     "category": "Special",
     "damageBase": "7",
-    "frequency": "Scene x2",
     "ac": "2",
     "range": "Range 6",
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 400000,
@@ -63,10 +87,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1705072327782,
-    "modifiedTime": 1707816395131,
+    "modifiedTime": 1778200824529,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

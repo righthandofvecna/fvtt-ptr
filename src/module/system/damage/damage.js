@@ -34,24 +34,19 @@ class PTUDamage {
 
         const attack = (() => {
             if (item && context.actor) {
-                const attacks = context.actor?.system.attacks ?? [];
-                const attack = attacks.get(item.realId);
+                return {
+                    actor: context.actor.uuid,
+                    id: item.realId ?? item._id,
+                    name: item.name,
+                    targets: (() => {
+                        const targets = context.targets;
+                        if (!targets) return null;
 
-                if (attack) {
-                    return {
-                        actor: context.actor.uuid,
-                        id: attack.item.realId ?? attack.item._id,
-                        name: attack.item.name,
-                        targets: (() => {
-                            const targets = context.targets;
-                            if (!targets) return null;
-
-                            return targets.map(target => ({
-                                actor: target.actor?.uuid,
-                                token: target.token?.uuid ?? target.token?.id
-                            }));
-                        })(),
-                    }
+                        return targets.map(target => ({
+                            actor: target.actor?.uuid,
+                            token: target.token?.uuid ?? target.token?.id
+                        }));
+                    })(),
                 }
             }
             return null;

@@ -1,5 +1,5 @@
 {
-  "name": "Highly Responsive to Prayers [CR]",
+  "name": "Highly Responsive to Prayers",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You use Wish or Heal Bell, or an ally receives an Injury\nEffect: You may apply the [Stratagem] of the Sage Feature as a Free Action on the triggering ally. This effect lasts until the start of your next turn, does not require you to Bind AP to use.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "highly-responsive-to-prayers-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.256Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 3,
+      "custom": "Scene x3 – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Mountain of Faith"
     ],
-    "frequency": "Scene x3 – Free Action",
     "notes": "",
     "free": false,
-    "class": "Sage [CR]",
-    "name": "Highly Responsive to Prayers [CR]"
+    "class": "Sage",
+    "name": "Highly Responsive to Prayers [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "highly-responsive-to-prayers"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -56,10 +87,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829324,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

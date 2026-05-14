@@ -15,7 +15,11 @@ class PTUItem extends Item {
     }
 
     get slug() {
-        return this.system.slug || sluggify(this.name);
+        if (this.system.slug) return this.system.slug;
+        const baseName = this.name.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
+        const contentSet = this.system.contentSet;
+        const suffix = contentSet ? (game.ptu?.config?.contentSets?.[contentSet]?.suffix ?? "") : "";
+        return sluggify(baseName) + suffix;
     }
 
     get grantedBy() {
@@ -48,6 +52,14 @@ class PTUItem extends Item {
         return false;
     }
 
+    get onCooldown() {
+        if (!this.system.frequency?.type) return false;
+        const freq = CONFIG.PTU.data.frequencies[this.system.frequency.type];
+        if (freq.eot && (this.flags.ptu.eot ?? 0) > 0) return true;
+        if (freq.limited && this.flags.ptu.used >= (this.system.frequency.max ?? 1)) return true;
+        return false;
+    }
+
     get usable() {
         return false;
     }
@@ -70,6 +82,21 @@ class PTUItem extends Item {
 
     get enabled() {
         return !!(this.system.enabled ?? true)
+    }
+
+    get frequency() {
+        if (!this.system.frequency?.type) return null;
+        const freq = CONFIG.PTU.data.frequencies[this.system.frequency.type];
+        let fq = game.i18n.localize(freq?.label ?? "");
+        if (freq?.limited && (this.system.frequency.max ?? 1) > 1) fq += ` ×${this.system.frequency.max}`;
+        if (this.system.actionCost.rapid || this.system.actionCost.shift || this.system.actionCost.free || this.system.actionCost.extended) {
+            fq += " - " + ["standard", "rapid", "shift", "free", "extended"].filter(at=>this.system.actionCost[at]).map(at => game.i18n.localize(CONFIG.PTU.data.actionCosts[at]?.label)).join(" + ")
+        }
+        return fq || null;
+    }
+
+    get linkHtml() {
+        return this.toAnchor({ name: this.name })?.outerHTML ?? "";
     }
 
     /** Change state of whether items automation should be enabled or disabled. If called
@@ -436,10 +463,25 @@ class PTUItem extends Item {
 
     }
 
+    async consume() {
+        // if the user is in combat, and the item has a frequency of EOT, Scene, or Daily, then we want to mark the item as used for the current turn
+        // and increment the number of uses if the frequency is Scene or Daily
+        const updates = {};
+        const freq = CONFIG.PTU.data.frequencies[this.system.frequency?.type];
+        if (game.combat?.active && freq.eot) {
+            updates["flags.ptu.eot"] = 2;
+        }
+        if (freq.limited) {
+            updates["flags.ptu.used"] = (this.flags.ptu.used ?? 0) + 1;
+        }
+        if (Object.keys(updates).length > 0) await this.update(updates);
+        console.log(`PTU | Consumed item ${this.name}`, updates, freq);
+    }
+
     async sendToChat() {
         const tags = await (async () => {
             const tags = [];
-            if (this.system.frequency) tags.push({ slug: "frequency", label: game.i18n.localize("PTU.Tags.Frequency"), value: this.system.frequency });
+            if (this.system.frequency?.type) tags.push({ slug: "frequency", label: game.i18n.localize("PTU.Tags.Frequency"), value: this.system.frequency.type });
             if (this.system.range) tags.push({ slug: "range", label: game.i18n.localize("PTU.Tags.Range"), value: this.system.range });
             if (this.system.damageBase) tags.push({ slug: "db", label: game.i18n.localize("PTU.Tags.DB"), value: this.system.damageBase + " DB" });
             return tags;
@@ -503,6 +545,15 @@ class PTUItem extends Item {
         }
 
         ChatMessage.create({ content: await foundry.applications.handlebars.renderTemplate(`/systems/ptu/static/templates/chat/chat-items.hbs`, chatData), flavor, flags: { ptu: { origin: { item: this.uuid } } } })
+    }
+
+    async onTurnEnd() {
+        const updates = {};
+        const freq = CONFIG.PTU.data.frequencies[this.system.frequency?.type];
+        if ((freq?.eot ?? 0) > 0 && this.flags.ptu.eot > 0) {
+            updates["flags.ptu.eot"] = this.flags.ptu.eot - 1;
+        }
+        if (Object.keys(updates).length > 0) await this.update(updates);
     }
 }
 

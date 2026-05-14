@@ -45,7 +45,7 @@
       }
     ],
     "enabled": true,
-    "slug": "mega-evolve-skarmory",
+    "slug": "mega-evolve-chimecho",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -73,12 +73,13 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {
-    "default": 0,
-    "izk1pNEkJuVFmrxW": 3
+    "default": 0
   },
   "flags": {
     "ptu": {
@@ -86,7 +87,6 @@
     }
   },
   "_stats": {
-    "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.351",
@@ -94,7 +94,7 @@
     "systemVersion": "4.4.3.12",
     "createdTime": 1776550650767,
     "modifiedTime": 1776550650767,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "pldy7QZKBX5kvc44",
   "sort": 0

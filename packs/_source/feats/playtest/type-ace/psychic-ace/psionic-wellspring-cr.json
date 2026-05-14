@@ -1,6 +1,6 @@
 {
   "folder": "VrgkSS17WexYz7or",
-  "name": "Psionic Wellspring [CR]",
+  "name": "Psionic Wellspring",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -11,8 +11,15 @@
     "enabled": true,
     "slug": "psionic-wellspring-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.933Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -24,13 +31,37 @@
       "Playtest",
       "CR"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": null,
+      "custom": "At Will - Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
-      "Type Ace (Psychic) [CR]"
+      "Type Ace (Psychic)"
     ],
-    "frequency": "At Will - Extended Action",
     "notes": "",
     "free": false,
-    "class": "Type Ace (Psychic) [CR]"
+    "class": "Type Ace (Psychic)",
+    "contentSet": "class-rework",
+    "replacesSlug": "psionic-wellspring"
   },
   "effects": [],
   "flags": {
@@ -44,11 +75,11 @@
     "default": 0
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710767168043,
-    "modifiedTime": 1710767168043,
+    "modifiedTime": 1778200829000,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

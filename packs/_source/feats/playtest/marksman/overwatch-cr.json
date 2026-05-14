@@ -1,5 +1,5 @@
 {
-  "name": "Overwatch [CR]",
+  "name": "Overwatch",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Create a Wide Line X, where X is equal to your Weapon’s Range minus 2. For one full round, if a foe moves in or out of that area, you may make a Ranged Weapon attack, Frequency allowing, against that foe as a Free Action. You may not attack a specific foe more than once per round this way. While this is in effect, if you Move from your current location, Overwatch’s effect is lost.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "overwatch-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.314Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -32,15 +39,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Marksman",
       "Adept Perception or Combat"
     ],
-    "frequency": "At-Will – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Marksman [CR]",
-    "name": "Overwatch [CR]"
+    "class": "Marksman",
+    "name": "Overwatch [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "overwatch"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -54,10 +85,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200828364,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

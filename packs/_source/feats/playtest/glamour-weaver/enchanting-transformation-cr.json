@@ -1,5 +1,5 @@
 {
-  "name": "Enchanting Transformation [CR]",
+  "name": "Enchanting Transformation",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You perform a magical transformation on yourself. While this Feature is Bound, your natural Weaknesses, Resistances, and Immunities change to match that of the Fairy Type, and you gain a gloriously-empowered, fae appearance (with a suitable and fancy outfit to match!). Additionally, your Glamour Weaver Moves have the additional effects below.\n\n    - Sweet Kiss: Sweet Kiss ignores Speed Evasion.\n    - Disarming Voice: You may also choose to use Disarming Voice as a Line 4 or Cone 2.\n    - Dazzling Gleam: On Even-Numbered rolls, targets hit by Dazzling Gleam have their Accuracy Lowered by 1.\n    - Draining Kiss: You gain an additional Tick of Hit Points when gaining Hit Points from Draining Kiss.\n    - Moonblast: Whenever Moonblast misses a target, they lose a Tick of Hit Points.\n    - Aromatic Mist: All allies affected by Aromatic Mist gain a +2 bonus to their next Save Check.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "enchanting-transformation-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.445Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 2 AP – Shift Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": true,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": true
+    },
     "prerequisites": [
       "Glamour Weaver"
     ],
-    "frequency": "Bind 2 AP – Shift Action",
     "notes": "",
     "free": false,
-    "class": "Glamour Weaver [CR]",
-    "name": "Enchanting Transformation [CR]"
+    "class": "Glamour Weaver",
+    "name": "Enchanting Transformation [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "enchanting-transformation"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -56,10 +87,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830478,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

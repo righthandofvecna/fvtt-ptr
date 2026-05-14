@@ -1,5 +1,5 @@
 {
-  "name": "Idol [CR]",
+  "name": "Idol",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A Pokémon with at least 1 Tutor Point.\nEffect: You gain the Cute Charm ability. You may also teach this ability to a Pokemon at the cost of 2 Tutor Points.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "idol-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.114Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,14 +27,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "daily",
+      "max": 1,
+      "custom": "Daily – Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Adaptable Performance"
     ],
-    "frequency": "Daily – Extended Action",
     "notes": "",
     "free": false,
-    "class": "Coordinator [CR]",
-    "name": "Idol [CR]"
+    "class": "Coordinator",
+    "name": "Idol [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "idol"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -45,10 +76,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830186,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

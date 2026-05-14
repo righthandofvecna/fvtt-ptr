@@ -1,5 +1,5 @@
 {
-  "name": "Tumbler [CR]",
+  "name": "Tumbler",
   "system": {
     "origin": "",
     "effect": "You gain the Run Away Ability.",
@@ -23,8 +23,15 @@
     "enabled": true,
     "slug": "tumbler-cr",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.933Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -37,16 +44,40 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Acrobat"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
     "class": "",
     "automation": [],
     "name": "Tumbler",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "class-rework",
+    "replacesSlug": "tumbler"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -61,11 +92,11 @@
     }
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1706116152349,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829000,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

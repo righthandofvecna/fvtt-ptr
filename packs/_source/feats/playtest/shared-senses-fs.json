@@ -1,0 +1,96 @@
+{
+  "name": "Shared Senses",
+  "system": {
+    "origin": "[F&S Playtest]",
+    "effect": "Target: A Channeled Pokémon\nEffect: You Imprint the target for the duration of this Feature. You receive all sensory information being sensed by Imprinted Pokémon, and Imprinted Pokémon are not subject to the distance limit on Channeling. If you have Imprinted more than one Pokémon, you may only concentrate on the senses of one Pokémon at a time, and only choose one such Pokémon per round. If you stop Channeling a Pokémon, they are no longer Imprinted as well.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "shared-senses-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.302Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Playtest",
+      "F&S"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 1 AP - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": true
+    },
+    "prerequisites": [
+      "Channeler"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Channeler",
+    "name": "Shared Senses",
+    "useCount": 0,
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "shared-senses"
+  },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "prereqBackup": "Channeler"
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368078846,
+    "modifiedTime": 1778200831368,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "folder": "NlEB7XJnDWyGbZnQ",
+  "_id": "nYiPhQummYz99pTH",
+  "sort": 4400000,
+  "ownership": {
+    "default": 0
+  }
+}

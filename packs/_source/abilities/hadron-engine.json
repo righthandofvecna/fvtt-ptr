@@ -6,22 +6,62 @@
     "origin": "",
     "effect": "Connection - Electric Terrain. The user uses Electric Terrain as Rapid Action, ignoring Frequency and as if the Move was on its Movelist.\nBonus: While this Pokemon is in Electric Terrain, the user gains +2 Special Attack Combat Stages.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": {
+          "not": "move:electric-terrain"
+        },
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.j1LhD3Z6maB3Y9pi"
+      }
+    ],
     "enabled": true,
     "slug": "hadron-engine",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:16.813Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.rprXQjHtUroJns9B",
     "source": {
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [],
-    "frequency": "Scene - Rapid Action",
+    "frequency": {
+      "type": "scene",
+      "max": 1,
+      "custom": "Scene - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "meLoW2lriB0Pz6fo",
   "effects": [],
@@ -32,15 +72,18 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": null,
+      "automationStatus": "requires-system-changes",
+      "devNote": "joehisaishi - added Effect, this one's weird because it wants Electric Terrain in the user's Move Lists, but it's also a Connection Move. not going to make a new Electric Terrain just for this."
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.21",
+    "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1707761783909,
+    "modifiedTime": 1778568646480,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

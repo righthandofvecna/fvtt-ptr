@@ -18,13 +18,13 @@
     "enabled": true,
     "slug": "type-brace-ground",
     "schema": {
-      "version": 0.114,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2024-02-17T17:08:16.421Z",
+        "datetime": "2026-05-08T00:40:42.224Z",
         "version": {
-          "schema": 0.11,
-          "foundry": "11.315",
-          "system": "4.2.0"
+          "schema": 0.114,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -38,6 +38,29 @@
       "Accessory",
       "Artificer"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "quantity": "1",
     "category": "",
     "cost": "2000",
@@ -46,7 +69,9 @@
     "container": false,
     "automation": [],
     "name": "Type Brace (Water)",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -63,11 +88,11 @@
   "_id": "oSKiUzllaf3RwWnl",
   "sort": 0,
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710773544948,
-    "modifiedTime": 1710773544948,
+    "modifiedTime": 1778200842266,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

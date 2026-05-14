@@ -1,5 +1,5 @@
 {
-  "name": "Miasmic Spray [CR]",
+  "name": "Miasmic Spray",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit with Acid, Clear Smog, Sludge Bomb, Sludge Wave, or Toxic; or use Acid Armor.\nEffect: The Effect of this feature depends on the triggering move.\n- Acid: Instead of its usual effect, Acid lowers the Special Defense of all targets hit by -2 Combat Stages.\n- Clear Smog: Clear Smog’s target loses 5 HP for each Combat Stage lost.\n- Sludge Bomb: The Target receives a -3 penalty to Accuracy Rolls until the end of your next turn.\n- Sludge Wave: All targets in Sludge Wave’s Burst are Slowed until the end of their next turn.\n- Toxic: The target’s Badly Poison Hit Point Loss begins at 10 instead of 5.\n- Acid Armor: You are not Slowed while Liquefied and resist all Special Attacks one step.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "miasmic-spray-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.301Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "2 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": false
+    },
     "prerequisites": [
       "Miasma’s Call",
       "Master Stealth or Guile"
     ],
-    "frequency": "2 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Miasmic [CR]",
-    "name": "Miasmic Spray [CR]"
+    "class": "Miasmic",
+    "name": "Miasmic Spray [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "miasmic-spray"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831368,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

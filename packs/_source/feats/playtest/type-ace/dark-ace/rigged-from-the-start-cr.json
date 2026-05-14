@@ -1,6 +1,6 @@
 {
   "folder": "WkzYl2eCkah61zli",
-  "name": "Rigged From the Start [CR]",
+  "name": "Rigged From the Start",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -9,10 +9,17 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "life-isnt-fair-cr",
+    "slug": "rigged-from-the-start-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.913Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -24,13 +31,37 @@
       "Branch",
       "CR"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": null,
+      "custom": "At Will - Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Type Ace (Dark)"
     ],
-    "frequency": "At Will - Extended Action",
     "notes": "",
     "free": false,
-    "class": "Type Ace (Dark) [CR]"
+    "class": "Type Ace (Dark)",
+    "contentSet": "class-rework",
+    "replacesSlug": "rigged-from-the-start"
   },
   "effects": [],
   "flags": {
@@ -44,11 +75,11 @@
     "default": 0
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710766924862,
-    "modifiedTime": 1710767271874,
+    "modifiedTime": 1778200830936,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

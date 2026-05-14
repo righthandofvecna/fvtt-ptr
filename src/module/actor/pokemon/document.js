@@ -144,6 +144,18 @@ class PTUPokemonActor extends PTUActor {
                 (system.level.expTillNextLevel - CONFIG.PTU.data.levelProgression[system.level.current])
             ) * 100);
 
+        // Compute effective XP (applied + pending) for display purposes on the sheet
+        const pendingExp = system.level.pendingExp ?? 0;
+        system.level.totalEffectiveExp = system.level.exp + pendingExp;
+        system.level.effectivePercent = pendingExp > 0
+            ? Math.min(Math.round(
+                (
+                    (system.level.totalEffectiveExp - CONFIG.PTU.data.levelProgression[system.level.current])
+                    /
+                    (system.level.expTillNextLevel - CONFIG.PTU.data.levelProgression[system.level.current])
+                ) * 100), 100)
+            : system.level.percent;
+
 
         // Set attributes which are underrived data
         this.attributes = {
@@ -574,6 +586,10 @@ class PTUPokemonActor extends PTUActor {
 
         if (result) {
             if (result.changed) foundry.utils.mergeObject(changed, result.changed);
+            options.ptu ??= {};
+            options.ptu[this.id] = {
+                oldMaxHp: this.system.health.max,
+            };
         }
 
         await super._preUpdate(changed, options, userId);
@@ -587,15 +603,25 @@ class PTUPokemonActor extends PTUActor {
             const tokenUpdates = {};
 
             const curImg = await PokemonGenerator.getImage(this.species, { gender: this.system.gender, shiny: this.system.shiny });
-            const curTokenImg = (() => {
+            const curTokenImg = await (async () => {
                 const tokenImageExtension = game.settings.get("ptu", "generation.defaultTokenImageExtension");
+                if (tokenImageExtension === ".webm") {
+                    const tokenImg = await PokemonGenerator.getTokenImage(this.species, { gender: this.system.gender, shiny: this.system.shiny });
+                    if (tokenImg) return tokenImg;
+                    return curImg;
+                }
                 if(curImg.endsWith(tokenImageExtension)) return curImg;
                 const actorImageExtension = game.settings.get("ptu", "generation.defaultImageExtension");
                 return curImg.replace(actorImageExtension, tokenImageExtension);
             })();
             const newImg = await PokemonGenerator.getImage(result.evolution, { gender: this.system.gender, shiny: this.system.shiny });
-            const newTokenImg = (() => {
+            const newTokenImg = await (async () => {
                 const tokenImageExtension = game.settings.get("ptu", "generation.defaultTokenImageExtension");
+                if (tokenImageExtension === ".webm") {
+                    const tokenImg = await PokemonGenerator.getTokenImage(result.evolution, { gender: this.system.gender, shiny: this.system.shiny });
+                    if (tokenImg) return tokenImg;
+                    return newImg;
+                }
                 if(newImg.endsWith(tokenImageExtension)) return newImg;
                 const actorImageExtension = game.settings.get("ptu", "generation.defaultImageExtension");
                 return newImg.replace(actorImageExtension, tokenImageExtension);

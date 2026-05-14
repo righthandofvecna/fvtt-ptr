@@ -6,7 +6,11 @@
   "_id": "O2vsL1IY0u9DOERr",
   "sort": 600000,
   "color": null,
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed"
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.0.3",

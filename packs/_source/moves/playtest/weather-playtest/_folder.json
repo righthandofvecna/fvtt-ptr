@@ -6,7 +6,11 @@
   "_id": "9RUwT68fcksatpSD",
   "sort": 700000,
   "color": null,
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed"
+    }
+  },
   "_stats": {
     "coreVersion": "12.316",
     "systemId": "ptu",

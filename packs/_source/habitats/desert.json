@@ -1375,6 +1375,8 @@
     "exportSource": null
   },
   "system": {
-    "slug": "desert"
+    "slug": "desert",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

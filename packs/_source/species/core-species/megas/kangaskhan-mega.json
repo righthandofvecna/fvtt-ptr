@@ -616,7 +616,7 @@
         "type": "body"
       }
     },
-    "slug": "kangaskhan",
+    "slug": "kangaskhan-mega",
     "rules": [],
     "type": {
       "0": "Normal",
@@ -630,7 +630,9 @@
       "Kanto",
       "Kalos",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

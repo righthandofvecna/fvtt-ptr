@@ -33,8 +33,15 @@
     "enabled": true,
     "slug": "nomad",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.300Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -45,14 +52,38 @@
       "Class",
       "+Speed"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": null,
+      "custom": "At Will - Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Elemental Connection (Psychic)",
       "Novice Focus"
     ],
-    "frequency": "At Will - Standard Action",
     "notes": "",
     "free": false,
-    "class": ""
+    "class": "",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {
@@ -66,10 +97,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.1",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1695152947504,
-    "modifiedTime": 1709366299668,
+    "modifiedTime": 1778200831368,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

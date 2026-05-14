@@ -6,7 +6,11 @@
   "_id": "tpnj35nZR172ENQ2",
   "sort": 400000,
   "color": null,
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed"
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.0.2",

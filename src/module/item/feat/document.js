@@ -12,7 +12,8 @@ class PTUFeat extends PTUItem {
 
     /** @override */
     get rollable() {
-        return this.system?.frequency && this.system.frequency !== "Static";
+        const freqType = this.system?.frequency?.type;
+        return !!freqType && freqType !== "static";
     }
 
     /** @override */

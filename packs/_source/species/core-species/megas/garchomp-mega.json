@@ -516,7 +516,7 @@
         "type": "body"
       }
     },
-    "slug": "garchomp",
+    "slug": "garchomp-mega",
     "rules": [],
     "type": {
       "0": "Dragon",
@@ -530,7 +530,9 @@
       "Alola",
       "Sinnoh",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

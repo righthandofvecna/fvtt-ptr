@@ -81,7 +81,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-chip-away",
+    "slug": "effect-chip-away-eph",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -109,7 +109,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "vvYHstuSI4986bjM",

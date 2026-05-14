@@ -607,7 +607,7 @@
         "type": "body"
       }
     },
-    "slug": "charizard",
+    "slug": "charizard-mega-x",
     "rules": [],
     "type": {
       "0": "Fire",
@@ -622,7 +622,9 @@
       "Kanto",
       "Kalos",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

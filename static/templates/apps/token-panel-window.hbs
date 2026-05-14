@@ -1,0 +1,71 @@
+<div class="tpw-content">
+    {{#if actor}}
+    <div class="tpw-left">
+    {{!-- Header: avatar + name + HP --}}
+    <div class="tpw-header">
+        <div class="tpw-avatar {{#if (eq actor.type "pokemon")}}pokemon{{/if}}">
+            <img src="{{actor.img}}" alt="{{actor.name}}">
+        </div>
+        <div class="tpw-info">
+            <div class="tpw-name">{{actor.name}}</div>
+            {{#if actor.system.health}}
+            <div class="tpw-hp-wrap">
+                <div class="tpw-hp-bar">
+                    <div class="tpw-hp-fill" style="width: {{actor.system.health.percent}}%;"></div>
+                </div>
+                <span class="tpw-hp-text">{{actor.system.health.value}} / {{actor.system.health.max}}</span>
+            </div>
+            {{/if}}
+            {{#if heldItem}}
+            <div class="tpw-held-item" title="{{heldItem.name}}">
+                <img src="{{heldItem.img}}" alt="{{heldItem.name}}">
+                <span>{{heldItem.name}}</span>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+
+    {{!-- Movement --}}
+    {{#if (gt movement.length 0)}}
+    <div class="tpw-movement">
+        {{#each movement as |move|}}
+            <div class="movement-card" title="{{move.name}}">
+                <i class="{{move.icon}}"></i> {{move.value}}
+            </div>
+        {{/each}}
+    </div>
+    {{/if}}
+
+    {{!-- Status panel: party / conditions / effects --}}
+    {{#if (or party.trainer (gt conditions.length 0) (gt effects.length 0))}}
+    <div class="tpw-status-panel">
+        <div class="top-panel-toggle tpw-toggle" data-target="party">
+            <i class="fas {{#if show.party}}fa-chevron-down{{else}}fa-chevron-right{{/if}}"></i>
+            <span>Status</span>
+        </div>
+        {{#if show.party}}
+        <div class="tpw-status-body">
+            {{> systems/ptu/static/templates/partials/token-panel/status-blocks-partial.hbs}}
+        </div>
+        {{/if}}
+    </div>
+    {{/if}}
+    </div>{{!-- .tpw-left --}}
+
+    <div class="tpw-right">
+    {{!-- Tab strip --}}
+    <div class="tpw-tab-strip">
+        {{> systems/ptu/static/templates/partials/token-panel/tab-strip-tabs-partial.hbs}}
+        <div class="tab-strip-dock" title="Dock Token Panel">
+            <i class="fas fa-thumbtack"></i>
+        </div>
+    </div>
+
+    {{!-- Items body --}}
+    {{> systems/ptu/static/templates/partials/token-panel/items-body-partial.hbs}}
+    </div>{{!-- .tpw-right --}}
+
+    {{else}}
+    <div class="tpw-no-actor">No character is selected or assigned to this user.</div>
+    {{/if}}
+</div>

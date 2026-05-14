@@ -1,5 +1,5 @@
 {
-  "name": "Earthshifter [CR]",
+  "name": "Earthshifter",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit with a damaging Ground Type Move\nEffect: You initiate a Trip Maneuver against 1 target of the Move. The Maneuver automatically hits, and you may use your Focus or Intuition for the opposed check.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "earthshifter-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.445Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Ground Out"
     ],
-    "frequency": "Scene x2 – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Earth Shaker [CR]",
-    "name": "Earthshifter [CR]"
+    "class": "Earth Shaker",
+    "name": "Earthshifter [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "earthshifter"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -52,10 +83,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830478,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

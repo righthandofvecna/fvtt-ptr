@@ -651,7 +651,7 @@
         "type": "body"
       }
     },
-    "slug": "ogerpon",
+    "slug": "ogerpon-wellspring",
     "rules": [],
     "type": {
       "0": "Grass",
@@ -663,7 +663,9 @@
     },
     "keywords": [
       "Legendary"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "dljUGxtO8AR0tERN",

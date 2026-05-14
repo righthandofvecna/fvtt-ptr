@@ -464,7 +464,7 @@
         "type": "body"
       }
     },
-    "slug": "terapagos-terastal",
+    "slug": "terapagos-stellar",
     "rules": [],
     "type": {
       "0": "Normal",
@@ -475,7 +475,9 @@
     },
     "keywords": [
       "Legendary"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "dljUGxtO8AR0tERN",

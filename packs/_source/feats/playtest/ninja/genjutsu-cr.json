@@ -1,5 +1,5 @@
 {
-  "name": "Genjutsu [CR]",
+  "name": "Genjutsu",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You form an Illusion around yourself. This Illusion conceals you, allowing you to use the Hide Manuever as if you were in Obscurring Terrain. This Illusiuon can look like a cloud of darkness, or disguise you as a mundane, inanimate object. The Illusion can even fool Aura, concealing you from Aura Sight for its duration. However, the Illusion requires complete concentration, and is broken if you take any actions at all. Anyone that interacts with the Illusion directly may make an Occult Education or Intuition Check with a DC equal to 10 plus your Stealth Rank; if they succeed, the Illusion is broken, and you are no longer Hidden.\nBonus: You gain the Blender Capability.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "genjutsu-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.832Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Ninja",
       "Adept Stealth"
     ],
-    "frequency": "At-Will – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Ninja [CR]",
-    "name": "Genjutsu [CR]"
+    "class": "Ninja",
+    "name": "Genjutsu [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "genjutsu"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831899,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

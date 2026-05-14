@@ -1,5 +1,5 @@
 {
-  "name": "Cutthroat [CR]",
+  "name": "Cutthroat",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You may use Rogue Moves as Weapon Moves when wielding Small Melee Weapons or Short Ranged Weapons. If you do, Rogue Moves instead have the same Range as your Weapon. Additionally, you may qualify for Weapon Moves for Small Melee or Short Ranged Weapons and resist Disarm Maneuvers when wielding such Weapons using any Rogue Skill.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "cutthroat-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.473Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -32,14 +39,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Rogue"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Rogue [CR]",
-    "name": "Cutthroat [CR]"
+    "class": "Rogue",
+    "name": "Cutthroat [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "cutthroat"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831544,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

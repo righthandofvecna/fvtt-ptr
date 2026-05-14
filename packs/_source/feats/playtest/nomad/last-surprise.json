@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "last-surprise",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.314Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -29,14 +36,38 @@
     "keywords": [
       "+Speed"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "2x Scene - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Nomad",
       "Adept Focus"
     ],
-    "frequency": "2x Scene - Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Nomad"
+    "class": "Nomad",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {
@@ -50,10 +81,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1695153306800,
-    "modifiedTime": 1707818613949,
+    "modifiedTime": 1778200828364,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

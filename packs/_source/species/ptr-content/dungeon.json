@@ -478,7 +478,9 @@
       "value": "PTR Exclusive Dex"
     },
     "stackSlugs": false,
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

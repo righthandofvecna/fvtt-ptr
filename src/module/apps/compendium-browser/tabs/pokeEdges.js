@@ -6,9 +6,9 @@ export class CompendiumBrowserPokeEdgesTab extends CompendiumBrowserTab {
         super(browser);
 
         this.searchFields = ["name", "prerequisites.label", "prerequisites.tier"]
-        this.storeFields = ["name", "uuid", "type", "source", "img", "prerequisites", "keywords"];
+        this.storeFields = ["name", "uuid", "type", "source", "img", "prerequisites", "keywords", "automationStatus"];
 
-        this.index = ["img", "system.source.value", "system.prerequisites", "system.keywords"];
+        this.index = ["img", "system.source.value", "system.prerequisites", "system.keywords", "system.slug", "system.contentSet", "system.replacesSlug", "flags.ptu.automationStatus"];
 
         this.filterData = this.prepareFilterData();
     }
@@ -54,7 +54,11 @@ export class CompendiumBrowserPokeEdgesTab extends CompendiumBrowserTab {
                     uuid: `Compendium.${pack.collection}.${edgeData._id}`,
                     source: sourceSlug,
                     prerequisites: this.#prerequisitesStringToEntries(prerequisites),
-                    keywords: edgeData.system.keywords
+                    keywords: edgeData.system.keywords,
+                    slug: edgeData.system.slug ?? "",
+                    contentSet: edgeData.system.contentSet ?? "",
+                    replacesSlug: edgeData.system.replacesSlug ?? "",
+                    automationStatus: edgeData.flags?.ptu?.automationStatus ?? "needs-automation"
                 })
             }
         }
@@ -111,6 +115,10 @@ export class CompendiumBrowserPokeEdgesTab extends CompendiumBrowserTab {
 
         if(!this.isEntryHonoringMultiselect(multiselects.keywords, entry.keywords)) return false;
 
+        if (this.filterData.selects?.automationStatus?.selected) {
+            if (entry.automationStatus !== this.filterData.selects.automationStatus.selected) return false;
+        }
+
         return true;
     }
 
@@ -147,6 +155,20 @@ export class CompendiumBrowserPokeEdgesTab extends CompendiumBrowserTab {
                     selected: []
                 }
             },
+            ...(game.settings.get("ptu", "devMode") ? {
+                selects: {
+                    automationStatus: {
+                        label: "PTU.CompendiumBrowser.FilterOptions.AutomationStatus",
+                        options: {
+                            "needs-automation": "Needs Automation",
+                            "completed": "Completed",
+                            "requires-system-changes": "Requires System Changes",
+                            "no-automation-needed": "No Automation Needed"
+                        },
+                        selected: ""
+                    }
+                }
+            } : {}),
             multiselects: {
                 keywords: {
                     conjunction: "and",

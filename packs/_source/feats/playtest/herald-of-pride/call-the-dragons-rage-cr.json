@@ -1,5 +1,5 @@
 {
-  "name": "Call the Dragon's Rage [CR]",
+  "name": "Call the Dragon's Rage",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Dragon Hammer, Dragon Rush, and Outrage. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
@@ -16,10 +16,17 @@
       }
     ],
     "enabled": true,
-    "slug": "call-the-dragon-s-rage-cr",
+    "slug": "call-the-dragons-rage-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.599Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -32,15 +39,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Bare the Dragon’s Claws",
       "Master Command or Intimidate"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Herald of Pride [CR]",
-    "name": "Call the Dragon’s Rage [CR]"
+    "class": "Herald of Pride",
+    "name": "Call the Dragon’s Rage [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "call-the-dragons-rage"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -54,10 +85,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830629,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

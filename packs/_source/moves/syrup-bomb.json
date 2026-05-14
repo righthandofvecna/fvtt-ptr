@@ -11,13 +11,13 @@
     "enabled": true,
     "slug": "syrup-bomb",
     "schema": {
-      "version": 0.11,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2023-09-15T22:10:11.615Z",
+        "datetime": "2026-05-08T00:40:25.649Z",
         "version": {
-          "schema": null,
-          "foundry": "11.308",
-          "system": "4.0.0.beta.3"
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -35,16 +35,40 @@
     "megaLauncher": false,
     "punkRock": false,
     "strongJaw": false,
+    "frequency": {
+      "type": "eot",
+      "max": null,
+      "custom": "EOT",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "type": "Grass",
     "category": "Special",
     "damageBase": "6",
-    "frequency": "EOT",
     "ac": "4",
     "range": "Range 4, Ranged Blast 2",
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {
@@ -57,10 +81,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1694706234647,
-    "modifiedTime": 1710763698756,
+    "modifiedTime": 1778200825703,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

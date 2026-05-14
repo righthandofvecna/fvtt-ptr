@@ -1,5 +1,5 @@
 {
-  "name": "Mark of Vision [CR]",
+  "name": "Mark of Vision",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A willing Trainer\nEffect: You mark the target with a mystical power which allows you to close your eyes and focus to perceive the world with their senses from their perspective. You may Bind this Ability multiple times, each time on a different target, but you may only concentrate on one Mark of Vision at a time, and you may only have a number of Marks at one time equal to half your Perception Rank. A target may choose to end this effect at any time, or to deny you access to their senses temporarily without ending the effect entirely. You have a rough sense of how far away and in what direction marked targets are.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "mark-of-vision-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.474Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 1 AP – Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 1,
+      "bind": true
+    },
     "prerequisites": [
       "Oracle",
       "Adept Perception"
     ],
-    "frequency": "Bind 1 AP – Extended Action",
     "notes": "",
     "free": false,
-    "class": "Oracle [CR]",
-    "name": "Mark of Vision [CR]"
+    "class": "Oracle",
+    "name": "Mark of Vision [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "mark-of-vision"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -57,10 +88,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831544,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

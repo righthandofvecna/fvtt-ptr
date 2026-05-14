@@ -1,0 +1,97 @@
+{
+  "name": "Channeler",
+  "system": {
+    "origin": " [F&S Playtest]",
+    "effect": "Target: A Pokémon.\nEffect: You Channel the target Pokémon. If you attempt to Channel a Hostile Pokémon, you must make an Intuition Check with a DC of 15 to Channel the target. You may stop Channeling a Pokémon as a Free Action at any time. You may Channel a number of Pokémon at a time up to your Intuition Rank. If a Channeled Pokémon goes further than 20 meters from you, they stop being Channeled.  \n\nBonus: If you channel with a Pokémon before capturing it, that Pokémon starts with +1 Friendship to its base.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "channeler-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.296Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Class",
+      "Playtest",
+      "F&S"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "prerequisites": [
+      "Mystic Senses"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "",
+    "name": "Channeler",
+    "useCount": 0,
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "channeler"
+  },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "prereqBackup": "Mystic Senses"
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368081697,
+    "modifiedTime": 1778200830363,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "folder": "NlEB7XJnDWyGbZnQ",
+  "_id": "TxqXvxr6sIfB0Pbq",
+  "sort": 2500000,
+  "ownership": {
+    "default": 0
+  }
+}

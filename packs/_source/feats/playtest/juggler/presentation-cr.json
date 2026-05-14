@@ -1,5 +1,5 @@
 {
-  "name": "Presentation! [CR]",
+  "name": "Presentation!",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You release a Pokémon from its Poké Ball\nEffect: You may immediately have your Pokémon undergo a Phenomena (Mega Evolution, Dynamax, Gigantamax, Eternamax, Terrastalization) or Forme Change (ignoring location or item dependencies).",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "presentation-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.775Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 1,
+      "custom": "Scene – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Tag Out or Tag In",
       "Master Acrobatics or Guile"
     ],
-    "frequency": "Scene – Free Action",
     "notes": "",
     "free": false,
-    "class": "Juggler [CR]",
-    "name": "Presentation! [CR]"
+    "class": "Juggler",
+    "name": "Presentation! [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "presentation"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200828835,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

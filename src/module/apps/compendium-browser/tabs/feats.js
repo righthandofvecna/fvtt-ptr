@@ -6,9 +6,9 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
         super(browser);
 
         this.searchFields = ["name", "prerequisites.label", "prerequisites.tier", "class"]
-        this.storeFields = ["name", "uuid", "type", "source", "img", "prerequisites", "class", "classPretty", "keywords"];
+        this.storeFields = ["name", "uuid", "type", "source", "img", "prerequisites", "class", "classPretty", "keywords", "automationStatus"];
 
-        this.index = ["img", "system.source.value", "system.prerequisites", "system.class", "system.keywords"];
+        this.index = ["img", "system.source.value", "system.prerequisites", "system.class", "system.keywords", "system.slug", "system.contentSet", "system.replacesSlug", "flags.ptu.automationStatus"];
 
         this.filterData = this.prepareFilterData();
     }
@@ -60,7 +60,11 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
                     prerequisites: this.#prerequisitesStringToEntries(prerequisites),
                     class: sluggify(_class),
                     classPretty: _class,
-                    keywords: featData.system.keywords
+                    keywords: featData.system.keywords,
+                    slug: featData.system.slug ?? "",
+                    contentSet: featData.system.contentSet ?? "",
+                    replacesSlug: featData.system.replacesSlug ?? "",
+                    automationStatus: featData.flags?.ptu?.automationStatus ?? "needs-automation"
                 })
                 if (_class) classes.add(_class);
 
@@ -138,6 +142,10 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
 
         if (!this.isEntryHonoringMultiselect(multiselects.keywords, entry.keywords)) return false;
 
+        if (this.filterData.selects?.automationStatus?.selected) {
+            if (entry.automationStatus !== this.filterData.selects.automationStatus.selected) return false;
+        }
+
         return true;
     }
 
@@ -180,12 +188,26 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
                     selected: []
                 }
             },
+            ...(game.settings.get("ptu", "devMode") ? {
+                selects: {
+                    automationStatus: {
+                        label: "PTU.CompendiumBrowser.FilterOptions.AutomationStatus",
+                        options: {
+                            "needs-automation": "Needs Automation",
+                            "completed": "Completed",
+                            "requires-system-changes": "Requires System Changes",
+                            "no-automation-needed": "No Automation Needed"
+                        },
+                        selected: ""
+                    }
+                }
+            } : {}),
             multiselects: {
                 keywords: {
                     conjunction: "and",
                     label: "PTU.CompendiumBrowser.FilterOptions.Keywords",
                     options: [],
-                    selected: [{value: 'Obsolete', label: 'Obsolete', not: true}, {value: "Legacy", label: "Legacy", not: true}]
+                    selected: [{value: 'Obsolete', label: 'Obsolete', not: true}]
                 }
             },
             order: {

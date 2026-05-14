@@ -22,10 +22,17 @@
     </div>
     {{/unless}}
 
+    {{#unless object.flags.item-piles?.data?.enabled}}
     <div class="form-group">
+        {{#if (getGameSetting "metagame.allowUnlinkedTokens")}}
+        <label>{{localize "TOKEN.CharLink"}}</label>
+        <input type="checkbox" name="actorLink" {{checked object.actorLink}}/>
+        {{else}}
         <label>{{localize "TOKEN.CharLink"}}<span class='readable p10'>Unlinked actors are not supported by the system</span></label>
         <input type="checkbox" name="actorLink" checked="true" disabled/>
+        {{/if}}
     </div>
+    {{/unless}}
     {{#if isPrototype}}
     <hr>
 

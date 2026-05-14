@@ -80,7 +80,7 @@
       }
     ],
     "enabled": true,
-    "slug": "adrinaline-rush",
+    "slug": "effect-adrenaline-rush",
     "schema": {
       "version": 0.111,
       "lastMigration": {
@@ -115,7 +115,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "R64IoNmDlvVPJZF1",

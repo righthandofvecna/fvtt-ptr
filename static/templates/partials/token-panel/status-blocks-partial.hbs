@@ -1,0 +1,43 @@
+{{#if party.trainer}}
+<div class="block party-overview">
+    <h5 class="header">Party</h5>
+    {{#unless party.isTrainer}}
+        <img class="trainer icon" data-id="{{party.trainer.id}}" src="{{party.trainer.img}}" alt="{{party.trainer.name}}" draggable="true">
+    {{/unless}}
+    {{#if (gt party.pokemon.length 0)}}
+        <div class="party-pokemon">
+            {{#each party.pokemon as |pokemon|}}
+                <div class="pokemon" data-id="{{pokemon.id}}" style="--health-percent: {{calcHeight pokemon.system.health.percent}}px;">
+                    <img class="{{#if (lte pokemon.system.health.percent 0)}}black{{else}}{{#if (lt pokemon.system.health.percent 25)}}darkred{{else}}{{#if (lt pokemon.system.health.percent 50)}}red{{else}}{{#if (lt pokemon.system.health.percent 75)}}orange{{else}}{{#if (is pokemon.system.health.percent 100)}}green{{else}}lime{{/if}}{{/if}}{{/if}}{{/if}}{{/if}}"
+                        src="{{pokemon.img}}"
+                        alt="{{pokemon.name}}"
+                        draggable="true"
+                        data-id="{{pokemon.id}}">
+                </div>
+            {{/each}}
+        </div>
+    {{/if}}
+</div>
+{{/if}}
+{{#if (gt conditions.length 0)}}
+<div class="block conditions">
+    <h5 class="header">Conditions</h5>
+    {{#each conditions as |condition|}}
+        <div class="condition" data-actor-id="{{condition.parent.id}}" data-item-id="{{condition.id}}" {{#if condition.system.effect}}title="{{condition.system.effect}}"{{/if}}>
+            <img class="icon" src="{{condition.img}}" alt="{{condition.name}}">
+            <span class="name">{{condition.name}}</span>
+        </div>
+    {{/each}}
+</div>
+{{/if}}
+{{#if (gt effects.length 0)}}
+<div class="block effects">
+    <h5 class="header">Effects</h5>
+    {{#each effects as |effect|}}
+        <div class="effect" data-actor-id="{{effect.parent}}" data-item-id="{{effect.id}}" {{#if effect.effect}}title="{{effect.effect}}"{{/if}}>
+            <img class="icon" src="{{effect.img}}" alt="{{effect.name}}">
+            <span class="name">{{effect.name}}</span>
+        </div>
+    {{/each}}
+</div>
+{{/if}}

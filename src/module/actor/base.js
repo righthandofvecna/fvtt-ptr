@@ -68,6 +68,24 @@ class PTUActor extends Actor {
         return !(this.permission >= CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER);
     }
 
+    /**
+     * Returns true if the current user is the "proper" owner of this actor:
+     * - For characters: the user has this actor set as their selected character.
+     * - For pokemon: the user's selected character is this pokemon's trainer
+     *   (whether the pokemon is in the party or boxed).
+     */
+    get isProperOwner() {
+        if (this.type === "character") {
+            return game.user.character?.id === this.id;
+        }
+        if (this.type === "pokemon") {
+            const trainerId = this.flags?.ptu?.party?.trainer;
+            if (!trainerId) return false;
+            return game.user.character?.id === trainerId;
+        }
+        return false;
+    }
+
     get types() {
         return this.synthetics.typeOverride.typing
             || this.system.typing
@@ -202,10 +220,7 @@ class PTUActor extends Actor {
         const activeUsers = game.users.filter((u) => u.active);
 
         // 1. The first active GM, sorted by ID
-        const firstGM = activeUsers
-            .filter((u) => u.isGM)
-            .sort((a, b) => (a.id > b.id ? 1 : -1))
-            .shift();
+        const firstGM = game.users.activeGM;
         if (firstGM) return firstGM;
 
         // 2. The user with this actor assigned
@@ -213,7 +228,7 @@ class PTUActor extends Actor {
         if (primaryPlayer) return primaryPlayer;
 
         // 3. Anyone who can update the actor
-        const firstUpdater = game.users
+        const firstUpdater = activeUsers
             .filter((u) => this.canUserModify(u, "update"))
             .sort((a, b) => (a.id > b.id ? 1 : -1))
             .shift();
@@ -265,6 +280,11 @@ class PTUActor extends Actor {
         }
 
         this.prepareDerivedData();
+
+        // combat stage roll options
+        for (const statName of Object.keys(this.system.stats)) {
+            this.flags.ptu.rollOptions.all[`self:${statName}:stage:${this.system.stats[statName]?.stage?.total ?? 0}`] = true;
+        }
 
         this.initiative = this.prepareInitiative();//new ActorInitiative(this);
 
@@ -436,10 +456,12 @@ class PTUActor extends Actor {
 
     /** @override */
     static async createDocuments(data = [], context = {}) {
-        for (const actorData of data) {
-            if (actorData.prototypeToken?.actorLink !== true) {
-                actorData.prototypeToken ??= {};
-                actorData.prototypeToken.actorLink = true;
+        if (!game.settings.get("ptu", "development.allowUnlinkedTokens")) {
+            for (const actorData of data) {
+                if (actorData.prototypeToken?.actorLink !== true && !foundry.utils.getProperty(foundry.utils.flattenObject(actorData), "flags.item-piles.data.enabled")) {
+                    actorData.prototypeToken ??= {};
+                    actorData.prototypeToken.actorLink = true;
+                }
             }
         }
         return super.createDocuments(data, context);
@@ -486,7 +508,15 @@ class PTUActor extends Actor {
                 changed.system.spirit.max ?? this.system.spirit.max
             );
         }
-
+        // if base stats are the only thing changing, this is a "soft" level up
+        // so we should update the HP along with the max HP if it changes
+        const flatChanged = Object.entries(foundry.utils.flattenObject(changed)).filter(([k, v]) => v !== foundry.utils.getProperty(this._source, k));
+        if (flatChanged.filter(([k, v]) => !CONFIG.PTU.data.stats.keys.some(s => k.startsWith(`system.stats.${s}.value`) || k.startsWith(`system.modifiers.baseStats.${s}.value`))).length == 0) {
+            options.ptu ??= {};
+            options.ptu[this.id] = {
+                oldMaxHp: this.system.health.max,
+            };
+        }
         await super._preUpdate(changed, options, user);
     }
 
@@ -895,10 +925,17 @@ class PTUActor extends Actor {
     /* -------------------------------------------- */
     /* Event Handlers                               */
     /* -------------------------------------------- */
-
     /** @override */
     _onUpdate(data, options, userId) {
         super._onUpdate(data, options, userId);
+
+        // After a level-up, adjust current HP by the difference in max HP
+        if (options.ptu?.[this.id]?.oldMaxHp !== undefined && this.primaryUpdater?.id === game.user.id) {
+            const diff = this.system.health.max - options.ptu[this.id].oldMaxHp;
+            if (diff !== 0 && this.system.health.value !== null) {
+                this.update({ "system.health.value": Math.max(0, this.system.health.value + diff) });
+            }
+        }
 
         if (data.system?.health?.value !== undefined) {
             if (data.system.health.value <= 0 && game.settings.get("ptu", "automation.autoFaint")) {
@@ -990,82 +1027,106 @@ class PTUActor extends Actor {
         }
     }
 
+    /**
+     * When combat ends, do cleanup
+     */
+    async onDeleteCombat() {
+        if (this.primaryUpdater === game.user) {
+            // remove Effect items
+            const effectsToRemove = this.itemTypes.effect.filter(e => e.system.duration?.unit !== "unlimited");
+            await this.deleteEmbeddedDocuments("Item", effectsToRemove.map(e => e.id));
+
+            // Remove EOT flags
+            const itemsWithEOTFlags = this.items.filter(i => i.flags.ptu?.eot);
+            await this.updateEmbeddedDocuments("Item", itemsWithEOTFlags.map(i => ({
+                _id: i.id,
+                "flags.ptu.-=eot": null
+            })));
+        }
+
+        await this.reset();
+    }
+
     /* -------------------------------------------- */
     /* Moves                                        */
     /* -------------------------------------------- */
 
-    prepareMoves({ includeStruggles = true } = {}) {
-        const struggles = includeStruggles ? (() => {
-            const types = Object.keys(CONFIG.PTU.data.typeEffectiveness)
+    /**
+     * Build the synthetic struggle items for this actor based on roll options.
+     * @returns {PTUMove[]}
+     */
+    _prepareStruggles() {
+        const types = Object.keys(CONFIG.PTU.data.typeEffectiveness);
 
-            // Get the data common between all Struggles out of the way first
-            const strugglePlusRollOptions = this.rollOptions.struggle ? Object.keys(this.rollOptions.struggle).filter(o => o.startsWith("skill:")) : [];
-            const isStrugglePlus = (() => {
-                for (const skill of strugglePlusRollOptions) {
-                    if (this.system.skills?.[skill.replace("skill:", "")]?.value?.total > 4) return true;
-                }
-                return this.system.skills?.combat?.value?.total > 4;
-            })();
-
-            const constructStruggleItem = (type, category, range, ptuFlags, isRangedStruggle = false) => {
-                return new Item.implementation({
-                    name: `Struggle (${type})`,
-                    type: "move",
-                    img: CONFIG.PTU.data.typeEffectiveness[type].images.icon,
-                    system: {
-                        ac: isStrugglePlus ? 3 : 4,
-                        damageBase: isStrugglePlus ? 5 : 4,
-                        stab: false,
-                        frequency: "At-Will",
-                        isStruggle: true,
-                        isRangedStruggle: isRangedStruggle,
-                        category: category,
-                        range: range,
-                        type: type
-                    },
-                    flags: {
-                        ptu: ptuFlags || {}
-                    }
-                },
-                    {
-                        parent: this,
-                        temporary: true
-                    }
-                )
+        const strugglePlusRollOptions = this.rollOptions.struggle ? Object.keys(this.rollOptions.struggle).filter(o => o.startsWith("skill:")) : [];
+        const isStrugglePlus = (() => {
+            for (const skill of strugglePlusRollOptions) {
+                if (this.system.skills?.[skill.replace("skill:", "")]?.value?.total > 4) return true;
             }
+            return this.system.skills?.combat?.value?.total > 4;
+        })();
 
-            const struggles = types.reduce((arr, type) => {
-                const localType = type.toLocaleLowerCase(game.i18n.lang);
+        const constructStruggleItem = (type, category, range, ptuFlags, isRangedStruggle = false) => {
+            return new Item.implementation({
+                name: `Struggle (${type})`,
+                type: "move",
+                img: CONFIG.PTU.data.typeEffectiveness[type].images.icon,
+                system: {
+                    ac: isStrugglePlus ? 3 : 4,
+                    damageBase: isStrugglePlus ? 5 : 4,
+                    stab: false,
+                    frequency: { type: "at-will", max: 0 },
+                    actionCost: { standard: false, swift: false, move: false, free: false },
+                    ap: 0,
+                    isStruggle: true,
+                    isRangedStruggle: isRangedStruggle,
+                    category: category,
+                    range: range,
+                    type: type
+                },
+                flags: {
+                    ptu: ptuFlags || {}
+                }
+            },
+                {
+                    parent: this,
+                    temporary: true
+                }
+            );
+        };
 
-                if (this.rollOptions.struggle?.[localType]) {
-                    // If has <type>:ranged option
-                    if (this.rollOptions.struggle?.[`${localType}:ranged`]) {
-                        const typeRule = this.rules.find(r => !r.ignored && r.key == "RollOption" && r.domain == "struggle" && r.option == `${localType}:ranged`);
-                        const ptuFlags = typeRule ? { grantedBy: { id: typeRule.item.id, onDelete: 'detach' } } : {};
-                        arr.push(constructStruggleItem(type, "Physical", `6, 1 Target`, ptuFlags, true))
-                        arr.push(constructStruggleItem(type, "Special", `6, 1 Target`, ptuFlags, true))
-                        return arr;
-                    }
+        return types.reduce((arr, type) => {
+            const localType = type.toLocaleLowerCase(game.i18n.lang);
 
-                    const typeRule = this.rules.find(r => !r.ignored && r.key == "RollOption" && r.domain == "struggle" && r.option == localType);
+            if (this.rollOptions.struggle?.[localType]) {
+                if (this.rollOptions.struggle?.[`${localType}:ranged`]) {
+                    const typeRule = this.rules.find(r => !r.ignored && r.key == "RollOption" && r.domain == "struggle" && r.option == `${localType}:ranged`);
                     const ptuFlags = typeRule ? { grantedBy: { id: typeRule.item.id, onDelete: 'detach' } } : {};
-
-                    // Cover for telekinetic
-                    const range = localType === "normal" ? `${this.system.skills?.focus?.value?.total ?? 1}` : "Melee"
-                    arr.push(constructStruggleItem(type, "Physical", `${range}, 1 Target`, ptuFlags))
-                    arr.push(constructStruggleItem(type, "Special", `${range}, 1 Target`, ptuFlags))
+                    arr.push(constructStruggleItem(type, "Physical", `6, 1 Target`, ptuFlags, true));
+                    arr.push(constructStruggleItem(type, "Special", `6, 1 Target`, ptuFlags, true));
                     return arr;
                 }
 
-                if (localType === "normal") {
-                    arr.push(constructStruggleItem(type, "Physical", "Melee, 1 Target"))
-                }
+                const typeRule = this.rules.find(r => !r.ignored && r.key == "RollOption" && r.domain == "struggle" && r.option == localType);
+                const ptuFlags = typeRule ? { grantedBy: { id: typeRule.item.id, onDelete: 'detach' } } : {};
 
+                // Cover for telekinetic
+                const range = localType === "normal" ? `${this.system.skills?.focus?.value?.total ?? 1}` : "Melee";
+                arr.push(constructStruggleItem(type, "Physical", `${range}, 1 Target`, ptuFlags));
+                arr.push(constructStruggleItem(type, "Special", `${range}, 1 Target`, ptuFlags));
                 return arr;
-            }, []);
+            }
 
-            return struggles;
-        })() : [];
+            if (localType === "normal") {
+                arr.push(constructStruggleItem(type, "Physical", "Melee, 1 Target"));
+            }
+
+            return arr;
+        }, []);
+    }
+
+    prepareMoves({ includeStruggles = true } = {}) {
+        const struggles = includeStruggles ? this._prepareStruggles() : [];
 
         const moves = [];
         this.flags.ptu.disabledOptions = [];
@@ -1093,164 +1154,26 @@ class PTUActor extends Actor {
         }
         this.flags.ptu.disabledOptions.sort((a, b) => b.sort - a.sort);
 
+        // Return a Collection of PTUMove items keyed by their real ID.
+        // The items themselves now carry roll(), damage(), consume(), and onCooldown.
         return new Collection(
             [...moves, ...struggles]
-                .map(move => this.prepareAttack(move))
-                .map(modifier => [modifier.item.id ?? modifier.item.realId, modifier])
+                .map(move => [move.id ?? move.realId, move])
         );
     }
 
+    /**
+     * @deprecated Roll and damage logic has moved to PTUMove#roll() and PTUMove#damage().
+     *   The collection returned by prepareMoves() now contains PTUMove items directly.
+     * @param {PTUMove} move
+     * @returns {PTUMove}
+     */
     prepareAttack(move) {
-        const attackRollOptions = move.getRollOptions("attack");
-        const modifiers = [];
-
-        const selectors = [
-            `${move.id}-attack`,
-            `${move.slug}-attack`,
-            `${move.system.category.toLocaleLowerCase(game.i18n.lang)}-attack`,
-            `${move.system.type.toLocaleLowerCase(game.i18n.lang)}-attack`,
-            `${sluggify(move.system.frequency)}-attack`,
-            "attack-roll",
-            "attack",
-            "all"
-        ]
-        if (move.system.isStruggle) selectors.push("struggle-attack");
-
-        const rangeType = (() => {
-            const range = move.system.range;
-            if (range.includes("Melee")) return "melee";
-            if (range.includes("Self")) return "self";
-            return "ranged";
-
-        })();
-        if (rangeType) selectors.push(`${rangeType}-attack`);
-
-        const rollOptions = [...this.getRollOptions(selectors), ...attackRollOptions];
-
-        const statistic = new StatisticModifier(move.slug, modifiers)
-
-        const action = foundry.utils.mergeObject(statistic, {
-            label: move.name,
-            img: move.img,
-            domains: selectors,
-            item: move,
-            type: "move",
-            category: move.system.category,
-            options: move.system.options?.value ?? []
-        });
-
-        /** TODO: Add Attack Traits if we decide to add those */
-
-        action.breakdown = action.modifiers
-            .filter(m => m.enabled)
-            .map(m => `${m.label}: ${m.signedValue}`)
-            .join(", ");
-
-        if (!move.rollable) return action
-
-        action.roll = async (params = {}) => {
-            const check = new PTUAttackCheck({
-                source: {
-                    actor: this,
-                    item: move,
-                    token: params.token ?? null,
-                    options: rollOptions
-                },
-                targets: params.targets ?? [...game.user.targets],
-                selectors,
-                event: params.event,
-            })
-
-            return await check.executeAttack(params.callback, action);
-        };
-
-        action.damage = async (params = {}) => {
-            const domains = selectors.map(s => s.replace("attack", "damage"));
-            const accuracyRollResult = params.rollResult;
-
-            const preTargets = params.targets?.length > 0 ? params.targets : [...game.user.targets];
-            const targets = [];
-            let outcomes = {};
-            if (preTargets.length > 0 && !(preTargets[0] instanceof PTUActor)) {
-                for (const target of preTargets) {
-                    if (!target.token?.object) continue;
-                    targets.push(target.token.object);
-                    outcomes[target.token.actorId] = target.outcome;
-                }
-                if (targets.length == 0) {
-                    targets.push(...game.user.targets);
-                    outcomes = null;
-                }
-            }
-
-            const check = new PTUDamageCheck({
-                source: {
-                    actor: this,
-                    item: move,
-                    token: params.token ?? null,
-                    options: params.options ?? []
-                },
-                targets,
-                outcomes,
-                selectors: domains,
-                event: params.event,
-                accuracyRollResult
-            })
-
-            return await check.executeDamage(params.callback, action);
-
-            const contexts = []
-
-            const getContext = async (target) => {
-                return await this.getCheckContext({
-                    item: move,
-                    domains: selectors,
-                    statistic: action,
-                    target: { token: target },
-                    options: new Set([...rollOptions, ...params.options, ...action.options]),
-                    viewOnly: params.getFormula ?? false
-                });
-            }
-
-            for (const target of targets) {
-                contexts.push(await getContext(target));
-            }
-            if (contexts.length == 0) contexts.push(await getContext(null));
-
-            const { item, actor, token } = contexts[0].self;
-
-            const damageContext = {
-                type: "damage-roll",
-                sourceType: "attack",
-                actor,
-                token,
-                item,
-                action,
-                targets: contexts.map(c => ({ ...c.target, options: c.options })),
-                outcomes,
-                options: contexts.length > 1 ? contexts[0].options.filter(o => !o.startsWith("target")) : contexts[0].options,
-                domains,
-                ...eventToRollParams(params.event)
-            }
-            if (params.getFormula) damageContext.skipDialog = true;
-
-            const damage = await PTUMoveDamage.calculate({
-                move,
-                actor: damageContext.actor,
-                context: damageContext
-            });
-            if (!damage) return null;
-
-            damageContext.domains = damage.domains;
-
-            if (params.getFormula) {
-                return damage;
-            } else {
-                return PTUDamage.roll(damage, damageContext, params.event, params.callback);
-            }
-        };
-
-        return action;
+        foundry.utils.logCompatibilityWarning(
+            "PTUActor#prepareAttack() is deprecated. Move roll/damage logic now lives on PTUMove#roll(), #damage(), and #use(). The actor.attacks collection contains PTUMove items directly.",
+            { since: "2.0", until: "3.0", stack: false }
+        );
+        return move;
     }
 
     prepareSkill(skill) {

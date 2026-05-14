@@ -72,7 +72,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "TuFJ2nmx9i2k6KYk",
@@ -92,8 +94,7 @@
     "systemVersion": "4.4.3.12",
     "createdTime": 1776463293020,
     "modifiedTime": 1776548430235,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW",
-    "compendiumSource": null
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "aGw6HytOvK0vkQxA",
   "sort": 0

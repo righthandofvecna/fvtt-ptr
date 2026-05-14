@@ -1,5 +1,5 @@
 {
-  "name": "Telepathic Warning [CR]",
+  "name": "Telepathic Warning",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You or an Ally use an Attack\nEffect: You’re able to give your allies heed of attacks. All allies that would be hit by the attack may take a Shift Action as an Interrupt to move out of the area of effect of the attack. Using this leaves discoverable Psychic Residue on each affected ally. You may only use Telepathic Warning as long as you have the Telepath Capability.\nBonus: Each Ally that would have been damaged gains 1 Spirit. Each ally can only benefit from this once per Scene.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "telepathic-warning-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.942Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1 AP – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
     "prerequisites": [
       "Telepathic Awareness",
       "Expert Focus or Intuition"
     ],
-    "frequency": "1 AP – Free Action",
     "notes": "",
     "free": false,
-    "class": "Telepath [CR]",
-    "name": "Telepathic Warning [CR]"
+    "class": "Telepath",
+    "name": "Telepathic Warning [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "telepathic-warning"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830013,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

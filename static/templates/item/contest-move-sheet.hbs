@@ -50,7 +50,7 @@
                                     <input
                                         class="ml-1 mr-1"
                                         type="text"
-                                        value="{{item.system.frequency}}"
+                                        value="{{combinedFrequency item}}"
                                         disabled
                                     />
                                 </span>
@@ -81,10 +81,7 @@
                     </select>
                 </div>
             </div>
-            <div class="item-row">
-                <label for="system.frequency">{{localize "ITEM.Frequency"}}</label>
-                <input class="ml-1 mr-1" name="system.frequency" type="text" value="{{item.system.frequency}}" placeholder="{{localize "ITEM.Frequency"}}"/>
-            </div>
+            {{> systems/ptu/static/templates/partials/item-frequency-partial.hbs hasAP=false}}
             <div class="item-row">
                 <label for="system.dice">{{localize "ITEM.Dice"}}</label>
                 <input class="ml-1 mr-1" name="system.dice" type="number" value="{{item.system.dice}}" placeholder="{{localize "ITEM.Dice"}}"/>

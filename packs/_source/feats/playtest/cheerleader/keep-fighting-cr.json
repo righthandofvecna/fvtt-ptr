@@ -1,5 +1,5 @@
 {
-  "name": "Keep Fighting! [CR]",
+  "name": "Keep Fighting!",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: Your Pokémon or an Ally Trainer with over 1 Hit Point is reduced to 0 Hit Points or lower and faints\nEffect: Choose one ally, they recover 3 ticks of Hit Points, remove all Status Conditions and gain a +1 CS in 2 Stats of their choice. Keep Fighting! may target a Pokémon in a Poké Ball.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "keep-fighting-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.730Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "daily",
+      "max": 2,
+      "custom": "Daily x2 – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "5 Cheerleader Features",
       "Master Charm"
     ],
-    "frequency": "Daily x2 – Free Action",
     "notes": "",
     "free": false,
-    "class": "Cheerleader [CR]",
-    "name": "Keep Fighting! [CR]"
+    "class": "Cheerleader",
+    "name": "Keep Fighting! [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "keep-fighting"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830795,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

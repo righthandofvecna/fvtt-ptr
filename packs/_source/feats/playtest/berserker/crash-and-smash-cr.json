@@ -1,5 +1,5 @@
 {
-  "name": "Crash and Smash [CR]",
+  "name": "Crash and Smash",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Double Edge and Thrash. You may use these moves as a Weapon Attack when wielding Melee Weapons.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "crash-and-smash-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.599Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -32,15 +39,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Frenzy",
       "Expert Combat"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Berserker [CR]",
-    "name": "Crash and Smash [CR]"
+    "class": "Berserker",
+    "name": "Crash and Smash [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "crash-and-smash"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -58,10 +89,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830629,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

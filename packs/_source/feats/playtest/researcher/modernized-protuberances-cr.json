@@ -1,5 +1,5 @@
 {
-  "name": "Modernized Protuberances [CR]",
+  "name": "Modernized Protuberances",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: The remains of a Fossil you revived\nEffect: You produce a \"Primal\" Item from the remnants of the Fossil. The effect of a Primal Item is based on the highest Base Stat of the individual Pokémon being Revived, counting the effects of Nature but no other effects that alter Base Stats. If there is a tie, the GM decides which Base Stat is used. A Fossil Pokémon may hold a single Primal Item without taking up their Held Item slot, but cannot hold two of same Primal Item this way.\n- HP – Primal Crest: The holder gains a +3 Bonus to all Save Checks.\n- Attack – Primal Razors: The holder’s Critical Hit Range is extended by +1.\n- Defense – Primal Spines: When the holder is hit with a damaging Melee Attack, the attacker loses a Tick of Hit Points.\n- Special Attack – Primal Proboscis: The holder’s Effect Range is extended by +1.\n- Special Defense – Primal Shell: The holder gains 10 Damage Reduction against Ranged Attacks.\n- Speed – Primal Fins: The holder gains +2 Evasion against Status Moves.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "modernized-protuberances-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.421Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Fossil Restoration",
       "Expert Pokémon Education"
     ],
-    "frequency": "At-Will – Extended Action",
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Modernized Protuberances [CR]"
+    "class": "Researcher",
+    "name": "Modernized Protuberances [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "modernized-protuberances"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829484,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

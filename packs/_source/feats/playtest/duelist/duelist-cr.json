@@ -1,5 +1,5 @@
 {
-  "name": "Duelist [CR]",
+  "name": "Duelist",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A Pokémon or Trainer, Priority (Limited)\nEffect: The Foe becomes Tagged; or if the foe is already Tagged, the foe loses the Tag. Only one foe can be Tagged this way at a time. If a new Foe is Tagged, all other Tags are lost.\nYour Pokémon under the effects of Focused Training gain half their Momentum (rounded up) as a Bonus to Accuracy and Evasion against Tagged Foes, but as long as a Foe is Tagged, they do not benefit from Focused Training’s Accuracy Bonus against other foes.\nMechanic – Momentum:\n- Your Pokémon begins each Scene with 0 Momentum.\n- At the end of each Combat round, your Pokémon gains +1 Momentum.\n- Whenever your Pokémon hits a Tagged foe, they gain +1 Momentum.\n- Your Pokémon has a maximum of 6 Momentum.\n- All Momentum is lost when your Pokémon Faints, your Pokémon is recalled, or combat ends.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "duelist-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.473Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -21,15 +28,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Focused Training",
       "Novice Focus"
     ],
-    "frequency": "At-Will – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Duelist [CR]",
-    "name": "Duelist [CR]"
+    "class": "Duelist",
+    "name": "Duelist [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "duelist"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -43,10 +74,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831544,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

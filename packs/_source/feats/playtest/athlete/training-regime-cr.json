@@ -1,5 +1,5 @@
 {
-  "name": "Training Regime [CR]",
+  "name": "Training Regime",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain additional static bonuses based on your Trained Stats.\n- Attack: You gain a +2 Bonus on Accuracy Checks to hit with Combat Maneuvers.\n- Defense: You gain 5 Damage Reduction when Intercepting attacks.\n- Special Attack: Your Damaging Athlete Moves may be your choice of Physical or Special, adding the appropriate Attack stat.\n- Special Defense: You gain a +2 Bonus to Opposed Checks to resist Combat Maneuvers.\n- Speed: When you Sprint, you double your Movement Capability instead of increasing by 50%.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "training-regime-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.302Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Athlete"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Athlete [CR]",
-    "name": "Training Regime [CR]"
+    "class": "Athlete",
+    "name": "Training Regime [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "training-regime"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -56,10 +87,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831368,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

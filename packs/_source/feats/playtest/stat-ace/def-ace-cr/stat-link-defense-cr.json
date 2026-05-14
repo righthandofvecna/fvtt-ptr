@@ -1,6 +1,6 @@
 {
   "folder": "h7hcbbq0jjRT9ACS",
-  "name": "Stat Link (Defense) [CR]",
+  "name": "Stat Link (Defense)",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
@@ -11,8 +11,15 @@
     "enabled": true,
     "slug": "stat-link-defense-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.972Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -24,13 +31,37 @@
       "Playtest",
       "CR"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1AP - Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
     "prerequisites": [
-      "Stat Ace (Defense) [CR]"
+      "Stat Ace (Defense)"
     ],
-    "frequency": "1AP - Free Action",
     "notes": "",
     "free": false,
-    "class": "Stat Ace (Defense) [CR]"
+    "class": "Stat Ace (Defense)",
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-link-defense"
   },
   "effects": [],
   "flags": {
@@ -44,11 +75,11 @@
     "default": 0
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710766811909,
-    "modifiedTime": 1710766811909,
+    "modifiedTime": 1778200831019,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

@@ -1,0 +1,97 @@
+{
+  "name": "Desperate Strike",
+  "system": {
+    "origin": "[F&S Playtest]",
+    "effect": "Trigger - Your Pokémon triggers Cruelty, or scores a Critical Hit with damaging attack.\nEffect: Your Pokemon may apply the effects of Cruelty to the attack without expending Cruelty’s Frequency. Cruelty’s effects may be purchased as if the foe had additional injuries equal to the number of injuries on the user. Desperate Strike may be used once per Scene per Pokémon.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "desperate-strike-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.129Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Playtest",
+      "F&S"
+    ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 - Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "prerequisites": [
+      "Savage Strike",
+      "Expert Intimidate"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Taskmaster",
+    "name": "Desperate Strike",
+    "useCount": 0,
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "desperate-strike"
+  },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "prereqBackup": "Savage Strike, Expert Intimidate"
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368081712,
+    "modifiedTime": 1778200831195,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "folder": "NlEB7XJnDWyGbZnQ",
+  "_id": "lruDqni8G4T6Z4WS",
+  "sort": 4300000,
+  "ownership": {
+    "default": 0
+  }
+}

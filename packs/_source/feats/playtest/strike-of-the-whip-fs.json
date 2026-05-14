@@ -1,0 +1,97 @@
+{
+  "name": "Strike of the Whip",
+  "system": {
+    "origin": "[F&S Playtest]",
+    "effect": "Trigger - You use Press\nEffect: You may apply 1 or more of the following effects to the Pokémon hit by Press:\n»» Give the target 1 Injury and a Tick of Temporary Hit Points.\n»» Spend 1 AP and cure the target of Confusion, Infatuation, Rage, and Suppression.\n»» Use an [Orders] with targets you have on the target as a Free Action.\n»» If the target is Weary, the target gains +1 temporary Spirit that can be spent as if not Weary.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "strike-of-the-whip-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.625Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Playtest",
+      "F&S"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "prerequisites": [
+      "Taskmaster",
+      "Press"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Taskmaster",
+    "name": "Strike of the Whip",
+    "useCount": 0,
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "strike-of-the-whip"
+  },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "prereqBackup": "Taskmaster, Press"
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368078946,
+    "modifiedTime": 1778200828680,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "folder": "NlEB7XJnDWyGbZnQ",
+  "_id": "4jxHNxdqNp1U7x8q",
+  "sort": 500000,
+  "ownership": {
+    "default": 0
+  }
+}

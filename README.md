@@ -38,6 +38,42 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Added a system for restricting items by "Content Set"](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/932)
+- [Added fallback support for webm token images](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/933)
+- [Added PokeDex updates to the token scan action](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/935)
+- Updated the Rulebook Journal with WarforgedWordsmith's updates
+- [Support Journals in the content-sync system](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/936)
+- [Item Piles Compatibility Fix](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/443)
+- Dev Option to allow Unlinked Tokens - NOT currently ready to test in a live world. Turn on at your own risk
+- Add a system for showing content devs if a move has been automated in system (and searching by that in the compendium browser)
+- Added new roll options (`self:spdef:stage:2`) for more automation (and automated Defensive Charm with them)
+- Removed the range field for action points (so scrolling on the character sheet doesn't edit your action point total accidentally)
+- [Fixed a bug that was turning features in the token panel back on automatically](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/899)
+- Re-added the AP cost field for feats and edges
+- Fixed a bug that meant that half the stage change effects were excluded from the compendium
+- [Token panel improvements - Undock and resize, pokedex button](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/924)
+- [Dragging moves directly off species sheets](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/893)
+- [Improving the daily pokemon training sheet](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/920)
+- Fixed overhealing due to clearing injuries bug
+- [Fine tuned the advancement reminder settings - exclude NPCs and other people's pokemon](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/926)
+- Finished adding the proper UI editors for all of the remaining Rule Element types
+- Added a user setting to disable the Advancement Pending indicator in the sidebar
+- [Improved the Frequency Tracking UI, added house rule settings](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/912)
+- Added a GM Control panel (accessible via the little shield icon on the right, in the sidebar controls) for resetting move frequencies and healing all actors
+- Added a new system for formulaic Damage Bases (work-in-progress)
+- Display type effectiveness in the token panel
+- [Added automatic Frequency tracking for moves, abilities, etc](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/878)
+- [Boss multiple-initiatives now don't fail to roll](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/903)
+- [On Level-Up, increase current HP by max HP difference](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/850)
+- [Adds Advancement pending indicator](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/901)
+- [Add Capabilities tab to the Compendium Browser](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/898) - you still need to enable it in the compendium browser settings
+- [Dragging Items onto a Character Sheet now works the first time](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/892)
+- [Temporary effects are now removed after combat ends](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/902)
+- Made the Weather panel not have disabled controls
+- Added a "minimize" button to the token panel, which persists per user
+- [Make Type and Value of the "Effectiveness" rule element resolve injected properties](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/888)
+- [Add XP awarding automation post-combat](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/881)
+- [Let "Flat Modifier" rule elements access its own injected item properties](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/880)
 - Redesigned Token Panel moved from Top Right to Bottom Right (near old position) beneath the sidebar
 - Add `move:super-effective` and `move:not-very-effective` Roll Options
 - Fix rolling a skill while targeting a pokemon

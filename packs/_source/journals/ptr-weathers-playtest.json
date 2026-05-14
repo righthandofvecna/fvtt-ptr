@@ -1565,6 +1565,8 @@
   },
   "categories": [],
   "system": {
-    "slug": "ptr-weathers-playtest"
+    "slug": "ptr-weathers-playtest",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

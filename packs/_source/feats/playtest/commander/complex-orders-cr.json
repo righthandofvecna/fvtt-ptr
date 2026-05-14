@@ -1,5 +1,5 @@
 {
-  "name": "Complex Orders [CR]",
+  "name": "Complex Orders",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You give [Orders] that have targets.\nEffect: You may choose a different [Order] to give to each Target. You must pay all AP costs and follow Frequency restrictions for all Orders used in this way.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "complex-orders-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.628Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Shift Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": true,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Commander",
       "at least two Features with the [Orders] Tag that have targets"
     ],
-    "frequency": "At-Will – Shift Action",
     "notes": "",
     "free": false,
-    "class": "Commander [CR]",
-    "name": "Complex Orders [CR]"
+    "class": "Commander",
+    "name": "Complex Orders [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "complex-orders"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200828680,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

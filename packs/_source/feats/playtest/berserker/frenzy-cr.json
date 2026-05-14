@@ -1,5 +1,5 @@
 {
-  "name": "Frenzy [CR]",
+  "name": "Frenzy",
   "system": {
     "origin": "Class Rework",
     "effect": "Condition: You must be Enraged to use this Feature\nEffect: You may immediately take your turn with Priority. If you do, you are instantly cured of Slowed and Stuck, and for the rest of this turn gain a +2 Bonus to Critical Hit Range, +2 Bonus to Movement Speed, and +2 Bonus to Acrobatics, Athletics, Combat, and Intimidate Checks.\nBonus: You gain the Anger Point Ability.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "frenzy-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.731Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Berserker",
       "Adept Combat"
     ],
-    "frequency": "Scene x2 – Free Action",
     "notes": "",
     "free": false,
-    "class": "Berserker [CR]",
-    "name": "Frenzy [CR]"
+    "class": "Berserker",
+    "name": "Frenzy [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "frenzy"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830795,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

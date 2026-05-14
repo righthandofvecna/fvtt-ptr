@@ -1,5 +1,5 @@
 {
-  "name": "Expend Momentum [CR]",
+  "name": "Expend Momentum",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon under the effects of Focused Training\nEffect: Apply one of the following effects on the target by spending that much Momentum.\n- Spend 1 Momentum: Your Pokémon regains use of a EOT Frequency Move.\n- Spend 3 Momentum: Your Pokémon regains a use of Scene Frequency Move. May be chosen only once per Scene per Pokémon.\n- Spend 5 Momentum: Your Pokémon regains a use of Daily Frequency Move. May be chosen only once per Day per Pokémon.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "expend-momentum-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.943Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -21,14 +28,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Duelist"
     ],
-    "frequency": "At-Will – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Duelist [CR]",
-    "name": "Expend Momentum [CR]"
+    "class": "Duelist",
+    "name": "Expend Momentum [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "expend-momentum"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830013,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

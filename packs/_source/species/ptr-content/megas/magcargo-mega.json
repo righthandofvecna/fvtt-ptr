@@ -500,7 +500,7 @@
         "type": "body"
       }
     },
-    "slug": "magcargo",
+    "slug": "magcargo-mega",
     "rules": [],
     "source": {
       "value": "PTR Core Dex"
@@ -512,7 +512,9 @@
       "2": ""
     },
     "stackSlugs": false,
-    "enabled": false
+    "enabled": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "LCXOG6QHNh9gd0Nv",

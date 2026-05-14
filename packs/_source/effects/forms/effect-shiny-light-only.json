@@ -35,7 +35,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-shiny",
+    "slug": "effect-shiny-light-only",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -63,7 +63,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "DJzDYBNllxgyeiok",

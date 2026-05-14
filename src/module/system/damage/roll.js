@@ -41,10 +41,7 @@ class DamageRoll extends foundry.dice.Roll {
 
         const item = await (async () => {
             if (!actor) return null;
-            const modifier = actor.attacks.get(attack.id);
-            if (!modifier) return null;
-
-            return modifier.item;
+            return actor.attacks.get(attack.id) ?? null;
         })();
 
         const targets = await (async () => {

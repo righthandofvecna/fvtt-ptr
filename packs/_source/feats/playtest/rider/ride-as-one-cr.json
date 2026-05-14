@@ -1,5 +1,5 @@
 {
-  "name": "Ride as One [CR]",
+  "name": "Ride as One",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: While you are Mounted, you and your Mount each use the highest of each other’s Speed Evasion. If both you and your Mount have the same Speed Evasion, you instead each receive a +1 bonus to Speed Evasion. Whenever one of you receives Initiative, either of you may take your turn. When the next person would receive initiative, the person that did not take their turn then takes it.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "ride-as-one-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.463Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Rider"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Rider [CR]",
-    "name": "Ride as One [CR]"
+    "class": "Rider",
+    "name": "Ride as One [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "ride-as-one"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -52,10 +83,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200828533,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

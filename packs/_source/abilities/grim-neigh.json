@@ -4,14 +4,21 @@
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "Trigger - The user causes a foe to Faint with a damaging attack\nThe user’s Special Attack is raised by 1 Combat Stage. In addition, all foes within 3m of the user take a -2 penalty to Accuracy for one full round.",
+    "effect": "Trigger - The user causes a foe to Faint with a damaging attack\nThe user’s Special Attack is raised by 1 Combat Stage. In addition, all foes within 3m of the user take a -2 penalty to Accuracy for one full round.\n\n@UUID[Compendium.ptu.effects.Item.TI2IsRK7kf2oy9oJ]\n\n@UUID[Compendium.ptu.effects.Item.43e3GWmenSKbUgkc]",
     "snippet": "",
     "rules": [],
     "enabled": true,
     "slug": "grim-neigh",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:16.122Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -19,9 +26,33 @@
     },
     "stackSlugs": false,
     "keywords": [],
-    "frequency": "At-Will - Free Action",
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will - Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "_id": "AvclTZSnxJN5PAJg",
   "effects": [],
@@ -30,13 +61,19 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.21",
+    "coreVersion": "13.351",
     "createdTime": 1692968394056,
-    "modifiedTime": 1707761783909,
+    "modifiedTime": 1778568616200,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -1,5 +1,5 @@
 {
-  "name": "Born In The Saddle [CR]",
+  "name": "Born In The Saddle",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: Your Mount with Run Up makes a Damage Roll for a Dash or Pass Move OR Your Mount with Run Away is hit with a damaging attack.\nEffect: The target receives the following effects based on which Ability it possesses.\n- Run Up: Your Pokémon adds their Speed Stat in addition to their normal attacking Stat to their Damage Roll. The target gains Damage Reduction against this attack equal to their own Speed Stat.\n- Run Away: Your pokemon gains Damage Reduction against this attack equal to the difference between their own Speed Stat and the attacker's Speed Stat.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "born-in-the-saddle-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.522Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Conqueror’s March",
       "Expert Acrobatics or Athletics"
     ],
-    "frequency": "Scene x2 – Free Action",
     "notes": "",
     "free": false,
-    "class": "Rider [CR]",
-    "name": "Born In The Saddle [CR]"
+    "class": "Rider",
+    "name": "Born In The Saddle [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "born-in-the-saddle"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830555,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

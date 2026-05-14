@@ -1,5 +1,5 @@
 {
-  "name": "Psionic Overload [CR]",
+  "name": "Psionic Overload",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit with a Damaging Telekinetic Move or use another Telekinetic Move\nEffect: The effect of this Feature depends on the Triggering Move.\n- Barrier: Place 2 additional segments of Barrier, and you may place the Barriers anywhere within 6 meters of yourself. They do not need to remain contiguous, nor does one segment have to touch you.\n- Kinesis: The user of the triggering attack becomes Confused and Suppressed.\n- Meditate: You gain +1 Defense, Special Attack, and Special Defense Combat Stages.\n- Psychic: The target becomes Vulnerable for one full round, and may be Pushed 2 additional meters.\n- Telekinesis: At the end of each turn that the target remains Lifted, they lose a Tick of Hit Points.\n- Twin Beam: You may use of Twin Beam again, ignoring Frequency, against the same or another target in range, although this use of Twin Beam lacks the \"Double Strike\" keyword.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "psionic-overload-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.116Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "2 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": false
+    },
     "prerequisites": [
       "PK Omega",
       "Master Focus"
     ],
-    "frequency": "2 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Telekinetic [CR]",
-    "name": "Psionic Overload [CR]"
+    "class": "Telekinetic",
+    "name": "Psionic Overload [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "psionic-overload"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -57,10 +88,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830186,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

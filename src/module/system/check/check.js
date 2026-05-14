@@ -630,24 +630,19 @@ class PTUCheck {
         const attack = (() => {
             const item = context.item;
             if (isAttack && item && context.actor) {
-                const attacks = context.actor?.system.attacks ?? [];
-                const attack = attacks.get(item.realId);//attacks.find(a => a.item?.id === item.id && a.item.slug === item.slug);
+                return {
+                    actor: context.actor.uuid,
+                    id: item.realId ?? item._id,
+                    name: item.name,
+                    targets: (() => {
+                        const targets = context.targets;
+                        if (!targets) return null;
 
-                if (attack) {
-                    return {
-                        actor: context.actor.uuid,
-                        id: attack.item.realId ?? attack.item._id,
-                        name: attack.item.name,
-                        targets: (() => {
-                            const targets = context.targets;
-                            if (!targets) return null;
-
-                            return targets.map(target => ({
-                                actor: target.actor?.uuid,
-                                token: target.token?.uuid ?? target.token?.id
-                            }));
-                        })(),
-                    }
+                        return targets.map(target => ({
+                            actor: target.actor?.uuid,
+                            token: target.token?.uuid ?? target.token?.id
+                        }));
+                    })(),
                 }
             }
             return null;

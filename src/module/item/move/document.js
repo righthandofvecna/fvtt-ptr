@@ -1,12 +1,15 @@
 import { sluggify } from '../../../util/misc.js';
 import { PTUCondition, PTUItem } from '../index.js';
+import { PTUAttackCheck } from '../../system/check/attack.js';
+import { PTUDamageCheck } from '../../system/check/damage.js';
+import { resolveDbFormula } from '../../../util/value-resolver.js';
 class PTUMove extends PTUItem {
     get rollable() {
-        return !(isNaN(Number(this.system.ac ?? undefined)) && isNaN(Number(this.system.damageBase ?? undefined)));
+        return !(isNaN(Number(this.system.ac ?? undefined)) && !this.isDamaging);
     }
 
     get usable() {
-        return !this.rollable && this.system.frequency !== "Static";
+        return !this.rollable && this.system.frequency?.type !== "static";
     }
 
     /** @override */
@@ -16,7 +19,7 @@ class PTUMove extends PTUItem {
             options.all['move:is-stab'] = true;
             options.item['move:is-stab'] = true;
         }
-        if (this.isDamaging && this.damageBase.isStab && !!options.all[`move:damage-base:${this.damageBase.preStab}`]) {
+        if (this.isDamaging && !this.damageBase.isFormula && this.damageBase.isStab && !!options.all[`move:damage-base:${this.damageBase.preStab}`]) {
             delete this.flags.ptu.rollOptions.all[`move:damage-base:${this.damageBase.preStab}`];
             delete this.flags.ptu.rollOptions.item[`move:damage-base:${this.damageBase.preStab}`];
 
@@ -41,23 +44,188 @@ class PTUMove extends PTUItem {
     }
 
     get isDamaging() {
-        return !isNaN(Number(this.system.damageBase ?? undefined));
+        const raw = String(this.system.damageBase ?? "").trim();
+        if (!raw) return false;
+        if (raw === "--") return false;
+        if (!isNaN(Number(raw))) return true;
+        // non-numeric and non-arithmetic without a {{...}} token = not a valid formula
+        if ((/[^0-9 +\-\*\/\(\)]/i).test(raw) && !/\{\{.*\}\}/.test(raw)) return false;
+        return true;
     }
 
     get isFiveStrike() {
         return (!!this.rollOptions.item["move:range:five-strike"]) || (!!this.rollOptions.item["move:five-strike"]);
     }
 
+    /**
+     * Numeric DB value suitable for UI display — formula resolved with no target (using fallback defaults), STAB applied.
+     * Returns null if undamaging or formula is unresolvable.
+     * @returns {number|null}
+     */
+    get dbPreviewNumber() {
+        const db = this.damageBase;
+        if (!db) return null;
+        if (!db.isFormula) return db.postStab;
+        const resolved = resolveDbFormula(db.formula, {});
+        if (resolved === null) return null;
+        return resolved + (db.isStab ? 2 : 0);
+    }
+
     get damageBase() {
         if (!this.isDamaging) return null;
+        const raw = String(this.system.damageBase).trim();
+        if (isNaN(Number(raw))) {
+            // Formula DB — preStab/postStab are resolved at roll time
+            return {
+                preStab: null,
+                postStab: null,
+                isStab: !this.system.isStruggle && !!this.actor?.types.includes(this.system.type),
+                isFormula: true,
+                formula: raw,
+            };
+        }
         const result = {
-            preStab: isNaN(Number(this.system.damageBase)) ? 0 : Number(this.system.damageBase),
+            preStab: Number(this.system.damageBase),
             postStab: 0,
             isStab: false,
+            isFormula: false,
         }
         result.postStab = result.preStab + (!this.system.isStruggle && this.actor?.types.includes(this.system.type) ? 2 : 0);
         result.isStab = result.preStab !== result.postStab;
         return result;
+    }
+
+    /**
+     * The selector array used by the check system to locate modifiers for this move.
+     * Mirrors the logic formerly in PTUActor#prepareAttack().
+     */
+    get selectors() {
+        const selectors = [
+            `${this.id}-attack`,
+            `${this.slug}-attack`,
+            `${this.system.category.toLocaleLowerCase(game.i18n.lang)}-attack`,
+            `${this.system.type.toLocaleLowerCase(game.i18n.lang)}-attack`,
+            `${this.system.frequency?.type ?? "at-will"}-attack`,
+            "attack-roll",
+            "attack",
+            "all"
+        ];
+        if (this.system.isStruggle) selectors.push("struggle-attack");
+
+        const rangeType = (() => {
+            const range = this.system.range;
+            if (range?.includes("Melee")) return "melee";
+            if (range?.includes("Self")) return "self";
+            return "ranged";
+        })();
+        if (rangeType) selectors.push(`${rangeType}-attack`);
+
+        return selectors;
+    }
+
+    /**
+     * @deprecated Access the move item directly instead of going through a wrapper's `.item`.
+     * @returns {PTUMove} this
+     */
+    get item() {
+        foundry.utils.logCompatibilityWarning(
+            "PTUMove#item is deprecated. The collection now contains PTUMove items directly; use the move itself.",
+            { since: "2.0", until: "3.0", stack: false }
+        );
+        return this;
+    }
+
+    /**
+     * @deprecated Use move.name directly.
+     * @returns {string}
+     */
+    get label() {
+        foundry.utils.logCompatibilityWarning(
+            "PTUMove#label is deprecated. Use move.name instead.",
+            { since: "2.0", until: "3.0", stack: false }
+        );
+        return this.name;
+    }
+
+    /**
+     * Roll an accuracy check for this move, running the full PTUAttackCheck pipeline.
+     * @param {object} [params={}]
+     * @param {Event}   [params.event]
+     * @param {any[]}   [params.targets]
+     * @param {any}     [params.token]
+     * @param {Function} [params.callback]
+     * @returns {Promise<AttackRoll|null>}
+     */
+    async roll(params = {}) {
+        const actor = this.actor;
+        if (!actor) return null;
+
+        const attackRollOptions = this.getRollOptions("attack");
+        const rollOptions = [...actor.getRollOptions(this.selectors), ...attackRollOptions];
+
+        const check = new PTUAttackCheck({
+            source: {
+                actor,
+                item: this,
+                token: params.token ?? null,
+                options: rollOptions
+            },
+            targets: params.targets ?? [...game.user.targets],
+            selectors: this.selectors,
+            event: params.event,
+        });
+
+        return await check.executeAttack(params.callback ?? null, null);
+    }
+
+    /**
+     * Roll damage for this move, running the full PTUDamageCheck pipeline.
+     * @param {object} [params={}]
+     * @param {Event}   [params.event]
+     * @param {any[]}   [params.targets]  Array of {actor, token, outcome} objects from a prior attack message.
+     * @param {any}     [params.token]
+     * @param {string[]} [params.options]
+     * @param {number}  [params.rollResult]
+     * @param {Function} [params.callback]
+     * @returns {Promise<DamageRoll|null>}
+     */
+    async damage(params = {}) {
+        const actor = this.actor;
+        if (!actor) return null;
+
+        const domains = this.selectors.map(s => s.replace("attack", "damage"));
+        const accuracyRollResult = params.rollResult;
+
+        const preTargets = params.targets?.length > 0 ? params.targets : [...game.user.targets];
+        const targets = [];
+        let outcomes = {};
+        if (preTargets.length > 0 && !(preTargets[0] instanceof Actor)) {
+            for (const target of preTargets) {
+                if (!target.token?.object) continue;
+                targets.push(target.token.object);
+                outcomes[target.token.actorId] = target.outcome;
+            }
+            if (targets.length === 0) {
+                targets.push(...game.user.targets);
+                outcomes = null;
+            }
+        }
+
+        const check = new PTUDamageCheck({
+            source: {
+                actor,
+                item: this,
+                token: params.token ?? null,
+                options: params.options ?? []
+            },
+            targets,
+            outcomes,
+            selectors: domains,
+            event: params.event,
+            accuracyRollResult
+        });
+
+        return await check.executeDamage(params.callback ?? null, null);
     }
 
     /** @override */
@@ -68,7 +236,7 @@ class PTUMove extends PTUItem {
             all: {
                 [`move:type:${sluggify(this.system.type)}`]: true,
                 [`move:category:${sluggify(this.system.category)}`]: true,
-                [`move:frequency:${sluggify(this.system.frequency)}`]: true,
+                [`move:frequency:${this.system.frequency?.type ?? "at-will"}`]: true,
             },
         }
 
@@ -77,7 +245,7 @@ class PTUMove extends PTUItem {
             rollOptions.all[`move:range:${sluggify(range)}`] = true;
         }
 
-        if (this.isDamaging) {
+        if (this.isDamaging && !this.damageBase.isFormula) {
             rollOptions.all[`move:damage-base:${this.damageBase.postStab}`] = true;
             rollOptions.all[`move:damage-base:pre-stab:${this.damageBase.preStab}`] = true;
         }
@@ -109,7 +277,34 @@ class PTUMove extends PTUItem {
 
     /** @override */
     async use(options = {}) {
-        if (this.isDamaging || this.system.frequency === "Static") return;
+        // Rollable moves: run the attack check, then optionally chain damage.
+        if (this.rollable) {
+            return await this.roll({
+                event: options.event,
+                targets: options.targets,
+                token: options.token,
+                callback: async (rolls, targets, msg, event) => {
+                    await this.consume();
+
+                    if (!game.settings.get("ptu", "autoRollDamage")) return;
+                    if (!this.isDamaging) return;
+
+                    const params = {
+                        event,
+                        options: msg.context?.options ?? [],
+                        actor: msg.actor,
+                        targets: msg.targets,
+                        rollResult: msg.context?.rollResult ?? null,
+                    };
+                    const result = await this.damage(params);
+                    if (result === null) {
+                        await msg.update({ "flags.ptu.resolved": false });
+                    }
+                }
+            });
+        }
+
+        if (this.system.frequency?.type === "static") return;
 
         let didSomething = false;
         const conditions = new Set(this.actor.getFilteredRollOptions("condition"))

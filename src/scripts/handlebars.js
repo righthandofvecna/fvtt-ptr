@@ -14,28 +14,87 @@ function _registerPTUHelpers() {
 
     Handlebars.registerHelper("json", function (context) { return JSON.stringify(context); });
 
-    Handlebars.registerHelper("shortFrequency", function (frequency) {
-        switch (frequency.toLowerCase()) {
-            case "at-will":
-                return "At-Will";
-            case "eot":
-                return "EOT";
-            case "scene":
-                return "1x Scene";
-            case "scene x2":
-                return "2x S";
-            case "scene x3":
-                return "3x S";
-            case "daily":
-                return "1x D";
-            case "daily x2":
-                return "2x D";
-            case "daily x3":
-                return "3x D";
-            default:
-                return frequency;
+    Handlebars.registerHelper("combinedFrequency", function (item) {
+        const frequency = item.system?.frequency ?? item?.frequency;
+        const actionCost = item.system?.actionCost ?? item?.actionCost;
+        const ap = item.system?.ap ?? item?.ap;
+        // New object format: { type, max }
+        if (frequency && typeof frequency === "object") {
+            const { type, max } = frequency;
+            if (type === "custom") return frequency.custom || "";
+
+            const freqString = (() => {
+                if (type == "atwill") return "";
+                const freq = CONFIG.PTU.data.frequencies[type];
+                const short = game.i18n.localize(freq?.label ?? type[0].toUpperCase());
+                if (!freq?.limited) return short;
+                return `${max ?? 1}× ${short}`;
+            })();
+            const actionString = (()=>{
+                if (!actionCost) return "";
+                const costs = Object.entries(actionCost).filter(([_, v]) => v).map(([k, _]) => game.i18n.localize(CONFIG.PTU.data.actionCosts?.[k]?.label)).filter(s => s);
+                if (costs.length == 1 && actionCost.standard) return "";
+                return costs.length ? costs.join(" + ") : "";
+            })();
+            const apString = (()=>{
+                if (!ap || !ap?.cost) return "";
+                let apString = `${ap.cost} AP`;
+                if (ap.bind) apString = "Bind " + apString;
+                return apString;
+            })();
+            const freqModString = (()=>{
+                if (!frequency.modifiers) return "";
+                const mods = Object.entries(frequency.modifiers).filter(([_, v]) => v).map(([k, _]) => game.i18n.localize(CONFIG.PTU.data.frequencyModifiers?.[k])).filter(s => s);
+                return mods.length ? `${mods.join(", ")}` : "";
+            })();
+            
+            if (!freqString && !actionString && !apString && !freqModString) return "At-Will";
+            let combinedString = [apString, freqString, actionString].filter(s => s).join(" - ");
+            if (freqModString) combinedString += (combinedString ? ", " : "At-Will, ") + freqModString;
+            return combinedString;
         }
-    })
+        // Legacy string format (pack source files not yet migrated)
+        if (typeof frequency === "string") {
+            switch (frequency.toLowerCase()) {
+                case "at-will": return "At-Will";
+                case "eot": return "EOT";
+                case "scene": return "S";
+                case "scene x2": return "2× S";
+                case "scene x3": return "3× S";
+                case "daily": return "D";
+                case "daily x2": return "2× D";
+                case "daily x3": return "3× D";
+                default: return frequency;
+            }
+        }
+        return "";
+    });
+
+    Handlebars.registerHelper("shortFrequency", function (item) {
+        const frequency = item.system?.frequency ?? item?.frequency;
+        // New object format: { type, max }
+        if (frequency && typeof frequency === "object") {
+            const { type, max } = frequency;
+            if (type === "custom") return frequency.custom || "";
+            const freq = CONFIG.PTU.data.frequencies[type];
+            return game.i18n.localize(freq?.label) ?? type[0].toUpperCase();
+        }
+        // Legacy string format (pack source files not yet migrated)
+        if (typeof frequency === "string") {
+            switch (frequency.toLowerCase()) {
+                case "at-will": return "At-Will";
+                case "eot": return "EOT";
+                case "scene": return "S";
+                case "scene x2": return "2× S";
+                case "scene x3": return "3× S";
+                case "daily": return "D";
+                case "daily x2": return "2× D";
+                case "daily x3": return "3× D";
+                default: return frequency;
+            }
+        }
+        return "";
+    });
 
     Handlebars.registerHelper("calcHeight", function (percent) {
         return Math.clamp(Math.round((100 - percent) / 100 * 48), 0, 48);
@@ -120,8 +179,11 @@ function _registerPTUHelpers() {
     });
 
     Handlebars.registerHelper("moveDbToDice", (item, actor) => {
-        const dbNumber = Number(item.damageBase.postStab ?? item);
-        if (isNaN(dbNumber)) return "Not a valid DB";
+        const db = item.damageBase;
+        if (!db) return "";
+        // For formula DB, use the preview number (resolved with no target); for numeric, use postStab
+        const dbNumber = db.isFormula ? item.dbPreviewNumber : Number(db.postStab ?? item);
+        if (dbNumber === null || isNaN(dbNumber)) return "Not a valid DB";
 
         const realDb = Math.clamp(dbNumber, 0, 28);
         const dbString = CONFIG.PTU.data.dbData[realDb];
@@ -365,7 +427,7 @@ function _registerBasicHelpers() {
     Handlebars.registerHelper("bigger", function (a, b) { return a > b });
     Handlebars.registerHelper("biggerOrEqual", function (a, b) { return a >= b });
     Handlebars.registerHelper("and", function (a, b) { return a && b });
-    Handlebars.registerHelper("or", function (a, b) { return a || b });
+    Handlebars.registerHelper("or", function () { return arguments.length > 1 && Array.from(arguments).slice(0, -1).some(arg => arg) });
     Handlebars.registerHelper("notEqual", function (a, b = false) { return a != b });
     Handlebars.registerHelper("divide", (value1, value2) => Number(value1) / Number(value2));
     Handlebars.registerHelper("multiply", (value1, value2) => Number(value1) * Number(value2));

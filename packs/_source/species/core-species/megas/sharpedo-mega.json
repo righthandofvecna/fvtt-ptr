@@ -517,7 +517,7 @@
         "type": "body"
       }
     },
-    "slug": "sharpedo",
+    "slug": "sharpedo-mega",
     "rules": [],
     "type": {
       "0": "Water",
@@ -531,7 +531,9 @@
       "Hoenn",
       "Alola",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

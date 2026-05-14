@@ -1,5 +1,5 @@
 {
-  "name": "Telepath [CR]",
+  "name": "Telepath",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Telepathy Capability while this Feature is Bound.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "telepath-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.766Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -32,16 +39,40 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 2 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": true
+    },
     "prerequisites": [
       "Elemental Connection (Psychic)",
       "Iron Mind",
       "Novice Intuition"
     ],
-    "frequency": "Bind 2 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Telepath [CR]",
-    "name": "Telepath [CR]"
+    "class": "Telepath",
+    "name": "Telepath [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "telepath"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -55,10 +86,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829837,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

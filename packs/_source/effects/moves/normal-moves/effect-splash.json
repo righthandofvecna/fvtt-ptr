@@ -37,7 +37,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-inspired",
+    "slug": "effect-splash",
     "schema": {
       "version": 0.11,
       "lastMigration": {
@@ -72,7 +72,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "flags": {

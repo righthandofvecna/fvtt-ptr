@@ -591,7 +591,9 @@
     "source": {
       "value": "PTR Core Dex"
     },
-    "keywords": []
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {

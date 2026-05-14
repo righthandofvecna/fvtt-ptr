@@ -536,7 +536,7 @@
         "type": "body"
       }
     },
-    "slug": "ampharos",
+    "slug": "ampharos-mega",
     "rules": [],
     "type": {
       "0": "Electric",
@@ -551,7 +551,9 @@
       "Kalos",
       "Alola",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

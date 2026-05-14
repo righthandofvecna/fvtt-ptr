@@ -1888,6 +1888,8 @@
     "exportSource": null
   },
   "system": {
-    "slug": "swamp"
+    "slug": "swamp",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

@@ -469,7 +469,8 @@
 
       "level": {
         "milestones": 0,
-        "miscexp": 0
+        "miscexp": 0,
+        "xpPool": []
       },
       "health": {
         "value": 0,
@@ -525,7 +526,8 @@
       "heldItem": "None",
 
       "level": {
-        "exp": 40
+        "exp": 40,
+        "pendingExp": 0
       },
       "health": {
         "value": null,
@@ -601,6 +603,8 @@
         "rules": [],
         "enabled": true,
         "slug": null,
+        "contentSet": "",
+        "replacesSlug": "",
         "schema": {
           "version": null,
           "lastMigration": null
@@ -621,6 +625,31 @@
         "megaLauncher": false,
         "punkRock": false,
         "strongJaw": false
+      },
+      "frequencyTracked": {
+        "frequency": {
+          "type": "at-will",
+          "max": 0,
+          "custom": "",
+          "modifiers": {
+            "priorityLimited": false,
+            "priorityAdvanced": false,
+            "priority": false,
+            "reaction": false,
+            "interrupt": false
+          }
+        },
+        "actionCost": {
+          "standard": false,
+          "rapid": false,
+          "shift": false,
+          "free": false,
+          "extended": false
+        },
+        "ap": {
+          "cost": 0,
+          "bind": false
+        }
       }
     },
     "dexentry": {
@@ -629,15 +658,14 @@
       "owned": false
     },
     "feat": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "prerequisites": [],
-      "frequency": "At Will - Standard Action",
       "notes": "",
       "free": false,
       "class": ""
     },
     "edge": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "prerequisites": [],
       "notes": "",
       "free": false
@@ -684,16 +712,14 @@
       "persistent": null
     },
     "ability": {
-      "templates": ["base"],
-      "frequency": "",
+      "templates": ["base", "frequencyTracked"],
       "tier": ""
     },
     "move": {
-      "templates": ["base", "interactions"],
+      "templates": ["base", "interactions", "frequencyTracked"],
       "type": "Untyped",
       "category": "",
       "damageBase": "",
-      "frequency": "",
       "ac": "",
       "range": "",
       "contestType": "",
@@ -702,21 +728,20 @@
       "isStruggle": false
     },
     "contestmove": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "type": "Cool",
-      "frequency": "",
       "dice": 0
     },
     "capability": {
-      "templates": ["base"]
+      "templates": ["base", "frequencyTracked"]
     },
     "pokeedge": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "prerequisites": [],
       "cost": 0
     },
     "item": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "quantity": 1,
       "category": "",
       "cost": 0,
@@ -872,7 +897,7 @@
       "templates": ["base"]
     },
     "spiritaction": {
-      "templates": ["base"],
+      "templates": ["base", "frequencyTracked"],
       "cost": 0,
       "trigger": "",
       "active": false

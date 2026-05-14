@@ -1,5 +1,5 @@
 {
-  "name": "Reactive Armour [CR]",
+  "name": "Reactive Armour",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You gain an Injury or take a Critical Hit while wearing metallic Armor\nEffect: All foes within a Burst 1 lose Hit Points equal to double your Athletics or Focus Rank, and you gain Damage Reduction equal to double your Athletics or Focus Rank for one full round.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "reactive-armour-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.934Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Steelheart",
       "Adept Athletics or Focus"
     ],
-    "frequency": "Scene x2 – Free Action",
     "notes": "",
     "free": false,
-    "class": "Steelheart [CR]",
-    "name": "Reactive Armour [CR]"
+    "class": "Steelheart",
+    "name": "Reactive Armour [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "reactive-armour"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829000,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

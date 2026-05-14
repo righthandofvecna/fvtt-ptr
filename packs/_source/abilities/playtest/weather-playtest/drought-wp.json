@@ -1,0 +1,99 @@
+{
+  "name": "Drought",
+  "type": "ability",
+  "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Effect: Connection - Sunny Day. The user uses Sunny Day, ignoring Frequency. The user can choose to consume an additional use of this Ability as a Free Action to have Sunny Day instead set @UUID[Compendium.ptu.journals.XaqlAbknAD3Tpx5E.JournalEntryPage.YBWVC5IMxZYqnabl].",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.m787MkYyENqNyGOb"
+      }
+    ],
+    "enabled": true,
+    "slug": "drought-wp",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:16.562Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "Compendium.ptu.effects.Item.fXsxr8akxM4wQfdy",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Weather",
+      "Playtest",
+      "Connection"
+    ],
+    "frequency": {
+      "type": "scene",
+      "max": 3,
+      "custom": "Scene x3 - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "tier": "",
+    "automation": [],
+    "contentSet": "weather-playtest",
+    "replacesSlug": "drought"
+  },
+  "effects": [],
+  "folder": "MsdL8dYgE7JbY1ya",
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "createdTime": 1707854107379,
+    "modifiedTime": 1778200816595,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "YVneyZuvSHsIo0bu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

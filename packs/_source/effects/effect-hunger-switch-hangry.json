@@ -1,0 +1,73 @@
+{
+  "folder": "qXvDHbaNpMlPES8M",
+  "name": "Effect: Hunger Switch (Hangry)",
+  "type": "effect",
+  "_id": "C3ZeYERzKEqyWIeT",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "@embed[Compendium.ptu.abilities.Item.puTGxpPSu6cws6KB]",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "damage-roll",
+        "value": 5
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-hunger-switch-hangry",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-start"
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.20",
+    "createdTime": 1778421998328,
+    "modifiedTime": 1778422045516,
+    "lastModifiedBy": "ptubuilder000000"
+  }
+}

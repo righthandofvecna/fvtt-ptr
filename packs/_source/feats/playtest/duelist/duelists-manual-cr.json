@@ -1,15 +1,22 @@
 {
-  "name": "Duelist's Manual [CR]",
+  "name": "Duelist's Manual",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon under the effects of Focused Training\nEffect: Apply one of the following effects. To choose an effect, your Pokémon must have a certain amount of Momentum. (Duelist’s Manual does not spend Momentum).\n- 1 Momentum: Your Pokémon doubles their bonuses from Tolerance or Exploit until the end of their next turn and may change their Tolerance Ability into Exploit, or vice versa, until the end of their next turn.\n- 2 Momentum: Your Pokémon’s next Pass, Cone, Close Blast, or Burst attack becomes a single target Melee attack, or their next Line or Ranged Blast attack becomes a single target Ranged attack. If this attack hits, the target becomes Vulnerable for one full round and has their Initiative set to 0 until the end of their next turn.\n- 3 Momentum: Your Pokémon may act while ignoring the Confused, Rage, Infatuation, and Suppressed Volatile Status on their next turn as long as they attempt to attack a Tagged foe. May only be used once per Scene per Pokémon.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "duelist-s-manual-cr",
+    "slug": "duelists-manual-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.599Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -21,16 +28,40 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "2 AP – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": false
+    },
     "prerequisites": [
       "Expend Momentum",
       "Effective Methods",
       "Expert Focus"
     ],
-    "frequency": "2 AP – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Duelist [CR]",
-    "name": "Duelist’s Manual [CR]"
+    "class": "Duelist",
+    "name": "Duelist’s Manual [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "duelists-manual"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -44,10 +75,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830629,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

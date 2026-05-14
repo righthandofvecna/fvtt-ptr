@@ -1,5 +1,5 @@
 {
-  "name": "Shared Senses [CR]",
+  "name": "Shared Senses",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A willing Pokémon that you have Channeled.\nEffect: You Imprint the target for the duration of this Feature. You receive all current sensory information being sensed by an Imprinted target, including gaining a vague knowledge of what the target has experienced in the past hour as though that knowledge were part of your own conscious and unconscious memories. Additionally, Imprinted Pokémon are not subject to the distance limit on Channeling.\nWhen you try to Imprint more than one creature, you may only concentrate on the senses and memories of one Imprinted target at a time, and may only change the target of this concentration once per round. If you stop Channeling an Imprinted creature, they are no longer Imprinted.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "shared-senses-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.255Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,14 +27,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 1 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": true
+    },
     "prerequisites": [
       "Channeler"
     ],
-    "frequency": "Bind 1 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Channeler [CR]",
-    "name": "Shared Senses [CR]"
+    "class": "Channeler",
+    "name": "Shared Senses [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "shared-senses"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -45,10 +76,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829324,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

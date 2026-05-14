@@ -553,7 +553,9 @@
       "2": ""
     },
     "stackSlugs": false,
-    "enabled": false
+    "enabled": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "irSNiCnUnI7il9mJ",
@@ -570,9 +572,9 @@
     "systemVersion": "4.4.3.11",
     "createdTime": 1776486738215,
     "modifiedTime": 1776486739420,
-    "lastModifiedBy": "ptubuilder000000",
-    "compendiumSource": null
+    "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "WsxBBDZvKOk8QIqu",
-  "sort": 2600000
+  "sort": 2600000,
+  "flags": {}
 }

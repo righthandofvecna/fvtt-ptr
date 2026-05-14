@@ -12,8 +12,15 @@
     "enabled": true,
     "slug": "warrior-of-light",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.301Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "Compendium.ptu.effects.Item.azrDBZG5il1ybXfH",
     "source": {
@@ -24,15 +31,39 @@
       "+Defense or Special Defense",
       "Order"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 3 AP - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 3,
+      "bind": true
+    },
     "prerequisites": [
       "Light Within Darkness",
       "Open Your Heart",
       "Master Intuition or Master Charm"
     ],
-    "frequency": "Bind 3 AP - Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Redeemer"
+    "class": "Redeemer",
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,
@@ -46,10 +77,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1697669469678,
-    "modifiedTime": 1710772668302,
+    "modifiedTime": 1778200831368,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

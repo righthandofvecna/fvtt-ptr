@@ -1,5 +1,5 @@
 {
-  "name": "Fearsome Display [CR]",
+  "name": "Fearsome Display",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You use Leer or a Roughneck Move\nEffect: The Move gains additional effects.\n- Leer: Attacks against affected foes gain a +2 Bonus to their Critical Range for one full round.\n- Chip Away: The target is considered Vulnerable against this attack, and may not activate Interrupts or Moves with the Shield Keyword in response to it.\n- Headbutt: The target is automatically Flinched, and you may initiate a Push Maneuver against the target, using your Intimidate or Athletics skill. This Maneuver automatically hits, but you must still roll an opposed check.\n- Glare: The target loses 2 Speed Combat Stages, and is Slowed for one full round. This occurs whether Glare hits or misses.\n- Mean Look: The target is Suppressed for one full round, and has a random Move Disabled.\n- Endure: You gain two Ticks of Temporary Hit Points.\n- Slack Off: You are cured of one Status Affliction.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "fearsome-display-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.423Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "2 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": false
+    },
     "prerequisites": [
       "Malice"
     ],
-    "frequency": "2 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Roughneck [CR]",
-    "name": "Fearsome Display [CR]"
+    "class": "Roughneck",
+    "name": "Fearsome Display [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "fearsome-display"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -52,10 +83,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200829484,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

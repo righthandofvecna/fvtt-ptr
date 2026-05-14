@@ -1,5 +1,5 @@
 {
-  "name": "Shadow Form [CR]",
+  "name": "Shadow Form",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: While this Feature is Bound, your appearance becomes wan and obviously otherworldly. Your natural Weaknesses, Resistances, and Immunities change to match that of the Ghost Type. Additionally, while in Shadow Form, you are immune to the Cursed Status (if you were previously Cursed, you are instantly cured upon going into Shadow Form) and gain the Phasing Capability. You may unbind this Feature as a Rapid Action, returning to your normal appearance.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "shadow-form-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.465Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 2 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": true
+    },
     "prerequisites": [
       "Silent Assassin",
       "Expert Intimidate or Occult Education"
     ],
-    "frequency": "Bind 2 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Apparition [CR]",
-    "name": "Shadow Form [CR]"
+    "class": "Apparition",
+    "name": "Shadow Form [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "shadow-form"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -57,10 +88,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200828533,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

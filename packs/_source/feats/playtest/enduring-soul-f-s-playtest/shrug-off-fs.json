@@ -1,0 +1,106 @@
+{
+  "name": "Shrug Off",
+  "system": {
+    "origin": "[F&S Playtest]",
+    "effect": "Target: Your Pokémon at Spirit 1 or more, with a Status Condition\nEffect: Your Pokémon is healed of the Status Condition and gains one Temporary Spirit that disappears at the end of its next turn.\nBonus: While resting, you can spend extra Spirit to supernaturally heal injuries, at a cost of 1 Spirit to 1 Injury.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.hp.mod",
+        "phase": "applyAEs",
+        "value": 1
+      }
+    ],
+    "enabled": true,
+    "slug": "shrug-off-fs",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.625Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "+HP",
+      "Playtest",
+      "F&S"
+    ],
+    "frequency": {
+      "type": "scene",
+      "max": 1,
+      "custom": "Scene - 1 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
+    "prerequisites": [
+      "Enduring Soul"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Enduring Soul",
+    "name": "Shrug Off",
+    "useCount": 0,
+    "automation": [],
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "shrug-off"
+  },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "prereqBackup": "Enduring Soul"
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368078992,
+    "modifiedTime": 1778200828680,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "tohou-the-wilderness",
+      "uuid": null,
+      "coreVersion": "11.308",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.alpha.25"
+    }
+  },
+  "folder": "UVQvHiZHa8JnNuHJ",
+  "_id": "4kJt55IdegqVG0b8",
+  "sort": 150000,
+  "ownership": {
+    "default": 0
+  }
+}

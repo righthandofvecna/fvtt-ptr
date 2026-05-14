@@ -628,7 +628,7 @@
         "type": "body"
       }
     },
-    "slug": "audino",
+    "slug": "audino-mega",
     "rules": [],
     "type": {
       "0": "Normal",
@@ -641,7 +641,9 @@
     "keywords": [
       "Unova",
       "Kalos"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

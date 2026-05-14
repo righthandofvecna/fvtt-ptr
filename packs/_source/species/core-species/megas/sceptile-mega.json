@@ -566,7 +566,7 @@
         "type": "body"
       }
     },
-    "slug": "sceptile",
+    "slug": "sceptile-mega",
     "rules": [],
     "type": {
       "0": "Grass",
@@ -578,7 +578,9 @@
     },
     "keywords": [
       "Hoenn"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "irSNiCnUnI7il9mJ",

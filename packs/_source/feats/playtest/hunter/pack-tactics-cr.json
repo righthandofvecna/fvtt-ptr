@@ -1,5 +1,5 @@
 {
-  "name": "Pack Tactics [CR]",
+  "name": "Pack Tactics",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Your Pokémon with at least 2 Tutor Points\nEffect: The target loses 2 Tutor Points, and gains the Pack Hunt or Teamwork Ability. You may target a Pokémon with Pack Tactics only once.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "pack-tactics-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:32.008Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Hunter"
     ],
-    "frequency": "At-Will – Extended Action",
     "notes": "",
     "free": false,
-    "class": "Hunter [CR]",
-    "name": "Pack Tactics [CR]"
+    "class": "Hunter",
+    "name": "Pack Tactics [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "pack-tactics"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -52,10 +83,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200832080,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

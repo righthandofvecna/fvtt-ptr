@@ -74,7 +74,7 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-radshower",
+    "slug": "effect-neutrino-superabundance",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -105,7 +105,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,

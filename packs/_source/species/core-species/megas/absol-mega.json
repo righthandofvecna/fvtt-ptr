@@ -660,7 +660,7 @@
         "type": "body"
       }
     },
-    "slug": "absol",
+    "slug": "absol-mega",
     "rules": [],
     "type": {
       "0": "Dark",
@@ -675,7 +675,9 @@
       "Kalos",
       "Alola",
       "Sinnoh"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

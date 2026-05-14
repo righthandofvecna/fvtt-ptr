@@ -1,5 +1,5 @@
 {
-  "name": "Forseeable Resources [CR]",
+  "name": "Forseeable Resources",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You have just the right item for the moment, because you predicted it would be useful at this time. You create 1 Consumable item (like a Potion or Pokeball) that costs up to $250 times half your Perception Skill rank. You must use the item before the end of your turn or else the item disappears.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "forseeable-resources-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.114Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Drain 2 AP - Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Divination",
       "Adept Perception"
     ],
-    "frequency": "Drain 2 AP - Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Oracle [CR]",
-    "name": "Forseeable Resources [CR]"
+    "class": "Oracle",
+    "name": "Forseeable Resources [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "forseeable-resources"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830186,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

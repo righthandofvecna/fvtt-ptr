@@ -1,5 +1,5 @@
 {
-  "name": "Suggestion [CR]",
+  "name": "Suggestion",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: Pokémon or Trainers\nEffect: You smoothly plant a thought into the subject’s head that lasts as long as this Feature is Bound. They won’t know exactly why or how they thought of it; they will naturally assume they thought of it themselves, and their brain will attempt to get there as logically as it can. The target may not necessarily act on the Suggestion, especially if it is against their nature. Using Suggestion to plant a specific thought may cause the target to think about a specific subject, dredging up surface thoughts related to the matter. Using this on a target leaves discoverable psychic residue. You may only use Suggestion as long as you have the Telepathy Capability, though you may keep it Bound without having Telepathy active.\nBonus: You gain the Gentle Vibe Ability.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "suggestion-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.626Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 1 AP – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": true
+    },
     "prerequisites": [
       "Honed Mind",
       "Master Focus or Intuition"
     ],
-    "frequency": "Bind 1 AP – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Telepath [CR]",
-    "name": "Suggestion [CR]"
+    "class": "Telepath",
+    "name": "Suggestion [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "suggestion"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200828680,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -553,7 +553,7 @@
         "type": "body"
       }
     },
-    "slug": "aerodactyl",
+    "slug": "aerodactyl-mega",
     "rules": [],
     "type": {
       "0": "Rock",
@@ -568,7 +568,9 @@
       "Kanto",
       "Kalos",
       "Johto"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

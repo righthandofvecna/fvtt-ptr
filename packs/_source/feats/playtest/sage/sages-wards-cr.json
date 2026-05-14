@@ -1,5 +1,5 @@
 {
-  "name": "Sage's Wards [CR]",
+  "name": "Sage's Wards",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: An ally activates one of your Moves with the Blessing Keyword.\nEffect: The triggering ally gains an additional benefit as follows, depending on the Move used. The benefit takes effect after the Blessing and the attack that triggered it are resolved.\n- @UUID[Compendium.ptu.effects.Item.JyUJFDshzL34NCx1]: +1 Defense Combat Stage\n- @UUID[Compendium.ptu.effects.Item.iNfiGKyKNYhNWRBi]: +1 Sp. Defense Combat Stage\n- @UUID[Compendium.ptu.effects.Item.mHxISV2xM8XfmSIJ]: +1 Evasion\n- @UUID[Compendium.ptu.effects.Item.eR9gulcKs9v9SF8V]: +1 Accuracy",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "sages-wards-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.474Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1 AP – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
     "prerequisites": [
       "Sacred Shield or Mystic Defense",
       "Adept Occult Education"
     ],
-    "frequency": "1 AP – Free Action",
     "notes": "",
     "free": false,
-    "class": "Sage [CR]",
-    "name": "Sage’s Wards [CR]"
+    "class": "Sage",
+    "name": "Sage’s Wards [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "sages-wards"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -57,10 +88,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1710770285965,
+    "modifiedTime": 1778200831544,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

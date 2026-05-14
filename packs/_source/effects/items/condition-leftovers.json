@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "leftovers",
+    "slug": "condition-leftovers",
     "schema": {
       "version": 0.11,
       "lastMigration": {
@@ -49,7 +49,9 @@
     "name": "",
     "tokenIcon": {
       "show": true
-    }
+    },
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "YOFSDHg7L2IrQsvT",

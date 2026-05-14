@@ -1,5 +1,5 @@
 {
-  "name": "Seed Bag Rank 2 [CR]",
+  "name": "Seed Bag Rank 2",
   "system": {
     "origin": "Class Rework",
     "effect": "Target: A Willing Pokémon\nRank 1 Effect: You become adept at harvesting Seeds\nand Spores from Pokémon. You may target a willing Pokémon that knows Sleep Powder, Stun Spore, Poison Powder, or Powder. Add this move to your Move list for the remainder of the day. You may not use Seed Bag to have multiple instances of the same move in your Move list. Seed Bag may be used twice per day per Rank.\nRank 2 Effect: You may also harvest Cotton Spore, Leech Seed, Spore, Worry Seed, or Rage Powder.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "seed-bag-rank-2-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.446Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -21,14 +28,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "X Daily – Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Master General Education or\nMaster Survival"
     ],
-    "frequency": "X Daily – Extended Action",
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Seed Bag [CR]Rank 1 [CR]"
+    "class": "Researcher",
+    "name": "Seed Bag [CR]Rank 1 [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "seed-bag-rank-2"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -45,10 +76,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830478,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

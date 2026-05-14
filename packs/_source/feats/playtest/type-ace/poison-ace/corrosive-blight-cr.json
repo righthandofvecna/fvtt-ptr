@@ -1,5 +1,5 @@
 {
-  "name": "Corrosive Blight [CR]",
+  "name": "Corrosive Blight",
   "system": {
     "origin": "",
     "effect": "Trigger: Your Pokémon hits a foe with a Poison-Type Attack\nEffect: The target gains the Blight Condition. Blighted targets lose a Tick of Hit Points upon being hit by any attack, and can be cured with a Save of 15+ or methods that cure Poison. In Acid Rain Weathers, Blighted creatures are also Blinded and the Save to cure Blight is instead 17+.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "corrosive-blight-cr",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:28.464Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -21,17 +28,41 @@
       "Playtest",
       "CR"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 - Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Potent Venom",
       "Type-Linked Skill at Master"
     ],
-    "frequency": "Scene x2 - Free Action",
     "notes": "",
     "free": false,
-    "class": "Type Ace (Poison) [CR]",
+    "class": "Type Ace (Poison)",
     "name": "Corrosive Blight",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "corrosive-blight"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -51,9 +82,9 @@
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.1",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710767150956,
-    "modifiedTime": 1776089335098,
+    "modifiedTime": 1778200828533,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

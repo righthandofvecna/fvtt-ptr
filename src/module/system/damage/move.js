@@ -1,17 +1,27 @@
 import { CheckModifier, PTUModifier } from "../../actor/modifiers.js";
 import { extractModifiers } from "../../rules/helpers.js";
 import { DamageModifiersDialog } from "./dialog.js";
+import { resolveDbFormula } from "../../../util/value-resolver.js";
 
 class PTUMoveDamage {
-    static async calculate({move, actor, context, modifiers = []}) {
+    static async calculate({move, actor, context, modifiers = [], target = null}) {
         if(!move || !actor) return null;
+        if (!move.isDamaging) return null;
 
         const damageBaseModifiers = [];
-        if(isNaN(Number(move.system.damageBase))) return null;
+        const rawDb = String(move.system.damageBase ?? "").trim();
+        if (!rawDb) return null;
+        const resolvedDb = (()=>{
+            if (!isNaN(Number(rawDb))) return Number(rawDb);
+            if ((/[^0-9 +\-\*\/\(\)]/i).test(rawDb) && !/\{\{.*\}\}/.test(rawDb)) return null;
+            return resolveDbFormula(rawDb, { target });
+        })();
+
+        if (resolvedDb === null || isNaN(resolvedDb)) return null;
         damageBaseModifiers.push(new PTUModifier({
             slug: "damage-base",
             label: "Damage Base",
-            modifier: Number(move.system.damageBase),
+            modifier: resolvedDb,
         }));
 
         context.skipDialog ??= game.settings.get("ptu", "skipRollDialog");

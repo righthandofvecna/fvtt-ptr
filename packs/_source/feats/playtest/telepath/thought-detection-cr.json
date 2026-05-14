@@ -1,5 +1,5 @@
 {
-  "name": "Thought Detection [CR]",
+  "name": "Thought Detection",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You become aware of the number of living Humans or Pokémon within X meters of yourself; X is equal to your Focus Rank tripled. Pokémon or Trainers with the Mindlock Capability are not detected by this Ability. You may only use Thought Detection as long as you have the Telepathy Capability.\nBonus: Opposed targets affected by Thought Detection cannot benefit from Spirit for 3 Rounds.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "thought-detection-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.126Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,14 +38,38 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 1,
+      "custom": "Scene – Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Telepathic Awareness"
     ],
-    "frequency": "Scene – Standard Action",
     "notes": "",
     "free": false,
-    "class": "Telepath [CR]",
-    "name": "Thought Detection [CR]"
+    "class": "Telepath",
+    "name": "Thought Detection [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "thought-detection"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -52,10 +83,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200831195,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

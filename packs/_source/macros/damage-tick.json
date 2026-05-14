@@ -23,6 +23,8 @@
     "default": 0
   },
   "system": {
-    "slug": "damage-tick"
+    "slug": "damage-tick",
+    "contentSet": "",
+    "replacesSlug": ""
   }
 }

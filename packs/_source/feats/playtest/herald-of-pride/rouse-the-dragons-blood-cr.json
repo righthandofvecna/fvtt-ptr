@@ -1,5 +1,5 @@
 {
-  "name": "Rouse the Dragon's Blood [CR]",
+  "name": "Rouse the Dragon's Blood",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You suffer a Critical Hit or gain an Injury from a foe’s attack\nEffect: For 1 full round, the next Herald of Pride Move you use against the triggering foe cannot miss, cannot be Intercepted, and effects that would cause it to miss cannot be activated against it.",
@@ -16,10 +16,17 @@
       }
     ],
     "enabled": true,
-    "slug": "rouse-the-dragon-s-blood-cr",
+    "slug": "rouse-the-dragons-blood-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.115Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2 – Free Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Herald of Pride",
       "Expert Command or Intimidate"
     ],
-    "frequency": "Scene x2 – Free Action",
     "notes": "",
     "free": false,
-    "class": "Herald of Pride [CR]",
-    "name": "Rouse the Dragon’s Blood [CR]"
+    "class": "Herald of Pride",
+    "name": "Rouse the Dragon’s Blood [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "rouse-the-dragons-blood"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830186,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -78,7 +78,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "sort": 0,
@@ -98,7 +100,6 @@
     "modifiedTime": 1710763623352,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
-    "exportSource": null,
-    "compendiumSource": null
+    "exportSource": null
   }
 }

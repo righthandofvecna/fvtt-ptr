@@ -1,5 +1,5 @@
 {
-  "name": "Grand Hex [CR]",
+  "name": "Grand Hex",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You hit a foe with Hex or Dream Eater\nEffect: Regain one use of a Move gained from Hex Maniac Studies that can inflict a Status Affliction that the triggering target has. If you activated Hex's conditional effect with the Triggering attack, the conditional effect's Frequency is not expended. You may only activate Grand Hex once per target per Scene.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "grand-hex-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.913Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -31,15 +38,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
     "prerequisites": [
       "Hex Maniac Studies Rank 3",
       "Master Occult Education"
     ],
-    "frequency": "1 AP – Rapid Action",
     "notes": "",
     "free": false,
-    "class": "Hex Maniac [CR]",
-    "name": "Grand Hex [CR]"
+    "class": "Hex Maniac",
+    "name": "Grand Hex [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "grand-hex"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -53,10 +84,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830936,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

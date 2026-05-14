@@ -1,5 +1,5 @@
 {
-  "name": "Medicinal Blend [CR]",
+  "name": "Medicinal Blend",
   "system": {
     "origin": "Class Rework",
     "effect": "Ingredients: Two Restoratives, or a Restorative and an X-Item\nEffect: You fuse the two Ingredients, creating an Item hat has the properties of both. If you choose two Restoratives, they cannot be Restoratives with the same effect (you could not for example, mix a Potion and a Super Potion). If a Restorative Patch is used as an Ingredient, the resulting item can only be used as an Extended Action.",
@@ -8,8 +8,15 @@
     "enabled": true,
     "slug": "medicinal-blend-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:30.114Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,15 +27,39 @@
       "Playtest",
       "Class Rework"
     ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will – Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Apothecary",
       "Master Medicine Education"
     ],
-    "frequency": "At-Will – Extended Action",
     "notes": "",
     "free": false,
-    "class": "Researcher [CR]",
-    "name": "Medicinal Blend [CR]"
+    "class": "Researcher",
+    "name": "Medicinal Blend [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "medicinal-blend"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -42,10 +73,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1707827243445,
+    "modifiedTime": 1778200830186,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -11,8 +11,15 @@
     "enabled": true,
     "slug": "teal-mask",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:42.108Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -20,12 +27,37 @@
     },
     "stackSlugs": false,
     "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "quantity": "1",
     "category": "Held Item",
     "cost": "0",
     "consumable": 0,
     "subtype": "",
-    "container": false
+    "container": false,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "ownership": {
@@ -38,10 +70,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1695517601075,
-    "modifiedTime": 1712494296744,
+    "modifiedTime": 1778200842152,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

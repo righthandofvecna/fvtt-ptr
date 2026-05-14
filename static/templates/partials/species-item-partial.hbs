@@ -19,7 +19,7 @@
 
 <ol class="item-list pl-1 {{subtype}}">
     {{#each items as | item |}}
-        <li class="item {{../type}}-item draggable" data-item-type="{{../type}}" data-item-subtype="{{../subtype}}" data-item-uuid="{{item.uuid}}" data-item-slug="{{item.slug}}" data-item-index="{{@index}}" {{#if item.level}}data-item-level="{{item.level}}"{{/if}}>
+        <li class="item {{../type}}-item draggable" data-type="{{../type}}" data-uuid="{{item.uuid}}" data-id="{{item.id}}" data-item-subtype="{{../subtype}}" data-item-slug="{{item.slug}}" data-item-index="{{@index}}" {{#if item.level}}data-item-level="{{item.level}}"{{/if}}>
             <div class="item-name">
                 <h4>{{formatSlug item.slug}}</h4>
             </div>
@@ -31,7 +31,7 @@
                 </div>
             {{/if}}
             {{#if (is ../type "evolution")}}
-                <div class="evolution-level">
+                <div class="evolution-level"> 
                     <input type="text" name="system.evolutions.{{@index}}.level" value="{{item.level}}"/>
                     <input type="hidden" name="system.evolutions.{{@index}}.uuid" value="{{item.uuid}}"/>
                     <input type="hidden" name="system.evolutions.{{@index}}.slug" value="{{item.slug}}"/>

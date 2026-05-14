@@ -3,7 +3,9 @@
   "type": "ability",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "requires-system-changes",
+      "devNote": "joehisaishi - snowy terrain aspect cannot be automated"
     }
   },
   "effects": [],
@@ -12,12 +14,50 @@
     "origin": "",
     "effect": "The user gains +5 DR in Hail or on snowy terrain. In addition, the user is immune to Hit Point loss from Hail.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "or": [
+            "effect:snowy",
+            "effect:hailstorm",
+            "effect:whiteout"
+          ]
+        },
+        "mode": "add",
+        "path": "system.modifiers.damageReduction.physical.mod",
+        "phase": "applyAEs",
+        "value": 5,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "or": [
+            "effect:snowy",
+            "effect:hailstorm",
+            "effect:whiteout"
+          ]
+        },
+        "mode": "add",
+        "path": "system.modifiers.damageReduction.special.mod",
+        "phase": "applyAEs",
+        "value": 5,
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "glaciation",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:16.009Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -25,11 +65,35 @@
     },
     "stackSlugs": false,
     "keywords": [],
-    "frequency": "Static",
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "tier": "",
     "name": "",
     "automation": [],
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "ownership": {
     "default": 0
@@ -39,10 +103,10 @@
   "sort": 1100000,
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.21",
+    "coreVersion": "13.351",
     "createdTime": 1689606908412,
-    "modifiedTime": 1707761783909,
+    "modifiedTime": 1778568559584,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

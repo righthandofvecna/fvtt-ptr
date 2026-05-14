@@ -1,5 +1,5 @@
 {
-  "name": "Lessons In Rage & Pain [CR]",
+  "name": "Lessons In Rage & Pain",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect:  You gain the move Revenge and can use it as a Weapon Move.\nWhile you have at least 1 Injury, add +X to your Damage Rolls with Rage, Flail, Double Edge, Thrash, and Weapon Attacks. X is equal to your Intimidate Rank plus the number of Injuries you have. You do not lose Hit Points from being Heavily Injured, and Injuries beyond the 5th do not lower your Maximum Hit Points.",
@@ -18,8 +18,15 @@
     "enabled": true,
     "slug": "lessons-in-rage-pain-cr",
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:31.301Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -27,12 +34,36 @@
     },
     "stackSlugs": false,
     "keywords": [],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [],
-    "frequency": "Static",
     "notes": "",
     "free": false,
-    "class": "Berserker [CR]",
-    "name": "Lessons In Rage & Pain [CR]"
+    "class": "Berserker",
+    "name": "Lessons In Rage & Pain [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "lessons-in-rage-pain"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -50,10 +81,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
     "createdTime": 1699736627730,
-    "modifiedTime": 1710767532193,
+    "modifiedTime": 1778200831368,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

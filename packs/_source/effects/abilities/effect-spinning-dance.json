@@ -36,7 +36,7 @@
       }
     ],
     "enabled": true,
-    "slug": "spinning-dance",
+    "slug": "effect-spinning-dance",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -64,7 +64,9 @@
       "show": true
     },
     "badge": null,
-    "context": null
+    "context": null,
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "effects": [],
   "folder": "HTNFGIxy9zsCONjI",

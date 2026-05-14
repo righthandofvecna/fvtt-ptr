@@ -1,5 +1,5 @@
 {
-  "name": "Stat Ace (Attack) [CR]",
+  "name": "Stat Ace (Attack)",
   "system": {
     "origin": "",
     "effect": "Effect: Your Pokémon have their Chosen Base Stat increased by +1, and by +1 more for every 10 Levels they have. Additionally, you, the Trainer, gain +1 to the Chosen Base Stat for every two Milestones you have, plus 1.\n\nNote: When you take Stat Ace, choose one of Attack, Defense, Special Attack, Special Defense, or Speed. This becomes your Pokémon’s Chosen Stat. You may take Stat Ace multiple times, choosing different Stats each time.",
@@ -18,13 +18,13 @@
     "enabled": true,
     "slug": "stat-ace-attack-cr",
     "schema": {
-      "version": 0.114,
+      "version": 0.116,
       "lastMigration": {
-        "datetime": "2024-02-17T16:59:49.502Z",
+        "datetime": "2026-05-08T00:40:30.972Z",
         "version": {
-          "schema": 0.11,
-          "foundry": "11.315",
-          "system": "4.2.0"
+          "schema": 0.114,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
         }
       }
     },
@@ -39,6 +39,29 @@
       "CR",
       "Branch"
     ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "All A or B options",
       "A:1 Pokémon with the chosen stat of 30 more",
@@ -46,14 +69,15 @@
       "B:4 Pokémon with the chosen stat at 20 or higher",
       "B: Adept Command or Focus"
     ],
-    "frequency": "Static",
     "notes": "",
     "free": false,
     "class": "",
     "tags": "[Class][Branch]",
     "name": "Stat Ace",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "contentSet": "class-rework",
+    "replacesSlug": "stat-ace-attack"
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -71,11 +95,11 @@
     "default": 0
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.16",
     "createdTime": 1710766748283,
-    "modifiedTime": 1710766748283,
+    "modifiedTime": 1778200831019,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

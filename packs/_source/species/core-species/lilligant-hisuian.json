@@ -343,7 +343,9 @@
     "keywords": [
       "Unova",
       "Alola"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "dljUGxtO8AR0tERN",

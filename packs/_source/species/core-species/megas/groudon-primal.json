@@ -576,7 +576,7 @@
         "type": "body"
       }
     },
-    "slug": "groudon",
+    "slug": "groudon-primal",
     "rules": [],
     "type": {
       "0": "Ground",
@@ -589,7 +589,9 @@
     "keywords": [
       "Legendary",
       "Hoenn"
-    ]
+    ],
+    "contentSet": "",
+    "replacesSlug": ""
   },
   "sort": 0,
   "ownership": {

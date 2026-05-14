@@ -18,10 +18,7 @@ export class AttackRoll extends CheckRoll {
 
         const item = await (async () => {
             if(!actor) return null;
-            const modifier = actor.attacks.get(attack.id);
-            if(!modifier) return null;
-
-            return modifier.item;
+            return actor.attacks.get(attack.id) ?? null;
         })();
 
         const targets = await (async () => {
@@ -47,7 +44,7 @@ export class AttackRoll extends CheckRoll {
 
             const tags = [];
             if(item.system.effect) tags.push({slug: "effect", label: game.i18n.localize("PTU.Tags.Effect"), value: item.system.effect });
-            if(item.system.frequency) tags.push({slug: "frequency", label: game.i18n.localize("PTU.Tags.Frequency"), value: item.system.frequency });
+            if(item.system.frequency?.type) tags.push({slug: "frequency", label: game.i18n.localize("PTU.Tags.Frequency"), value: item.system.frequency.type });
             if(item.system.range) tags.push({slug: "range", label: game.i18n.localize("PTU.Tags.Range"), value: item.system.range });
             return tags;
         })();
