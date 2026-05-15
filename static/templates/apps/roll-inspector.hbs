@@ -1,0 +1,36 @@
+<div class="roll-inspector-content">
+    <div class="roll-inspector-header">
+        {{#if type}}<span class="roll-type-badge">{{type}}</span>{{/if}}
+        <input class="roll-inspector-search" type="search" placeholder="Search domains &amp; roll options…" autocomplete="off">
+    </div>
+
+    <section class="inspector-section">
+        <h3 class="inspector-section-title">Domains / Selectors <span class="count-badge">{{domains.length}}</span></h3>
+        <ul class="domain-list">
+            {{#each domains}}
+            <li class="domain-item">{{this}}</li>
+            {{else}}
+            <li class="empty-notice">No domains recorded.</li>
+            {{/each}}
+        </ul>
+    </section>
+
+    <section class="inspector-section">
+        <h3 class="inspector-section-title">Roll Options <span class="count-badge">{{totalOptions}}</span></h3>
+        {{#each optionGroups}}
+        <details class="option-group" open>
+            <summary class="option-group-header">
+                <span class="namespace">{{namespace}}</span>
+                <span class="count-badge">{{options.length}}</span>
+            </summary>
+            <ul class="option-list">
+                {{#each options}}
+                <li class="roll-option-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </details>
+        {{else}}
+        <p class="empty-notice">No roll options recorded.</p>
+        {{/each}}
+    </section>
+</div>
