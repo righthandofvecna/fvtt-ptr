@@ -30,13 +30,21 @@ class ChoiceSetForm extends RuleElementForm {
     else if (isObject(choices) && choices.ownedItems) choicesMode = "ownedItems";
     else choicesMode = "array";
 
+    // Normalize allowedDrops so null predicate renders as [] rather than "null" in tagify
+    const allowedDropsEnabled = this.rule.allowedDrops != null;
+    const allowedDrops = allowedDropsEnabled
+      ? { ...this.rule.allowedDrops, predicate: this.rule.allowedDrops.predicate ?? [] }
+      : { label: "", predicate: [] };
+
     return {
       ...data,
+      rule: { ...this.rule, allowedDrops },
       choicesMode,
       choices,
       // adjustName defaults to true in the schema; make that explicit for the template
       adjustName: this.rule.adjustName !== false,
-      allowedDropsPredicateIsMultiple: Array.isArray(this.rule.allowedDrops?.predicate) && this.rule.allowedDrops.predicate.every(p => typeof p === "string" || (isObject(p) && Object.keys(p).length === 1 && typeof p.value === "string")),
+      allowedDropsEnabled,
+      allowedDropsPredicateIsMultiple: allowedDropsEnabled && Array.isArray(allowedDrops.predicate) && allowedDrops.predicate.every(p => typeof p === "string" || (isObject(p) && Object.keys(p).length === 1 && typeof p.value === "string")),
     };
   }
 
@@ -82,6 +90,18 @@ class ChoiceSetForm extends RuleElementForm {
         choices[idx] = { ...choices[idx], predicate: newPredicate };
         this.updateItem({ choices });
       });
+    });
+
+    // Enable/disable allowedDrops entirely
+    html.querySelector("[data-action=toggle-allowed-drops]")?.addEventListener("change", (event) => {
+      event.stopPropagation();
+      if (event.target.checked) {
+        this.updateItem({ allowedDrops: { label: "", predicate: [] } });
+      } else {
+        const rules = this.item.toObject().system.rules;
+        delete rules[this.index].allowedDrops;
+        this.item.update({ ["system.rules"]: rules });
+      }
     });
 
     // Toggle allowedDrops predicate between tagify (Multiple) and raw JSON (Complex)
