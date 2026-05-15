@@ -18,11 +18,13 @@ class ChoiceSetForm extends RuleElementForm {
     let choicesMode;
     if (Array.isArray(choices)) {
       choicesMode = "array";
-      choices = await Promise.all(this.rule.choices.map(async (c) => ({
+      choices = await Promise.all(this.rule.choices.map(async (c) => {
+        c.predicate ??= [];
+        return {
         ...c,
         link: await fromUuid(c.value).then(item=>item.linkHtml).catch(() => ""),
         predicateIsMultiple: Array.isArray(c.predicate) && c.predicate.every(p => typeof p === "string" || (isObject(p) && Object.keys(p).length === 1 && typeof p.value === "string")),
-      })));
+      }}));
     }
     else if (typeof choices === "string") choicesMode = "path";
     else if (isObject(choices) && choices.ownedItems) choicesMode = "ownedItems";
@@ -42,6 +44,7 @@ class ChoiceSetForm extends RuleElementForm {
   activateListeners(html) {
     // Mode switcher — converts choices structure and re-renders
     html.querySelector("[data-action=choices-mode]")?.addEventListener("change", (event) => {
+      event.stopPropagation();
       const newMode = event.target.value;
       let newChoices;
       if (newMode === "array") newChoices = [];
@@ -132,13 +135,25 @@ class ChoiceSetForm extends RuleElementForm {
       } else if (isObject(c)) {
         // Array mode: choices came in as object with numeric string keys from form expansion
         formData.choices = Object.values(c).filter((entry) => entry?.value).map((entry) => {
-          try {
-            const parsedPredicate = typeof entry.predicate === "string" ? JSON.parse(entry.predicate) : entry.predicate;
-            if (Array.isArray(parsedPredicate) && parsedPredicate.every(p => !!p.value)) {
-              entry.predicate = parsedPredicate.map(s => s.value).filter(s => !!s);
+          const raw = entry.predicate;
+          if (!raw) {
+            delete entry.predicate;
+          } else {
+            try {
+              const parsed = typeof raw === "string" ? JSON.parse(raw) : raw;
+              if (Array.isArray(parsed)) {
+                const unwrapped = parsed.every(p => isObject(p) && typeof p.value === "string")
+                  ? parsed.map(p => p.value).filter(Boolean)
+                  : parsed;
+                if (unwrapped.length === 0) delete entry.predicate;
+                else entry.predicate = unwrapped;
+              } else {
+                entry.predicate = parsed;
+              }
+            } catch (error) {
+              ui.notifications.error(game.i18n.format("PTU.RuleParseSyntaxError", { message: error.message }));
+              throw error;
             }
-          } catch {
-            // Leave as-is; invalid JSON will be reported upstream
           }
           return entry;
         });
@@ -157,16 +172,28 @@ class ChoiceSetForm extends RuleElementForm {
     // Parse allowedDrops.predicate from string to JSON
     if (formData.allowedDrops && typeof formData.allowedDrops === "object") {
       const adPred = formData.allowedDrops.predicate;
-      if (typeof adPred === "string") {
-        if (adPred.trim() === "") {
-          delete formData.allowedDrops.predicate;
-        } else {
-          try {
-            formData.allowedDrops.predicate = JSON.parse(adPred);
-          } catch {
-            // Leave as-is
+      if (!adPred) {
+        delete formData.allowedDrops.predicate;
+      } else if (typeof adPred === "string") {
+        try {
+          const parsed = JSON.parse(adPred);
+          if (Array.isArray(parsed)) {
+            const unwrapped = parsed.every(p => isObject(p) && typeof p.value === "string")
+              ? parsed.map(p => p.value).filter(Boolean)
+              : parsed;
+            if (unwrapped.length === 0) delete formData.allowedDrops.predicate;
+            else formData.allowedDrops.predicate = unwrapped;
+          } else {
+            formData.allowedDrops.predicate = parsed;
           }
+        } catch (error) {
+          ui.notifications.error(game.i18n.format("PTU.RuleParseSyntaxError", { message: error.message }));
+          throw error;
         }
+      } else if (Array.isArray(adPred) && adPred.every(p => isObject(p) && typeof p.value === "string")) {
+        const unwrapped = adPred.map(p => p.value).filter(Boolean);
+        if (unwrapped.length === 0) delete formData.allowedDrops.predicate;
+        else formData.allowedDrops.predicate = unwrapped;
       }
       // If label and predicate are both empty, clear allowedDrops entirely
       if (!formData.allowedDrops.label && (!Array.isArray(formData.allowedDrops.predicate) || !formData.allowedDrops.predicate.length)) {
