@@ -97,7 +97,8 @@ class PTUDiceCheck {
                 statistic
             });
             this._contexts.set(context.actor.uuid, context);
-            this.targetOptions = new Set([...this.targetOptions, ...context.targetOptions]);
+            const effectivenessOptions = this.item?.getRollOptionsWithTarget?.(context.actor, this.selectors) ?? [];
+            this.targetOptions = new Set([...this.targetOptions, ...context.targetOptions, ...effectivenessOptions]);
         }
         
         return this;
@@ -286,7 +287,7 @@ class PTUDiceCheck {
                     token: this.token?.id ?? null,
                     domains: this.selectors ?? [],
                     targets,
-                    options: Array.from(this.options).sort(),
+                    options: Array.from(this.targetOptions).sort(),
                     rollMode: dialogContext.rollMode,
                     rollTwice: !!dialogContext.fortuneType ?? false,
                     title,

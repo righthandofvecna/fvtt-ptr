@@ -66,7 +66,6 @@ async function extractReminders({ affects, origin, target, item, domains, option
     const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(target, domains) ?? [])];
     const resolvables = item?.type == "move" ? { move: item } : {};
 
-
     return (
         await Promise.all(domains
             .flatMap(s => Object.values(effectsTo.synthetics.reminders?.[s]?.[affects] ?? {}))
