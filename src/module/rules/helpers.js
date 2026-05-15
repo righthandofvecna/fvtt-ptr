@@ -33,7 +33,7 @@ async function extractEphemeralEffects({ affects, origin, target, item, domains,
     if (!(origin && target)) return [];
 
     const [effectsFrom, effectsTo] = affects === "target" ? [origin, target] : [target, origin];
-    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(effectsFrom, domains) ?? [])];
+    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(target, domains) ?? [])];
     const resolvables = item?.type == "move" ? { move: item } : {};
     return (
         await Promise.all(
@@ -48,7 +48,7 @@ async function extractApplyEffects({ affects, origin, target, item, domains, opt
     if (!(origin && target)) return [];
 
     const [effectsFrom, effectsTo] = affects === "target" ? [origin, target] : [target, origin];
-    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(effectsFrom, domains) ?? [])];
+    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(target, domains) ?? [])];
     const resolvables = item?.type == "move" ? { move: item } : {};
     return (
         await Promise.all(
@@ -63,27 +63,14 @@ async function extractReminders({ affects, origin, target, item, domains, option
     if (!(origin && target)) return [];
 
     const [effectsFrom, effectsTo] = affects === "target" ? [origin, target] : [target, origin];
-    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(effectsFrom, domains) ?? [])];
+    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(target, domains) ?? [])];
     const resolvables = item?.type == "move" ? { move: item } : {};
 
-    const factories = domains.flatMap(s => effectsTo.synthetics.reminders?.[s]?.[affects] ?? []);
-    console.debug("PTU | Reminder debug — extractReminders", {
-        affects,
-        originName: origin?.name,
-        targetName: target?.name,
-        effectsToName: effectsTo?.name,
-        domains,
-        factoryCount: factories.length,
-        registeredBuckets: Object.fromEntries(
-            Object.entries(effectsTo.synthetics.reminders ?? {}).map(([k, v]) => [k, { target: v.target?.length, origin: v.origin?.length }])
-        ),
-    });
 
     return (
-        await Promise.all(
-            factories
-                .map(d => d({ test: fullOptions, resolvables, roll }))
-        )
+        await Promise.all(domains
+            .flatMap(s => Object.values(effectsTo.synthetics.reminders?.[s]?.[affects] ?? {}))
+            .map(d => d({ test: fullOptions, resolvables, roll })))
     ).flatMap(e => e ?? [])
 }
 

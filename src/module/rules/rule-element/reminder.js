@@ -1,4 +1,6 @@
 import { RuleElementPTU } from "./base.js";
+import { PTUPredicate } from "../../system/index.js";
+import { PredicateField } from "../../system/schema-data-fields.js";
 
 /**
  * Reminder rule element
@@ -7,6 +9,23 @@ import { RuleElementPTU } from "./base.js";
  */
 class ReminderRuleElement extends RuleElementPTU {
     constructor(source, item, options = {}) {
+        const messagePredicate = source.messagePredicate ?? undefined;
+        if(!(messagePredicate instanceof PTUPredicate)) {
+            if(messagePredicate === undefined || messagePredicate.length === 0) {
+                source.messagePredicate = new PTUPredicate();
+                console.log("PTU | No message predicate provided for reminder, defaulting to always-true predicate", { source });
+            } 
+            else {
+                console.log("PTU | Constructing message predicate for reminder", { source, messagePredicate });
+                if(Array.isArray(messagePredicate)) {
+                    source.messagePredicate = new PTUPredicate(...messagePredicate);
+                }
+                else {
+                    source.messagePredicate = new PTUPredicate(messagePredicate);
+                }
+            }
+            
+        }
         super(source, item, options);
     }
 
@@ -22,6 +41,7 @@ class ReminderRuleElement extends RuleElementPTU {
             affects: new fields.StringField({ required: true, choices: ["origin", "target"], initial: "origin" }),
             message: new fields.StringField({ required: true, nullable: false, blank: false, initial: "{actor|name}: {item|name} can be used." }),
             frequency: new fields.StringField({ required: false, nullable: true, initial: "always" }),
+            messagePredicate: new PredicateField(),
         };
     }
 
@@ -37,7 +57,9 @@ class ReminderRuleElement extends RuleElementPTU {
 
         for (const selector of selectors) {
             const construct = async (options = {}) => {
-                if (!this.test(options.test ?? this.actor.getRollOptions())) return null;
+                console.log("PTU | Constructing reminder with options", { self: this, options, predicate: this.messagePredicate, test: this.resolveInjectedProperties(this.messagePredicate).test(options.test) }); // Debug log
+                if (!this.test()) return null;
+                if (!this.resolveInjectedProperties(this.messagePredicate).test(options.test ?? this.actor.getRollOptions())) return null;
 
                 // Enforce frequency / mute
                 if (this.frequency !== "always") {
@@ -64,8 +86,8 @@ class ReminderRuleElement extends RuleElementPTU {
             };
 
             const synthetics = (this.actor.synthetics.reminders ??= {});
-            const bucket = (synthetics[selector] ??= { target: [], origin: [] });
-            bucket[this.affects].push(construct);
+            const bucket = (synthetics[selector] ??= { target: {}, origin: {} });
+            bucket[this.affects][reminderId] = construct;
         }
     }
 }

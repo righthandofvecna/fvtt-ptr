@@ -44,6 +44,10 @@ class ReminderForm extends RuleElementForm {
             formData.predicate = formData.predicate.map(s => s.value).filter(s => !!s);
         }
 
+        if(Array.isArray(formData.messagePredicate) && formData.messagePredicate.every(p => !!p.value)) {
+            formData.messagePredicate = formData.messagePredicate.map(s => s.value).filter(s => !!s);
+        }
+
         if (typeof formData.message === "string") {
             formData.message = formData.message.trim();
             if (formData.message === "") delete formData.message;

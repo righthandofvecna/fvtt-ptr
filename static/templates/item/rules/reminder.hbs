@@ -57,6 +57,23 @@
     </div>
 </div>
 
+{{!-- Message Predicate --}}
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.Reminder.MessagePredicate"}}</label>
+    <div class="attached-input">
+        <button type="button" class="attachment" data-action="toggle-predicate">
+            {{#if predicationIsMultiple}}Multiple{{else}}Complex{{/if}}
+        </button>
+        {{#if predicationIsMultiple}}
+            <input type="text" class="ptu-tagify predicate-list" name="system.rules.{{index}}.messagePredicate" value="{{json rule.messagePredicate}}" data-dtype="JSON"/>
+        {{else}}
+            <input type="text" name="system.rules.{{index}}.messagePredicate" value="{{json rule.messagePredicate}}" />
+        {{/if}}
+    </div>
+    <p class="hint">{{localize "PTU.RuleEditor.Reminder.MessagePredicateHint"}}</p>
+</div>
+
+
 {{!-- Predicate --}}
 <div class="form-group">
     <label class="short">{{localize "PTU.RuleEditor.General.Predicate"}}</label>

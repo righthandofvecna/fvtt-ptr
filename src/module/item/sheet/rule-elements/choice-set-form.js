@@ -98,12 +98,10 @@ class ChoiceSetForm extends RuleElementForm {
         event.stopPropagation();
       });
       dropZone.addEventListener("drop", (event) => {
-        console.log("PTU | ChoiceSetForm | Drop event", event);
         event.preventDefault();
         event.stopPropagation();
         const dropData = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
         if (dropData.type !== "Item") return;
-        console.log("PTU | ChoiceSetForm | Drop data", dropData);
         (fromUuid(dropData.data ? `Item.${dropData.data._id}` : dropData.uuid)).then((item) => {
           if (!item) {
             console.error(`PTU | ChoiceSetForm | Item not found`, dropData);
@@ -134,16 +132,13 @@ class ChoiceSetForm extends RuleElementForm {
       } else if (isObject(c)) {
         // Array mode: choices came in as object with numeric string keys from form expansion
         formData.choices = Object.values(c).filter((entry) => entry?.value).map((entry) => {
-          if (typeof entry.predicate === "string") {
-            if (entry.predicate.trim() === "") {
-              delete entry.predicate;
-            } else {
-              try {
-                entry.predicate = JSON.parse(entry.predicate);
-              } catch {
-                // Leave as-is; invalid JSON will be reported upstream
-              }
+          try {
+            const parsedPredicate = typeof entry.predicate === "string" ? JSON.parse(entry.predicate) : entry.predicate;
+            if (Array.isArray(parsedPredicate) && parsedPredicate.every(p => !!p.value)) {
+              entry.predicate = parsedPredicate.map(s => s.value).filter(s => !!s);
             }
+          } catch {
+            // Leave as-is; invalid JSON will be reported upstream
           }
           return entry;
         });

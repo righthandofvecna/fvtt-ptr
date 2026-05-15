@@ -384,16 +384,6 @@ class PTUDiceCheck {
             })();
             const targetReminderDomains = [...messageDomains, ...damageReceivedDomains];
 
-            console.debug("PTU | Reminder debug — createMessage called", {
-                messageId: message.id,
-                msgType: msgCtx.type,
-                messageDomains,
-                damageReceivedDomains,
-                targetReminderDomains,
-                messageTargets,
-                callStack: new Error().stack,
-            });
-
             // For each target, ask synthetics for reminders
             for (const t of messageTargets) {
                 try {
@@ -408,12 +398,6 @@ class PTUDiceCheck {
                         domains: targetReminderDomains,
                         options: messageOptions,
                         roll: rollValue,
-                    });
-
-                    console.debug("PTU | Reminder debug — target reminders found", {
-                        targetActorName: targetActor.name,
-                        reminderCount: reminders.length,
-                        reminderIds: reminders.map(r => r.flags?.ptu?.reminder?.id),
                     });
 
                     for (const reminder of reminders) {
