@@ -38,6 +38,11 @@ class GithubSyncSheet extends HandlebarsApplicationMixin(ApplicationV2) {
                 const title = this.element
                     .querySelector("[name='pr-title']")
                     ?.value;
+                
+                if (!title || !message) {
+                    ui.notifications.error("PR title and commit message are required.");
+                    return;
+                }
 
                 const result = await GithubSyncManager.finalizeCommitToGithub({
                     message,
