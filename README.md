@@ -38,6 +38,15 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Added Reminder Rule Element type](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/867)
+- [Added Modifications section to Grant Item rule](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/942)
+- [Don't hide granted items of the same type](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/915)
+- [Chat Messages: Show Domains/Selectors and Roll Options](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/941)
+- [Added a system for restricting items by "Content Set"](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/932)
+- [Added fallback support for webm token images](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/933)
+- [Added PokeDex updates to the token scan action](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/935)
+- Updated the Rulebook Journal with WarforgedWordsmith's updates
+- [Support Journals in the content-sync system](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/936)
 - [Item Piles Compatibility Fix](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/443)
 - Dev Option to allow Unlinked Tokens - NOT currently ready to test in a live world. Turn on at your own risk
 - Add a system for showing content devs if a move has been automated in system (and searching by that in the compendium browser)

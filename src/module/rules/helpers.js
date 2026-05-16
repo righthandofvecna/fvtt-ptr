@@ -33,7 +33,7 @@ async function extractEphemeralEffects({ affects, origin, target, item, domains,
     if (!(origin && target)) return [];
 
     const [effectsFrom, effectsTo] = affects === "target" ? [origin, target] : [target, origin];
-    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(effectsFrom, domains) ?? [])];
+    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(target, domains) ?? [])];
     const resolvables = item?.type == "move" ? { move: item } : {};
     return (
         await Promise.all(
@@ -48,7 +48,7 @@ async function extractApplyEffects({ affects, origin, target, item, domains, opt
     if (!(origin && target)) return [];
 
     const [effectsFrom, effectsTo] = affects === "target" ? [origin, target] : [target, origin];
-    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(effectsFrom, domains) ?? [])];
+    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(target, domains) ?? [])];
     const resolvables = item?.type == "move" ? { move: item } : {};
     return (
         await Promise.all(
@@ -56,6 +56,20 @@ async function extractApplyEffects({ affects, origin, target, item, domains, opt
                 .flatMap(s => effectsFrom.synthetics.applyEffects[s]?.[affects] ?? [])
                 .map(d => d({ test: fullOptions, resolvables, roll }))
         )
+    ).flatMap(e => e ?? [])
+}
+
+async function extractReminders({ affects, origin, target, item, domains, options, roll }) {
+    if (!(origin && target)) return [];
+
+    const [effectsFrom, effectsTo] = affects === "target" ? [origin, target] : [target, origin];
+    const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(target, domains) ?? [])];
+    const resolvables = item?.type == "move" ? { move: item } : {};
+
+    return (
+        await Promise.all(domains
+            .flatMap(s => Object.values(effectsTo.synthetics.reminders?.[s]?.[affects] ?? {}))
+            .map(d => d({ test: fullOptions, resolvables, roll })))
     ).flatMap(e => e ?? [])
 }
 
@@ -99,9 +113,10 @@ async function processPreUpdateActorHooks(changed, { pack }) {
     await actor.deleteEmbeddedDocuments("Item", createDeletes.delete, { render: false });
 }
 
-export { extractEphemeralEffects, extractApplyEffects, extractDamageDice, extractNotes, extractModifierAdjustments, extractRollSubstitutions, extractModifiers, processPreUpdateActorHooks }
+export { extractEphemeralEffects, extractApplyEffects, extractReminders, extractDamageDice, extractNotes, extractModifierAdjustments, extractRollSubstitutions, extractModifiers, processPreUpdateActorHooks }
 
 globalThis.extractEphemeralEffects = extractEphemeralEffects;
+globalThis.extractReminders = extractReminders;
 globalThis.extractDamageDice = extractDamageDice;
 globalThis.extractNotes = extractNotes;
 globalThis.extractModifierAdjustments = extractModifierAdjustments;

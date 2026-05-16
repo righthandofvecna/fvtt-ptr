@@ -18,23 +18,33 @@ class ChoiceSetForm extends RuleElementForm {
     let choicesMode;
     if (Array.isArray(choices)) {
       choicesMode = "array";
-      choices = await Promise.all(this.rule.choices.map(async (c) => ({
+      choices = await Promise.all(this.rule.choices.map(async (c) => {
+        c.predicate ??= [];
+        return {
         ...c,
         link: await fromUuid(c.value).then(item=>item.linkHtml).catch(() => ""),
         predicateIsMultiple: Array.isArray(c.predicate) && c.predicate.every(p => typeof p === "string" || (isObject(p) && Object.keys(p).length === 1 && typeof p.value === "string")),
-      })));
+      }}));
     }
     else if (typeof choices === "string") choicesMode = "path";
     else if (isObject(choices) && choices.ownedItems) choicesMode = "ownedItems";
     else choicesMode = "array";
 
+    // Normalize allowedDrops so null predicate renders as [] rather than "null" in tagify
+    const allowedDropsEnabled = this.rule.allowedDrops != null;
+    const allowedDrops = allowedDropsEnabled
+      ? { ...this.rule.allowedDrops, predicate: this.rule.allowedDrops.predicate ?? [] }
+      : { label: "", predicate: [] };
+
     return {
       ...data,
+      rule: { ...this.rule, allowedDrops },
       choicesMode,
       choices,
       // adjustName defaults to true in the schema; make that explicit for the template
       adjustName: this.rule.adjustName !== false,
-      allowedDropsPredicateIsMultiple: Array.isArray(this.rule.allowedDrops?.predicate) && this.rule.allowedDrops.predicate.every(p => typeof p === "string" || (isObject(p) && Object.keys(p).length === 1 && typeof p.value === "string")),
+      allowedDropsEnabled,
+      allowedDropsPredicateIsMultiple: allowedDropsEnabled && Array.isArray(allowedDrops.predicate) && allowedDrops.predicate.every(p => typeof p === "string" || (isObject(p) && Object.keys(p).length === 1 && typeof p.value === "string")),
     };
   }
 
@@ -42,6 +52,7 @@ class ChoiceSetForm extends RuleElementForm {
   activateListeners(html) {
     // Mode switcher — converts choices structure and re-renders
     html.querySelector("[data-action=choices-mode]")?.addEventListener("change", (event) => {
+      event.stopPropagation();
       const newMode = event.target.value;
       let newChoices;
       if (newMode === "array") newChoices = [];
@@ -81,6 +92,18 @@ class ChoiceSetForm extends RuleElementForm {
       });
     });
 
+    // Enable/disable allowedDrops entirely
+    html.querySelector("[data-action=toggle-allowed-drops]")?.addEventListener("change", (event) => {
+      event.stopPropagation();
+      if (event.target.checked) {
+        this.updateItem({ allowedDrops: { label: "", predicate: [] } });
+      } else {
+        const rules = this.item.toObject().system.rules;
+        delete rules[this.index].allowedDrops;
+        this.item.update({ ["system.rules"]: rules });
+      }
+    });
+
     // Toggle allowedDrops predicate between tagify (Multiple) and raw JSON (Complex)
     html.querySelector("[data-action=toggle-allowed-drops-predicate]")?.addEventListener("click", () => {
       const predicate = this.rule.allowedDrops?.predicate ?? [];
@@ -98,12 +121,10 @@ class ChoiceSetForm extends RuleElementForm {
         event.stopPropagation();
       });
       dropZone.addEventListener("drop", (event) => {
-        console.log("PTU | ChoiceSetForm | Drop event", event);
         event.preventDefault();
         event.stopPropagation();
         const dropData = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
         if (dropData.type !== "Item") return;
-        console.log("PTU | ChoiceSetForm | Drop data", dropData);
         (fromUuid(dropData.data ? `Item.${dropData.data._id}` : dropData.uuid)).then((item) => {
           if (!item) {
             console.error(`PTU | ChoiceSetForm | Item not found`, dropData);
@@ -134,15 +155,24 @@ class ChoiceSetForm extends RuleElementForm {
       } else if (isObject(c)) {
         // Array mode: choices came in as object with numeric string keys from form expansion
         formData.choices = Object.values(c).filter((entry) => entry?.value).map((entry) => {
-          if (typeof entry.predicate === "string") {
-            if (entry.predicate.trim() === "") {
-              delete entry.predicate;
-            } else {
-              try {
-                entry.predicate = JSON.parse(entry.predicate);
-              } catch {
-                // Leave as-is; invalid JSON will be reported upstream
+          const raw = entry.predicate;
+          if (!raw) {
+            delete entry.predicate;
+          } else {
+            try {
+              const parsed = typeof raw === "string" ? JSON.parse(raw) : raw;
+              if (Array.isArray(parsed)) {
+                const unwrapped = parsed.every(p => isObject(p) && typeof p.value === "string")
+                  ? parsed.map(p => p.value).filter(Boolean)
+                  : parsed;
+                if (unwrapped.length === 0) delete entry.predicate;
+                else entry.predicate = unwrapped;
+              } else {
+                entry.predicate = parsed;
               }
+            } catch (error) {
+              ui.notifications.error(game.i18n.format("PTU.RuleParseSyntaxError", { message: error.message }));
+              throw error;
             }
           }
           return entry;
@@ -162,16 +192,28 @@ class ChoiceSetForm extends RuleElementForm {
     // Parse allowedDrops.predicate from string to JSON
     if (formData.allowedDrops && typeof formData.allowedDrops === "object") {
       const adPred = formData.allowedDrops.predicate;
-      if (typeof adPred === "string") {
-        if (adPred.trim() === "") {
-          delete formData.allowedDrops.predicate;
-        } else {
-          try {
-            formData.allowedDrops.predicate = JSON.parse(adPred);
-          } catch {
-            // Leave as-is
+      if (!adPred) {
+        delete formData.allowedDrops.predicate;
+      } else if (typeof adPred === "string") {
+        try {
+          const parsed = JSON.parse(adPred);
+          if (Array.isArray(parsed)) {
+            const unwrapped = parsed.every(p => isObject(p) && typeof p.value === "string")
+              ? parsed.map(p => p.value).filter(Boolean)
+              : parsed;
+            if (unwrapped.length === 0) delete formData.allowedDrops.predicate;
+            else formData.allowedDrops.predicate = unwrapped;
+          } else {
+            formData.allowedDrops.predicate = parsed;
           }
+        } catch (error) {
+          ui.notifications.error(game.i18n.format("PTU.RuleParseSyntaxError", { message: error.message }));
+          throw error;
         }
+      } else if (Array.isArray(adPred) && adPred.every(p => isObject(p) && typeof p.value === "string")) {
+        const unwrapped = adPred.map(p => p.value).filter(Boolean);
+        if (unwrapped.length === 0) delete formData.allowedDrops.predicate;
+        else formData.allowedDrops.predicate = unwrapped;
       }
       // If label and predicate are both empty, clear allowedDrops entirely
       if (!formData.allowedDrops.label && (!Array.isArray(formData.allowedDrops.predicate) || !formData.allowedDrops.predicate.length)) {

@@ -8,6 +8,7 @@ import { EphemeralEffectForm } from "./ephemeral-effect-form.js"
 import { FlatModifierForm } from "./flat-modifier-form.js"
 import { GrantItemForm } from "./grant-item-form.js"
 import { RollOptionForm } from "./roll-option-form.js"
+import { ReminderForm } from "./reminder-form.js"
 import { TempHPForm } from "./temp-hp-form.js"
 import { TempSpeciesForm } from "./temp-species-form.js"
 import { TokenImageForm } from "./token-image-form.js"
@@ -24,6 +25,7 @@ const RULE_ELEMENT_FORMS = {
     Effectiveness: EffectivenessForm,
     EphemeralEffect: EphemeralEffectForm,
     ApplyEffect: ApplyEffectForm,
+    Reminder: ReminderForm,
     TempHP: TempHPForm,
     TemporarySpecies: TempSpeciesForm,
     TokenImage: TokenImageForm,

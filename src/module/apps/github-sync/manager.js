@@ -467,8 +467,11 @@ class GithubSyncManager {
             return;
         }
 
-        const _origButtonHTML = button?.innerHTML ?? null;
-        if (button) button.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Committing…`;
+        const _origButtonHTML = button?._origButtonHTML ?? button?.innerHTML ?? null;
+        if (button) {
+            button.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Committing…`;
+            button._origButtonHTML = _origButtonHTML;
+        }
         try {
 
         // ── Authenticate first, before any server document fetches ──────────────────
@@ -853,10 +856,9 @@ class GithubSyncManager {
      */
     /**
      * Ensure the user is authenticated with GitHub before making any server
-     * document fetches. Sends a lightweight status probe via #authenticatedFetch,
-     * which triggers the OAuth popup and retries until the user completes sign-in
-     * (or we time out). This must be called before any fetchServerDocument calls
-     * so that unauthenticated requests are never made.
+     * document fetches. Calls GET /auth — a lightweight endpoint that returns
+     * { success: true } if the identity is GitHub-linked, or { auth_url } if
+     * OAuth is required. Polls until auth completes or times out.
      *
      * @returns {Promise<string|null>}  The identity token, or null if auth failed
      */
@@ -866,17 +868,48 @@ class GithubSyncManager {
             ui.notifications.error("Unable to identify user for GitHub commit.");
             return null;
         }
-        // A status probe via #authenticatedFetch triggers OAuth if the token
-        // is not yet linked to a GitHub account, and waits until it is.
-        const probe = await GithubSyncManager.#authenticatedFetch(
-            identity,
-            { flags: { new: true, status: true } }
-        );
-        if (!probe) {
-            ui.notifications.error("GitHub authentication failed — please try again.");
-            return null;
+
+        const { apiUrl, poweredByHeader } = GithubSyncManager.config;
+        let retries = 0;
+        while (true) {
+            let response;
+            try {
+                response = await fetch(`${apiUrl}/auth`, {
+                    method: "GET",
+                    headers: {
+                        "X-Powered-By": poweredByHeader,
+                        identity: btoa(identity),
+                    },
+                });
+            } catch (err) {
+                console.error("GithubSync | /auth request failed:", err);
+                ui.notifications.error("Failed to reach the GitHub sync server.");
+                return null;
+            }
+
+            const json = await response.json().catch(() => ({}));
+
+            if (json.auth_url) {
+                if (retries === 0) {
+                    window.open(json.auth_url, "_blank");
+                    ui.notifications.info("GitHub sign-in required — complete authentication in the browser window that just opened.");
+                }
+                if (retries >= 60) {
+                    ui.notifications.error("GitHub authentication timed out — please try again.");
+                    return null;
+                }
+                retries++;
+                await new Promise((r) => setTimeout(r, 5000));
+                continue;
+            }
+
+            if (!response.ok || !json.success) {
+                ui.notifications.error("GitHub authentication failed — please try again.");
+                return null;
+            }
+
+            return identity;
         }
-        return identity;
     }
 
     static async getIdentity() {
@@ -1148,16 +1181,7 @@ class GithubSyncManager {
 
         // Server requests GitHub OAuth before it can proceed
         if (json.auth_url) {
-            if (retries === 0) {
-                // First encounter — open the URL and start polling.
-                // We do NOT wait for the popup to close: in Electron the URL
-                // opens in a separate external browser, so popup.closed is never
-                // reliable. Instead we just poll until the server accepts the request.
-                window.open(json.auth_url, "_blank");
-                ui.notifications.info("GitHub sign-in required — complete authentication in the browser window that just opened. Your commit will resume automatically.");
-            }
             if (retries >= 60) {
-                // ~5 minutes of polling (60 × 5 s)
                 ui.notifications.error("GitHub authentication timed out — please try again.");
                 return null;
             }

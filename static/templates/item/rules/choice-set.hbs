@@ -58,6 +58,14 @@
     <input type="hidden" name="system.rules.{{index}}.choices.ownedItems" value="true"/>
 {{/if}}
 
+<div class="d-flex flex-row justify-content-between">
+    <label class="fill">
+        Allow Drops
+        <input type="checkbox" data-action="toggle-allowed-drops" {{checked allowedDropsEnabled}}>
+    </label>
+</div>
+
+{{#if allowedDropsEnabled}}
 <div class="form-group">
     <label class="short">Allowed Drops Label</label>
     <div class="attached-input">
@@ -78,6 +86,7 @@
         {{/if}}
     </div>
 </div>
+{{/if}}
 
 <div class="form-group">
     <label class="short">Flag</label>

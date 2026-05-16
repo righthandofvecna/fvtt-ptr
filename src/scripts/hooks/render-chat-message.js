@@ -19,6 +19,26 @@ export const RenderChatMessage = {
                 await message.renderAttackHTML($html);
             }
 
+            // Append reminder UI for reminder messages
+            if (message.flags.ptu?.reminder) {
+                try {
+                    const reminderHtml = await foundry.applications.handlebars.renderTemplate("systems/ptu/static/templates/chat/reminder.hbs", { message });
+                    const $container = $html.find(".message-content");
+                    if ($container.length) $container.append(reminderHtml);
+                    else $html.append(reminderHtml);
+
+                    // Hide mute button unless the current user can update the actor referenced by the reminder
+                    const remFlag = message.flags.ptu?.reminder ?? {};
+                    const actorDoc = remFlag.actor ? await fromUuid(remFlag.actor) : null;
+                    if (actorDoc && !(game.user.isGM || actorDoc.testUserPermission(game.user, "OWNER"))) {
+                        $html.find(".button[data-action='mute-reminder']").remove();
+                    }
+                }
+                catch (err) {
+                    console.error("PTU | Failed to render reminder UI", err);
+                }
+            }
+
             // Handle button actions for base ChatMessagePTU
             $html.find(".buttons .button[data-action]").on("click", async event => {
                 event.preventDefault();

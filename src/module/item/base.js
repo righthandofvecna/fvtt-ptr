@@ -1,5 +1,6 @@
 import { RuleElements } from "../rules/index.js";
 import { processGrantDeletions } from "../rules/rule-element/grant-item/helper.js";
+import { extractReminders } from "../rules/helpers.js";
 import { sluggify } from "../../util/misc.js"
 import { GrantItemRuleElement } from "../rules/rule-element/grant-item/rule-element.js";
 
@@ -376,6 +377,37 @@ class PTUItem extends Item {
 
         const updateKeys = Object.keys(actorUpdates);
         if (updateKeys.length > 0 && !updateKeys.every(k => k === "_id")) this.actor.update(actorUpdates);
+
+        // Reminders for newly-created items (e.g., gaining a condition)
+        (async ()=>{
+            try {
+                // Only run for conditions by default to cover "gaining a status condition" triggers
+                if (this.type === "condition") {
+                    const domains = ["gained", `condition:${this.slug}`, `condition:${this.id}`];
+                    const reminders = await extractReminders({
+                        affects: "target",
+                        origin: this.actor,
+                        target: this.actor,
+                        item: this,
+                        domains,
+                        options: [],
+                        roll: null,
+                    });
+
+                    for (const reminder of reminders) {
+                        await ChatMessage.create({
+                            content: reminder.content,
+                            speaker: reminder.speaker,
+                            whisper: reminder.whisper,
+                            flags: reminder.flags,
+                        });
+                    }
+                }
+            }
+            catch (err) {
+                console.error("PTU | Failed to create reminders on item create:", err);
+            }
+        })();
     }
 
     /** @override */

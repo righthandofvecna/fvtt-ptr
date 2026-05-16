@@ -1231,7 +1231,6 @@ a.content-link {
 	}
 	&:not(.attack-roll),
   &:not(.attack-selector) {
-		z-index: 10;
 		font-size: 15px;
 		line-height: 17px;
 		padding: 5px;
@@ -1640,6 +1639,10 @@ a.content-link {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			&:hover {
+				color: black;
+				text-shadow: 0 0 5px var(--button-hover-background-color);
+			}
 		}
 	}
 	.mon-list {
@@ -1822,7 +1825,6 @@ a.content-link {
   &:not(.attack-roll),
   &:not(.attack-selector) {
     .flavor-text {
-      z-index: 10;
       p.action {
         font-size: 15px;
         line-height: 17px;
@@ -6105,5 +6107,166 @@ a.content-link {
 	&.exhausted {
 		background: #e06666aa !important;
 		border-color: #8b202088 !important;
+	}
+}
+
+// ── Roll Inspector Dialog ──────────────────────────────────────────────────────
+.ptu.roll-inspector {
+	.window-content {
+		padding: 0;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.roll-inspector-content {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		overflow: hidden;
+		height: 100%;
+	}
+
+	.roll-inspector-header {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		padding: 8px 10px 6px;
+		border-bottom: 1px solid var(--color-text-subtle);
+		flex-shrink: 0;
+
+		.roll-type-badge {
+			font-size: 10px;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			background: var(--color-bg-btn);
+			border: 1px solid var(--color-text-subtle);
+			border-radius: 3px;
+			padding: 1px 5px;
+			white-space: nowrap;
+			flex-shrink: 0;
+		}
+
+		.roll-inspector-search {
+			flex: 1;
+			height: 26px;
+			font-size: 12px;
+			padding: 2px 6px;
+			border: 1px solid var(--color-text-subtle);
+			border-radius: 3px;
+		}
+	}
+
+	.inspector-section {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		flex: 1 1 auto;
+
+		&:first-of-type {
+			flex: 0 0 auto;
+			border-bottom: 1px solid var(--color-text-subtle);
+		}
+	}
+
+	.inspector-section-title {
+		font-size: 11px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		margin: 0;
+		padding: 5px 10px 4px;
+		border-bottom: 1px solid var(--color-text-subtle);
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		flex-shrink: 0;
+	}
+
+	.count-badge {
+		font-size: 10px;
+		font-weight: normal;
+		border-radius: 8px;
+		padding: 0 5px;
+	}
+
+	.domain-list {
+		list-style: none;
+		margin: 0;
+		padding: 6px 10px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+	}
+
+	.domain-item {
+		font-family: monospace;
+		font-size: 11px;
+		background: #e8f0fe;
+		border: 1px solid #7baaf7;
+		border-radius: 3px;
+		padding: 1px 6px;
+		color: #1a3d6e;
+		margin-bottom: 0.25rem;
+	}
+
+	.option-group {
+		flex-shrink: 0;
+		border-bottom: 1px solid var(--color-text-subtle);
+
+		&[open] > .option-list {
+			display: block;
+		}
+	}
+
+	.option-group-header {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		padding: 3px 10px;
+		font-size: 11px;
+		font-weight: bold;
+		cursor: pointer;
+		user-select: none;
+
+		&:hover {
+			background: var(--color-text-subtle);
+		}
+
+		.namespace {
+			font-family: monospace;
+			font-size: 11px;
+		}
+	}
+
+	.option-list {
+		list-style: none;
+		margin: 0;
+		padding: 0 0 0 10px;
+		display: none;
+	}
+
+	.roll-option-item {
+		font-family: monospace;
+		font-size: 11px;
+		padding: 1px 4px;
+		border-left: 2px solid transparent;
+
+		&:hover {
+			border-left-color: var(--color-text-subtle);
+		}
+	}
+
+	.empty-notice {
+		font-size: 12px;
+		font-style: italic;
+		padding: 6px 10px;
+	}
+
+	// Make the second inspector-section (Roll Options) scrollable
+	.inspector-section:last-of-type {
+		overflow-y: auto;
+		flex: 1 1 0;
 	}
 }

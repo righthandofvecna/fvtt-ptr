@@ -14,6 +14,7 @@ import { EffectivenessRuleElement } from "./rule-element/effectiveness.js";
 import { EphemeralEffectRuleElement } from "./rule-element/ephemeral-effect.js";
 import { ActionPointsRuleElement } from "./rule-element/ap.js";
 import { ApplyEffectRuleElement } from "./rule-element/apply-effect.js";
+import { ReminderRuleElement } from "./rule-element/reminder.js";
 
 class RuleElements {
     static builtin = {
@@ -32,6 +33,7 @@ class RuleElements {
         "EphemeralEffect": EphemeralEffectRuleElement,
         "ActionPoint": ActionPointsRuleElement,
         "ApplyEffect": ApplyEffectRuleElement,
+        "Reminder": ReminderRuleElement,
     }
 
     static custom = {}

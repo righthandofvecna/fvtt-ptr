@@ -17,6 +17,7 @@ import { AdvancementPending } from "./advancement-pending.js";
 import { HomebrewConfigSettings } from "./homebrew-config-settings.js";
 import { GMControlPanelHook } from "./gm-control-panel.js";
 import { QuickInsertCompat } from "./quick-insert-compat.js";
+import { ChatContextMenu } from "./chat-context-menu.js";
 
 export const PtuHooks = {
     listen() {
@@ -41,6 +42,7 @@ export const PtuHooks = {
             HomebrewConfigSettings,
             GMControlPanelHook,
             QuickInsertCompat,
+            ChatContextMenu,
         ]
         for(const listener of listeners) listener.listen();
     }

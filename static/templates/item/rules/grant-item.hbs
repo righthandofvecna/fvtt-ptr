@@ -38,3 +38,31 @@
         {{/if}}
     </div>
 </div>
+<div class="form-group modifications-section">
+    <label class="short">Modifications</label>
+    <div class="modifications-list">
+        {{#each rule.modifications as |mod idx|}}
+        <div class="d-flex flex-row spaced-fields modification-entry" data-idx="{{idx}}">
+            <input type="text"
+                name="system.rules.{{@root.index}}.modifications.{{idx}}.key"
+                value="{{mod.key}}"
+                placeholder="system.path" />
+            <select name="system.rules.{{@root.index}}.modifications.{{idx}}.operation">
+                <option value="add"       {{isSelected mod.operation "add"}}>Add</option>
+                <option value="subtract"  {{isSelected mod.operation "subtract"}}>Subtract</option>
+                <option value="remove"    {{isSelected mod.operation "remove"}}>Remove</option>
+                <option value="multiply"  {{isSelected mod.operation "multiply"}}>Multiply</option>
+                <option value="override"  {{isSelected mod.operation "override"}}>Override</option>
+                <option value="upgrade"   {{isSelected mod.operation "upgrade"}}>Upgrade</option>
+                <option value="downgrade" {{isSelected mod.operation "downgrade"}}>Downgrade</option>
+            </select>
+            <input type="text"
+                name="system.rules.{{@root.index}}.modifications.{{idx}}.value"
+                value="{{mod.value}}"
+                placeholder="value or JSON" />
+            <a data-action="modification-delete" data-idx="{{idx}}">×</a>
+        </div>
+        {{/each}}
+        <a data-action="modification-add">+ Add Modification</a>
+    </div>
+</div>

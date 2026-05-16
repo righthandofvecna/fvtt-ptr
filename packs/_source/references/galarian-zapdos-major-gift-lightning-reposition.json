@@ -1,0 +1,26 @@
+{
+  "name": "Galarian Zapdos' Major Gift - Lightning Reposition",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Major Gift – Prime Fury\nScene – Shift Action\nEffect: You may move up to 10m. This does not provoke reactions, and may even move across liquid surfaces and up (or down) sheer cliffs.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}

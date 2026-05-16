@@ -100,6 +100,11 @@ function _registerPTUHelpers() {
         return Math.clamp(Math.round((100 - percent) / 100 * 48), 0, 48);
     });
 
+    Handlebars.registerHelper("isSelected", function (a, b) {
+        if (a === b) return "selected";
+        return "";
+    })
+
     // //pokeball themed background for pokemon
     // Handlebars.registerHelper('pokeballStyles', function (pokeball) {
 

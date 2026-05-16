@@ -8,6 +8,8 @@ import { PTUToken } from "../../canvas/token/index.js";
 import { CheckDialog } from "./dialogs/dialog.js";
 import { PTUTokenDocument } from "../../canvas/token/document.js";
 import { CheckModifier } from "../../actor/modifiers.js";
+import { extractReminders } from "../../rules/helpers.js";
+import { sluggify } from "../../../util/misc.js";
 
 class PTUDiceCheck {
     /** @type {PTUToken[]} */
@@ -95,7 +97,8 @@ class PTUDiceCheck {
                 statistic
             });
             this._contexts.set(context.actor.uuid, context);
-            this.targetOptions = new Set([...this.targetOptions, ...context.targetOptions]);
+            const effectivenessOptions = this.item?.getRollOptionsWithTarget?.(context.actor, this.selectors) ?? [];
+            this.targetOptions = new Set([...this.targetOptions, ...context.targetOptions, ...effectivenessOptions]);
         }
         
         return this;
@@ -187,6 +190,8 @@ class PTUDiceCheck {
             origin: {
                 actor: this.actor.uuid,
                 item: this.item?.uuid,
+                uuid: this.item?.uuid,
+                type: this.item?.type
             },
             rollerId: game.userId,
             isReroll,
@@ -282,7 +287,7 @@ class PTUDiceCheck {
                     token: this.token?.id ?? null,
                     domains: this.selectors ?? [],
                     targets,
-                    options: Array.from(this.options).sort(),
+                    options: Array.from(this.targetOptions).sort(),
                     rollMode: dialogContext.rollMode,
                     rollTwice: !!dialogContext.fortuneType ?? false,
                     title,
@@ -342,7 +347,7 @@ class PTUDiceCheck {
         flags.ptu.unsafe = flavor;
 
         const speaker = ChatMessage.getSpeaker({ actor: this.actor, token: this.token });
-        return roll.toMessage({
+        const created = await roll.toMessage({
             speaker,
             flavor,
             flags
@@ -351,6 +356,98 @@ class PTUDiceCheck {
             create: true,
             critRoll
         })
+
+        try {
+            const message = created instanceof ChatMessage ? created : new ChatMessage(created);
+            const msgCtx = message.flags?.ptu?.context ?? {};
+            const messageDomains = msgCtx.domains ?? [];
+            const messageTargets = msgCtx.targets ?? [];
+            const messageOptions = msgCtx.options ?? [];
+            const rollValue = msgCtx.rollResult ?? null;
+
+            // Build damage-received domain variants so reminders fire after the damage roll
+            // is visible but before HP is subtracted (i.e. on damage-roll messages only).
+            const damageReceivedDomains = (() => {
+                if (msgCtx.type !== "damage-roll") return [];
+                const item = this.item;
+                if (!item) return [];
+                const d = [
+                    "damage-received",
+                    `${item.id}-damage-received`,
+                    `${item.slug}-damage-received`,
+                ];
+                if (item.type === "move") {
+                    d.push(
+                        `${item.system.category?.toLocaleLowerCase?.(game.i18n.lang)}-damage-received`,
+                        `${item.system.type?.toLocaleLowerCase?.(game.i18n.lang)}-damage-received`,
+                        `${sluggify(item.system.frequency)}-damage-received`,
+                    );
+                }
+                return d;
+            })();
+            const targetReminderDomains = [...messageDomains, ...damageReceivedDomains];
+
+            // For each target, ask synthetics for reminders
+            for (const t of messageTargets) {
+                try {
+                    const targetActor = await fromUuid(t.actor ?? "");
+                    if (!targetActor) continue;
+
+                    const reminders = await extractReminders({
+                        affects: "target",
+                        origin: this.actor,
+                        target: targetActor,
+                        item: this.item,
+                        domains: targetReminderDomains,
+                        options: messageOptions,
+                        roll: rollValue,
+                    });
+
+                    for (const reminder of reminders) {
+                        await ChatMessage.create({
+                            content: reminder.content,
+                            speaker: reminder.speaker,
+                            whisper: reminder.whisper,
+                            flags: reminder.flags,
+                        });
+                    }
+                }
+                catch (err) {
+                    console.error("PTU | Reminder (target) failure:", err);
+                }
+            }
+
+            // Origin reminders
+            try {
+                const originTarget = messageTargets.length > 0 ? await fromUuid(messageTargets[0].actor ?? "") : null;
+                const originReminders = await extractReminders({
+                    affects: "origin",
+                    origin: this.actor,
+                    target: originTarget ?? this.actor,
+                    item: this.item,
+                    domains: messageDomains,
+                    options: messageOptions,
+                    roll: rollValue,
+                });
+
+                for (const reminder of originReminders) {
+                    await ChatMessage.create({
+                        content: reminder.content,
+                        speaker: reminder.speaker,
+                        whisper: reminder.whisper,
+                        flags: reminder.flags,
+                    });
+                }
+            }
+            catch (err) {
+                console.error("PTU | Reminder (origin) failure:", err);
+            }
+        }
+        catch (err) {
+            console.error("PTU | Failed to create reminders for check message:", err);
+        }
+
+        return created;
     }
 
     /**
@@ -541,7 +638,9 @@ class PTUCheck {
         const options = {
             origin: {
                 actor: context.actor.uuid,
-                item: context.item?.uuid
+                item: context.item?.uuid,
+                uuid: context.item?.uuid,
+                type: context.item?.type
             },
             rollerId: game.userId,
             isReroll,

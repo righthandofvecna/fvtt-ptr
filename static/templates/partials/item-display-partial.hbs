@@ -134,80 +134,78 @@
 {{else}}
     <ol class="item-list pl-1" {{#if category}}data-category="{{category}}"{{/if}}>
         {{#each items as | item |}}
-            {{#unless (and item.grantedBySameType (notEqual type "condition"))}}
         <li class="item {{item.type}}-item {{#if (is item.active false)}}disabled{{/if}} {{#if item.onCooldown}}on-cooldown{{/if}}" data-item-id="{{item._id}}">
-                    {{#if item.rollable}}
-                        <div class="item-icon rollable">
-                            <img class="icon" src="{{item.img}}" title="{{item.name}} ({{item.type}})"/>
-                            <img class="dice" src="/icons/svg/d20.svg" title="Roll {{item.name}}">
-                        </div>
-                    {{else}}
-                        <div class="item-icon">
-                            <img class="icon" src="{{item.img}}" title="{{item.name}} ({{item.type}})"/>
+            {{#if item.rollable}}
+                <div class="item-icon rollable">
+                    <img class="icon" src="{{item.img}}" title="{{item.name}} ({{item.type}})"/>
+                    <img class="dice" src="/icons/svg/d20.svg" title="Roll {{item.name}}">
+                </div>
+            {{else}}
+                <div class="item-icon">
+                    <img class="icon" src="{{item.img}}" title="{{item.name}} ({{item.type}})"/>
+                </div>
+            {{/if}}
+            <div class="item-info">
+                <div class="item-name">
+                    <h4>{{item.name}}</h4>
+                </div>
+                <div class="item-tags">
+                    {{#if item.isOverriden}}
+                        <div class="tag shadowless tooltip" title="Condition Overriden">
+                            <i class="fa-solid fa-lock"></i>
                         </div>
                     {{/if}}
-                    <div class="item-info">
-                        <div class="item-name">
-                            <h4>{{item.name}}</h4>
+                    {{#if item.isGranted}}
+                        <div class="tag shadowless tooltip" title="Granted by {{item.grantedBy.name}}">
+                            <img src="/systems/ptu/static/css/images/icons/granted_icon.png"/>
                         </div>
-                        <div class="item-tags">
-                            {{#if item.isOverriden}}
-                                <div class="tag shadowless tooltip" title="Condition Overriden">
-                                    <i class="fa-solid fa-lock"></i>
+                    {{/if}}
+                    {{#unless (or (is type "effect") (is type "condition"))}}
+                        {{#if item.hasAutomation}}
+                            {{#if item.enabled}}
+                                <div class="tag shadowless tooltip" title="This item has automation!">
+                                    <img src="/systems/ptu/static/css/images/icons/automated_icon.png"/>
+                                </div>
+                            {{else}}
+                                <div class="tag shadowless tooltip" title="This item has disabled automation!">
+                                    <img src="/systems/ptu/static/css/images/icons/automated_disabled_icon.png" style="opacity: 0.5"/>
                                 </div>
                             {{/if}}
-                            {{#if item.isGranted}}
-                                <div class="tag shadowless tooltip" title="Granted by {{item.grantedBy.name}}">
-                                    <img src="/systems/ptu/static/css/images/icons/granted_icon.png"/>
-                                </div>
-                            {{/if}}
-                            {{#unless (or (is type "effect") (is type "condition"))}}
-                                {{#if item.hasAutomation}}
-                                    {{#if item.enabled}}
-                                        <div class="tag shadowless tooltip" title="This item has automation!">
-                                            <img src="/systems/ptu/static/css/images/icons/automated_icon.png"/>
-                                        </div>
-                                    {{else}}
-                                        <div class="tag shadowless tooltip" title="This item has disabled automation!">
-                                            <img src="/systems/ptu/static/css/images/icons/automated_disabled_icon.png" style="opacity: 0.5"/>
-                                        </div>
-                                    {{/if}}
-                                {{/if}}
-                                {{!-- {{#if item.system.frequency.max}}
-                                    <div class="tag usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
-                                        <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
-                                    </div> --}}
-                                {{#if item.onCooldown}}
-                                    <div class="tag usage-tag exhausted" title="On Cooldown (EOT)">
-                                        <span>EOT</span>
-                                    </div>
-                                {{/if}}
-                            {{/unless}}
-                        </div>
-                        {{#if item.system.quantity includeZero=true}}
-                            <div class="item-quantity">
-                                <input class="ml-1 mr-1" data-item-id="{{item.id}}" data-binding="system.quantity" type="number" value="{{item.system.quantity}}" placeholder="{{localize "ITEM.Quantity"}}"/>
+                        {{/if}}
+                        {{!-- {{#if item.system.frequency.max}}
+                            <div class="tag usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
+                                <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
+                            </div> --}}
+                        {{#if item.onCooldown}}
+                            <div class="tag usage-tag exhausted" title="On Cooldown (EOT)">
+                                <span>EOT</span>
                             </div>
                         {{/if}}
-                        <div class="item-controls">
-                            {{#if item.grants}}
-                                <a class="item-control collapse-sub-items" title="Collapse sub-items"><i class="fas fa-minus-square"></i></a>
-                            {{/if}}
-                            {{#if (is item.type "item")}}
-                                <a class="item-control item-enable" title="{{#if item.enabled}}Unequip Item{{else}}Equip Item{{/if}}">{{#if item.enabled}}<i class="fas fa-shirt"></i>{{else}}<i class="fas fa-grip-lines"></i>{{/if}}</a>
-                            {{else}}
-                                <a class="item-control item-enable" title="{{#if item.enabled}}Disable Automation{{else}}Enable Automation{{/if}}">{{#if item.enabled}}<i class="fas fa-toggle-on"></i>{{else}}<i class="fas fa-toggle-off"></i>{{/if}}</a>
-                            {{/if}}
-                            <a class="item-control item-to-chat" title="Send {{item.type}} to chat"><i class="fas fa-external-link-alt"></i></a>
-                            {{#unless (is item.type "condition")}}
-                                <a class="item-control item-edit" title="Edit {{item.type}}"><i class="fas fa-edit"></i></a>
-                            {{/unless}}
-                            <a class="item-control item-delete" title="Delete {{item.type}}"><i class="fas fa-trash"></i></a>
-                        </div>
+                    {{/unless}}
+                </div>
+                {{#if item.system.quantity includeZero=true}}
+                    <div class="item-quantity">
+                        <input class="ml-1 mr-1" data-item-id="{{item.id}}" data-binding="system.quantity" type="number" value="{{item.system.quantity}}" placeholder="{{localize "ITEM.Quantity"}}"/>
                     </div>
-                    {{> grantedFeats parent=item}}
-                </li>
-            {{/unless}}
+                {{/if}}
+                <div class="item-controls">
+                    {{#if item.grants}}
+                        <a class="item-control collapse-sub-items" title="Collapse sub-items"><i class="fas fa-minus-square"></i></a>
+                    {{/if}}
+                    {{#if (is item.type "item")}}
+                        <a class="item-control item-enable" title="{{#if item.enabled}}Unequip Item{{else}}Equip Item{{/if}}">{{#if item.enabled}}<i class="fas fa-shirt"></i>{{else}}<i class="fas fa-grip-lines"></i>{{/if}}</a>
+                    {{else}}
+                        <a class="item-control item-enable" title="{{#if item.enabled}}Disable Automation{{else}}Enable Automation{{/if}}">{{#if item.enabled}}<i class="fas fa-toggle-on"></i>{{else}}<i class="fas fa-toggle-off"></i>{{/if}}</a>
+                    {{/if}}
+                    <a class="item-control item-to-chat" title="Send {{item.type}} to chat"><i class="fas fa-external-link-alt"></i></a>
+                    {{#unless (is item.type "condition")}}
+                        <a class="item-control item-edit" title="Edit {{item.type}}"><i class="fas fa-edit"></i></a>
+                    {{/unless}}
+                    <a class="item-control item-delete" title="Delete {{item.type}}"><i class="fas fa-trash"></i></a>
+                </div>
+            </div>
+            {{> grantedFeats parent=item}}
+        </li>
         {{/each}}
     </ol>       
 {{/if}}

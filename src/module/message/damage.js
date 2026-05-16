@@ -1,5 +1,5 @@
 import { sluggify } from "../../util/misc.js";
-import { extractApplyEffects, extractEphemeralEffects } from "../rules/helpers.js";
+import { extractApplyEffects, extractEphemeralEffects, extractReminders } from "../rules/helpers.js";
 import { DamageRoll } from "../system/damage/roll.js";
 import { ChatMessagePTU } from "./base.js";
 
@@ -308,6 +308,31 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
                 speaker: ChatMessage.getSpeaker({ actor: message.actor }),
                 whisper: ChatMessage.getWhisperRecipients("GM")
             })
+    }
+
+    // Reminders triggered for the origin (damage-dealt)
+    try {
+        const remindersOrigin = await extractReminders({
+            affects: "origin",
+            origin: message.actor,
+            target: targets[0]?.actor ?? message.actor,
+            item: message.item,
+            domains: ["damage-dealt", ...itemDomains.map(d => d.replace(/-received$/, "-dealt"))],
+            options: messageRollOptions,
+            roll: Number(message.flags.ptu.context.accuracyRollResult ?? 0)
+        });
+
+        for (const reminder of remindersOrigin) {
+            await ChatMessage.create({
+                content: reminder.content,
+                speaker: reminder.speaker,
+                whisper: reminder.whisper,
+                flags: reminder.flags,
+            });
+        }
+    }
+    catch (err) {
+        console.error("PTU | Failed to create origin reminder messages:", err);
     }
 }
 

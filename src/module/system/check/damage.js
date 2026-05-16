@@ -403,7 +403,7 @@ class PTUDamageCheck extends PTUDiceCheck {
                     token: this.token?.id ?? null,
                     domains: this.selectors ?? [],
                     targets: options.targets,
-                    options: Array.from(this.options).sort(),
+                    options: Array.from(this.targetOptions).sort(),
                     rollMode: dialogContext.rollMode,
                     rollTwice: !!dialogContext.fortuneType ?? false,
                     title,

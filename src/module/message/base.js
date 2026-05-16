@@ -53,6 +53,16 @@ class ChatMessagePTU extends ChatMessage {
         return context ?? null;
     }
 
+    get isRoll() {
+        const type = this.flags.ptu?.context?.type;
+        return type === "attack-roll" || type === "damage-roll";
+    }
+
+    get isDamageRoll() {
+        const type = this.flags.ptu?.context?.type;
+        return type === "damage-roll";
+    }
+
     get isCheckRoll() {
         return this.rolls[0] instanceof CONFIG.PTU.Dice.rollDocuments.check;
     }
@@ -138,6 +148,36 @@ class ChatMessagePTU extends ChatMessage {
             if (!item) return;
 
             await item?.applyCapture(this.flags.ptu.context);
+        });
+        $html.find(".button[data-action='mute-reminder']").on("click", async event => {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            const $btn = $(event.currentTarget);
+            const remFlag = this.flags.ptu?.reminder ?? null;
+            if (!remFlag) return;
+
+            try {
+                const actorDoc = remFlag.actor ? await fromUuid(remFlag.actor) : (this.actor ?? null);
+                if (!actorDoc) return ui.notifications.error("PTU | Could not find actor for reminder");
+                if (!(game.user.isGM || actorDoc.testUserPermission(game.user, "OWNER"))) return ui.notifications.warn("PTU.Notifications.NotAuthorized");
+
+                const remId = remFlag.id ?? `${remFlag.actor ?? ""}:${remFlag.item ?? ""}:${remFlag.ruleKey ?? ""}:${remFlag.sourceIndex ?? ""}`;
+                const currentCombat = game.combat?.id ?? null;
+                const muteMap = (actorDoc.getFlag?.("ptu", "mutedReminders") ?? {});
+                muteMap[remId] = { combatId: currentCombat };
+
+                try {
+                    await actorDoc.setFlag("ptu", "mutedReminders", muteMap);
+                }
+                catch (err) {
+                    console.error("PTU | Failed to set muted reminder flag", err);
+                }
+
+                $btn.prop("disabled", true).addClass("muted").text(game.i18n.localize ? game.i18n.localize("PTU.UI.Muted") : "Muted");
+            }
+            catch (err) {
+                console.error("PTU | Error muting reminder", err);
+            }
         });
         $html.find("button.contested-check").on("click", async event => {
             event.preventDefault();

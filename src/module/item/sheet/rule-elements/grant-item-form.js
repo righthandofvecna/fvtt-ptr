@@ -24,17 +24,26 @@ class GrantItemForm extends RuleElementForm {
 
     /** @override */
     async activateListeners(html) {
-        // const predicateElement = $(html).find(".predicate-list")[0];
-        // if (predicateElement) {
-        //     tagify(predicateElement);
-        // }
-
         // Add events for toggle buttons
         html.querySelector("[data-action=toggle-predicate]")?.addEventListener("click", () => {
             const predicate = this.rule.predicate;
             const newValue = Array.isArray(predicate) ? {"and": predicate.length ? predicate : []} : predicate?.["and"]?.length ? predicate["and"] : [];
             this.updateItem({ predicate: newValue });
         });
+
+        html.querySelector("[data-action=modification-add]")?.addEventListener("click", () => {
+            const modifications = [...(this.rule.modifications ?? []), { key: "", operation: "override", value: "" }];
+            this.updateItem({ modifications });
+        });
+
+        for (const btn of html.querySelectorAll("[data-action=modification-delete]")) {
+            btn.addEventListener("click", (event) => {
+                const idx = Number(event.target.closest("[data-idx]")?.dataset.idx);
+                const modifications = [...(this.rule.modifications ?? [])];
+                modifications.splice(idx, 1);
+                this.updateItem({ modifications });
+            });
+        }
     }
 
     /** @override */
@@ -54,6 +63,14 @@ class GrantItemForm extends RuleElementForm {
         if(Array.isArray(formData.predicate) && formData.predicate.every(p => !!p.value)) {
             formData.predicate = formData.predicate.map(s => s.value).filter(s => !!s)
         }
+
+        // Normalize modifications: Foundry serialises nested inputs as an object keyed by index
+        if (formData.modifications && !Array.isArray(formData.modifications)) {
+            formData.modifications = Object.values(formData.modifications);
+        }
+        // if (Array.isArray(formData.modifications)) {
+        //     formData.modifications = formData.modifications.filter(m => m?.key?.trim());
+        // }
     }
 }
 

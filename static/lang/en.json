@@ -159,7 +159,8 @@
     "Effectiveness": "Effectiveness",
     "EphemeralEffect": "Ephemeral Effect",
     "ActionPoint": "AP Consumption",
-    "ApplyEffect": "Apply Effect"
+    "ApplyEffect": "Apply Effect",
+    "Reminder": "Reminder"
   },
   "PTU": {
     "Skills": {
@@ -709,7 +710,9 @@
     "UI": {
       "ShiftModifyDamageTitle": "Adjust the rolled damage/healing",
       "ShiftModifyDamageLabel": "Adjust Damage/Healing",
-      "ShiftModifySkipIWRLabel": "Skip Immunities/Weaknesses/Resistances"
+      "ShiftModifySkipIWRLabel": "Skip Immunities/Weaknesses/Resistances",
+      "MuteUntilEndOfCombat": "Mute until end of combat",
+      "Muted": "Muted"
     },
     "Type": {
       "normal": "Normal",
@@ -861,6 +864,22 @@
         "AllowDuplicate": "Allow Duplicates",
         "ReevaluateOnUpdate": "Reevaluate on Update",
         "ReplaceSelf": "Replace Self"
+      },
+      "Reminder": {
+        "Message": "Message",
+        "MessageHint": "The whisper content. Use {actor|name} for the actor's name and {item|name} for the item's name.",
+        "AffectsTargetHint": "Fires when the actor that owns this item receives the roll (as the defender/target). The whisper is sent to that actor's owners.",
+        "AffectsOriginHint": "Fires when the actor that owns this item makes the roll (as the attacker/origin). The whisper is sent to that actor's owners.",
+        "SelectorsHint": "The roll event(s) that trigger this reminder, e.g. attack-roll, damage-received. Must match the domain of the roll you want to intercept.",
+        "PredicateHint": "Roll options from this actor that are required for the reminder to fire.",
+        "MessagePredicate": "Message Predicate",
+        "MessagePredicateHint": "Roll options from the message that are required for the message to fire.",
+        "Frequency": {
+          "Label": "Frequency",
+          "Always": "Always",
+          "OncePerCombat": "Once per combat",
+          "OncePerRest": "Once per rest"
+        }
       }
     },
     "Check": {

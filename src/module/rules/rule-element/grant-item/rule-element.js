@@ -25,7 +25,19 @@ class GrantItemRuleElement extends RuleElementPTU {
             replaceSelf: new foundry.data.fields.BooleanField({ required: false, nullable: false, initial: false }),
             allowduplicate: new foundry.data.fields.BooleanField({ required: false, nullable: false, initial: true }),
             onDeleteActions: new foundry.data.fields.ObjectField({ required: false, nullable: false, initial: undefined }),
-            overwrites: new foundry.data.fields.ObjectField({ required: false, nullable: false, initial: undefined })
+            overwrites: new foundry.data.fields.ObjectField({ required: false, nullable: false, initial: undefined }),
+            modifications: new foundry.data.fields.ArrayField(
+                new foundry.data.fields.SchemaField({
+                    key: new foundry.data.fields.StringField({ required: true, nullable: false, blank: false, initial: undefined }),
+                    operation: new foundry.data.fields.StringField({
+                        required: true, nullable: false,
+                        choices: ["add", "subtract", "remove", "multiply", "override", "upgrade", "downgrade"],
+                        initial: "override"
+                    }),
+                    value: new foundry.data.fields.StringField({ required: true, nullable: false, initial: "" }),
+                }),
+                { required: false, nullable: false, initial: [] }
+            )
         };
     }
 
@@ -45,6 +57,15 @@ class GrantItemRuleElement extends RuleElementPTU {
         }
 
         const uuid = this.resolveInjectedProperties(this.uuid);
+
+        // Cycle guard: if this UUID is already in the chain being built, skip to avoid infinite loops
+        const grantChain = args.grantChain instanceof Set ? args.grantChain : new Set();
+        if (grantChain.has(uuid)) {
+            console.warn(`PTR | GrantItem | Cycle detected: "${uuid}" is already being granted in this chain — skipping to prevent an infinite loop.`);
+            return;
+        }
+        const updatedGrantChain = new Set([...grantChain, uuid]);
+
         const grantedItem = await (async () => {
             try {
                 return (await fromUuid(uuid))?.clone(this.overwrites ?? {}) ?? null;
@@ -94,6 +115,11 @@ class GrantItemRuleElement extends RuleElementPTU {
         const grantedSource = grantedItem.toObject();
         grantedSource._id = foundry.utils.randomID();
 
+        // Apply structured modifications to the granted item source before it is created
+        if (this.modifications?.length) {
+            this.#applyModifications(grantedSource);
+        }
+
         if (["feat", "edge"].includes(grantedSource.type) && this.item?.slug !== 'grant-training-feature') {
             grantedSource.system.free = true;
         }
@@ -114,7 +140,7 @@ class GrantItemRuleElement extends RuleElementPTU {
         // If the granted item is replacing the granting item, swap it out and return early
         if (this.replaceSelf) {
             pendingItems.findSplice((i) => i === itemSource, grantedSource);
-            await this.#runGrantedItemPreCreates(args, tempGranted, grantedSource, context);
+            await this.#runGrantedItemPreCreates(args, tempGranted, grantedSource, context, updatedGrantChain);
             return;
         }
 
@@ -124,7 +150,7 @@ class GrantItemRuleElement extends RuleElementPTU {
 
         // Run the granted item's preCreate callbacks unless this is a pre-actor-update reevaluation
         if (!args.reevaluation) {
-            await this.#runGrantedItemPreCreates(args, tempGranted, grantedSource, context);
+            await this.#runGrantedItemPreCreates(args, tempGranted, grantedSource, context, updatedGrantChain);
         }
 
         pendingItems.push(grantedSource);
@@ -213,10 +239,76 @@ class GrantItemRuleElement extends RuleElementPTU {
         }
     }
 
-    async #runGrantedItemPreCreates(args, grantedItem, grantedSource, context) {
+    async #runGrantedItemPreCreates(args, grantedItem, grantedSource, context, grantChain) {
         for (const rule of grantedItem.rules) {
             const ruleSource = grantedSource.system.rules[grantedItem.rules.indexOf(rule)];
-            await rule.preCreate?.({ ...args, itemSource: grantedSource, context, ruleSource });
+            await rule.preCreate?.({ ...args, itemSource: grantedSource, context, ruleSource, grantChain });
+        }
+    }
+
+    /**
+     * Apply the structured modifications list to a plain item source object.
+     * @param {object} itemSource - The toObject() snapshot of the item to modify in-place.
+     */
+    #applyModifications(itemSource) {
+        for (const mod of this.modifications) {
+            const key = this.resolveInjectedProperties(mod.key);
+            if (!key) continue;
+
+            // Parse the value: try JSON, then coerce to number, fall back to raw string
+            let value = mod.value;
+            try { value = JSON.parse(value); } catch { /* not JSON — keep as string */ }
+            if (typeof value === "string" && value !== "" && !isNaN(Number(value))) {
+                value = Number(value);
+            }
+
+            const current = foundry.utils.getProperty(itemSource, key);
+
+            switch (mod.operation) {
+                case "add": {
+                    if (Array.isArray(current)) {
+                        if (!current.includes(value)) current.push(value);
+                    } else if (typeof current === "number" && typeof value === "number") {
+                        foundry.utils.setProperty(itemSource, key, current + value);
+                    } else {
+                        foundry.utils.setProperty(itemSource, key, (current ?? 0) + (value ?? 0));
+                    }
+                    break;
+                }
+                case "subtract":
+                case "remove": {
+                    if (Array.isArray(current)) {
+                        const idx = current.indexOf(value);
+                        if (idx !== -1) current.splice(idx, 1);
+                    } else if (typeof current === "number" && typeof value === "number") {
+                        foundry.utils.setProperty(itemSource, key, current - value);
+                    }
+                    break;
+                }
+                case "multiply": {
+                    if (typeof current === "number" && typeof value === "number") {
+                        foundry.utils.setProperty(itemSource, key, Math.trunc(current * value));
+                    }
+                    break;
+                }
+                case "upgrade": {
+                    if (typeof current === "number" && typeof value === "number") {
+                        foundry.utils.setProperty(itemSource, key, Math.max(current, value));
+                    }
+                    break;
+                }
+                case "downgrade": {
+                    if (typeof current === "number" && typeof value === "number") {
+                        foundry.utils.setProperty(itemSource, key, Math.min(current, value));
+                    }
+                    break;
+                }
+                case "override":
+                default: {
+                    foundry.utils.setProperty(itemSource, key, value);
+                    break;
+                }
+            }
         }
     }
 }
