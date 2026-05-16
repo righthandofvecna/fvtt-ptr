@@ -159,7 +159,8 @@
     "Effectiveness": "Effectiveness",
     "EphemeralEffect": "Ephemeral Effect",
     "ActionPoint": "AP Consumption",
-    "ApplyEffect": "Apply Effect"
+    "ApplyEffect": "Apply Effect",
+    "Reminder": "Reminder"
   },
   "PTU": {
     "Skills": {
