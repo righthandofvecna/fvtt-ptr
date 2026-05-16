@@ -134,6 +134,7 @@
 {{else}}
     <ol class="item-list pl-1" {{#if category}}data-category="{{category}}"{{/if}}>
         {{#each items as | item |}}
+        {{#unless (and item.grantedBySameType (notEqual type "condition"))}}
         <li class="item {{item.type}}-item {{#if (is item.active false)}}disabled{{/if}} {{#if item.onCooldown}}on-cooldown{{/if}}" data-item-id="{{item._id}}">
             {{#if item.rollable}}
                 <div class="item-icon rollable">
@@ -206,6 +207,7 @@
             </div>
             {{> grantedFeats parent=item}}
         </li>
+        {{/unless}}
         {{/each}}
     </ol>       
 {{/if}}
