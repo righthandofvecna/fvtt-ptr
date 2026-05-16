@@ -42,6 +42,7 @@ Please note that this branch is no longer receiving updates and is only compatib
 - [Added Modifications section to Grant Item rule](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/942)
 - [Don't hide granted items of the same type](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/915)
 - [Chat Messages: Show Domains/Selectors and Roll Options](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/941)
+- [Automated Animations Integration Improvements](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/943)
 - [Added a system for restricting items by "Content Set"](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/932)
 - [Added fallback support for webm token images](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/933)
 - [Added PokeDex updates to the token scan action](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/935)
