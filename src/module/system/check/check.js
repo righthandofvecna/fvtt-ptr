@@ -190,8 +190,6 @@ class PTUDiceCheck {
             origin: {
                 actor: this.actor.uuid,
                 item: this.item?.uuid,
-                uuid: this.item?.uuid,
-                type: this.item?.type
             },
             rollerId: game.userId,
             isReroll,
@@ -638,9 +636,7 @@ class PTUCheck {
         const options = {
             origin: {
                 actor: context.actor.uuid,
-                item: context.item?.uuid,
-                uuid: context.item?.uuid,
-                type: context.item?.type
+                item: context.item?.uuid
             },
             rollerId: game.userId,
             isReroll,
