@@ -55,7 +55,8 @@ class ChatMessagePTU extends ChatMessage {
 
     get isRoll() {
         const type = this.flags.ptu?.context?.type;
-        return type === "attack-roll" || type === "damage-roll";
+        if (type) return true;
+        return this.rolls?.length > 0;
     }
 
     get isDamageRoll() {
