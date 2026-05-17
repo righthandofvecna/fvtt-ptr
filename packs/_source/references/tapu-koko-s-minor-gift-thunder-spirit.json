@@ -1,0 +1,26 @@
+{
+  "name": "Tapu Koko's Minor Gift - Thunder Spirit",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: GM Permission\nEffect: You gain a +2 Bonus to Acrobatics checks, and a +1 bonus to your High Jump Value.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Pact Gift - Photon Geyser",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "The Outsider Gifts",
+    "effect": "Prerequisites: All Necrozma Major Gifts\nStatic\nEffect: You learn the Move Photon Geyser.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}

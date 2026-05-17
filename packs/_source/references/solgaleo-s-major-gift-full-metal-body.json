@@ -1,0 +1,26 @@
+{
+  "name": "Solgaleo's Major Gift - Full Metal Body",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "The Outsider Gifts",
+    "effect": "Prerequisites: Minor Gift – Core of the Sun\nStatic\nEffect: You gain the Full Metal Body Ability.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}
