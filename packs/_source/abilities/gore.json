@@ -36,7 +36,7 @@
     "frequency": {
       "type": "scene",
       "max": 2,
-      "custom": "Scene x2 - Swift Action",
+      "custom": "Scene x2 - Rapid Action",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
