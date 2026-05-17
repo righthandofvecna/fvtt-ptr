@@ -1,0 +1,26 @@
+{
+  "name": "Major Gift - Nature's Purity",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Plant Intuition\n2 AP – Standard Action\nTarget: Self or an adjacent creature\nEffect: You cure the target of one status affliction.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}

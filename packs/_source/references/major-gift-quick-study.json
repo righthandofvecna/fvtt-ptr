@@ -1,0 +1,26 @@
+{
+  "name": "Major Gift - Quick Study",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Watcher in the Shadows\nStatic\nEffect: You learn the Move Copycat.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Major Gift - Dimension Sense",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "The Outsider Gifts",
+    "effect": "Prerequisites: Minor Gift – Faller\nStatic\nEffect: You gain the Tracker Capability, though it may only be used against creatures, objects and phenomena not native to your current dimension, or those that have been recently touched by the aforementioned. You also know the general direction to the nearest portal or rift back to your home dimension, if one exists.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}

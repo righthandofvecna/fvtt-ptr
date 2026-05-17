@@ -1,0 +1,26 @@
+{
+  "name": "Major Gift - Follow My Lead",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Guiding Tutelage\nScene x2 – Swift Action\nTrigger: You hit a target with an attack.\nEffect: Once before the start of your next turn, one ally attacking the target may treat their accuracy roll against that target as an 11. This may be declared after the roll, and does not affect the results against any other target as the attack.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}
