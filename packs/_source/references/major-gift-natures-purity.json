@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Plant Intuition\n2 AP \u2013 Standard Action\nTarget: Self or an adjacent creature\nEffect: You cure the target of one status affliction.",
+    "effect": "Prerequisites: Minor Gift – Plant Intuition\n2 AP – Standard Action\nTarget: Self or an adjacent creature\nEffect: You cure the target of one status affliction.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "IKmyCznvPuT1kfRe"
+  "_id": "IKmyCznvPuT1kfRe",
+  "flags": {}
 }

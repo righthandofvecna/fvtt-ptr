@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift \u2013 Hammer Arm\n2 AP \u2013 Free Action\nTrigger: You hit a foe with a single-target Physical Attack\nEffect: The move gains the Push Keyword, and pushes the target a distance equal to half your Athletics or Focus rank. If the move already pushes, this distance is added on to the existing distance. If any creature pushed by this attack hits another creature, then that creature is also pushed a distance equal to the remaining distance.",
+    "effect": "Prerequisites: Major Gift – Hammer Arm\n2 AP – Free Action\nTrigger: You hit a foe with a single-target Physical Attack\nEffect: The move gains the Push Keyword, and pushes the target a distance equal to half your Athletics or Focus rank. If the move already pushes, this distance is added on to the existing distance. If any creature pushed by this attack hits another creature, then that creature is also pushed a distance equal to the remaining distance.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "JLVSVWddfJ4tgmMt"
+  "_id": "JLVSVWddfJ4tgmMt",
+  "flags": {}
 }

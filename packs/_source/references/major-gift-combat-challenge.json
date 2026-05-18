@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Spirit of Justice\n1 AP \u2013 Free Action, Interrupt\nTrigger: An adjacent enemy that you hit with an Attack since the beginning of your last turn Disengages\nEffect: Make a Struggle attack against that enemy. If the attack hits, in addition to any damage, the enemy may not disengage. Using Combat Challenge counts as making an Attack of Opportunity for the purposes of how often you can use it.",
+    "effect": "Prerequisites: Minor Gift – Spirit of Justice\n1 AP – Free Action, Interrupt\nTrigger: An adjacent enemy that you hit with an Attack since the beginning of your last turn Disengages\nEffect: Make a Struggle attack against that enemy. If the attack hits, in addition to any damage, the enemy may not disengage. Using Combat Challenge counts as making an Attack of Opportunity for the purposes of how often you can use it.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "5hT6qb1y570GSzfZ"
+  "_id": "5hT6qb1y570GSzfZ",
+  "flags": {}
 }

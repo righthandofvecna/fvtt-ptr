@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift \u2013 Liquid Metal Body\nStatic\nEffect: You gain the Move Double Iron Bash.",
+    "effect": "Prerequisites: Major Gift – Liquid Metal Body\nStatic\nEffect: You gain the Move Double Iron Bash.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "wVXE8cTBGBPvfC1C"
+  "_id": "wVXE8cTBGBPvfC1C",
+  "flags": {}
 }

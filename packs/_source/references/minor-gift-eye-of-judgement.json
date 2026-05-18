@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission\nEffect: You gain a +3 bonus to Perception and Intuition when assessing another\u2019s capabilities.",
+    "effect": "Prerequisites: GM Permission\nEffect: You gain a +3 bonus to Perception and Intuition when assessing another’s capabilities.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "HH9zeUkhseocPtHc"
+  "_id": "HH9zeUkhseocPtHc",
+  "flags": {}
 }

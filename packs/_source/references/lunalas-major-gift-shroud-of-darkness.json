@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Major Gift \u2013 Embrace the Night\nDaily \u2013 Standard Action\nEffect: Until the end of the Scene or until you end it as a Free action, all spaces in a burst 3 around you are darkened by a clinging shadow. All foes in this burst suffer a -3 penalty to accuracy.",
+    "effect": "Prerequisites: Major Gift – Embrace the Night\nDaily – Standard Action\nEffect: Until the end of the Scene or until you end it as a Free action, all spaces in a burst 3 around you are darkened by a clinging shadow. All foes in this burst suffer a -3 penalty to accuracy.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "67TpGWweacyNNDZw"
+  "_id": "67TpGWweacyNNDZw",
+  "flags": {}
 }

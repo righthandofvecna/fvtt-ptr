@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Trickster Spirit\nEffect: You gain the Psychic Surge Ability.",
+    "effect": "Prerequisites: Minor Gift – Trickster Spirit\nEffect: You gain the Psychic Surge Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "8HkdFwqqPKkqn27d"
+  "_id": "8HkdFwqqPKkqn27d",
+  "flags": {}
 }

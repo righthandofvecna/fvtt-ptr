@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Two Zacian and Zamazenta Major Gifts\nDaily \u2013 Swift Action\nEffect: You gain +1 CS to one stat of your choice, as well as either +2 to your Critical Hit range or 5 DR until the end of the Scene or until you Faint. In addition, until this effect ends, any enemies adjacent to you gain a -2 to Accuracy Rolls if making any attack that doesn\u2019t include you as a target.",
+    "effect": "Prerequisites: Two Zacian and Zamazenta Major Gifts\nDaily – Swift Action\nEffect: You gain +1 CS to one stat of your choice, as well as either +2 to your Critical Hit range or 5 DR until the end of the Scene or until you Faint. In addition, until this effect ends, any enemies adjacent to you gain a -2 to Accuracy Rolls if making any attack that doesn’t include you as a target.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "lpf3fOnlnN0cRJrB"
+  "_id": "lpf3fOnlnN0cRJrB",
+  "flags": {}
 }

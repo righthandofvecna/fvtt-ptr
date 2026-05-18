@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Faller\nStatic\nEffect: You gain the Tracker Capability, though it may only be used against creatures, objects and phenomena not native to your current dimension, or those that have been recently touched by the aforementioned. You also know the general direction to the nearest portal or rift back to your home dimension, if one exists.",
+    "effect": "Prerequisites: Minor Gift – Faller\nStatic\nEffect: You gain the Tracker Capability, though it may only be used against creatures, objects and phenomena not native to your current dimension, or those that have been recently touched by the aforementioned. You also know the general direction to the nearest portal or rift back to your home dimension, if one exists.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "lqn7H1y3FaOpVS5X"
+  "_id": "lqn7H1y3FaOpVS5X",
+  "flags": {}
 }

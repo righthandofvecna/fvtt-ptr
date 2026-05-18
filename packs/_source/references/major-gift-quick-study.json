@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Watcher in the Shadows\nStatic\nEffect: You learn the Move Copycat.",
+    "effect": "Prerequisites: Minor Gift – Watcher in the Shadows\nStatic\nEffect: You learn the Move Copycat.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "WLWxH6vJsYBph2x0"
+  "_id": "WLWxH6vJsYBph2x0",
+  "flags": {}
 }

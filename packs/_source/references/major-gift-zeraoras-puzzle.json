@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Inscrutable Knowledge\nDaily \u2013 Standard Action\nEffect: Choose a creature within 10 meters that can hear you, and roll the Knowledge skill of your choice. The target is Suppressed and Vulnerable until it is able to equal or beat your check rolling either the same knowledge skill or Focus. These checks are taken as Standard Actions. It is also able to end this effect if it agrees to answer the next three questions you ask it truthfully \u2013 it is compelled to answer should it agree, but that does not stop it from taking any other actions, including fighting or attempting to flee.",
+    "effect": "Prerequisites: Minor Gift – Inscrutable Knowledge\nDaily – Standard Action\nEffect: Choose a creature within 10 meters that can hear you, and roll the Knowledge skill of your choice. The target is Suppressed and Vulnerable until it is able to equal or beat your check rolling either the same knowledge skill or Focus. These checks are taken as Standard Actions. It is also able to end this effect if it agrees to answer the next three questions you ask it truthfully – it is compelled to answer should it agree, but that does not stop it from taking any other actions, including fighting or attempting to flee.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "5SYsb5penwUpVgWS"
+  "_id": "5SYsb5penwUpVgWS",
+  "flags": {}
 }

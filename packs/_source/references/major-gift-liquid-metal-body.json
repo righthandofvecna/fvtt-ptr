@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Metal Sense\nStatic\nEffect: You gain the Amorphous Capability, and are immune to being Poisoned.",
+    "effect": "Prerequisites: Minor Gift – Metal Sense\nStatic\nEffect: You gain the Amorphous Capability, and are immune to being Poisoned.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "sLV350XAHKWWTuHX"
+  "_id": "sLV350XAHKWWTuHX",
+  "flags": {}
 }

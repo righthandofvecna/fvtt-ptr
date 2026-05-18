@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Watchful Sleep\nStatic\nEffect: You gain the Ability Serene Grace.",
+    "effect": "Prerequisites: Minor Gift – Watchful Sleep\nStatic\nEffect: You gain the Ability Serene Grace.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "yymh9TnRHtGnvfL5"
+  "_id": "yymh9TnRHtGnvfL5",
+  "flags": {}
 }

@@ -1,5 +1,5 @@
 {
-  "name": "Major Gift - Natrual Inspiration",
+  "name": "Major Gift - Natural Inspiration",
   "type": "reference",
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
@@ -22,5 +22,7 @@
     "stackSlugs": false,
     "keywords": []
   },
-  "effects": []
+  "_id": "5yqleUOM0PXH4o17",
+  "effects": [],
+  "flags": {}
 }

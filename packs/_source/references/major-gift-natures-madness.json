@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: One Tapu Major Gift\nStatic\nEffect: You learn the Move Nature\u2019s Madness.",
+    "effect": "Prerequisites: One Tapu Major Gift\nStatic\nEffect: You learn the Move Nature’s Madness.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "i1Am4YqSybQrYX9A"
+  "_id": "i1Am4YqSybQrYX9A",
+  "flags": {}
 }

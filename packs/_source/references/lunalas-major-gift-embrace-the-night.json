@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Heart of the Moon\nStatic\nEffect: You gain the Stealth and Darkvision Capabilities.",
+    "effect": "Prerequisites: Minor Gift – Heart of the Moon\nStatic\nEffect: You gain the Stealth and Darkvision Capabilities.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "L62TrgA6EOUdnx69"
+  "_id": "L62TrgA6EOUdnx69",
+  "flags": {}
 }

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift \u2013 Magic Guard\nStatic\nEffect: You learn the Move Fleur Cannon.",
+    "effect": "Prerequisites: Major Gift – Magic Guard\nStatic\nEffect: You learn the Move Fleur Cannon.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "fuuQ3UXLTsjjUpzd"
+  "_id": "fuuQ3UXLTsjjUpzd",
+  "flags": {}
 }

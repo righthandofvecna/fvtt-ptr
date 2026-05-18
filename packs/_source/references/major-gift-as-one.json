@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Regal Right\nStatic\nEffect: You gain the As One Capability, though do not gain Types from using it.",
+    "effect": "Prerequisites: Minor Gift – Regal Right\nStatic\nEffect: You gain the As One Capability, though do not gain Types from using it.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "pWs5koQtJfGyQ1r4"
+  "_id": "pWs5koQtJfGyQ1r4",
+  "flags": {}
 }

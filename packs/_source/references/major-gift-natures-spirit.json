@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Catastrophe Sense\nStatic\nEffect: You gain the Sprouter Capability, are immune to Powder moves, and ignore the effects of Slow Terrain while in non-artificial environments.",
+    "effect": "Prerequisites: Minor Gift – Catastrophe Sense\nStatic\nEffect: You gain the Sprouter Capability, are immune to Powder moves, and ignore the effects of Slow Terrain while in non-artificial environments.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "FiGA6tjyu7snSWrr"
+  "_id": "FiGA6tjyu7snSWrr",
+  "flags": {}
 }

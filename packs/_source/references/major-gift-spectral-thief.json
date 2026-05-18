@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift \u2013 Quick Study, Major Gift \u2013 Unseen Lurker\nStatic\nEffect: You learn the Move Spectral Thief.",
+    "effect": "Prerequisites: Major Gift – Quick Study, Major Gift – Unseen Lurker\nStatic\nEffect: You learn the Move Spectral Thief.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "LQzQDw1l7YF8jd1k"
+  "_id": "LQzQDw1l7YF8jd1k",
+  "flags": {}
 }

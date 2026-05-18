@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: All Zamazenta Major Gifts, Major Gift \u2013 Crowned Aura\nStatic\nEffect: You learn the Move Behemoth Bash.",
+    "effect": "Prerequisites: All Zamazenta Major Gifts, Major Gift – Crowned Aura\nStatic\nEffect: You learn the Move Behemoth Bash.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "Srms0qGUUon60NkN"
+  "_id": "Srms0qGUUon60NkN",
+  "flags": {}
 }

@@ -23616,22 +23616,16 @@
   "replacement": true,
   "displayRoll": false,
   "flags": {},
+  "_id": "YjNyitSkzFtpxuy4",
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.2.7",
     "coreVersion": "13.346",
     "createdTime": 1715486352673,
     "modifiedTime": 1734978302270,
-    "lastModifiedBy": "izk1pNEkJuVFmrxW",
-    "compendiumSource": "RollTable.YjNyitSkzFtpxuy4",
+    "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
-    "exportSource": {
-      "worldId": "copy",
-      "uuid": "RollTable.YjNyitSkzFtpxuy4",
-      "coreVersion": "13.351",
-      "systemId": "ptu",
-      "systemVersion": "4.4.3.20"
-    }
+    "exportSource": null
   },
   "formula": "1d908",
   "ownership": {

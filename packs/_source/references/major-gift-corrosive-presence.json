@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Eternal Presence\nStatic\nEffect: You gain the Poison Touch Ability.",
+    "effect": "Prerequisites: Minor Gift – Eternal Presence\nStatic\nEffect: You gain the Poison Touch Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "5XZlhSw5wFuBdgLC"
+  "_id": "5XZlhSw5wFuBdgLC",
+  "flags": {}
 }

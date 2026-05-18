@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Stoic Stature\nStatic\nEffect: You learn the Move Hammer Arm.",
+    "effect": "Prerequisites: Minor Gift – Stoic Stature\nStatic\nEffect: You learn the Move Hammer Arm.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "Us0UCNRYPIM5D8TC"
+  "_id": "Us0UCNRYPIM5D8TC",
+  "flags": {}
 }

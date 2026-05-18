@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift \u2013 Prism Shard\nStatic\nEffect: You gain the Sunglow or Starlight Ability.",
+    "effect": "Prerequisites: Minor Gift – Prism Shard\nStatic\nEffect: You gain the Sunglow or Starlight Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "c3orXGvBR10ScFbZ"
+  "_id": "c3orXGvBR10ScFbZ",
+  "flags": {}
 }

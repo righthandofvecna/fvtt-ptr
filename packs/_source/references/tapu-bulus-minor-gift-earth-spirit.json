@@ -1,5 +1,5 @@
 {
-  "name": "Tapu Bulu\u2019s Minor Gift - Earth Spirit",
+  "name": "Tapu Bulu's Minor Gift - Earth Spirit",
   "type": "reference",
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
@@ -23,5 +23,6 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "pKV3nsjH6qJjCKou"
+  "_id": "pKV3nsjH6qJjCKou",
+  "flags": {}
 }
