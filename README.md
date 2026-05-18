@@ -38,6 +38,7 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Added (sluggified) keywords as item roll options
 - [Added Reminder Rule Element type](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/867)
 - [Added Modifications section to Grant Item rule](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/942)
 - [Chat Messages: Show Domains/Selectors and Roll Options](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/941)
