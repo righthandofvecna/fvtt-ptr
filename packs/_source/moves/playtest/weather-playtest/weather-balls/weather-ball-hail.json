@@ -2,7 +2,7 @@
   "name": "Weather Ball (Hail)",
   "type": "move",
   "img": "systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": "fJnplwLaGjgef87x",
+  "folder": "AbkfVB6vlKTn1Xbu",
   "system": {
     "origin": "",
     "effect": "If there is a Sun Weather Condition, Weather Ball is Fire-Type. With a Rain Weather Condition, Weather Ball is Water-Type. With a Hail, Ice-Type. Sand, Rock-Type. Fog, Psychic-Type. New Moon, Dark-Type. Acid Rain, Poison-Type. Wind, Flying-Type. Shadow Sky, Shadow-Type. Fallout, Nuclear-Type. Weather Ball’s Damage Base increases depending on the Tier of Weather it takes its Type from: Tier 1 means its DB becomes 8, Tier 2 is 10, and Tier 3 is 12. If there are multiple Weather Conditions on the field, you may choose which Weather for Weather Ball to take into account.",
