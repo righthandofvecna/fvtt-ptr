@@ -1,0 +1,49 @@
+{
+  "name": "Dialga's Major Gift - Probability Control",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.wRM11yRmSn0YL3Gh]{Dialga's Minor Gift - Perfect Timing}\nStatic \nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.gLhfLgMdZn8Fhx4N]{Probability Control} Ability.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "dialgas-major-gift-probability-control",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:41:18.335Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
+  },
+  "_id": "263d64y5esphacQA",
+  "effects": [],
+  "folder": null,
+  "sort": 1300000,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1693518703759,
+    "modifiedTime": 1778200878375,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}
