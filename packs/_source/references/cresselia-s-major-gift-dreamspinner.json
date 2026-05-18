@@ -1,18 +1,18 @@
 {
-  "name": "Major Gift - Levitate",
+  "name": "Cresselia's Major Gift - Dreamspinner",
   "type": "reference",
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
-    "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Soul of the Clouds\nStatic \nEffect: You gain the Levitate Ability.",
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.NEunMg1HBMCfl6ay]{Major Gift - Oneiromancy}, @UUID[Compendium.ptu.references.Item.ElvRH3Y0xyENwb2G]{Major Gift -  Dream Augury}\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.eGc2EqV466HWVYor]{Dreamspinner} Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "major-gift-levitate",
+    "slug": "cresselias-major-gift-dreamspinner",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:41:18.335Z",
+        "datetime": "2026-05-08T00:41:18.610Z",
         "version": {
           "schema": null,
           "foundry": "13.351",
@@ -29,10 +29,10 @@
     "contentSet": "",
     "replacesSlug": ""
   },
-  "_id": "3wV9FHoz5oNFESrU",
+  "_id": "hfsg5vZ5J2puSg3T",
   "effects": [],
   "folder": null,
-  "sort": 1900000,
+  "sort": 23300000,
   "ownership": {
     "default": 0
   },
@@ -41,7 +41,7 @@
     "systemVersion": "4.4.3.16",
     "coreVersion": "13.351",
     "createdTime": 1693518703759,
-    "modifiedTime": 1778200878375,
+    "modifiedTime": 1778200878630,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

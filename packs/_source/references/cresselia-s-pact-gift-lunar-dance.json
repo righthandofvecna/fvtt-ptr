@@ -1,14 +1,14 @@
 {
-  "name": "Major Gift - Levitate",
+  "name": "Cresselia's Pact Gift - Lunar Dance",
   "type": "reference",
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
-    "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Soul of the Clouds\nStatic \nEffect: You gain the Levitate Ability.",
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.hfsg5vZ5J2puSg3T]{Major Gift - Dreamspinner}\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.lOXkHZxzBuguOE5D]{Lunar Dance}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "major-gift-levitate",
+    "slug": "cresselias-pact-gift-lunar-dance",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -29,10 +29,10 @@
     "contentSet": "",
     "replacesSlug": ""
   },
-  "_id": "3wV9FHoz5oNFESrU",
+  "_id": "0Zug43kvkPCg267e",
   "effects": [],
   "folder": null,
-  "sort": 1900000,
+  "sort": 500000,
   "ownership": {
     "default": 0
   },
