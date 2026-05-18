@@ -195,10 +195,10 @@ class GithubSyncManager {
             if (fu.isEmpty(diff.flags)) delete diff.flags;
         }
         delete diff.sort;
-        delete diff._id;
+        // delete diff._id;
         delete diff._key;
         delete diff._stats;
-        delete diff.folder;
+        // delete diff.folder;
         delete diff.ownership;
 
         if (fu.isEmpty(diff.system)) delete diff.system;
