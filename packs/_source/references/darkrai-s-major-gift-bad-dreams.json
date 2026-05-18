@@ -1,0 +1,49 @@
+{
+  "name": "Darkrai's Major Gift - Bad Dreams",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.NEunMg1HBMCfl6ay]{Major Gift - Oneiromancy}, @UUID[Compendium.ptu.references.Item.ElvRH3Y0xyENwb2G]{Major Gift -  Dream Augury}\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.s4tS05rHSzDskJST]{Bad Dreams} Ability.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "darkrais-major-gift-bad-dreams",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:41:18.749Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
+  },
+  "_id": "tW7bWyoC9rHCya81",
+  "effects": [],
+  "folder": null,
+  "sort": 28400000,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1693518703759,
+    "modifiedTime": 1778200878771,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}
