@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Perfect Timing Static Effect: You gain the Probability Control Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.wRM11yRmSn0YL3Gh]{Dialga's Minor Gift - Perfect Timing}\nStatic \nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.gLhfLgMdZn8Fhx4N]{Probability Control} Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

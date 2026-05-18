@@ -23,9 +23,10 @@ def find_ids():
     try:
       with open(os.path.join(os.path.dirname(__file__), "..", "packs", "_source", "references", f"{slug}.json"), "r", encoding="utf-8") as f:
         data = json.load(f)
-      if "_id" not in data:
+      if "_id" not in data or ("system" in data and "slug" in data["system"] and data["system"]["slug"] is None):
         print(f"Updating ID for {slug}: {id}")
         data["_id"] = id
+        data["system"]["slug"] = slug
         with open(os.path.join(os.path.dirname(__file__), "..", "packs", "_source", "references", f"{slug}.json"), "w", encoding="utf-8") as f_out:
           json.dump(data, f_out, indent=2)
     except FileNotFoundError:
