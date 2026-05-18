@@ -1,0 +1,26 @@
+{
+  "name": "Major Gift - Vapor Cloud",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Fiery Core\n1 AP – Standard Action\nEffect: A cloud of Steam Hazards erupt in a Blast 3 centered on you; the Steam persists until the end of the encounter, or until Defog or Whirlwind are used. All targets attacking from or into the Steam receive a -3 penalty to Accuracy. All creatures in the Steam at the start of their turn that are not immune to Burns take a tick of damage.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}
