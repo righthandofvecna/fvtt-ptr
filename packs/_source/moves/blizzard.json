@@ -2,9 +2,10 @@
   "name": "Blizzard",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
+  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
-    "effect": "Blizzard Freezes all legal target on 15+. If the target is in Snowy Weather, Blizzard cannot miss.",
+    "effect": "Blizzard Freezes all legal target on 15+. If the target is in Hailing Weather, Blizzard cannot miss.",
     "snippet": "",
     "rules": [
       {
@@ -21,8 +22,6 @@
     ],
     "enabled": true,
     "slug": "blizzard",
-    "contentSet": "weather-playtest",
-    "replacesSlug": "blizzard",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -41,9 +40,7 @@
     "stackSlugs": false,
     "keywords": [
       "Smite",
-      "Wind",
-      "Weather",
-      "Playtest"
+      "Wind"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -85,15 +82,29 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
+  "_id": "OaCO337ux9X8zQ2s",
   "effects": [],
+  "sort": 32900000,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
-      "devNote": "",
-      "used": null
+      "showInTokenPanel": true
     }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1692963260348,
+    "modifiedTime": 1778200824130,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
   }
 }
