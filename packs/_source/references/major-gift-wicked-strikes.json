@@ -1,0 +1,26 @@
+{
+  "name": "Major Gift - Wicked Strikes",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Major Gift – Follow My Lead\nStatic\nEffect: Choose either Wicked Blow or Surging Strikes. You gain the chosen Move.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}
