@@ -8,7 +8,7 @@ import os
 UUID_RE = re.compile(r"@UUID\[Compendium\.ptu\.references\.Item\.(?P<id>[a-zA-Z0-9]+)\]\{(?P<name>[^\}]+)\}")
 
 def slugify(name):
-  return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+  return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-").replace("-s-", "s-")
 
 def find_ids():
   with open(os.path.join(os.path.dirname(__file__), "..", "packs", "_source", "journals", "ptr-rulebook.json"), "r", encoding="utf-8") as f:
