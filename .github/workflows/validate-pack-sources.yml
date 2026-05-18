@@ -1,0 +1,36 @@
+name: Validate Pack Sources
+
+on:
+  pull_request:
+
+jobs:
+  validate-ids:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check _id presence and global uniqueness
+        run: |
+          ERRORS=0
+          declare -A seen_ids
+
+          while IFS= read -r -d '' file; do
+            id=$(jq -r '._id // empty' "$file")
+
+            if [[ -z "$id" ]]; then
+              echo "::error file=$file::Missing top-level _id field"
+              ERRORS=$((ERRORS + 1))
+            elif [[ -n "${seen_ids[$id]+x}" ]]; then
+              echo "::error file=$file::Duplicate _id '$id' (first seen in ${seen_ids[$id]})"
+              ERRORS=$((ERRORS + 1))
+            else
+              seen_ids["$id"]="$file"
+            fi
+          done < <(find packs/_source -name '*.json' -print0)
+
+          if [[ $ERRORS -gt 0 ]]; then
+            echo "$ERRORS error(s) found in packs/_source."
+            exit 1
+          fi
+
+          echo "All $(find packs/_source -name '*.json' | wc -l) files have a unique _id."
