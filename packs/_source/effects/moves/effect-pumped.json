@@ -14,7 +14,8 @@
         "mode": "add",
         "path": "system.modifiers.critRange.mod",
         "phase": "applyAEs",
-        "value": 2
+        "value": 2,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -41,7 +42,7 @@
     },
     "duration": {
       "value": -1,
-      "unit": "unlimited",
+      "unit": "encounter",
       "expiry": "turn-start"
     },
     "start": {
@@ -63,7 +64,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
