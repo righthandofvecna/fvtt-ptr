@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Dimensional Lock\nBind 1 AP – Extended Action\nEffect: You create in front of you a 2m diameter ring-shaped portal in space, either embedded in a surface, or floating in midair. This portal remains until you unbind the AP used to make it. This Feature may be Bound multiple times. This portal may be visible or invisible when inactive, but a DC 25 Occult Education check is still able to detect its presence if it’s invisible. By Draining 1 AP, you’re able to connect two of your portals. This connection lasts for ten minutes, during which time the portals are visible and any creatures or objects of appropriate size are able to pass through them. Unbinding this feature does not end the connection early.",
+    "effect": "Prerequisites: Major Gift \u2013 Dimensional Lock\nBind 1 AP \u2013 Extended Action\nEffect: You create in front of you a 2m diameter ring-shaped portal in space, either embedded in a surface, or floating in midair. This portal remains until you unbind the AP used to make it. This Feature may be Bound multiple times. This portal may be visible or invisible when inactive, but a DC 25 Occult Education check is still able to detect its presence if it\u2019s invisible. By Draining 1 AP, you\u2019re able to connect two of your portals. This connection lasts for ten minutes, during which time the portals are visible and any creatures or objects of appropriate size are able to pass through them. Unbinding this feature does not end the connection early.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -22,5 +22,6 @@
     "stackSlugs": false,
     "keywords": []
   },
-  "effects": []
+  "effects": [],
+  "_id": "SHqCK8H9KEF9Qj0y"
 }

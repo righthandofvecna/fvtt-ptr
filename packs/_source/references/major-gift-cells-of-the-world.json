@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – World’s Guardian\nDaily – Free Action\nTrigger: You fall to 0 or fewer Hit Points\nEffect: You are instead set to 1 Hit Point. If the triggering effect brought you to 10 or more injuries, you are instead set to 9 injuries. Gain Temporary Hit Points equal to half of your Maximum Hit Point Value. You ignore the effects of being Heavily Injured until you no longer have Temporary Hit Points.",
+    "effect": "Prerequisites: Minor Gift \u2013 World\u2019s Guardian\nDaily \u2013 Free Action\nTrigger: You fall to 0 or fewer Hit Points\nEffect: You are instead set to 1 Hit Point. If the triggering effect brought you to 10 or more injuries, you are instead set to 9 injuries. Gain Temporary Hit Points equal to half of your Maximum Hit Point Value. You ignore the effects of being Heavily Injured until you no longer have Temporary Hit Points.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -22,5 +22,6 @@
     "stackSlugs": false,
     "keywords": []
   },
-  "effects": []
+  "effects": [],
+  "_id": "gVoR0IaN3v0ZE8lh"
 }

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission\nEffect: You’re able to see residual afterimages for some time after any teleportation or dimensional breach effect. Teleportation from moves or the Teleporter Capability fades after 24h, but residue from stronger effects can last weeks. The residue sticks to creatures, meaning if you see them before it fades, you can see they’ve transported by teleportation of some kind. If you’ve seen both the residue and the creature, you’re able to recognize it as being the same.",
+    "effect": "Prerequisites: GM Permission\nEffect: You\u2019re able to see residual afterimages for some time after any teleportation or dimensional breach effect. Teleportation from moves or the Teleporter Capability fades after 24h, but residue from stronger effects can last weeks. The residue sticks to creatures, meaning if you see them before it fades, you can see they\u2019ve transported by teleportation of some kind. If you\u2019ve seen both the residue and the creature, you\u2019re able to recognize it as being the same.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -22,5 +22,6 @@
     "stackSlugs": false,
     "keywords": []
   },
-  "effects": []
+  "effects": [],
+  "_id": "KFYYOQiWNwTIPXUw"
 }

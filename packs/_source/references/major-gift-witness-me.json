@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Regal Right\nScene – Swift Action\nEffect: Until the end of your next turn, foes within 8m of you take a -3 penalty to Accuracy Rolls against any character other than you. Each time an attack from an affected character is made against you before this effect expires, you gain +1 CS in a stat of your choice (chosen separately for each attack).",
+    "effect": "Prerequisites: Minor Gift \u2013 Regal Right\nScene \u2013 Swift Action\nEffect: Until the end of your next turn, foes within 8m of you take a -3 penalty to Accuracy Rolls against any character other than you. Each time an attack from an affected character is made against you before this effect expires, you gain +1 CS in a stat of your choice (chosen separately for each attack).",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -22,5 +22,6 @@
     "stackSlugs": false,
     "keywords": []
   },
-  "effects": []
+  "effects": [],
+  "_id": "YoVSVooOF5J8MfQ8"
 }

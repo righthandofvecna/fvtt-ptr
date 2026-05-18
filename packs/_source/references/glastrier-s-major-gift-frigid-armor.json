@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Eye of Judgement\nDaily – Rapid Action\nEffect: Until the end of the Scene, you gain 5 DR and your Overland increases to 8 if it is lower. You may end this effect early as a Free Action Reaction when hit by an attack in order to cause the attacker to become Frozen for 1 full round.",
+    "effect": "Prerequisites: Minor Gift \u2013 Eye of Judgement\nDaily \u2013 Rapid Action\nEffect: Until the end of the Scene, you gain 5 DR and your Overland increases to 8 if it is lower. You may end this effect early as a Free Action Reaction when hit by an attack in order to cause the attacker to become Frozen for 1 full round.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -22,5 +22,6 @@
     "stackSlugs": false,
     "keywords": []
   },
-  "effects": []
+  "effects": [],
+  "_id": "NyxAICqokAfb270g"
 }

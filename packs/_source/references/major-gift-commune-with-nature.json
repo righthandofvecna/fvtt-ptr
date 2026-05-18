@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Nature’s Spirit\nDrain 1 AP – Extended Action\nEffect: While you are in a non-artificial area, you may use this Feature to ask a question to your immediate surroundings (an area no more than 100m in every direction from you). The spirit of the area will give an answer of a sentence or two to the best of its abilities, but it only knows what has happened in the location. The spirit is not all-knowing, so it could not, for instance, identify a creature that did not speak its identity or have such a thing visible while in the area, but it could give you a description.",
+    "effect": "Prerequisites: Major Gift \u2013 Nature\u2019s Spirit\nDrain 1 AP \u2013 Extended Action\nEffect: While you are in a non-artificial area, you may use this Feature to ask a question to your immediate surroundings (an area no more than 100m in every direction from you). The spirit of the area will give an answer of a sentence or two to the best of its abilities, but it only knows what has happened in the location. The spirit is not all-knowing, so it could not, for instance, identify a creature that did not speak its identity or have such a thing visible while in the area, but it could give you a description.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -22,5 +22,6 @@
     "stackSlugs": false,
     "keywords": []
   },
-  "effects": []
+  "effects": [],
+  "_id": "1XCjm0YyMZrt7Qh8"
 }

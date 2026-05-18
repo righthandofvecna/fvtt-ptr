@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Water Absorb\nStatic\nEffect: You learn the Move Steam Eruption.",
+    "effect": "Prerequisites: Major Gift \u2013 Water Absorb\nStatic\nEffect: You learn the Move Steam Eruption.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -22,5 +22,6 @@
     "stackSlugs": false,
     "keywords": []
   },
-  "effects": []
+  "effects": [],
+  "_id": "DgU4juWFKjnUKq4t"
 }

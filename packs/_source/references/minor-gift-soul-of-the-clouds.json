@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission\nEffect: You can sense the presence of Pokémon that are using Sky or Levitate speeds within 20 meters of you.",
+    "effect": "Prerequisites: GM Permission\nEffect: You can sense the presence of Pok\u00e9mon that are using Sky or Levitate speeds within 20 meters of you.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -22,5 +22,6 @@
     "stackSlugs": false,
     "keywords": []
   },
-  "effects": []
+  "effects": [],
+  "_id": "vP0jTt5z4pdNi1M7"
 }
