@@ -1,0 +1,26 @@
+{
+  "name": "Major Gift - Instill Fear",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Jungle Predator\nScene – Free Action\nTarget: A foe within 5m\nEffect: The target choses either to Cower or to Panic. If it Cowers, then it loses its next available Shift action, and loses 1 CS in both Attack and Special Attack. If it Panics, the foe loses 1 CS in both Defense and Special Defense, and at the start of its next turn, it must spend its Shift action to move as far away as possible from you, provoking AoO as normal, heedless of hazards. Regardless of the choice, the target is Vulnerable until the end of its next turn.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}

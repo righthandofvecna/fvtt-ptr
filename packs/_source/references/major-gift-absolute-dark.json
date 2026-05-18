@@ -1,0 +1,26 @@
+{
+  "name": "Major Gift - Absolute Dark",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "The Outsider Gifts",
+    "effect": "Prerequisites: Major Gift – Light Devourer\nDaily – Standard Action\nEffect: For the next five minutes, all light within 10m of you is extinguished, leaving only a black void surrounding you. It is considered Blocking Terrain for the purposes of line of sight for anyone without Darkvision or Blindsight, and anyone without either Capability suffers from Total Blindness while within. The Glow Capability and Illuminate Ability are disabled while within, and any moves that grant Glow may not be used. While this effect is active, you may not use Standard Actions. Ending this effect is a Swift Action.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}

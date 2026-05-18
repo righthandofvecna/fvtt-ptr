@@ -1,0 +1,26 @@
+{
+  "name": "Major Gift - Forest Ambush",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Jungle Predator\nDaily x3 – Swift Action\nEffect: Teleport up to 10m, as long as you end adjacent to a living plant or Grass-Type of at least Medium size, or in an area of Slow or Rough Terrain that consists at least partly of living plantlife.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}

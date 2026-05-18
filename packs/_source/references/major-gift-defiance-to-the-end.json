@@ -1,0 +1,26 @@
+{
+  "name": "Major Gift - Defiance to the End",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift - Perpetual Spite\nDaily - Free Action\nTrigger: You Faint\nEffect: You instead do not Faint, and regain hit points equal to 25% of your Maximum Hit Points. You are also immediately able to make an At-Will attack as a Free Action Reaction.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": []
+}
