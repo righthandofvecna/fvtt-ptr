@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Nature's Spirit",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Catastrophe Sense\nStatic\nEffect: You gain the Sprouter Capability, are immune to Powder moves, and ignore the effects of Slow Terrain while in non-artificial environments.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-natures-spirit",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "FiGA6tjyu7snSWrr",
+  "flags": {}
+}

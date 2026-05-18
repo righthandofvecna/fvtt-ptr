@@ -1,0 +1,28 @@
+{
+  "name": "Minor Gift - Inscrutable Knowledge",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: GM Permission\nEffect: You gain a +3 bonus to Guile checks to deny or hide that you know something.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "minor-gift-inscrutable-knowledge",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "iW26AotDnHNvTJnn",
+  "flags": {}
+}

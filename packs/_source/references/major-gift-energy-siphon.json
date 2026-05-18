@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Energy Siphon",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "The Outsider Gifts",
+    "effect": "Prerequisites: Minor Gift – Eternal Presence\nDaily – Standard Action\nTarget: A creature within 5m of you\nEffect: Roll an AC 2 Status Attack. On a miss, this Feature has no effect, but is not Expended. On a hit, the target loses 10 Hit Points for each Combat Stage it has. It then loses all Combat Stages not gained from Legendary Auras, and you regain 5 Hit Points for each Combat Stage lost in this way.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-energy-siphon",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "gXCUs0TgA8u0cOzf",
+  "flags": {}
+}

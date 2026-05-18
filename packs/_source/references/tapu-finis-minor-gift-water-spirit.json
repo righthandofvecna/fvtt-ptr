@@ -1,0 +1,28 @@
+{
+  "name": "Tapu Fini's Minor Gift - Water Spirit",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: GM Permission\nEffect: You gain a +2 Bonus to Focus checks, and a +1 bonus to your Swim Speed.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "tapu-finis-minor-gift-water-spirit",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "CnUmf6FnhYajYAPg",
+  "flags": {}
+}

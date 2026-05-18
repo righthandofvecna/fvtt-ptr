@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Failsafe Guardian",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: One Lake Guardian Major Gift\n2 AP – Standard Action, Interrupt\nTarget: A creature within 10m\nEffect: You may attempt to disable one of the target’s Legendary Gifts. You and the target roll opposed Focus Checks. If you succeed, then one of the target’s gifts that you know of is disabled until the end of the Scene. Note that this gift does not provide you with knowledge of any Gifts any creature has; the creature must have used (or be in the process of using) it or otherwise showed signs of it in your presence.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-failsafe-guardian",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "JzH7GjamhspBZSns",
+  "flags": {}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Tapu Bulu's Major Gift - Grassy Surge",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Earth Spirit\nEffect: You gain the Grassy Surge Ability.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "tapu-bulus-major-gift-grassy-surge",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "la6wg6jFYQNJLrmm",
+  "flags": {}
+}

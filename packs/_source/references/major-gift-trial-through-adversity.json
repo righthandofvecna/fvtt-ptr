@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Trial Through Adversity",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Guiding Tutelage\nScene – Free Action\nTrigger: You or an ally miss all targets with an attack, fail a skill check, or receive massive damage.\nEffect: If triggered by missing all targets, the triggering character gains +2 accuracy for the Scene.\nIf triggered by failing a skill check, the next skill check the character rolls treats the lowest die as a 6 instead.\nIf triggered by massive damage, the character receives 2 ticks of Temporary Hit Points, and may clear one injury or status condition.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-trial-through-adversity",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "IQECshrYOsGagaUF",
+  "flags": {}
+}

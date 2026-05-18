@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Harmonious Spirits",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Loyal Heart\nDaily – Free Action\nEffect: All allied Trainers and Pokémon within 5m of you (including yourself) become Linked until the end of the Scene or until they are recalled or Faint. Linked Trainers may communicate telepathically with any other Linked creature, and any Linked creature may, as a Free Action Interrupt upon any other Linked creature taking damage in order to reduce that damage by half. The Interrupting creature will lose an amount of Hit Points equal to the damage that was not taken by the other creature, which may not be reduced in any way.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-harmonious-spirits",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "tvE4JVLmJPWnzfAy",
+  "flags": {}
+}

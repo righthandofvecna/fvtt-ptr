@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Dimensional Lock",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Portal Sight\n1 AP – Standard Action, Interrupt\nTrigger: A creature within 10 meters uses the Teleporter Capability, Teleport, or Ally Switch\nEffect: The Move or Shift fails and the Action is wasted, the creature is then Suppressed. Until the Suppression wears off, the target is Stuck, Trapped, and Vulnerable.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-dimensional-lock",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "6f14DD3YEuxy9MOc",
+  "flags": {}
+}

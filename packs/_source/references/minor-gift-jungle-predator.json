@@ -1,0 +1,28 @@
+{
+  "name": "Minor Gift - Jungle Predator",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: GM Permission\nEffect: Reroll all dice that result in a roll of 1 when making Intimidate and Acrobatics Checks.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "minor-gift-jungle-predator",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "eXaVErJ2SXyUiMNd",
+  "flags": {}
+}

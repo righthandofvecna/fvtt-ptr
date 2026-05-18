@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Champion of Nature",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: One Tapu Major Gift\nDaily – Standard Action\nEffect: Until the end of the Scene, you gain a +2 bonus to your Overland, Swim, Jump and Power Capabilities. In addition, during that time, your Struggle Attacks and Moves granted by Weapons deal +5 damage and may instead become a specific Type if you so choose, depending on your Patron; Electric for Tapu Koko, Psychic for Tapu Lele, Grass for Tapu Bulu, Water for Tapu Fini, and Fairy for any.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-champion-of-nature",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "P4CAjyYBh53iTPY4",
+  "flags": {}
+}

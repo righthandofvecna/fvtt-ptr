@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Metal Infusion",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Metal Sense\nDaily – Extended Action\nTarget: One Pokémon\nEffect: You touch the target, and create a liquid metal skin over their body, infusing it with power. The target replaces one of its Types with the Steel type. If the target is already part Steel-Type, it instead becomes pure Steel-Type. If the target is already pure Steel-Type, it instead gains a +2 bonus to Accuracy and Critical Hit range. Regardless of other effects, the target may also use the Move Metal Burst as if it was on their Move List; if it does so, the effects of this Feature end immediately. If not ended early, this Feature’s effects last until the next Extended Rest.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-metal-infusion",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "2MectOghj15EUtHM",
+  "flags": {}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Natural Inspiration",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Dazzling the Stage\nScene x2 – Free Action\nTrigger: You spend AP or use Relic Song\nEffect: An Ally within 10 meters gains 1 temporary AP and a +2 bonus to accuracy. Both of these last until the end of their next turn.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "_id": "5yqleUOM0PXH4o17",
+  "effects": [],
+  "flags": {}
+}

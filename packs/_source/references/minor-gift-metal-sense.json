@@ -1,0 +1,28 @@
+{
+  "name": "Minor Gift - Metal Sense",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: GM Permission\nEffect: You can sense the presence of Steel-Type Pokémon or large amounts of metal. For Pokémon, the distance at which they can be sensed is 3m for Small, 5m for Medium, 10m for Large, 15m for Huge, and 20m for Gigantic. This distance is doubled if they are a pure Steel-Type Pokémon. For objects, the distance is determined by your GM, but it might be hundreds of meters for something like a skyscraper. You know if the thing you sense is a Pokémon or not, but gain no other information.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "minor-gift-metal-sense",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "ohZHtxDDQlW0adoc",
+  "flags": {}
+}

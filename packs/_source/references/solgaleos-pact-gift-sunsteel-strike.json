@@ -1,0 +1,28 @@
+{
+  "name": "Solgaleo's Pact Gift - Sunsteel Strike",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "The Outsider Gifts",
+    "effect": "Prerequisites: All Solgaleo Major Gifts\nStatic\nEffect: You learn the Move Sunsteel Strike.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "solgaleos-pact-gift-sunsteel-strike",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "Sf1DzAaL52UIJh30",
+  "flags": {}
+}

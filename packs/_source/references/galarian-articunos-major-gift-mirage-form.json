@@ -1,0 +1,28 @@
+{
+  "name": "Galarian Articuno's Major Gift - Mirage Form",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.OHc9jr5HRGDIyhSJ]{Major Gift - Prime Fury}\nScene - Standard Action\nEffect: Mark 3 free spots within your movement range. One time that you are targeted by an attack before the end of the Scene, you may remove yourself from the board and replace yourself at one of the marked spots if it is unoccupied. If the attack is no longer able to target you, it automatically misses you. This may not be triggered if all the spots are occupied.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": null,
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "_id": "0oMR52fsbLMGbkdq",
+  "effects": [],
+  "flags": {}
+}

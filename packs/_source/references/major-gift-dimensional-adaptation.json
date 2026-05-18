@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Dimensional Adaptation",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "The Outsider Gifts",
+    "effect": "Prerequisites: Minor Gift – Faller\nDrain 2 AP – Extended Action\nTrigger: You finish an Extended Rest\nEffect: Choose Chilled, Darkvision, Gilled, Glow, Heater, Magnetic, Mindlock, Naturewalk in one terrain of your choice, or Wallclimber. If used in the Campaign, you may add Gravitic Tolerance (1-3), and Gravitic Tolerance (2-4) to the list. Gain that Capability until the end of your next Extended Rest. This may be triggered multiple times from a single Extended Rest.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-dimensional-adaptation",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "O9hf1v3ytIu8KGat",
+  "flags": {}
+}

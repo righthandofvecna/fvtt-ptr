@@ -1,0 +1,28 @@
+{
+  "name": "Minor Gift - Regal Aide",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: GM Permission\nEffect: You gain a +2 bonus to Charm, Stealth and Intuition checks made when interacting with nobility or upper-class society members.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "minor-gift-regal-aide",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "hXZp3pnJ68xg3AwF",
+  "flags": {}
+}

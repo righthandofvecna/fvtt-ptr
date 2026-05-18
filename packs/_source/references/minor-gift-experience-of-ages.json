@@ -1,0 +1,28 @@
+{
+  "name": "Minor Gift - Experience of Ages",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: GM Permission\nEffect: You gain a bonus to any rolls required for Combat maneuvers equal to half your Intuition rank.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "minor-gift-experience-of-ages",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "ooBZnPGp1yHEcieJ",
+  "flags": {}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Pact Gift - Splendorous Rider",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: All Calyrex Major Gifts\nStatic\nEffect: You gain the Splendorous Rider Ability.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "pact-gift-splendorous-rider",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "j2LonBtBia8YhuvT",
+  "flags": {}
+}

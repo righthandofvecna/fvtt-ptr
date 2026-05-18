@@ -1,0 +1,28 @@
+{
+  "name": "Tapu Fini's Major Gift - Misty Surge",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Aqua Spirit\nEffect: You gain the Misty Surge Ability.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "tapu-finis-major-gift-misty-surge",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "7GUg3DtBwqurEfRX",
+  "flags": {}
+}

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift - Dreamspinner Static Effect: You learn the Move Lunar Dance.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.hfsg5vZ5J2puSg3T]{Major Gift - Dreamspinner}\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.lOXkHZxzBuguOE5D]{Lunar Dance}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -46,5 +45,6 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "flags": {}
 }

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Force of Will 3 AP - Standard Action Target: Pokémon or Trainer within 8 meters Effect: You and the Target make a Contested Focus Check. If you win the Check, the Target is unable to take Shift or Standard Actions for their next 1d2 turns. Regardless of whether or not you won the Check, the Target suffers a -3 penalty to all rolls for the rest of the encounter, or for fifteen minutes outside of combat. The target becomes immune to further uses of Drain Will for 24 hours.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.jN3tF0axWjHQ3BNs]{Azelf's Minor Gift - Force of Will}\n3 AP - Standard Action \nTarget: Pokémon or Trainer within 8 meters\nEffect: You and the Target make a Contested Focus Check. If you win the Check, the Target is unable to take Shift or Standard Actions for their next 1d2 turns. Regardless of whether or not you won the Check, the Target suffers a -3 penalty to all rolls for the rest of the encounter, or for fifteen minutes outside of combat. The target becomes immune to further uses of Drain Will for 24 hours.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -46,5 +45,6 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "flags": {}
 }

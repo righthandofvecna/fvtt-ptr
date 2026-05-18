@@ -1,0 +1,28 @@
+{
+  "name": "Solgaleo's Major Gift - Aura of Light",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "The Outsider Gifts",
+    "effect": "Prerequisites: Major Gift – Pierce the Darkness\nDaily – Standard Action\nEffect: Until the end of the Scene or until you end it as a Free action, all spaces in a burst 3 around you are illuminated by a bright light. All foes in this burst suffer a -3 penalty to evasion.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "solgaleos-major-gift-aura-of-light",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "DcDza77TM2gs7SKj",
+  "flags": {}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Unseen Lurker",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Watcher in the Shadows\nStatic\nEffect: You gain the Darkvision and Dead Silent capabilities.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-unseen-lurker",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "E6MePjNV0cuw0QRD",
+  "flags": {}
+}

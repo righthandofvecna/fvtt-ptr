@@ -1,0 +1,28 @@
+{
+  "name": "Tapu Lele's Major Gift - Psychic Surge",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Trickster Spirit\nEffect: You gain the Psychic Surge Ability.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "tapu-leles-major-gift-psychic-surge",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "8HkdFwqqPKkqn27d",
+  "flags": {}
+}

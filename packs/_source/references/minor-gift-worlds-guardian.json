@@ -1,0 +1,28 @@
+{
+  "name": "Minor Gift - World's Guardian",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: GM Permission\nEffect: You may occasionally gain a vision of a powerful foe or some event that has yet to pass that may cause significant damage to the world or disrupt the fabric between dimensions.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "minor-gift-worlds-guardian",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "myPumZ5LeOxGF1kr",
+  "flags": {}
+}

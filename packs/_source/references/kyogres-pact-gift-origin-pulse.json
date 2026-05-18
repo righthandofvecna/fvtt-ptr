@@ -1,0 +1,28 @@
+{
+  "name": "Kyogre's Pact Gift - Origin Pulse",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: All Kyogre Major Gifts\nEffect: You learn the Move Origin Pulse.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "kyogres-pact-gift-origin-pulse",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "KSl4auLGgjkP0p4N",
+  "flags": {}
+}

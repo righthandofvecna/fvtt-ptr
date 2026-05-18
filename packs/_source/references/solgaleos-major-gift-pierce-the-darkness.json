@@ -1,0 +1,28 @@
+{
+  "name": "Solgaleo's Major Gift - Pierce the Darkness",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "The Outsider Gifts",
+    "effect": "Prerequisites: Minor Gift – Core of the Sun\nStatic\nEffect: You gain the Glow and Darkvision Capabilities.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "solgaleos-major-gift-pierce-the-darkness",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "UiaU3RJuSVEfrPkG",
+  "flags": {}
+}

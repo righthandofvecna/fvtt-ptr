@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Hyperspace Hole",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Lower Pantheon Gifts",
+    "effect": "Prerequisites: Major Gift – Dimensional Lock, Major Gift – Ring Portal\nStatic\nEffect: You learn the Move Hyperspace Hole.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-hyperspace-hole",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "GHNrwPmNYK6q4Uue",
+  "flags": {}
+}

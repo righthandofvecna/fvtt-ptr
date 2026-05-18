@@ -1,0 +1,28 @@
+{
+  "name": "Major Gift - Prove Your Worth",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: Two Glastrier and Spectrier Major Gifts\nDaily – Swift Action\nTarget: A foe within 10m\nEffect: You and your target may teleport adjacent to the other as a Shift action, and each receive a -3 Penalty to Accuracy Rolls against any character besides the other. These effects last until the end of the Scene, or until either you or your target Faint. The first one of either you or your target to Faint while this effect lasts grants the opponent +2 CS in a stat of the opponent’s choice.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "major-gift-prove-your-worth",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "dp3ke004Z43Khgr3",
+  "flags": {}
+}

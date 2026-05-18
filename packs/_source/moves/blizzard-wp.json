@@ -1,0 +1,100 @@
+{
+  "name": "Blizzard",
+  "type": "move",
+  "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Blizzard Freezes all legal targets on 15+. If the target is in Snowy Weather, Blizzard cannot miss.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": {
+          "not": "target:types:ice"
+        },
+        "selectors": "{item|id}-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.7F4dkJoDuD7wNcEK",
+        "range": "15",
+        "value": "",
+        "affects": "target"
+      }
+    ],
+    "enabled": true,
+    "slug": "blizzard-wp",
+    "contentSet": "weather-playtest",
+    "replacesSlug": "blizzard",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:24.081Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Smite",
+      "Wind",
+      "Weather",
+      "Playtest"
+    ],
+    "sheerForce": false,
+    "toughClaws": false,
+    "technician": false,
+    "reckless": false,
+    "ironFist": false,
+    "megaLauncher": false,
+    "punkRock": false,
+    "strongJaw": false,
+    "frequency": {
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "type": "Ice",
+    "category": "Special",
+    "damageBase": "11",
+    "ac": "7",
+    "range": "Range 4, Ranged Blast 2",
+    "contestType": "Beauty - Exhausting Act",
+    "stab": false,
+    "damageBonus": 0,
+    "isStruggle": false,
+    "automation": []
+  },
+  "_id": "nBJqHIJjExauiz2E",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
+    }
+  }
+}

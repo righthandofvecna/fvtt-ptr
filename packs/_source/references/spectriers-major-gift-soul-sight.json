@@ -1,0 +1,28 @@
+{
+  "name": "Spectrier's Major Gift - Soul Sight",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: Minor Gift – Eye of Judgement\nDaily – Swift Action\nEffect: Until the end of the Scene, you gain the Blindsense Capability and +2 accuracy. You may end this effect early as a Free Action when you hit with an attack in order to Confuse the target, and make it Slowed until the Confusion is cured.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "spectriers-major-gift-soul-sight",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "1HA8CjOKfdrG3iKz",
+  "flags": {}
+}

@@ -116,27 +116,22 @@ class PTUItem extends Item {
     prepareBaseData() {
         this.flags.ptu = foundry.utils.mergeObject({ rulesSelections: {} }, this.flags.ptu ?? {});
 
+        const itemRollOptions = {
+            [`item:id:${this._id}`]: true,
+            [`item:slug:${this.slug}`]: true,
+            [`item:type:${this.type}`]: true,
+            [`${this.type}:${this.slug}`]: true,
+        }
+
+        if (this.enabled) itemRollOptions[`item:enabled`] = true;
+        for (const kw of this.system.keywords ?? []) itemRollOptions[`item:keyword:${sluggify(kw)}`] = true;
+
         this.flags.ptu = foundry.utils.mergeObject(this.flags.ptu ?? {}, {
             rollOptions: {
-                all: {
-                    [`item:id:${this._id}`]: true,
-                    [`item:slug:${this.slug}`]: true,
-                    [`item:type:${this.type}`]: true,
-                    [`${this.type}:${this.slug}`]: true
-                },
-                item: {
-                    [`item:id:${this._id}`]: true,
-                    [`item:slug:${this.slug}`]: true,
-                    [`item:type:${this.type}`]: true,
-                    [`${this.type}:${this.slug}`]: true,
-                }
+                all: {...itemRollOptions},
+                item: {...itemRollOptions},
             }
         });
-
-        if (this.enabled) {
-            this.flags.ptu.rollOptions.all[`item:enabled`] = true;
-            this.flags.ptu.rollOptions.item[`item:enabled`] = true;
-        }
     }
 
     /** @override */

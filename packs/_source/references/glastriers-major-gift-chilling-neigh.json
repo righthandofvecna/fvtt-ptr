@@ -1,0 +1,28 @@
+{
+  "name": "Glastrier's Major Gift - Chilling Neigh",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: Major Gift – Frigid Armor\nStatic\nEffect: You gain the Chilling Neigh Ability.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "glastriers-major-gift-chilling-neigh",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "_id": "NeowGeGhfZz5et1q",
+  "flags": {}
+}
