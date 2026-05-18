@@ -1,0 +1,49 @@
+{
+  "name": "Dialga's Minor Gift - Perfect Timing",
+  "type": "reference",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Upper Pantheon Gifts",
+    "effect": "Prerequisites: GM Permission\nStatic\nEffect: You always intuitively know what time it is and can accurately act as a human stopwatch. ",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "dialgas-minor-gift-perfect-timing",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:41:18.750Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "contentSet": "",
+    "replacesSlug": ""
+  },
+  "_id": "wRM11yRmSn0YL3Gh",
+  "effects": [],
+  "folder": null,
+  "sort": 30800000,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1693518703759,
+    "modifiedTime": 1778200878771,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}
