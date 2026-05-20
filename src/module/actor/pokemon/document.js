@@ -573,6 +573,9 @@ class PTUPokemonActor extends PTUActor {
         const newLevel = calculateLevel(changed.system.level.exp, this.system.level.current);
         if (newLevel <= this.system.level.current) return super._preUpdate(changed, options, userId);
 
+        // If the actor has no species yet or the species is being updated, skip the level-up screen.
+        if (!this.species || !!changed?.items?.find(i=>i.type=="species")) return super._preUpdate(changed, options, userId);
+
         const actor = this;
 
         const result = await new Promise((resolve, _) => {
