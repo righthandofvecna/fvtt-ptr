@@ -102,6 +102,8 @@ Please note that this branch is no longer receiving updates and is only compatib
 - Compendium Browser "Moves" tab loading
 - **Lots of content fixes**
 
+## 🐛 Still-Active Bugs 🐛
+[Open Issues Not Fixed In Dev](https://github.com/pokemon-tabletop-reunited/ptr1e/issues?q=is%3Aissue%20state%3Aopen%20-label%3A%22fixed%20in%20dev%22)
 
 ## Links & Recommendations
 - [Quick Insert](https://gitlab.com/fvtt-modules-lab/quick-insert) is an amazing addon that allows you to drag & drop all over the place even more easily. We 1000% recommend using their module in conjuncture with our system!
