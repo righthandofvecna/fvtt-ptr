@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: All Groudon Major Gifts\nEffect: You learn the Move Precipice Blades.",
+    "effect": "Prerequisites: All Groudon Major Gifts\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.KxESZdXMeAyuAEqW].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "qS2sjT0mmXaqcJzf",
-  "flags": {}
+  "_id": "qS2sjT0mmXaqcJzf"
 }
