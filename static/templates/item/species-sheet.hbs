@@ -39,13 +39,7 @@
             </span>
         </header>
         <div class="tab overview h-100" data-group="primary" data-tab="overview">
-            {{#if (is view "entry")}}
-                <div class="move-row" style="flex-grow: 1">
-                    <div class="move-effect">
-                        <textarea disabled>{{item.system.dexentry}}</textarea>
-                    </div>
-                </div>
-            {{else}}
+            {{#if (is view "full")}}
                 <div class="move-row p-2">
                     <div class="move-column">
                         <div class="avatar ml-3 mr-4 mt-2 mb-2">
@@ -125,6 +119,11 @@
                     </div>
                 </div>
             {{/if}}
+                <div class="move-row" style="flex-grow: 1">
+                    <div class="move-effect textarea">
+                        <textarea name="system.dexentry" {{#unless editable}}disabled{{/unless}}>{{item.system.dexentry}}</textarea>
+                    </div>
+                </div>
         </div>
         <div class="tab capabilities h-100" data-group="primary" data-tab="capabilities">
             <div class="d-flex justify-content-between flex-row">
