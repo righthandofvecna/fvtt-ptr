@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Mark of Loyalty Static Effect: You gain the Clear Body Ability",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.KkbLwc2L4KzeXLw0]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.SgZgmNYHuMbt7JF2] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
