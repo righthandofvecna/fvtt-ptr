@@ -163,6 +163,16 @@
                                             <input class="p-0" type="text" name="system.level.current"
                                                 value="{{actor.system.level.current}}" data-dtype="Number" disabled />
                                         </div>
+                                        <div class="fb-30">
+                                            <label title="{{localize "PTU.LevelMaxControl"}}">{{localize "PTU.LevelMaxControl"}}</label>
+                                        </div>
+                                        <div class="fb-20 flexrow">
+                                            <input class="p-0" type="text" name="system.level.minControlLevel"
+                                                value="{{actor.system.level.minControlLevel}}" data-dtype="Number" disabled />
+                                            <span>–</span>
+                                            <input class="p-0" type="text" name="system.level.maxControlLevel"
+                                                value="{{actor.system.level.maxControlLevel}}" data-dtype="Number" disabled />
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swsh-header ball-themes {{ballStyle}} highlight">

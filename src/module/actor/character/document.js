@@ -1,5 +1,5 @@
 import { PTUSkills, PTUActor } from "../index.js";
-import { calculateEvasions, calculatePTStatTotal, calculateOldStatTotal, calculateStatTotal } from "../helpers.js";
+import { calculateEvasions, calculatePTStatTotal, calculateOldStatTotal, calculateStatTotal, calcLevelCap } from "../helpers.js";
 import { calculateTrainerCapabilities } from "./capabilities.js";
 import { PTUModifier } from "../modifiers.js";
 import { sluggify } from "../../../util/misc.js";
@@ -324,6 +324,11 @@ class PTUTrainerActor extends PTUActor {
         system.contests.appeal.total = system.contests.appeal.value + system.contests.appeal.mod;
 
         this.attributes.health.max = system.health.max;
+
+        // Max level the trainer can control at minimum friendship (friendship = 0)
+        system.level.minControlLevel = calcLevelCap(this.system.level.current ?? 0, 0);
+        // Max level the trainer can control at maximum friendship (friendship = 5)
+        system.level.maxControlLevel = calcLevelCap(this.system.level.current ?? 0, 5);
     }
 
     get baseMaxAp() {
