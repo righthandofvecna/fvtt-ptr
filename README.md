@@ -38,6 +38,16 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Fixed Inability to Import Pokemon](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/948)
+- Added "Form" field to the species item header
+- Added editable Dex entry field
+- [Added "Tapped" indicator on stats](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/953)
+- Don't auto-focus the token panel on update
+- [Don't allow Pokemon to level up past their level cap without a warning](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/952)
+- Don't fail to evolve if no image is found
+- Display Maximum Controllable Level Range
+- Fixed Exp Awarding Logic
+- [Added "Reset Custom Frequency" button](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/944)
 - Added (sluggified) keywords as item roll options
 - [Added Reminder Rule Element type](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/867)
 - [Added Modifications section to Grant Item rule](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/942)
