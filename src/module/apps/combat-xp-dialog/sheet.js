@@ -9,7 +9,7 @@ class CombatXPDialog extends FormApplication {
             title: game.i18n.localize("PTU.CombatXP.Title"),
             classes: ["ptu", "sheet", "combat-xp"],
             template: "systems/ptu/static/templates/apps/combat-xp-dialog.hbs",
-            width: 520,
+            width: 560,
             height: "auto",
             submitOnChange: false,
             submitOnClose: false,
@@ -21,59 +21,81 @@ class CombatXPDialog extends FormApplication {
     /** @override */
     async getData() {
         const budget = this.combat.expBudget;
+        const useTrainerPool = game.settings.get("ptu", "automation.xpToTrainerPool");
 
-        // Collect player-owned pokemon combatants (deduplicated by actorId)
-        const seen = new Set();
-        const pokemonRows = [];
+        // Collect distinct trainers whose pokemon participated
+        const trainerMap = new Map(); // trainerId → { trainer, participatedIds: Set }
+
         for (const combatant of this.combat.combatants) {
             const actor = combatant.actor;
-            if (!actor) continue;
-            if (actor.type !== "pokemon") continue;
-            if (!actor.hasPlayerOwner) continue;
-            if (seen.has(actor.id)) continue;
-            seen.add(actor.id);
-            pokemonRows.push({
-                actorId: actor.id,
-                name: actor.name,
-                img: actor.img,
+            if (!actor || actor.type !== "pokemon" || !actor.hasPlayerOwner) continue;
+
+            const trainer = actor.trainer;
+            if (!trainer) continue;
+
+            if (!trainerMap.has(trainer.id)) {
+                trainerMap.set(trainer.id, { trainer, participatedIds: new Set() });
+            }
+            trainerMap.get(trainer.id).participatedIds.add(actor.id);
+        }
+
+        const trainerCount = Math.max(trainerMap.size, 1);
+        const perPlayerXP = Math.floor(budget / trainerCount);
+        const perPokemonXP = Math.floor(perPlayerXP / 2);
+
+        // Build trainer rows: each trainer's full active party
+        const trainerRows = [];
+        for (const { trainer, participatedIds } of trainerMap.values()) {
+            const partyPokemon = game.actors.filter(a =>
+                a.type === "pokemon" &&
+                a.flags?.ptu?.party?.trainer === trainer.id &&
+                !a.flags?.ptu?.party?.boxed
+            );
+
+            trainerRows.push({
+                trainerId: trainer.id,
+                trainerName: trainer.name,
+                trainerImg: trainer.img,
+                poolGrant: perPlayerXP,
+                pokemon: partyPokemon.map(p => ({
+                    actorId: p.id,
+                    name: p.name,
+                    img: p.img,
+                    xpGrant: perPokemonXP,
+                    participated: participatedIds.has(p.id),
+                })),
             });
         }
 
         return {
             budget,
-            defaultXP: budget,
-            pokemon: pokemonRows,
-            useTrainerPool: game.settings.get("ptu", "automation.xpToTrainerPool"),
+            trainerCount,
+            perPlayerXP,
+            perPokemonXP,
+            trainers: trainerRows,
+            useTrainerPool,
         };
-    }
-
-    /** @override */
-    activateListeners(html) {
-        super.activateListeners(html);
-
-        html.find(".combat-xp-set-all").click((event) => {
-            event.preventDefault();
-            const amount = parseInt(html.find(".combat-xp-bulk-amount").val()) || 0;
-            html.find(".combat-xp-amount").each((_i, el) => {
-                $(el).val(amount);
-            });
-        });
     }
 
     /** @override */
     async _updateObject(_event, formData) {
         const useTrainerPool = game.settings.get("ptu", "automation.xpToTrainerPool");
 
-        // formData keys: xp-<actorId>, exclude-<actorId>
-        const actorIds = Object.keys(formData)
-            .filter(k => k.startsWith("xp-"))
-            .map(k => k.slice(3));
+        const trainerIds = [...new Set(
+            Object.keys(formData)
+                .filter(k => k.startsWith("pool-"))
+                .map(k => k.slice(5))
+        )];
 
-        const trainerUpdates = new Map(); // trainerId → array of xp chunks to push
+        const pokemonActorIds = [...new Set(
+            Object.keys(formData)
+                .filter(k => k.startsWith("xp-"))
+                .map(k => k.slice(3))
+        )];
 
-        for (const actorId of actorIds) {
-            const excluded = !!formData[`exclude-${actorId}`];
-            if (excluded) continue;
+        // Award pending XP to each non-excluded pokemon
+        for (const actorId of pokemonActorIds) {
+            if (formData[`exclude-${actorId}`]) continue;
 
             const xpAmount = parseInt(formData[`xp-${actorId}`]) || 0;
             if (xpAmount <= 0) continue;
@@ -81,28 +103,23 @@ class CombatXPDialog extends FormApplication {
             const actor = game.actors.get(actorId);
             if (!actor) continue;
 
-            if (useTrainerPool) {
-                const trainer = actor.trainer;
-                if (trainer) {
-                    if (!trainerUpdates.has(trainer.id)) {
-                        trainerUpdates.set(trainer.id, [...(trainer.system.level.xpPool ?? [])]);
-                    }
-                    trainerUpdates.get(trainer.id).push(xpAmount);
-                    continue;
-                }
-                // No trainer → fall back to pendingExp on the pokemon
-            }
-
-            // Direct pending XP on pokemon
             const currentPending = actor.system.level.pendingExp ?? 0;
             await actor.update({ "system.level.pendingExp": currentPending + xpAmount });
         }
 
-        // Apply batched trainer pool updates
-        for (const [trainerId, pool] of trainerUpdates) {
-            const trainer = game.actors.get(trainerId);
-            if (trainer) {
-                await trainer.update({ "system.level.xpPool": pool });
+        // Award XP pool to each trainer
+        if (useTrainerPool) {
+            for (const trainerId of trainerIds) {
+                if (formData[`exclude-trainer-${trainerId}`]) continue;
+
+                const poolAmount = parseInt(formData[`pool-${trainerId}`]) || 0;
+                if (poolAmount <= 0) continue;
+
+                const trainer = game.actors.get(trainerId);
+                if (!trainer) continue;
+
+                const currentPool = trainer.system.level.xpPool ?? 0;
+                await trainer.update({ "system.level.xpPool": currentPool + poolAmount });
             }
         }
     }

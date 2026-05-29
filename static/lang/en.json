@@ -444,6 +444,10 @@
     "CombatXP": {
       "Title": "Award Combat XP",
       "BudgetLabel": "EXP Budget",
+      "PlayersLabel": "Players",
+      "PerPlayerLabel": "Per Player",
+      "PerPokemonHint": "Half goes to each party Pokémon",
+      "PoolGrantLabel": "Pool Grant",
       "SetAllLabel": "Set all to",
       "SetAllButton": "Apply",
       "PokemonLabel": "Pokémon",
@@ -451,14 +455,27 @@
       "ExcludeLabel": "Exclude",
       "AwardButton": "Award XP",
       "NoPokemon": "No player-owned Pokémon found in this combat.",
-      "TrainerPoolNote": "XP will be sent to trainer pools",
-      "NoPartyPokemon": "This trainer has no party Pokémon to assign XP to.",
-      "AssignXPHint": "Assign {amount} XP to which Pokémon?"
+      "TrainerPoolNote": "Full share also sent to trainer pool",
+      "Reserve": "reserve",
+      "NoPartyPokemon": "This trainer has no party Pokémon."
     },
     "PendingExp": "Pending XP",
     "ApplyXP": "Apply XP",
     "XPPool": "XP Pool",
+    "AllocateXPPool": "Allocate XP Pool",
     "AssignXP": "Assign to Pokémon",
+    "XPPoolSheet": {
+      "Title": "XP Pool Allocation",
+      "PoolBalance": "Pool Balance",
+      "Party": "Party",
+      "Box": "Box",
+      "LevelUp": "Level Up",
+      "LevelUpCost": "Cost",
+      "InsufficientPool": "Not enough XP in pool",
+      "Need": "Need",
+      "MaxLevel": "Max Level",
+      "NoPokemon": "No Pokémon found for this trainer."
+    },
 
     "DexSheet": {
       "Title": "Dex",

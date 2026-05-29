@@ -1,6 +1,7 @@
 import { ItemSummaryRenderer } from "../sheet/item-summary.js";
 import { InventoryConfigSheet } from "../sheet/inventory-config.js";
 import { PTUPartySheet } from "../../apps/party/sheet.js";
+import { PTUXpPoolSheet } from "../../apps/xp-pool-sheet/sheet.js";
 import { Statistic } from "../../system/statistic/index.js";
 import { PTUDexSheet } from "../../apps/dex/sheet.js";
 import { PTUActorSheet } from "../sheet.js";
@@ -252,50 +253,9 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		// Everything below here is only needed if the sheet is editable
 		if (!this.options.editable) return;
 
-		html.find('.assign-xp-pool').click(async (event) => {
+		html.find('.open-xp-pool').click((event) => {
 			event.preventDefault();
-			const index = parseInt(event.currentTarget.dataset.index);
-			const pool = this.actor.system.level.xpPool ?? [];
-			if (index < 0 || index >= pool.length) return;
-			const chunk = pool[index];
-
-			// Build list of this trainer's party pokemon
-			const partyPokemon = game.actors.filter(a =>
-				a.type === "pokemon" && a.flags?.ptu?.party?.trainer === this.actor.id
-			);
-
-			if (partyPokemon.length === 0) {
-				return ui.notifications.warn(game.i18n.localize("PTU.CombatXP.NoPartyPokemon"));
-			}
-
-			const options = partyPokemon.map(p =>
-				`<option value="${p.id}">${p.name}</option>`
-			).join("");
-
-			new Dialog({
-				title: game.i18n.localize("PTU.AssignXP"),
-				content: `
-					<div class="form-group">
-						<label>${game.i18n.format("PTU.CombatXP.AssignXPHint", { amount: chunk })}</label>
-						<select name="pokemon-id">${options}</select>
-					</div>`,
-				buttons: {
-					assign: {
-						label: game.i18n.localize("PTU.AssignXP"),
-						callback: async (html) => {
-							const targetId = html.find('[name="pokemon-id"]').val();
-							const target = game.actors.get(targetId);
-							if (!target) return;
-							const currentPending = target.system.level.pendingExp ?? 0;
-							await target.update({ "system.level.pendingExp": currentPending + chunk });
-							const newPool = pool.filter((_, i) => i !== index);
-							await this.actor.update({ "system.level.xpPool": newPool });
-						}
-					},
-					cancel: { label: game.i18n.localize("DIALOG.DeleteItem.Cancel") }
-				},
-				default: "assign",
-			}).render(true);
+			new PTUXpPoolSheet({ actor: this.actor }).render(true);
 		});
 
 		// Open Inventory Config
