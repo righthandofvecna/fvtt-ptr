@@ -52,7 +52,7 @@
                 {{/if}}
                 {{#with (lookup ../data.stats key) as | dataStats |}}
                     <span class="fb-20"><input type="number" name="stats.{{key}}.newLevelUp" value="{{dataStats.newLevelUp}}"/></span>
-                    <span class="fb-20">{{dataStats.newTotal}}{{#if dataStats.altered}}<span class="tooltip" title="{{dataStats.altered}}">*</span>{{/if}}</span>
+                    <span class="fb-20{{#if dataStats.tapped}} tapped-stat{{/if}}">{{dataStats.newTotal}}{{#if dataStats.tapped}}<i class="fas fa-exclamation-triangle tapped-warning" title="{{localize "PTU.LevelUpForm.TappedStat"}}"></i>{{/if}}{{#if dataStats.altered}}<span class="tooltip" title="{{dataStats.altered}}">*</span>{{/if}}</span>
                 {{/with}}
             </div>
         {{/each}}

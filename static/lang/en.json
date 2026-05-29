@@ -532,7 +532,8 @@
         "Locked": "Locked until Level",
         "Select": "Select Ability"
       },
-      "EvolutionHint": "It appears {name} is ready to evolve. Would you like to evolve it now?"
+      "EvolutionHint": "It appears {name} is ready to evolve. Would you like to evolve it now?",
+      "TappedStat": "Spending 1 more point here won't increase this stat further"
     },
 
     "MassGenerator": {

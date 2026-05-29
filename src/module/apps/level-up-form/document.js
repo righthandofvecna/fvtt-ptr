@@ -256,12 +256,28 @@ class LevelUpData {
             actorStats: actualStats,
             nature: this.pokemon.nature,
             isTrainer: false,
-            twistedPower: this.pokemon.rollOptions.all["self:ability:twisted-power"]
+            twistedPower: this.pokemon.rollOptions.all["self:ability:twisted-power"],
+            hybridArmor: this.pokemon.rollOptions.all["self:ability:hybrid-armor"],
         });
 
         //calculate final stats
         for (const stat of Object.keys(this.stats)) {
             this.stats[stat].newTotal = results.stats[stat].total;
+        }
+
+        //detect tapped stats: adding 1 more point to this stat yields no increase in final total
+        for (const stat of Object.keys(this.stats)) {
+            const tappedActualStats = foundry.utils.deepClone(actualStats);
+            tappedActualStats[stat].levelUp += 1;
+            const tappedResult = calculateStatTotal({
+                level: actualLevel + 1, // level up by 1 to simulate the effect of adding a point to a stat at the next level, which is when tapping would occur
+                actorStats: tappedActualStats,
+                nature: this.pokemon.nature,
+                isTrainer: false,
+                twistedPower: this.pokemon.rollOptions.all["self:ability:twisted-power"],
+                hybridArmor: this.pokemon.rollOptions.all["self:ability:hybrid-armor"],
+            });
+            this.stats[stat].tapped = tappedResult.stats[stat].total <= this.stats[stat].newTotal;
         }
 
         //calculate remaining level up points
