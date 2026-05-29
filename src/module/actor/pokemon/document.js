@@ -605,7 +605,7 @@ class PTUPokemonActor extends PTUActor {
             const update = {}
             const tokenUpdates = {};
 
-            const curImg = await PokemonGenerator.getImage(this.species, { gender: this.system.gender, shiny: this.system.shiny });
+            const curImg = await PokemonGenerator.getImage(this.species, { gender: this.system.gender, shiny: this.system.shiny }) ?? this.img;
             const curTokenImg = await (async () => {
                 const tokenImageExtension = game.settings.get("ptu", "generation.defaultTokenImageExtension");
                 if (tokenImageExtension === ".webm") {
@@ -617,7 +617,7 @@ class PTUPokemonActor extends PTUActor {
                 const actorImageExtension = game.settings.get("ptu", "generation.defaultImageExtension");
                 return curImg.replace(actorImageExtension, tokenImageExtension);
             })();
-            const newImg = await PokemonGenerator.getImage(result.evolution, { gender: this.system.gender, shiny: this.system.shiny });
+            const newImg = await PokemonGenerator.getImage(result.evolution, { gender: this.system.gender, shiny: this.system.shiny }) ?? this.img;
             const newTokenImg = await (async () => {
                 const tokenImageExtension = game.settings.get("ptu", "generation.defaultTokenImageExtension");
                 if (tokenImageExtension === ".webm") {
