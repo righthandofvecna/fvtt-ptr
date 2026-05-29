@@ -535,6 +535,12 @@
       "EvolutionHint": "It appears {name} is ready to evolve. Would you like to evolve it now?",
       "TappedStat": "Spending 1 more point here won't increase this stat further"
     },
+    "LevelCapReached": {
+      "Title": "Level Cap Reached",
+      "Content": "{name} has reached the current level cap of {levelCap}. Raising them above this level will impose penalties. Do you wish to raise their level anyways?",
+      "Yes": "Yes",
+      "No": "No"
+    },
 
     "MassGenerator": {
       "Title": "Mass Generator",
