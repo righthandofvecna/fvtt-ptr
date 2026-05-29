@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Hero of Balance Daily - Standard Action Target: Self Effect: For the next three rounds, all Pokémon and  Trainers within 5 meters of you have all Combat Stages  locked to zero.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.YRxNscpZNYprenXV]\nDaily - Standard Action\nTarget: Self\nEffect: For the next three rounds, all Pokémon and Trainers within 5 meters of you have all Combat Stages locked to zero.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

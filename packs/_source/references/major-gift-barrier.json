@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Motherly Compassion Static Effect: You learn the Move Barrier. ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.bZX0XyXaICfBRDNq]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.dwKfen4bsSh3Q640]. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

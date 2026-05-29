@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: All Kyurem and Shared Tao Trio Major  Gifts, Minor Gift - Hero of Truth Static Effect: You learn the Move Ice Burn",
+    "effect": "Prerequisites: All Kyurem and Shared Tao Trio Major  Gifts, @UUID[Compendium.ptu.references.Item.VjoJc8bQ6V3e3rc2]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.rp4bkyPC1p1PILp4].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
