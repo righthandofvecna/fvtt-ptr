@@ -1,5 +1,5 @@
 import { PTUActor, PTUSkills } from "../index.js";
-import { calculateStatTotal } from "../helpers.js";
+import { calculateStatTotal, calcLevelCap } from "../helpers.js";
 import { calculateLevel } from "./level.js";
 import { LevelUpForm } from "../../apps/level-up-form/sheet.js";
 import { sluggify } from "../../../util/misc.js";
@@ -326,14 +326,6 @@ class PTUPokemonActor extends PTUActor {
 
         this.attributes.health.max = system.health.max;
 
-        const calcLevelCap = (friendship) => {
-            const trainerLevel = this.trainer?.system.level.current ?? 0;
-            return Math.ceil(
-                5 + 
-                (79/50) * trainerLevel + 
-                (4/3) * friendship * Math.pow(1 + (trainerLevel/34), 2)
-            );
-        };
         
         // Calculate EXP Training Level Cap: Trainer Level × Milestone Multiplier
         // Milestone Multiplier = 2 + 2 × Milestones earned
@@ -362,8 +354,8 @@ class PTUPokemonActor extends PTUActor {
         };
 
         this.attributes.level.cap = {
-            current: calcLevelCap(system.friendship ?? 0),
-            training: calcLevelCap(0), // The EXP Training Level Cap is based on the Level Cap without Friendship, it's the max level a Pokémon can reach through EXP Training
+            current: calcLevelCap(this.trainer?.system.level.current ?? 0, system.friendship ?? 0),
+            training: calcLevelCap(this.trainer?.system.level.current ?? 0, 0), // The EXP Training Level Cap is based on the Level Cap without Friendship, it's the max level a Pokémon can reach through EXP Training
             amount: calcExpTrainingCap(), // The amount a Pokémon can gain from Daily EXP Training
         }
 
@@ -573,6 +565,9 @@ class PTUPokemonActor extends PTUActor {
         const newLevel = calculateLevel(changed.system.level.exp, this.system.level.current);
         if (newLevel <= this.system.level.current) return super._preUpdate(changed, options, userId);
 
+        // If the actor has no species yet or the species is being updated, skip the level-up screen.
+        if (!this.species || !!changed?.items?.find(i=>i.type=="species")) return super._preUpdate(changed, options, userId);
+
         const actor = this;
 
         const result = await new Promise((resolve, _) => {
@@ -602,7 +597,7 @@ class PTUPokemonActor extends PTUActor {
             const update = {}
             const tokenUpdates = {};
 
-            const curImg = await PokemonGenerator.getImage(this.species, { gender: this.system.gender, shiny: this.system.shiny });
+            const curImg = await PokemonGenerator.getImage(this.species, { gender: this.system.gender, shiny: this.system.shiny }) ?? this.img;
             const curTokenImg = await (async () => {
                 const tokenImageExtension = game.settings.get("ptu", "generation.defaultTokenImageExtension");
                 if (tokenImageExtension === ".webm") {
@@ -614,7 +609,7 @@ class PTUPokemonActor extends PTUActor {
                 const actorImageExtension = game.settings.get("ptu", "generation.defaultImageExtension");
                 return curImg.replace(actorImageExtension, tokenImageExtension);
             })();
-            const newImg = await PokemonGenerator.getImage(result.evolution, { gender: this.system.gender, shiny: this.system.shiny });
+            const newImg = await PokemonGenerator.getImage(result.evolution, { gender: this.system.gender, shiny: this.system.shiny }) ?? this.img;
             const newTokenImg = await (async () => {
                 const tokenImageExtension = game.settings.get("ptu", "generation.defaultTokenImageExtension");
                 if (tokenImageExtension === ".webm") {

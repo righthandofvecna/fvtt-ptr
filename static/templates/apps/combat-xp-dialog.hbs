@@ -6,42 +6,70 @@
         <div class="swsh-body">
             <div class="d-flex align-items-center justify-content-between pt-1 pb-1">
                 <span>{{localize "PTU.CombatXP.BudgetLabel"}}: <strong>{{budget}}</strong></span>
+                <span>{{localize "PTU.CombatXP.PlayersLabel"}}: <strong>{{trainerCount}}</strong></span>
+                <span>{{localize "PTU.CombatXP.PerPlayerLabel"}}: <strong>{{perPlayerXP}}</strong></span>
+            </div>
+            <div class="d-flex align-items-center pt-1 pb-2" style="gap: 8px;">
+                <small class="hint">{{localize "PTU.CombatXP.PerPokemonHint"}}: {{perPokemonXP}}</small>
                 {{#if useTrainerPool}}
-                    <span class="hint">{{localize "PTU.CombatXP.TrainerPoolNote"}}</span>
+                    <small class="hint">— {{localize "PTU.CombatXP.TrainerPoolNote"}}</small>
                 {{/if}}
             </div>
 
-            {{#if pokemon}}
-            <div class="d-flex align-items-center justify-content-between pt-1 pb-1">
-                <label class="flex-grow-1">{{localize "PTU.CombatXP.SetAllLabel"}}</label>
-                <input class="combat-xp-bulk-amount" type="number" value="{{defaultXP}}" min="0" />
-                <button type="button" class="combat-xp-set-all">{{localize "PTU.CombatXP.SetAllButton"}}</button>
-            </div>
+            {{#if trainers}}
+                {{#each trainers as |trainer|}}
+                <div class="swsh-box mb-2">
+                    <div class="swsh-header highlight d-flex align-items-center justify-content-between pt-1 pb-1 pl-1 pr-1">
+                        <div class="d-flex align-items-center" style="gap: 6px;">
+                            <img src="{{trainer.trainerImg}}" width="24" height="24" style="border-radius:3px;" />
+                            <strong>{{trainer.trainerName}}</strong>
+                        </div>
+                        {{#if ../useTrainerPool}}
+                        <div class="d-flex align-items-center" style="gap: 4px;">
+                            <label style="white-space:nowrap;">{{localize "PTU.CombatXP.PoolGrantLabel"}}:</label>
+                            <input type="number" name="pool-{{trainer.trainerId}}" value="{{trainer.poolGrant}}" min="0" style="width:60px;" />
+                            <input type="checkbox" name="exclude-trainer-{{trainer.trainerId}}" title="{{localize "PTU.CombatXP.ExcludeLabel"}}" />
+                        </div>
+                        {{/if}}
+                    </div>
 
-            <table class="combat-xp-table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>{{localize "PTU.CombatXP.PokemonLabel"}}</th>
-                        <th>{{localize "PTU.CombatXP.XPLabel"}}</th>
-                        <th>{{localize "PTU.CombatXP.ExcludeLabel"}}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{#each pokemon as |p|}}
-                    <tr class="combat-xp-row">
-                        <td><img src="{{p.img}}" width="32" height="32" /></td>
-                        <td>{{p.name}}</td>
-                        <td>
-                            <input type="number" name="xp-{{p.actorId}}" value="{{../defaultXP}}" min="0" class="combat-xp-amount" />
-                        </td>
-                        <td class="center-text">
-                            <input type="checkbox" name="exclude-{{p.actorId}}" />
-                        </td>
-                    </tr>
-                    {{/each}}
-                </tbody>
-            </table>
+                    {{#if trainer.pokemon}}
+                    <div class="swsh-body p-1">
+                        <table class="combat-xp-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>{{localize "PTU.CombatXP.PokemonLabel"}}</th>
+                                    <th>{{localize "PTU.CombatXP.XPLabel"}}</th>
+                                    <th>{{localize "PTU.CombatXP.ExcludeLabel"}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each trainer.pokemon as |p|}}
+                                <tr class="combat-xp-row {{#unless p.participated}}reserve{{/unless}}">
+                                    <td><img src="{{p.img}}" width="28" height="28" /></td>
+                                    <td>
+                                        {{p.name}}
+                                        {{#unless p.participated}}<small class="hint">({{localize "PTU.CombatXP.Reserve"}})</small>{{/unless}}
+                                    </td>
+                                    <td>
+                                        <input type="number" name="xp-{{p.actorId}}" value="{{p.xpGrant}}" min="0" class="combat-xp-amount" data-trainer-id="{{../trainer.trainerId}}" style="width:60px;" />
+                                    </td>
+                                    <td class="center-text">
+                                        <input type="checkbox" name="exclude-{{p.actorId}}" />
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                    {{else}}
+                    <div class="swsh-body p-1">
+                        <p class="hint">{{localize "PTU.CombatXP.NoPokemon"}}</p>
+                    </div>
+                    {{/if}}
+                </div>
+                {{/each}}
             {{else}}
             <p class="hint">{{localize "PTU.CombatXP.NoPokemon"}}</p>
             {{/if}}

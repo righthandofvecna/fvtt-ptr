@@ -345,6 +345,7 @@
 
     "LevelCap": "Level Cap",
     "LevelCapTraining": "EXP Training Level Cap",
+    "LevelMaxControl": "Max Ctrl Lv",
 
     "Money": "Money",
     "ItemCategories": "Item Categories",
@@ -443,6 +444,10 @@
     "CombatXP": {
       "Title": "Award Combat XP",
       "BudgetLabel": "EXP Budget",
+      "PlayersLabel": "Players",
+      "PerPlayerLabel": "Per Player",
+      "PerPokemonHint": "Half goes to each party Pokémon",
+      "PoolGrantLabel": "Pool Grant",
       "SetAllLabel": "Set all to",
       "SetAllButton": "Apply",
       "PokemonLabel": "Pokémon",
@@ -450,14 +455,27 @@
       "ExcludeLabel": "Exclude",
       "AwardButton": "Award XP",
       "NoPokemon": "No player-owned Pokémon found in this combat.",
-      "TrainerPoolNote": "XP will be sent to trainer pools",
-      "NoPartyPokemon": "This trainer has no party Pokémon to assign XP to.",
-      "AssignXPHint": "Assign {amount} XP to which Pokémon?"
+      "TrainerPoolNote": "Full share also sent to trainer pool",
+      "Reserve": "reserve",
+      "NoPartyPokemon": "This trainer has no party Pokémon."
     },
     "PendingExp": "Pending XP",
     "ApplyXP": "Apply XP",
     "XPPool": "XP Pool",
+    "AllocateXPPool": "Allocate XP Pool",
     "AssignXP": "Assign to Pokémon",
+    "XPPoolSheet": {
+      "Title": "XP Pool Allocation",
+      "PoolBalance": "Pool Balance",
+      "Party": "Party",
+      "Box": "Box",
+      "LevelUp": "Level Up",
+      "LevelUpCost": "Cost",
+      "InsufficientPool": "Not enough XP in pool",
+      "Need": "Need",
+      "MaxLevel": "Max Level",
+      "NoPokemon": "No Pokémon found for this trainer."
+    },
 
     "DexSheet": {
       "Title": "Dex",
@@ -532,7 +550,14 @@
         "Locked": "Locked until Level",
         "Select": "Select Ability"
       },
-      "EvolutionHint": "It appears {name} is ready to evolve. Would you like to evolve it now?"
+      "EvolutionHint": "It appears {name} is ready to evolve. Would you like to evolve it now?",
+      "TappedStat": "Spending 1 more point here won't increase this stat further"
+    },
+    "LevelCapReached": {
+      "Title": "Level Cap Reached",
+      "Content": "{name} has reached the current level cap of {levelCap}. Raising them above this level will impose penalties. Do you wish to raise their level anyways?",
+      "Yes": "Yes",
+      "No": "No"
     },
 
     "MassGenerator": {

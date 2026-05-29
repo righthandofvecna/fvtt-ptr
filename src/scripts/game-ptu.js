@@ -16,6 +16,7 @@ import { changeRotomForm } from "./macros/rotom-form-change.js"
 import { TypeMatrix } from "../module/apps/type-matrix.js";
 import { Weather } from "../module/apps/weather.js";
 import { PTUPokemonTrainingSheet } from "../module/apps/pokemon-training/index.js";
+import { PTUXpPoolSheet } from "../module/apps/xp-pool-sheet/sheet.js";
 
 const GamePTU = {
     onInit() {
@@ -44,6 +45,7 @@ const GamePTU = {
             },
             weather: Weather,
             pokemonTraining: PTUPokemonTrainingSheet,
+            xpPoolSheet: PTUXpPoolSheet,
             macros: {
                 changeRotomForm,
                 pokedex,

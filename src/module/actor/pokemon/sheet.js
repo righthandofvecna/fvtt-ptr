@@ -238,9 +238,37 @@ export class PTUPokemonSheet extends PTUActorSheet {
 			event.preventDefault();
 			const { exp, pendingExp } = this.actor.system.level;
 			if (!pendingExp) return;
+
+			const capLevel = this.actor.attributes.level.cap.current;
+			const capExp = CONFIG.PTU.data.levelProgression[capLevel] ?? Infinity;
+			const maxApplicable = Math.max(0, capExp - exp);
+			const applyExp = Math.min(pendingExp, maxApplicable);
+			const remainingPending = pendingExp - applyExp;
+
+			if (applyExp == 0 && remainingPending > 0) {
+				new Promise((resolve, reject) => {
+					foundry.applications.api.DialogV2.confirm({
+						title: game.i18n.localize("PTU.LevelCapReached.Title"),
+						content: game.i18n.format("PTU.LevelCapReached.Content", { name: this.actor.name, levelCap: capLevel }),
+						yes: {
+							label: game.i18n.localize("PTU.LevelCapReached.Yes"),
+							callback: ()=> resolve()
+						},
+						no: {
+							label: game.i18n.localize("PTU.LevelCapReached.No"),
+							callback: ()=> reject()
+						}
+					})
+				}).then(()=>this.actor.update({
+					"system.level.exp": exp + pendingExp,
+					"system.level.pendingExp": 0,
+			  })).catch(()=>{});
+				return;
+			}
+
 			await this.actor.update({
-				"system.level.exp": exp + pendingExp,
-				"system.level.pendingExp": 0,
+				"system.level.exp": exp + applyExp,
+				"system.level.pendingExp": remainingPending,
 			});
 		});
 

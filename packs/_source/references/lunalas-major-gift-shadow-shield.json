@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift – Heart of the Moon\nStatic\nEffect: You gain the Shadow Shield Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.jbnZ3Fowg0ZQ1Lad]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.1R5sHXlLqoKi7ANz] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,

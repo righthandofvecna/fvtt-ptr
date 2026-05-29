@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Major Gift – Dimension Sense and Major Gift – Dimensional Adaptation\nStatic\nEffect: You gain the Beast Boost Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.lqn7H1y3FaOpVS5X] and @UUID[Compendium.ptu.references.Item.O9hf1v3ytIu8KGat]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.w65GEJmupufS4gK8] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,

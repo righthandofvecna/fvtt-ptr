@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: All Lunala Major Gifts\nStatic\nEffect: You learn the Move Moongeist Beam.",
+    "effect": "Prerequisites: All Lunala Major Gifts\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.Vu2T2DcvHQddnTvN].",
     "snippet": "",
     "rules": [],
     "enabled": true,

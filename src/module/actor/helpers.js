@@ -365,4 +365,12 @@ function calculateEvasions(data, ptuFlags, actor_items) {
     return evasion;
 }
 
-export { calcBaseStats, calculateStatTotal, calculateOldStatTotal, calculatePTStatTotal, calculateEvasions }
+function calcLevelCap(trainerLevel, friendship) {
+    return Math.ceil(
+        5 + 
+        (79/50) * trainerLevel + 
+        (4/3) * friendship * Math.pow(1 + (trainerLevel/34), 2)
+    );
+};
+
+export { calcBaseStats, calculateStatTotal, calculateOldStatTotal, calculatePTStatTotal, calculateEvasions, calcLevelCap }

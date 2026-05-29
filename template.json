@@ -470,7 +470,7 @@
       "level": {
         "milestones": 0,
         "miscexp": 0,
-        "xpPool": []
+        "xpPool": 0
       },
       "health": {
         "value": 0,

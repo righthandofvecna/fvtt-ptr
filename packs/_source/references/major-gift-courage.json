@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Spirit of Justice Static Effect: You gain the Courage Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.gUxW2eaFQ409lkqB]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.pvfbtAhZJdE0W3KN] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -46,5 +45,6 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "flags": {}
 }

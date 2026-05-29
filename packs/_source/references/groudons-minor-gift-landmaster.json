@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Static Effect: You treat Rough Terrain that is rocky or sandy  or that is created by Groundshaper as Regular Terrain.",
+    "effect": "Prerequisites: GM Permission\nStatic\nEffect: You treat Rough Terrain that is rocky or sandy or that is created by @UUID[Compendium.ptu.capabilities.Item.gneJRPErFFv5Kz3g] as Regular Terrain.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -46,5 +45,6 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "flags": {}
 }

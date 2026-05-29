@@ -1,0 +1,126 @@
+<form class="{{cssClass}} container-fluid" autocomplete="off">
+    <div class="d-flex flex-column w-100 h-100">
+
+        {{!-- Header: trainer + pool balance --}}
+        <div class="swsh-box mb-2">
+            <div class="swsh-header highlight d-flex flex-row align-items-center justify-content-between pt-1 pb-1 pl-2 pr-2">
+                <div class="d-flex align-items-center" style="gap: 8px;">
+                    <img src="{{trainer.img}}" width="32" height="32" style="border-radius:4px;" />
+                    <strong>{{trainer.name}}</strong>
+                </div>
+                <div class="d-flex align-items-center" style="gap: 6px;">
+                    <span>{{localize "PTU.XPPoolSheet.PoolBalance"}}:</span>
+                    <strong class="xp-pool-balance">{{pool}}</strong>
+                    <span>XP</span>
+                </div>
+            </div>
+        </div>
+
+        {{!-- Party Section --}}
+        {{#if party}}
+        <div class="swsh-box mb-2 flex-grow-1" style="overflow-y: auto;">
+            <div class="swsh-header highlight pt-1 pb-1 pl-2">
+                <h3 class="m-0">{{localize "PTU.XPPoolSheet.Party"}}</h3>
+            </div>
+            <div class="swsh-body p-1">
+                {{#each party as |mon|}}
+                <div class="d-flex align-items-center xp-pool-pokemon-row" style="gap: 8px; padding: 4px 2px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                    <img class="xp-pool-actor-open" src="{{mon.img}}" width="40" height="40"
+                        style="border-radius: 4px; cursor: pointer; flex-shrink:0;"
+                        data-actor-uuid="{{mon.actorUuid}}" title="{{mon.name}}" />
+                    <div style="flex: 1 1 120px; min-width: 0;">
+                        <div class="d-flex align-items-baseline" style="gap: 4px;">
+                            <strong style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{mon.name}}</strong>
+                            <small class="hint" style="white-space:nowrap;">
+                                Lv.{{mon.currentLevel}}{{#unless (is mon.currentLevel mon.effectiveLevel)}} → {{mon.effectiveLevel}}*{{/unless}}
+                            </small>
+                        </div>
+                        {{#unless mon.isMaxLevel}}
+                        <div class="d-flex align-items-center" style="gap: 4px; margin-top: 3px;">
+                            <div style="flex:1; height: 6px; background: rgba(0,0,0,0.15); border-radius: 3px; overflow:hidden;">
+                                <div style="width: {{mon.progressPercent}}%; height: 100%; background: var(--color-level-bar, #5b9bd5);"></div>
+                            </div>
+                            <small class="hint" style="white-space:nowrap; font-size: 0.75em;">{{mon.progressPercent}}%</small>
+                        </div>
+                        {{else}}
+                        <small class="hint">{{localize "PTU.XPPoolSheet.MaxLevel"}}</small>
+                        {{/unless}}
+                    </div>
+                    <div style="flex-shrink:0; text-align:right;">
+                        {{#if mon.isMaxLevel}}
+                        <span class="hint" style="font-size: 0.8em;">—</span>
+                        {{else}}
+                        <button type="button" class="xp-level-up" {{#unless mon.canLevelUp}}disabled{{/unless}}
+                            data-actor-id="{{mon.actorId}}"
+                            data-cost="{{mon.xpForNextLevel}}"
+                            title="{{#if mon.canLevelUp}}{{localize "PTU.XPPoolSheet.LevelUpCost"}}: {{mon.xpForNextLevel}} XP{{else}}{{localize "PTU.XPPoolSheet.InsufficientPool"}} ({{localize "PTU.XPPoolSheet.Need"}} {{mon.xpForNextLevel}} XP){{/if}}"
+                            style="white-space:nowrap;{{#unless mon.canLevelUp}} opacity: 0.5; cursor: not-allowed;{{/unless}}">
+                            ▲ {{localize "PTU.XPPoolSheet.LevelUp"}} <small>({{mon.xpForNextLevel}} XP)</small>
+                        </button>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{/if}}
+
+        {{!-- Boxed Section --}}
+        {{#if boxed}}
+        <div class="swsh-box mb-2" style="overflow-y: auto; max-height: 220px;">
+            <div class="swsh-header highlight pt-1 pb-1 pl-2">
+                <h3 class="m-0">{{localize "PTU.XPPoolSheet.Box"}}</h3>
+            </div>
+            <div class="swsh-body p-1">
+                {{#each boxed as |mon|}}
+                <div class="d-flex align-items-center xp-pool-pokemon-row" style="gap: 8px; padding: 4px 2px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                    <img class="xp-pool-actor-open" src="{{mon.img}}" width="40" height="40"
+                        style="border-radius: 4px; cursor: pointer; flex-shrink:0;"
+                        data-actor-uuid="{{mon.actorUuid}}" title="{{mon.name}}" />
+                    <div style="flex: 1 1 120px; min-width: 0;">
+                        <div class="d-flex align-items-baseline" style="gap: 4px;">
+                            <strong style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{mon.name}}</strong>
+                            <small class="hint" style="white-space:nowrap;">
+                                Lv.{{mon.currentLevel}}{{#unless (is mon.currentLevel mon.effectiveLevel)}} → {{mon.effectiveLevel}}*{{/unless}}
+                            </small>
+                        </div>
+                        {{#unless mon.isMaxLevel}}
+                        <div class="d-flex align-items-center" style="gap: 4px; margin-top: 3px;">
+                            <div style="flex:1; height: 6px; background: rgba(0,0,0,0.15); border-radius: 3px; overflow:hidden;">
+                                <div style="width: {{mon.progressPercent}}%; height: 100%; background: var(--color-level-bar, #5b9bd5);"></div>
+                            </div>
+                            <small class="hint" style="white-space:nowrap; font-size: 0.75em;">{{mon.progressPercent}}%</small>
+                        </div>
+                        {{else}}
+                        <small class="hint">{{localize "PTU.XPPoolSheet.MaxLevel"}}</small>
+                        {{/unless}}
+                    </div>
+                    <div style="flex-shrink:0; text-align:right;">
+                        {{#if mon.isMaxLevel}}
+                        <span class="hint" style="font-size: 0.8em;">—</span>
+                        {{else}}
+                        <button type="button" class="xp-level-up" {{#unless mon.canLevelUp}}disabled{{/unless}}
+                            data-actor-id="{{mon.actorId}}"
+                            data-cost="{{mon.xpForNextLevel}}"
+                            title="{{#if mon.canLevelUp}}{{localize "PTU.XPPoolSheet.LevelUpCost"}}: {{mon.xpForNextLevel}} XP{{else}}{{localize "PTU.XPPoolSheet.InsufficientPool"}} ({{localize "PTU.XPPoolSheet.Need"}} {{mon.xpForNextLevel}} XP){{/if}}"
+                            style="white-space:nowrap;{{#unless mon.canLevelUp}} opacity: 0.5; cursor: not-allowed;{{/unless}}">
+                            ▲ {{localize "PTU.XPPoolSheet.LevelUp"}} <small>({{mon.xpForNextLevel}} XP)</small>
+                        </button>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{/if}}
+
+        {{#unless (or party boxed)}}
+        <div class="swsh-box">
+            <div class="swsh-body p-2 center-text">
+                <p class="hint">{{localize "PTU.XPPoolSheet.NoPokemon"}}</p>
+            </div>
+        </div>
+        {{/unless}}
+
+    </div>
+</form>

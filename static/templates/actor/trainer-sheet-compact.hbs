@@ -163,6 +163,16 @@
                                             <input class="p-0" type="text" name="system.level.current"
                                                 value="{{actor.system.level.current}}" data-dtype="Number" disabled />
                                         </div>
+                                        <div class="fb-30">
+                                            <label title="{{localize "PTU.LevelMaxControl"}}">{{localize "PTU.LevelMaxControl"}}</label>
+                                        </div>
+                                        <div class="fb-20 flexrow">
+                                            <input class="p-0" type="text" name="system.level.minControlLevel"
+                                                value="{{actor.system.level.minControlLevel}}" data-dtype="Number" disabled />
+                                            <span>–</span>
+                                            <input class="p-0" type="text" name="system.level.maxControlLevel"
+                                                value="{{actor.system.level.maxControlLevel}}" data-dtype="Number" disabled />
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swsh-header ball-themes {{ballStyle}} highlight">
@@ -223,19 +233,17 @@
                             </div>
                         </div>
 
-                        {{#if (and (getGameSetting "automation.xpToTrainerPool") actor.system.level.xpPool.length)}}
+                        {{#if (and (getGameSetting "automation.xpToTrainerPool") (gt actor.system.level.xpPool 0))}}
                         <div class="w-100 level-box mt-1 mb-1">
                             <div class="swsh-box" style="text-align: center; word-break: keep-all;">
                                 <div class="swsh-header ball-themes {{ballStyle}} highlight p-1">
                                     <h3 class="m-auto">{{localize "PTU.XPPool"}}</h3>
                                 </div>
                                 <div class="swsh-body">
-                                    {{#each actor.system.level.xpPool as |chunk index|}}
                                     <div class="d-flex align-items-center justify-content-between pt-1 pb-1">
-                                        <span>{{localize "PTU.PendingExp"}}: <strong>{{chunk}}</strong></span>
-                                        <button type="button" class="assign-xp-pool" data-index="{{index}}">{{localize "PTU.AssignXP"}}</button>
+                                        <span>{{localize "PTU.XPPool"}}: <strong>{{actor.system.level.xpPool}}</strong> XP</span>
+                                        <button type="button" class="open-xp-pool">{{localize "PTU.AllocateXPPool"}}</button>
                                     </div>
-                                    {{/each}}
                                 </div>
                             </div>
                         </div>

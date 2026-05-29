@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift - Sight Sharing Static Effect: You learn the Move Luster Purge.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.VuNyWXgwUdhFkbXa]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.PkhnU7cr4Haje4qQ].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -46,5 +45,6 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "flags": {}
 }

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: All Kyogre Major Gifts\nEffect: You learn the Move Origin Pulse.",
+    "effect": "Prerequisites: All Kyogre Major Gifts\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.MwYnjuNCXSrSVPV7].",
     "snippet": "",
     "rules": [],
     "enabled": true,

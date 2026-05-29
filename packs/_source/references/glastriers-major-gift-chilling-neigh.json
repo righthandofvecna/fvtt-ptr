@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Frigid Armor\nStatic\nEffect: You gain the Chilling Neigh Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.NyxAICqokAfb270g]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.b3qkInE7eettfwdH] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,

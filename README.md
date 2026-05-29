@@ -38,6 +38,16 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Fixed Inability to Import Pokemon](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/948)
+- Added "Form" field to the species item header
+- Added editable Dex entry field
+- [Added "Tapped" indicator on stats](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/953)
+- Don't auto-focus the token panel on update
+- [Don't allow Pokemon to level up past their level cap without a warning](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/952)
+- Don't fail to evolve if no image is found
+- Display Maximum Controllable Level Range
+- Fixed Exp Awarding Logic
+- [Added "Reset Custom Frequency" button](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/944)
 - Added (sluggified) keywords as item roll options
 - [Added Reminder Rule Element type](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/867)
 - [Added Modifications section to Grant Item rule](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/942)
@@ -102,6 +112,8 @@ Please note that this branch is no longer receiving updates and is only compatib
 - Compendium Browser "Moves" tab loading
 - **Lots of content fixes**
 
+## 🐛 Still-Active Bugs 🐛
+[Open Issues Not Fixed In Dev](https://github.com/pokemon-tabletop-reunited/ptr1e/issues?q=is%3Aissue%20state%3Aopen%20-label%3A%22fixed%20in%20dev%22)
 
 ## Links & Recommendations
 - [Quick Insert](https://gitlab.com/fvtt-modules-lab/quick-insert) is an amazing addon that allows you to drag & drop all over the place even more easily. We 1000% recommend using their module in conjuncture with our system!
