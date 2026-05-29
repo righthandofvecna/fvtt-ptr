@@ -560,7 +560,7 @@ export class TokenPanel extends Application {
             document.querySelector("body").classList.remove("token-panel-minimized");
             // Create window lazily once; keep the instance alive so its position survives close/re-open cycles
             if (!this._window) this._window = new TokenPanelWindow();
-            return this._window.render(true);
+            return this._window.render(true, {focus: false});
         }
         // Docked mode: close floating window if rendered, but keep the instance for position memory
         if (this._window?.rendered) this._window.close({ force: true });
