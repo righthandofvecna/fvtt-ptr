@@ -15,6 +15,7 @@ export class GMControlPanel extends HandlebarsApplicationMixin(ApplicationV2) {
     actions: {
       resetSceneUses: GMControlPanel.#resetSceneUses,
       resetDailyUses: GMControlPanel.#resetDailyUses,
+      resetCustomFrequencyUses: GMControlPanel.#resetCustomFrequencyUses,
       healAllActors: GMControlPanel.#healAllActors,
     },
   };
@@ -58,6 +59,21 @@ export class GMControlPanel extends HandlebarsApplicationMixin(ApplicationV2) {
     await Promise.all(updates);
     game.ptu.tokenPanel?.refresh?.();
     ui.notifications.info("Daily uses reset for all actors.");
+  }
+
+  static async #resetCustomFrequencyUses() {
+    const updates = [];
+    for (const actor of game.actors.values()) {
+      for (const item of actor.items.values()) {
+        if (item.system.frequency?.type !== "custom") continue;
+        const max = item.system.frequency?.max ?? 0;
+        if (!max) continue;
+        updates.push(item.setFlag("ptu", "used", 0));
+      }
+    }
+    await Promise.all(updates);
+    game.ptu.tokenPanel?.refresh?.();
+    ui.notifications.info("Custom frequency uses reset for all actors.");
   }
 
   static async #healAllActors() {
