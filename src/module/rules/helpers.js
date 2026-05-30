@@ -29,6 +29,26 @@ function extractDamageDice(deferredDice, selectors, options = {}) {
         .flatMap(d => d(options) ?? []);
 }
 
+async function extractHealOnDamageDealt({ origin, item, domains, options, damageTotal }) {
+    if (!origin) return [];
+
+    const fullOptions = [...options, ...origin.getSelfRollOptions("origin")];
+    const resolvables = item?.type === "move" ? { move: item } : {};
+
+    // Deduplicate across domains so a construct registered under multiple
+    // selectors (e.g. "damage-dealt" AND "{id}-damage-dealt") only fires once.
+    const seen = new Set();
+    const constructs = domains.flatMap(s =>
+        Object.entries(origin.synthetics.healOnDamageDealt?.[s] ?? {})
+            .filter(([id]) => !seen.has(id) && seen.add(id))
+            .map(([, fn]) => fn)
+    );
+
+    return (
+        await Promise.all(constructs.map(d => d({ test: fullOptions, resolvables, damageTotal })))
+    ).flatMap(e => e ?? []);
+}
+
 async function extractEphemeralEffects({ affects, origin, target, item, domains, options }) {
     if (!(origin && target)) return [];
 
@@ -113,7 +133,7 @@ async function processPreUpdateActorHooks(changed, { pack }) {
     await actor.deleteEmbeddedDocuments("Item", createDeletes.delete, { render: false });
 }
 
-export { extractEphemeralEffects, extractApplyEffects, extractReminders, extractDamageDice, extractNotes, extractModifierAdjustments, extractRollSubstitutions, extractModifiers, processPreUpdateActorHooks }
+export { extractEphemeralEffects, extractApplyEffects, extractReminders, extractHealOnDamageDealt, extractDamageDice, extractNotes, extractModifierAdjustments, extractRollSubstitutions, extractModifiers, processPreUpdateActorHooks }
 
 globalThis.extractEphemeralEffects = extractEphemeralEffects;
 globalThis.extractReminders = extractReminders;

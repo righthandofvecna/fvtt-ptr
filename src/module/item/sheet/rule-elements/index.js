@@ -7,6 +7,7 @@ import { EffectivenessForm } from "./effectiveness-form.js"
 import { EphemeralEffectForm } from "./ephemeral-effect-form.js"
 import { FlatModifierForm } from "./flat-modifier-form.js"
 import { GrantItemForm } from "./grant-item-form.js"
+import { HealOnDamageDealtForm } from "./heal-on-damage-dealt-form.js"
 import { RollOptionForm } from "./roll-option-form.js"
 import { ReminderForm } from "./reminder-form.js"
 import { TempHPForm } from "./temp-hp-form.js"
@@ -25,6 +26,7 @@ const RULE_ELEMENT_FORMS = {
     Effectiveness: EffectivenessForm,
     EphemeralEffect: EphemeralEffectForm,
     ApplyEffect: ApplyEffectForm,
+    HealOnDamageDealt: HealOnDamageDealtForm,
     Reminder: ReminderForm,
     TempHP: TempHPForm,
     TemporarySpecies: TempSpeciesForm,

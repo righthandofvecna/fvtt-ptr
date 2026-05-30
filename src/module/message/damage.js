@@ -1,5 +1,5 @@
 import { sluggify } from "../../util/misc.js";
-import { extractApplyEffects, extractEphemeralEffects, extractReminders } from "../rules/helpers.js";
+import { extractApplyEffects, extractEphemeralEffects, extractReminders, extractHealOnDamageDealt } from "../rules/helpers.js";
 import { DamageRoll } from "../system/damage/roll.js";
 import { ChatMessagePTU } from "./base.js";
 
@@ -207,6 +207,8 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
         .filter(o => o.startsWith("self:"))
         .map(o => o.replace(/^self/, "origin"));
 
+    let totalActualDamageDealt = 0;
+
     for (const token of targets) {
         if (!token.actor) continue;
 
@@ -265,7 +267,7 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
             ...contextClone.getSelfRollOptions()
         ]);
 
-        await contextClone.applyDamage({
+        const hpDamage = await contextClone.applyDamage({
             damage,
             token,
             item: message.item,
@@ -273,6 +275,7 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
             rollOptions: applicationRollOptions,
             skipIWR
         });
+        totalActualDamageDealt += Math.max(0, hpDamage ?? 0);
 
         if (applyEffectsTarget.length > 0) {
             const newItems = await contextClone.createEmbeddedDocuments("Item", applyEffectsTarget);
@@ -333,6 +336,36 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
     }
     catch (err) {
         console.error("PTU | Failed to create origin reminder messages:", err);
+    }
+
+    // Drain / recoil: heal or damage the origin based on total damage dealt
+    if (totalActualDamageDealt > 0 && message.actor) {
+        try {
+            const drainDealtDomains = ["damage-dealt", ...itemDomains.map(d => d.replace(/-received$/, "-dealt"))];
+            const healEntries = await extractHealOnDamageDealt({
+                origin: message.actor,
+                item: message.item,
+                domains: drainDealtDomains,
+                options: messageRollOptions,
+                damageTotal: totalActualDamageDealt,
+            });
+
+            for (const { amount } of healEntries) {
+                if (!amount) continue;
+                const originToken = message.actor.getActiveTokens(true, true)[0]?.document ?? null;
+                // Negative amount = heal (drain), positive = recoil damage
+                await message.actor.applyDamage({
+                    damage: -amount,
+                    token: originToken,
+                    item: message.item,
+                    effectiveness: 1,
+                    skipIWR: true,
+                });
+            }
+        }
+        catch (err) {
+            console.error("PTU | Failed to apply drain / recoil:", err);
+        }
     }
 }
 
