@@ -1,5 +1,4 @@
 import { CheckModifier, PTUModifier, StatisticModifier } from "../../actor/modifiers.js";
-import { PTUPartySheet } from "../../apps/party/sheet.js";
 import { extractModifiers, extractRollSubstitutions } from "../../rules/helpers.js";
 import { PTUCheck } from "../../system/check/check.js";
 import { PTUItemItem } from "./document.js";
@@ -416,13 +415,23 @@ class PokeballItem extends PTUItemItem {
                         const user = game.users.find(u => u.character?.id === trainer.id);
                         if (!user) return ui.notifications.error("PTU.Dialog.CaptureSuccess.UserNotFound", { localize: true });
 
-                        const party = new PTUPartySheet({ actor: trainer });
-
                         const location = formData.location;
                         if (!["party", "box", "available"].includes(location)) return ui.notifications.error("PTU.Dialog.CaptureSuccess.LocationNotFound", { localize: true });
 
                         const pokemon = await fromUuid(args.targets[0].actor);
                         if (!pokemon) return ui.notifications.error("PTU.Dialog.CaptureSuccess.PokemonNotFound", { localize: true });
+
+                        // Resolve the target folder, creating Party/Box subfolders under the trainer if needed
+                        const trainerFolder = trainer.folder;
+                        let targetFolderId = trainerFolder?.id;
+                        if (location !== "available" && trainerFolder) {
+                            const subFolderName = location === "party" ? "Party" : "Box";
+                            let subFolder = trainerFolder.children?.find(c => c.folder.name === subFolderName)?.folder;
+                            if (!subFolder) {
+                                subFolder = await Folder.create({ name: subFolderName, type: "Actor", folder: trainerFolder.id });
+                            }
+                            targetFolderId = subFolder.id;
+                        }
 
                         const pokemonUpdateData = {
                             "_id": pokemon.id,
@@ -430,17 +439,14 @@ class PokeballItem extends PTUItemItem {
                                 default: game.settings.get("ptu", "transferOwnershipDefaultValue") || CONST.DOCUMENT_OWNERSHIP_LEVELS.NONE,
                                 [user.id]: CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER
                             },
-                            "system.pokeball": this.name
+                            "system.pokeball": this.name,
+                            "folder": targetFolderId
                         }
                         if (location !== "available") {
                             pokemonUpdateData["flags.ptu.party"] = {
                                 trainer: trainer.id,
                                 boxed: location === "box",
                             }
-                            pokemonUpdateData["folder"] = party.folders?.[location]?.id ?? trainer.folder.id;
-                        }
-                        else {
-                            pokemonUpdateData["folder"] = party.folders?.root?.id ?? trainer.folder.id;
                         }
 
                         const trainerUpdateData = {
@@ -452,8 +458,9 @@ class PokeballItem extends PTUItemItem {
                         }
 
                         await Actor.updateDocuments([pokemonUpdateData, trainerUpdateData]);
+                        const targetFolder = targetFolderId ? game.folders.get(targetFolderId) : null;
                         await ChatMessage.create({
-                            content: `<span class="statements">${await foundry.applications.ux.TextEditor.implementation.enrichHTML(game.i18n.format("PTU.Dialog.CaptureSuccess.ChatMessage", { pokemon: pokemon.link, trainer: trainer.link, location: (party.folders?.[location === "available" ? "root" : location]?.link ?? location) }), { async: true })}</span>`,
+                            content: `<span class="statements">${await foundry.applications.ux.TextEditor.implementation.enrichHTML(game.i18n.format("PTU.Dialog.CaptureSuccess.ChatMessage", { pokemon: pokemon.link, trainer: trainer.link, location: (targetFolder?.link ?? location) }), { async: true })}</span>`,
                             speaker: ChatMessage.getSpeaker({ actor: trainer }),
                         })
                     }
