@@ -7,9 +7,19 @@
     "origin": "",
     "effect": "After the target takes damage, the user gains HP equal to half of the damage they dealt to the target.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "HealOnDamageDealt",
+        "predicate": [],
+        "selectors": "{id}-damage-dealt",
+        "percent": 0.5,
+        "roundUp": false
+      }
+    ],
     "enabled": true,
     "slug": "absorb",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -69,9 +79,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "zEIiTcsXhPE8v0fF",
   "effects": [],
@@ -82,16 +90,16 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.21",
+    "systemVersion": "4.4.3.29",
     "coreVersion": "13.351",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778569779235,
+    "modifiedTime": 1780163528696,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

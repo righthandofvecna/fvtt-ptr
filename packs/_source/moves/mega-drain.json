@@ -7,9 +7,19 @@
     "origin": "",
     "effect": "After the target takes damage, the user gains HP equal to half of the damage they dealt to the target.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "HealOnDamageDealt",
+        "predicate": [],
+        "selectors": "{id}-damage-dealt",
+        "percent": 0.5,
+        "roundUp": false
+      }
+    ],
     "enabled": true,
     "slug": "mega-drain",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -62,16 +72,14 @@
     },
     "type": "Grass",
     "category": "Special",
-    "damageBase": 4,
-    "ac": 2,
+    "damageBase": "4",
+    "ac": "2",
     "range": "Range 6",
     "contestType": "Smart - Good Show!",
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "9PVNtUbbwbRhZimy",
   "effects": [],
@@ -79,13 +87,19 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.29",
     "coreVersion": "13.351",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200823425,
+    "modifiedTime": 1780163764563,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
