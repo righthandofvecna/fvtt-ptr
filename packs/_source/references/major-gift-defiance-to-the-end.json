@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": null,
+    "slug": "major-gift-defiance-to-the-end",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "_id": "gwoBpxXY3F8cDxPL",
-  "effects": [],
-  "flags": {}
+  "effects": []
 }
