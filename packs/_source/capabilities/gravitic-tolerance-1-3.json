@@ -1,0 +1,56 @@
+{
+  "name": "Gravitic Tolerance (1-3)",
+  "type": "capability",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "This capability represents either a natural ability to function in other gravity levels or specialized training to do so. There are, of course, natural limits to this. A human body is designed to function in a specific level of gravity, and while you may be able to grow used to a higher or lower gravity to some degree, it is simply impossible to adjust well to gravity that is too different from the norm.\nGravitic Tolerance is represented as a range of gravity values which you can treat as your Home Gravity for the purposes of evasion and skill penalties only. Your sheer ability to jump, lift, or run remains unaffected.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "gravitic-tolerance-1-3",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  }
+}
