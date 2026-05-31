@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift - Magic Bounce Static Effect: You learn the Move Diamond Storm.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.E1d6kFotVQrcluMq]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.dhS1pflKLS0EdNWs].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
