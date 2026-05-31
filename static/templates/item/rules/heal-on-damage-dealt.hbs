@@ -1,0 +1,49 @@
+{{!-- Selectors --}}
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.General.Selectors"}}</label>
+    <div class="attached-input">
+        <button type="button" class="attachment" data-action="toggle-selector">
+            {{#if selectorIsArray}}Multiple{{else}}Single{{/if}}
+        </button>
+        {{#if selectorIsArray}}
+            <input type="text" class="ptu-tagify selectors-list" name="system.rules.{{index}}.selectors" value="{{json rule.selectors}}" data-dtype="JSON"/>
+        {{else}}
+            <input type="text" name="system.rules.{{index}}.selectors" value="{{rule.selectors}}" />
+        {{/if}}
+    </div>
+    <p class="hint">{{localize "PTU.RuleEditor.HealOnDamageDealt.SelectorsHint"}}</p>
+</div>
+
+{{!-- Percent --}}
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.HealOnDamageDealt.Percent"}}</label>
+    <div class="spaced-fields details-container-flex-row">
+        <input type="number" name="system.rules.{{index}}.percent" value="{{rule.percent}}" step="0.01" min="-1" max="1" />
+    </div>
+    <p class="hint">{{localize "PTU.RuleEditor.HealOnDamageDealt.PercentHint"}}</p>
+</div>
+
+{{!-- Round Up --}}
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.HealOnDamageDealt.RoundUp"}}</label>
+    <div class="spaced-fields details-container-flex-row">
+        <input type="checkbox" name="system.rules.{{index}}.roundUp" {{#if rule.roundUp}}checked{{/if}} />
+    </div>
+    <p class="hint">{{localize "PTU.RuleEditor.HealOnDamageDealt.RoundUpHint"}}</p>
+</div>
+
+{{!-- Predicate --}}
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.General.Predicate"}}</label>
+    <div class="attached-input">
+        <button type="button" class="attachment" data-action="toggle-predicate">
+            {{#if predicationIsMultiple}}Multiple{{else}}Complex{{/if}}
+        </button>
+        {{#if predicationIsMultiple}}
+            <input type="text" class="ptu-tagify predicate-list" name="system.rules.{{index}}.predicate" value="{{json rule.predicate}}" data-dtype="JSON"/>
+        {{else}}
+            <input type="text" name="system.rules.{{index}}.predicate" value="{{json rule.predicate}}" />
+        {{/if}}
+    </div>
+    <p class="hint">{{localize "PTU.RuleEditor.HealOnDamageDealt.PredicateHint"}}</p>
+</div>

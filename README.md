@@ -38,6 +38,10 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Added Heal On Damage Dealt Rule](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/934)
+- [Make Features Nest Without Requiring Update](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/960)
+- [Make Dragging Pokemon into Folders Work To Update Flags](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/954)
+- Add visible Slug field to Reference items
 - [Fixed Inability to Import Pokemon](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/948)
 - Added "Form" field to the species item header
 - Added editable Dex entry field

@@ -256,7 +256,8 @@ class PTUActor extends Actor {
             effectiveness: [],
             apAdjustments: { drained: [], bound: [] },
             applyEffects: {},
-            reminders: {}
+            reminders: {},
+            healOnDamageDealt: {},
         }
 
         super._initialize();
@@ -543,7 +544,7 @@ class PTUActor extends Actor {
         skipIWR = false,
     }) {
         const health = this.system.health;
-        if (!health) return this;
+        if (!health) return 0;
 
         const flatDamage = effectiveness === -1;
         if (flatDamage) effectiveness = 1;
@@ -755,7 +756,7 @@ class PTUActor extends Actor {
             whisper: this.hasPlayerOwner ? [game.user.id] : game.users.filter(u => u.isGM).map(u => u.id),
         });
 
-        return this;
+        return hpDamage;
     }
 
     async undoDamage(appliedDamage) {

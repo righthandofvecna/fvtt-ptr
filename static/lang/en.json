@@ -160,7 +160,8 @@
     "EphemeralEffect": "Ephemeral Effect",
     "ActionPoint": "AP Consumption",
     "ApplyEffect": "Apply Effect",
-    "Reminder": "Reminder"
+    "Reminder": "Reminder",
+    "HealOnDamageDealt": "Heal on Damage Dealt"
   },
   "PTU": {
     "Skills": {
@@ -905,6 +906,14 @@
           "OncePerCombat": "Once per combat",
           "OncePerRest": "Once per rest"
         }
+      },
+      "HealOnDamageDealt": {
+        "SelectorsHint": "The roll event(s) that trigger the healing on damage dealt. The basic form is {id}-damage-dealt.",
+        "Percent": "Percent",
+        "PercentHint": "The percentage of damage dealt that will be converted to healing (1 = 100%, -1 = -100%).",
+        "RoundUp": "Round Up",
+        "RoundUpHint": "If enabled, the healing amount will be rounded up instead of down.",
+        "PredicateHint": "Roll options on the damage roll that are required for the healing on damage dealt to trigger."
       }
     },
     "Check": {

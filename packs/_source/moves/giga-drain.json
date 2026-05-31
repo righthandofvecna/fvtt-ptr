@@ -7,9 +7,19 @@
     "origin": "",
     "effect": "After the target takes damage, the user gains HP equal to half of the damage they dealt to the target.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "HealOnDamageDealt",
+        "predicate": [],
+        "selectors": "{id}-damage-dealt",
+        "percent": 0.5,
+        "roundUp": false
+      }
+    ],
     "enabled": true,
     "slug": "giga-drain",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -62,16 +72,14 @@
     },
     "type": "Grass",
     "category": "Special",
-    "damageBase": 8,
-    "ac": 2,
+    "damageBase": "8",
+    "ac": "2",
     "range": "Range 6",
     "contestType": "Smart - Good Show!",
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "mGvVlposKAYCa15m",
   "effects": [],
@@ -79,13 +87,20 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.29",
     "coreVersion": "13.351",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200825548,
+    "modifiedTime": 1780163779755,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

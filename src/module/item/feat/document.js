@@ -1,4 +1,3 @@
-import { sluggify } from '../../../util/misc.js';
 import { PTUItem } from '../index.js';
 class PTUFeat extends PTUItem {
     get category() {
@@ -22,11 +21,11 @@ class PTUFeat extends PTUItem {
 
         // If the item has a class check if we have a class item for it
         if(this.system.class) {
-            const classItem = this.actor?.items.find((item) => item.isClass && item.slug === sluggify(this.system.class));
+            const classItem = this.actor?.items.find((item) => item.isClass && item.name === this.system.class);
             if(classItem) {
                 this._source.flags.ptu ??= {};
                 this._source.flags.ptu.grantedBy = {id: classItem._id, onDelete: "detach"};
-                await classItem.update({"flags.ptu.itemGrants": {[this._source._id]: {id: this._source._id, onDelete: "detach"}}});
+                await classItem.update({"flags.ptu.itemGrants": {[this._source._id]: {id: this._source._id, onDelete: "detach"}}}, { render: false });
             }
         }
     }
