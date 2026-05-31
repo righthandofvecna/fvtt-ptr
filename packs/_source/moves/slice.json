@@ -2,7 +2,6 @@
   "name": "Slice",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "Limitation: Melee Weapons Only",
@@ -10,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "slice",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -27,7 +28,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Pass"
+      "Pass",
+      "weapon"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -62,32 +64,22 @@
     },
     "type": "Normal",
     "category": "Physical",
-    "damageBase": 10,
-    "ac": 2,
+    "damageBase": "10",
+    "ac": "2",
     "range": "Melee",
     "contestType": "--",
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "8CzBLFkR7UhxIyQL",
   "effects": [],
-  "sort": 10500000,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200823277,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
   }
 }

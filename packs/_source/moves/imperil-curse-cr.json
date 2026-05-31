@@ -1,29 +1,41 @@
 {
-  "name": "Bullseye",
+  "name": "Imperil Curse",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
-    "origin": "",
-    "effect": "Bullseye is a Critical Hit on 16+.\nLimitation: Ranged Weapons Only",
+    "origin": "Class Rework",
+    "effect": "Effect: If Imperil Curse hits, all legal targets become Vulnerable for 1 full round. On 17+, Imperil Curse Suppresses all legal targets.\nLimitation: None",
     "snippet": "",
     "rules": [
       {
-        "key": "FlatModifier",
+        "key": "ApplyEffect",
         "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "{item|id}-crit-range",
-        "value": 4
+        "selectors": "{item|id}-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI",
+        "range": "1",
+        "value": "",
+        "affects": "target"
+      },
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY",
+        "range": "17",
+        "value": "",
+        "affects": "target"
       }
     ],
     "enabled": true,
-    "slug": "bullseye",
+    "slug": "imperil-curse-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "imperil-curse",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:26.091Z",
+        "datetime": "2026-05-08T00:40:23.370Z",
         "version": {
-          "schema": 0.11,
+          "schema": null,
           "foundry": "13.351",
           "system": "4.4.3.16"
         }
@@ -31,11 +43,12 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "PTR Compendiums"
+      "value": "Homebrew"
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1",
+      "Target 2",
+      "arcane",
       "weapon"
     ],
     "sheerForce": false,
@@ -47,9 +60,9 @@
     "punkRock": false,
     "strongJaw": false,
     "frequency": {
-      "type": "eot",
-      "max": null,
-      "custom": "EOT",
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -70,39 +83,22 @@
       "bind": false
     },
     "type": "Normal",
-    "category": "Physical",
+    "category": "Special",
     "damageBase": "6",
-    "ac": "2",
+    "ac": "4",
     "range": "WR",
-    "contestType": "--",
+    "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "isStruggle": false
   },
-  "_id": "vR404l0bXvL04MoT",
   "effects": [],
-  "sort": 82800000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
       "automationStatus": "needs-automation",
-      "devNote": ""
+      "devNote": "",
+      "used": null
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200826150,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

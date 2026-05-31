@@ -1,34 +1,34 @@
 {
-  "name": "Titanic Slam",
+  "name": "Arcane Enforcement",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
-    "origin": "",
-    "effect": "On Even-Numbered Rolls, the target is Slowed for one full round.\nLimitation: Melee Weapons Only",
+    "origin": "Class Rework",
+    "effect": "Effect: The user gains +1 Defense and Special Defense Combat Stages. The user also gains +2 Evasion.\nLimitation: None",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "titanic-slam",
-    "contentSet": "",
-    "replacesSlug": "",
+    "slug": "arcane-enforcement-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "arcane-enforcement",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:26.092Z",
+        "datetime": "2026-05-08T00:40:24.080Z",
         "version": {
-          "schema": 0.11,
+          "schema": null,
           "foundry": "13.351",
           "system": "4.4.3.16"
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.2hOqQJ1n8z6UPYwa",
     "source": {
-      "value": "PTR Compendiums"
+      "value": "Homebrew"
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1",
+      "arcane",
       "weapon"
     ],
     "sheerForce": false,
@@ -63,23 +63,22 @@
       "bind": false
     },
     "type": "Normal",
-    "category": "Physical",
-    "damageBase": "11",
-    "ac": "3",
-    "range": "Melee",
-    "contestType": "--",
+    "category": "Status",
+    "damageBase": "2",
+    "ac": "--",
+    "range": "Self",
+    "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false,
-    "automation": []
+    "isStruggle": false
   },
   "effects": [],
   "flags": {
     "ptu": {
+      "showInTokenPanel": true,
       "automationStatus": "needs-automation",
       "devNote": "",
-      "used": null,
-      "showInTokenPanel": false
+      "used": null
     }
   }
 }

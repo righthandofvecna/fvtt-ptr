@@ -1,22 +1,22 @@
 {
-  "name": "Titanic Slam",
+  "name": "Entropic Wasting",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
-    "origin": "",
-    "effect": "On Even-Numbered Rolls, the target is Slowed for one full round.\nLimitation: Melee Weapons Only",
+    "origin": "Class Rework",
+    "effect": "Effect: Entropic Wasting's damage cannot bring a target lower than 1 HP. Merciful Smite cannot miss.\nLimitation: None",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "titanic-slam",
-    "contentSet": "",
-    "replacesSlug": "",
+    "slug": "entropic-wasting-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "entropic-wasting",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:26.092Z",
+        "datetime": "2026-05-08T00:40:25.937Z",
         "version": {
-          "schema": 0.11,
+          "schema": null,
           "foundry": "13.351",
           "system": "4.4.3.16"
         }
@@ -24,12 +24,12 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "PTR Compendiums"
+      "value": "Homebrew"
     },
     "stackSlugs": false,
     "keywords": [
       "Target 1",
-      "weapon"
+      "arcane"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -40,9 +40,9 @@
     "punkRock": false,
     "strongJaw": false,
     "frequency": {
-      "type": "scene",
-      "max": 2,
-      "custom": "Scene x2",
+      "type": "eot",
+      "max": null,
+      "custom": "EOT",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -63,23 +63,21 @@
       "bind": false
     },
     "type": "Normal",
-    "category": "Physical",
-    "damageBase": "11",
-    "ac": "3",
-    "range": "Melee",
-    "contestType": "--",
+    "category": "Special",
+    "damageBase": "3",
+    "ac": "--",
+    "range": "WR",
+    "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false,
-    "automation": []
+    "isStruggle": false
   },
   "effects": [],
   "flags": {
     "ptu": {
+      "showInTokenPanel": true,
       "automationStatus": "needs-automation",
-      "devNote": "",
-      "used": null,
-      "showInTokenPanel": false
+      "devNote": ""
     }
   }
 }

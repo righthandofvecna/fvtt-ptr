@@ -1,34 +1,34 @@
 {
-  "name": "Titanic Slam",
+  "name": "Arcane Empowerment",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
-    "origin": "",
-    "effect": "On Even-Numbered Rolls, the target is Slowed for one full round.\nLimitation: Melee Weapons Only",
+    "origin": "Class Rework",
+    "effect": "Effect: The user gains +1 Special Attack, and increase the user's Accuracy by +1.\nLimitation: None\n",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "titanic-slam",
-    "contentSet": "",
-    "replacesSlug": "",
+    "slug": "arcane-empowerment-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "arcane-empowerment",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:26.092Z",
+        "datetime": "2026-05-08T00:40:25.346Z",
         "version": {
-          "schema": 0.11,
+          "schema": null,
           "foundry": "13.351",
           "system": "4.4.3.16"
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.V7sP1gSelAHT3Ky9",
     "source": {
-      "value": "PTR Compendiums"
+      "value": "Homebrew"
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1",
+      "arcane",
       "weapon"
     ],
     "sheerForce": false,
@@ -40,9 +40,9 @@
     "punkRock": false,
     "strongJaw": false,
     "frequency": {
-      "type": "scene",
-      "max": 2,
-      "custom": "Scene x2",
+      "type": "eot",
+      "max": null,
+      "custom": "EOT",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -63,23 +63,21 @@
       "bind": false
     },
     "type": "Normal",
-    "category": "Physical",
-    "damageBase": "11",
-    "ac": "3",
-    "range": "Melee",
-    "contestType": "--",
+    "category": "Status",
+    "damageBase": "",
+    "ac": "",
+    "range": "Self",
+    "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false,
-    "automation": []
+    "isStruggle": false
   },
   "effects": [],
   "flags": {
     "ptu": {
+      "showInTokenPanel": true,
       "automationStatus": "needs-automation",
-      "devNote": "",
-      "used": null,
-      "showInTokenPanel": false
+      "devNote": ""
     }
   }
 }

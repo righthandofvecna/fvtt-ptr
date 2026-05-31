@@ -27,7 +27,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 2"
+      "Target 2",
+      "weapon"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -81,7 +82,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

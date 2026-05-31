@@ -1,22 +1,22 @@
 {
-  "name": "Titanic Slam",
+  "name": "Spellbolt",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
-    "origin": "",
-    "effect": "On Even-Numbered Rolls, the target is Slowed for one full round.\nLimitation: Melee Weapons Only",
+    "origin": "Class Rework",
+    "effect": "Effect: Spellbolt cannot miss.\nLimitation: None",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "titanic-slam",
-    "contentSet": "",
-    "replacesSlug": "",
+    "slug": "spellbolt-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "spellbolt",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:26.092Z",
+        "datetime": "2026-05-08T00:40:25.201Z",
         "version": {
-          "schema": 0.11,
+          "schema": null,
           "foundry": "13.351",
           "system": "4.4.3.16"
         }
@@ -24,11 +24,13 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "PTR Compendiums"
+      "value": "Homebrew"
     },
     "stackSlugs": false,
     "keywords": [
+      "Five Strike",
       "Target 1",
+      "arcane",
       "weapon"
     ],
     "sheerForce": false,
@@ -63,23 +65,22 @@
       "bind": false
     },
     "type": "Normal",
-    "category": "Physical",
-    "damageBase": "11",
-    "ac": "3",
-    "range": "Melee",
-    "contestType": "--",
+    "category": "Special",
+    "damageBase": "2",
+    "ac": "--",
+    "range": "WR",
+    "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false,
-    "automation": []
+    "isStruggle": false
   },
   "effects": [],
   "flags": {
     "ptu": {
+      "showInTokenPanel": true,
       "automationStatus": "needs-automation",
       "devNote": "",
-      "used": null,
-      "showInTokenPanel": false
+      "used": null
     }
   }
 }

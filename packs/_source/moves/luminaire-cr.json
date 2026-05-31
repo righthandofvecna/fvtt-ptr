@@ -1,22 +1,32 @@
 {
-  "name": "Titanic Slam",
+  "name": "Luminaire",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
-    "origin": "",
-    "effect": "On Even-Numbered Rolls, the target is Slowed for one full round.\nLimitation: Melee Weapons Only",
+    "origin": "Class Rework",
+    "effect": "Effect: Luminaire Blinds all legal targets for 1 full round on 17+.\nLimitation: None",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.g2QutQJutABxFIw6",
+        "range": "17",
+        "value": "",
+        "affects": "target"
+      }
+    ],
     "enabled": true,
-    "slug": "titanic-slam",
-    "contentSet": "",
-    "replacesSlug": "",
+    "slug": "luminaire-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "luminaire",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:26.092Z",
+        "datetime": "2026-05-08T00:40:23.369Z",
         "version": {
-          "schema": 0.11,
+          "schema": null,
           "foundry": "13.351",
           "system": "4.4.3.16"
         }
@@ -24,11 +34,11 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "PTR Compendiums"
+      "value": "Homebrew"
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1",
+      "arcane",
       "weapon"
     ],
     "sheerForce": false,
@@ -63,23 +73,22 @@
       "bind": false
     },
     "type": "Normal",
-    "category": "Physical",
-    "damageBase": "11",
-    "ac": "3",
-    "range": "Melee",
-    "contestType": "--",
+    "category": "Special",
+    "damageBase": "8",
+    "ac": "2",
+    "range": "Cone 2",
+    "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false,
-    "automation": []
+    "isStruggle": false
   },
   "effects": [],
   "flags": {
     "ptu": {
+      "showInTokenPanel": true,
       "automationStatus": "needs-automation",
       "devNote": "",
-      "used": null,
-      "showInTokenPanel": false
+      "used": null
     }
   }
 }
