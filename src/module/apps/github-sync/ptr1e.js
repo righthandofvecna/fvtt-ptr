@@ -1,3 +1,4 @@
+import { GithubSyncManager } from "./manager.js";
 
 /**
  * Get all the referenced documents from the given data.
@@ -40,6 +41,10 @@ export function transform(data) {
   if (data?._stats?.compendiumSource) delete data._stats.compendiumSource;
   if (data?.system?.exportSource) data._stats.exportSource = null;
   if (data?.system?.lastModifiedBy) data._stats.lastModifiedBy = "ptubuilder000000";
+  // set slug if null
+  if (!data?.system?.slug) {
+    data.system.slug = GithubSyncManager.config.slugify(data.name, { separator: "-", lowercase: true, strict: true });
+  }
   return data;
 }
 

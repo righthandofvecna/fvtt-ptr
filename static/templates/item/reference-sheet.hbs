@@ -44,6 +44,13 @@
                 <label for="system.origin">{{localize "ITEM.Origin"}}</label>
                 <input class="ml-1 mr-1" name="system.origin" type="text" value="{{item.system.origin}}" placeholder="{{localize "ITEM.Origin"}}"/>
             </div>
+            <div class="item-row slug">
+                <label for="system.slug">Slug</label>
+                <input class="ml-1 mr-1" name="system.slug" type="text" value="{{item.system.slug}}"/>
+                <div class="item-controls">
+                    <a class="item-control sluggify" data-action="regenerate-slug" title="(Re)generate Slug"><i class="fas fa-sync-alt"></i></a>
+                </div>
+            </div>
             <div class="item-row">
                 <label for="system.referenceEffect">{{localize "ITEM.ReferenceEffect"}}</label>
                 <span class="ml-1 mr-1 effect">{{#if referenceEffect}}{{{referenceEffect}}}{{else}}None{{/if}}</span>
