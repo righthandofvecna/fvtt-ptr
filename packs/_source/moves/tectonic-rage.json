@@ -1,0 +1,84 @@
+{
+  "name": "Tectonic Rage",
+  "type": "move",
+  "img": "/systems/ptu/static/images/item_icons/groundium%20z.webp",
+  "system": {
+    "origin": "",
+    "effect": "This may be used Physical or Special, user's choice. As a Shift Action, the user may Move to any open square in this Move’s area of effect without provoking any Attacks of Opportunity.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "tectonic-rage",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:23.654Z",
+        "version": {
+          "schema": 0.112,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Smite",
+      "Z Moves"
+    ],
+    "sheerForce": false,
+    "toughClaws": false,
+    "technician": false,
+    "reckless": false,
+    "ironFist": false,
+    "megaLauncher": false,
+    "punkRock": false,
+    "strongJaw": false,
+    "frequency": {
+      "type": "daily",
+      "max": 1,
+      "custom": "Daily",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "type": "Ground",
+    "category": "Physical",
+    "damageBase": "18",
+    "ac": "2",
+    "range": "Line 6",
+    "contestType": "",
+    "stab": false,
+    "damageBonus": 0,
+    "isStruggle": false
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
+    }
+  }
+}

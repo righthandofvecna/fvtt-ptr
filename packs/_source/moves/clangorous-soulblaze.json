@@ -1,0 +1,85 @@
+{
+  "name": "Clangorous Soulblaze",
+  "type": "move",
+  "img": "https://assets.forge-vtt.com/6464e7dd7cb6da75187d728c/worlds/Pokemon%20The%20Chosen/Kommonium_Z_artwork.png",
+  "system": {
+    "origin": "Z Moves",
+    "effect": "The user has each of its stats raised by +1 Combat Stage. Requires Clangorous Soul.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "clangorous-soulblaze",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:23.517Z",
+        "version": {
+          "schema": 0.112,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Sonic",
+      "Smite",
+      "Z Moves"
+    ],
+    "sheerForce": false,
+    "toughClaws": false,
+    "technician": false,
+    "reckless": false,
+    "ironFist": false,
+    "megaLauncher": false,
+    "punkRock": false,
+    "strongJaw": false,
+    "frequency": {
+      "type": "daily",
+      "max": 1,
+      "custom": "Daily",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "type": "Dragon",
+    "category": "Special",
+    "damageBase": "16",
+    "ac": "2",
+    "range": "Cone 3",
+    "contestType": "",
+    "stab": false,
+    "damageBonus": 0,
+    "isStruggle": false
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
+    }
+  }
+}
