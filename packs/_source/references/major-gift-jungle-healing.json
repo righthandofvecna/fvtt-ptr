@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Forest Ambush\nStatic\nEffect: You gain the Move Jungle Healing.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.w2Zc8SGT0vu0V6hr]\nStatic\nEffect: You gain the Move @UUID[Compendium.ptu.moves.Item.oSAdD4Q16nTId44h].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "QlJ131jEIqJKGPUK",
-  "flags": {}
+  "_id": "QlJ131jEIqJKGPUK"
 }
