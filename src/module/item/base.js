@@ -2,7 +2,7 @@ import { RuleElements } from "../rules/index.js";
 import { processGrantDeletions } from "../rules/rule-element/grant-item/helper.js";
 import { extractReminders } from "../rules/helpers.js";
 import { sluggify } from "../../util/misc.js"
-import { GrantItemRuleElement } from "../rules/rule-element/grant-item/rule-element.js";
+import { sendUsageMessage } from "../message/usage.js";
 
 class PTUItem extends Item {
 
@@ -455,7 +455,9 @@ class PTUItem extends Item {
     }
 
     async use(options = {}) {
-
+        if (!this.actor) return;
+        await this.consume();
+        await sendUsageMessage({ item: this, actor: this.actor });
     }
 
     async consume() {
@@ -470,7 +472,6 @@ class PTUItem extends Item {
             updates["flags.ptu.used"] = (this.flags.ptu.used ?? 0) + 1;
         }
         if (Object.keys(updates).length > 0) await this.update(updates);
-        console.log(`PTU | Consumed item ${this.name}`, updates, freq);
     }
 
     async sendToChat() {

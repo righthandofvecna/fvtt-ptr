@@ -1,3 +1,5 @@
+import { applyEffectsFromUsage } from "../../module/message/usage.js";
+
 export const RenderChatMessage = {
     listen() {
         Hooks.on("renderChatMessageHTML", async (message, html) => {
@@ -17,6 +19,14 @@ export const RenderChatMessage = {
                 await message.renderDamageHTML($html);
             } else if (message instanceof CONFIG.PTU.ChatMessage.documentClasses.attack) {
                 await message.renderAttackHTML($html);
+            }
+
+            // Wire up the "Apply Effects" button on usage messages (no-roll items/moves).
+            if (message.flags?.ptu?.context?.type === "usage") {
+                $html.find(".button.apply-effects[data-action='apply-effects']").on("click", async event => {
+                    event.preventDefault();
+                    await applyEffectsFromUsage({ message });
+                });
             }
 
             // Append reminder UI for reminder messages

@@ -356,8 +356,7 @@ export class TokenPanel extends Application {
                 if (item.roll) {
                     item.roll({event}).then(() => item?.consume?.());
                 } else {
-                    item?.consume?.();
-                    item.sendToChat?.();
+                    item?.use?.();
                 }
             });
             action.addEventListener("dblclick", (event) => {
