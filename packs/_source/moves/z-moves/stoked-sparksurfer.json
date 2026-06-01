@@ -37,7 +37,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Z Move"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
