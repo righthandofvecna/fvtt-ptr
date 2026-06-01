@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Stoic Stature\nStatic\nEffect: You learn the Move Hammer Arm.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.c0YI1VbLWES68BWg]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.uX0GA4opzRCtDQVY].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "Us0UCNRYPIM5D8TC",
-  "flags": {}
+  "_id": "Us0UCNRYPIM5D8TC"
 }
