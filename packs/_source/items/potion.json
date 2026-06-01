@@ -4,9 +4,21 @@
     "origin": "",
     "effect": "Heals 20 Hit Points",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.5hM0PSTr6t7RP59y",
+        "range": "",
+        "value": "",
+        "affects": "target"
+      }
+    ],
     "enabled": true,
     "slug": "potion",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -39,7 +51,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -57,9 +69,7 @@
     "container": false,
     "automation": [],
     "name": "Potion",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": ""
+    "useCount": 0
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/potion.webp",
@@ -67,13 +77,19 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.29",
     "coreVersion": "13.351",
     "createdTime": 1683368828608,
-    "modifiedTime": 1778200840954,
+    "modifiedTime": 1780340384198,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
