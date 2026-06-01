@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift - Soundproof Static Effect: You learn the Move Relic Song",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.X9006ewZpK1hnSCe]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.aNbWAqeHuGh8H7fN].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

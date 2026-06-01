@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Perpetual Spite\nStatic\nEffect: You gain the Prime Fury Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.2QX54uMmomLWoUev]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.aOBGGKUF5d2oGykz] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "_id": "OHc9jr5HRGDIyhSJ",
-  "effects": [],
-  "flags": {}
+  "effects": []
 }

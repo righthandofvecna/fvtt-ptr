@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Hands of the Creator Static Effect: You pay 20% less when crafting items.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.9O7RgqcH4iPJcMss]\nStatic\nEffect: You pay 20% less when crafting items.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
