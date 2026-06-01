@@ -1,5 +1,6 @@
 import { RuleElementPTU } from "./rule-element/base.js";
 import { AELikeRuleElement } from "./rule-element/ae-like.js";
+import { InstantChangeRuleElement } from "./rule-element/instant-change.js";
 import { GrantItemRuleElement } from "./rule-element/grant-item/rule-element.js";
 import { RollOptionRuleElement } from "./rule-element/roll-option.js";
 import { ChoiceSetRuleElement } from "./rule-element/choice-set/rule-element.js";
@@ -36,6 +37,7 @@ class RuleElements {
         "ApplyEffect": ApplyEffectRuleElement,
         "Reminder": ReminderRuleElement,
         "HealOnDamageDealt": HealOnDamageDealtRuleElement,
+        "InstantChange": InstantChangeRuleElement,
     }
 
     static custom = {}

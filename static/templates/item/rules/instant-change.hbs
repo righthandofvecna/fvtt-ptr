@@ -1,0 +1,100 @@
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.InstantChange.Trigger"}}</label>
+    <div class="attached-input">
+        <select name="system.rules.{{index}}.trigger">
+            {{selectOptions ruleTriggers selected=rule.trigger localize=true}}
+        </select>
+    </div>
+</div>
+
+{{#if (eq rule.trigger "onRoll")}}
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.InstantChange.Selectors"}}</label>
+    <div class="attached-input">
+        <input type="text" name="system.rules.{{index}}.selectors"
+            value="{{selectorsAsString}}"
+            placeholder="e.g. move-attack, skill-check"/>
+    </div>
+</div>
+{{/if}}
+
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.General.Modes.Label"}}</label>
+    <div class="attached-input">
+        <select name="system.rules.{{index}}.mode">
+            {{selectOptions ruleModes selected=rule.mode localize=true}}
+        </select>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.General.Path"}}</label>
+    <div class="attached-input">
+        <input type="text" name="system.rules.{{index}}.path" value="{{rule.path}}"
+            placeholder="e.g. system.health.value"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.General.Value"}}</label>
+    <div class="spaced-fields details-container-flex-row">
+        {{#if (eq value.mode "primitive")}}
+            <div class="attached-input">
+                <button type="button" class="attachment" data-action="toggle-brackets">
+                    {{localize "PTU.RuleEditor.General.Primitive"}}
+                </button>
+                <input type="text" name="system.rules.{{index}}.value" value="{{rule.value}}"/>
+            </div>
+        {{else if (eq value.mode "brackets")}}
+            <div class="attached-input">
+                <button type="button" class="attachment" data-action="toggle-brackets">
+                    {{localize "PTU.RuleEditor.General.Brackets"}}
+                </button>
+                <input type="text" name="system.rules.{{index}}.value.field" value="{{rule.value.field}}" placeholder="Actor Level (Default)"/>
+            </div>
+        {{/if}}
+
+        {{#if (eq value.mode "brackets")}}
+            <a data-action="bracket-add"><i class="fas fa-fw fa-plus"></i></a>
+        {{/if}}
+    </div>
+</div>
+
+{{#if (eq value.mode "brackets")}}
+    <div class="brackets">
+        {{#each rule.value.brackets as |bracket idx|}}
+            <div class="bracket details-container-flex-row spaced-fields">
+                <label>{{localize "PTU.RuleEditor.General.Range"}}</label>
+                <div class="range">
+                    <input type="number" name="system.rules.{{@root.index}}.value.brackets.{{idx}}.start" value="{{bracket.start}}">
+                    -
+                    <input type="number" name="system.rules.{{@root.index}}.value.brackets.{{idx}}.end" value="{{bracket.end}}">
+                </div>
+                <label>{{localize "PTU.RuleEditor.General.Value"}}</label>
+                <input type="text" name="system.rules.{{@root.index}}.value.brackets.{{idx}}.value" value="{{bracket.value}}"/>
+                <a data-action="bracket-delete" data-idx="{{idx}}"><i class="fas fa-fw fa-trash"></i></a>
+            </div>
+        {{/each}}
+    </div>
+{{/if}}
+
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.General.Priority"}}</label>
+    <div class="attached-input">
+        <input type="number" name="system.rules.{{index}}.priority" value="{{rule.priority}}"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="short">{{localize "PTU.RuleEditor.General.Predicate"}}</label>
+    <div class="attached-input">
+        <button type="button" class="attachment" data-action="toggle-predicate">
+            {{#if predicationIsMultiple}}Multiple{{else}}Complex{{/if}}
+        </button>
+        {{#if predicationIsMultiple}}
+            <input type="text" class="ptu-tagify predicate-list" name="system.rules.{{index}}.predicate" value="{{json rule.predicate}}" data-dtype="JSON"/>
+        {{else}}
+            <input type="text" name="system.rules.{{index}}.predicate" value="{{json rule.predicate}}" />
+        {{/if}}
+    </div>
+</div>

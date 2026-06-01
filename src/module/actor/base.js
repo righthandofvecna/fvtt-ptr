@@ -1043,6 +1043,15 @@ class PTUActor extends Actor {
                 _id: i.id,
                 "flags.ptu.-=eot": null
             })));
+
+            // Fire onCombatEnd rule element hooks
+            const actorUpdates = {};
+            for (const rule of this.rules) {
+                await rule.onCombatEnd?.(actorUpdates);
+            }
+            if (Object.keys(actorUpdates).length) {
+                await this.update(actorUpdates);
+            }
         }
 
         await this.reset();
