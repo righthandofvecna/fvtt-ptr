@@ -66,9 +66,9 @@
         }
       },
       {
-        "level": 1,
-        "uuid": "Compendium.ptu.species.Item.hhlGePZNyi02KotY",
-        "slug": "delta-electivire",
+        "level": 30,
+        "uuid": "Compendium.ptu.species.Item.XAEN00MRjgM4UMgW",
+        "slug": "delta-electabuzz",
         "other": {
           "restrictions": [
             ""
@@ -76,9 +76,9 @@
         }
       },
       {
-        "level": 30,
-        "uuid": "Compendium.ptu.species.Item.XAEN00MRjgM4UMgW",
-        "slug": "delta-electabuzz",
+        "level": 40,
+        "uuid": "Compendium.ptu.species.Item.hhlGePZNyi02KotY",
+        "slug": "delta-electivire",
         "other": {
           "restrictions": [
             ""
