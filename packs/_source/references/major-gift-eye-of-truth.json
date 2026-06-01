@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Watchful Sleep 1 AP - Standard Action Target: Trainer of Pokémon Effect: You can determine whether or not a professed desire by the Target is being sought for altruistic reasons for not.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.cwNWwGm254zSgX41]\n1 AP - Standard Action\nTarget: Trainer or Pokémon\nEffect: You can determine whether or not a professed desire by the Target is being sought for altruistic reasons for not.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

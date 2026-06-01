@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift - Eye of Truth Static Effect: You learn the Move Doom Desire.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.vTluGGX2UcIVjpV8]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.m80zf52EmYp0WEOC].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

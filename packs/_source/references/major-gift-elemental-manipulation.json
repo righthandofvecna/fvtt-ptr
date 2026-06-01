@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Elemental Soul Effect: You gain a Capability based on which Legendary Bird or Beast granted you this Feature. Articuno grants Freezer, Moltres and Entei grant Firestarter, Zapdos and Raikou grant Zapper, and Suicune grants Fountain.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.8y5qkjIICUuwYaO8]\nEffect: You gain a Capability based on which Legendary Bird or Beast granted you this Feature. Articuno grants @UUID[Compendium.ptu.capabilities.Item.O0LMo4PRnTk008ds], Moltres and Entei grant @UUID[Compendium.ptu.capabilities.Item.nAIkONF3gtaYfEyX], Zapdos and Raikou grant @UUID[Compendium.ptu.capabilities.Item.v3QyNdZYDVwlG2tY], and Suicune grants @UUID[Compendium.ptu.capabilities.Item.ut911FJQTWb21u98].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
