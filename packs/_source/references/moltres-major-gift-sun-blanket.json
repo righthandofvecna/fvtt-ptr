@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Elemental Soul Static Effect: You gain the Sun Blanket Ability. ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.8y5qkjIICUuwYaO8]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.lGAUnDeneM1g7BeD] Ability. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
