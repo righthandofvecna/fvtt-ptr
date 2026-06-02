@@ -2,7 +2,6 @@
   "name": "Spirit Lance",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "Spirit Lance deals +3 damage to all targets for each target beyond the first that it successfully hits.",
@@ -10,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "spirit-lance",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -70,9 +71,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "qC7i5mXNw9MpjcQe",
   "effects": [],
@@ -87,15 +86,5 @@
       "used": null,
       "showInTokenPanel": false
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200825703,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – World Serpent’s Embrace Daily x3 – Free Action Trigger: You become Trapped, Slowed, Tripped or  Grappled. Effect: You evade the Status Effect or Combat Maneuver. ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.SE49PSSWiQvnb9Mi]\nDaily x3 – Free Action\nTrigger: You become @UUID[Compendium.ptu.effects.Item.uqo5H1DwUuAiaYRA], @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt], @UUID[Compendium.ptu.effects.Item.4lqKV4CxikZxxNWJ] or Grappled.\nEffect: You evade the Status Effect or Combat Maneuver. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

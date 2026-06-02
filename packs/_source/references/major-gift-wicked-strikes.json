@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Follow My Lead\nStatic\nEffect: Choose either Wicked Blow or Surging Strikes. You gain the chosen Move.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.HaIh2QWzZpn5xmv4]\nStatic\nEffect: Choose either @UUID[Compendium.ptu.moves.Item.jsNy2tCM6ZSqjH6D] or @UUID[Compendium.ptu.moves.Item.kevVZHxeMlUqh462]. You gain the chosen Move.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "swOx3aZ51tqNG1MP",
-  "flags": {}
+  "_id": "swOx3aZ51tqNG1MP"
 }

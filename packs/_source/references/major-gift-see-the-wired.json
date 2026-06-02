@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift - Intuitive Sabotage Daily - Standard Action Target: Self Effect: For the next 5 minutes you can see networks as a  visual overlay when you look at people communicating  electronically. You view this in the form of lines of  light arcing from devices to the other devices they are  communicating with.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.7KGtHlnDiDivamG4]\nDaily - Standard Action\nTarget: Self\nEffect: For the next 5 minutes you can see networks as a visual overlay when you look at people communicating electronically. You view this in the form of lines of light arcing from devices to the other devices they are  communicating with.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

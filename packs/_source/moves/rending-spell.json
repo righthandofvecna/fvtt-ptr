@@ -2,7 +2,6 @@
   "name": "Rending Spell",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "The target loses a Tick of Hit Points on 16+.",
@@ -10,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "rending-spell",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -71,31 +72,15 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "Jr3ejdYJ7HorLE3M",
   "effects": [],
-  "sort": 26000000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
       "automationStatus": "needs-automation",
       "devNote": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200823854,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

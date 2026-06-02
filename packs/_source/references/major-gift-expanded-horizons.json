@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift – Twin Souls Static Effect: You gain either the Telepath or Telekinetic  Capability. If you possess both of these from their  respected Trainer Classes, you instead gain the  Godslayer Feature.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.upHmZLokRIl9ndw4]\nStatic\nEffect: You gain either the @UUID[Compendium.ptu.capabilities.Item.Qy7Cft4o4FAbHQ8G] or @UUID[Compendium.ptu.capabilities.Item.bYwetISXI1HZMl3M] Capability. If you possess both of these from their respective Trainer Classes, you instead gain the @UUID[Compendium.ptu.feats.Item.gUEyA0axtWg8PVZF] Feature.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

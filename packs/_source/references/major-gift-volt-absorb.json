@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Inscrutable Knowledge\nStatic\nEffect: You gain the Volt Absorb Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.iW26AotDnHNvTJnn]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.7Q8Gplr8sh2uNdxg] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "9zWreW70iERmaMDr",
-  "flags": {}
+  "_id": "9zWreW70iERmaMDr"
 }

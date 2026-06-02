@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Watcher in the Shadows\nStatic\nEffect: You gain the Darkvision and Dead Silent capabilities.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.HGQMeLYN5UwEkbFi]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.capabilities.Item.zzJWpOj40dLelBm5] and @UUID[Compendium.ptu.capabilities.Item.27U7ZioOgyZFzxDx] capabilities.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "E6MePjNV0cuw0QRD",
-  "flags": {}
+  "_id": "E6MePjNV0cuw0QRD"
 }

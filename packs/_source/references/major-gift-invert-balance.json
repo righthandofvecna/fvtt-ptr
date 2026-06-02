@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: One Tao Trio Major Gift Daily - Standard Action Target: Area Effect: The area becomes Inverted for the next 5  rounds. While Inverted, all Pokémon and Trainers have  their weaknesses and resistances exchanged. Double  resistance and steps of resistance or immunity beyond  that become double weaknesses, normal resistances  become normal weaknesses, normal weaknesses  become normal resistances, and double weaknesses  become double resistance.",
+    "effect": "Prerequisites: One Tao Trio Major Gift \nDaily - Standard Action \nTarget: Area \nEffect: The area becomes Inverted for the next 5 rounds. While Inverted, all Pokémon and Trainers have their weaknesses and resistances exchanged. Double resistance and steps of resistance or immunity beyond that become double weaknesses, normal resistances become normal weaknesses, normal weaknesses become normal resistances, and double weaknesses  become double resistance.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

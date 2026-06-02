@@ -2,7 +2,6 @@
   "name": "Triple Threat",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "Limitation: Large Melee Weapons and Long-Range Weapons Only",
@@ -10,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "triple-threat",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -70,16 +71,10 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "ZYZi6WH7wj2J7A8v",
   "effects": [],
-  "sort": 51700000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
@@ -87,15 +82,5 @@
       "devNote": "",
       "used": null
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200824834,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

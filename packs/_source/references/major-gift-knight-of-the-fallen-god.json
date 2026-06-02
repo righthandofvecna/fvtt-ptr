@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift - Detect Heretic Static Effect: You gain the Giftsapper Feature regardless of  prerequisites, and you are not bound by its requirements  with respect to Gifts. Giftsapper when gained this way  has no effect on Gifts granted by MissingNo.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.qUYQCIe07uydVwXO]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.feats.Item.7ZVdzilZhd3CYqwe] Feature regardless of prerequisites, and you are not bound by its requirements with respect to Gifts. Giftsapper when gained this way has no effect on Gifts granted by MissingNo.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

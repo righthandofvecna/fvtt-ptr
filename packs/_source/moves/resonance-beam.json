@@ -2,7 +2,6 @@
   "name": "Resonance Beam",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "All targets have their Special Defense lowered by 1 Combat Stage on 20+. This Effect Range is extended by +1 for each foe targeted by this Move.",
@@ -10,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "resonance-beam",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -70,9 +71,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "cK0zGcRAhb26xJor",
   "effects": [],
@@ -86,15 +85,5 @@
       "devNote": "",
       "showInTokenPanel": false
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200824971,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

@@ -2,7 +2,6 @@
   "name": "Riposte",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "Trigger - Your Target misses you with a melee Attack.\nLimitations: Melee or Short-Ranged Weapons Only",
@@ -10,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "riposte",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -72,16 +73,10 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "Cq0mrPaCiZXbs9Jk",
   "effects": [],
-  "sort": 16600000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
@@ -89,15 +84,5 @@
       "devNote": "",
       "used": null
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200823571,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

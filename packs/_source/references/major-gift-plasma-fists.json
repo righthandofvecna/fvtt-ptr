@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Volt Absorb\nStatic\nEffect: You learn the Move Plasma Fists.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.9zWreW70iERmaMDr]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.l3fZ1TXCa2n7U0Fl].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "5p6osoGqVKqP6pHF",
-  "flags": {}
+  "_id": "5p6osoGqVKqP6pHF"
 }

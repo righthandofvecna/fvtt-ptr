@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Soul of the Clouds\nStatic \nEffect: You gain the Levitate Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.vP0jTt5z4pdNi1M7]\nStatic \nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.WsNZitOqUrhu9k78] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -45,6 +45,5 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  },
-  "flags": {}
+  }
 }

@@ -2,7 +2,6 @@
   "name": "Take Aim",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "Raise the user's Accuracy by 1. If the user performs an Weapon Move on their next turn that deals damage, add its Damage Dice Roll an extra time to the damage.",
@@ -10,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "take-aim",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -69,31 +70,15 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "WfesNtj171NVSa7T",
   "effects": [],
-  "sort": 47500000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
       "automationStatus": "needs-automation",
       "devNote": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200824685,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }
