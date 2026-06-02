@@ -38,6 +38,9 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Initial Foundry v14 compatibility
+- Add button for applying effects from non-roll or attack-roll-only items/moves
+- Added Instant Change Rule Element (automated Potions with it)
 - [Added Heal On Damage Dealt Rule](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/934)
 - [Make Features Nest Without Requiring Update](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/960)
 - [Make Dragging Pokemon into Folders Work To Update Flags](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/954)
