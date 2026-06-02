@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Sailor’s Guardian\nStatic\nEffect: You gain the Gilled Capability, and may use your Overland Speed in place of your Swim Speed.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.MSWox3TQ0TVUJNFI]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.capabilities.Item.Sr5UjqsO8FydTuNw] Capability, and may use your Overland Speed in place of your Swim Speed.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "vzp5X3xnxPId0Uyz",
-  "flags": {}
+  "_id": "vzp5X3xnxPId0Uyz"
 }

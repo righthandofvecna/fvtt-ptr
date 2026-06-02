@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Regal Aide\nStatic\nEffect: You gain the Magic Guard Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.hXZp3pnJ68xg3AwF]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.3zEQl6AsWskjTjQy] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "wMvGMwNYb6dHwOC0",
-  "flags": {}
+  "_id": "wMvGMwNYb6dHwOC0"
 }

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Therian Forme\nDaily – Free Action\nEffect: Until the end of your next turn, fierce winds whip around you, in a burst 3, that remains centered on you when you move. The burst is Slow terrain for any creature using Sky or Levitate speeds. At the start of your turn, you may push any creature in the burst not touching the ground 1m in any direction. If you are in your Therian Form, they also take a tick of damage. You may maintain this burst",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.jn6nfKxXCLvrDbrW]\nDaily – Free Action\nEffect: Until the end of your next turn, fierce winds whip around you, in a burst 3, that remains centered on you when you move. The burst is Slow terrain for any creature using Sky or Levitate speeds. At the start of your turn, you may push any creature in the burst not touching the ground 1m in any direction. If you are in your Therian Form, they also take a tick of damage. You may maintain this burst until the end of your next turn as a Swift Action.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "_id": "GuPxhlZVHjfjKVeO",
-  "effects": [],
-  "flags": {}
+  "effects": []
 }

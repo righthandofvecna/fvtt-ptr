@@ -66,9 +66,9 @@
         }
       },
       {
-        "level": 1,
-        "uuid": "Compendium.ptu.species.Item.bUAZl6Ox02dqe6Ab",
-        "slug": "delta-magmortar",
+        "level": 30,
+        "uuid": "Compendium.ptu.species.Item.P5gN8Gwm1zey99k1",
+        "slug": "delta-magmar",
         "other": {
           "restrictions": [
             ""
@@ -76,9 +76,9 @@
         }
       },
       {
-        "level": 30,
-        "uuid": "Compendium.ptu.species.Item.P5gN8Gwm1zey99k1",
-        "slug": "delta-magmar",
+        "level": 40,
+        "uuid": "Compendium.ptu.species.Item.bUAZl6Ox02dqe6Ab",
+        "slug": "delta-magmortar",
         "other": {
           "restrictions": [
             ""

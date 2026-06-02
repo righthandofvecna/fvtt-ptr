@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Dazzling the Stage\nScene x2 – Free Action\nTrigger: You spend AP or use Relic Song\nEffect: An Ally within 10 meters gains 1 temporary AP and a +2 bonus to accuracy. Both of these last until the end of their next turn.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.tpImQdy5uwR1awPk]\nScene x2 – Free Action\nTrigger: You spend AP or use @UUID[Compendium.ptu.moves.Item.aNbWAqeHuGh8H7fN]\nEffect: An Ally within 10 meters gains 1 temporary AP and a +2 bonus to accuracy. Both of these last until the end of their next turn.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "_id": "5yqleUOM0PXH4o17",
-  "effects": [],
-  "flags": {}
+  "effects": []
 }

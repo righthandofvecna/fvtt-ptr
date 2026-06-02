@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Spirit of Justice Static Effect: You learn the Move Sacred Sword",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.gUxW2eaFQ409lkqB]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.Bj83ViTwIr0TcaX6].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

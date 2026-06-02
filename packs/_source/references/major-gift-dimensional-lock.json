@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Portal Sight\n1 AP – Standard Action, Interrupt\nTrigger: A creature within 10 meters uses the Teleporter Capability, Teleport, or Ally Switch\nEffect: The Move or Shift fails and the Action is wasted, the creature is then Suppressed. Until the Suppression wears off, the target is Stuck, Trapped, and Vulnerable.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.KFYYOQiWNwTIPXUw]\n1 AP – Standard Action, Interrupt\nTrigger: A creature within 10 meters uses the @UUID[Compendium.ptu.capabilities.Item.ylhIk5i0Xtp65asH] Capability, @UUID[Compendium.ptu.moves.Item.RJi8fqc4Kx3yZnVJ], or @UUID[Compendium.ptu.moves.Item.BFyiKFMmD0rwvIl7]\nEffect: The Move or Shift fails and the Action is wasted, the creature is then @UUID[Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY]. Until the Suppression wears off, the target is @UUID[Compendium.ptu.effects.Item.OzGm9ZwyLd8yEhCK], @UUID[Compendium.ptu.effects.Item.uqo5H1DwUuAiaYRA], and @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "6f14DD3YEuxy9MOc",
-  "flags": {}
+  "_id": "6f14DD3YEuxy9MOc"
 }

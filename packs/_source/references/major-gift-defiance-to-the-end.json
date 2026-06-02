@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Perpetual Spite\nDaily - Free Action\nTrigger: You Faint\nEffect: You instead do not Faint, and regain hit points equal to 25% of your Maximum Hit Points. You are also immediately able to make an At-Will attack as a Free Action Reaction.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.2QX54uMmomLWoUev]\nDaily - Free Action\nTrigger: You Faint\nEffect: You instead do not Faint, and regain hit points equal to 25% of your Maximum Hit Points. You are also immediately able to make an At-Will attack as a Free Action Reaction.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "_id": "gwoBpxXY3F8cDxPL",
-  "effects": [],
-  "flags": {}
+  "effects": []
 }
