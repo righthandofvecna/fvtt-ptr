@@ -36,7 +36,10 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Weapon",
+      "Arcane"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
@@ -89,7 +92,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

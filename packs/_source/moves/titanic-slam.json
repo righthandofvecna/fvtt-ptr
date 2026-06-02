@@ -2,7 +2,6 @@
   "name": "Titanic Slam",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "On Even-Numbered Rolls, the target is Slowed for one full round.\nLimitation: Melee Weapons Only",
@@ -10,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "titanic-slam",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -27,7 +28,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1"
+      "Target 1",
+      "Weapon"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -62,32 +64,23 @@
     },
     "type": "Normal",
     "category": "Physical",
-    "damageBase": 11,
-    "ac": 3,
+    "damageBase": "11",
+    "ac": "3",
     "range": "Melee",
     "contestType": "--",
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "w3Z8v04DyDaJQvrZ",
   "effects": [],
-  "sort": 83300000,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200826150,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
   }
 }

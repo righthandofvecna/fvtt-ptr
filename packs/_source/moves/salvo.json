@@ -2,7 +2,6 @@
   "name": "Salvo",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "Limitation: Ranged Weapons Only",
@@ -10,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "salvo",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -26,7 +27,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Weapon"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
@@ -60,32 +63,22 @@
     },
     "type": "Normal",
     "category": "Physical",
-    "damageBase": 6,
-    "ac": 2,
+    "damageBase": "6",
+    "ac": "2",
     "range": "WR, Blast 2",
     "contestType": "--",
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "LJY3bneMpXtKoDAj",
   "effects": [],
-  "sort": 27900000,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200824000,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
   }
 }

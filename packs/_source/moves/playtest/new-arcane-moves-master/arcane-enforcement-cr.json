@@ -26,7 +26,10 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Arcane",
+      "Weapon"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
