@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Effect: You can sense the presence of Pokémon of a given Type within 10 meters of you based on which Legendary Bird or Beast granted you this Edge. Articuno grants Ice, Moltres and Entei grant Fire, Zapdos and Raikou grant Electric, and Suicune grants Water.",
+    "effect": "Prerequisites: GM Permission\nEffect: You can sense the presence of Pokémon of a given Type within 10 meters of you based on which Legendary Bird or Beast granted you this Edge. Articuno grants Ice, Moltres and Entei grant Fire, Zapdos and Raikou grant Electric, and Suicune grants Water.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

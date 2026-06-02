@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission\nEffect: You are immune to the Burn status.",
+    "effect": "Prerequisites: GM Permission\nEffect: You are immune to the @UUID[Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj] status.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "rcbGdymMIaMsrcyY",
-  "flags": {}
+  "_id": "rcbGdymMIaMsrcyY"
 }
