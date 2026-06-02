@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Chosen of Victory 2 AP - Free Action Effect: Your next Struggle Attack with an equipped  weapon deals +2 Damage Steps and deals Fire Type  damage.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.ABYIBAJzRRuKvMFZ]\n2 AP - Free Action\nEffect: Your next Struggle Attack with an equipped weapon deals +2 DB and deals Fire Type damage.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
