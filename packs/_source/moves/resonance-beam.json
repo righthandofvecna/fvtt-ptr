@@ -75,6 +75,10 @@
   },
   "_id": "cK0zGcRAhb26xJor",
   "effects": [],
+  "sort": 55200000,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "ptu": {
       "automationStatus": "needs-automation",

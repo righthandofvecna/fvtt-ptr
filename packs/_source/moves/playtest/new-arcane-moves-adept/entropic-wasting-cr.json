@@ -28,7 +28,8 @@
     "stackSlugs": false,
     "keywords": [
       "Target 1",
-      "Arcane"
+      "Arcane",
+      "Weapon"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -80,7 +81,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

@@ -75,7 +75,10 @@
     "automation": []
   },
   "_id": "RHHzGti3bNC3MWkt",
-  "effects": [],
+  "sort": 37000000,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "ptu": {
       "automationStatus": "needs-automation",
@@ -83,5 +86,6 @@
       "used": null,
       "showInTokenPanel": false
     }
+
   }
 }
