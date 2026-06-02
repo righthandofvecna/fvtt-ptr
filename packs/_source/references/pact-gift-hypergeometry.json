@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: All MissingNo Major Gifts Static | Scene - Standard Action, Interrupt Static Effect: You may always treat the distance between  you and any other Trainer or Pokémon as one meter  greater or one meter less as you choose for the purpose  of calculating range or distance of travel. You may not  use this to avoid melee attacks by switching between  making their distance greater or less - a value is chosen  when an action is announced and cannot be changed  afterwards. Scene Effect: You may activate this Pact Gift once per  Scene when hit by a single target attack. The attack  instead hits a target of your choice in an adjacent square  to you.",
+    "effect": "Prerequisites: All MissingNo Major Gifts\nStatic | Scene - Standard Action, Interrupt\nStatic Effect: You may always treat the distance between you and any other Trainer or Pokémon as one meter greater or one meter less as you choose for the purpose of calculating range or distance of travel. You may not use this to avoid melee attacks by switching between making their distance greater or less - a value is chosen when an action is announced and cannot be changed afterwards. \nScene Effect: You may activate this Pact Gift once per Scene when hit by a single target attack. The attack instead hits a target of your choice in an adjacent square to you.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: All Necrozma Major Gifts\nStatic\nEffect: You learn the Move Photon Geyser.",
+    "effect": "Prerequisites: All Necrozma Major Gifts\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.QSdcq7oLI22cO3NI].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "LuvR06VglbUoi6g6",
-  "flags": {}
+  "_id": "LuvR06VglbUoi6g6"
 }
