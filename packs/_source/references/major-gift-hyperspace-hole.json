@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Dimensional Lock, Major Gift – Ring Portal\nStatic\nEffect: You learn the Move Hyperspace Hole.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.6f14DD3YEuxy9MOc], @UUID[Compendium.ptu.references.Item.SHqCK8H9KEF9Qj0y]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.36JcaQELHJA79xnT].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "GHNrwPmNYK6q4Uue",
-  "flags": {}
+  "_id": "GHNrwPmNYK6q4Uue"
 }

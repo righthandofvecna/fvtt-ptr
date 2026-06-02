@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Magic Guard\nDaily – Swift Action\nEffect: You are cured of all Volatile Status. Until the end of the Scene, all attacks targeting you have a -2 penalty to hit you. You may use the Soul Heart Ability as if you had it until the end of the Scene.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.wMvGMwNYb6dHwOC0]\nDaily – Swift Action\nEffect: You are cured of all Volatile Status. Until the end of the Scene, all attacks targeting you have a -2 penalty to hit you. You may use the @UUID[Compendium.ptu.abilities.Item.9LjIJP31GW6WiOnH] Ability as if you had it until the end of the Scene.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "t50sCZQUeXCTg5XM",
-  "flags": {}
+  "_id": "t50sCZQUeXCTg5XM"
 }
