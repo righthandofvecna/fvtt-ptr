@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Dream Mastery Static Effect: You gain the Dream Reader Capability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.aRfr2RkfTAUuly1f]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.capabilities.Item.aNw6a7gd5tSHEsa2] Capability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
