@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Fiery Core\nStatic\nEffect: You gain the Water Absorb Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.rcbGdymMIaMsrcyY]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.QpL0f8jY8uoEJ2Fv] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "T28niyqfjoFFPKqL",
-  "flags": {}
+  "_id": "T28niyqfjoFFPKqL"
 }
