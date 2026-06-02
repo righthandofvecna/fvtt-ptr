@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: All Rayquaza Major Gifts\nEffect: You learn the Move Dragon Ascent.",
+    "effect": "Prerequisites: All Rayquaza Major Gifts\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.PUR8PycHNB73yZHz].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "U0cm3YW9FX4fSRMF",
-  "flags": {}
+  "_id": "U0cm3YW9FX4fSRMF"
 }
