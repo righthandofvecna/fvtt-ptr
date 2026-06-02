@@ -26,7 +26,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Weapon"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
@@ -60,8 +62,8 @@
     },
     "type": "Normal",
     "category": "Physical",
-    "damageBase": 6,
-    "ac": 2,
+    "damageBase": "6",
+    "ac": "2",
     "range": "WR, Blast 2",
     "contestType": "--",
     "stab": false,
@@ -77,7 +79,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

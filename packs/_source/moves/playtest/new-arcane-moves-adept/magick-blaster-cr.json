@@ -37,7 +37,9 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Double Strike"
+      "Double Strike",
+      "Weapon",
+      "Arcane"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -89,7 +91,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

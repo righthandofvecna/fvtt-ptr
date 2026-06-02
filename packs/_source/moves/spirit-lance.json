@@ -26,7 +26,10 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Weapon",
+      "Arcane"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
@@ -60,8 +63,8 @@
     },
     "type": "Normal",
     "category": "Special",
-    "damageBase": 6,
-    "ac": 2,
+    "damageBase": "6",
+    "ac": "2",
     "range": "Line 6",
     "contestType": "--",
     "stab": false,
@@ -77,7 +80,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
