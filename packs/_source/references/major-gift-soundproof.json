@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Center Stage Static Effect: You gain the Soundproof Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.tpImQdy5uwR1awPk]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.GyvsSbzvLJZitpqb] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

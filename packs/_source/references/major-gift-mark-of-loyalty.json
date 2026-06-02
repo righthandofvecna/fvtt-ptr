@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Stoic Stature 1 AP - Free Action Target: Your Pokémon Effect: Treat the Target as if it were one Loyalty higher for the rest of this turn.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.c0YI1VbLWES68BWg]\n1 AP - Free Action\nTarget: Your Pokémon\nEffect: Treat the Target as if it were one Loyalty higher for the rest of this turn.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

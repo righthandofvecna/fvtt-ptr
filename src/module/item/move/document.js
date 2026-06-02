@@ -3,6 +3,7 @@ import { PTUCondition, PTUItem } from '../index.js';
 import { PTUAttackCheck } from '../../system/check/attack.js';
 import { PTUDamageCheck } from '../../system/check/damage.js';
 import { resolveDbFormula } from '../../../util/value-resolver.js';
+import { sendUsageMessage } from '../../message/usage.js';
 class PTUMove extends PTUItem {
     get rollable() {
         return !(isNaN(Number(this.system.ac ?? undefined)) && !this.isDamaging);
@@ -286,8 +287,15 @@ class PTUMove extends PTUItem {
                 callback: async (rolls, targets, msg, event) => {
                     await this.consume();
 
+                    if (!this.isDamaging) {
+                        // The message may be flagged resolved=true when autoRollDamage is
+                        // enabled and targets are present. Reset it so the Apply Effects
+                        // button is shown for status moves (attack-only, no damage roll).
+                        if (msg.flags?.ptu?.resolved) await msg.update({ "flags.ptu.resolved": false });
+                        return;
+                    }
+
                     if (!game.settings.get("ptu", "autoRollDamage")) return;
-                    if (!this.isDamaging) return;
 
                     const params = {
                         event,
@@ -306,11 +314,9 @@ class PTUMove extends PTUItem {
 
         if (this.system.frequency?.type === "static") return;
 
-        let didSomething = false;
         const conditions = new Set(this.actor.getFilteredRollOptions("condition"))
         if (conditions.has("condition:confused")) {
             await PTUCondition.HandleConfusion(this, this.actor);
-            didSomething = true;
         }
 
         if (this.referenceEffect) {
@@ -335,17 +341,16 @@ class PTUMove extends PTUItem {
                     user: game.user.id,
                     speaker: ChatMessage.getSpeaker({ actor: this.actor }),
                     content: await foundry.applications.handlebars.renderTemplate("systems/ptu/static/templates/chat/effect-applied.hbs", { statements: enrichedHtml }),
-                    type: CONST.CHAT_MESSAGE_STYLES.OTHER,
+                    style: CONST.CHAT_MESSAGE_STYLES.OTHER,
                     whisper: this.actor.hasPlayerOwner ? [game.user.id] : game.users.filter(u => u.isGM).map(u => u.id),
                 };
                 await ChatMessage.create(chatData);
-                didSomething = true;
             }
         }
 
-        if (!didSomething) {
-            ui.notifications.warn(game.i18n.localize("PTU.Notifications.NoEffect"));
-        }
+        // Send a usage message so that ApplyEffect Rule Elements with the
+        // "apply-effects" selector have an entry point for this move.
+        await sendUsageMessage({ item: this, actor: this.actor });
     }
 }
 

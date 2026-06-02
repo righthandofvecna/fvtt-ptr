@@ -66,9 +66,9 @@
         }
       },
       {
-        "level": 1,
-        "uuid": "Compendium.ptu.species.Item.vlRzxj77gheOeQlu",
-        "slug": "delta-shiftry",
+        "level": 15,
+        "uuid": "Compendium.ptu.species.Item.kIOeFnFRpOHniHfV",
+        "slug": "delta-nuzleaf",
         "other": {
           "restrictions": [
             ""
@@ -76,9 +76,9 @@
         }
       },
       {
-        "level": 15,
-        "uuid": "Compendium.ptu.species.Item.kIOeFnFRpOHniHfV",
-        "slug": "delta-nuzleaf",
+        "level": 25,
+        "uuid": "Compendium.ptu.species.Item.vlRzxj77gheOeQlu",
+        "slug": "delta-shiftry",
         "other": {
           "restrictions": [
             ""

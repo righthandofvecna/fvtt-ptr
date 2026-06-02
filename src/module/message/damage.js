@@ -222,7 +222,7 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
             totalCritImmune: (multiplier * roll.critImmuneTotal) + addend,
         }
 
-        const domains = ["damage-received", ...itemDomains];
+        const domains = ["damage-received", "apply-effects", ...itemDomains];
 
         const ephemeralEffects = [
             ...await extractEphemeralEffects({
@@ -294,7 +294,7 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
             origin: message.actor,
             target: message.actor,
             item: message.item,
-            domains: ["damage-dealt", ...itemDomains.map(d => d.replace(/-received$/, "-dealt"))],
+            domains: ["damage-dealt", "apply-effects", ...itemDomains.map(d => d.replace(/-received$/, "-dealt"))],
             options: messageRollOptions,
             roll: Number(message.flags.ptu.context.accuracyRollResult ?? 0)
         }),

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift - Pure Breathing, Major Gift - Sprouter Static Effect: You learn the Move Seed Flare.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.TctrQNmUZPHL2uRl], @UUID[Compendium.ptu.references.Item.IKmyCznvPuT1kfRe]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.5gupaxiaNLdan8R5].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

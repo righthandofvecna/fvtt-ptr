@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift – Faller\nDrain 2 AP – Extended Action\nTrigger: You finish an Extended Rest\nEffect: Choose Chilled, Darkvision, Gilled, Glow, Heater, Magnetic, Mindlock, Naturewalk in one terrain of your choice, or Wallclimber. If used in the Campaign, you may add Gravitic Tolerance (1-3), and Gravitic Tolerance (2-4) to the list. Gain that Capability until the end of your next Extended Rest. This may be triggered multiple times from a single Extended Rest.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.cKdXc7tgDI9W7pBx]\nDrain 2 AP – Extended Action\nTrigger: You finish an Extended Rest\nEffect: Choose @UUID[Compendium.ptu.capabilities.Item.4RJFVQvf9t70YWI3], @UUID[Compendium.ptu.capabilities.Item.zzJWpOj40dLelBm5], @UUID[Compendium.ptu.capabilities.Item.Sr5UjqsO8FydTuNw], @UUID[Compendium.ptu.capabilities.Item.v4OOr4KlIO0DKw5r], @UUID[Compendium.ptu.capabilities.Item.9DQsEtRIDXdw7ICw], @UUID[Compendium.ptu.capabilities.Item.O00WEaCeKskK8vY4], @UUID[Compendium.ptu.capabilities.Item.nWv1YhLcYfwOtDCF], @UUID[Compendium.ptu.capabilities.Item.ddJDiI6dBWUc3WlA] in one terrain of your choice, or @UUID[Compendium.ptu.capabilities.Item.pvTnoGYp0kBhHmMD]. If used in the Campaign, you may add @UUID[Compendium.ptu.capabilities.Item.cL7UR4BpG3TIMpV0], and @UUID[Compendium.ptu.capabilities.Item.nvQsLcTLFZVUTthr] to the list. Gain that Capability until the end of your next Extended Rest. This may be triggered multiple times from a single Extended Rest.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "O9hf1v3ytIu8KGat",
-  "flags": {}
+  "_id": "O9hf1v3ytIu8KGat"
 }

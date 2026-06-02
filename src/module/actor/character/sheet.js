@@ -265,22 +265,14 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		});
 
 		html.find('.rollable.skill').click(this._onSkillRoll.bind(this));
-		html.find('.rollable.move').click(async (event) => {
-			const attackId = $(event.currentTarget).closest("li.item").data("item-id");
-			const move = this.actor.attacks.get(attackId);
-			if (!move) return;
-			await move.use({ event });
-		});
 		html.find('.rollable.save').click(this._onSaveRoll.bind(this));
-
-		html.find('.item .item-icon.rollable:not(.move)').click((event) => {
+		html.find('.item .item-icon').click((event) => {
 			event.preventDefault();
 			const itemId = $(event.currentTarget).closest("li.item").data("item-id");
 			const item = this.actor.items.get(itemId);
 			if (!item) return;
 
-			item.consume?.();
-			return item.roll?.(event);
+			return item.use?.({ event });
 		})
 
 		// Add Inventory Item

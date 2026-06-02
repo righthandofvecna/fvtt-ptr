@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Regal Right\nDaily – Shift Action\nEffect: A burst 5 area around you springs to life with vibrant plants – regardless of terrain or the presence of any urban structures – which seem to try and protect you and your allies. This area counts as Slow and Rough terrain for enemies, even those with Naturewalk. In addition, you may place up to 4 Medium Trees that stretch up to 4m high anywhere within the zone. These trees are Blocking Terrain. At the end of the Scene, the plants remain but no longer have special properties to protect you, and become standard forested terrain.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.RS3rPzq8txuYU1kc]\nDaily – Shift Action\nEffect: A burst 5 area around you springs to life with vibrant plants – regardless of terrain or the presence of any urban structures – which seem to try and protect you and your allies. This area counts as Slow and Rough terrain for enemies, even those with Naturewalk. In addition, you may place up to 4 Medium Trees that stretch up to 4m high anywhere within the zone. These trees are Blocking Terrain. At the end of the Scene, the plants remain but no longer have special properties to protect you, and become standard forested terrain.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "Vi6VFAkzgstfCvOE",
-  "flags": {}
+  "_id": "Vi6VFAkzgstfCvOE"
 }

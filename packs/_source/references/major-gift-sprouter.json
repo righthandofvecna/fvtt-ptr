@@ -1,5 +1,5 @@
 {
-  "name": "Major Gift - Sprouter",
+  "name": "Major Gift - Sprouter (OBSOLETE, DELETE)",
   "type": "reference",
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

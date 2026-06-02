@@ -231,6 +231,32 @@ class PTUCombat extends Combat {
                 }
             }
 
+            // Fire onCombatStart for all actors on the first round, and onRoundStart every round.
+            // Deduplicate by actorId to avoid double-firing for boss combatants.
+            if (isNextRound) {
+                const isFirstRound = previous.round === null || previous.round === 0;
+                const processedActors = new Set();
+                for (const c of this.combatants) {
+                    const actor = c.actor;
+                    if (!actor || actor.primaryUpdater !== game.user) continue;
+                    if (processedActors.has(actor.id)) continue;
+                    processedActors.add(actor.id);
+
+                    const actorUpdates = {};
+                    if (isFirstRound) {
+                        for (const rule of actor.rules) {
+                            await rule.onCombatStart?.(actorUpdates);
+                        }
+                    }
+                    for (const rule of actor.rules) {
+                        await rule.onRoundStart?.(actorUpdates);
+                    }
+                    if (Object.keys(actorUpdates).length) {
+                        await actor.update(actorUpdates);
+                    }
+                }
+            }
+
             // Reset all data to get updated encounter roll options
             this.resetActors();
             await game.ptu.effectTracker.refresh();

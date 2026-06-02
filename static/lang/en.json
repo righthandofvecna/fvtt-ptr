@@ -161,7 +161,8 @@
     "ActionPoint": "AP Consumption",
     "ApplyEffect": "Apply Effect",
     "Reminder": "Reminder",
-    "HealOnDamageDealt": "Heal on Damage Dealt"
+    "HealOnDamageDealt": "Heal on Damage Dealt",
+    "InstantChange": "Instant Change"
   },
   "PTU": {
     "Skills": {
@@ -689,6 +690,7 @@
       "CaptureWrongTarget": "You need to target a Pokémon to capture",
       "NoPokeballs": "You can't use an empty stack of Pokéballs",
       "Use": "Apply Effect",
+      "ApplyEffects": "Apply Effects",
       "NoTarget": "You need to target an actor before using a move"
     },
 
@@ -914,6 +916,21 @@
         "RoundUp": "Round Up",
         "RoundUpHint": "If enabled, the healing amount will be rounded up instead of down.",
         "PredicateHint": "Roll options on the damage roll that are required for the healing on damage dealt to trigger."
+      },
+      "InstantChange": {
+        "Trigger": "Trigger",
+        "Selectors": "Selectors",
+        "SelectorsHint": "Roll domain selectors that must match for this rule to fire. Comma-separated. Only used when trigger is 'On Roll'.",
+        "Triggers": {
+          "OnCreate": "On Create",
+          "OnDelete": "On Delete",
+          "OnTurnStart": "On Turn Start",
+          "OnTurnEnd": "On Turn End",
+          "OnCombatStart": "On Combat Start",
+          "OnCombatEnd": "On Combat End",
+          "OnRoundStart": "On Round Start",
+          "OnRoll": "On Roll"
+        }
       }
     },
     "Check": {

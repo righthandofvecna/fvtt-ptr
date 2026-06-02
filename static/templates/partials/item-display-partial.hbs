@@ -136,16 +136,10 @@
         {{#each items as | item |}}
         {{#unless (and item.grantedBySameType (notEqual type "condition"))}}
         <li class="item {{item.type}}-item {{#if (is item.active false)}}disabled{{/if}} {{#if item.onCooldown}}on-cooldown{{/if}}" data-item-id="{{item._id}}">
-            {{#if item.rollable}}
-                <div class="item-icon rollable">
-                    <img class="icon" src="{{item.img}}" title="{{item.name}} ({{item.type}})"/>
-                    <img class="dice" src="/icons/svg/d20.svg" title="Roll {{item.name}}">
-                </div>
-            {{else}}
-                <div class="item-icon">
-                    <img class="icon" src="{{item.img}}" title="{{item.name}} ({{item.type}})"/>
-                </div>
-            {{/if}}
+            <div class="item-icon rollable">
+                <img class="icon" src="{{item.img}}" title="{{item.name}} ({{item.type}})"/>
+                <img class="dice" src="/icons/svg/d20.svg" title="Roll {{item.name}}">
+            </div>
             <div class="item-info">
                 <div class="item-name">
                     <h4>{{item.name}}</h4>

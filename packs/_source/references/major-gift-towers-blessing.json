@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Tower’s Rejuvenation 1 AP - Free Action Trigger: You or your Pokémon use a Move with the  Blessing Keyword Effect: The Move generates one additional use of the  Blessing.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.8BO9jDSpbj0XPhJ3]\n1 AP - Free Action\nTrigger: You or your Pokémon use a Move with the @CompSearch[Moves keywords=Blessing]{Blessing} Keyword\nEffect: The Move generates one additional use of the Blessing.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

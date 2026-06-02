@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – World’s Guardian\nDaily – Standard Action\nTarget: A Trainer or Pokémon within 10 meters\nEffect: You gain a +2 bonus to accuracy rolls against the Target, and a +5 bonus to damage rolls. In addition, if it is more than 5 meters away from you at the start of your turn, you may Teleport to any space adjacent to it as a Shift Action. These effects last until the end of the Scene.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.myPumZ5LeOxGF1kr]\nDaily – Standard Action\nTarget: A Trainer or Pokémon within 10 meters\nEffect: You gain a +2 bonus to accuracy rolls against the Target, and a +5 bonus to damage rolls. In addition, if it is more than 5 meters away from you at the start of your turn, you may Teleport to any space adjacent to it as a Shift Action. These effects last until the end of the Scene.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "VlkJcXS9pyBlXdfu",
-  "flags": {}
+  "_id": "VlkJcXS9pyBlXdfu"
 }

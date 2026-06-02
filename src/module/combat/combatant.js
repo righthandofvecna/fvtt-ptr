@@ -142,6 +142,14 @@ class PTUCombatant extends Combatant {
             await item.onTurnEnd?.();
         }
 
+        const actorUpdates = {};
+        for (const rule of actor.rules) {
+            await rule.onTurnEnd?.(actorUpdates);
+        }
+        if (Object.keys(actorUpdates).length) {
+            await actor.update(actorUpdates);
+        }
+
         await this.update({ "flags.ptu.roundOfLastTurnEnd": round });
 
         Hooks.callAll("ptu.endTurn", this, encounter, game.user.id);

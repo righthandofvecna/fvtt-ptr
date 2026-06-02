@@ -180,6 +180,30 @@ class RuleElementPTU extends foundry.abstract.DataModel {
     onTurnStart(actorUpdates) {};
 
     /**
+     * Run at the end of the actor's turn.
+     * @param actorUpdates A record containing update data for the actor
+     */
+    onTurnEnd(actorUpdates) {};
+
+    /**
+     * Run when a combat encounter begins (round 1 start).
+     * @param actorUpdates A record containing update data for the actor
+     */
+    onCombatStart(actorUpdates) {};
+
+    /**
+     * Run when a combat encounter ends.
+     * @param actorUpdates A record containing update data for the actor
+     */
+    onCombatEnd(actorUpdates) {};
+
+    /**
+     * Run at the start of each round.
+     * @param actorUpdates A record containing update data for the actor
+     */
+    onRoundStart(actorUpdates) {};
+
+    /**
      * Runs after an item holding this rule is removed from an actor. This method is used for cleaning up any values
      * on the actorData or token objects (e.g., removing temp HP).
      *

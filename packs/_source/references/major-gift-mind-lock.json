@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift - Alien Countenance Static Effect: You gain the Mind Lock Capability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.9TkuCHcYCblIvlfK]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.capabilities.Item.nWv1YhLcYfwOtDCF] Capability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

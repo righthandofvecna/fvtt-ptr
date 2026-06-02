@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Motherly Compassion Daily/25 - Standard Action Target: Area Effect: You create a small Illusion, covering a cubic  area two meters on each side. The Illusion can emulate  visual and auditory senses only. Seeing through the  Illusion is a DC 15 Perception Check, with a +5 bonus  to the check if the Illusion is emulating something very  familiar to the observer. The Illusion may be sustained  for up to ten minutes as a Rapid Action each round.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.bZX0XyXaICfBRDNq]\nDaily - Standard Action\nTarget: Area\nEffect: You create a small Illusion, covering a cubic area two meters on each side. The Illusion can emulate visual and auditory senses only. Seeing through the Illusion is a DC 15 Perception Check, with a +5 bonus to the check if the Illusion is emulating something very  familiar to the observer. The Illusion may be sustained for up to ten minutes as a Rapid Action each round. You gain an additional use of this Feature per day at Trainer level 25.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

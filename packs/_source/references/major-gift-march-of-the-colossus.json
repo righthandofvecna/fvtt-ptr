@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Hands of the Creator 2 AP - Standard Action Target: Trainer or Pokémon Effect: For the next three rounds, the target has their  Attack and Speed halved. At the end of the third round,  increase the target’s Attack and Speed by two Combat  Stages each.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.9O7RgqcH4iPJcMss]\n2 AP - Standard Action\nTarget: Trainer or Pokémon\nEffect: For the next three rounds, the target has their Attack and Speed halved. At the end of the third round, increase the target’s Attack and Speed by two Combat Stages each.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
