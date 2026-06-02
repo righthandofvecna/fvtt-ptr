@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: One Lake Guardian Major Gift\nStatic\nEffect: You learn the Move Future Sight.",
+    "effect": "Prerequisites: One Lake Guardian Major Gift\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.4gPfx0ONfNK8vio2].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "D6ob2S3weTR06VLq",
-  "flags": {}
+  "_id": "D6ob2S3weTR06VLq"
 }
