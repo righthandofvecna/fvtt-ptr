@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Plant Intuition Static Effect: You are immune to the Moves Rage Powder, Poison Gas, Poisonpowder, Sleep Powder, Smog, Smokescreen, Spore, Stun Spore, and Sweet Scent.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.CnTJueNKQInpi6j8]\nStatic\nEffect: You are immune to the Moves @UUID[Compendium.ptu.moves.Item.fM5WQyilyABYub1f], @UUID[Compendium.ptu.moves.Item.2YHDxImu2aLCkeYO], @UUID[Compendium.ptu.moves.Item.NisjPhyvzfHCfgSx], @UUID[Compendium.ptu.moves.Item.QhX27aIM6MPFqya8], @UUID[Compendium.ptu.moves.Item.1C4eSkywCcdopGkD], @UUID[Compendium.ptu.moves.Item.kvvdzOdMFvhMbQga], @UUID[Compendium.ptu.moves.Item.soZ40VFFxCDiniJu], @UUID[Compendium.ptu.moves.Item.XssTGMznjX8N33L7], and @UUID[Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS].\nYou also gain the @UUID[Compendium.ptu.capabilities.Item.dXGH5wmq6ZNADuye] Capability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
