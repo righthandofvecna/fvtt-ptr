@@ -73,11 +73,13 @@
         }
       },
       {
+        "level": 40,
         "uuid": "Compendium.ptu.species.Item.bUAZl6Ox02dqe6Ab",
         "slug": "delta-magmortar",
-        "level": 1,
         "other": {
-          "restrictions": []
+          "restrictions": [
+            ""
+          ]
         }
       }
     ],
