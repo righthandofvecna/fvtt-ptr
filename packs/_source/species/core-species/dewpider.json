@@ -126,74 +126,74 @@
     "moves": {
       "level": [
         {
+          "level": 1,
           "uuid": "Compendium.ptu.moves.Item.aQC3OZK3LUV4UHj2",
-          "slug": "water-sport",
-          "level": 1
+          "slug": "water-sport"
         },
         {
+          "level": 1,
           "uuid": "Compendium.ptu.moves.Item.5h0l5eITZN4LdYqj",
-          "slug": "bubble",
-          "level": 1
+          "slug": "bubble"
         },
         {
+          "level": 5,
           "uuid": "Compendium.ptu.moves.Item.trOCAfV84TLLTKk0",
-          "slug": "infestation",
-          "level": 5
+          "slug": "infestation"
         },
         {
+          "level": 8,
           "uuid": "Compendium.ptu.moves.Item.cVvKcL3mPp6NRRPG",
-          "slug": "spider-web",
-          "level": 8
+          "slug": "spider-web"
         },
         {
+          "level": 13,
           "uuid": "Compendium.ptu.moves.Item.NOJaY2kH3aQcaexD",
-          "slug": "bug-bite",
-          "level": 13
+          "slug": "bug-bite"
         },
         {
-          "uuid": "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm",
-          "slug": "bubblebeam",
-          "level": 16
+          "level": 16,
+          "uuid": "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT",
+          "slug": "bubble-beam"
         },
         {
+          "level": 21,
           "uuid": "Compendium.ptu.moves.Item.QMaJ91E3XBatUcV9",
-          "slug": "bite",
-          "level": 21
+          "slug": "bite"
         },
         {
+          "level": 24,
           "uuid": "Compendium.ptu.moves.Item.ywYeIhxlrHb9gOP1",
-          "slug": "aqua-ring",
-          "level": 24
+          "slug": "aqua-ring"
         },
         {
+          "level": 29,
           "uuid": "Compendium.ptu.moves.Item.IqR2d6OPYZMNbYYl",
-          "slug": "leech-life",
-          "level": 29
+          "slug": "leech-life"
         },
         {
+          "level": 32,
           "uuid": "Compendium.ptu.moves.Item.5uY1ltFWijN07CKe",
-          "slug": "crunch",
-          "level": 32
+          "slug": "crunch"
         },
         {
+          "level": 37,
           "uuid": "Compendium.ptu.moves.Item.GVdOLqamIf4d7wJU",
-          "slug": "lunge",
-          "level": 37
+          "slug": "lunge"
         },
         {
+          "level": 40,
           "uuid": "Compendium.ptu.moves.Item.70ikTYAJeGbsEN9K",
-          "slug": "mirror-coat",
-          "level": 40
+          "slug": "mirror-coat"
         },
         {
+          "level": 45,
           "uuid": "Compendium.ptu.moves.Item.iRpfWZ1PSCAeyUEX",
-          "slug": "liquidation",
-          "level": 45
+          "slug": "liquidation"
         },
         {
+          "level": 48,
           "uuid": "Compendium.ptu.moves.Item.9onCqeLjl53i2wH6",
-          "slug": "entrainment",
-          "level": 48
+          "slug": "entrainment"
         }
       ],
       "machine": [
@@ -474,7 +474,8 @@
     },
     "stackSlugs": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "enabled": false
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "dljUGxtO8AR0tERN",
@@ -485,7 +486,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.1.4",

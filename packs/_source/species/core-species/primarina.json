@@ -57,27 +57,33 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.JgfHJZAfmXPdzT6O",
         "slug": "popplio",
-        "level": 1,
         "other": {
-          "restrictions": []
+          "restrictions": [
+            ""
+          ]
         }
       },
       {
+        "level": 15,
         "uuid": "Compendium.ptu.species.Item.qoEthyRA3dsqFEaM",
         "slug": "brionne",
-        "level": 15,
         "other": {
-          "restrictions": []
+          "restrictions": [
+            ""
+          ]
         }
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.bkK27wncHgLgQPx7",
         "slug": "primarina",
-        "level": 30,
         "other": {
-          "restrictions": []
+          "restrictions": [
+            ""
+          ]
         }
       }
     ],
@@ -111,7 +117,7 @@
       "highJump": 3,
       "longJump": 3,
       "power": 5,
-      "naturewalk": [],
+      "naturewalk": "",
       "other": [
         {
           "slug": "fountain",
@@ -122,79 +128,79 @@
     "moves": {
       "level": [
         {
+          "level": "Evo",
           "uuid": "Compendium.ptu.moves.Item.fE2BuVxFLhYDbTn1",
-          "slug": "sparkling-aria",
-          "level": "Evo"
+          "slug": "sparkling-aria"
         },
         {
+          "level": 4,
           "uuid": "Compendium.ptu.moves.Item.9Bi4aMf4Ls0JdLNK",
-          "slug": "growl",
-          "level": 4
+          "slug": "growl"
         },
         {
+          "level": 8,
           "uuid": "Compendium.ptu.moves.Item.NAhc5NF7m0p5BPmP",
-          "slug": "disarming-voice",
-          "level": 8
+          "slug": "disarming-voice"
         },
         {
+          "level": 11,
           "uuid": "Compendium.ptu.moves.Item.dIkyKSyZGctjHX9O",
-          "slug": "baby-doll-eyes",
-          "level": 11
+          "slug": "baby-doll-eyes"
         },
         {
+          "level": 14,
           "uuid": "Compendium.ptu.moves.Item.Htb3LXoNd24yFNEG",
-          "slug": "aqua-jet",
-          "level": 14
+          "slug": "aqua-jet"
         },
         {
+          "level": 16,
           "uuid": "Compendium.ptu.moves.Item.OI05tbugvNMMOqmc",
-          "slug": "icy-wind",
-          "level": 16
+          "slug": "icy-wind"
         },
         {
+          "level": 19,
           "uuid": "Compendium.ptu.moves.Item.UhvLxdWq2D7gOvMr",
-          "slug": "encore",
-          "level": 19
+          "slug": "encore"
         },
         {
-          "uuid": "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm",
-          "slug": "bubblebeam",
-          "level": 24
+          "level": 24,
+          "uuid": "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT",
+          "slug": "bubble-beam"
         },
         {
+          "level": 28,
           "uuid": "Compendium.ptu.moves.Item.YD9PPN6tPaLMrvvm",
-          "slug": "sing",
-          "level": 28
+          "slug": "sing"
         },
         {
+          "level": 33,
           "uuid": "Compendium.ptu.moves.Item.ZptlbhF8Dnr6IyeX",
-          "slug": "double-slap",
-          "level": 33
+          "slug": "double-slap"
         },
         {
+          "level": 38,
           "uuid": "Compendium.ptu.moves.Item.1Zrse7wrjRftpdXD",
-          "slug": "hyper-voice",
-          "level": 38
+          "slug": "hyper-voice"
         },
         {
+          "level": 44,
           "uuid": "Compendium.ptu.moves.Item.LkpfF5gcUddBm8CS",
-          "slug": "moonblast",
-          "level": 44
+          "slug": "moonblast"
         },
         {
+          "level": 49,
           "uuid": "Compendium.ptu.moves.Item.4Bf7QbKy0NepUHk0",
-          "slug": "captivate",
-          "level": 49
+          "slug": "captivate"
         },
         {
+          "level": 55,
           "uuid": "Compendium.ptu.moves.Item.oRu76Vk1LfE93pky",
-          "slug": "hydro-pump",
-          "level": 55
+          "slug": "hydro-pump"
         },
         {
+          "level": 60,
           "uuid": "Compendium.ptu.moves.Item.N6Cj9FQBPkjc9wwt",
-          "slug": "misty-terrain",
-          "level": 60
+          "slug": "misty-terrain"
         }
       ],
       "machine": [
@@ -487,7 +493,14 @@
       "Alola"
     ],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "type": {
+      "0": "Water",
+      "1": "Fairy",
+      "2": ""
+    },
+    "stackSlugs": false,
+    "enabled": false
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "dljUGxtO8AR0tERN",
@@ -498,7 +511,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.1.4",
