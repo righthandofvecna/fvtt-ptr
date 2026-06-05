@@ -2,7 +2,7 @@
   "name": "Signer",
   "system": {
     "origin": "",
-    "effect": "Choose a Rank 1 Blessing. You gain this Blessing in the form of a Sign. Signs store the energy of the Divine, and may be activated as a Rapid Action. Signs can be used once per Scene, and cost 1 AP to activate.\nRank 1 Blessings: Ancient Wisdom, Blessed Strike, Paragon, Spirit Mending",
+    "effect": "Choose a Rank 1 Blessing. You gain this Blessing in the form of a Sign. Signs store the energy of the Divine, and may be activated as a Rapid Action. Signs can be used once per Scene, and cost 1 AP to activate.\nRank 1 Blessings: @UUID[Compendium.ptu.references.Item.bxAMXMpavL2OvhlA], @UUID[Compendium.ptu.references.Item.RU6ok1dtRlDhTo3a], @UUID[Compendium.ptu.references.Item.O6BYap68R4OMCHbk], @UUID[Compendium.ptu.references.Item.EfxmNFWRAWQ8aHQM]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -25,8 +25,7 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Patron Stat",
-      "Class"
+      "Patron Stat"
     ],
     "frequency": {
       "type": "static",

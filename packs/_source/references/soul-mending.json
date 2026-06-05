@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Legendary Blessings: Rank 2 Blessings",
-    "effect": "Prerequisites: Spirit Mending Messiah: One Time Use/10 - Extended Action Signer: Interrupt Messiah Trigger: A Trainer or Pokémon dies. Signer Trigger: A Trainer or Pokémon is reduced below 0 HP. Messiah Effect: Your divine powers allow you to intervene, saving the Target’s life. They are set to 5 Injuries that will heal at half the normal rate, and 1 HP. Signer Effect: The Target receives no further injuries after being reduced below 0 HP. If being Knocked Out alone would set them to 10 injuries, they instead are set to 9 Injuries.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.EfxmNFWRAWQ8aHQM]\nMessiah: Special - Extended Action\nSigner: Free Action, Interrupt\nMessiah Trigger: A Trainer or Pokémon dies. Signer Trigger: A Trainer or Pokémon is reduced below 0 HP.\nMessiah Effect: Your divine powers allow you to intervene, saving the Target’s life. They are set to 5 Injuries that will heal at half the normal rate, and 1 HP. This Feature has one use, plus one additional time for each of the Level 5, 10, 20, 30, and 40 Character Advancement Level Milestones that you have reached.\nSigner Effect: The Target receives no further injuries after being reduced below 0 HP. If being Knocked Out alone would set them to 10 injuries, they instead are set to 9 Injuries.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
