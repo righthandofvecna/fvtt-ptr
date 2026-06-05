@@ -2,7 +2,7 @@
   "name": "Chef",
   "system": {
     "origin": "",
-    "effect": "You may use any Chef Recipe for which you qualify.\nRecipes - Meal Planner, Salty Surprise, Spicy Wrap, Sour Candy, Dry Wafer, Bitter Treat, Sweet Confection",
+    "effect": "You may use any Chef Recipe for which you qualify.\nRecipes - @UUID[Compendium.ptu.references.Item.98MnkOJAGDuSYv7C], @UUID[Compendium.ptu.references.Item.l7AHefBzQJp3M5hL], @UUID[Compendium.ptu.references.Item.JaC2CGqH3qpoJiwp], @UUID[Compendium.ptu.references.Item.aBrvpJfpy6A3cFGt], @UUID[Compendium.ptu.references.Item.bajfkZcAu5T2Pqt7], @UUID[Compendium.ptu.references.Item.YEuKDIALD23rzEZa], @UUID[Compendium.ptu.references.Item.Au0ZNfWlMPtdYEJC]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -70,7 +70,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Basic Cooking, Novice Intuition"
+      "prereqBackup": "Basic Cooking, Novice Intuition",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

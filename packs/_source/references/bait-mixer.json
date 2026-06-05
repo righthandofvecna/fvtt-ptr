@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Chef Recipes",
-    "effect": "Prerequisites: Culinary Appreciation Cost: $150 or Honey. Effect: You may create Bait. For $50 more, you may create Bait as Super Bait or Vile Bait instead. Super Bait works like regular Bait, but you may add your Intuition Rank to 1d20 Rolls made to attract Pokémon. Vile Bait works like regular Bait, but Pokémon that eat it are Poisoned.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.aJbhGzlOBQa8Mcm6]\nCost: $150 or @UUID[Compendium.ptu.items.Item.Op2TZv6Qoz4Y65e2].\nEffect: You may create @UUID[Compendium.ptu.items.Item.hTnlXJmwPgdbDWXL]. For $50 more, you may create Bait as @UUID[Compendium.ptu.items.Item.5mOfjDeuPz0bw0rW] or @UUID[Compendium.ptu.items.Item.ulg3HbHiQTtIxd0T] instead. Super Bait works like regular Bait, but you may add your Intuition Rank to 1d20 Rolls made to attract Pokémon. Vile Bait works like regular Bait, but Pokémon that eat it are Poisoned.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
