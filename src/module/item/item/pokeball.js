@@ -367,6 +367,10 @@ class PokeballItem extends PTUItemItem {
     }
 
 
+    async use(options = {}) {
+        return this.roll(options.event);
+    }
+
     async roll(event) {
         //TODO: Request GM throw roll
 
