@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Effect: You have an intuitive sense of when natural disasters or other catastrophes are likely to occur near you",
+    "effect": "Prerequisites: GM Permission\nEffect: You have an intuitive sense of when natural disasters or other catastrophes are likely to occur near you.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

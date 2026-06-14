@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Effect: Whenever you use song or dance for Intimidate, Guile, or Charm, you may add half of the highest Skill Rank you have among these Skills to your Skill Check.",
+    "effect": "Prerequisites: GM Permission\nEffect: Whenever you use song or dance for Intimidate, Guile, or Charm, you may add half of the highest Skill Rank you have among these Skills to your Skill Check.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
