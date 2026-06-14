@@ -38,9 +38,9 @@
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm",
+            "value": "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT",
             "predicate": {
-              "not": "move:bubblebeam"
+              "not": "move:bubble-beam"
             }
           },
           {
@@ -135,18 +135,18 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm",
+            "value": "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT",
             "predicate": [
               {
                 "not": {
                   "eq": [
                     "{item|flags.ptu.rulesSelections.rank3move1}",
-                    "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm"
+                    "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT"
                   ]
                 }
               },
               {
-                "not": "move:bubblebeam"
+                "not": "move:bubble-beam"
               }
             ]
           },

@@ -2,7 +2,7 @@
   "name": "Shared Strengths Rank 2",
   "system": {
     "origin": "",
-    "effect": "You gain your Legendary Form’s Types while in your Avatar Form",
+    "effect": "You gain your Legendary Form’s Types while in your Avatar Form.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -70,7 +70,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Pokemon Form Level 35"
+      "prereqBackup": "Pokemon Form Level 35",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

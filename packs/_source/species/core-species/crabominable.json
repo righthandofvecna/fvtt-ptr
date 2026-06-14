@@ -57,19 +57,23 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.NbIsxf9AKZPRrq44",
         "slug": "crabrawler",
-        "level": 1,
         "other": {
-          "restrictions": []
+          "restrictions": [
+            ""
+          ]
         }
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.p2qyFZmWQ5AwOd03",
         "slug": "crabominable",
-        "level": 25,
         "other": {
-          "restrictions": []
+          "restrictions": [
+            ""
+          ]
         }
       }
     ],
@@ -114,69 +118,69 @@
     "moves": {
       "level": [
         {
+          "level": "Evo",
           "uuid": "Compendium.ptu.moves.Item.I0Cy1NP2brM1jq1h",
-          "slug": "ice-punch",
-          "level": "Evo"
+          "slug": "ice-punch"
         },
         {
+          "level": 5,
           "uuid": "Compendium.ptu.moves.Item.jZzomtDAHtgzeeSV",
-          "slug": "rock-smash",
-          "level": 5
+          "slug": "rock-smash"
         },
         {
+          "level": 9,
           "uuid": "Compendium.ptu.moves.Item.XQOEuOenSzYNz4eO",
-          "slug": "leer",
-          "level": 9
+          "slug": "leer"
         },
         {
+          "level": 13,
           "uuid": "Compendium.ptu.moves.Item.4zyVHZ1t6PJsYzGX",
-          "slug": "pursuit",
-          "level": 13
+          "slug": "pursuit"
         },
         {
-          "uuid": "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm",
-          "slug": "bubblebeam",
-          "level": 17
+          "level": 17,
+          "uuid": "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT",
+          "slug": "bubble-beam"
         },
         {
+          "level": 22,
           "uuid": "Compendium.ptu.moves.Item.fCWLpvekbsjaPVHA",
-          "slug": "power-up-punch",
-          "level": 22
+          "slug": "power-up-punch"
         },
         {
+          "level": 25,
           "uuid": "Compendium.ptu.moves.Item.F7i367RnLJX2gLg9",
-          "slug": "dizzy-punch",
-          "level": 25
+          "slug": "dizzy-punch"
         },
         {
+          "level": 29,
           "uuid": "Compendium.ptu.moves.Item.UcNQuMWgO1s8OxcP",
-          "slug": "avalanche",
-          "level": 29
+          "slug": "avalanche"
         },
         {
+          "level": 33,
           "uuid": "Compendium.ptu.moves.Item.ekstCWqmGpJSMLj1",
-          "slug": "reversal",
-          "level": 33
+          "slug": "reversal"
         },
         {
+          "level": 37,
           "uuid": "Compendium.ptu.moves.Item.nCusDz6ql9O2Ypnf",
-          "slug": "ice-hammer",
-          "level": 37
+          "slug": "ice-hammer"
         },
         {
+          "level": 42,
           "uuid": "Compendium.ptu.moves.Item.K7oM1QaqyugwZzbF",
-          "slug": "iron-defense",
-          "level": 42
+          "slug": "iron-defense"
         },
         {
+          "level": 45,
           "uuid": "Compendium.ptu.moves.Item.vg4sghb5ZX1spGho",
-          "slug": "dynamic-punch",
-          "level": 45
+          "slug": "dynamic-punch"
         },
         {
+          "level": 49,
           "uuid": "Compendium.ptu.moves.Item.7CkvaKCsI8Oyb3LO",
-          "slug": "close-combat",
-          "level": 49
+          "slug": "close-combat"
         }
       ],
       "machine": [
@@ -473,7 +477,14 @@
       "Alola"
     ],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "type": {
+      "0": "Fighting",
+      "1": "Ice",
+      "2": ""
+    },
+    "stackSlugs": false,
+    "enabled": false
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "dljUGxtO8AR0tERN",
@@ -484,7 +495,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.1.4",

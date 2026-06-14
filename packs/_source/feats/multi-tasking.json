@@ -9,7 +9,10 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -77,7 +80,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "20 Speed Stat, Master Acrobatics"
+      "prereqBackup": "20 Speed Stat, Master Acrobatics",
+      "automationStatus": "needs-automation",
+      "devNote": "Removed as part of Capture Update, this Feature could be deleted when appropriate",
+      "used": null,
+      "showInTokenPanel": false
     }
   },
   "_stats": {

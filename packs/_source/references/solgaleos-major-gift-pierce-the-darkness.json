@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift – Core of the Sun\nStatic\nEffect: You gain the Glow and Darkvision Capabilities.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.aHpeHwudtdBQsXYY]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.capabilities.Item.v4OOr4KlIO0DKw5r] and @UUID[Compendium.ptu.capabilities.Item.zzJWpOj40dLelBm5] Capabilities.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "UiaU3RJuSVEfrPkG",
-  "flags": {}
+  "_id": "UiaU3RJuSVEfrPkG"
 }

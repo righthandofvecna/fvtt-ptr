@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Thunder Spirit\nEffect: You gain the Electric Surge Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.TIo9a1nC6DJwkvIJ]\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.l2ndtx1ONzj0kohL] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "JcMxPTCxBaSMYsWt",
-  "flags": {}
+  "_id": "JcMxPTCxBaSMYsWt"
 }

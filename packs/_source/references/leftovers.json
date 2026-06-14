@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Chef Recipes",
-    "effect": "Prerequisites: Complex Aftertaste Cost: $100 Effect: You create Leftovers. ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.YAVPfEAYqLUdRFns]\nCost: $100\nEffect: You create @UUID[Compendium.ptu.items.Item.gKLH9MtGnLh0OPR4]. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

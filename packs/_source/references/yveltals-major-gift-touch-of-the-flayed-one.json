@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Touch of Death Daily x3 – Free Action Trigger: You inflict Injuries on a Target. Effect: You inflict an additional Injury.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.0EVKSbyPCs2XLT8d]\nDaily x3 – Free Action\nTrigger: You inflict Injuries on a Target\nEffect: You inflict an additional Injury.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

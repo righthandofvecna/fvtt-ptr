@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Effect: You reroll all dice that result in a roll of 1 when making Survival Checks related to plants. You automatically identify all berries and apricorns on sight.",
+    "effect": "Prerequisites: GM Permission\nEffect: You reroll all dice that result in a roll of 1 when making Survival Checks related to plants. You automatically identify all berries and apricorns on sight.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

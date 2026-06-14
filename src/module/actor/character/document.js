@@ -10,6 +10,14 @@ class PTUTrainerActor extends PTUActor {
         return ["feat", "edge", "move", "contestmove", "ability", "item", "capability", "effect", "condition", "dexentry"]
     }
 
+    get apl() {
+        // the average level of the top 3 party members
+        const party = game.actors.filter(a => a.hasPlayerOwner && a.flags?.ptu?.party?.trainer === this.id && !a.flags?.ptu?.party?.boxed);
+        const topParty = party.sort((a, b) => b.system.level.current - a.system.level.current).slice(0, 3);
+        const totalLevel = topParty.reduce((sum, actor) => sum + actor.system.level.current, 0);
+        return topParty.length > 0 ? totalLevel / topParty.length : 0;
+    }
+
     /**
      * Get EXP Training data without side effects and duplicating other data effects
      * Calculates trainer level and milestone data for Pokemon EXP Training Level Cap

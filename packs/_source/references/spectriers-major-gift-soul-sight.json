@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Eye of Judgement\nDaily – Swift Action\nEffect: Until the end of the Scene, you gain the Blindsense Capability and +2 accuracy. You may end this effect early as a Free Action when you hit with an attack in order to Confuse the target, and make it Slowed until the Confusion is cured.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.HH9zeUkhseocPtHc]\nDaily – Rapid Action\nEffect: Until the end of the Scene, you gain the @UUID[Compendium.ptu.capabilities.Item.vA7vGdfceeDzi5sc] Capability and +2 accuracy. You may end this effect early as a Free Action when you hit with an attack in order to @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confuse} the target, and make it @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt] until the Confusion is cured.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "1HA8CjOKfdrG3iKz",
-  "flags": {}
+  "_id": "1HA8CjOKfdrG3iKz"
 }

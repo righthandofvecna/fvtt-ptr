@@ -2,7 +2,7 @@
   "name": "Call the Current Rank 2",
   "system": {
     "origin": "",
-    "effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\nRank 2 Moves: Bubblebeam, Waterfall, Whirlpool",
+    "effect": "You learn 2 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\nRank 2 Moves: Bubble Beam, Waterfall, Whirlpool",
     "snippet": "",
     "rules": [
       {
@@ -38,9 +38,9 @@
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm",
+            "value": "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT",
             "predicate": {
-              "not": "move:bubblebeam"
+              "not": "move:bubble-beam"
             }
           },
           {
@@ -117,18 +117,18 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm",
+            "value": "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT",
             "predicate": [
               {
                 "not": {
                   "eq": [
                     "{item|flags.ptu.rulesSelections.rank2move1}",
-                    "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm"
+                    "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT"
                   ]
                 }
               },
               {
-                "not": "move:bubblebeam"
+                "not": "move:bubble-beam"
               }
             ]
           },

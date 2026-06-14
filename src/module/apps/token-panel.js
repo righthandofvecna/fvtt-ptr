@@ -101,7 +101,7 @@ export class TokenPanel extends Application {
         const attacks = [];
         const struggles = [];
         for (const [id, move] of actor.attacks.entries()) {
-            if (move.getFlag("ptu", "showInTokenPanel") === false) continue;
+            if (!move.showInTokenPanel) continue;
             const data = {
                 name: move.name,
                 img: move.img,
@@ -149,8 +149,7 @@ export class TokenPanel extends Application {
         }
 
         const items = actor.itemTypes.item?.sort((a, b) => a.sort - b.sort)?.reduce((acc, item) => {
-            if (item.getFlag("ptu", "showInTokenPanel") === false) return acc;
-            if (item.getFlag("ptu", "showInTokenPanel") !== false && (item.getFlag("ptu", "showInTokenPanel") !== true && !item.roll)) return acc;
+            if (!item.showInTokenPanel) return acc;
             if (item instanceof CONFIG.PTU.Item.documentClasses.pokeball) acc.balls.push(item);
             else acc.other.push(item);
             return acc;
@@ -158,24 +157,24 @@ export class TokenPanel extends Application {
 
         const feats = [];
         for (const feat of actor.itemTypes.feat?.sort((a, b) => a.sort - b.sort) ?? []) {
-            if (feat.getFlag("ptu", "showInTokenPanel") === false) continue;
+            if (!feat.showInTokenPanel) continue;
             feats.push(await this._getItemData(feat));
         }
 
         const abilities = [];
         for (const ability of actor.itemTypes.ability?.sort((a, b) => a.sort - b.sort) ?? []) {
-            if (ability.getFlag("ptu", "showInTokenPanel") === false) continue;
+            if (!ability.showInTokenPanel) continue;
             abilities.push(await this._getItemData(ability));
         }
 
         const edges = [];
         for (const edge of actor.itemTypes.edge?.sort((a, b) => a.sort - b.sort) ?? []) {
-            if (!(edge.getFlag("ptu", "showInTokenPanel") ?? false)) continue;
+            if (!edge.showInTokenPanel) continue;
             edges.push(await this._getItemData(edge));
         }
         
         for (const pokeedge of actor.itemTypes.pokeedge?.sort((a, b) => a.sort - b.sort) ?? []) {
-            if (!(pokeedge.getFlag("ptu", "showInTokenPanel") ?? false)) continue;
+            if (!pokeedge.showInTokenPanel) continue;
             const edgeData = await this._getItemData(pokeedge);
             edgeData.pokeedge = true;
             edges.push(edgeData);
@@ -183,13 +182,13 @@ export class TokenPanel extends Application {
 
         const capabilities = [];
         for (const capability of actor.itemTypes.capability?.sort((a, b) => a.sort - b.sort) ?? []) {
-            if (!(capability.getFlag("ptu", "showInTokenPanel") ?? false)) continue;
+            if (!capability.showInTokenPanel) continue;
             capabilities.push(await this._getItemData(capability));
         }
 
         const effects = [];
         for (const effect of actor.itemTypes.effect?.sort((a, b) => a.sort - b.sort) ?? []) {
-            if (effect.getFlag("ptu", "showInTokenPanel") === false) continue;
+            if (!effect.showInTokenPanel) continue;
             effects.push({
                 parent: effect.parent.id,
                 ...await this._getItemData(effect),

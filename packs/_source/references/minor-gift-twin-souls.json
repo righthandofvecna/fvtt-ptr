@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: GM Permission Static Effect: You and the Mewtwo you are bound to may  communicate telepathically, no matter the distance  between you. You are also gifted the Soulbound Edge.",
+    "effect": "Prerequisites: GM Permission\nStatic\nEffect: You and the Mewtwo you are bound to may communicate telepathically, no matter the distance between you. You are also gifted the @UUID[Compendium.ptu.edges.Item.HFwgiPAnzXc29T0k] Edge.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

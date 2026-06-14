@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: All Mew Major Gifts Activate Once/10 - Extended Action Target: Your Pokémon with at least 3 Tutor Points Effect: Your Pokémon loses 3 Tutor Points and may  make use of any TM or Tutoring effect to learn a  single Move regardless of what it is normally capable  of learning. It must still pay any Tutor Point costs for  this effect. You may only target a Pokémon once with  Origin Tutor.",
+    "effect": "Prerequisites: All Mew Major Gifts\nExtended Action\nTarget: Your Pokémon with at least 3 Tutor Points\nEffect: Your Pokémon loses 3 Tutor Points and may make use of any TM or Tutoring effect to learn a single Move regardless of what it is normally capable of learning. It must still pay any Tutor Point costs for this effect. You may only target a Pokémon once with Origin Tutor. You gain an additional use of this Feature at levels 10, 20, 30, 40 and 50.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

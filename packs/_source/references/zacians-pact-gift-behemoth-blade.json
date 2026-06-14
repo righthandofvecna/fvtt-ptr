@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: All Zacian Major Gifts, Major Gift – Crowned Aura\nStatic\nEffect: You learn the Move Behemoth Blade.",
+    "effect": "Prerequisites: All Zacian Major Gifts, @UUID[Compendium.ptu.references.Item.lpf3fOnlnN0cRJrB]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.o4Kb9IJL7ydqSXlq].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "BWCy2geJjoywQLCW",
-  "flags": {}
+  "_id": "BWCy2geJjoywQLCW"
 }

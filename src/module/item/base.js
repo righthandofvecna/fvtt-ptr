@@ -64,6 +64,10 @@ class PTUItem extends Item {
         return false;
     }
 
+    get showInTokenPanel() {
+        return this.flags.ptu?.showInTokenPanel ?? false;
+    }
+
     get range() {
         return this.system.range?.split(",").map(r => r.trim()) ?? [];
     }

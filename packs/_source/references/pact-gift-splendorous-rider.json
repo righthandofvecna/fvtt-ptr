@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: All Calyrex Major Gifts\nStatic\nEffect: You gain the Splendorous Rider Ability.",
+    "effect": "Prerequisites: All Calyrex Major Gifts\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.nrE7GWATNXEX2kvS] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "j2LonBtBia8YhuvT",
-  "flags": {}
+  "_id": "j2LonBtBia8YhuvT"
 }

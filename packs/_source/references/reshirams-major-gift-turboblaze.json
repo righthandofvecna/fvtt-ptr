@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift - White Yang Static Effect: You gain the Turboblaze Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.sD6L6Jg4iUWGUSjx]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.rqB3GloBH3WNAbTy] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

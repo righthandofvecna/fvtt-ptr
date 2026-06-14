@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Elemental Soul Static Effect: You gain the Volt Absorb Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.8y5qkjIICUuwYaO8]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.7Q8Gplr8sh2uNdxg] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

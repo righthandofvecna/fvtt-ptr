@@ -57,19 +57,23 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.zD1PzgKSmLvIWMh0",
         "slug": "bouwee",
-        "level": 1,
         "other": {
-          "restrictions": []
+          "restrictions": [
+            ""
+          ]
         }
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.62MuAacjQVfhjFrw",
         "slug": "scubug",
-        "level": 25,
         "other": {
-          "restrictions": []
+          "restrictions": [
+            ""
+          ]
         }
       }
     ],
@@ -103,7 +107,7 @@
       "highJump": 1,
       "longJump": 1,
       "power": 1,
-      "naturewalk": [],
+      "naturewalk": "",
       "other": [
         {
           "slug": "fountain",
@@ -130,84 +134,84 @@
     "moves": {
       "level": [
         {
-          "slug": "splash",
+          "level": 1,
           "uuid": "Compendium.ptu.moves.Item.1OeCu4MotfnHbck4",
-          "level": 1
+          "slug": "splash"
         },
         {
-          "slug": "water-sport",
+          "level": 1,
           "uuid": "Compendium.ptu.moves.Item.aQC3OZK3LUV4UHj2",
-          "level": 1
+          "slug": "water-sport"
         },
         {
-          "slug": "struggle-bug",
+          "level": 1,
           "uuid": "Compendium.ptu.moves.Item.Hm5nTF5Wh5UusvYM",
-          "level": 1
+          "slug": "struggle-bug"
         },
         {
-          "slug": "bubble",
+          "level": 5,
           "uuid": "Compendium.ptu.moves.Item.5h0l5eITZN4LdYqj",
-          "level": 5
+          "slug": "bubble"
         },
         {
-          "slug": "supersonic",
+          "level": 9,
           "uuid": "Compendium.ptu.moves.Item.I8d7of2dA9eAP0OG",
-          "level": 9
+          "slug": "supersonic"
         },
         {
-          "slug": "bug-bite",
+          "level": 13,
           "uuid": "Compendium.ptu.moves.Item.NOJaY2kH3aQcaexD",
-          "level": 13
+          "slug": "bug-bite"
         },
         {
-          "slug": "soak",
+          "level": 17,
           "uuid": "Compendium.ptu.moves.Item.sKWmTZ2uB6fKrhmo",
-          "level": 17
+          "slug": "soak"
         },
         {
-          "slug": "bubblebeam",
-          "uuid": "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm",
-          "level": 21
+          "level": 21,
+          "uuid": "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT",
+          "slug": "bubble-beam"
         },
         {
-          "slug": "dive",
+          "level": 25,
           "uuid": "Compendium.ptu.moves.Item.5P4ZKecoBzCd8vh5",
-          "level": 25
+          "slug": "dive"
         },
         {
+          "level": 29,
           "uuid": "Compendium.ptu.moves.Item.A1JQ5m8AfYagGXzv",
-          "slug": "web-ball",
-          "level": 29
+          "slug": "web-ball"
         },
         {
-          "slug": "aqua-jet",
+          "level": 33,
           "uuid": "Compendium.ptu.moves.Item.Htb3LXoNd24yFNEG",
-          "level": 33
+          "slug": "aqua-jet"
         },
         {
-          "slug": "muddy-water",
+          "level": 37,
           "uuid": "Compendium.ptu.moves.Item.updKSTwGuQaZfbTk",
-          "level": 37
+          "slug": "muddy-water"
         },
         {
-          "slug": "agility",
+          "level": 41,
           "uuid": "Compendium.ptu.moves.Item.aS33KlxhRCP0s5Zd",
-          "level": 41
+          "slug": "agility"
         },
         {
-          "slug": "rain-dance",
+          "level": 45,
           "uuid": "Compendium.ptu.moves.Item.TQrk7QpDTMSD7Ycz",
-          "level": 45
+          "slug": "rain-dance"
         },
         {
-          "slug": "baton-pass",
+          "level": 49,
           "uuid": "Compendium.ptu.moves.Item.uZjoE8y3gbmlRVcc",
-          "level": 49
+          "slug": "baton-pass"
         },
         {
-          "slug": "bug-buzz",
+          "level": 53,
           "uuid": "Compendium.ptu.moves.Item.e6iWUraE813j6eXu",
-          "level": 53
+          "slug": "bug-buzz"
         }
       ],
       "machine": [
@@ -491,7 +495,14 @@
     },
     "keywords": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "type": {
+      "0": "Bug",
+      "1": "Water",
+      "2": ""
+    },
+    "stackSlugs": false,
+    "enabled": false
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "CMymFngAhNsaPlS5",
@@ -502,7 +513,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.1.4",

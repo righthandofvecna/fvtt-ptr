@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Experience of Ages\nScene – Free Action, Interrupt\nTrigger: A Trainer or Pokémon within 3m of you is hit by an attack\nEffect: For one full round, the triggering creature, and all other allies hit by the triggering attack, resists all damage one step further.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.ooBZnPGp1yHEcieJ]\nScene – Free Action, Interrupt\nTrigger: A Trainer or Pokémon within 3m of you is hit by an attack\nEffect: For one full round, the triggering creature, and all other allies hit by the triggering attack, resists all damage one step further.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "QnchBsTF3WSt99iS",
-  "flags": {}
+  "_id": "QnchBsTF3WSt99iS"
 }

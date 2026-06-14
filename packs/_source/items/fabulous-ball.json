@@ -7,6 +7,8 @@
     "rules": [],
     "enabled": true,
     "slug": "fabulous-ball",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -58,8 +60,7 @@
     "automation": [],
     "name": "Fabulous Ball",
     "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": ""
+    "modifier": null
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/fabulous ball.webp",
@@ -67,13 +68,19 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.31",
     "coreVersion": "13.351",
     "createdTime": 1683368795174,
-    "modifiedTime": 1778200842473,
+    "modifiedTime": 1781458214572,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

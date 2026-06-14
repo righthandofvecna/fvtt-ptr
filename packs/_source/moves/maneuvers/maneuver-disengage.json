@@ -48,9 +48,9 @@
       }
     },
     "actionCost": {
-      "standard": true,
+      "standard": false,
       "rapid": false,
-      "shift": false,
+      "shift": true,
       "free": false,
       "extended": false
     },
@@ -77,7 +77,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

@@ -15348,7 +15348,7 @@ export const pokemonData = [
             },
             {
                 "Level":22,
-                "Move":"Bubblebeam"
+                "Move":"Bubble Beam"
             },
             {
                 "Level":25,
@@ -15567,7 +15567,7 @@ export const pokemonData = [
             },
             {
                 "Level":24,
-                "Move":"Bubblebeam"
+                "Move":"Bubble Beam"
             },
             {
                 "Level":28,
@@ -15784,7 +15784,7 @@ export const pokemonData = [
             },
             {
                 "Level":24,
-                "Move":"Bubblebeam"
+                "Move":"Bubble Beam"
             },
             {
                 "Level":28,
@@ -84621,7 +84621,7 @@ export const pokemonData = [
             },
             {
                 "Level":17,
-                "Move":"Bubblebeam"
+                "Move":"Bubble Beam"
             },
             {
                 "Level":22,
@@ -84830,7 +84830,7 @@ export const pokemonData = [
             },
             {
                 "Level":17,
-                "Move":"Bubblebeam"
+                "Move":"Bubble Beam"
             },
             {
                 "Level":22,
@@ -145972,7 +145972,7 @@ export const pokemonData = [
             },
             {
                 "Level":16,
-                "Move":"Bubblebeam"
+                "Move":"Bubble Beam"
             },
             {
                 "Level":21,
@@ -146178,7 +146178,7 @@ export const pokemonData = [
             },
             {
                 "Level":16,
-                "Move":"Bubblebeam"
+                "Move":"Bubble Beam"
             },
             {
                 "Level":21,

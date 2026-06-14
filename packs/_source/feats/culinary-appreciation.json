@@ -2,7 +2,7 @@
   "name": "Culinary Appreciation",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 2 Tutor Points remaining\nEffect: The target loses 2 Tutor Points and gains the Gluttony Ability.\nRecipe - Bait Mixer",
+    "effect": "Target: Your Pokémon with at least 2 Tutor Points remaining\nEffect: The target loses 2 Tutor Points and gains the @UUID[Compendium.ptu.abilities.Item.r5RAP7wiKkOLZ81U] Ability.\nRecipe - @UUID[Compendium.ptu.references.Item.dyeL0hpSXSe1djBw]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -67,7 +67,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Chef"
+      "prereqBackup": "Chef",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

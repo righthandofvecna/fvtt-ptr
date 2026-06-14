@@ -7,6 +7,8 @@
     "rules": [],
     "enabled": true,
     "slug": "kelpsy-berry",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +27,8 @@
     "stackSlugs": false,
     "keywords": [
       "Berry",
-      "Tier 3"
+      "Tier 3",
+      "Wild Drop"
     ],
     "frequency": {
       "type": "at-will",
@@ -58,9 +61,7 @@
     "container": false,
     "automation": [],
     "name": "Kelpsy Berry",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": ""
+    "useCount": 0
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/kelpsy berry.webp",
@@ -68,13 +69,19 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.31",
     "coreVersion": "13.351",
     "createdTime": 1683368861229,
-    "modifiedTime": 1778200840954,
+    "modifiedTime": 1781458424543,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

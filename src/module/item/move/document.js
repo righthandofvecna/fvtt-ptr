@@ -13,6 +13,10 @@ class PTUMove extends PTUItem {
         return !this.rollable && this.system.frequency?.type !== "static";
     }
 
+    get showInTokenPanel() {
+        return this.flags.ptu?.showInTokenPanel ?? true;
+    }
+
     /** @override */
     get rollOptions() {
         const options = super.rollOptions;
