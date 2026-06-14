@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: All MissingNo Major Gifts Daily - Standard Action Target: Legendary Pokémon  Effect: Dispel one of the target’s Legendary Auras for  the rest of the encounter.",
+    "effect": "Prerequisites: All MissingNo Major Gifts\nDaily - Standard Action\nTarget: Legendary Pokémon \nEffect: Dispel one of the target’s Legendary Auras for the rest of the encounter.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

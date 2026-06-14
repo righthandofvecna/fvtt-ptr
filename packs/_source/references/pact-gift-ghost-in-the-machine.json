@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: All MissingNo Major Gifts Static Effect: You gain the Wired capability. Electronics  you are occupying gradually degrade and begin to  malfunction over time",
+    "effect": "Prerequisites: All MissingNo Major Gifts\nStatic\nEffect: You gain the @UUID[Compendium.ptu.capabilities.Item.qL3NoxglZIBtFB1r] capability. Electronics you are occupying gradually degrade and begin to malfunction over time.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
