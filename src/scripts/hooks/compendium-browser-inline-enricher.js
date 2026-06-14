@@ -38,7 +38,7 @@ function multiselects(positives, negatives, conjunction, paramName, filterData) 
             return {
                 value: value,
                 not: true,
-                label: filterData.multiselects[paramName].options.find(o => o.value === value).label
+                label: filterData.multiselects[paramName].options.find(o => o.value === value)?.label ?? value
             }
         })
     const poss = positives
@@ -46,7 +46,7 @@ function multiselects(positives, negatives, conjunction, paramName, filterData) 
         .map(value => {
             return {
                 value: value,
-                label: filterData.multiselects[paramName].options.find(o => o.value === value).label
+                label: filterData.multiselects[paramName].options.find(o => o.value === value)?.label ?? value
             }
         })
 
@@ -117,7 +117,7 @@ export const CompendiumBrowserInlineEnricher = {
         // stuff with an anchor https://discord.com/channels/170995199584108546/722559135371231352/1192834854614737068
         Hooks.on('setup', () => {
             CONFIG.TextEditor.enrichers.push({
-                pattern: /@CompSearch\[([A-Za-z]+) ?([0-9a-zA-Z\-= ]*)\](:?{(:?[^\[\]\{\}@]*)?})?/gim,
+                pattern: /@CompSearch\[([A-Za-z]+) ?([0-9a-zA-Z\-=" ]*)\](:?{(:?[^\[\]\{\}@]*)?})?/gim,
                 enricher: async (match, enrichmentOptions) => {
                     const [tabName, paramString, displayText] = match.slice(1, 4)
                     const tabNameSlug = CONFIG.PTU.util.sluggify(tabName, { camel: "dromedary" })
@@ -138,15 +138,21 @@ export const CompendiumBrowserInlineEnricher = {
                     }
                     else {
                         const pValues = {}
-                        pValues["search"] = paramString.split(" ").filter(p => !p.includes("="))
-                        const params = paramString.split(" ").filter(p => p.includes("="))
-                        for (const param of params) {
-                            const [pName, pValue] = param.split(/=(.*)/s).splice(0, 2)
-                            if (!pValues[pName]) pValues[pName] = new Set()
-                            pValues[pName].add(pValue)
+                        pValues["search"] = []
+                        // Tokenize param string, supporting key="quoted value with spaces"
+                        const tokenRe = /([A-Za-z0-9\-]+)(?:(=)(?:"([^"]*)"|([A-Za-z0-9\-]*)))?/g
+                        for (const token of paramString.matchAll(tokenRe)) {
+                            const [, name, eq, quotedVal, unquotedVal] = token
+                            if (eq !== undefined) {
+                                const value = quotedVal !== undefined ? quotedVal : (unquotedVal ?? "")
+                                if (!pValues[name]) pValues[name] = new Set()
+                                pValues[name].add(value)
+                            } else {
+                                pValues["search"].push(name)
+                            }
                         }
                         for (const pName of Object.keys(pValues)) {
-                            a.setAttribute(`compendium-filter-setting-${pName}`, Array.from(pValues[pName]).join(" "))
+                            a.setAttribute(`compendium-filter-setting-${pName}`, Array.from(pValues[pName]).join(","))
                         }
                         a.innerHTML = `<i class="fas fa-th-list"></i>`
                         a.insertAdjacentText("beforeend", displayText?.replace("{","")?.replace("}","") || `${tabName} Search`)
@@ -156,129 +162,113 @@ export const CompendiumBrowserInlineEnricher = {
             });
         })
 
-        // This function adds Event Listeners to the given htmlElement for the compendium-link anchors
-        // that the previous enricher will have added to the content
-        const activateCompendiumEnricherListener = (htmlElement) => {
-            if(!htmlElement) return;
-            htmlElement.querySelectorAll(`.compendium-link`).forEach(el => {
-                el.addEventListener("click", async (event) => {
-                    let tabKey = el.getAttribute("compendium-link-tab")
-                    if (tabKey === "pokeedges") tabKey = "pokeEdges";
-                    /** @type {CompendiumBrowserTab} */
-                    const tab = game.ptu.compendiumBrowser.tabs[tabKey]
+        // Register a single global delegated listener so .compendium-link works
+        // anywhere in the DOM (actor sheets, embedded items, journal pages, chat, etc.)
+        Hooks.once("ready", () => {
+            document.body.addEventListener("click", async (event) => {
+                const el = event.target.closest(".compendium-link");
+                if (!el) return;
 
-                    if (!tab) {
-                        if(!event.currentTarget.classList.contains("broken")) {
-                            event.currentTarget.classList.add("broken")
-                            event.currentTarget.firstChild.outerHTML = `<i class="fas fa-unlink"></i>`
-                        };
-                        ui.notifications.warn(game.i18n.format("PTU.CompendiumBrowser.Enrichment.UnknownTab", { tabName: tabKey }));
-                        return;
+                event.preventDefault();
+
+                let tabKey = el.getAttribute("compendium-link-tab");
+                if (tabKey === "pokeedges") tabKey = "pokeEdges";
+                /** @type {CompendiumBrowserTab} */
+                const tab = game.ptu.compendiumBrowser.tabs[tabKey];
+
+                if (!tab) {
+                    if (!el.classList.contains("broken")) {
+                        el.classList.add("broken");
+                        el.firstChild.outerHTML = `<i class="fas fa-unlink"></i>`;
                     }
+                    ui.notifications.warn(game.i18n.format("PTU.CompendiumBrowser.Enrichment.UnknownTab", { tabName: tabKey }));
+                    return;
+                }
 
-                    const prefix = "compendium-filter-setting-"
+                const prefix = "compendium-filter-setting-";
 
-                    const allElAttributes = el.getAttributeNames()
-                    const params = allElAttributes.filter(pName => pName.startsWith(prefix)).map(s => {
-                        return {
-                            name: s.substring(26),
-                            rawString: el.getAttribute(s),
-                            used: false
-                        }
-                    })
-                    const usedParams = []
-
-                    let filterData = await tab.getFilterData()
-
-                    const searchWords = el.getAttribute(prefix + "search")
-                    usedParams.push("search")
-                    filterData = search(searchWords.split(" "), filterData);
-
-                    const orderBy = el.getAttribute(prefix + "order-by")
-                    const orderDir = el.getAttribute(prefix + "order-dir")
-                    usedParams.push("order-by")
-                    usedParams.push("order-dir")
-
-                    filterData = order(orderBy, orderDir, filterData)
-
-                    if (filterData.checkboxes) {
-                        for (const checkboxName of Object.keys(filterData.checkboxes)) {
-                            const checkboxString = el.getAttribute(prefix + checkboxName)
-                            usedParams.push(checkboxName)
-                            if (checkboxString) {
-                                filterData = checkboxes(checkboxString.split(" "), checkboxName, filterData)
-                            }
-                        }
+                const allElAttributes = el.getAttributeNames();
+                const params = allElAttributes.filter(pName => pName.startsWith(prefix)).map(s => {
+                    return {
+                        name: s.substring(26),
+                        rawString: el.getAttribute(s),
+                        used: false
                     }
-                    if (filterData.selects) {
-                        for (const selectName of Object.keys(filterData.selects)) {
-                            const selectString = el.getAttribute(prefix + selectName)
-                            usedParams.push(selectName)
-                            if (selectString) {
-                                filterData = selects(selectString, selectName, filterData)
-                            }
+                });
+                const usedParams = [];
+
+                let filterData = await tab.getFilterData();
+
+                const searchWords = el.getAttribute(prefix + "search");
+                usedParams.push("search");
+                filterData = search(searchWords.split(","), filterData);
+
+                const orderBy = el.getAttribute(prefix + "order-by");
+                const orderDir = el.getAttribute(prefix + "order-dir");
+                usedParams.push("order-by");
+                usedParams.push("order-dir");
+
+                filterData = order(orderBy, orderDir, filterData);
+
+                if (filterData.checkboxes) {
+                    for (const checkboxName of Object.keys(filterData.checkboxes)) {
+                        const checkboxString = el.getAttribute(prefix + checkboxName);
+                        usedParams.push(checkboxName);
+                        if (checkboxString) {
+                            filterData = checkboxes(checkboxString.split(","), checkboxName, filterData);
                         }
                     }
-                    if (filterData.sliders) {
-                        for (const sliderName of Object.keys(filterData.sliders)) {
-                            const min = el.getAttribute(prefix + `${sliderName}-min`)
-                            const max = el.getAttribute(prefix + `${sliderName}-max`)
-                            usedParams.push(`${sliderName}-min`)
-                            usedParams.push(`${sliderName}-max`)
-                            if (min || max) {
-                                filterData = sliders(min, max, sliderName, filterData)
-                            }
+                }
+                if (filterData.selects) {
+                    for (const selectName of Object.keys(filterData.selects)) {
+                        const selectString = el.getAttribute(prefix + selectName);
+                        usedParams.push(selectName);
+                        if (selectString) {
+                            filterData = selects(selectString, selectName, filterData);
                         }
                     }
-                    if (filterData.multiselects) {
-                        for (const multiselectName of Object.keys(filterData.multiselects)) {
-                            const multString = el.getAttribute(prefix + multiselectName)
-                            usedParams.push(multiselectName)
-                            if (multString) {
-                                const positives = multString.split(" ").filter(s => !s.startsWith("not-"))
-                                const negatives = multString.split(" ").filter(s => s.startsWith("not-")).map(s => s.substring(4))
-                                const conjunction = el.getAttribute(prefix + `${multiselectName}-logic`)
-                                usedParams.push(`${multiselectName}-logic`)
-                                filterData = multiselects(positives, negatives, conjunction, multiselectName, filterData)
-                            }
+                }
+                if (filterData.sliders) {
+                    for (const sliderName of Object.keys(filterData.sliders)) {
+                        const min = el.getAttribute(prefix + `${sliderName}-min`);
+                        const max = el.getAttribute(prefix + `${sliderName}-max`);
+                        usedParams.push(`${sliderName}-min`);
+                        usedParams.push(`${sliderName}-max`);
+                        if (min || max) {
+                            filterData = sliders(min, max, sliderName, filterData);
                         }
                     }
-
-                    params.filter(p => !usedParams.includes(p.name)).forEach(param => ui.notifications.warn(game.i18n.format("PTU.CompendiumBrowser.Enrichment.UnknownFilterSetting", {
-                        filterName: param.name,
-                        tabName: tabKey
-                    })))
-
-                    try {
-                        await tab.open(filterData)
-                    } catch (e) {
-                        ui.notifications.error(game.i18n.format("PTU.CompendiumBrowser.Enrichment.LikelyMalformedExpressionBrowserCrashed"));
-                        throw e;
+                }
+                if (filterData.multiselects) {
+                    for (const multiselectName of Object.keys(filterData.multiselects)) {
+                        const multString = el.getAttribute(prefix + multiselectName);
+                        usedParams.push(multiselectName);
+                        if (multString) {
+                            const positives = multString.split(",").filter(s => !s.startsWith("not-"));
+                            const negatives = multString.split(",").filter(s => s.startsWith("not-")).map(s => s.substring(4));
+                            const conjunction = el.getAttribute(prefix + `${multiselectName}-logic`);
+                            usedParams.push(`${multiselectName}-logic`);
+                            filterData = multiselects(positives, negatives, conjunction, multiselectName, filterData);
+                        }
                     }
-                })
-            })
-        }
+                }
 
-        // These Sheets should be interactive, such that clicking on the anchor actually does something
-        // Due to some performance stutters during development, those are relatively restrictive.
-        // It the anchor appears somehwere where it should also work, add an appropriate hook here
-        Hooks.on("renderJournalTextPageSheet", (journal, $html) => {
-            // maybe related to why this does do need a filter? https://github.com/foundryvtt/foundryvtt/issues/3088
-            const journalHtmlElement = $html.filter(".journal-page-content").get(0);
-            activateCompendiumEnricherListener(journalHtmlElement)
+                params.filter(p => !usedParams.includes(p.name)).forEach(param => ui.notifications.warn(game.i18n.format("PTU.CompendiumBrowser.Enrichment.UnknownFilterSetting", {
+                    filterName: param.name,
+                    tabName: tabKey
+                })));
 
+                try {
+                    await tab.open(filterData);
+                } catch (e) {
+                    ui.notifications.error(game.i18n.format("PTU.CompendiumBrowser.Enrichment.LikelyMalformedExpressionBrowserCrashed"));
+                    throw e;
+                }
+            });
         });
+
         Hooks.on("renderChatMessageHTML", (message, html) => {
-            // maybe related to why this does not need a filter? https://github.com/foundryvtt/foundryvtt/issues/3088
-            const messageHtmlElement = html;
-            activateCompendiumEnricherListener(messageHtmlElement)
-
-            message.activateListeners($(html))
-        });
-        Hooks.on("renderPTUItemSheet", (itemSheet, $html) => {
-            // maybe related to why this does not need a filter? https://github.com/foundryvtt/foundryvtt/issues/3088
-            const itemHtmlElement = $html.get(0)
-            activateCompendiumEnricherListener(itemHtmlElement)
+            message.activateListeners($(html));
         });
     }
 }
