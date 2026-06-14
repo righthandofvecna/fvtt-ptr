@@ -67,6 +67,17 @@ class CombatXPDialog extends FormApplication {
             });
         }
 
+        // significance factor
+        const apl = [...trainerMap.values()].reduce((sum, { trainer }) => sum + (trainer.apl || 0), 0) / trainerMap.size || 1;
+        const significance = budget / (apl * trainerCount);
+        const sigMult = 1 + (0.2 * significance);
+        const rewardTotal = Math.ceil(budget * trainerCount * sigMult / 100) * 100; // round up to nearest 100
+        const isTrainerBattle = false; // TODO
+
+        // figure out how much money and materials to award
+        // TODO
+
+
         return {
             budget,
             trainerCount,

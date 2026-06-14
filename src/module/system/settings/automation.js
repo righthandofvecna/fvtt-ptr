@@ -77,7 +77,7 @@ const AutomationSettingsConfig = {
         name: "PTU.Settings.Automation.XpToTrainerPool.Name",
         hint: "PTU.Settings.Automation.XpToTrainerPool.Hint",
         type: Boolean,
-        default: false,
+        default: true,
     },
     "dexOnScan": {
         name: "PTU.Settings.Automation.DexOnScan.Name",
