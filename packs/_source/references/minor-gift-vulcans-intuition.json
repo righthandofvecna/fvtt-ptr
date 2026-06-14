@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Static Effect: You get a +3 bonus to Perception and Survival  Checks made in mountainous and volcanic areas.",
+    "effect": "Prerequisites: GM Permission\nStatic\nEffect: You get a +3 bonus to Perception and Survival Checks made in mountainous and volcanic areas.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

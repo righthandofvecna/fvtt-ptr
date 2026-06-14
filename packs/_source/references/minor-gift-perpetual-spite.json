@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission\nEffect: While Enraged, you have no restrictions on which actions you can take.",
+    "effect": "Prerequisites: GM Permission\nEffect: While @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Enraged}, you have no restrictions on which actions you can take.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "_id": "2QX54uMmomLWoUev",
-  "effects": [],
-  "flags": {}
+  "effects": []
 }

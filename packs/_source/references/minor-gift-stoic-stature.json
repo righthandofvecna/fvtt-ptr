@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Effect: You subtract half of your Athletics or Focus Ranks from the number of meters Push effects move you.",
+    "effect": "Prerequisites: GM Permission\nEffect: You subtract half of your Athletics or Focus Ranks from the number of meters Push effects move you.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
