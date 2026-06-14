@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Legendary Blessings: Rank 1 Blessings",
-    "effect": "Messiah: Scene x3 – Free Action Signer: Free Action Trigger: You hit an enemy with a Struggle Attack Messiah Effect: Your Struggle Attack’s Type matches that of your Patron. If your Patron has two Types, choose one. Signer Effect: Your Struggle Attack deals Typeless Damage.",
+    "effect": "Messiah: Scene x3 – Free Action\nSigner: Free Action\nTrigger: You hit an enemy with a Struggle Attack Messiah Effect: Your Struggle Attack’s Type matches that of your Patron. If your Patron has two Types, choose one.\nSigner Effect: Your Struggle Attack deals Typeless Damage.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

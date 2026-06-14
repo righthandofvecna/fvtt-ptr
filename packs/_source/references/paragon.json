@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Legendary Blessings: Rank 1 Blessings",
-    "effect": "Messiah: Static Signer: Rapid Action Messiah Effect: When you take Paragon, choose either Body, Mind or Spirit. You gain +2 to all Skill Checks made with Skills under that group. Signer Effect: You instead choose one of these Skill Groups, and gain a +1 bonus to this all Skill Checks under this category. This lasts until the end of the Scene. You may choose a different Skill Group each time you activate Paragon.",
+    "effect": "Messiah: Static\nSigner: Rapid Action\nMessiah Effect: When you take Paragon, choose either Body, Mind or Spirit. You gain +2 to all Skill Checks made with Skills under that group.\nSigner Effect: You instead choose one of these Skill Groups, and gain a +1 bonus to this all Skill Checks under this category. This lasts until the end of the Scene. You may choose a different Skill Group each time you activate Paragon.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

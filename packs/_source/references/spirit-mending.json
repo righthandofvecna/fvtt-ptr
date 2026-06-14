@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Legendary Blessings: Rank 1 Blessings",
-    "effect": "Messiah: Daily x3 – Standard Action Signer: Standard Action Target: A Pokémon or Trainer Messiah Effect: When using Spirit Mending, choose one of the following: The Target is Heals 30 HP, or the Target recovers two Injuries. Signer Effect: The target recovers 50 HP and one Injury.",
+    "effect": "Messiah: Daily x3 – Standard Action\nSigner: Standard Action\nTarget: A Pokémon or Trainer\nMessiah Effect: When using Spirit Mending, choose one of the following: The Target is Heals 30 HP, or the Target recovers two Injuries.\nSigner Effect: The target recovers 50 HP and one Injury.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

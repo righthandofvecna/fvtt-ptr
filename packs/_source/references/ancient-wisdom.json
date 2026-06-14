@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Legendary Blessings: Rank 1 Blessings",
-    "effect": "Messiah: Static Signer: Free Action Messiah Effect: You gain an extra Dice on Education: Occult checks, as well as any Check dealing with Occult topics or situations. Signer Effect: You may use Ancient Wisdom while making an Education: Occult check to add an additional Two Dice.",
+    "effect": "Messiah: Static\nSigner: Free Action\nMessiah Effect: You gain an extra Dice on Occult Education checks, as well as any Check dealing with Occult topics or situations.\nSigner Effect: You may use Ancient Wisdom while making an Occult Education check to add an additional Two Dice.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
