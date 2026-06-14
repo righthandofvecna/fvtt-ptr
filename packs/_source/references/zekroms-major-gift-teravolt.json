@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift - Black Yin Static Effect: You gain the Teravolt Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.kZaLwooF8RksrUnO]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.Z5Z6Yv2qpo48oNki] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
