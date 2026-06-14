@@ -38,6 +38,9 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Improve logic for "Show In Token Panel"](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/965)
+- Money and Item reward system post-combat
+- [@CompSearch Enricher fixes](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/964)
 - Initial Foundry v14 compatibility
 - Add button for applying effects from non-roll or attack-roll-only items/moves
 - Added Instant Change Rule Element (automated Potions with it)
