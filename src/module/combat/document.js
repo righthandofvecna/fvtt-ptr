@@ -16,6 +16,10 @@ class PTUCombat extends Combat {
         return budget;
     }
 
+    get hasEnemyTrainers() {
+        return this.combatants.some(c => c.actor?.type === "character" && !c.actor.hasPlayerOwner && c.token?.disposition < 0);
+    }
+
     /** @override */
     _sortCombatants(a, b) {
         const leagueBattle = game.settings.get("ptu", "leagueBattle");

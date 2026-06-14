@@ -28,7 +28,8 @@
                         <div class="d-flex align-items-center" style="gap: 4px;">
                             <label style="white-space:nowrap;">{{localize "PTU.CombatXP.PoolGrantLabel"}}:</label>
                             <input type="number" name="pool-{{trainer.trainerId}}" value="{{trainer.poolGrant}}" min="0" style="width:60px;" />
-                            <input type="checkbox" name="exclude-trainer-{{trainer.trainerId}}" title="{{localize "PTU.CombatXP.ExcludeLabel"}}" />
+                            <label for="exclude-trainer-{{trainer.trainerId}}">{{localize "PTU.CombatXP.ExcludeLabel"}}</label>
+                            <input type="checkbox" id="exclude-trainer-{{trainer.trainerId}}" name="exclude-trainer-{{trainer.trainerId}}" title="{{localize "PTU.CombatXP.ExcludeLabel"}}" />
                         </div>
                         {{/if}}
                     </div>
@@ -74,6 +75,76 @@
             <p class="hint">{{localize "PTU.CombatXP.NoPokemon"}}</p>
             {{/if}}
         </div>
+        {{!-- Money Rewards (trainer battles) --}}
+        {{#if isTrainerBattle}}
+        <div class="swsh-box mb-2">
+            <div class="swsh-header highlight">
+                <h3 class="m-auto">Money Rewards</h3>
+            </div>
+            <div class="swsh-body p-1">
+                <table class="combat-xp-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Trainer</th>
+                            <th><img src="/systems/ptu/static/css/images/Pokémon_Dollar_sign.svg" style="height:14px;vertical-align:middle;" title="Pokédollars" /></th>
+                            <th>{{localize "PTU.CombatXP.ExcludeLabel"}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each trainers as |trainer|}}
+                        <tr>
+                            <td><img src="{{trainer.trainerImg}}" width="28" height="28" /></td>
+                            <td>{{trainer.trainerName}}</td>
+                            <td><input type="number" name="money-{{trainer.trainerId}}" value="{{lookup ../moneyRewards trainer.trainerId}}" min="0" style="width:80px;" /></td>
+                            <td class="center-text"><input type="checkbox" name="exclude-money-{{trainer.trainerId}}" title="{{localize "PTU.CombatXP.ExcludeLabel"}}" /></td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {{/if}}
+
+        {{!-- Item Rewards --}}
+        <div class="swsh-box mb-2">
+            <div class="swsh-header highlight d-flex align-items-center justify-content-between pt-1 pb-1 pl-1 pr-1">
+                <h3 class="m-auto">Item Rewards</h3>
+                {{#unless isTrainerBattle}}<small class="hint" style="font-weight:normal;">Expected value: {{rewardTotal}}</small>{{/unless}}
+            </div>
+            <div class="swsh-body p-1">
+                {{#if rewardItems.length}}
+                <table class="combat-xp-table" style="margin-bottom:6px;">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Item</th>
+                            <th>Cost</th>
+                            <th>Qty</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each rewardItems as |item i|}}
+                        <tr>
+                            <td><img src="{{item.img}}" width="28" height="28" /></td>
+                            <td>{{item.name}}</td>
+                            <td class="hint">{{item.cost}}</td>
+                            <td><input type="number" name="reward-qty-{{i}}" value="{{item.quantity}}" min="1" style="width:50px;" /></td>
+                            <td><input type="hidden" name="reward-uuid-{{i}}" value="{{item.uuid}}" /><button type="button" data-action="remove-reward-item" data-index="{{i}}" style="padding:0 6px;line-height:1.4;">×</button></td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                {{else}}
+                <p class="hint" style="margin-bottom:4px;">No items yet.</p>
+                {{/if}}
+                <div class="reward-drop-zone" style="border:1px dashed #888;border-radius:3px;padding:6px 8px;text-align:center;min-height:32px;">
+                    <span class="hint">Drop items from a compendium here to add them</span>
+                </div>
+            </div>
+        </div>
+
         <div class="swsh-header highlight d-flex justify-content-end pt-1 pb-1">
             <button type="submit">{{localize "PTU.CombatXP.AwardButton"}}</button>
         </div>
