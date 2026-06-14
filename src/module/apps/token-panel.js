@@ -101,7 +101,7 @@ export class TokenPanel extends Application {
         const attacks = [];
         const struggles = [];
         for (const [id, move] of actor.attacks.entries()) {
-            if (move.getFlag("ptu", "showInTokenPanel") === false) continue;
+            if (!(move.getFlag("ptu", "showInTokenPanel") ?? false)) continue;
             const data = {
                 name: move.name,
                 img: move.img,
@@ -149,8 +149,7 @@ export class TokenPanel extends Application {
         }
 
         const items = actor.itemTypes.item?.sort((a, b) => a.sort - b.sort)?.reduce((acc, item) => {
-            if (item.getFlag("ptu", "showInTokenPanel") === false) return acc;
-            if (item.getFlag("ptu", "showInTokenPanel") !== false && (item.getFlag("ptu", "showInTokenPanel") !== true && !item.roll)) return acc;
+            if (!(item.getFlag("ptu", "showInTokenPanel") ?? false)) return acc;
             if (item instanceof CONFIG.PTU.Item.documentClasses.pokeball) acc.balls.push(item);
             else acc.other.push(item);
             return acc;
@@ -158,13 +157,13 @@ export class TokenPanel extends Application {
 
         const feats = [];
         for (const feat of actor.itemTypes.feat?.sort((a, b) => a.sort - b.sort) ?? []) {
-            if (feat.getFlag("ptu", "showInTokenPanel") === false) continue;
+            if (!(feat.getFlag("ptu", "showInTokenPanel") ?? false)) continue;
             feats.push(await this._getItemData(feat));
         }
 
         const abilities = [];
         for (const ability of actor.itemTypes.ability?.sort((a, b) => a.sort - b.sort) ?? []) {
-            if (ability.getFlag("ptu", "showInTokenPanel") === false) continue;
+            if (!(ability.getFlag("ptu", "showInTokenPanel") ?? false)) continue;
             abilities.push(await this._getItemData(ability));
         }
 
@@ -189,7 +188,7 @@ export class TokenPanel extends Application {
 
         const effects = [];
         for (const effect of actor.itemTypes.effect?.sort((a, b) => a.sort - b.sort) ?? []) {
-            if (effect.getFlag("ptu", "showInTokenPanel") === false) continue;
+            if (!(effect.getFlag("ptu", "showInTokenPanel") ?? false)) continue;
             effects.push({
                 parent: effect.parent.id,
                 ...await this._getItemData(effect),
