@@ -5,7 +5,7 @@
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
-    "effect": "Set-Up Effect: The user becomes Liquefied. While Liquefied, the user is Slowed and cannot take Standard Actions except to Resolve the effect of Acid Armor, the user's Movement is never obstructed by rough or slow terrain, and the user can shift even through the smallest openings. Furthermore, while Liquefied, the user is completely immune to all Physical damage and becomes completely invisible if fully submerged in any liquid. Resolution Effect: The user gains 1 Defense Combat Stage, then stops being liquified.",
+    "effect": "Set-Up Effect: The user becomes Liquefied. While Liquefied, the user is Slowed and cannot take Standard Actions except to Resolve the effect of Acid Armor, the user's Movement is never obstructed by rough or slow terrain, and the user can shift even through the smallest openings. Furthermore, while Liquefied, the user is completely immune to all Physical damage and becomes completely invisible if fully submerged in any liquid. Resolution Effect: The user gains 2 Defense Combat Stages, then stops being liquified.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -81,7 +81,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
