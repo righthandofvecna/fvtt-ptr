@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Earth Spirit\nEffect: You gain the Grassy Surge Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.pKV3nsjH6qJjCKou]\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.XdA1TtDGCYlWIZw9] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "la6wg6jFYQNJLrmm",
-  "flags": {}
+  "_id": "la6wg6jFYQNJLrmm"
 }
