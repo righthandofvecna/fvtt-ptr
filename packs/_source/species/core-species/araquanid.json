@@ -126,64 +126,64 @@
     "moves": {
       "level": [
         {
+          "level": 5,
           "uuid": "Compendium.ptu.moves.Item.trOCAfV84TLLTKk0",
-          "slug": "infestation",
-          "level": 5
+          "slug": "infestation"
         },
         {
+          "level": 8,
           "uuid": "Compendium.ptu.moves.Item.cVvKcL3mPp6NRRPG",
-          "slug": "spider-web",
-          "level": 8
+          "slug": "spider-web"
         },
         {
+          "level": 13,
           "uuid": "Compendium.ptu.moves.Item.NOJaY2kH3aQcaexD",
-          "slug": "bug-bite",
-          "level": 13
+          "slug": "bug-bite"
         },
         {
-          "uuid": "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm",
-          "slug": "bubblebeam",
-          "level": 16
+          "level": 16,
+          "uuid": "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT",
+          "slug": "bubble-beam"
         },
         {
+          "level": 21,
           "uuid": "Compendium.ptu.moves.Item.QMaJ91E3XBatUcV9",
-          "slug": "bite",
-          "level": 21
+          "slug": "bite"
         },
         {
+          "level": 26,
           "uuid": "Compendium.ptu.moves.Item.ywYeIhxlrHb9gOP1",
-          "slug": "aqua-ring",
-          "level": 26
+          "slug": "aqua-ring"
         },
         {
+          "level": 33,
           "uuid": "Compendium.ptu.moves.Item.IqR2d6OPYZMNbYYl",
-          "slug": "leech-life",
-          "level": 33
+          "slug": "leech-life"
         },
         {
+          "level": 38,
           "uuid": "Compendium.ptu.moves.Item.5uY1ltFWijN07CKe",
-          "slug": "crunch",
-          "level": 38
+          "slug": "crunch"
         },
         {
+          "level": 45,
           "uuid": "Compendium.ptu.moves.Item.GVdOLqamIf4d7wJU",
-          "slug": "lunge",
-          "level": 45
+          "slug": "lunge"
         },
         {
+          "level": 50,
           "uuid": "Compendium.ptu.moves.Item.70ikTYAJeGbsEN9K",
-          "slug": "mirror-coat",
-          "level": 50
+          "slug": "mirror-coat"
         },
         {
+          "level": 57,
           "uuid": "Compendium.ptu.moves.Item.iRpfWZ1PSCAeyUEX",
-          "slug": "liquidation",
-          "level": 57
+          "slug": "liquidation"
         },
         {
+          "level": 62,
           "uuid": "Compendium.ptu.moves.Item.9onCqeLjl53i2wH6",
-          "slug": "entrainment",
-          "level": 62
+          "slug": "entrainment"
         }
       ],
       "machine": [
@@ -463,7 +463,8 @@
     },
     "stackSlugs": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "enabled": false
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "dljUGxtO8AR0tERN",
@@ -474,7 +475,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.1.4",
