@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Chef Recipes",
-    "effect": "Prerequisites: Dietician Effect: You create an HP Up, Protein, Iron, Calcium, Zinc, or Carbos for $2450, or Stat Suppressants for $200.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.ARSwYRMcnan5dxsV]\nEffect: You create an @UUID[Compendium.ptu.items.Item.3O9twpEcMY8OqAUf], @UUID[Compendium.ptu.items.Item.baTiBtfxkBDEfu7j], @UUID[Compendium.ptu.items.Item.dXAbrFgm65yJOY2n], @UUID[Compendium.ptu.items.Item.DGYE7zqdeMKxh2Ua], @UUID[Compendium.ptu.items.Item.5pniXj3tb23NxPlr], or @UUID[Compendium.ptu.items.Item.LJHODTRraeg7ykcr] for $2450, or @UUID[Compendium.ptu.items.Item.kUFVOSh0pjgRQil3] for $200.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Twin Souls, Expanded Horizons, Mental  Suggestion Static Effect: You learn the Move Psystrike.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.upHmZLokRIl9ndw4], @UUID[Compendium.ptu.references.Item.mlvWV2f3Jzmkffs2], @UUID[Compendium.ptu.references.Item.932Iq7blbnwvyKKt]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.R099eAx5wWZUmY98].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

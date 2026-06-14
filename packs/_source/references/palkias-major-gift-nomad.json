@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Spatial Awareness Static Effect: You gain the Transporter Ability. Note that this  automatically grants you the Move Teleport.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.9R0mHGvn0DEH51lN]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.OFj1GbCra6Otp6rj] Ability. Note that this automatically grants you the Move @UUID[Compendium.ptu.moves.Item.RJi8fqc4Kx3yZnVJ].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

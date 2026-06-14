@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Legendary Blessings: Rank 2 Blessings",
-    "effect": "Prerequisites: Paragon Messiah: Daily – Free Action Signer: Free Action Messiah Trigger – You fail a Skill Check or Accuracy Roll. Signer Trigger – You roll a Skill Check or Accuracy Roll. Messiah Effect: You may reroll this Skill Check or Accuracy Roll. Signer Effect: You may add +4 to this Skill Check or +2 to this Accuracy Roll.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.O6BYap68R4OMCHbk]\nMessiah: Daily – Free Action\nSigner: Free Action\nMessiah Trigger – You fail a Skill Check or Accuracy Roll.\nSigner Trigger – You roll a Skill Check or Accuracy Roll.\nMessiah Effect: You may reroll this Skill Check or Accuracy Roll.\nSigner Effect: You may add +4 to this Skill Check or +2 to this Accuracy Roll.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

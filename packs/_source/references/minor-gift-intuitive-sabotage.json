@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: GM Permission Static Effect: Whenever you make a Knowledge: Technology  Check to destroy, sabotage, or otherwise disrupt  modern electronics, you get a +3 bonus to your roll.",
+    "effect": "Prerequisites: GM Permission\nStatic\nEffect: Whenever you make a Technology Education check to destroy, sabotage, or otherwise disrupt modern electronics, you get a +3 bonus to your roll.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

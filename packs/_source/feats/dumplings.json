@@ -2,7 +2,7 @@
   "name": "Dumplings",
   "system": {
     "origin": "",
-    "effect": "Ingredient 1: Leftovers, Preserves, or a Snack made with Chef\nIngredient 2: Leftovers or Preserves\nEffect: You mix the two ingredients into one Snack that has the same effect as its ingredients. The two ingredients must be different items.\nDumplings cannot be used to make other Dumpling items.",
+    "effect": "Ingredient 1: @UUID[Compendium.ptu.items.Item.gKLH9MtGnLh0OPR4], @UUID[Compendium.ptu.references.Item.fIEefyw8NQS7ysxI], or a Snack made with @UUID[Compendium.ptu.feats.Item.YhVGlEUkq6BLORNM]\nIngredient 2: Leftovers or Preserves\nEffect: You mix the two ingredients into one Snack that has the same effect as its ingredients. The two ingredients must be different items.\nDumplings cannot be used to make other Dumpling items.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -68,7 +68,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "4 Chef Features, Master Intuition"
+      "prereqBackup": "4 Chef Features, Master Intuition",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

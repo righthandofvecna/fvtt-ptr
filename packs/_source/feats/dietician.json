@@ -2,7 +2,7 @@
   "name": "Dietician",
   "system": {
     "origin": "",
-    "effect": "Your Pokemon can benefit from a maximum of 7 Vitamins.\nRecipe - Vitamins",
+    "effect": "Your Pokemon can benefit from a maximum of 7 Vitamins.\nRecipe - @UUID[Compendium.ptu.references.Item.effc470IUIHipz3S]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -68,7 +68,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Chef, Expert Intuition"
+      "prereqBackup": "Chef, Expert Intuition",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

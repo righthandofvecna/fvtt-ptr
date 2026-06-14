@@ -2,7 +2,7 @@
   "name": "Gift of Power",
   "system": {
     "origin": "",
-    "effect": "Target: A Trainer\nEffect: You gift your target with a Blessing of your own. Whether this makes them Touched, a Signer, or Branded is at your digression. The actual Blessings may not need be the one listed here for your Legendary Form, but ones of your own creation at your GM’s discretion.",
+    "effect": "Target: A Trainer\nEffect: You gift your target with a Blessing of your own. Whether this makes them Touched, a Signer, or Branded is at your discretion. The actual Blessings may not need be the one listed here for your Legendary Form, but ones of your own creation at your GM’s discretion.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -70,7 +70,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Pokemon Form Level 60",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

@@ -57,19 +57,23 @@
     },
     "evolutions": [
       {
-        "slug": "delta-petilil-water",
-        "uuid": "Compendium.ptu.species.Item.uJ6w6ogspwIQBcWm",
         "level": 1,
+        "uuid": "Compendium.ptu.species.Item.uJ6w6ogspwIQBcWm",
+        "slug": "delta-petilil-water",
         "other": {
-          "restrictions": []
+          "restrictions": [
+            ""
+          ]
         }
       },
       {
-        "slug": "delta-lilligant-water",
-        "uuid": "Compendium.ptu.species.Item.ej1O6VNk79g6bWA4",
         "level": 25,
+        "uuid": "Compendium.ptu.species.Item.ej1O6VNk79g6bWA4",
+        "slug": "delta-lilligant-water",
         "other": {
-          "restrictions": []
+          "restrictions": [
+            ""
+          ]
         }
       }
     ],
@@ -122,84 +126,84 @@
     "moves": {
       "level": [
         {
-          "slug": "bubble",
+          "level": 1,
           "uuid": "Compendium.ptu.moves.Item.5h0l5eITZN4LdYqj",
-          "level": 1
+          "slug": "bubble"
         },
         {
-          "slug": "acid-armor",
+          "level": 4,
           "uuid": "Compendium.ptu.moves.Item.joCaLnLmgcLh36ym",
-          "level": 4
+          "slug": "acid-armor"
         },
         {
-          "slug": "aqua-ring",
+          "level": 8,
           "uuid": "Compendium.ptu.moves.Item.ywYeIhxlrHb9gOP1",
-          "level": 8
+          "slug": "aqua-ring"
         },
         {
-          "slug": "mist",
+          "level": 10,
           "uuid": "Compendium.ptu.moves.Item.uaOHYAjzdGsqGBJ0",
-          "level": 10
+          "slug": "mist"
         },
         {
-          "slug": "ember",
+          "level": 13,
           "uuid": "Compendium.ptu.moves.Item.IH2EuCM09nw3lOgQ",
-          "level": 13
+          "slug": "ember"
         },
         {
-          "slug": "recover",
+          "level": 17,
           "uuid": "Compendium.ptu.moves.Item.qJILuzcs4SDgylfD",
-          "level": 17
+          "slug": "recover"
         },
         {
-          "slug": "bubblebeam",
-          "uuid": "Compendium.ptu.moves.Item.MkQLfqYsti5jwzTm",
-          "level": 19
+          "level": 19,
+          "uuid": "Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT",
+          "slug": "bubble-beam"
         },
         {
-          "slug": "will-o-wisp",
+          "level": 22,
           "uuid": "Compendium.ptu.moves.Item.qltGKDIhEJpOqswU",
-          "level": 22
+          "slug": "will-o-wisp"
         },
         {
-          "slug": "flame-burst",
+          "level": 26,
           "uuid": "Compendium.ptu.moves.Item.JV9D80kHWzifgoYH",
-          "level": 26
+          "slug": "flame-burst"
         },
         {
-          "slug": "reflect-type",
+          "level": 28,
           "uuid": "Compendium.ptu.moves.Item.xk1nwxIL49MK8h2R",
-          "level": 28
+          "slug": "reflect-type"
         },
         {
-          "slug": "protect",
+          "level": 31,
           "uuid": "Compendium.ptu.moves.Item.HfiQ6I7xp7aGazV0",
-          "level": 31
+          "slug": "protect"
         },
         {
-          "slug": "scald",
+          "level": 35,
           "uuid": "Compendium.ptu.moves.Item.Nu3QmPfiZVzOccNU",
-          "level": 35
+          "slug": "scald"
         },
         {
-          "slug": "entrainment",
+          "level": 37,
           "uuid": "Compendium.ptu.moves.Item.9onCqeLjl53i2wH6",
-          "level": 37
+          "slug": "entrainment"
         },
         {
-          "slug": "rain-dance",
+          "level": 40,
           "uuid": "Compendium.ptu.moves.Item.TQrk7QpDTMSD7Ycz",
-          "level": 40
+          "slug": "rain-dance"
         },
         {
-          "slug": "after-you",
+          "level": 44,
           "uuid": "Compendium.ptu.moves.Item.x8xJKEwM5Zp3jqGw",
-          "level": 44
+          "slug": "after-you"
         },
         {
+          "level": 46,
           "uuid": "Compendium.ptu.moves.Item.L3CLHVqdWQbUBvod",
-          "slug": "mystical-fire",
-          "level": 46
+          "slug": "mystical-fire"
         }
       ],
       "machine": [
@@ -426,7 +430,14 @@
     },
     "keywords": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "type": {
+      "0": "Water",
+      "1": "Fire",
+      "2": ""
+    },
+    "stackSlugs": false,
+    "enabled": false
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "PjOQybdSHWn87sdq",
@@ -437,7 +448,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.1.4",

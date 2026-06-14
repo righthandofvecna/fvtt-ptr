@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Vorpal Strike\nStatic\nEffect: You gain the Intrepid Sword Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.MBP1ESPfdHqqrvO9]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.yvg3PI7qWBPlcE6g] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "KBtgzNVjrk93ITOm",
-  "flags": {}
+  "_id": "KBtgzNVjrk93ITOm"
 }

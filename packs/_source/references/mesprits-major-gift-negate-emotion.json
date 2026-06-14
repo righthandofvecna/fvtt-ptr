@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift - Emotion’s Heart 3 AP - Standard Action Target: Pokémon or Trainer within 8 meters Effect: The Target becomes immune to Enraged, Confused, and Infatuation Status for the remainder of the encounter and are cured of the Status Afflictions if they currently have them. However, the Target is treated as if their Intimidate, Charm, Intuition and Guile Skills were at Pathetic Rank for the next fifteen minutes. The target becomes immune to further uses of Negate Emotion for 24 hours.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.f75E3geKzoFNi6mH]\n3 AP - Standard Action\nTarget: Pokémon or Trainer within 8 meters\nEffect: The Target becomes immune to @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Enraged}, @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH], and @UUID[Compendium.ptu.effects.Item.ABTHN2VM50VQabZq] Statuses for the remainder of the encounter and are cured of the Status Afflictions if they currently have them. However, the Target is treated as if their Intimidate, Charm, Intuition and Guile Skills were at Pathetic Rank for the next fifteen minutes. The target becomes immune to further uses of Negate Emotion for 24 hours.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

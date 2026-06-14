@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Effect: You may wear Shards as a Trainer Accessory, and gain a +2 bonus to Skill Checks for the Skill linked to the shard’s color. Red is linked to Intimidate, Orange to Command, Yellow to Charm, Green to Intuition, Blue to Guile, and Violet to Focus.",
+    "effect": "Prerequisites: GM Permission\nEffect: You may wear Shards as a Trainer Accessory, and gain a +2 bonus to Skill Checks for the Skill linked to the shard’s color. Red is linked to Intimidate, Orange to Command, Yellow to Charm, Green to Intuition, Blue to Guile, and Violet to Focus.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

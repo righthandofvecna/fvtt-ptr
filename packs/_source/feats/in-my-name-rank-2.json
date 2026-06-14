@@ -2,7 +2,7 @@
   "name": "In My Name Rank 2",
   "system": {
     "origin": "",
-    "effect": "You gain a Blessing marked Rank 2 or lower. You must additionally meet any Prerequisites of the Blessing.\nRank 2 Blessings: Blessed Power, Luck of the Gods, Soul Mending",
+    "effect": "You gain a Blessing marked Rank 2 or lower. You must additionally meet any Prerequisites of the Blessing.\nRank 2 Blessings: @UUID[Compendium.ptu.references.Item.Uk2cfeJO0ATH2tR2], @UUID[Compendium.ptu.references.Item.fTlWMdC4AT3JirzY], @UUID[Compendium.ptu.references.Item.Tg399r4Ole9IvrbJ]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -71,7 +71,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Completed a task on behalf of your Patron, GM Permission"
+      "prereqBackup": "Completed a task on behalf of your Patron, GM Permission",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

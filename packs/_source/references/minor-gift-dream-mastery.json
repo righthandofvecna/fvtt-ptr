@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Static Effect: You are immune to Hypnosis, Nightmare, and  Dream Eater. ",
+    "effect": "Prerequisites: GM Permission\nStatic\nEffect: You are immune to @UUID[Compendium.ptu.moves.Item.3abHb5scrH2j6qMF], @UUID[Compendium.ptu.moves.Item.uJn8utERPx8HehlL], and @UUID[Compendium.ptu.moves.Item.hGvLkFzRbc1D0FX0]. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

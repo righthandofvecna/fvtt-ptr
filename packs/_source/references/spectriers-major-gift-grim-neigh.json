@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift – Soul Sight\nStatic\nEffect: You gain the Grim Neigh Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.1HA8CjOKfdrG3iKz]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.AvclTZSnxJN5PAJg] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "cTOtcAAsFmN6Wi8L",
-  "flags": {}
+  "_id": "cTOtcAAsFmN6Wi8L"
 }

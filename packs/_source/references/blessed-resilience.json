@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Legendary Blessings: Rank 3 Blessings",
-    "effect": "Prerequisites: Blessed Power Messiah: Static Signer: Standard Action Messiah Effect: Choose two Types your Patron has Resistance or Immunity to. You gain Resistance to these types. Signer Effect: Choose a single Type your Patron has Resistance or Immunity to. You gain this Resistance to this Type until the end of the Scene. You may choose a different Type each time you use Blessed Resilience.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.Uk2cfeJO0ATH2tR2]\nMessiah: Static\nSigner: Standard Action\nMessiah Effect: Choose two Types your Patron has Resistance or Immunity to. You gain Resistance to these types.\nSigner Effect: Choose a single Type your Patron has Resistance or Immunity to. You gain this Resistance to this Type until the end of the Scene. You may choose a different Type each time you use Blessed Resilience.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

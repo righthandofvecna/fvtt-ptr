@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: All Spectrier Major Gifts, Major Gift – Prove Your Worth\nStatic\nEffect: You learn the Move Astral Barrage.",
+    "effect": "Prerequisites: All Spectrier Major Gifts, @UUID[Compendium.ptu.references.Item.dp3ke004Z43Khgr3]\nStatic\nEffect: You learn the Move @UUID[Compendium.ptu.moves.Item.afht6yqPDHp1VwS7].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "HOiXrNalcNwg6CNm",
-  "flags": {}
+  "_id": "HOiXrNalcNwg6CNm"
 }

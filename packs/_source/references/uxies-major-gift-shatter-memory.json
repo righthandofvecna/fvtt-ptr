@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Fount of Knowledge 3 AP - Standard Action Target: Pokémon or Trainer within 8 meters Effect: Choose an effect: The Target has one Ability disabled at random or two Moves disabled at random for the remainder of the Encounter. Additionally, the Target must make a Focus Check with DC 10 to recall complex thoughts and memories for the next fifteen minutes. The target becomes immune to further uses of Shatter Memory for 24 hours.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.0mQPu5ju3Sn4JgHu]\n3 AP - Standard Action\nTarget: Pokémon or Trainer within 8 meters\nEffect: Choose an effect: The Target has one Ability disabled at random or two Moves disabled at random for the remainder of the Encounter. \nAdditionally, the Target must make a Focus Check with DC 10 to recall complex thoughts and memories for the next fifteen minutes. The target becomes immune to further uses of Shatter Memory for 24 hours.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: Minor Gift – Aqua Spirit\nEffect: You gain the Misty Surge Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.CnUmf6FnhYajYAPg]\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.hXoN4BHLIDNXjC4Z] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "7GUg3DtBwqurEfRX",
-  "flags": {}
+  "_id": "7GUg3DtBwqurEfRX"
 }

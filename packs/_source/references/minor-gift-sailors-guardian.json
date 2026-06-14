@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Effect: Wild Pokémon up to a level of twice your Trainer Level will not attack or disrupt a water-borne vessel you are traveling on.",
+    "effect": "Prerequisites: GM Permission\nEffect: Wild Pokémon up to a level of twice your Trainer Level will not attack or disrupt a water-borne vessel you are traveling on.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

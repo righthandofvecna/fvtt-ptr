@@ -2,7 +2,7 @@
   "name": "Sign Mastery Rank 3",
   "system": {
     "origin": "",
-    "effect": "You gain two Blessings in the form of Signs, marked Rank 3 or lower. You must additionally meet any Prerequisites of the Blessing.\nRank 3 Blessings: Blessed Resilience, Insight of the Great Ones",
+    "effect": "You gain two Blessings in the form of Signs, marked Rank 3 or lower. You must additionally meet any Prerequisites of the Blessing.\nRank 3 Blessings: @UUID[Compendium.ptu.references.Item.jSN6wAIauThvSDcg], @UUID[Compendium.ptu.references.Item.bXVPBPJm8s9Hu68o]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -71,7 +71,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "All your Patron’s Major Gifts, GM Permission"
+      "prereqBackup": "All your Patron’s Major Gifts, GM Permission",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

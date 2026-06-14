@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Lower Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Effect: You may add your Spirit Modifier instead of your Body Modifier when making Combat Skill Checks. You get a +2 bonus to Disarming or resisting Disarming.",
+    "effect": "Prerequisites: GM Permission\nEffect: You may add your Spirit Modifier instead of your Body Modifier when making Combat Skill Checks. You get a +2 bonus to @UUID[Compendium.ptu.moves.Item.h0slhD40dRasSRXj]{Disarming} or resisting Disarming.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
