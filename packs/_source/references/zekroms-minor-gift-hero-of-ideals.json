@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Static Effect: You get a +3 bonus on Intuition Checks to  discern someone’s beliefs and ideals.",
+    "effect": "Prerequisites: GM Permission\nStatic\nEffect: You get a +3 bonus on Intuition Checks to discern someone’s beliefs and ideals.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,7 +31,6 @@
   },
   "effects": [],
   "folder": "HOsbAdKCs99HqHKK",
-  "flags": {},
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
