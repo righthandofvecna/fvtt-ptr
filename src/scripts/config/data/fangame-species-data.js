@@ -17953,7 +17953,7 @@ export const insurgenceData = [{
       "Move": "Recover"
     }, {
       "Level": 19,
-      "Move": "Bubblebeam"
+      "Move": "Bubble Beam"
     }, {
       "Level": 22,
       "Move": "Will-O-Wisp"
@@ -18079,7 +18079,7 @@ export const insurgenceData = [{
       "Move": "Recover"
     }, {
       "Level": 19,
-      "Move": "Bubblebeam"
+      "Move": "Bubble Beam"
     }, {
       "Level": 22,
       "Move": "Will-O-Wisp"
@@ -39494,7 +39494,7 @@ export const sageData = [
       },
       {
         "Level": 21,
-        "Move": "Bubblebeam"
+        "Move": "Bubble Beam"
       },
       {
         "Level": 25,
@@ -39703,7 +39703,7 @@ export const sageData = [
       },
       {
         "Level": 21,
-        "Move": "Bubblebeam"
+        "Move": "Bubble Beam"
       },
       {
         "Level": 25,
