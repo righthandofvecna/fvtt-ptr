@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: Major Gift - Realm Portal Daily - Standard Action Target: Pokémon or Trainers Effect: Exchange the positions of up to three target  Pokémon or Trainers within 10 meters.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.7bkEEvSMDmf1DgBM]\nDaily - Standard Action\nTarget: Pokémon or Trainers\nEffect: Exchange the positions of up to three target Pokémon or Trainers within 10 meters.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

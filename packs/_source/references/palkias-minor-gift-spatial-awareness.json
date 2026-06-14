@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upper Pantheon Gifts",
-    "effect": "Prerequisites: GM Permission Static Effect: You intuitively know the size of an object or the  distance between objects by sight down to the nearest  centimeter for distances and lengths up to 10 meters.",
+    "effect": "Prerequisites: GM Permission\nStatic\nEffect: You intuitively know the size of an object or the distance between objects by sight down to the nearest centimeter for distances and lengths up to 10 meters.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
