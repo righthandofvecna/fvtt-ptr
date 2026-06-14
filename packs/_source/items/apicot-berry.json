@@ -7,6 +7,8 @@
     "rules": [],
     "enabled": true,
     "slug": "apicot-berry",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +27,8 @@
     "stackSlugs": false,
     "keywords": [
       "Berry",
-      "Tier 2"
+      "Tier 2",
+      "Wild Drop"
     ],
     "frequency": {
       "type": "at-will",
@@ -58,9 +61,7 @@
     "container": false,
     "automation": [],
     "name": "Apicot Berry",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": ""
+    "useCount": 0
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/apicot berry.webp",
@@ -70,15 +71,17 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.31",
     "coreVersion": "13.351",
     "createdTime": 1683368845251,
-    "modifiedTime": 1778200842056,
+    "modifiedTime": 1781458286982,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

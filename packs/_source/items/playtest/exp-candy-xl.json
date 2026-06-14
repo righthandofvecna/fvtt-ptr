@@ -10,6 +10,8 @@
     "rules": [],
     "enabled": true,
     "slug": "exp-candy-xl",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -26,7 +28,10 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Unpurchaseable",
+      "Wild Drop"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -52,12 +57,10 @@
     },
     "quantity": "1",
     "category": "",
-    "cost": "0",
+    "cost": "6800",
     "consumable": 0,
     "subtype": "",
-    "container": false,
-    "contentSet": "",
-    "replacesSlug": ""
+    "container": false
   },
   "effects": [],
   "ownership": {
@@ -65,15 +68,17 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.31",
     "coreVersion": "13.351",
     "createdTime": 1696986204094,
-    "modifiedTime": 1778200842152,
+    "modifiedTime": 1781458265310,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
