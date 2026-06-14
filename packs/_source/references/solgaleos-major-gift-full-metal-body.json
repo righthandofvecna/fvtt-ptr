@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "The Outsider Gifts",
-    "effect": "Prerequisites: Minor Gift – Core of the Sun\nStatic\nEffect: You gain the Full Metal Body Ability.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.references.Item.aHpeHwudtdBQsXYY]\nStatic\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.RWFrTyQhAlcgWlKd] Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,6 +23,5 @@
     "keywords": []
   },
   "effects": [],
-  "_id": "SFvzGz3XWxMwRDQx",
-  "flags": {}
+  "_id": "SFvzGz3XWxMwRDQx"
 }
