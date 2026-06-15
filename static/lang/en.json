@@ -1382,10 +1382,38 @@
       "Interrupt": "Interrupt"
     },
     "ContentSet": {
-      "None": "Original PTU",
-      "ClassRework": "Class Rework",
-      "WeatherPlaytest": "Weather Playtest",
-      "FriendshipSpirit": "Friendship & Spirit Playtest"
+      "None": {
+        "label": "Original PTU",
+        "short": ""
+      },
+      "BlessedAndDamned": {
+        "label": "Blessed & Damned",
+        "short": "[B&D]"
+      },
+      "DoPorygonDreamOfMareep": {
+        "label": "Do Porygon Dream of Mareep",
+        "short": "[DPDM]"
+      },
+      "GameOfThrohs": {
+        "label": "Game of Throhs",
+        "short": "[GOT]"
+      },
+      "ClassRework": {
+        "label": "Class Rework",
+        "short": "[CR]"
+      },
+      "WeatherPlaytest": {
+        "label": "Weather Playtest",
+        "short": "[WP]"
+      },
+      "FriendshipSpirit": {
+        "label": "Friendship & Spirit Playtest",
+        "short": "[FS]"
+      },
+      "Homebrew": {
+        "label": "Homebrew",
+        "short": "[HB]"
+      }
     }
   },
 

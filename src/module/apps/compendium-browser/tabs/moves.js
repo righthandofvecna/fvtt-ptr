@@ -47,7 +47,7 @@ export class CompendiumBrowserMovesTab extends CompendiumBrowserTab {
                 }
 
                 moves.push({
-                    name: moveData.name,
+                    name: this.nameTransform(moveData),
                     type: moveData.type,
                     img: moveData.img,
                     uuid: `Compendium.${pack.collection}.${moveData._id}`,

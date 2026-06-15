@@ -603,7 +603,7 @@
         "rules": [],
         "enabled": true,
         "slug": null,
-        "contentSet": "",
+        "contentSet": "homebrew",
         "replacesSlug": "",
         "schema": {
           "version": null,

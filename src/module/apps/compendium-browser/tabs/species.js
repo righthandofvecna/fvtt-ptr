@@ -109,7 +109,7 @@ export class CompendiumBrowserSpeciesTab extends CompendiumBrowserTab {
                 this.trackCapabilitiesMinMax(speciesData.system.capabilities);
 
                 species.push({
-                    name: speciesData.name,
+                    name: this.nameTransform(speciesData),
                     type: speciesData.type,
                     img: this.#getImagePath(speciesData.name, speciesData.system.number),
                     uuid: `Compendium.${pack.collection}.${speciesData._id}`,

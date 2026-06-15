@@ -45,7 +45,7 @@ export class CompendiumBrowserEffectsTab extends CompendiumBrowserTab {
                 }
 
                 items.push({
-                    name: itemData.name,
+                    name: this.nameTransform(itemData),
                     type: itemData.type,
                     img: itemData.img,
                     uuid: `Compendium.${pack.collection}.${itemData._id}`,

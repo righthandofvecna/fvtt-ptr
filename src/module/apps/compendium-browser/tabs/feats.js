@@ -52,7 +52,7 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
                 }
 
                 feats.push({
-                    name: featData.name,
+                    name: this.nameTransform(featData),
                     type: featData.type,
                     img: featData.img,
                     uuid: `Compendium.${pack.collection}.${featData._id}`,

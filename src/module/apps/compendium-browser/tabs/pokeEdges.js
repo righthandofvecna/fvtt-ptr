@@ -48,7 +48,7 @@ export class CompendiumBrowserPokeEdgesTab extends CompendiumBrowserTab {
                 }
 
                 abilities.push({
-                    name: edgeData.name,
+                    name: this.nameTransform(edgeData),
                     type: edgeData.type,
                     img: edgeData.img,
                     uuid: `Compendium.${pack.collection}.${edgeData._id}`,
