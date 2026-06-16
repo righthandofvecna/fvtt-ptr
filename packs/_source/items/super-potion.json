@@ -2,7 +2,7 @@
   "name": "Super Potion",
   "system": {
     "origin": "",
-    "effect": "Heals 35 Hit Points",
+    "effect": "Heals 35 Hit Points.",
     "snippet": "",
     "rules": [
       {

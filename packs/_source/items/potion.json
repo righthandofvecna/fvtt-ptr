@@ -2,7 +2,7 @@
   "name": "Potion",
   "system": {
     "origin": "",
-    "effect": "Heals 20 Hit Points",
+    "effect": "Heals 20 Hit Points.",
     "snippet": "",
     "rules": [
       {
