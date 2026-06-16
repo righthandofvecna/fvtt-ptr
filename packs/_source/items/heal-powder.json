@@ -2,7 +2,7 @@
   "name": "Heal Powder",
   "system": {
     "origin": "",
-    "effect": "Cure all Persistent Status Afflictions – Herbal Restorative",
+    "effect": "Cure all Persistent Status Afflictions – Herbal Restorative.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,10 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Medicine",
+      "Herbal"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
