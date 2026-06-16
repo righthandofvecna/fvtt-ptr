@@ -28,7 +28,10 @@
     "keywords": [
       "Berry",
       "Tier 2",
-      "Wild Drop"
+      "Wild Drop",
+      "Dry",
+      "Sweet",
+      "Bitter"
     ],
     "frequency": {
       "type": "at-will",
