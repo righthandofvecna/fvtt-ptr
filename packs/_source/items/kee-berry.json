@@ -28,7 +28,12 @@
     "keywords": [
       "Berry",
       "Tier 3",
-      "Wild Drop"
+      "Wild Drop",
+      "Spicy",
+      "Dry",
+      "Sweet",
+      "Bitter",
+      "Sour"
     ],
     "frequency": {
       "type": "at-will",
