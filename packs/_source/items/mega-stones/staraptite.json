@@ -1,18 +1,18 @@
 {
-  "name": "Shell Armor",
-  "type": "ability",
-  "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
+  "name": "Staraptite",
   "system": {
     "origin": "",
-    "effect": "The user is immune to Critical Hits; they are instead normal hits. Defensive.",
+    "effect": "Mega Evolves Staraptor when used in conjunction with a Mega Ring.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "shell-armor",
+    "slug": "staraptite",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:16.988Z",
+        "datetime": "2026-05-08T00:40:41.230Z",
         "version": {
           "schema": 0.11,
           "foundry": "13.351",
@@ -20,16 +20,18 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.V1M0qiqlbsKWbLgg",
     "source": {
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Mega Stone"
+    ],
     "frequency": {
-      "type": "static",
-      "max": null,
-      "custom": "Static",
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -49,33 +51,26 @@
       "cost": 0,
       "bind": false
     },
-    "tier": "",
+    "quantity": "1",
+    "category": "",
+    "cost": "",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
     "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "name": "Steelixite",
+    "useCount": 0
   },
-  "_id": "tkdLZgBAfZSgOCZg",
+  "type": "item",
+  "img": "/systems/ptu/static/images/item_icons/staraptite.webp",
   "effects": [],
-  "folder": null,
-  "sort": 49100000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
   },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692968394056,
-    "modifiedTime": 1778200817025,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  }
+  "folder": "3aYHO5npuCcYqxoX",
+  "_id": "M7ywI5acOkP8oo5f"
 }
