@@ -38,6 +38,9 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Fix Shadow Condition
+- Make hidden data on conditions visible and editable
+- Add predicate field to token image rule element form
 - [Improve logic for "Show In Token Panel"](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/965)
 - Money and Item reward system post-combat
 - [@CompSearch Enricher fixes](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/964)
