@@ -447,7 +447,7 @@
         "type": "body"
       }
     },
-    "slug": "staraptor",
+    "slug": "staraptor-mega",
     "rules": [],
     "source": {
       "value": "PTR Core Dex"
@@ -469,5 +469,7 @@
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "name": "Staraptor-Mega",
-  "effects": []
+  "effects": [],
+  "folder": "irSNiCnUnI7il9mJ",
+  "_id": "hoqKYF1fdfYwjte2"
 }

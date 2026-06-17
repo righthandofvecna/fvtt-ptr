@@ -1,50 +1,51 @@
 {
-  "name": "Mega Evolve: Scolipede",
+  "folder": "TuFJ2nmx9i2k6KYk",
+  "name": "Mega Evolve: Staraptor",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "This effect will mega-evolve your Scolipede.",
+    "effect": "This effect will mega-evolve your Staraptor.",
     "snippet": "",
     "rules": [
       {
         "key": "TokenImage",
         "predicate": [
-          "species:scolipede",
+          "species:staraptor",
           "self:pokemon:shiny"
         ],
-        "value": "/systems/ptu/static/images/sprites/545s_MEGA.webp"
+        "value": "/systems/ptu/static/images/sprites/398s_MEGA.webp"
       },
       {
         "key": "TokenImage",
         "predicate": {
           "and": [
-            "species:scolipede",
+            "species:staraptor",
             {
               "not": "self:pokemon:shiny"
             }
           ]
         },
-        "value": "/systems/ptu/static/images/sprites/545_MEGA.webp"
+        "value": "/systems/ptu/static/images/sprites/398_MEGA.webp"
       },
       {
         "key": "TemporarySpecies",
         "predicate": [
-          "species:scolipede"
+          "species:staraptor"
         ],
-        "uuid": "Compendium.ptu.species.Item.xgJ9WRcCP4tsZ8dI"
+        "uuid": "Compendium.ptu.species.Item.hoqKYF1fdfYwjte2"
       },
       {
         "key": "GrantItem",
         "predicate": [
-          "species:scolipede"
+          "species:staraptor"
         ],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.abilities.Item.tkdLZgBAfZSgOCZg"
+        "uuid": "Compendium.ptu.abilities.Item.fKuIlxWlLGIgXjVk"
       }
     ],
     "enabled": true,
-    "slug": "mega-evolve-scolipede",
+    "slug": "mega-evolve-staraptor",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -90,5 +91,6 @@
       "devNote": "",
       "showInTokenPanel": false
     }
-  }
+  },
+  "_id": "V1M0qiqlbsKWbLgg"
 }

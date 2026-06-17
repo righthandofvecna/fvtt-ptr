@@ -530,7 +530,7 @@
         "type": "body"
       }
     },
-    "slug": "raichu",
+    "slug": "raichu-mega-x",
     "rules": [],
     "source": {
       "value": "PTR Core Dex"
@@ -556,5 +556,7 @@
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "name": "Raichu-Mega-X",
-  "effects": []
+  "effects": [],
+  "folder": "irSNiCnUnI7il9mJ",
+  "_id": "d2d4dlMHL77EB2YM"
 }

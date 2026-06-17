@@ -1,4 +1,5 @@
 {
+  "folder": "TuFJ2nmx9i2k6KYk",
   "name": "Mega Evolve: Raichu Y",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
@@ -90,5 +91,6 @@
       "devNote": "",
       "showInTokenPanel": false
     }
-  }
+  },
+  "_id": "rEqhmWavWOsNVUfS"
 }
