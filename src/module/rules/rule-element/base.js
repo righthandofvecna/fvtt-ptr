@@ -307,6 +307,8 @@ class RuleElementPTU extends foundry.abstract.DataModel {
         }
         if(typeof value === "string") {
             value = value.trim();
+            if (value.toLowerCase() === "inf" || value.toLowerCase() === "infinity") return Infinity;
+            if (value.toLowerCase() === "-inf" || value.toLowerCase() === "-infinity") return -Infinity;
             if(value.indexOf("{") === 0 && value.lastIndexOf("}") === value.length - 1) return this.resolveInjectedProperties(value, injectables);
             value = this.resolveInjectedProperties(value, injectables);
         }

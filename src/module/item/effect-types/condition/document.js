@@ -6,10 +6,19 @@ import { Statistic } from "../../../system/statistic/index.js";
 import { BaseEffectPTU } from "../base.js";
 
 class PTUCondition extends BaseEffectPTU {
+    get persistent() {
+        const persistent = this.system.persistent;
+        if (!persistent || typeof persistent !== "object") return null;
+
+        const hasFormula = typeof persistent.formula === "string" && persistent.formula.trim().length > 0;
+        const hasType = typeof persistent.type === "string" && persistent.type.trim().length > 0;
+        return hasFormula || hasType ? persistent : null;
+    }
+
     /** @override */
     get badge() {
-        if (this.system.persistent) {
-            return { type: "formula", value: this.system.persistent.formula, count: this.system.value.value };
+        if (this.persistent?.formula) {
+            return { type: "formula", value: this.persistent.formula, count: this.system.value.value };
         }
 
         return this.system.value.value ? { type: "counter", value: this.system.value.value } : null;
@@ -51,8 +60,8 @@ class PTUCondition extends BaseEffectPTU {
     /** @override */
     getRollOptions(prefix = this.type) {
         const options = super.getRollOptions(prefix);
-        if (this.system.persistent) {
-            options.push(`damage:type:${this.system.persistent.type}`);
+        if (this.persistent?.type) {
+            options.push(`damage:type:${this.persistent.type}`);
         }
         return options;
     }
@@ -76,13 +85,13 @@ class PTUCondition extends BaseEffectPTU {
             await this.increase();
         }
 
-        if (this.system.persistent) {
+        if (this.persistent) {
             // TODO: Add game setting to automate applying damage & rolling recovery
             const autoApplyDamage = true ? true : false;
             const autoRollRecovery = true ? true : false;
 
-            if (this.system.persistent.formula) {
-                const roll = await this.system.persistent.damage().evaluate();
+            if (this.persistent.formula) {
+                const roll = await this.persistent.damage().evaluate();
                 const message = await roll.toMessage(
                     {
                         speaker: ChatMessage.getSpeaker({ actor: actor, token }),
@@ -114,7 +123,7 @@ class PTUCondition extends BaseEffectPTU {
                     },
                     {
                         rollMode: "roll",
-                        persistenceFormula: this.system.persistent.formula
+                        persistenceFormula: this.persistent.formula
                     }
                 );
 
@@ -134,70 +143,49 @@ class PTUCondition extends BaseEffectPTU {
     async rollRecovery() {
         if (!this.actor) return;
 
-        if (this.system.persistent) {
-            const { dc, type, decrease } = this.system.persistent;
+        if (!this.persistent) return;
+        const { dc, type, decrease, saveEnds } = this.persistent;
 
-            if (type !== "save") return;
-            // If this is shadow pokemon's save but you already have the hyper mode condition; skip
-            if (this.slug === "shadow-pokemon" && this.actor.conditions.bySlug('hyper-mode').length > 0) return;
+        if (type !== "save") return;
+        // If this is shadow pokemon's save but you already have the hyper mode condition; skip
+        if (this.slug === "condition-shadow-pokemon" && this.actor.conditions.bySlug('condition-hyper-mode').length > 0) return;
 
-            const dcModifiers = (() => {
-                if(this.slug === "shadow-pokemon") {
-                    const mods = [new PTUModifier({ slug: "dc", label: "DC", modifier: 5 })];
-                    for(let i = 1; i <= this.actor.attributes.health.injuries; i++) {
-                        mods.push(new PTUModifier({ slug: `injury-${i}`, label: `Injury ${i}`, modifier: 2 }));
-                    }
-                    return mods;
-                }
-                if (!decrease) return [new PTUModifier({ slug: "dc", label: "DC", modifier: dc })];
-                const modifier = 20 - ((this.value - 1) * (this.slug === "hyper-mode" ? 2 : 6));
-                if (modifier <= 0) return [new PTUModifier({ slug: "dc", label: "DC", modifier: -Infinity })];
-                return [new PTUModifier({ slug: "dc", label: "DC", modifier })];
-            })();
-            const saveModifiers = [];
+        const dcModifiers = (() => {
+            if (!decrease) return [new PTUModifier({ slug: "dc", label: "DC", modifier: Number(dc) || 0 })];
+            const modifier = 20 - ((this.value - 1) * (this.slug === "condition-hyper-mode" ? 2 : 6));
+            if (modifier <= 0) return [new PTUModifier({ slug: "dc", label: "DC", modifier: -Infinity })];
+            return [new PTUModifier({ slug: "dc", label: "DC", modifier })];
+        })();
+        const saveModifiers = [];
 
-            if (this.slug === "frozen") {
-                if (this.actor.types.includes("Fire")) {
-                    dcModifiers.push(new PTUModifier({ slug: "type", label: "Fire Type", modifier: -5 }));
-                }
-                //TODO: Add weather check
-                if (false) {
-                    saveModifiers.push(new PTUModifier({ slug: "weather", label: "Sunny Weather", modifier: 4 }));
-                }
-                if (false) {
-                    saveModifiers.push(new PTUModifier({ slug: "weather", label: "Cold Weather", modifier: -2 }));
-                }
+        const statistic = new Statistic(this.actor, {
+            slug: "save-check",
+            label: game.i18n.format("PTU.SaveCheck", { name: this.actor.name, save: this.name }),
+            check: { type: "save-check", domains: ["save-check"], modifiers: saveModifiers },
+            dc: { modifiers: dcModifiers, domains: ["save-dc"] },
+            domains: []
+        }, {extraRollOptions: ["condition:save:"+this.slug]});
+
+        const target = this.actor.getActiveTokens().shift();
+        const targets = target ? [{
+            actor: this.actor.toObject(),
+            token: target.document.toObject(),
+            dc: { value: statistic.dc.value, flat: true, slug: this.slug },
+        }] : [];
+
+        const result = await statistic.roll({ skipDialog: true, targets });
+
+        if (statistic.dc.value <= result.total) {
+            if (saveEnds === false) {
+                return;
             }
-
-            const statistic = new Statistic(this.actor, {
-                slug: "save-check",
-                label: game.i18n.format("PTU.SaveCheck", { name: this.actor.name, save: this.name }),
-                check: { type: "save-check", domains: ["save-check"], modifiers: saveModifiers },
-                dc: { modifiers: dcModifiers, domains: ["save-dc"] },
-                domains: []
-            }, {extraRollOptions: ["condition:save:"+this.slug]});
-
-            const target = this.actor.getActiveTokens().shift();
-            const targets = target ? [{
-                actor: this.actor.toObject(),
-                token: target.document.toObject(),
-                dc: { value: statistic.dc.value, flat: true, slug: this.slug },
-            }] : [];
-
-            const result = await statistic.roll({ skipDialog: true, targets });
-
-            if (statistic.dc.value <= result.total) {
-                if(this.slug === "shadow-pokemon") {
-                    return;
-                }
-                await this.delete();
+            await this.delete();
+        }
+        else {
+            if(this.slug === "condition-shadow-pokemon") {
+                return this.#handleHyperMode();
             }
-            else {
-                if(this.slug === "shadow-pokemon") {
-                    return this.#handleHyperMode();
-                }
-                await this.increase();
-            }
+            await this.increase();
         }
     }
 
@@ -228,11 +216,12 @@ class PTUCondition extends BaseEffectPTU {
             }
         }
 
-        if (systemData.persistent) {
-            const { formula, type } = systemData.persistent;
+        const persistent = this.persistent;
+        if (persistent) {
+            const { formula } = persistent;
             if (!formula) return;
 
-            systemData.persistent.damage = () => {
+            persistent.damage = () => {
                 const target = this.actor.getActiveTokens().shift();
                 const targets = target ? [{
                     actor: this.actor.toObject(),

@@ -64,6 +64,17 @@
         "predicate": [],
         "allowDuplicate": false,
         "uuid": "Compendium.ptu.capabilities.Item.0C31b3ZhHHDPkI1A"
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Injuries",
+        "selectors": [
+          "save-dc"
+        ],
+        "predicate": [
+          "condition:save:condition-shadow-pokemon"
+        ],
+        "value": "{actor|system.health.injuries}*2"
       }
     ],
     "enabled": true,
@@ -97,7 +108,8 @@
     "persistent": {
       "dc": 5,
       "decrease": false,
-      "type": "save"
+      "type": "save",
+      "saveEnds": false
     },
     "level": {
       "value": 1

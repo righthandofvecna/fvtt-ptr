@@ -42,6 +42,7 @@ class FlatModifierRuleElement extends RuleElementPTU {
                 options.injectables = {
                     ...options.injectables,
                     item: this.item,
+                    actor: this.actor,
                 }
                 const finalValue = (() => {
                     if (selector.includes("damage-dice")) {

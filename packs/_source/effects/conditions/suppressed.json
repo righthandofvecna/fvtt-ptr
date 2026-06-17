@@ -4,7 +4,7 @@
   "img": "systems/ptu/static/images/conditions/Suppressed.svg",
   "system": {
     "origin": "Automated",
-    "effect": "Suppressed targets cannot use Moves with any Frequency oth than \"At-Will\". Suppression always lasts 1 full round, unless a Move or Ability specifies otherwise.",
+    "effect": "Suppressed targets cannot use Moves with any Frequency other than \"At-Will\". Suppression always lasts 1 full round, unless a Move or Ability specifies otherwise.",
     "snippet": "",
     "rules": [],
     "enabled": true,

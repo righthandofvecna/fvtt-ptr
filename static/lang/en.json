@@ -86,6 +86,13 @@
         "RoundStart": "Start of Round"
       }
     },
+    "Persistent": {
+      "Formula": "Persistent Formula",
+      "Type": "Persistent Type",
+      "DC": "Save DC",
+      "Decrease": "Save DC Decreases",
+      "SaveEnds": "Save Ends"
+    },
     "ResetEOT": "Reset EOT Tracking",
     "ContentSet": "Content Set",
     "ReplacesSlug": "Replaces Slug"

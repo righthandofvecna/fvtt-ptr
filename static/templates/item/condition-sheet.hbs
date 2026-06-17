@@ -89,6 +89,26 @@
                 <label for="system.snippet">{{localize "ITEM.Snippet"}}</label>
                 <textarea class="ml-1 mr-1" name="system.snippet">{{item.system.snippet}}</textarea>
             </div>
+            <div class="item-row">
+                <label for="system.persistent.formula">{{localize "ITEM.Persistent.Formula"}}</label>
+                <input type="text" name="system.persistent.formula" value="{{item.system.persistent.formula}}" placeholder="Damage or recovery formula"/>
+            </div>
+            <div class="item-row">
+                <label for="system.persistent.type">{{localize "ITEM.Persistent.Type"}}</label>
+                <input type="text" name="system.persistent.type" value="{{item.system.persistent.type}}" placeholder="save, persistent, volatile, poison..."/>
+            </div>
+            <div class="item-row">
+                <label for="system.persistent.dc">{{localize "ITEM.Persistent.DC"}}</label>
+                <input type="number" name="system.persistent.dc" value="{{item.system.persistent.dc}}"/>
+            </div>
+            <div class="item-row">
+                <label for="system.persistent.decrease">{{localize "ITEM.Persistent.Decrease"}}</label>
+                <input type="checkbox" name="system.persistent.decrease" {{checked item.system.persistent.decrease}}/>
+            </div>
+            <div class="item-row">
+                <label for="system.persistent.saveEnds">{{localize "ITEM.Persistent.SaveEnds"}}</label>
+                <input type="checkbox" name="system.persistent.saveEnds" {{checked (ne item.system.persistent.saveEnds false)}}/>
+            </div>
         </div>
         <div class="tab rules h-100" data-group="primary" data-tab="rules">
             {{~> systems/ptu/static/templates/partials/rules/rule-partial.hbs item=item}}
