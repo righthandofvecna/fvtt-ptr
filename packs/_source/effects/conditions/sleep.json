@@ -14,6 +14,19 @@
           "grantee": "restrict",
           "granter": "cascade"
         }
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Sleep Condition",
+        "selectors": [
+          "save-check"
+        ],
+        "predicate": [
+          {
+            "or":["condition:save:rage", "condition:save:infatuation", "condition:save:confused"]
+          }
+        ],
+        "value": "-inf"
       }
     ],
     "enabled": true,
@@ -55,7 +68,8 @@
       "formula": "",
       "type": "save",
       "dc": 16,
-      "decrease": false
+      "decrease": false,
+      "saveEnds": true
     },
     "name": "",
     "tokenIcon": {

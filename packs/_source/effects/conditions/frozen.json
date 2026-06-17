@@ -16,6 +16,18 @@
         },
         "predicate": [],
         "allowDuplicate": false
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Fire Type",
+        "selectors": [
+          "save-dc"
+        ],
+        "predicate": [
+          "condition:save:frozen",
+          "self:types:fire"
+        ],
+        "value": -5
       }
     ],
     "enabled": true,
@@ -57,7 +69,8 @@
       "formula": "",
       "type": "save",
       "dc": 16,
-      "decrease": false
+      "decrease": false,
+      "saveEnds": true
     },
     "name": "",
     "tokenIcon": {

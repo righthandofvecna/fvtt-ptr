@@ -46,7 +46,8 @@
       "formula": "",
       "type": "save",
       "dc": 16,
-      "decrease": false
+      "decrease": false,
+      "saveEnds": true
     },
     "name": "",
     "tokenIcon": {

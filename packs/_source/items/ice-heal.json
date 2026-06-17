@@ -2,7 +2,7 @@
   "name": "Ice Heal",
   "system": {
     "origin": "",
-    "effect": "Cures Freezing",
+    "effect": "Cures Freezing.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -67,7 +67,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

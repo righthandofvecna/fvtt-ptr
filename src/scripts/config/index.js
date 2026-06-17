@@ -430,22 +430,53 @@ export const PTUCONFIG = {
    * "PTU" is the implicit base (contentSet = "") and is not listed here.
    */
   contentSets: {
-    "class-rework": {
-      label: "PTU.ContentSet.ClassRework",
+    "blessed-and-damned": {
+      label: "PTU.ContentSet.BlessedAndDamned.label",
+      short: "PTU.ContentSet.BlessedAndDamned.short",
       priority: 2,
+      suffix: "-bd",
+      removals: []
+    },
+    "do-porygon-dream-of-mareep": {
+      label: "PTU.ContentSet.DoPorygonDreamOfMareep.label",
+      short: "PTU.ContentSet.DoPorygonDreamOfMareep.short",
+      priority: 3,
+      suffix: "-dpdm",
+      removals: []
+    },
+    "game-of-throhs": {
+      label: "PTU.ContentSet.GameOfThrohs.label",
+      short: "PTU.ContentSet.GameOfThrohs.short",
+      priority: 4,
+      suffix: "-got",
+      removals: []
+    },
+    "class-rework": {
+      label: "PTU.ContentSet.ClassRework.label",
+      short: "PTU.ContentSet.ClassRework.short",
+      priority: 5,
       suffix: "-cr",
       removals: []
     },
     "weather-playtest": {
-      label: "PTU.ContentSet.WeatherPlaytest",
-      priority: 3,
+      label: "PTU.ContentSet.WeatherPlaytest.label",
+      short: "PTU.ContentSet.WeatherPlaytest.short",
+      priority: 6,
       suffix: "-wp",
       removals: []
     },
     "friendship-spirit": {
-      label: "PTU.ContentSet.FriendshipSpirit",
-      priority: 4,
+      label: "PTU.ContentSet.FriendshipSpirit.label",
+      short: "PTU.ContentSet.FriendshipSpirit.short",
+      priority: 7,
       suffix: "-fs",
+      removals: []
+    },
+    "homebrew": {
+      label: "PTU.ContentSet.Homebrew.label",
+      short: "PTU.ContentSet.Homebrew.short",
+      priority: 100,
+      suffix: "-hb",
       removals: []
     }
   }

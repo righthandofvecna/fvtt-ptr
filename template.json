@@ -603,7 +603,7 @@
         "rules": [],
         "enabled": true,
         "slug": null,
-        "contentSet": "",
+        "contentSet": "homebrew",
         "replacesSlug": "",
         "schema": {
           "version": null,
@@ -709,7 +709,13 @@
         "overriddenBy": []
       },
       "overrides": [],
-      "persistent": null
+      "persistent": {
+        "formula": "",
+        "type": "",
+        "dc": 10,
+        "decrease": false,
+        "saveEnds": false
+      }
     },
     "ability": {
       "templates": ["base", "frequencyTracked"],

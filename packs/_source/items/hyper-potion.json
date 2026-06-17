@@ -2,7 +2,7 @@
   "name": "Hyper Potion",
   "system": {
     "origin": "",
-    "effect": "Heals 70 Hit Points",
+    "effect": "Heals 70 Hit Points.",
     "snippet": "",
     "rules": [
       {

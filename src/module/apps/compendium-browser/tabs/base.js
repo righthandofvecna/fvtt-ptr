@@ -245,4 +245,15 @@ export class CompendiumBrowserTab {
         }
         return true;
     }
+
+    /*
+     * Shared functions
+     */
+
+    nameTransform(data) {
+        if (!game.settings.get("ptu", "contentSetsEnabled") && CONFIG.PTU.contentSets[data.system.contentSet]?.short) {
+            return `${data.name} ${game.i18n.localize(CONFIG.PTU.contentSets[data.system.contentSet].short)}`;
+        }
+        return data.name;
+    }
 }

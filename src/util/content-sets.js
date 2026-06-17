@@ -41,8 +41,6 @@ export function buildHiddenSlugs(activeSetKeys, entries) {
     }
   }
 
-  console.log("Build Hidden Slugs", { activeSetKeys, hiddenSlugs: [...hiddenSlugs].sort(), kReplacedByV });
-
   return hiddenSlugs;
 }
 

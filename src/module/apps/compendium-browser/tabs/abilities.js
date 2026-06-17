@@ -46,7 +46,7 @@ export class CompendiumBrowserAbilitiesTab extends CompendiumBrowserTab {
                 }
 
                 abilities.push({
-                    name: abilityData.name,
+                    name: this.nameTransform(abilityData),
                     type: abilityData.type,
                     img: abilityData.img,
                     uuid: `Compendium.${pack.collection}.${abilityData._id}`,

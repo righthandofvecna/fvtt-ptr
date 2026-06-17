@@ -63,7 +63,8 @@
       "formula": "td",
       "type": "save",
       "dc": 20,
-      "decrease": true
+      "decrease": true,
+      "saveEnds": true
     },
     "name": "",
     "tokenIcon": {
