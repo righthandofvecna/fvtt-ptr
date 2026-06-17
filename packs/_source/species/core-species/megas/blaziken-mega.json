@@ -594,10 +594,13 @@
       "value": "PTR Core Dex Megas"
     },
     "keywords": [
-      "Hoenn"
+      "Hoenn",
+      "Mega"
     ],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "stackSlugs": false,
+    "enabled": false
   },
   "sort": 0,
   "ownership": {

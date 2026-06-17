@@ -609,7 +609,13 @@
     "source": {
       "value": "PTR Core Dex"
     },
-    "keywords": [],
+    "keywords": [
+      "Kanto",
+      "Johto",
+      "Kalos",
+      "Alola",
+      "Mega"
+    ],
     "type": {
       "0": "Dragon",
       "1": "Flying",
@@ -638,6 +644,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "WNiZhV2AuR3q69h9",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }

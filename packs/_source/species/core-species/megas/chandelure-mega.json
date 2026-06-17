@@ -511,7 +511,8 @@
     "keywords": [
       "Unova",
       "Galar",
-      "Kalos"
+      "Kalos",
+      "Mega"
     ],
     "type": {
       "0": "Ghost",
@@ -541,6 +542,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "EACMg8Ou6ulsC0wp",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }

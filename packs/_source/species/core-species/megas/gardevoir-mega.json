@@ -628,10 +628,13 @@
       "Hoenn",
       "Galar",
       "Sinnoh",
-      "Kalos"
+      "Kalos",
+      "Mega"
     ],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "stackSlugs": false,
+    "enabled": false
   },
   "sort": 0,
   "ownership": {

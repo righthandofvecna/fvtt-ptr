@@ -551,7 +551,8 @@
       "Unova",
       "Galar",
       "Kalos",
-      "Alola"
+      "Alola",
+      "Mega"
     ],
     "type": {
       "0": "Ground",
@@ -581,6 +582,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "LjMCDlOo8j50ZquM",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }

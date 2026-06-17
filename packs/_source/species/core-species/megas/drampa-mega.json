@@ -575,7 +575,8 @@
     },
     "keywords": [
       "Alola",
-      "Galar"
+      "Galar",
+      "Mega"
     ],
     "type": {
       "0": "Normal",
@@ -605,6 +606,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "1gf8F36XhOTzHazg",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }
