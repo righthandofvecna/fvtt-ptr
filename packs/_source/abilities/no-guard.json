@@ -85,7 +85,9 @@
   "flags": {
     "ptu": {
       "abilityChosen": "high",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
