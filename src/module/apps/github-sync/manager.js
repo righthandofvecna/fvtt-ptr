@@ -711,7 +711,7 @@ class GithubSyncManager {
         delete data._key;
         delete data._stats;
         delete data.sort;
-        delete data.folder;
+        // delete data.folder;
         delete data.ownership;
         if (data.flags?.core?.sourceId) delete data.flags.core.sourceId;
         if (fu.isEmpty(data.flags?.core)) delete data.flags?.core;
