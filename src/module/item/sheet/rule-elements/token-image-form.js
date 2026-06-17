@@ -18,6 +18,7 @@ class TokenImageForm extends RuleElementForm {
         return {
             ...data,
             previewValid,
+            predicationIsMultiple: Array.isArray(this.rule.predicate) && this.rule.predicate.every(p => typeof p === "string"),
         };
     }
 
@@ -30,6 +31,14 @@ class TokenImageForm extends RuleElementForm {
                 callback: (path) => this.updateItem({ value: path }),
                 current: this.rule.value ?? "",
             }).browse(this.rule.value ?? "");
+        });
+
+        html.querySelector("[data-action=toggle-predicate]")?.addEventListener("click", () => {
+            const predicate = this.rule.predicate;
+            const newValue = Array.isArray(predicate)
+                ? { "and": predicate.length ? predicate : [] }
+                : predicate?.["and"]?.length ? predicate["and"] : [];
+            this.updateItem({ predicate: newValue });
         });
 
         // Drag-and-drop an image tile/asset onto the value row
