@@ -2,7 +2,7 @@
   "name": "Guard Spec",
   "system": {
     "origin": "",
-    "effect": "Prevents reduction of Combat Stages or Accuracy on the Pokémon for 5 Turns",
+    "effect": "Prevents reduction of Combat Stages or Accuracy on the Pokémon for 5 Turns.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -68,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
