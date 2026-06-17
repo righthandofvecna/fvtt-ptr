@@ -68,7 +68,9 @@
   "folder": "DYj3F5ErpWYb6bsV",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
