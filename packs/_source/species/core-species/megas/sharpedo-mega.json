@@ -530,10 +530,13 @@
     "keywords": [
       "Hoenn",
       "Alola",
-      "Kalos"
+      "Kalos",
+      "Mega"
     ],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "stackSlugs": false,
+    "enabled": false
   },
   "sort": 0,
   "ownership": {
