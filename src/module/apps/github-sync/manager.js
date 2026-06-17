@@ -219,12 +219,14 @@ class GithubSyncManager {
 
         let data = fu.mergeObject(packItem, diff, { inplace: false });
 
+        const maintainTopLevelFields = ["_id", "_key", "_stats", "ownership", "folder", "sort"];
+
         // Explicitly restore every top-level field that must keep its pack/GitHub
         // value and must never be derived from or overwritten by the live world item.
         // We do this explicitly rather than relying on mergeObject carrying them
         // through, because `pack.getDocument().toObject()` may not expose all source
         // fields depending on the Foundry version.
-        for (const field of ["_id", "_key", "_stats", "ownership", "folder", "sort"]) {
+        for (const field of maintainTopLevelFields) {
             if (Object.hasOwn(packItem, field)) data[field] = packItem[field];
             else delete data[field];
         }
@@ -238,6 +240,11 @@ class GithubSyncManager {
         // System-specific post-merge cleanup (array merging, uuid stripping, etc.)
         data = mergeCleanup(data, diff, packItem);
         if (data === null) return null;
+
+        // re-add maintained top level fields
+        for (const field of maintainTopLevelFields) {
+            data[field] ??= diff[field];
+        }
 
         return data;
     }
@@ -700,11 +707,11 @@ class GithubSyncManager {
      * @returns {object}
      */
     static #stripMetadata(data) {
-        delete data._id;
+        // delete data._id;
         delete data._key;
         delete data._stats;
         delete data.sort;
-        delete data.folder;
+        // delete data.folder;
         delete data.ownership;
         if (data.flags?.core?.sourceId) delete data.flags.core.sourceId;
         if (fu.isEmpty(data.flags?.core)) delete data.flags?.core;
