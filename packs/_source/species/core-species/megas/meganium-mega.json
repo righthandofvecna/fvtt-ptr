@@ -509,7 +509,8 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Johto"
+      "Johto",
+      "Mega"
     ],
     "type": {
       "0": "Grass",
@@ -539,6 +540,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "H4PyPUYT317yl3FS",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }

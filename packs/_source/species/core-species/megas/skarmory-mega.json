@@ -530,7 +530,8 @@
       "Unova",
       "Kalos",
       "Alola",
-      "Johto"
+      "Johto",
+      "Mega"
     ],
     "type": {
       "0": "Steel",
@@ -560,6 +561,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "V5j9qKxlYdDQPYs6",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }

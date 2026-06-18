@@ -545,7 +545,8 @@
       "Kalos",
       "Alola",
       "Kanto",
-      "Johto"
+      "Johto",
+      "Mega"
     ],
     "type": {
       "0": "Water",
@@ -575,6 +576,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "WsxBBDZvKOk8QIqu",
-  "sort": 2600000,
-  "flags": {}
+  "sort": 2600000
 }
