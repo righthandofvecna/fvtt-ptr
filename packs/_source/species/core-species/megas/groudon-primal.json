@@ -588,10 +588,13 @@
     },
     "keywords": [
       "Legendary",
-      "Hoenn"
+      "Hoenn",
+      "Primal Reversion"
     ],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "stackSlugs": false,
+    "enabled": false
   },
   "sort": 0,
   "ownership": {

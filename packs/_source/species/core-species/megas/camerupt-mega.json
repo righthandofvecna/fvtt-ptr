@@ -501,10 +501,13 @@
     },
     "keywords": [
       "Hoenn",
-      "Unova"
+      "Unova",
+      "Mega"
     ],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "stackSlugs": false,
+    "enabled": false
   },
   "sort": 0,
   "ownership": {

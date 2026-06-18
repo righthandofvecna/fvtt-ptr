@@ -551,7 +551,10 @@
       "1": "Rock",
       "2": ""
     },
-    "keywords": [],
+    "keywords": [
+      "Paldea",
+      "Mega"
+    ],
     "stackSlugs": false,
     "enabled": false,
     "contentSet": "",
@@ -575,6 +578,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "AUTBtkTLkwnQpJgG",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }

@@ -519,7 +519,8 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Kalos"
+      "Kalos",
+      "Mega"
     ],
     "type": {
       "0": "Water",
@@ -549,6 +550,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "wwe6kAzF8qXJXHYr",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }

@@ -677,7 +677,15 @@
     "source": {
       "value": "PTR Core Dex"
     },
-    "keywords": [],
+    "keywords": [
+      "Kanto",
+      "Johto",
+      "Sinnoh",
+      "Unova",
+      "Alola",
+      "Galar",
+      "Mega"
+    ],
     "type": {
       "0": "Fairy",
       "1": "Flying",
@@ -706,6 +714,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "MCifsHbAN4O8ULv7",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }
