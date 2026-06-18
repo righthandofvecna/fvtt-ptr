@@ -570,7 +570,8 @@
     "keywords": [
       "Alola",
       "Galar",
-      "Kalos"
+      "Kalos",
+      "Mega"
     ],
     "type": {
       "0": "Fighting",
@@ -600,6 +601,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "dDoq7Y52Kijuf4cv",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }

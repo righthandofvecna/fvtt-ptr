@@ -584,7 +584,8 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Kalos"
+      "Kalos",
+      "Mega"
     ],
     "type": {
       "0": "Grass",
@@ -614,6 +615,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "9SkMvQos4PuwVb3m",
-  "sort": 3700000,
-  "flags": {}
+  "sort": 3700000
 }

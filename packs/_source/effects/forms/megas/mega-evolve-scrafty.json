@@ -1,0 +1,112 @@
+{
+  "folder": "TuFJ2nmx9i2k6KYk",
+  "name": "Mega Evolve: Scrafty",
+  "type": "effect",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "This effect will mega-evolve your Scrafty.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "TokenImage",
+        "predicate": [
+          {
+            "value": "species:scrafty"
+          },
+          {
+            "value": "self:pokemon:shiny"
+          }
+        ],
+        "value": "/systems/ptu/static/images/sprites/560s_MEGA.webp"
+      },
+      {
+        "key": "TokenImage",
+        "predicate": {
+          "and": [
+            "species:scrafty",
+            {
+              "not": "self:pokemon:shiny"
+            }
+          ]
+        },
+        "value": "/systems/ptu/static/images/sprites/560_MEGA.webp"
+      },
+      {
+        "key": "TemporarySpecies",
+        "predicate": [
+          "species:scrafty"
+        ],
+        "uuid": "Compendium.ptu.species.Item.FfgMDVWfRT1V5dwN"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [
+          "species:scrafty"
+        ],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.NnYU42v8Ge5lmPQF"
+      }
+    ],
+    "enabled": true,
+    "slug": "mega-evolve-scrafty",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.111,
+      "lastMigration": {
+        "datetime": "2023-10-08T13:36:44.683Z",
+        "version": {
+          "schema": null,
+          "foundry": "11.311",
+          "system": "4.0.0.beta.11"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.32",
+    "createdTime": 1781744233027,
+    "modifiedTime": 1781744233027,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_id": "wghExdAz1llNrzv7"
+}

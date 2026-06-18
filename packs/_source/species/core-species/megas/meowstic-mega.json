@@ -542,7 +542,8 @@
     },
     "keywords": [
       "Galar",
-      "Kalos"
+      "Kalos",
+      "Mega"
     ],
     "type": {
       "0": "Psychic",
@@ -571,6 +572,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "y20A2Rc4VoEB84v7",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }

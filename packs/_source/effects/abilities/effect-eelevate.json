@@ -1,0 +1,90 @@
+{
+  "folder": "HTNFGIxy9zsCONjI",
+  "name": "Effect: Eelevate",
+  "type": "effect",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "Eelevate",
+        "choices": [
+          {
+            "value": "atk",
+            "label": "Attack"
+          },
+          {
+            "value": "def",
+            "label": "Defense"
+          },
+          {
+            "value": "spatk",
+            "label": "Special Attack"
+          },
+          {
+            "value": "spdef",
+            "label": "Special Defense"
+          },
+          {
+            "value": "spd",
+            "label": "Speed"
+          }
+        ],
+        "allowNoSelection": true
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.{item|flags.ptu.rulesSelections.eelevate}.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-eelevate",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": true,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
+    }
+  },
+  "_id": "StNRzuoxtMQjYBTN"
+}

@@ -532,7 +532,10 @@
       "1": "Fire",
       "2": ""
     },
-    "keywords": [],
+    "keywords": [
+      "Paldea",
+      "Mega"
+    ],
     "stackSlugs": false,
     "enabled": false,
     "contentSet": "",
@@ -556,6 +559,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "UpS5pUsweP194VRL",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }

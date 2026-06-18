@@ -704,10 +704,13 @@
       "Legendary",
       "Johto",
       "Kanto",
-      "Kalos"
+      "Kalos",
+      "Mega"
     ],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "stackSlugs": false,
+    "enabled": false
   },
   "sort": 0,
   "ownership": {

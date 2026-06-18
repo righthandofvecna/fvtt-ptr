@@ -1,0 +1,74 @@
+{
+  "name": "Fire Mane",
+  "type": "ability",
+  "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "This Pokémon's Fire type moves are +2 DB.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "fire-damage-base",
+        "value": 2
+      }
+    ],
+    "enabled": true,
+    "slug": "fire-mane",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:16.461Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "tier": "",
+    "automation": []
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
+    }
+  },
+  "_id": "DSU2O6WgHF7PJWM7"
+}
