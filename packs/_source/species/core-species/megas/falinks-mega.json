@@ -405,7 +405,7 @@
         "type": "body"
       }
     },
-    "slug": "falinks",
+    "slug": "falinks-mega",
     "rules": [],
     "source": {
       "value": "PTR Core Dex"
@@ -425,5 +425,7 @@
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "name": "Falinks-Mega",
-  "effects": []
+  "effects": [],
+  "folder": "irSNiCnUnI7il9mJ",
+  "_id": "qFcOquKfcYhIhj46"
 }

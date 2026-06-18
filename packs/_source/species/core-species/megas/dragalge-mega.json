@@ -471,7 +471,7 @@
         "type": "body"
       }
     },
-    "slug": "dragalge",
+    "slug": "dragalge-mega",
     "rules": [],
     "source": {
       "value": "PTR Core Dex"
@@ -493,5 +493,7 @@
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "name": "Dragalge-Mega",
-  "effects": []
+  "effects": [],
+  "folder": "irSNiCnUnI7il9mJ",
+  "_id": "eIl3V6VvOoYYiIAJ"
 }

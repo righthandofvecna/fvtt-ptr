@@ -546,7 +546,7 @@
         "type": "body"
       }
     },
-    "slug": "eelektross",
+    "slug": "eelektross-mega",
     "rules": [],
     "source": {
       "value": "PTR Core Dex"
@@ -566,5 +566,7 @@
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "name": "Eelektross-Mega",
-  "effects": []
+  "effects": [],
+  "folder": "irSNiCnUnI7il9mJ",
+  "_id": "nMoejf3f7gBqLGAD"
 }

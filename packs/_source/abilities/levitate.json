@@ -1,10 +1,10 @@
 {
-  "name": "Eelevate",
+  "name": "Levitate",
   "type": "ability",
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "This Pokémon is immune to the damage and effects of Ground Type Moves, and gains a Levitate Speed of 4, or has existing Levitate Speeds increased by +2. Defensive.\n\nAdditionally, this Pokémon has the following with an at-will frequency:\nTrigger - The user’s Damaging Attack causes an opponent to Faint\nThe user receives +1 Combat Stage in their highest non-HP stat.",
+    "effect": "The Pokémon is immune to the damage and effects of Ground Type Moves, and gains a Levitate Speed of 4, or has existing Levitate Speeds increased by +2. Defensive.",
     "snippet": "",
     "rules": [
       {
@@ -42,8 +42,6 @@
     ],
     "enabled": true,
     "slug": "levitate",
-    "contentSet": "",
-    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -55,7 +53,7 @@
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.StNRzuoxtMQjYBTN",
+    "referenceEffect": "",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -77,7 +75,7 @@
       "standard": false,
       "rapid": false,
       "shift": false,
-      "free": true,
+      "free": false,
       "extended": false
     },
     "ap": {
@@ -85,14 +83,30 @@
       "bind": false
     },
     "tier": "",
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
   },
+  "_id": "WsNZitOqUrhu9k78",
   "effects": [],
+  "folder": null,
+  "sort": 28900000,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true,
-      "automationStatus": "completed",
-      "devNote": ""
+      "showInTokenPanel": true
     }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1692968394056,
+    "modifiedTime": 1778200816595,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
   }
 }

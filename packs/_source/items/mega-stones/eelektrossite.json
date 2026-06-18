@@ -6,7 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "barbaracite",
+    "slug": "eelektrossite",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -58,7 +58,7 @@
     "subtype": "",
     "container": false,
     "automation": [],
-    "name": "Steelixite",
+    "name": "Eelektrossite",
     "useCount": 0
   },
   "type": "item",
@@ -70,5 +70,7 @@
       "devNote": "",
       "showInTokenPanel": false
     }
-  }
+  },
+  "folder": "3aYHO5npuCcYqxoX",
+  "_id": "2zlhN1MJrp8cDkrw"
 }

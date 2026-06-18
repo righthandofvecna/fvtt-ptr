@@ -1,54 +1,55 @@
 {
-  "name": "Mega Evolve: Falinks",
+  "folder": "78Q0tBAkKgb1vN0h",
+  "name": "Mega Evolve: Malamar",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "This effect will mega-evolve your Dragalge.",
+    "effect": "This effect will mega-evolve your Malamar.",
     "snippet": "",
     "rules": [
       {
         "key": "TokenImage",
         "predicate": [
           {
-            "value": "species:falinks"
+            "value": "species:malamar"
           },
           {
             "value": "self:pokemon:shiny"
           }
         ],
-        "value": "/systems/ptu/static/images/sprites/870s_MEGA.webp"
+        "value": "/systems/ptu/static/images/sprites/687s_MEGA.webp"
       },
       {
         "key": "TokenImage",
         "predicate": {
           "and": [
-            "species:falinks",
+            "species:malamar",
             {
               "not": "self:pokemon:shiny"
             }
           ]
         },
-        "value": "/systems/ptu/static/images/sprites/870_MEGA.webp"
+        "value": "/systems/ptu/static/images/sprites/687_MEGA.webp"
       },
       {
         "key": "TemporarySpecies",
         "predicate": [
-          "species:scolipede"
+          "species:malamar"
         ],
-        "uuid": "Compendium.ptu.species.Item.qFcOquKfcYhIhj46"
+        "uuid": "Compendium.ptu.species.Item.CKsftt53NUkNHAgz"
       },
       {
         "key": "GrantItem",
         "predicate": [
-          "species:falinks"
+          "species:malamar"
         ],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.abilities.Item.IKiA2uqsUeMpDYji"
+        "uuid": "Compendium.ptu.abilities.Item.fKuIlxWlLGIgXjVk"
       }
     ],
     "enabled": true,
-    "slug": "mega-evolve-dragalge",
+    "slug": "mega-evolve-malamar",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -94,5 +95,6 @@
       "devNote": "",
       "showInTokenPanel": false
     }
-  }
+  },
+  "_id": "4FVRBT0GYG0ZLGea"
 }

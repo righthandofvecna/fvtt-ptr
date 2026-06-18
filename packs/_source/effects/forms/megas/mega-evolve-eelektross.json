@@ -1,54 +1,55 @@
 {
-  "name": "Mega Evolve: Barbaracle",
+  "folder": "TuFJ2nmx9i2k6KYk",
+  "name": "Mega Evolve: Eelektross",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "This effect will mega-evolve your Barbaracle.",
+    "effect": "This effect will mega-evolve your Eelektross.",
     "snippet": "",
     "rules": [
       {
         "key": "TokenImage",
         "predicate": [
           {
-            "value": "species:barbaracle"
+            "value": "species:eelektross"
           },
           {
             "value": "self:pokemon:shiny"
           }
         ],
-        "value": "/systems/ptu/static/images/sprites/689s_MEGA.webp"
+        "value": "/systems/ptu/static/images/sprites/604s_MEGA.webp"
       },
       {
         "key": "TokenImage",
         "predicate": {
           "and": [
-            "species:barbaracle",
+            "species:eelektross",
             {
               "not": "self:pokemon:shiny"
             }
           ]
         },
-        "value": "/systems/ptu/static/images/sprites/689_MEGA.webp"
+        "value": "/systems/ptu/static/images/sprites/604_MEGA.webp"
       },
       {
         "key": "TemporarySpecies",
         "predicate": [
-          "species:scolipede"
+          "species:eelektross"
         ],
-        "uuid": "Compendium.ptu.species.Item.B0KSvxIT44ppzjBD"
+        "uuid": "Compendium.ptu.species.Item.nMoejf3f7gBqLGAD"
       },
       {
         "key": "GrantItem",
         "predicate": [
-          "species:barbaracle"
+          "species:eelektross"
         ],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.abilities.Item.iWuCTYkVJZ0cqVjl"
+        "uuid": "Compendium.ptu.abilities.Item.CGrAkNCnDtquA9bN"
       }
     ],
     "enabled": true,
-    "slug": "mega-evolve-falinks",
+    "slug": "mega-evolve-eelektross",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -94,5 +95,26 @@
       "devNote": "",
       "showInTokenPanel": false
     }
-  }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.ptu.effects.Item.bnLiE1Yv9HC7CtE1",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "copy",
+      "uuid": "Item.fl20eRfHWT03S92d",
+      "coreVersion": "13.351",
+      "systemId": "ptu",
+      "systemVersion": "4.4.3.32"
+    },
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.32",
+    "createdTime": 1781745707223,
+    "modifiedTime": 1781745707223,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_id": "fl20eRfHWT03S92d"
 }

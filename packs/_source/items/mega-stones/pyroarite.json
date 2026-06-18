@@ -1,12 +1,12 @@
 {
-  "name": "Barbaracite",
+  "name": "Pyroarite",
   "system": {
     "origin": "",
-    "effect": "Mega Evolves Barbaracle when used in conjunction with a Mega Ring.",
+    "effect": "Mega Evolves Pyroar when used in conjunction with a Mega Ring.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "malamarite",
+    "slug": "pyroarite",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -20,7 +20,7 @@
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.xw0f587j5uDTWtxX",
+    "referenceEffect": "Compendium.ptu.effects.Item.4FVRBT0GYG0ZLGea",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -58,11 +58,11 @@
     "subtype": "",
     "container": false,
     "automation": [],
-    "name": "Steelixite",
+    "name": "Pyroarite",
     "useCount": 0
   },
   "type": "item",
-  "img": "/systems/ptu/static/images/item_icons/barbaracite.webp",
+  "img": "/systems/ptu/static/images/item_icons/pyroarite.webp",
   "effects": [],
   "flags": {
     "ptu": {
@@ -70,5 +70,7 @@
       "devNote": "",
       "showInTokenPanel": false
     }
-  }
+  },
+  "folder": "3aYHO5npuCcYqxoX",
+  "_id": "XWlNpbAVZmlF57iQ"
 }

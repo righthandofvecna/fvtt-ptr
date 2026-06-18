@@ -1,54 +1,55 @@
 {
-  "name": "Mega Evolve: Pyroar",
+  "folder": "TuFJ2nmx9i2k6KYk",
+  "name": "Mega Evolve: Scrafty",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "This effect will mega-evolve your Pyroar.",
+    "effect": "This effect will mega-evolve your Scrafty.",
     "snippet": "",
     "rules": [
       {
         "key": "TokenImage",
         "predicate": [
           {
-            "value": "species:pyroar"
+            "value": "species:scrafty"
           },
           {
             "value": "self:pokemon:shiny"
           }
         ],
-        "value": "/systems/ptu/static/images/sprites/668s_MEGA.webp"
+        "value": "/systems/ptu/static/images/sprites/560s_MEGA.webp"
       },
       {
         "key": "TokenImage",
         "predicate": {
           "and": [
-            "species:pyroar",
+            "species:scrafty",
             {
               "not": "self:pokemon:shiny"
             }
           ]
         },
-        "value": "/systems/ptu/static/images/sprites/668_MEGA.webp"
+        "value": "/systems/ptu/static/images/sprites/560_MEGA.webp"
       },
       {
         "key": "TemporarySpecies",
         "predicate": [
-          "species:scolipede"
+          "species:scrafty"
         ],
-        "uuid": "Compendium.ptu.species.Item.AexI1wsuReC9r7m2"
+        "uuid": "Compendium.ptu.species.Item.FfgMDVWfRT1V5dwN"
       },
       {
         "key": "GrantItem",
         "predicate": [
-          "species:pyroar"
+          "species:scrafty"
         ],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.species.Item.xzBLmj4iAf9Ic9Sx"
+        "uuid": "Compendium.ptu.abilities.Item.NnYU42v8Ge5lmPQF"
       }
     ],
     "enabled": true,
-    "slug": "mega-evolve-barbaracle",
+    "slug": "mega-evolve-scrafty",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -94,5 +95,18 @@
       "devNote": "",
       "showInTokenPanel": false
     }
-  }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.32",
+    "createdTime": 1781744233027,
+    "modifiedTime": 1781744233027,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_id": "wghExdAz1llNrzv7"
 }

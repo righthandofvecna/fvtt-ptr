@@ -1,12 +1,12 @@
 {
-  "name": "Scraftinite",
+  "name": "Dragalgite",
   "system": {
     "origin": "",
-    "effect": "Mega Evolves Scrafty when used in conjunction with a Mega Ring.",
+    "effect": "Mega Evolves Dragalge when used in conjunction with a Mega Ring.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "scolipite",
+    "slug": "dragalgite",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -20,7 +20,7 @@
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.SkRghpTsD3JWnFaI",
+    "referenceEffect": "Compendium.ptu.effects.Item.3WCCaOowTrKoguaR",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -58,11 +58,11 @@
     "subtype": "",
     "container": false,
     "automation": [],
-    "name": "Steelixite",
+    "name": "Dragalgite",
     "useCount": 0
   },
   "type": "item",
-  "img": "/systems/ptu/static/images/item_icons/scraftinite.webp",
+  "img": "/systems/ptu/static/images/item_icons/dragalgite.webp",
   "effects": [],
   "flags": {
     "ptu": {
@@ -70,5 +70,20 @@
       "devNote": "",
       "showInTokenPanel": false
     }
-  }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.32",
+    "createdTime": 1781745680016,
+    "modifiedTime": 1781745680016,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+  },
+  "folder": "3aYHO5npuCcYqxoX",
+  "ownership": {
+    "default": 0
+  },
+  "_id": "bbm32tuajhovXi8C"
 }

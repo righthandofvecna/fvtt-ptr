@@ -1,4 +1,5 @@
 {
+  "folder": "HTNFGIxy9zsCONjI",
   "name": "Effect: Eelevate",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
@@ -84,5 +85,6 @@
       "automationStatus": "completed",
       "devNote": ""
     }
-  }
+  },
+  "_id": "StNRzuoxtMQjYBTN"
 }
