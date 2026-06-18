@@ -1,18 +1,28 @@
 {
-  "name": "Defiant",
+  "name": "Fire Mane",
   "type": "ability",
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "Whenever the user has its Combat Stages lowered, by something other than its own Moves or Abilities, the user’s Attack is raised 2 Combat Stages.",
+    "effect": "This Pokémon's Fire type moves are +2 DB.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "fire-damage-base",
+        "value": 2
+      }
+    ],
     "enabled": true,
-    "slug": "defiant",
+    "slug": "fire-mane",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:16.221Z",
+        "datetime": "2026-05-08T00:40:16.461Z",
         "version": {
           "schema": 0.11,
           "foundry": "13.351",
@@ -20,7 +30,7 @@
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.6FK8sVk0x9R2hce2",
+    "referenceEffect": "",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -50,17 +60,9 @@
       "bind": false
     },
     "tier": "",
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "IKiA2uqsUeMpDYji",
   "effects": [],
-  "folder": null,
-  "sort": 17700000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
@@ -68,14 +70,5 @@
       "devNote": ""
     }
   },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692968394056,
-    "modifiedTime": 1778200816261,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  }
+  "_id": "DSU2O6WgHF7PJWM7"
 }

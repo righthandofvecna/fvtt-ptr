@@ -1,0 +1,99 @@
+{
+  "name": "Eelevate",
+  "type": "ability",
+  "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "This Pokémon is immune to the damage and effects of Ground Type Moves, and gains a Levitate Speed of 4, or has existing Levitate Speeds increased by +2. Defensive.\n\nAdditionally, this Pokémon has the following with an at-will frequency:\nTrigger - The user’s Damaging Attack causes an opponent to Faint\nThe user receives +1 Combat Stage in their highest non-HP stat.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "Effectiveness",
+        "predicate": [],
+        "type": "ground",
+        "value": 0
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "levitate",
+        "adjustName": false,
+        "label": "{actor|name}'s Levitate",
+        "prompt": "Does {actor|name} already have a Levitate Speed?",
+        "choices": [
+          {
+            "label": "Yes",
+            "value": "2"
+          },
+          {
+            "label": "No",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.capabilities.levitate",
+        "phase": "applyAEs",
+        "value": "{item|flags.ptu.rulesSelections.levitate}",
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "eelevate",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:16.562Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "Compendium.ptu.effects.Item.StNRzuoxtMQjYBTN",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "tier": "",
+    "automation": []
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
+    }
+  },
+  "_id": "CGrAkNCnDtquA9bN"
+}
