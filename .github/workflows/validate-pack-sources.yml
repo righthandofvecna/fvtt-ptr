@@ -18,7 +18,7 @@ jobs:
             id=$(jq -r '._id // empty' "$file")
 
             if [[ -z "$id" ]]; then
-              echo "::error file=$file::Missing top-level _id field"
+              echo "::error file=$file::'$file' Missing top-level _id field"
               ERRORS=$((ERRORS + 1))
             elif [[ -n "${seen_ids[$id]+x}" ]]; then
               echo "::error file=$file::Duplicate _id '$id' (first seen in ${seen_ids[$id]})"
