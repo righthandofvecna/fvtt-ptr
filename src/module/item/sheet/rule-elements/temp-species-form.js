@@ -12,9 +12,12 @@ class TempSpeciesForm extends RuleElementForm {
         const uuid = this.rule.uuid ? String(this.rule.uuid) : null;
         const species = uuid ? await fromUuid(uuid) : null;
 
+        if(this.rule.predicate === undefined) this.updateItem({predicate: []})
+
         return {
             ...data,
             species,
+            predicationIsMultiple: Array.isArray(this.rule.predicate) && this.rule.predicate.every(p => typeof p === "string"),
         };
     }
 
@@ -41,6 +44,13 @@ class TempSpeciesForm extends RuleElementForm {
                 }
             });
         }
+
+        // Add events for toggle buttons
+        html.querySelector("[data-action=toggle-predicate]")?.addEventListener("click", () => {
+            const predicate = this.rule.predicate;
+            const newValue = Array.isArray(predicate) ? {"and": predicate.length ? predicate : []} : predicate?.["and"]?.length ? predicate["and"] : [];
+            this.updateItem({ predicate: newValue });
+        });
     }
 
     /** @override */
