@@ -322,13 +322,25 @@ class GithubSyncManager {
      */
 
     static async commitItemToGithub(document, button = null) {
-        const { blockedItems } = GithubSyncManager.config;
+        const { blockedItems, getItemSlug, slugify } = GithubSyncManager.config;
 
         if (!GithubSyncManager.isCommittableItem(document)) {
             ui.notifications.error(
                 `Cannot commit this item to GitHub — it must be imported from or opened directly from a supported compendium pack.`
             );
             return;
+        }
+
+        const itemSlug = getItemSlug(document.toObject?.() ?? document);
+        const slugFromName = slugify(document.name);
+        if (itemSlug !== slugFromName) {
+            const proceed = await foundry.applications.api.DialogV2.confirm({
+                title: "Slug Mismatch",
+                content: `The item's slug ("${itemSlug}") does not match the slug generated from its name ("${slugFromName}"). This is usually unintentional. Do you want to proceed with the commit anyway?`,
+                ok: { label: "Proceed" },
+                cancel: { label: "Cancel" },
+            });
+            if (!proceed) return;
         }
 
         const _origButtonHTML = button?.innerHTML ?? null;

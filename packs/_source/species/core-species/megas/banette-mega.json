@@ -567,10 +567,13 @@
       "Hoenn",
       "Unova",
       "Kalos",
-      "Alola"
+      "Alola",
+      "Mega"
     ],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "stackSlugs": false,
+    "enabled": false
   },
   "sort": 0,
   "ownership": {

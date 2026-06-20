@@ -466,7 +466,8 @@
     },
     "keywords": [
       "Unova",
-      "Galar"
+      "Galar",
+      "Mega"
     ],
     "type": {
       "0": "Ground",
@@ -496,6 +497,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "u34ibC6Y5nNkz7s5",
-  "sort": 650000,
-  "flags": {}
+  "sort": 650000
 }

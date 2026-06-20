@@ -1,0 +1,120 @@
+{
+  "folder": "TuFJ2nmx9i2k6KYk",
+  "name": "Mega Evolve: Eelektross",
+  "type": "effect",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "This effect will mega-evolve your Eelektross.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "TokenImage",
+        "predicate": [
+          {
+            "value": "species:eelektross"
+          },
+          {
+            "value": "self:pokemon:shiny"
+          }
+        ],
+        "value": "/systems/ptu/static/images/sprites/604s_MEGA.webp"
+      },
+      {
+        "key": "TokenImage",
+        "predicate": {
+          "and": [
+            "species:eelektross",
+            {
+              "not": "self:pokemon:shiny"
+            }
+          ]
+        },
+        "value": "/systems/ptu/static/images/sprites/604_MEGA.webp"
+      },
+      {
+        "key": "TemporarySpecies",
+        "predicate": [
+          "species:eelektross"
+        ],
+        "uuid": "Compendium.ptu.species.Item.nMoejf3f7gBqLGAD"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [
+          "species:eelektross"
+        ],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.CGrAkNCnDtquA9bN"
+      }
+    ],
+    "enabled": true,
+    "slug": "mega-evolve-eelektross",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.111,
+      "lastMigration": {
+        "datetime": "2023-10-08T13:36:44.683Z",
+        "version": {
+          "schema": null,
+          "foundry": "11.311",
+          "system": "4.0.0.beta.11"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.ptu.effects.Item.bnLiE1Yv9HC7CtE1",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "copy",
+      "uuid": "Item.fl20eRfHWT03S92d",
+      "coreVersion": "13.351",
+      "systemId": "ptu",
+      "systemVersion": "4.4.3.32"
+    },
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.32",
+    "createdTime": 1781745707223,
+    "modifiedTime": 1781745707223,
+    "lastModifiedBy": "izk1pNEkJuVFmrxW"
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_id": "fl20eRfHWT03S92d"
+}

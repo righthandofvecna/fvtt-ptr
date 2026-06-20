@@ -446,7 +446,10 @@
     "source": {
       "value": "PTR Core Dex"
     },
-    "keywords": [],
+    "keywords": [
+      "Kalos",
+      "Mega"
+    ],
     "type": {
       "0": "Fairy",
       "1": ""
@@ -474,6 +477,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "mSDq94xfrmKUFFr7",
-  "sort": 2600000,
-  "flags": {}
+  "sort": 2600000
 }

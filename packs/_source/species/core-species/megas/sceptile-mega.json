@@ -577,10 +577,13 @@
       "value": "PTR Core Dex Megas"
     },
     "keywords": [
-      "Hoenn"
+      "Hoenn",
+      "Mega"
     ],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "stackSlugs": false,
+    "enabled": false
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "irSNiCnUnI7il9mJ",
@@ -589,7 +592,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.1.4",

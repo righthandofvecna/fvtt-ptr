@@ -478,7 +478,12 @@
     "source": {
       "value": "PTR Core Dex"
     },
-    "keywords": [],
+    "keywords": [
+      "Kanto",
+      "Johto",
+      "Kalos",
+      "Mega"
+    ],
     "type": {
       "0": "Grass",
       "1": "Poison",
@@ -507,6 +512,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "USpEFFM1LaUEVdLj",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }

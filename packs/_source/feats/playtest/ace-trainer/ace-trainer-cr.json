@@ -29,9 +29,9 @@
       "Class Rework"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "custom",
       "max": 0,
-      "custom": "Drain 1 AP – Extended Action",
+      "custom": "Drain 1 AP - Extended",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -48,7 +48,7 @@
       "extended": true
     },
     "ap": {
-      "cost": 0,
+      "cost": 1,
       "bind": false
     },
     "prerequisites": [
@@ -72,7 +72,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

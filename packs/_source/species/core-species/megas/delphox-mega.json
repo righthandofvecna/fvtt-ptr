@@ -590,7 +590,8 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Kalos"
+      "Kalos",
+      "Mega"
     ],
     "type": {
       "0": "Fire",
@@ -620,6 +621,5 @@
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "A2BDTWwH1TEbvPLk",
-  "sort": 0,
-  "flags": {}
+  "sort": 0
 }
