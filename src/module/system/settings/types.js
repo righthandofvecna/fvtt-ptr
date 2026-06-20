@@ -158,7 +158,7 @@ export class TypeSettings extends PTUSettingsMenu {
     async _updateObject(event, data) {
         if (event.type === "submit") {
             const current = game.settings.get("ptu", "type.typeEffectiveness");
-            if(!objectsEqual(current, this.cache["types"])) {
+            if(!foundry.utils.equals(current, this.cache["types"])) {
                 await game.settings.set("ptu", "type.typeEffectiveness", this.cache["types"]);
                 SettingsConfig.reloadConfirm({world: true});
             }
@@ -205,7 +205,7 @@ export class TypeSettings extends PTUSettingsMenu {
                         delete types.Untyped;
                         types.Untyped = Untyped;
                     }
-                    if (!objectsEqual(this.cache["types"], types)) {
+                    if (!foundry.utils.equals(this.cache["types"], types)) {
                         this.cache["types"] = types;
                     }
                     this.render(true);
@@ -226,7 +226,7 @@ export class TypeSettings extends PTUSettingsMenu {
                             for (const type of Object.keys(types)) {
                                 delete types[type].effectiveness[typeData.name];
                             }
-                            if (!objectsEqual(this.cache["types"], types)) {
+                            if (!foundry.utils.equals(this.cache["types"], types)) {
                                 this.cache["types"] = types;
                             }
                             this.render(true);

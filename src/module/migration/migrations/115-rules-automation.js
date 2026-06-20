@@ -38,7 +38,7 @@ export class Migration115RulesAutomation extends MigrationBase {
         const oldRules = item.system.rules ?? [];
         const newRules = [];
         for(const rule of move.system.rules) {
-            const anyMatch = oldRules.some(oldRule => foundry.utils.objectsEqual(oldRule, rule));
+            const anyMatch = oldRules.some(oldRule => foundry.utils.equals(oldRule, rule));
             if(anyMatch) continue;
 
             newRules.push(rule);

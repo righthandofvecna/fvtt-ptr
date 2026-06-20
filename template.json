@@ -649,7 +649,8 @@
         "ap": {
           "cost": 0,
           "bind": false
-        }
+        },
+        "leagueLegal": false
       }
     },
     "dexentry": {
