@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "",
-    "effect": "A one-handed Weapon raises the Damage Base of Struggle and Weapon moves by +1.",
+    "effect": "A Small Melee Weapon raises the Damage Base of Struggle and Weapon moves by +1.\nSmall Melee Weapons are one-handed.",
     "snippet": "",
     "rules": [
       {
@@ -68,12 +68,15 @@
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "ownership": {
