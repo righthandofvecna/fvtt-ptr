@@ -109,7 +109,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.DlVJLO2Cd61pB3Xc",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -141,11 +141,11 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "Rp2iYtEMxDsbRm0g",
   "effects": [],
-  "folder": null,
   "sort": 24500000,
   "ownership": {
     "default": 0
