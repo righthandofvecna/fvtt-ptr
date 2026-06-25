@@ -2,7 +2,7 @@
   "name": "Stat Ace (Special Defense)",
   "system": {
     "origin": "",
-    "effect": "Effect: Your Pokémon have their Chosen Base Stat increased by +1, and by +1 more for every 10 Levels they have. Additionally, you, the Trainer, gain +1 to the Chosen Base Stat for every two Milestones you have, plus 1.\n\nNote: When you take Stat Ace, choose one of Attack, Defense, Special Attack, Special Defense, or Speed. This becomes your Pokémon’s Chosen Stat. You may take Stat Ace multiple times, choosing different Stats each time.",
+    "effect": "Effect: Your Pokémon have their Chosen Base Stat increased by +1, and by +1 more for every 10 Levels they have. Additionally, you, the Trainer, gain +1 to the Chosen Base Stat for every two Trainer Tiers you have, plus 1.\n\nNote: When you take Stat Ace, choose one of Attack, Defense, Special Attack, Special Defense, or Speed. This becomes your Pokémon’s Chosen Stat. You may take Stat Ace multiple times, choosing different Stats each time.",
     "snippet": "",
     "rules": [
       {
@@ -77,7 +77,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
-    "replacesSlug": "stat-ace-special-defense"
+    "replacesSlug": "stat-ace-special-defense",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -85,7 +86,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Ace Trainer or Style Expert, 1 Pokémon with the chosen stat at 15 or more, Novice Command or Focus\nOr\n3 Pokémon with the chosen stat at 20 or higher, Novice Command or Focus",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "folder": "KlbLuc2juXKYPRSb",

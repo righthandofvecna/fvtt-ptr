@@ -2,7 +2,7 @@
   "name": "Enduring Soul",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Your Pokémon have their HP Base Stat increased by +1, and by +1 more for every 10 Levels they have. Additionally, you gain +1 to the HP Base Stat for every two Milestones you have, plus 1. You and your Pokemon begin each Scene with Temporary HP equal to the sum of your Athletics and Focus Ranks.",
+    "effect": "Your Pokémon have their HP Base Stat increased by +1, and by +1 more for every 10 Levels they have. Additionally, you gain +1 to the HP Base Stat for every two Trainer Tiers you have, plus 1. You and your Pokemon begin each Scene with Temporary HP equal to the sum of your Athletics and Focus Ranks.",
     "snippet": "",
     "rules": [
       {
@@ -73,7 +73,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
-    "replacesSlug": "enduring-soul"
+    "replacesSlug": "enduring-soul",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -82,7 +83,9 @@
     "ptu": {
       "showInTokenPanel": true,
       "prereqBackup": "Novice Focus",
-      "itemGrants": {}
+      "itemGrants": {},
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "folder": "cwHgKZ5JJwLWPzJM",
