@@ -18,6 +18,13 @@
         "range": "19",
         "value": "",
         "affects": "target"
+      },
+      {
+        "key": "HealOnDamageDealt",
+        "predicate": [],
+        "selectors": "{id}-damage-dealt",
+        "percent": -0.33,
+        "roundUp": false
       }
     ],
     "enabled": true,
@@ -85,7 +92,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "l7sqm6Fyaz6kQL9A",
   "effects": [],
@@ -95,7 +103,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
