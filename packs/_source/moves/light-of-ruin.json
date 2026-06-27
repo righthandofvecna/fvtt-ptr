@@ -7,7 +7,15 @@
     "origin": "",
     "effect": "--",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "HealOnDamageDealt",
+        "predicate": [],
+        "selectors": "{id}-damage-dealt",
+        "percent": -0.5,
+        "roundUp": false
+      }
+    ],
     "enabled": true,
     "slug": "light-of-ruin",
     "schema": {
@@ -72,7 +80,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "L0bIqzozC7ec4O3T",
   "effects": [],
@@ -83,7 +92,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "no-automation-needed"
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
