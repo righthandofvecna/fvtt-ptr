@@ -6,7 +6,7 @@
   "system": {
     "origin": "",
     "effect": "",
-    "snippet": "",
+    "snippet": "-10 Initiative",
     "rules": [
       {
         "key": "FlatModifier",
@@ -33,7 +33,7 @@
     },
     "duration": {
       "value": -1,
-      "unit": "unlimited",
+      "unit": "encounter",
       "expiry": null
     },
     "start": {
@@ -52,7 +52,9 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

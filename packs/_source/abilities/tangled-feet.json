@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "While Confused or Slowed, the user gains +3 Evasion. The user is immune to the Vulnerable Condition.",
+    "effect": "While Confused or Slowed, the user gains +3 Evasion. The user is immune to the Vulnerable Condition. Defensive.",
     "snippet": "",
     "rules": [
       {
@@ -95,18 +95,20 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "MqvamCP6pJ3gnEw9",
   "effects": [],
-  "folder": null,
   "sort": 21000000,
   "ownership": {
     "default": 0
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
