@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "",
-    "effect": "Two-handed weapon raise the AC of the Attack by +1,\nand raise the Damage Base by +2.",
+    "effect": "Large Melee Weapons raise the AC of the Attack by +1, and raise the Damage Base by +2.\nLarge Melee Weapons are two-handed.",
     "snippet": "",
     "rules": [
       {
@@ -26,7 +26,7 @@
         "label": "large-melee",
         "hideIfDisabled": false,
         "selectors": "attack-roll",
-        "value": 1
+        "value": -1
       }
     ],
     "enabled": true,
@@ -78,12 +78,15 @@
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "LocknKey": {
       "IDKeysFlag": "",
