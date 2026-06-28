@@ -88,9 +88,9 @@ export default class TokenRulerPTU extends foundry.canvas.placeables.tokens.Toke
       let currActionSpeed = movement[movementType] ?? movement.overland ?? 0;
 
       const { normal, double, triple } = CONFIG.PTU.tokenRulerColors ?? {};
-      const increment = (waypoint.measurement.cost - 0.1) / Math.max(currActionSpeed, 0.000001);
-      if (increment <= 1) style.color = normal ?? style.color;
-      else if (increment <= 2) style.color = double ?? style.color;
+      const distance = waypoint.measurement.cost - 0.1;
+      if (distance <= currActionSpeed) style.color = normal ?? style.color;
+      else if (distance <= Math.ceil(currActionSpeed * 1.5)) style.color = double ?? style.color;
       else style.color = triple ?? style.color;
     } catch (err) {
       // Swallow errors and return default style
