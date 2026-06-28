@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "Whenever the Pokémon is attacking or being attacked, the foe must make all damage calcullations as if their Combat Stages were at their default state",
+    "effect": "Whenever the Pokémon is attacking or being attacked, the foe must make all damage calcullations as if their Combat Stages were at their default state. Defensive.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -52,16 +52,22 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "eQiIEPjvWrRhdtdQ",
   "effects": [],
-  "folder": null,
   "sort": 35600000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

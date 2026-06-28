@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "If something would raise the user’s Combat Stages, it instead lowers the user’s Combat Stages by the same amount. If something would lower the user’s Combat Stages, it instead raises the user’s Combat Stages by the same amount.",
+    "effect": "If something would raise the user’s Combat Stages, it instead lowers the user’s Combat Stages by the same amount. If something would lower the user’s Combat Stages, it instead raises the user’s Combat Stages by the same amount. Defensive.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -52,11 +52,11 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "fKuIlxWlLGIgXjVk",
   "effects": [],
-  "folder": null,
   "sort": 36400000,
   "ownership": {
     "default": 0

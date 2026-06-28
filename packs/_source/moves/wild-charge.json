@@ -7,7 +7,15 @@
     "origin": "",
     "effect": "--",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "HealOnDamageDealt",
+        "predicate": [],
+        "selectors": "{id}-damage-dealt",
+        "percent": -0.25,
+        "roundUp": false
+      }
+    ],
     "enabled": true,
     "slug": "wild-charge",
     "schema": {
@@ -64,8 +72,8 @@
     },
     "type": "Electric",
     "category": "Physical",
-    "damageBase": 9,
-    "ac": 2,
+    "damageBase": "9",
+    "ac": "2",
     "range": "Melee",
     "contestType": "Tough - Steady Performance",
     "stab": false,
@@ -73,7 +81,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "idhhi7YJRDHnUUMR",
   "effects": [],
@@ -83,7 +92,9 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "no-automation-needed"
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "_stats": {

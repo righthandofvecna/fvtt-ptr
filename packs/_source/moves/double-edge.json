@@ -7,7 +7,15 @@
     "origin": "",
     "effect": "--",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "HealOnDamageDealt",
+        "predicate": [],
+        "selectors": "{id}-damage-dealt",
+        "percent": -0.33,
+        "roundUp": false
+      }
+    ],
     "enabled": true,
     "slug": "double-edge",
     "schema": {
@@ -64,8 +72,8 @@
     },
     "type": "Normal",
     "category": "Physical",
-    "damageBase": 12,
-    "ac": 2,
+    "damageBase": "12",
+    "ac": "2",
     "range": "Melee",
     "contestType": "Tough - Big Show",
     "stab": false,
@@ -73,7 +81,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "7Gi57ZcOWjyjhU0A",
   "effects": [],
@@ -83,7 +92,10 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "no-automation-needed"
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": true
     }
   },
   "_stats": {

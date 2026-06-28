@@ -13,6 +13,13 @@
         "hideIfDisabled": false,
         "selectors": "{item|id}-crit-range",
         "value": 2
+      },
+      {
+        "key": "HealOnDamageDealt",
+        "predicate": [],
+        "selectors": "{id}-damage-dealt",
+        "percent": -0.25,
+        "roundUp": false
       }
     ],
     "enabled": true,
@@ -79,13 +86,16 @@
     "damageBonus": 0,
     "isStruggle": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "folder": "O2vsL1IY0u9DOERr",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

@@ -2,7 +2,7 @@
   "name": "Heart Booster",
   "system": {
     "origin": "",
-    "effect": "The Pokémon gains 2 Tutor Points. Use only one per Pokémon.",
+    "effect": "The Pokémon gains 2 Tutor Slots. Use only one per Pokémon.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "Heart Booster",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/heart booster.webp",
@@ -69,7 +70,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -82,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 50400000,
   "_id": "hKIOclVchHCJQ57J"
 }

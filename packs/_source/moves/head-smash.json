@@ -7,7 +7,15 @@
     "origin": "",
     "effect": "The target is pushed 2 meters.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "HealOnDamageDealt",
+        "predicate": [],
+        "selectors": "{id}-damage-dealt",
+        "percent": 0,
+        "roundUp": false
+      }
+    ],
     "enabled": true,
     "slug": "head-smash",
     "schema": {
@@ -65,8 +73,8 @@
     },
     "type": "Rock",
     "category": "Physical",
-    "damageBase": 15,
-    "ac": 5,
+    "damageBase": "15",
+    "ac": "5",
     "range": "Melee",
     "contestType": "Tough - Seen Nothing Yet",
     "stab": false,
@@ -74,7 +82,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "IeLVMhoSWyAuznBv",
   "effects": [],
@@ -82,7 +91,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

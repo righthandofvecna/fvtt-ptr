@@ -7,7 +7,15 @@
     "origin": "",
     "effect": "The target is pushed back 2 meters.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "HealOnDamageDealt",
+        "predicate": [],
+        "selectors": "{id}-damage-dealt",
+        "percent": -0.33,
+        "roundUp": false
+      }
+    ],
     "enabled": true,
     "slug": "brave-bird",
     "schema": {
@@ -65,8 +73,8 @@
     },
     "type": "Flying",
     "category": "Physical",
-    "damageBase": 12,
-    "ac": 2,
+    "damageBase": "12",
+    "ac": "2",
     "range": "Melee",
     "contestType": "Cute - Desperation",
     "stab": false,
@@ -74,7 +82,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "SahvKAgxHSXkU2rv",
   "effects": [],
@@ -82,7 +91,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

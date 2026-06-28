@@ -2,7 +2,7 @@
   "name": "Shock Collar",
   "system": {
     "origin": "",
-    "effect": "Comes with a remote activator, which when pressed, causes the Pokémon or Trainer wearing the shock collar to lose Hit Points equal to 1/6th of their Max Hit Points. This may be used to activate the “Press” Feature. Collars that work on Ground Type Pokémon are available for an additional $500.",
+    "effect": "Comes with a remote activator, which when pressed, causes the Pokémon or Trainer wearing the shock collar to lose Hit Points equal to 1/6th of their Max Hit Points. This may be used to activate the @UUID[Compendium.ptu.feats.Item.UF07jMVuiSeRawZR] Feature. Collars that work on Ground Type Pokémon are available for an additional $500.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -60,7 +60,8 @@
     "name": "Shock Collar",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -68,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -79,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 25400000,
   "_id": "Kuh2OOUFmXKFExco"
 }

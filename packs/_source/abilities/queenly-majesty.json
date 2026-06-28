@@ -4,9 +4,17 @@
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "Target - An Adjacent Foe\nTrigger - An Adjacent Foe uses a Priority Move or an Interrupt action\nConnection - Stomp. The user may attack the triggering foe with Stomp as a Free Action Interrupt. The user cannot be targeted by Interrupt Moves and Interrupts may not be declared in response to the user's actions.",
+    "effect": "Target - An Adjacent Foe\nTrigger - An Adjacent Foe uses a Priority Move or an Interrupt action\nConnection - Stomp. The user may attack the triggering foe with Stomp as a Free Action Interrupt. The user cannot be targeted by Interrupt Moves and Interrupts may not be declared in response to the user's actions. Defensive.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.99QTjxycWPkoSfze",
+        "modifications": []
+      }
+    ],
     "enabled": true,
     "slug": "queenly-majesty",
     "schema": {
@@ -52,16 +60,23 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "ITqptzxmtAEd13Uz",
   "effects": [],
-  "folder": null,
   "sort": 17800000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
