@@ -18,7 +18,7 @@ class PTUItem extends Item {
         if (this.system.slug) return this.system.slug;
         const baseName = this.name.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
         const contentSet = this.system.contentSet;
-        const suffix = contentSet ? (game.ptu?.config?.contentSets?.[contentSet]?.suffix ?? "") : "";
+        const suffix = contentSet ? (CONFIG.PTU.contentSets?.[contentSet]?.suffix ?? "") : "";
         return sluggify(baseName) + suffix;
     }
 

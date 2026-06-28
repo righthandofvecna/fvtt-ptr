@@ -204,7 +204,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
 
                 const baseName = this.item.name.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
                 const contentSet = this.item.system.contentSet;
-                const suffix = contentSet ? (game.ptu?.config?.contentSets?.[contentSet]?.suffix ?? "") : "";
+                const suffix = contentSet ? (CONFIG.PTU.contentSets?.[contentSet]?.suffix ?? "") : "";
                 slugInput.value = sluggify(baseName) + suffix;
                 const event = new Event("change");
                 slugInput.dispatchEvent(event);
@@ -212,7 +212,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
             if(!slugInput.value) {
                 const baseName = this.item.name.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
                 const contentSet = this.item.system.contentSet;
-                const suffix = contentSet ? (game.ptu?.config?.contentSets?.[contentSet]?.suffix ?? "") : "";
+                const suffix = contentSet ? (CONFIG.PTU.contentSets?.[contentSet]?.suffix ?? "") : "";
                 slugInput.value = sluggify(baseName) + suffix;
                 const event = new Event("change");
                 slugInput.dispatchEvent(event);
