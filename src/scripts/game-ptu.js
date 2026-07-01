@@ -12,6 +12,7 @@ import { findItemInCompendium, querySpeciesCompendium } from "../util/misc.js"
 import { resolveInjectedProperties, resolveValue } from "../util/value-resolver.js"
 import { dexSync } from "./macros/dex-sync.js"
 import { pokedex } from "./macros/pokedex.js"
+import { applyRest } from "./macros/rest.js"
 import { changeRotomForm } from "./macros/rotom-form-change.js"
 import { TypeMatrix } from "../module/apps/type-matrix.js";
 import { Weather } from "../module/apps/weather.js";
@@ -49,6 +50,7 @@ const GamePTU = {
             macros: {
                 changeRotomForm,
                 pokedex,
+                applyRest,
                 dexSync,
                 initializeWorldNotes: (async () => {
                     if (game.folders.getName("Actor Notes")) {
