@@ -6,7 +6,7 @@
   "_id": "ghDIsYuAYNsFHXVa",
   "system": {
     "origin": "",
-    "effect": "After the target takes damage, the user gains HP equal to half of the damage they dealt to the target. This Move is affected by Strong Jaw.",
+    "effect": "",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -28,7 +28,9 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1"
+      "Target 1",
+      "Drain",
+      "Jaw"
     ],
     "sheerForce": false,
     "toughClaws": false,

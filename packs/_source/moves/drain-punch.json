@@ -5,17 +5,9 @@
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
-    "effect": "After the target takes damage, the user gains HP equal to half of the damage it dealt to the target.",
+    "effect": "",
     "snippet": "",
-    "rules": [
-      {
-        "key": "HealOnDamageDealt",
-        "predicate": [],
-        "selectors": "{id}-damage-dealt",
-        "percent": 0.5,
-        "roundUp": false
-      }
-    ],
+    "rules": [],
     "enabled": true,
     "slug": "drain-punch",
     "contentSet": "",
@@ -39,7 +31,8 @@
     "keywords": [
       "Target 1",
       "Aura",
-      "Punch"
+      "Punch",
+      "Drain"
     ],
     "sheerForce": false,
     "toughClaws": false,

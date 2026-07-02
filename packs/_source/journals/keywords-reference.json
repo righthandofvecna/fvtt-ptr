@@ -219,6 +219,52 @@
       }
     },
     {
+      "sort": 650000,
+      "name": "Drain",
+      "type": "keyword",
+      "_id": "kwDrain000000000",
+      "system": {
+        "rules": [
+          {
+            "key": "HealOnDamageDealt",
+            "predicate": [],
+            "selectors": "{id}-damage-dealt",
+            "percent": 0.5,
+            "roundUp": false
+          }
+        ]
+      },
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>After the target takes damage, the user gains HP equal to half of the damage they dealt to the target.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602000915,
+        "modifiedTime": 1782602029022,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
       "sort": 700000,
       "name": "Environ",
       "type": "keyword",
@@ -556,6 +602,42 @@
       "text": {
         "format": 1,
         "content": "<p>Interrupt Moves may be declared in the middle of another combatant’s turn to allow the user to take an action. They work similarly to Priority (Advanced, Limited) effects in that they only allow you to take the action that has Interrupt and not a full turn.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602559630,
+        "modifiedTime": 1782602569958,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1650000,
+      "name": "Jaw",
+      "type": "keyword",
+      "_id": "kwJaw00000000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>This Move is affected by the @UUID[Compendium.ptu.abilities.Item.Gqv7K8YBzWY2e5Zt]{Strong Jaw} ability.</p>"
       },
       "video": {
         "controls": true,
