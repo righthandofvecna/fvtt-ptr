@@ -38,6 +38,9 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Don't show Granted Moves in Level Up Screen](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/978)
+- [Fixed Pokeball Theme Styling](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/914)
+- [NPC Quick Builder Improvements](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/805)
 - Added a Rest button for natural healing and Pokemon centers
 - Added Keyword description system and some automation
 - Fix Shadow Condition

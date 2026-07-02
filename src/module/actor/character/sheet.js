@@ -220,12 +220,12 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		this._itemSummaryRenderer.activateListeners(html);
 
 		$(html).find('nav .tooltip').tooltipster({
-			theme: `tooltipster-shadow ball-themes ${this.ballStyle}`,
+			theme: `tooltipster-shadow ball-themes ball-theme-${this.ballStyle}`,
 			position: 'right'
 		});
 
 		$(html).find('.tag.tooltip').tooltipster({
-			theme: `tooltipster-shadow ball-themes ${this.ballStyle}`,
+			theme: `tooltipster-shadow ball-themes ball-theme-${this.ballStyle}`,
 			position: 'top'
 		});
 
@@ -234,7 +234,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 			const $children = $html.find('.mod-tooltip');
 			if ($children.length > 0) {
 				$html.tooltipster({
-					theme: `tooltipster-shadow ball-themes ${this.ballStyle}`,
+					theme: `tooltipster-shadow ball-themes ball-theme-${this.ballStyle}`,
 					position: $children.data('position') || 'bottom',
 					content: `<div class="mod-tooltip">${$children.html()}</div>`,
 					contentAsHTML: true,

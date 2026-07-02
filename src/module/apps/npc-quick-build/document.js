@@ -84,6 +84,7 @@ export class NpcQuickBuildData {
             features: {
                 selected: [],
                 computed: [],
+                restricted: false,
             },
             edges: {
                 selected: [],
@@ -150,7 +151,7 @@ export class NpcQuickBuildData {
 
         this.multiselects = foundry.utils.deepClone(this._staticMultiselects);
 
-        // source selection
+        // Pokémon species source selection (habitat rolltable)
         this.source = undefined;
         this.sourceSelect = {
             value: undefined,
@@ -165,6 +166,30 @@ export class NpcQuickBuildData {
                 _id: undefined,
             }
         }
+
+        // Feature (feat) source selection (optional rolltable)
+        this.featureSource = undefined;
+        this.featureSourceSelect = {
+            value: undefined,
+            updated: false,
+            options: [
+                { label: "Compendium Browser Settings", uuid: "" },
+                ...game.tables.map(t => ({ label: t.name, uuid: t.uuid, group: t.folder?.name }))
+            ],
+            link: { label: undefined, uuid: undefined, _id: undefined }
+        };
+
+        // Edge source selection (optional rolltable)
+        this.edgeSource = undefined;
+        this.edgeSourceSelect = {
+            value: undefined,
+            updated: false,
+            options: [
+                { label: "Compendium Browser Settings", uuid: "" },
+                ...game.tables.map(t => ({ label: t.name, uuid: t.uuid, group: t.folder?.name }))
+            ],
+            link: { label: undefined, uuid: undefined, _id: undefined }
+        };
 
 
         this.helpText = {
@@ -219,6 +244,7 @@ export class NpcQuickBuildData {
                     uuid: feature.uuid,
                     prerequisites: feature?.system?.prerequisites ?? [],
                     class: feature?.system?.class,
+                    keywords: feature?.system?.keywords ?? [],
                 })
             }
         }
@@ -438,18 +464,43 @@ export class NpcQuickBuildData {
         }
 
         let numChosen = newFeatures.length + this.trainer.features.computed.length;
-        for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
-            const chosen = chooseFrom(this.multiselects.features.options);
 
-            const { allNewFeatures, allNewUnmet } = await this.allItemPrereqs(chosen.prerequisites, { level: this.trainer.level, allComputed, skillsComputed })
-            // check if there are any new classes in there, and we're not allowed to add new classes
-            const isRestricted = this.trainer.classes.restricted && allNewFeatures.some(f=>f?.system?.keywords?.includes("Class"));
-            if (!isRestricted && allNewUnmet.length == 0 && numChosen + 1 + allNewFeatures.length <= N) {
-                newFeatures.push(chosen);
-                numChosen += 1 + allNewFeatures.length;
+        if (this.featureSource) {
+            // Roll from the configured rolltable
+            for (let attempt = 0; attempt < MAX_ATTEMPTS && numChosen < N; attempt++) {
+                const { results } = await this.featureSource.roll();
+                if (!results?.length) continue;
+                const [result] = results;
+                const uuid = result.documentUuid || (()=>{
+                    switch (result.type) {
+                        case "pack": return `Compendium.${result.documentCollection}.Item.${result.documentId}`;
+                        case "document": return `${result.documentCollection}.${result.documentId}`;
+                        default: return "";
+                    }
+                })();
+                if (!uuid) continue;
+                const item = await fromUuid(uuid);
+                if (!item || item.type !== "feat") continue;
+                if ((item.system?.keywords ?? []).includes("Class")) continue; // skip classes
+                const option = this.multiselects.features.options.find(o => o.uuid === uuid || o.label === item.name);
+                if (!option || newFeatures.find(f => f.uuid === option.uuid)) continue;
+                newFeatures.push({ label: option.label, value: option.value, uuid: option.uuid });
+                numChosen += 1;
             }
+        } else {
+            for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+                const chosen = chooseFrom(this.multiselects.features.options);
 
-            if (numChosen >= N) break;
+                const { allNewFeatures, allNewUnmet } = await this.allItemPrereqs(chosen.prerequisites, { level: this.trainer.level, allComputed, skillsComputed })
+                // check if there are any new classes in there, and we're not allowed to add new classes
+                const isRestricted = this.trainer.classes.restricted && allNewFeatures.some(f=>f?.system?.keywords?.includes("Class"));
+                if (!isRestricted && allNewUnmet.length == 0 && numChosen + 1 + allNewFeatures.length <= N) {
+                    newFeatures.push(chosen);
+                    numChosen += 1 + allNewFeatures.length;
+                }
+
+                if (numChosen >= N) break;
+            }
         }
         this.trainer.features.selected = newFeatures;
         await this.refresh()
@@ -473,20 +524,46 @@ export class NpcQuickBuildData {
             skillsComputed[skill] = Math.max(skillLimit, this.trainer.skills[skill].value ?? 1);
         }
 
-        const curatedOptions = this.multiselects.edges.options.filter(e=>!["Basic Skills", "Adept Skills", "Expert Skills", "Master Skills"].includes(e.label));
+        const curatedOptions = this.multiselects.edges.options.filter(e=>![
+            "Basic Skills", "Adept Skills", "Expert Skills", "Master Skills"
+        ].includes(e.label));
 
         let numChosen = newEdges.length + this.trainer.edges.computed.length;
-        for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
-            const chosen = chooseFrom(curatedOptions);
 
-            const { allNewFeatures, allNewEdges, allNewUnmet } = await this.allItemPrereqs(chosen.prerequisites, { level: this.trainer.level, allComputed, skillsComputed })
-            const isRestricted = this.trainer.classes.restricted && allNewFeatures.some(f=>f?.system?.keywords?.includes("Class"));
-            if (!isRestricted && allNewUnmet.length == 0 && numChosen + 1 + allNewEdges.length <= N) {
-                newEdges.push(chosen);
-                numChosen += 1 + allNewEdges.length;
+        if (this.edgeSource) {
+            // Roll from the configured rolltable
+            for (let attempt = 0; attempt < MAX_ATTEMPTS && numChosen < N; attempt++) {
+                const { results } = await this.edgeSource.roll();
+                if (!results?.length) continue;
+                const [result] = results;
+                const uuid = result.documentUuid || (()=>{
+                    switch (result.type) {
+                        case "pack": return `Compendium.${result.documentCollection}.Item.${result.documentId}`;
+                        case "document": return `${result.documentCollection}.${result.documentId}`;
+                        default: return "";
+                    }
+                })();
+                if (!uuid) continue;
+                const item = await fromUuid(uuid);
+                if (!item || item.type !== "edge") continue;
+                const option = this.multiselects.edges.options.find(o => o.uuid === uuid || o.label === item.name);
+                if (!option || newEdges.find(e => e.uuid === option.uuid)) continue;
+                newEdges.push({ label: option.label, value: option.value, uuid: option.uuid });
+                numChosen += 1;
             }
+        } else {
+            for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+                const chosen = chooseFrom(curatedOptions);
 
-            if (numChosen >= N) break;
+                const { allNewFeatures, allNewEdges, allNewUnmet } = await this.allItemPrereqs(chosen.prerequisites, { level: this.trainer.level, allComputed, skillsComputed })
+                const isRestricted = this.trainer.classes.restricted && allNewFeatures.some(f=>f?.system?.keywords?.includes("Class"));
+                if (!isRestricted && allNewUnmet.length == 0 && numChosen + 1 + allNewEdges.length <= N) {
+                    newEdges.push(chosen);
+                    numChosen += 1 + allNewEdges.length;
+                }
+
+                if (numChosen >= N) break;
+            }
         }
         this.trainer.edges.selected = newEdges;
         await this.refresh()
@@ -673,7 +750,9 @@ export class NpcQuickBuildData {
                 return;
             }
             const [result] = results;
-            const constructedUuid = (()=>{
+            // Foundry v13 carries the full UUID on the result directly; fall back to
+            // reconstructing it from the older documentCollection + documentId fields.
+            const constructedUuid = result.documentUuid || (()=>{
                 switch (result.type) {
                     case "pack": return `Compendium.${result.documentCollection}.Item.${result.documentId}`;
                     case "document": return `${result.documentCollection}.${result.documentId}`;
@@ -1190,6 +1269,16 @@ export class NpcQuickBuildData {
                     }));
                 }
 
+                // Normalize pre-populated selections: handle case differences introduced by
+                // actor import (e.g., "body" → "Body" or UUID matching).
+                if (subSelectable.selected && !subSelectable.choices.find(c => c.value === subSelectable.selected)) {
+                    const lc = subSelectable.selected.toLowerCase();
+                    const normalized = subSelectable.choices.find(
+                        c => c.value.toLowerCase() === lc || c.label?.toLowerCase() === lc
+                    );
+                    if (normalized) subSelectable.selected = normalized.value;
+                }
+
                 // check if we've got an unmet prerequisite for this still
                 const unmet = allSuboptions.find(s => s.uuid == uuid);
                 if (unmet && !subSelectable.selected && choices.find(c => c.label == unmet.subvalue)) {
@@ -1315,6 +1404,13 @@ export class NpcQuickBuildData {
         for (const featureOption of this.multiselects.features.options) {
             featureOption.crossClass = (selectedClasses.length > 0 && featureOption?.class) ? !selectedClasses.includes(featureOption.class) : false;
         }
+        // When features are restricted, only show General-tagged feats and feats from selected classes
+        if (this.trainer.features.restricted) {
+            const selectedClassLabels = this.trainer.classes.selected.map(c => c.label);
+            this.multiselects.features.options = this.multiselects.features.options.filter(f =>
+                (f.keywords ?? []).includes("General") || selectedClassLabels.includes(f.class)
+            );
+        }
         this.multiselects.features.options.sort((a, b)=> a.crossClass - b.crossClass || a.label.localeCompare(b.label));
         
         this.multiselects.edges.options.sort((a, b)=> a.label.localeCompare(b.label));
@@ -1347,11 +1443,164 @@ export class NpcQuickBuildData {
             }
         }
 
+        // feat source
+        if (this.featureSourceSelect.updated) {
+            if (!this.featureSourceSelect.value) this.featureSource = undefined;
+            else if (!isNaN(Number(this.featureSourceSelect.value))) this.featureSource = game.tables.get(this.featureSourceSelect.value);
+            else if (this.featureSourceSelect.value.includes("RollTable.")) this.featureSource = await fromUuid(this.featureSourceSelect.value);
+            this.featureSourceSelect.updated = false;
+        }
+        this.featureSourceSelect.link = this.featureSource
+            ? { uuid: this.featureSource.uuid, _id: this.featureSource._id, label: this.featureSource.name }
+            : { uuid: undefined, _id: undefined, label: undefined };
+
+        // edge source
+        if (this.edgeSourceSelect.updated) {
+            if (!this.edgeSourceSelect.value) this.edgeSource = undefined;
+            else if (!isNaN(Number(this.edgeSourceSelect.value))) this.edgeSource = game.tables.get(this.edgeSourceSelect.value);
+            else if (this.edgeSourceSelect.value.includes("RollTable.")) this.edgeSource = await fromUuid(this.edgeSourceSelect.value);
+            this.edgeSourceSelect.updated = false;
+        }
+        this.edgeSourceSelect.link = this.edgeSource
+            ? { uuid: this.edgeSource.uuid, _id: this.edgeSource._id, label: this.edgeSource.name }
+            : { uuid: undefined, _id: undefined, label: undefined };
+
         unlock();
     }
 
     async finalize() {
         // TODO: fill unfilled required fields
+    }
+
+    /**
+     * Pre-populate trainer data from an existing character actor.
+     * Imports level, name, image, classes, features, edges, base skill values,
+     * and any ChoiceSet selections already made on those items.
+     * @param {PTUTrainerActor} actor
+     */
+    async populateFromActor(actor) {
+        if (!actor || actor.type !== "character") return;
+
+        /**
+         * Find the best matching compendium option for an actor-owned item.
+         * Returns { option, choiceStripped } where choiceStripped is true when the
+         * item name had a trailing "(choice)" suffix added by ChoiceSet rules removed.
+         */
+        const findOption = (options, item) => {
+            const sourceId = item.flags?.core?.sourceId;
+            const exact = options.find(
+                o => (sourceId && o.uuid === sourceId) || o.label === item.name
+            );
+            if (exact) return { option: exact, choiceStripped: false };
+            // Strip trailing "(choice)" suffix, e.g. "Categoric Inclination (body)"
+            const baseName = item.name.replace(/\s*\([^)]+\)$/, "").trim();
+            if (baseName !== item.name) {
+                const base = options.find(o => o.label === baseName);
+                if (base) return { option: base, choiceStripped: true };
+            }
+            return { option: null, choiceStripped: false };
+        };
+
+        /**
+         * When an item's name was modified by a ChoiceSet selection, copy that
+         * selection into trainer.subSelectables so refresh() will preserve it.
+         * Reads from the raw item source (item.toObject()) to avoid DataModel
+         * stripping non-schema fields like `selection`, with flags.ptu.rulesSelections
+         * as the authoritative fallback.
+         */
+        const importChoiceSets = (item, optionLabel, optionUuid) => {
+            const rawRules = item.toObject?.().system?.rules ?? item.system?.rules ?? [];
+            const rawChoiceSets = rawRules.filter(r => r.key === "ChoiceSet");
+            for (const [idx, choiceSet] of rawChoiceSets.entries()) {
+                // rule.selection is set by preCreate; fall back to flags.ptu.rulesSelections
+                const selection =
+                    choiceSet.selection ??
+                    item.flags?.ptu?.rulesSelections?.[choiceSet.flag];
+                if (!selection) continue;
+                const key = `${optionLabel}-${idx}`.replaceAll(".", "-");
+                if (!this.trainer.subSelectables[key]) {
+                    this.trainer.subSelectables[key] = {
+                        key,
+                        uuid: optionUuid,
+                        label: optionLabel,
+                        idx,
+                        choices: [],  // filled during refresh()
+                        selected: selection,
+                        visible: true,
+                    };
+                }
+            }
+        };
+
+        // Level
+        const level = actor.system?.level?.current;
+        if (level) {
+            this.trainer.level = level;
+            this.manuallyUpdatedFields.add("trainer.level");
+        }
+
+        // Name & image
+        if (actor.name) {
+            this.trainer.name = actor.name;
+            this.manuallyUpdatedFields.add("trainer.name");
+        }
+        if (actor.img && actor.img !== "icons/svg/mystery-man.svg") {
+            this.trainer.img = actor.img;
+            this.manuallyUpdatedFields.add("trainer.img");
+        }
+
+        // Classes (feats with keyword "Class")
+        const classes = [];
+        for (const item of actor.items) {
+            if (item.type !== "feat") continue;
+            if (!(item.system?.keywords ?? []).includes("Class")) continue;
+            const { option, choiceStripped } = findOption(this._staticMultiselects.classes.options, item);
+            if (!option || classes.find(c => c.uuid === option.uuid)) continue;
+            classes.push({ label: option.label, value: option.value, uuid: option.uuid });
+            if (choiceStripped) importChoiceSets(item, option.label, option.uuid);
+        }
+        if (classes.length > 0) {
+            this.trainer.classes.selected = classes;
+            this.manuallyUpdatedFields.add("trainer.classes.selected");
+        }
+
+        // Features (non-class feats)
+        const features = [];
+        for (const item of actor.items) {
+            if (item.type !== "feat") continue;
+            if ((item.system?.keywords ?? []).includes("Class")) continue;
+            const { option, choiceStripped } = findOption(this._staticMultiselects.features.options, item);
+            if (!option || features.find(f => f.uuid === option.uuid)) continue;
+            features.push({ label: option.label, value: option.value, uuid: option.uuid });
+            if (choiceStripped) importChoiceSets(item, option.label, option.uuid);
+        }
+        if (features.length > 0) {
+            this.trainer.features.selected = features;
+            this.manuallyUpdatedFields.add("trainer.features.selected");
+        }
+
+        // Edges
+        const edges = [];
+        for (const item of actor.items) {
+            if (item.type !== "edge") continue;
+            const { option, choiceStripped } = findOption(this._staticMultiselects.edges.options, item);
+            if (!option || edges.find(e => e.uuid === option.uuid)) continue;
+            edges.push({ label: option.label, value: option.value, uuid: option.uuid });
+            if (choiceStripped) importChoiceSets(item, option.label, option.uuid);
+        }
+        if (edges.length > 0) {
+            this.trainer.edges.selected = edges;
+            this.manuallyUpdatedFields.add("trainer.edges.selected");
+        }
+
+        // Base skill values (use the stored base value, not computed total)
+        for (const skill of CONFIG.PTU.data.skills.keys) {
+            const baseValue = actor.system?.skills?.[skill]?.value?.value;
+            if (typeof baseValue === "number" && baseValue >= 1 && baseValue <= 6) {
+                this.trainer.skills[skill].value = baseValue;
+                this.manuallyUpdatedFields.add(`trainer.skills.${skill}.value`);
+            }
+        }
     }
 
     async generate() {

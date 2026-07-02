@@ -148,7 +148,7 @@ class LevelUpData {
             uuid: move.uuid,
             slug: move.slug,
         }));
-        const knownMoves = this.pokemon.moves.map(move => ({
+        const knownMoves = this.pokemon.moves.filter(m => !m.isGranted).map(move => ({
             uuid: move.uuid,
             slug: move.slug,
         }));

@@ -1,15 +1,15 @@
 <form class="{{cssClass}} container-fluid" id="{{object.id}}" autocomplete="off">
-    <div class="ball-themes element background {{ballStyle}}"></div>
-    <div class="ball-themes element gradient {{ballStyle}}"></div>
+    <div class="element background ball-themes ball-theme-{{ballStyle}}"></div>
+    <div class="element gradient ball-themes ball-theme-{{ballStyle}}"></div>
     <!-- Highlight Shape JS insert -->
-    <div class="ball-themes element light-color {{ballStyle}}"></div>
-    <div class="ball-themes element band {{ballStyle}}"></div>
+    <div class="element light-color ball-themes ball-theme-{{ballStyle}}"></div>
+    <div class="element band ball-themes ball-theme-{{ballStyle}}"></div>
     <main class="sheet-body h-100">
         <div class="d-flex flex-row justify-content-between h-100" style="gap: 8px;">
             <!-- Column One -->
             <div class="fb-33">
                 <div class="swsh-box h-100" data-column="one">
-                    <div class="swsh-header justify-content-center ball-themes {{ballStyle}} highlight pt-2 pb-2 w-100">
+                    <div class="swsh-header justify-content-center ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 w-100">
                         <b>Left Column</b>
                     </div>
                     <div class="swsh-body p-0">
@@ -31,7 +31,7 @@
             <!-- Available Inventory -->
             <div class="fb-33">
                 <div class="swsh-box h-100" data-column="available">
-                    <div class="swsh-header justify-content-center ball-themes {{ballStyle}} highlight pt-2 pb-2 w-100">
+                    <div class="swsh-header justify-content-center ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 w-100">
                         <b>Available</b>
                     </div>
                     <div class="swsh-body p-0">
@@ -56,7 +56,7 @@
             <!-- Column Two -->
             <div class="fb-33">
                 <div class="swsh-box h-100" data-column="two">
-                    <div class="swsh-header justify-content-center ball-themes {{ballStyle}} highlight pt-2 pb-2 w-100">
+                    <div class="swsh-header justify-content-center ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 w-100">
                         <b>Right Column</b>
                     </div>
                     <div class="swsh-body p-0">

@@ -10,7 +10,7 @@ export const RenderChatMessage = {
 
             // Add tooltipster to tooltip tags
             $html.find('.tag.tooltip').tooltipster({
-                theme: `tooltipster-shadow ball-themes default`,
+                theme: `tooltipster-shadow ball-themes ball-theme-default`,
                 position: 'top'
             });
 

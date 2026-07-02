@@ -1,31 +1,54 @@
 import { NpcQuickBuildData } from "./document.js";
-// import {tagify} from "../../../util/tags.js";
 
-export class PTUNpcQuickBuild extends FormApplication {
-    /** @override */
-    static get defaultOptions() {
-        return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["ptu", "pokemon", "npc-quick-build"],
-            template: "systems/ptu/static/templates/apps/npc-quick-build-sheet.hbs",
+const { HandlebarsApplicationMixin, ApplicationV2 } = foundry.applications.api;
+
+export class PTUNpcQuickBuild extends HandlebarsApplicationMixin(ApplicationV2) {
+
+    static DEFAULT_OPTIONS = {
+        id: "npc-quick-build",
+        classes: ["ptu", "pokemon", "npc-quick-build"],
+        position: {
             width: 660,
             height: "auto",
+        },
+        window: {
             title: "NPC Quick Build",
-            submitOnChange: true,
-            submitOnClose: true,
-            closeOnSubmit: false,
-            dragDrop: [{ dragSelector: undefined, dropSelector: undefined }]
-        });
-    }
+            minimizable: true,
+            resizable: false,
+            controls: [
+                {
+                    icon: "fas fa-dice",
+                    label: "Randomize",
+                    action: "randomize",
+                },
+            ],
+        },
+        actions: {
+            randomize: async function () {
+                await this.loading();
+                await this.data.randomizeAll();
+                this.render(true);
+            },
+        },
+    };
 
-    constructor(options) {
+    static PARTS = {
+        content: {
+            template: "systems/ptu/static/templates/apps/npc-quick-build-sheet.hbs",
+        },
+    };
+
+    #isGenerating = false;
+
+    constructor(options = {}) {
         super(options);
-
         this.data = new NpcQuickBuildData();
     }
 
     /** @override */
-    getData() {
-        const data = super.getData();
+    async _prepareContext(options) {
+        const context = await super._prepareContext(options);
+        await this.data.refresh();
 
         const allianceOptions = {
             party: "PTU.Alliance.Party",
@@ -33,65 +56,48 @@ export class PTUNpcQuickBuild extends FormApplication {
             neutral: "PTU.Alliance.Neutral"
         };
 
-
         return {
-            ...data,
+            ...context,
             config: CONFIG.PTU.data,
             allianceOptions,
             data: this.data,
-        }
+        };
     }
 
     /** @override */
-    _getHeaderButtons() {
-        const buttons = super._getHeaderButtons();
-        const sheet = this;
+    _onRender(context, options) {
+        super._onRender(context, options);
+        // Remove any loading overlay left from a prior async operation
+        this.element?.querySelector(".npc-build-loading-overlay")?.remove();
 
-        // Add notes button
-        buttons.unshift({
-            label: "Randomize",
-            class: "randomize",
-            icon: "fas fa-dice",
-            onclick: () => sheet.loading().then(()=>sheet.data.randomizeAll()).then(()=>sheet.renderAsync()).then(()=>this.disabled = false),
-        })
+        const html = this.element;
+        const form = html.querySelector("form");
+        if (!form) return;
 
-        return buttons;
-    }
-
-    /** @override */
-    activateListeners($html) {
-        super.activateListeners($html);
-
-        const globalThis = this;
-
-        // next/prev page listeners
-        $html.find('.page').on('click', function (event) {
+        // Page navigation buttons
+        html.querySelectorAll('.page').forEach(el => el.addEventListener('click', event => {
             event.preventDefault();
-            if (event.target.disabled) return;
-            event.target.disabled = true;
-            globalThis.data.page = parseInt(event?.target?.dataset?.page ?? globalThis.data.page);
-            globalThis.render(true);
-        });
-        $html.find('.next-page').on('click', (event) => {
+            if (el.disabled) return;
+            el.disabled = true;
+            this.data.page = parseInt(el.dataset.page ?? this.data.page);
+            this.render(true);
+        }));
+
+        html.querySelectorAll('.next-page').forEach(el => el.addEventListener('click', event => {
             event.preventDefault();
-            if (event.target.disabled) return;
-            event.target.disabled = true;
-            globalThis.data.page = parseInt($html.get(0)?.dataset?.page || "0") + 1;
-            globalThis.render(true);
-        });
+            this.data.page = parseInt(form.dataset.page || "0") + 1;
+            this.render(true);
+        }));
 
-        $html.find('.button-set[data-path][data-value][data-dtype="Number"]').on('click', function (event) {
+        // Skill/stat increment/decrement buttons
+        html.querySelectorAll('.button-set[data-path][data-value][data-dtype="Number"]').forEach(el => el.addEventListener('click', event => {
             event.preventDefault();
-            // if (event.target.disabled) return;
-            // event.target.disabled = true;
-            const dataset = this?.dataset;
-            globalThis.data.setProperty(dataset?.path, parseInt(dataset?.value));
-            globalThis.render(true);
+            this.data.setProperty(el.dataset.path, parseInt(el.dataset.value));
+            this.render(true);
+        }));
 
-        });
-
-        for (const multiselect of $html.find('.ptu-tagify[data-filter-name]')) {
-            // await tagify(element);
+        // Tagify inputs
+        for (const multiselect of html.querySelectorAll('.ptu-tagify[data-filter-name]')) {
             const data = this.data.multiselects[multiselect.dataset.filterName];
             const savePath = multiselect.name;
             const tagifyOptions = {
@@ -116,38 +122,18 @@ export class PTUNpcQuickBuild extends FormApplication {
 
             if (multiselect.matches(".trainer-features")) {
                 tagifyOptions.templates ??= {};
-                tagifyOptions.templates.dropdownItem = function(tagData) {
-                    return `<div label="${tagData.label}" value="${tagData.value}" uuid="${tagData.uuid}" mappedvalue="${tagData.mappedValue}" class="tagify__dropdown__item ${tagData.label} ${tagData.crossClass ? "crossclass" : ""}" tabindex="0" role="option">${tagData.label}</div>`
+                tagifyOptions.templates.dropdownItem = function (tagData) {
+                    return `<div label="${tagData.label}" value="${tagData.value}" uuid="${tagData.uuid}" mappedvalue="${tagData.mappedValue}" class="tagify__dropdown__item ${tagData.label} ${tagData.crossClass ? "crossclass" : ""}" tabindex="0" role="option">${tagData.label}</div>`;
                 };
             }
 
             const tagify = new Tagify(multiselect, tagifyOptions);
-
-            // // Add the name to the tags html as an indicator for refreshing
-            // if (multiselect.name) {
-            //     tagify.DOM.scope.dataset.name = multiselect.name;
-            // }
-
-            // tagify.on("click", (event) => {
-            //     const target = event.detail.event.target;
-            //     if (!target) return;
-
-            //     const value = event.detail.data.value;
-            //     const selected = data.selected.find((s) => s.value === value);
-            //     if (selected) {
-            //         const current = !!selected.not;
-            //         selected.not = !current;
-            //         this.render();
-            //     }
-            // });
-            tagify.on("change", (event) => {
+            tagify.on("change", event => {
                 event.preventDefault();
-
                 const selections = JSON.parse(event.detail.value || "[]");
                 const isValid =
                     Array.isArray(selections) &&
-                    selections.every((s) => typeof s === "object" && typeof s["value"] === "string");
-
+                    selections.every(s => typeof s === "object" && typeof s["value"] === "string");
                 if (isValid && savePath) {
                     this.data.setProperty(savePath, selections);
                     this.render();
@@ -155,180 +141,182 @@ export class PTUNpcQuickBuild extends FormApplication {
             });
         }
 
-        // "trainer image" button
-        $html.find('img[data-edit]').on('click', async function (event) {
+        // Trainer / Pokémon image editor (FilePicker)
+        html.querySelectorAll('img[data-edit]').forEach(img => img.addEventListener('click', async event => {
             event.preventDefault();
             const attr = event.currentTarget.dataset.edit;
-            const current = foundry.utils.getProperty(globalThis.data, attr);
+            const current = foundry.utils.getProperty(this.data, attr);
             const fp = new FilePicker({
                 current,
                 type: "image",
                 redirectToRoot: current ? [current] : [],
                 callback: path => {
-                    globalThis.data.setProperty(attr, path);
-                    globalThis.render(true);
-                    console.log(globalThis.data, attr, path);
+                    this.data.setProperty(attr, path);
+                    this.render(true);
                 },
-                top: globalThis?.position?.top + 40,
-                left: globalThis?.position?.left + 10
+                top: (this.position?.top ?? 0) + 40,
+                left: (this.position?.left ?? 0) + 10,
             });
-            return fp.browse();
-        });
+            fp.browse();
+        }));
 
-        // "remove pokemon" button
-        $html.find('.pokemon-remove').on('click', function (event) {
+        // Remove Pokémon from party slot
+        html.querySelectorAll('.pokemon-remove').forEach(el => el.addEventListener('click', event => {
             event.preventDefault();
-            const dataset = this.closest(".party-pokemon")?.dataset;
-            globalThis.data.resetPokemonSlot(dataset?.slot);
-            globalThis.render(true);
-        });
+            const slot = el.closest(".party-pokemon")?.dataset?.slot;
+            this.data.resetPokemonSlot(slot);
+            this.render(true);
+        }));
 
-        // "randomize pokemon" button
-        $html.find('.pokemon-randomize').on('click', async function (event) {
+        // Randomize a single Pokémon in a party slot
+        html.querySelectorAll('.pokemon-randomize').forEach(el => el.addEventListener('click', async event => {
             event.preventDefault();
-            const dataset = this.closest(".party-pokemon")?.dataset;
-            await globalThis.loading();
-            await globalThis.data.randomizePartyPokemon(dataset?.slot);
-            globalThis.render(true);
-        });
+            const slot = el.closest(".party-pokemon")?.dataset?.slot;
+            await this.loading();
+            await this.data.randomizePartyPokemon(slot);
+            this.render(true);
+        }));
 
-        $html.find("#sourceSelect").on("change", function (event) {
-            event.preventDefault();
-            globalThis.data.sourceSelect.value = this?.value;
-            globalThis.data.sourceSelect.updated = true;
+        // Habitat / roll-table source selector
+        const sourceSelect = html.querySelector("#sourceSelect");
+        if (sourceSelect) {
+            sourceSelect.addEventListener("change", event => {
+                event.preventDefault();
+                this.data.sourceSelect.value = sourceSelect.value;
+                this.data.sourceSelect.updated = true;
+                this.render(true);
+            });
+        }
 
-            globalThis.render(true);
-        });
+        // Feature roll-table source selector
+        const featureSourceSelect = html.querySelector("#featureSourceSelect");
+        if (featureSourceSelect) {
+            featureSourceSelect.addEventListener("change", event => {
+                event.preventDefault();
+                this.data.featureSourceSelect.value = featureSourceSelect.value;
+                this.data.featureSourceSelect.updated = true;
+                this.render(true);
+            });
+        }
 
-        $html.find("input.submit[type='button']").on("click", (event) => {
+        // Edge roll-table source selector
+        const edgeSourceSelect = html.querySelector("#edgeSourceSelect");
+        if (edgeSourceSelect) {
+            edgeSourceSelect.addEventListener("change", event => {
+                event.preventDefault();
+                this.data.edgeSourceSelect.value = edgeSourceSelect.value;
+                this.data.edgeSourceSelect.updated = true;
+                this.render(true);
+            });
+        }
+
+        // Generate / Submit button
+        html.querySelectorAll("input.submit[type='button']").forEach(el => el.addEventListener('click', event => {
             event.preventDefault();
             if (this.data.ready) {
-                this.loading().then(()=>this.close({ properClose: true }));
+                this.loading().then(() => this.close({ properClose: true }));
             }
+        }));
+
+        // General form change handler for text, number, select, checkbox, and radio inputs
+        form.addEventListener("change", event => {
+            const input = event.target;
+            if (!input.name) return;
+            // Skip tagify inputs and button-set links — each has its own handler above
+            if (input.closest('.tagify')) return;
+            if (input.matches('.ptu-tagify')) return;
+            if (input.closest('.button-set')) return;
+            // Skip the habitat source select — handled above
+            if (input.id === "sourceSelect") return;
+            if (input.id === "featureSourceSelect") return;
+            if (input.id === "edgeSourceSelect") return;
+
+            let value;
+            if (input.type === "checkbox") value = input.checked;
+            else if (input.dataset.dtype === "Number") value = parseFloat(input.value);
+            else if (input.type === "number") value = parseInt(input.value);
+            else value = input.value;
+
+            this.data.setProperty(input.name, value);
+            this.render(true);
         });
+
+        // Allow dropping a character actor to pre-populate trainer data
+        html.addEventListener("dragover", event => event.preventDefault());
+        html.addEventListener("drop", event => this._onDrop(event));
     }
 
     async preload() {
         return this.data.preload();
     }
 
-
-    /** 
-     * @override 
-     * Tagify sets an empty input field to "" instead of "[]", which later causes the JSON parse to throw an error
-    */
-    async _onSubmit(event, {updateData = null, preventClose = false, preventRender = false} = {}) {
-        const $form = $(this.form);
-        $form.find("tags ~ input[data-dtype='JSON']").each((_i, input) => {
-            if (input.value === "") input.value = "[]";
-        });
-
-        return super._onSubmit(event, { updateData, preventClose, preventRender });
-    }
-
-
-    /** @override */
-    async _updateObject(event, formData) {
-        event.preventDefault();
-        for (const [key, value] of Object.entries(formData)) {
-            if (!key || value == undefined) continue;
-            this.data.setProperty(key, value);
-        }
-
-        return this.render(true);
-    }
-
+    /**
+     * Handle dropping a character actor onto the window to pre-populate trainer data.
+     * @param {DragEvent} event
+     */
     async _onDrop(event) {
-        // const data = JSON.parse(event.dataTransfer.getData('text/plain'));
-
-        // if (data.type == "Item") {
-        //     const item = await fromUuid(data.uuid);
-        //     if (item.type != "species") return;
-
-        //     this.data.speciesField.value = data.uuid;
-        //     this.data.speciesField.updated = true;
-        // }
-        // else if (data.type == "RollTable") {
-        //     this.data.tableSelect.value = data.uuid
-        //     this.data.tableSelect.updated = true;
-        // }
-        // else if (data.type == "Folder") {
-        //     this.data.folderField.value = data.uuid;
-        //     this.data.folderField.updated = true;
-        // }
-
-        return this.render(true);
-    }
-
-    async loading() {
-        // hide the header buttons
-        const root = this._element?.get(0);
-        const headerButtons = root?.getElementsByClassName("header-button");
-        if (headerButtons) Array.prototype.forEach.call(headerButtons, btn=>btn.hidden = true);
-
-        const form = root?.getElementsByTagName("form")?.[0];
-        if (form) {
-            const loadingScreen = document.createElement("div");
-            loadingScreen.classList.add("loading");
-            const loadingWheel = document.createElement("div");
-            loadingWheel.classList.add("load-wheel");
-            loadingScreen.appendChild(loadingWheel);
-            loadingScreen.style["min-width"] = `${form.offsetWidth}px`;
-            loadingScreen.style["min-height"] = `${form.offsetHeight}px`;
-
-            form.replaceWith(loadingScreen);
+        event.preventDefault();
+        let dropData;
+        try {
+            dropData = JSON.parse(event.dataTransfer?.getData("text/plain") ?? "");
+        } catch {
+            return;
         }
+        if (dropData?.type !== "Actor") return;
+
+        const actor = await fromUuid(dropData.uuid);
+        if (!actor || actor.type !== "character") {
+            ui.notifications.warn("Only character actors can be dropped here.");
+            return;
+        }
+
+        await this.loading();
+        await this.data.populateFromActor(actor);
+        this.render(true);
     }
 
-    async unloading() {
-        // unhide the header buttons
-        const root = this._element?.get(0);
-        const headerButtons = root?.getElementsByClassName("header-button");
-        if (headerButtons) Array.prototype.forEach.call(headerButtons, btn=>btn.hidden = false);
-    }
+    /**
+     * Shows a loading overlay over the window content while an async operation runs.
+     * Uses an overlay rather than replacing the form so AppV2 part tracking is preserved.
+     * The overlay is removed automatically when the next _onRender fires.
+     */
+    async loading() {
+        const windowContent = this.element?.querySelector(".window-content");
+        if (!windowContent) return;
 
-    async renderAsync(force = false, options = {}) {
-        const localthis = this;
-        await this.data.refresh().then(() => localthis._render(force, options)).catch(err => {
-            this._state = Application.RENDER_STATES.ERROR;
-            Hooks.onError("Application#render", err, {
-                msg: `An error occurred while rendering ${this.constructor.name} ${this.appId}`,
-                log: "error",
-                ...options
-            });
-            return this.unloading();
-        });
-        await this.unloading();
-        return this;
+        // Ensure the container is positioned so the absolute overlay is contained within it
+        windowContent.style.position = "relative";
+
+        // Remove any stale overlay
+        windowContent.querySelector(".npc-build-loading-overlay")?.remove();
+
+        const overlay = document.createElement("div");
+        overlay.classList.add("loading", "npc-build-loading-overlay");
+        overlay.style.cssText = "position:absolute;inset:0;z-index:100;background:rgba(0,0,0,0.2);";
+        const wheel = document.createElement("div");
+        wheel.classList.add("load-wheel");
+        overlay.appendChild(wheel);
+        windowContent.appendChild(overlay);
     }
 
     /** @override */
-    render(force = false, options = {}) {
-        this.renderAsync(force, options);
-        return this;
-    }
-
-    /** @override */
-    // async _renderInner(data) {
-    //     const $html = await super._renderInner(data);
-    //     return $html;
-    // }
-
-    /** @override */
-    async close(options) {
-        if (options?.properClose) {
-            await this.data.finalize().then(()=>this.data.generate()).catch(err => {
+    async close(options = {}) {
+        if (options?.properClose && !this.#isGenerating) {
+            this.#isGenerating = true;
+            try {
+                await this.data.finalize();
+                await this.data.generate();
+            } catch (err) {
                 ui.notifications.error("Could not generate the NPC! Check the dev console for more details.");
                 Hooks.onError("Application#close", err, {
                     msg: `An error occurred while closing ${this.constructor.name} ${this.appId}`,
                     log: "error",
-                    ...options
+                    ...options,
                 });
-                return this.unloading();
-            });;
+                this.#isGenerating = false;
+                return;
+            }
         }
-
-        return super.close({ ...options, force: true });
+        return super.close(options);
     }
-
 }

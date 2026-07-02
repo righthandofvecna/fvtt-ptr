@@ -149,7 +149,7 @@ class DamageMessagePTU extends ChatMessagePTU {
             })
 
             $el.find(".tooltip").tooltipster({
-                theme: `tooltipster-shadow ball-themes default`
+                theme: `tooltipster-shadow ball-themes ball-theme-default`
             })
         });
         $html.find(".button").click(async (event) => {
