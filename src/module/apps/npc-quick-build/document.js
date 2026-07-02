@@ -1192,6 +1192,16 @@ export class NpcQuickBuildData {
                     }));
                 }
 
+                // Normalize pre-populated selections: handle case differences introduced by
+                // actor import (e.g., "body" → "Body" or UUID matching).
+                if (subSelectable.selected && !subSelectable.choices.find(c => c.value === subSelectable.selected)) {
+                    const lc = subSelectable.selected.toLowerCase();
+                    const normalized = subSelectable.choices.find(
+                        c => c.value.toLowerCase() === lc || c.label?.toLowerCase() === lc
+                    );
+                    if (normalized) subSelectable.selected = normalized.value;
+                }
+
                 // check if we've got an unmet prerequisite for this still
                 const unmet = allSuboptions.find(s => s.uuid == uuid);
                 if (unmet && !subSelectable.selected && choices.find(c => c.label == unmet.subvalue)) {
@@ -1358,11 +1368,63 @@ export class NpcQuickBuildData {
 
     /**
      * Pre-populate trainer data from an existing character actor.
-     * Imports level, name, image, classes, features, edges, and base skill values.
+     * Imports level, name, image, classes, features, edges, base skill values,
+     * and any ChoiceSet selections already made on those items.
      * @param {PTUTrainerActor} actor
      */
     async populateFromActor(actor) {
         if (!actor || actor.type !== "character") return;
+
+        /**
+         * Find the best matching compendium option for an actor-owned item.
+         * Returns { option, choiceStripped } where choiceStripped is true when the
+         * item name had a trailing "(choice)" suffix added by ChoiceSet rules removed.
+         */
+        const findOption = (options, item) => {
+            const sourceId = item.flags?.core?.sourceId;
+            const exact = options.find(
+                o => (sourceId && o.uuid === sourceId) || o.label === item.name
+            );
+            if (exact) return { option: exact, choiceStripped: false };
+            // Strip trailing "(choice)" suffix, e.g. "Categoric Inclination (body)"
+            const baseName = item.name.replace(/\s*\([^)]+\)$/, "").trim();
+            if (baseName !== item.name) {
+                const base = options.find(o => o.label === baseName);
+                if (base) return { option: base, choiceStripped: true };
+            }
+            return { option: null, choiceStripped: false };
+        };
+
+        /**
+         * When an item's name was modified by a ChoiceSet selection, copy that
+         * selection into trainer.subSelectables so refresh() will preserve it.
+         * Reads from the raw item source (item.toObject()) to avoid DataModel
+         * stripping non-schema fields like `selection`, with flags.ptu.rulesSelections
+         * as the authoritative fallback.
+         */
+        const importChoiceSets = (item, optionLabel, optionUuid) => {
+            const rawRules = item.toObject?.().system?.rules ?? item.system?.rules ?? [];
+            const rawChoiceSets = rawRules.filter(r => r.key === "ChoiceSet");
+            for (const [idx, choiceSet] of rawChoiceSets.entries()) {
+                // rule.selection is set by preCreate; fall back to flags.ptu.rulesSelections
+                const selection =
+                    choiceSet.selection ??
+                    item.flags?.ptu?.rulesSelections?.[choiceSet.flag];
+                if (!selection) continue;
+                const key = `${optionLabel}-${idx}`.replaceAll(".", "-");
+                if (!this.trainer.subSelectables[key]) {
+                    this.trainer.subSelectables[key] = {
+                        key,
+                        uuid: optionUuid,
+                        label: optionLabel,
+                        idx,
+                        choices: [],  // filled during refresh()
+                        selected: selection,
+                        visible: true,
+                    };
+                }
+            }
+        };
 
         // Level
         const level = actor.system?.level?.current;
@@ -1386,13 +1448,10 @@ export class NpcQuickBuildData {
         for (const item of actor.items) {
             if (item.type !== "feat") continue;
             if (!(item.system?.keywords ?? []).includes("Class")) continue;
-            const sourceId = item.flags?.core?.sourceId;
-            const option = this._staticMultiselects.classes.options.find(
-                o => (sourceId && o.uuid === sourceId) || o.label === item.name
-            );
-            if (option && !classes.find(c => c.uuid === option.uuid)) {
-                classes.push({ label: option.label, value: option.value, uuid: option.uuid });
-            }
+            const { option, choiceStripped } = findOption(this._staticMultiselects.classes.options, item);
+            if (!option || classes.find(c => c.uuid === option.uuid)) continue;
+            classes.push({ label: option.label, value: option.value, uuid: option.uuid });
+            if (choiceStripped) importChoiceSets(item, option.label, option.uuid);
         }
         if (classes.length > 0) {
             this.trainer.classes.selected = classes;
@@ -1404,13 +1463,10 @@ export class NpcQuickBuildData {
         for (const item of actor.items) {
             if (item.type !== "feat") continue;
             if ((item.system?.keywords ?? []).includes("Class")) continue;
-            const sourceId = item.flags?.core?.sourceId;
-            const option = this._staticMultiselects.features.options.find(
-                o => (sourceId && o.uuid === sourceId) || o.label === item.name
-            );
-            if (option && !features.find(f => f.uuid === option.uuid)) {
-                features.push({ label: option.label, value: option.value, uuid: option.uuid });
-            }
+            const { option, choiceStripped } = findOption(this._staticMultiselects.features.options, item);
+            if (!option || features.find(f => f.uuid === option.uuid)) continue;
+            features.push({ label: option.label, value: option.value, uuid: option.uuid });
+            if (choiceStripped) importChoiceSets(item, option.label, option.uuid);
         }
         if (features.length > 0) {
             this.trainer.features.selected = features;
@@ -1419,17 +1475,12 @@ export class NpcQuickBuildData {
 
         // Edges
         const edges = [];
-        const actorEdgeItems = actor.items.filter(i => i.type === "edge");
-        console.debug("NPC Quick Build | Actor edge items:", actorEdgeItems.map(i => ({ name: i.name, type: i.type, sourceId: i.flags?.core?.sourceId })));
-        console.debug("NPC Quick Build | Available edge options count:", this._staticMultiselects.edges.options.length);
-        for (const item of actorEdgeItems) {
-            const sourceId = item.flags?.core?.sourceId;
-            const option = this._staticMultiselects.edges.options.find(
-                o => (sourceId && o.uuid === sourceId) || o.label === item.name
-            );
-            if (option && !edges.find(e => e.uuid === option.uuid)) {
-                edges.push({ label: option.label, value: option.value, uuid: option.uuid });
-            }
+        for (const item of actor.items) {
+            if (item.type !== "edge") continue;
+            const { option, choiceStripped } = findOption(this._staticMultiselects.edges.options, item);
+            if (!option || edges.find(e => e.uuid === option.uuid)) continue;
+            edges.push({ label: option.label, value: option.value, uuid: option.uuid });
+            if (choiceStripped) importChoiceSets(item, option.label, option.uuid);
         }
         if (edges.length > 0) {
             this.trainer.edges.selected = edges;
