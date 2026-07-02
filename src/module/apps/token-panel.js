@@ -480,7 +480,7 @@ export class TokenPanel extends Application {
         }
 
         $html.find(".action[title], .condition[title], .effect[title]").tooltipster({
-            theme: `tooltipster-shadow ball-themes ${this.actor?.sheet?.ballStyle}`,
+            theme: `tooltipster-shadow ball-themes ball-theme-${this.actor?.sheet?.ballStyle}`,
 			position: 'top',
             maxWidth: 500,
             contentAsHTML: true,

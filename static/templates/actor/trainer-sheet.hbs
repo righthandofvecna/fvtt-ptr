@@ -1,21 +1,21 @@
 <form class="{{cssClass}} container-fluid" autocomplete="off">
 
-    <div class="ball-themes element background {{ballStyle}}"></div>
-    <div class="ball-themes element gradient {{ballStyle}}"></div>
+    <div class="ball-themes ball-theme-{{ballStyle}} element background"></div>
+    <div class="ball-themes ball-theme-{{ballStyle}} element gradient"></div>
     <!-- Highlight Shape JS insert -->
-    <div class="ball-themes element light-color {{ballStyle}}"></div>
-    <div class="ball-themes element band {{ballStyle}}"></div>
+    <div class="ball-themes ball-theme-{{ballStyle}} element light-color"></div>
+    <div class="ball-themes ball-theme-{{ballStyle}} element band"></div>
 
-    <header class="sheet-header sheet-tabs ball-themes background {{ballStyle}}" data-group="primary">
+    <header class="sheet-header sheet-tabs background ball-themes ball-theme-{{ballStyle}}" data-group="primary">
         <nav class="tabs" data-group="primary">
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Stats" data-tab="stats"><i class="fas fa-bars-progress"></i></a>
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Inventory" data-tab="inventory"><i class="fas fa-backpack"></i></a>
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Features" data-tab="features"><i class="fas fa-crown"></i></a>
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Combat" data-tab="combat"><i class="fas fa-hand-fist"></i></a>
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Moves" data-tab="moves"><i class="fas fa-burst"></i></a>
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Extra" data-tab="extra"><i class="fas fa-gear"></i></a>
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Dex" data-tab="dex"><i class="fas fa-tablet-alt"></i></a>
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Effects" data-tab="effects"><i class="fas fa-stars"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Stats" data-tab="stats"><i class="fas fa-bars-progress"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Inventory" data-tab="inventory"><i class="fas fa-backpack"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Features" data-tab="features"><i class="fas fa-crown"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Combat" data-tab="combat"><i class="fas fa-hand-fist"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Moves" data-tab="moves"><i class="fas fa-burst"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Extra" data-tab="extra"><i class="fas fa-gear"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Dex" data-tab="dex"><i class="fas fa-tablet-alt"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Effects" data-tab="effects"><i class="fas fa-stars"></i></a>
         </nav>
     </header>
     <main class="sheet-body h-100">
@@ -26,7 +26,7 @@
                 <div class="d-flex skills">
                     <!-- Skills -->
                     <div class="swsh-box w-100 mb-2" style="height: fit-content;">
-                        <div class="swsh-header d-flex flex-row center-text ball-themes {{ballStyle}} highlight" style="padding:unset;">
+                        <div class="swsh-header d-flex flex-row center-text ball-themes ball-theme-{{ballStyle}} highlight" style="padding:unset;">
                             <div class="fb-25 pt-1 pb-1">{{localize "PTU.SkillLabel"}}</div>
                             <div class="fb-15 mt-1 mb-1">{{localize "PTU.SkillValue"}}</div>
                             <div class="fb-25 mt-1 mb-1">{{localize "PTU.SkillRank"}}</div>
@@ -89,10 +89,10 @@
                 <div class="d-flex other">
                     <div class="d-flex align-items-center flex-column h-100">
                         <div class="swsh-box mb-2">
-                            <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 d-flex flex-row" style="justify-content: center;">
+                            <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 d-flex flex-row" style="justify-content: center;">
                                 <input class="fb-85" name="name" type="text" value="{{actor.name}}" placeholder="Name" style="border: unset;" />
                             </div>
-                            <div class="swsh-header ball-themes {{ballStyle}} highlight pt-1 pb-1 d-flex flex-row center-text justify-content-between">
+                            <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-1 pb-1 d-flex flex-row center-text justify-content-between">
                                 <div class="fb-25">
                                     Temp HP
                                 </div>
@@ -122,7 +122,7 @@
                         <!-- Action Points -->
                         <div class="w-100 level-box mt-1 mb-1">
                             <div class="swsh-box center-text" style="word-break: keep-all;">
-                                <div class="swsh-header ball-themes {{ballStyle}} highlight">
+                                <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight">
                                     <h3 class="m-auto">{{localize "PTU.ActionPoints"}}</h3>
                                 </div>
                                 <div class="swsh-body justify-content-center">
@@ -142,7 +142,7 @@
                         <!-- Experience + Level -->
                         <div class="w-100 level-box mt-1 mb-1">
                             <div class="swsh-box" style="text-align: center; word-break: keep-all;">
-                                <div class="swsh-header ball-themes {{ballStyle}} highlight p-1">
+                                <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight p-1">
                                     <div class="d-flex w-100 align-items-center justify-content-center" style="gap: 8px;">
                                         <div class="fb-10">
                                             <label for="system.level.current">{{localize "PTU.Level"}}:</label>
@@ -153,7 +153,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swsh-header ball-themes {{ballStyle}} highlight">
+                                <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight">
                                     <div class="d-flex w-100 mt-1 mb-1 align-items-center justify-content-between ">
                                         {{#if (is "true" (getGameSetting "variant.useDexExp"))}}
                                         <div class="fb-30">
@@ -214,7 +214,7 @@
                         {{#if (and (getGameSetting "automation.xpToTrainerPool") actor.system.level.xpPool.length)}}
                         <div class="w-100 level-box mt-1 mb-1">
                             <div class="swsh-box" style="text-align: center; word-break: keep-all;">
-                                <div class="swsh-header ball-themes {{ballStyle}} highlight p-1">
+                                <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight p-1">
                                     <h3 class="m-auto">{{localize "PTU.XPPool"}}</h3>
                                 </div>
                                 <div class="swsh-body">

@@ -1,21 +1,21 @@
 <form class="{{cssClass}} container-fluid" autocomplete="off">
 
-    <div class="ball-themes element background {{ballStyle}}"></div>
-    <div class="ball-themes element gradient {{ballStyle}}"></div>
+    <div class="element background ball-themes ball-theme-{{ballStyle}}"></div>
+    <div class="element gradient ball-themes ball-theme-{{ballStyle}}"></div>
     <!-- Highlight Shape JS insert -->
-    <div class="ball-themes element light-color {{ballStyle}}"></div>
-    <div class="ball-themes element band {{ballStyle}}"></div>
+    <div class="element light-color ball-themes ball-theme-{{ballStyle}}"></div>
+    <div class="element band ball-themes ball-theme-{{ballStyle}}"></div>
 
-    <header class="sheet-header sheet-tabs ball-themes background {{ballStyle}}" data-group="primary">
+    <header class="sheet-header sheet-tabs background ball-themes ball-theme-{{ballStyle}}" data-group="primary">
         <nav class="tabs" data-group="primary">
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Stats" data-tab="stats"><i class="fas fa-bars-progress"></i></a>
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Moves" data-tab="moves"><i class="fas fa-burst"></i></a>
-            {{#if (getGameSetting "variant.useContestRules")}}<a class="item tooltip ball-themes {{ballStyle}}" title="Contests" data-tab="contests"><i class="fas fa-award"></i></a>{{/if}}
-            {{#if (getGameSetting "variant.spiritPlaytest")}}<a class="item tooltip ball-themes {{ballStyle}}" title="Friendship & Spirit" data-tab="spirit"><i class="fas fa-user-friends"></i></a>{{/if}}
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Combat" data-tab="combat"><i class="fas fa-hand-fist"></i></a>
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Capabilities" data-tab="capability"><i class="fas fa-transporter"></i></a>
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Extra" data-tab="extra"><i class="fas fa-gear"></i></a>
-            <a class="item tooltip ball-themes {{ballStyle}}" title="Effects" data-tab="effects"><i class="fas fa-stars"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Stats" data-tab="stats"><i class="fas fa-bars-progress"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Moves" data-tab="moves"><i class="fas fa-burst"></i></a>
+            {{#if (getGameSetting "variant.useContestRules")}}<a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Contests" data-tab="contests"><i class="fas fa-award"></i></a>{{/if}}
+            {{#if (getGameSetting "variant.spiritPlaytest")}}<a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Friendship & Spirit" data-tab="spirit"><i class="fas fa-user-friends"></i></a>{{/if}}
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Combat" data-tab="combat"><i class="fas fa-hand-fist"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Capabilities" data-tab="capability"><i class="fas fa-transporter"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Extra" data-tab="extra"><i class="fas fa-gear"></i></a>
+            <a class="item tooltip ball-themes ball-theme-{{ballStyle}}" title="Effects" data-tab="effects"><i class="fas fa-stars"></i></a>
         </nav>
     </header>
     <main class="sheet-body h-100">
@@ -25,7 +25,7 @@
                 <div class="d-flex left flex-column">
                     <!-- Stats -->
                     <div class="w-100 stats-box swsh-box mb-2">
-                        <div class="d-flex flex-row swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2">
+                        <div class="d-flex flex-row swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2">
                             <div class="fb-20 pt-2 pb-2 key stat-header">{{localize "PTU.StatsLabel"}}</div>
                             <div class="fb-15 mt-2 mb-2">{{localize "PTU.StatsBase"}}</div>
                             <div class="fb-20 mt-2 mb-2">{{localize "PTU.StatsLevelup"}}</div>
@@ -119,13 +119,13 @@
                     <div class="d-flex align-items-center flex-column h-100">
 
                         <div class="swsh-box mb-2">
-                            <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 d-flex flex-row"
+                            <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 d-flex flex-row"
                                 style="justify-content: center;">
                                 <input class="fb-85" name="name" type="text" value="{{actor.name}}" placeholder="Name"
                                     style="border: unset;" />
                             </div>
                             <div
-                                class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 d-flex flex-row center-text justify-content-between">
+                                class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 d-flex flex-row center-text justify-content-between">
                                 <div class="fb-25">
                                     <b>Temp HP</b>
                                 </div>
@@ -161,7 +161,7 @@
                         <!-- Nature + Experience + Level + Item -->
                         <div class="w-100 level-box mt-auto mb-1">
                             <div class="swsh-box" style="text-align: center; word-break: keep-all;">
-                                <div class="swsh-header ball-themes {{ballStyle}} highlight p-1">
+                                <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight p-1">
                                     <div class="d-flex w-100 align-items-center justify-content-center"
                                         style="gap: 8px;">
                                         <div class="fb-10">
@@ -173,7 +173,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swsh-header ball-themes {{ballStyle}} highlight">
+                                <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight">
                                     <div class="d-flex w-100 mt-2 mb-2 align-items-center justify-content-between ">
                                         <div class="fb-45">
                                             <label for="system.level.exp"><b>{{localize "PTU.Experience"}}</b></label>
@@ -212,7 +212,7 @@
                                         {{/if}}
                                     </div>
                                 </div>
-                                <div class="swsh-header ball-themes {{ballStyle}} highlight">
+                                <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight">
                                     <div class="d-flex w-100 mt-2 mb-2 align-items-center justify-content-center ">
                                         <div class="fb-45">
                                             <label for="system.nature.value"><b>{{localize "PTU.Nature"}}</b></label>
@@ -374,18 +374,18 @@
                 <div class="fb-48">
                     <div class="swsh-box mb-2 w-100">
                         <div
-                            class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
+                            class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
                             <b>{{localize "PTU.Contests.Dice"}}</b>
                         </div>
                         <div class="swsh-body contest-dice-grid">
-                            <div class="header-item item ball-themes {{ballStyle}} highlight">{{localize
+                            <div class="header-item item ball-themes ball-theme-{{ballStyle}} highlight">{{localize
                                 "PTU.Contests.Type"}}</div>
-                            <div class="header-item item ball-themes {{ballStyle}} highlight">{{localize
+                            <div class="header-item item ball-themes ball-theme-{{ballStyle}} highlight">{{localize
                                 "PTU.Contests.Stats"}}</div>
-                            <div class="header-item item ball-themes {{ballStyle}} highlight">{{localize
+                            <div class="header-item item ball-themes ball-theme-{{ballStyle}} highlight">{{localize
                                 "PTU.Contests.Poffins"}}</div>
                             {{#each actor.system.contests.stats as |stat key|}}
-                                <div class="header-item item ball-themes {{../ballStyle}} highlight">{{capitalize key}}</div>
+                                <div class="header-item item ball-themes ball-theme-{{../ballStyle}} highlight">{{capitalize key}}</div>
                                 <div class="item">
                                     {{> "systems/ptu/static/templates/partials/mod-field.hbs"
                                     path=(concat "system.contests.stats." key ".stats.value")
@@ -411,7 +411,7 @@
                     </div>
                     <div class="swsh-box mb-2 w-100">
                         <div class="d-flex flexrow align-items-center">
-                            <b class="ball-themes {{ballStyle}} highlight pt-3 pb-3 fb-48 center-text">{{localize "PTU.Contests.Type"}}</b>
+                            <b class="ball-themes ball-theme-{{ballStyle}} highlight pt-3 pb-3 fb-48 center-text">{{localize "PTU.Contests.Type"}}</b>
                             <select name="system.contests.type" class="ml-2 mr-2 fb-40">
                                 {{selectOptions config.contestTypes selected=actor.system.contests.type localize=true}}
                             </select>
@@ -420,7 +420,7 @@
                     <div class="swsh-box mb-2 w-100">
                         <div class="d-flex flexrow">
                             <div class="fb-48 d-flex flexcol">
-                                <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center" style="flex: 0 0 33px;">
+                                <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center" style="flex: 0 0 33px;">
                                     <b>{{localize "PTU.Contests.Voltage"}}</b>
                                 </div>
                                 {{!-- <div class="w-100 d-flex justify-content-center">
@@ -432,7 +432,7 @@
                                 </div>
                             </div>
                             <div class="fb-48 d-flex flexcol">
-                                <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center" style="flex: 0 0 33px;">
+                                <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center" style="flex: 0 0 33px;">
                                     <b>{{localize "PTU.Contests.DiceTotal"}}</b>
                                 </div>
                                 <div class="w-100 d-flex flexrow justify-content-evenly pt-1 pb-1 center-text">
@@ -442,7 +442,7 @@
                         </div>
                     </div>
                     <div class="swsh-box mb-2 w-100">
-                        <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center" style="flex: 0 0 33px;">
+                        <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center" style="flex: 0 0 33px;">
                             <b>{{localize "PTU.Contests.Appeal"}}</b>
                         </div>
                         <div class="swsh-body d-flex align-items-center justify-content-center pt-1 pb-1">
@@ -470,7 +470,7 @@
                 </div>
                 <div class="fb-40">
                     <div class="swsh-box mb-2 w-100">
-                        <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
+                        <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
                             <div class="fb-48">
                                 <b>{{localize "PTU.Spirit.Friendship"}}</b>
                             </div>
@@ -488,7 +488,7 @@
                         </div>
                     </div>
                     <div class="swsh-box mb-2 w-100">
-                        <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
+                        <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
                             <div class="fb-48">
                                 <b>{{localize "PTU.LevelCapTraining"}}</b>
                             </div>
@@ -506,7 +506,7 @@
                         </div>
                     </div>
                     <div class="swsh-box mb-2 w-100">
-                        <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-between">
+                        <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-between">
                             <div class="fb-48">
                                 <b>{{localize "PTU.Spirit.Spirit"}}</b>
                             </div>
@@ -524,7 +524,7 @@
                         </div>
                     </div>
                     <div class="swsh-box mb-2 w-100">
-                        <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
+                        <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
                             <b>{{localize "PTU.Spirit.Effects"}}</b>
                         </div>
                         <div class="swsh-body d-flex align-items-center justify-content-center pt-1 pb-1">
@@ -560,7 +560,7 @@
                     <!-- Capabilities -->
                     <div class="swsh-box mb-2 w-100">
                         <div
-                            class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
+                            class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
                             <b>{{localize "ITEM.TypeCapabilityPlural"}}</b>
                         </div>
                         <div class="swsh-body flex-row w-100 align-items-center" style="white-space: nowrap;">
@@ -607,7 +607,7 @@
                 <div class="d-flex fb-58 skills">
                     <!-- Skills -->
                     <div class="swsh-box w-100 mb-2" style="height: fit-content;">
-                        <div class="swsh-header d-flex flex-row center-text ball-themes {{ballStyle}} highlight"
+                        <div class="swsh-header d-flex flex-row center-text ball-themes ball-theme-{{ballStyle}} highlight"
                             style="padding:unset;">
                             <div class="fb-30 mt-2 mb-2"><b>{{localize "PTU.SkillLabel"}}</b></div>
                             <div class="fb-15 mt-2 mb-2"><b>{{localize "PTU.SkillValue"}}</b></div>
@@ -684,7 +684,7 @@
                         <!-- Effectiveness -->
                         <div class="swsh-box effectiveness mb-2 w-100">
                             <div
-                                class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
+                                class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
                                 <b>{{localize "PTU.Typing"}}</b>
                             </div>
                             <div
@@ -693,7 +693,7 @@
                             </div>
                             {{#if (gt effectiveness.weaknesses.length 0) }}
                             <div
-                                class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
+                                class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
                                 <b>{{localize "PTU.TypingWeaknesses"}}</b>
                             </div>
                             <div
@@ -711,7 +711,7 @@
                             <!-- Hide regular effective moves -->
                             {{!-- {{#if (gt actor.system.effectiveness.Normal.length 0) }}
                             <div
-                                class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
+                                class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
                                 <b>{{localize "PTU.TypingNormal"}}</b>
                             </div>
                             <div class="swsh-body flexrow g-5 w-100 align-items-center">
@@ -727,7 +727,7 @@
                             {{/if}} --}}
                             {{#if (gt effectiveness.resistances.length 0) }}
                             <div
-                                class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
+                                class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
                                 <b>{{localize "PTU.TypingResistances"}}</b>
                             </div>
                             <div
@@ -744,7 +744,7 @@
                             {{/if}}
                             {{#if (gt effectiveness.immunities.length 0) }}
                             <div
-                                class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
+                                class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
                                 <b>{{localize "PTU.TypingImmunities"}}</b>
                             </div>
                             <div
@@ -764,7 +764,7 @@
                         <!-- Items -->
                         <div class="swsh-box mb-2 w-100">
                             <div
-                                class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
+                                class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
                                 <b>{{localize "PTU.HeldItems"}}</b>
                             </div>
                             <div class="swsh-body w-100" style="display: block;">
@@ -781,7 +781,7 @@
                         <!-- Health -->
                         <div class="swsh-box mb-2 w-100 center-text" style="word-break: keep-all;">
                             <!-- Injuries -->
-                            <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2">
+                            <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2">
                                 <div class="d-flex flex-row w-100 mt-1 mb-1 justify-content-between align-items-center">
                                     <div class="fb-48">
                                         <label for="system.health.injuriesfeatsd">{{localize "PTU.Injuries"}}</label>
@@ -846,10 +846,10 @@
 
                             <!-- Tick/HP Guidelines -->
                             <div
-                                class="swsh-header justify-content-center center-text ball-themes {{ballStyle}} highlight pt-2">
+                                class="swsh-header justify-content-center center-text ball-themes ball-theme-{{ballStyle}} highlight pt-2">
                                 <b>HP Guidelines</b>
                             </div>
-                            <div class="swsh-header ball-themes {{ballStyle}} highlight pb-2">
+                            <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pb-2">
                                 <div
                                     class="d-flex flex-row w-100 hp-guidelines center-text justify-content-between align-items-center">
                                     <div class="fb-15">
@@ -905,7 +905,7 @@
 
                         <!-- Evasion -->
                         <div class="swsh-box mb-2 w-100" style="text-align: center; word-break: keep-all;">
-                            <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2">
+                            <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2">
                                 <div class="d-flex w-100 align-items-center justify-content-between">
                                     <div class="fb-33">
                                         <label for="system.evasion.physical">{{{localize
@@ -961,7 +961,7 @@
                         <!-- Save Checks -->
                         <div class="swsh-box mb-2">
                             <div
-                                class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 justify-content-center">
+                                class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 justify-content-center">
                                 <b>{{localize "PTU.SaveCheckLabel"}}</b>
                             </div>
                             <div class="swsh-body justify-content-between align-items-center">
@@ -985,7 +985,7 @@
                             <!-- Tutor Points -->
                             {{#if (is true (getGameSetting "variant.useTutorPoints"))}}
                             <div
-                                class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 justify-content-center">
+                                class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 justify-content-center">
                                 <b class="m-auto">{{localize "PTU.TutorPoints"}}</b>
                             </div>
                             <div class="swsh-body tp-box">
@@ -999,7 +999,7 @@
                             </div>
                             {{else}}
                             <div
-                                class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 justify-content-center">
+                                class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 justify-content-center">
                                 <b class="m-auto">{{localize "PTU.PokeedgePoints"}}</b>
                             </div>
                             <div class="swsh-body tp-box">
@@ -1040,11 +1040,11 @@
                     <!-- Modifiers -->
                     <div class="swsh-box w-100 mb-2">
                         <div
-                            class="swsh-header ball-themes {{ballStyle}} highlight pt-2 center-text justify-content-center">
+                            class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 center-text justify-content-center">
                             <b>{{localize "PTU.Modifiers.Label"}}</b>
                         </div>
                         <div
-                            class="swsh-header d-flex flex-row ball-themes {{ballStyle}} highlight pb-2 center-text justify-content-between">
+                            class="swsh-header d-flex flex-row ball-themes ball-theme-{{ballStyle}} highlight pb-2 center-text justify-content-between">
                             <div class="fb-48">
                                 <label for="system.modifiers.initiative.value"><b>{{localize "PTU.Initiative"}}
                                         {{localize "PTU.Bonus"}}</b></label>
@@ -1075,7 +1075,7 @@
                             </div>
                         </div>
                         <div
-                            class="swsh-header d-flex flex-row ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-between">
+                            class="swsh-header d-flex flex-row ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-between">
                             <div class="fb-48">
                                 <label for="system.modifiers.acBonus"><b>{{localize "PTU.Accuracy"}} {{localize
                                         "PTU.Bonus"}}</b></label>
@@ -1106,7 +1106,7 @@
                             </div>
                         </div>
                         <div
-                            class="swsh-header d-flex flex-row ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-between">
+                            class="swsh-header d-flex flex-row ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-between">
                             <div class="fb-48 center-text pl-2 pr-2">
                                 <label for="system.modifiers.effectRange.value"><b>{{localize "PTU.EffectRange"}}
                                         {{localize "PTU.Bonus"}}</b></label>
@@ -1137,12 +1137,12 @@
                             </div>
                         </div>
                         <div
-                            class="swsh-header d-flex flex-row ball-themes {{ballStyle}} highlight pt-2 center-text justify-content-center">
+                            class="swsh-header d-flex flex-row ball-themes ball-theme-{{ballStyle}} highlight pt-2 center-text justify-content-center">
                             <label for="system.modifiers.damageReduction"><b>{{localize
                                     "PTU.DamageReduction"}}</b></label>
                         </div>
                         <div
-                            class="swsh-header d-flex flex-row ball-themes {{ballStyle}} highlight pb-2 center-text justify-content-between">
+                            class="swsh-header d-flex flex-row ball-themes ball-theme-{{ballStyle}} highlight pb-2 center-text justify-content-between">
                             <div class="fb-48">
                                 <label for="system.modifiers.damageReduction.physical.value"><b>{{localize
                                         "PTU.Physical"}}</b></label>
@@ -1173,7 +1173,7 @@
                             </div>
                         </div>
                         <div
-                            class="swsh-header d-flex flex-row ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-between">
+                            class="swsh-header d-flex flex-row ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-between">
                             <div class="fb-33">
                                 <label for="system.modifiers.evasion.physical.value">
                                     <b>{{localize "PTU.EvasionPhysicalShort"}} {{localize "PTU.EvasionShort"}}
@@ -1223,11 +1223,11 @@
                             </div>
                         </div>
                         <div
-                            class="swsh-header d-flex flex-row ball-themes {{ballStyle}} highlight pt-2 center-text justify-content-center">
+                            class="swsh-header d-flex flex-row ball-themes ball-theme-{{ballStyle}} highlight pt-2 center-text justify-content-center">
                             <b>{{localize "PTU.BaseStatModifiers"}}</b>
                         </div>
                         <div
-                            class="swsh-header d-flex flex-row ball-themes {{ballStyle}} highlight pb-2 center-text justify-content-between">
+                            class="swsh-header d-flex flex-row ball-themes ball-theme-{{ballStyle}} highlight pb-2 center-text justify-content-between">
                             <div class="fb-20 key stat-header"><b>{{localize "PTU.StatsLabel"}}</b></div>
                             <div class="fb-20"><b>{{localize "PTU.StatsBase"}}</b></div>
                             <div class="fb-20"><b>{{localize "PTU.StatsBaseMod"}}</b></div>
@@ -1269,7 +1269,7 @@
                     <!-- Species + Gender + Owner -->
                     <div class="swsh-box mb-2 w-100">
                         <div
-                            class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-evenly">
+                            class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-evenly">
                             <div class="fb-33 center-text">
                                 <label for="system.species"><b>{{localize "PTU.Species"}}</b></label>
                             </div>
@@ -1296,7 +1296,7 @@
                     <!-- Egg Group -->
                     <div class="swsh-box mb-2 w-100">
                         <div
-                            class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-evenly">
+                            class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-evenly">
                             <div class="fb-33">
                                 <label for="system.egggroup"><b>{{localize "PTU.EggGroup"}}</b></label>
                             </div>
@@ -1326,7 +1326,7 @@
                     <!-- Boss Settings -->
                     <div class="swsh-box mb-2 w-100">
                         <div
-                            class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-evenly align-items-center">
+                            class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-evenly align-items-center">
                             <div class="fb-33">
                                 <label for="system.boss.is"><b>{{localize "PTU.BossIs"}}</b></label>
                             </div>
@@ -1356,11 +1356,11 @@
                     <!-- Skill Background -->
                     <div class="swsh-box mb-2 w-100">
                         <div
-                            class="swsh-header ball-themes {{ballStyle}} highlight pt-2 center-text justify-content-center">
+                            class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 center-text justify-content-center">
                             <b>{{localize "PTU.SkillBackground"}}</b>
                         </div>
                         <div
-                            class="swsh-header ball-themes {{ballStyle}} highlight pb-2 center-text justify-content-between">
+                            class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pb-2 center-text justify-content-between">
                             <div class="fb-33">
                                 <label for="system.background.increased.one"><b>{{localize "PTU.SkillUp"}} 1</b></label>
                             </div>
@@ -1393,7 +1393,7 @@
                             </div>
                         </div>
                         <div
-                            class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-between">
+                            class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2 center-text justify-content-between">
                             <div class="fb-33">
                                 <label for="system.background.decreased.one"><b>{{localize "PTU.SkillDown"}}
                                         1</b></label>

@@ -56,7 +56,7 @@ class LevelUpForm extends FormApplication {
         super.activateListeners($html);
 
         $html.find('.stats .tooltip').tooltipster({
-			theme: `tooltipster-shadow ball-themes ${this.ballStyle}`,
+			theme: `tooltipster-shadow ball-themes ball-theme-${this.ballStyle}`,
 			position: 'top'
 		});
 

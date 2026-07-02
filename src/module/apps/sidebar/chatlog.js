@@ -4,7 +4,7 @@ class PTUChatLog extends foundry.applications.sidebar.tabs.ChatLog {
         super.activateListeners($html);
 
         $html.find('.tooltip').tooltipster({
-			theme: `tooltipster-shadow ball-themes default`,
+			theme: `tooltipster-shadow ball-themes ball-theme-default`,
 			position: 'top'
 		});
     }

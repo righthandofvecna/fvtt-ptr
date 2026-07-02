@@ -191,17 +191,17 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		this._itemSummaryRenderer.activateListeners(html);
 
 		$(html).find('nav .tooltip').tooltipster({
-			theme: `tooltipster-shadow ball-themes ${this.ballStyle}`,
+			theme: `tooltipster-shadow ball-themes ball-theme-${this.ballStyle}`,
 			position: 'right'
 		});
 
 		$(html).find('.tag.tooltip').tooltipster({
-			theme: `tooltipster-shadow ball-themes ${this.ballStyle}`,
+			theme: `tooltipster-shadow ball-themes ball-theme-${this.ballStyle}`,
 			position: 'top'
 		});
 
 		$(html).find('input[name="system.boss.bars"]').tooltipster({
-			theme: `tooltipster-shadow ball-themes ${this.ballStyle}`,
+			theme: `tooltipster-shadow ball-themes ball-theme-${this.ballStyle}`,
 			position: 'bottom',
 			content: game.i18n.localize("PTU.BossBarTooltip")
 		});
@@ -215,7 +215,7 @@ export class PTUPokemonSheet extends PTUActorSheet {
 			const $children = $html.find('.mod-tooltip');
 			if ($children.length > 0) {
 				$html.tooltipster({
-					theme: `tooltipster-shadow ball-themes ${this.ballStyle}`,
+					theme: `tooltipster-shadow ball-themes ball-theme-${this.ballStyle}`,
 					position: $children.data('position') || 'bottom',
 					content: `<div class="mod-tooltip">${$children.html()}</div>`,
 					contentAsHTML: true,

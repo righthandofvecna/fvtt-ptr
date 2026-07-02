@@ -89,26 +89,26 @@
                     {{#if (is tag.slug "range")}}
                         {{#each (split tag.value ",") as | range |}}
                             {{#if (helpText range)}}
-                                <div class="tag tooltip ball-themes gradient default range" title="{{helpText range}}">
+                                <div class="tag tooltip ball-themes ball-theme-default gradient range" title="{{helpText range}}">
                                     <span>{{#if (isNumber range)}}Range {{/if}}{{range}}</span>
                                 </div>
                             {{else}}
-                                <div class="tag ball-themes gradient default range">
+                                <div class="tag ball-themes ball-theme-default gradient range">
                                     <span>{{range}}</span>
                                 </div>
                             {{/if}}
                         {{/each}}
                     {{else}}
                         {{#if (helpText tag.value)}}
-                            <div class="tag tooltip ball-themes gradient default {{tag.slug}}" title="{{helpText tag.value}}"><span>{{#if (is tag.slug "frequency")}}{{tag.value}}{{else}}{{tag.label}}{{/if}}</span></div>
+                            <div class="tag tooltip ball-themes ball-theme-default gradient {{tag.slug}}" title="{{helpText tag.value}}"><span>{{#if (is tag.slug "frequency")}}{{tag.value}}{{else}}{{tag.label}}{{/if}}</span></div>
                         {{else}}
-                            <div class="tag {{#if (is tag.slug "effect")}}tooltip{{/if}} ball-themes gradient default {{tag.slug}}" {{#if (is tag.slug "effect")}}title="{{tag.value}}"{{/if}}><span>{{#if (is tag.slug "frequency")}}{{tag.value}}{{else}}{{tag.label}}{{/if}}</span></div>
+                            <div class="tag {{#if (is tag.slug "effect")}}tooltip{{/if}} ball-themes ball-theme-default gradient {{tag.slug}}" {{#if (is tag.slug "effect")}}title="{{tag.value}}"{{/if}}><span>{{#if (is tag.slug "frequency")}}{{tag.value}}{{else}}{{tag.label}}{{/if}}</span></div>
                         {{/if}}
                     {{/if}}
                     {{/unless}}
                 {{/each}}
                 {{#each item.system.keywords as |keyword|}}
-                    <div class="tag ball-themes gradient default effect">
+                    <div class="tag ball-themes ball-theme-default gradient effect">
                         <span>{{keyword}}</span>
                     </div>
                 {{/each}}

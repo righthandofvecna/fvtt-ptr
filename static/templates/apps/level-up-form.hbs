@@ -1,6 +1,6 @@
-<form class="{{cssClass}} ball-themes {{data.ballStyle}} gradient container-fluid" autocomplete="off">
+<form class="{{cssClass}} ball-themes ball-theme-{{data.ballStyle}} gradient container-fluid" autocomplete="off">
     <div class="d-flex flex-column h-100">
-        <div class="d-flex flex-row justify-content-center header-bar ball-themes {{data.ballStyle}} highlight">
+        <div class="d-flex flex-row justify-content-center header-bar ball-themes ball-theme-{{data.ballStyle}} highlight">
             <h3 class="fb-100 center-text">{{data.pokemon.name}}'s Level Up. {{data.level.current}}   ▶   {{data.level.new}}</h3>
         </div>
 
@@ -31,7 +31,7 @@
             </div>
         {{/if}}
 
-        <div class="stats-bar d-flex flex-row justify-content-evenly mt-2 center-text header-bar ball-themes {{data.ballStyle}} highlight">
+        <div class="stats-bar d-flex flex-row justify-content-evenly mt-2 center-text header-bar ball-themes ball-theme-{{data.ballStyle}} highlight">
             <span class="fb-25">{{localize "PTU.LevelUpForm.Stats"}}</span>
             {{#if (notEqual data.evolutions.current.slug data.pokemon.species.slug)}}
                 <span class="fb-20">{{localize "PTU.LevelUpForm.Base"}}</span>
@@ -43,7 +43,7 @@
         </div>
 
         {{#each data.pokemon.system.stats as | value key |}}
-            <div class="d-flex flex-row {{key}} stats justify-content-evenly mt-2 center-text header-bar ball-themes {{data.ballStyle}} highlight">
+            <div class="d-flex flex-row {{key}} stats justify-content-evenly mt-2 center-text header-bar ball-themes ball-theme-{{data.ballStyle}} highlight">
                 <span class="stats-keys {{key}} key {{natureCheck ../data.pokemon.system.nature.value key}} fb-25">{{localize (concat "PTU.Stats." key)}}</span>
                 {{#if (notEqual ../data.evolutions.current.slug ../data.pokemon.species.slug)}}
                     <span class="fb-20">{{value.value}}</span>
@@ -65,7 +65,7 @@
         {{!-- {{#if (gt data.moves.available.length 0)}} --}}
         <div class="d-flex flex-row mt-2 center-text moves">
             <div class="d-flex flex-column fb-50 moves-dropzone" data-zone="known">
-                <div class="d-flex flex-row justify-content-center header-bar ball-themes {{data.ballStyle}} highlight">
+                <div class="d-flex flex-row justify-content-center header-bar ball-themes ball-theme-{{data.ballStyle}} highlight">
                     <h3>{{localize "PTU.LevelUpForm.KnownMoves"}} ({{data.moves.known.length}}/6)</h3>
                 </div>
                 <div class="d-flex flex-column pt-2 pb-2">
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="d-flex flex-column fb-50 moves-dropzone" data-zone="available">
-                <div class="d-flex flex-row justify-content-center header-bar ball-themes {{data.ballStyle}} highlight">
+                <div class="d-flex flex-row justify-content-center header-bar ball-themes ball-theme-{{data.ballStyle}} highlight">
                     <h3>{{localize "PTU.LevelUpForm.AvailableMoves"}}</h3>
                 </div>
                 <div class="d-flex flex-column pt-2 pb-2">
@@ -95,10 +95,10 @@
         </div>
         {{!-- {{/if}} --}}
 
-        <div class="d-flex flex-row justify-content-center center-text header-bar ball-themes {{data.ballStyle}} highlight">
+        <div class="d-flex flex-row justify-content-center center-text header-bar ball-themes ball-theme-{{data.ballStyle}} highlight">
             <h3>{{localize "ITEM.TypeAbilityPlural"}}</h3>
         </div>
-        <div class="d-flex flex-row p-1 justify-content-evenly center-text header-bar ball-themes {{data.ballStyle}} highlight">
+        <div class="d-flex flex-row p-1 justify-content-evenly center-text header-bar ball-themes ball-theme-{{data.ballStyle}} highlight">
             <span class="fb-30">{{localize "PTU.LevelUpForm.Abilities.Basic"}}</span>
             <span class="fb-30">{{localize "PTU.LevelUpForm.Abilities.Advanced"}}</span>
             <span class="fb-30">{{localize "PTU.LevelUpForm.Abilities.High"}}</span>
