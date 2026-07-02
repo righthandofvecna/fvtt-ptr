@@ -128,7 +128,23 @@ class PTUItem extends Item {
         }
 
         if (this.enabled) itemRollOptions[`item:enabled`] = true;
-        for (const kw of this.system.keywords ?? []) itemRollOptions[`item:keyword:${sluggify(kw)}`] = true;
+
+        // Reset transient keyword data each preparation to prevent accumulation
+        this._keywordRuleSources = [];
+        this._keywordEffectTexts = [];
+
+        for (const kw of this.system.keywords ?? []) {
+            itemRollOptions[`item:keyword:${sluggify(kw)}`] = true;
+
+            for (const page of CONFIG.PTU.keywordPages?.get(sluggify(kw)) ?? []) {
+                if (page.system.rules?.length > 0) {
+                    this._keywordRuleSources.push(...page.system.rules);
+                }
+                if (page.text.content) {
+                    this._keywordEffectTexts.push(page.text.content);
+                }
+            }
+        }
 
         this.flags.ptu = foundry.utils.mergeObject(this.flags.ptu ?? {}, {
             rollOptions: {
@@ -156,7 +172,11 @@ class PTUItem extends Item {
     /** @override */
     async _buildEmbedHTML(config, options = {}) {
         options = { ...options, _embedDepth: options._embedDepth + 1, relativeTo: this };
-        if (!this.system?.effect) return document.createElement("div");
+        const keywordTexts = this._keywordEffectTexts ?? [];
+        const effect = keywordTexts.length > 0
+            ? `${this.system?.effect ?? ""}\n<hr/>\n${keywordTexts.join("\n<hr/>\n")}`
+            : this.system?.effect;
+        if (!effect) return document.createElement("div");
         const {
             secrets = options.secrets,
             documents = options.documents,
@@ -165,7 +185,7 @@ class PTUItem extends Item {
             embeds = options.embeds
         } = config;
         foundry.utils.mergeObject(options, { secrets, documents, links, rolls, embeds });
-        const enrichedPage = await foundry.applications.ux.TextEditor.implementation.enrichHTML(this.system.effect, options);
+        const enrichedPage = await foundry.applications.ux.TextEditor.implementation.enrichHTML(effect, options);
         const container = document.createElement("div");
         container.innerHTML = enrichedPage;
         return container;
@@ -425,8 +445,28 @@ class PTUItem extends Item {
 
     prepareRuleElements(options = {}) {
         if (!this.actor) throw new Error("PTU | Item must have an actor to prepare rule elements");
+        if (!this.actor.canHostRuleElements) return (this.rules = []);
 
-        return (this.rules = this.actor.canHostRuleElements ? RuleElements.fromOwnedItem(this, options) : []);
+        const baseRules = RuleElements.fromOwnedItem(this, options);
+
+        // Instantiate rule elements sourced from matched keyword pages
+        const keywordSources = this._keywordRuleSources ?? [];
+        const keywordStartIndex = this.system.rules.length;
+        const keywordRules = [];
+        for (const [i, source] of keywordSources.entries()) {
+            const RuleElementClass = RuleElements.builtin[source.key] ?? RuleElements.custom[source.key];
+            if (!RuleElementClass) {
+                if (!options.suppressWarnings) console.warn(`PTU | RuleElements | Unrecognized keyword rule: ${source.key} on item ${this.name}`);
+                continue;
+            }
+            try {
+                keywordRules.push(new RuleElementClass(source, this, { ...options, sourceIndex: keywordStartIndex + i }));
+            } catch (err) {
+                if (!options.suppressWarnings) console.warn(`PTU | RuleElements | Error creating keyword rule: ${source.key} on item ${this.name}`, err);
+            }
+        }
+
+        return (this.rules = [...baseRules, ...keywordRules]);
     }
 
     async refreshFromCompendium() {

@@ -18,6 +18,7 @@ import { HomebrewConfigSettings } from "./homebrew-config-settings.js";
 import { GMControlPanelHook } from "./gm-control-panel.js";
 import { QuickInsertCompat } from "./quick-insert-compat.js";
 import { ChatContextMenu } from "./chat-context-menu.js";
+import { Keywords } from "./keywords.js";
 
 export const PtuHooks = {
     listen() {
@@ -43,6 +44,7 @@ export const PtuHooks = {
             GMControlPanelHook,
             QuickInsertCompat,
             ChatContextMenu,
+            Keywords,
         ]
         for(const listener of listeners) listener.listen();
     }

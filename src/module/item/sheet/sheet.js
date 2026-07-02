@@ -36,7 +36,11 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
         this.object._updateIcon({update: true});
 
         data.referenceEffect = this.item.referenceEffect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(`@UUID[${foundry.utils.duplicate(this.item.referenceEffect)}]`, {async: true}) : null;
-        data.itemEffect = this.item.system.effect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(this.item.system.effect), {async: true}) : this.item.system.effect;
+        const keywordTexts = this.item._keywordEffectTexts ?? [];
+        const fullEffect = keywordTexts.length > 0
+            ? `${this.item.system.effect ?? ""}\n<hr/>\n${keywordTexts.join("\n<hr/>\n")}`
+            : this.item.system.effect;
+        data.itemEffect = fullEffect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(fullEffect), {async: true}) : fullEffect;
         data.itemCost = await (async () => {
             const cost = parseInt(this.item.system.cost);
             if(!cost) return this.item.system.cost || "-";

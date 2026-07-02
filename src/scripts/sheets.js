@@ -1,3 +1,5 @@
+import { PTUKeywordJournalPageSheet } from "../module/journal/keyword-page.js";
+
 function registerSheets() {
     // Register sheet application classes
     foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
@@ -16,9 +18,15 @@ function registerSheets() {
         types: ["base"],
         label: "PTU.RulebookJournalSheetName",
         makeDefault: false
-      });
+    });
 
     foundry.applications.apps.DocumentSheetConfig.registerSheet(CONFIG.PTU.Token.documentClass, "ptu", CONFIG.PTU.Token.sheetClass, { makeDefault: true });
+
+    foundry.applications.apps.DocumentSheetConfig.registerSheet(JournalEntryPage, "ptu", PTUKeywordJournalPageSheet, {
+        types: ["keyword"],
+        label: "PTU.KeywordJournalPageSheet",
+        makeDefault: true
+    });
 }
 
 export { registerSheets }

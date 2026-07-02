@@ -909,5 +909,354 @@
       "trigger": "",
       "active": false
     }
+  },
+  "JournalEntryPage": {
+    "types": ["text", "image", "pdf", "video", "keyword"],
+    "templates": {
+      "rules": {
+        "rules": []
+      }
+    },
+    "text": {
+      "templates": [],
+      "format": 1,
+      "content": ""
+    },
+    "image": {
+      "templates": [],
+      "caption": ""
+    },
+    "pdf": {
+      "templates": []
+    },
+    "video": {
+      "templates": [],
+      "width": null,
+      "height": null,
+      "volume": 0,
+      "timestamp": 0,
+      "loop": false,
+      "autoplay": false
+    },
+    "keyword": {
+      "templates": ["rules"]
+    }
+  },
+  "Macro": {
+    "type": "script",
+    "templates": {
+      "base": {
+        "origin": "",
+        "effect": "",
+        "snippet": "",
+        "rules": [],
+        "enabled": true,
+        "slug": null,
+        "contentSet": "homebrew",
+        "replacesSlug": "",
+        "schema": {
+          "version": null,
+          "lastMigration": null
+        },
+        "referenceEffect": "",
+        "source": {
+          "value": "Homebrew"
+        },
+        "stackSlugs": false,
+        "keywords": []
+      },
+      "interactions": {
+        "sheerForce": false,
+        "toughClaws": false,
+        "technician": false,
+        "reckless": false,
+        "ironFist": false,
+        "megaLauncher": false,
+        "punkRock": false,
+        "strongJaw": false
+      },
+      "frequencyTracked": {
+        "frequency": {
+          "type": "at-will",
+          "max": 0,
+          "custom": "",
+          "modifiers": {
+            "priorityLimited": false,
+            "priorityAdvanced": false,
+            "priority": false,
+            "reaction": false,
+            "interrupt": false
+          }
+        },
+        "actionCost": {
+          "standard": false,
+          "rapid": false,
+          "shift": false,
+          "free": false,
+          "extended": false
+        },
+        "ap": {
+          "cost": 0,
+          "bind": false
+        },
+        "leagueLegal": false
+      }
+    },
+    "dexentry": {
+      "id": 0,
+      "entry": "",
+      "owned": false
+    },
+    "feat": {
+      "templates": ["base", "frequencyTracked"],
+      "prerequisites": [],
+      "notes": "",
+      "free": false,
+      "class": ""
+    },
+    "edge": {
+      "templates": ["base", "frequencyTracked"],
+      "prerequisites": [],
+      "notes": "",
+      "free": false
+    },
+    "effect": {
+      "templates": ["base"],
+      "level": {
+        "value": 1
+      },
+      "duration": {
+        "value": -1,
+        "unit": "unlimited",
+        "expiry": "turn-start"
+      },
+      "start": {
+        "value": 0,
+        "initiative": null
+      },
+      "target": null,
+      "tokenIcon": {
+        "show": true
+      },
+      "badge": null,
+      "context": null
+    },
+    "condition": {
+      "templates": ["base"],
+      "duration": {
+        "value": -1,
+        "unit": "unlimited",
+        "expiry": "turn-start"
+      },
+      "value": {
+        "isValued": false,
+        "value": 0,
+        "autoIncrement": false
+      },
+      "references": {
+        "children": [],
+        "overrides": [],
+        "overriddenBy": []
+      },
+      "overrides": [],
+      "persistent": {
+        "formula": "",
+        "type": "",
+        "dc": 10,
+        "decrease": false,
+        "saveEnds": false
+      }
+    },
+    "ability": {
+      "templates": ["base", "frequencyTracked"],
+      "tier": ""
+    },
+    "move": {
+      "templates": ["base", "interactions", "frequencyTracked"],
+      "type": "Untyped",
+      "category": "",
+      "damageBase": "",
+      "ac": "",
+      "range": "",
+      "contestType": "",
+      "stab": false,
+      "damageBonus": 0,
+      "isStruggle": false
+    },
+    "contestmove": {
+      "templates": ["base", "frequencyTracked"],
+      "type": "Cool",
+      "dice": 0
+    },
+    "capability": {
+      "templates": ["base", "frequencyTracked"]
+    },
+    "pokeedge": {
+      "templates": ["base", "frequencyTracked"],
+      "prerequisites": [],
+      "cost": 0
+    },
+    "item": {
+      "templates": ["base", "frequencyTracked"],
+      "quantity": 1,
+      "category": "",
+      "cost": 0,
+      "consumable": 0,
+      "subtype": "",
+      "container": false
+    },
+    "species": {
+      "schema": {
+        "version": null,
+        "lastMigration": null
+      },
+      "dexentry": "",
+      "number": -1,
+      "form": "",
+      "stats": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spatk": 0,
+        "spdef": 0,
+        "spd": 0
+      },
+      "types": ["Untyped"],
+      "abilities": {
+        "basic": [],
+        "advanced": [],
+        "high": []
+      },
+      "evolutions": [],
+      "size": {
+        "height": 0,
+        "weight": 0,
+        "sizeClass": "",
+        "weightClass": 0
+      },
+      "breeding": {
+        "genderRatio": 0.0,
+        "eggGroups": [],
+        "hatchRate": 0
+      },
+      "diet": [],
+      "habitats": [],
+      "capabilities": {
+        "overland": 0,
+        "sky": 0,
+        "swim": 0,
+        "levitate": 0,
+        "burrow": 0,
+        "highJump": 0,
+        "longJump": 0,
+        "power": 0,
+        "naturewalk": [],
+        "other": []
+      },
+      "moves": {
+        "level": [],
+        "machine": [],
+        "egg": [],
+        "tutor": []
+      },
+      "skills": {
+        "acrobatics": {
+          "value": 2,
+          "modifier": 0,
+          "type": "body"
+        },
+        "athletics": {
+          "value": 2,
+          "modifier": 0,
+          "type": "body"
+        },
+        "charm": {
+          "value": 2,
+          "modifier": 0,
+          "type": "spirit"
+        },
+        "combat": {
+          "value": 2,
+          "modifier": 0,
+          "type": "body"
+        },
+        "command": {
+          "value": 2,
+          "modifier": 0,
+          "type": "spirit"
+        },
+        "generalEd": {
+          "value": 1,
+          "modifier": 0,
+          "type": "mind"
+        },
+        "medicineEd": {
+          "value": 1,
+          "modifier": 0,
+          "type": "mind"
+        },
+        "occultEd": {
+          "value": 1,
+          "modifier": 0,
+          "type": "mind"
+        },
+        "pokemonEd": {
+          "value": 1,
+          "modifier": 0,
+          "type": "mind"
+        },
+        "techEd": {
+          "value": 1,
+          "modifier": 0,
+          "type": "mind"
+        },
+        "focus": {
+          "value": 2,
+          "modifier": 0,
+          "type": "spirit"
+        },
+        "guile": {
+          "value": 2,
+          "modifier": 0,
+          "type": "mind"
+        },
+        "intimidate": {
+          "value": 2,
+          "modifier": 0,
+          "type": "body"
+        },
+        "intuition": {
+          "value": 2,
+          "modifier": 0,
+          "type": "spirit"
+        },
+        "perception": {
+          "value": 2,
+          "modifier": 0,
+          "type": "mind"
+        },
+        "stealth": {
+          "value": 2,
+          "modifier": 0,
+          "type": "body"
+        },
+        "survival": {
+          "value": 2,
+          "modifier": 0,
+          "type": "body"
+        }
+      },
+      "slug": "",
+      "rules": []
+    },
+    "reference": {
+      "templates": ["base"]
+    },
+    "spiritaction": {
+      "templates": ["base", "frequencyTracked"],
+      "cost": 0,
+      "trigger": "",
+      "active": false
+    }
   }
 }

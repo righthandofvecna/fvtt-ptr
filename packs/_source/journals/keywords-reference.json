@@ -5,7 +5,7 @@
     {
       "sort": 100000,
       "name": "Aura",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwAura0000000000",
       "system": {},
       "title": {
@@ -41,7 +41,7 @@
     {
       "sort": 200000,
       "name": "Berry",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwBerry000000000",
       "system": {},
       "title": {
@@ -77,7 +77,7 @@
     {
       "sort": 300000,
       "name": "Blessing",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwBlessing000000",
       "system": {},
       "title": {
@@ -113,7 +113,7 @@
     {
       "sort": 400000,
       "name": "Coat",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwCoat0000000000",
       "system": {},
       "title": {
@@ -149,7 +149,7 @@
     {
       "sort": 500000,
       "name": "Dash",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwDash0000000000",
       "system": {},
       "title": {
@@ -185,7 +185,7 @@
     {
       "sort": 600000,
       "name": "Double Strike",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwDoubleStrike00",
       "system": {},
       "title": {
@@ -221,7 +221,7 @@
     {
       "sort": 700000,
       "name": "Environ",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwEnviron0000000",
       "system": {},
       "title": {
@@ -257,7 +257,7 @@
     {
       "sort": 800000,
       "name": "Execute",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwExecute0000000",
       "system": {},
       "title": {
@@ -293,7 +293,7 @@
     {
       "sort": 900000,
       "name": "Exhaust",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwExhaust0000000",
       "system": {},
       "title": {
@@ -329,7 +329,7 @@
     {
       "sort": 1000000,
       "name": "Fling",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwFling000000000",
       "system": {},
       "title": {
@@ -365,7 +365,7 @@
     {
       "sort": 1100000,
       "name": "Friendly",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwFriendly000000",
       "system": {},
       "title": {
@@ -401,7 +401,7 @@
     {
       "sort": 1200000,
       "name": "Five Strike",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwFiveStrike0000",
       "system": {},
       "title": {
@@ -437,7 +437,7 @@
     {
       "sort": 1300000,
       "name": "Groundsource",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwGroundSource00",
       "system": {},
       "title": {
@@ -473,7 +473,7 @@
     {
       "sort": 1400000,
       "name": "Hazard",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwHazard00000000",
       "system": {},
       "title": {
@@ -509,7 +509,7 @@
     {
       "sort": 1500000,
       "name": "Illusion",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwIllusion000000",
       "system": {},
       "title": {
@@ -545,7 +545,7 @@
     {
       "sort": 1600000,
       "name": "Interrupt",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwInterrupt00000",
       "system": {},
       "title": {
@@ -581,7 +581,7 @@
     {
       "sort": 1700000,
       "name": "Pass",
-      "type": "text",
+      "type": "keyword",
       "_id": "wkPass0000000000",
       "system": {},
       "title": {
@@ -617,7 +617,7 @@
     {
       "sort": 1800000,
       "name": "Pledge",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwPledge00000000",
       "system": {},
       "title": {
@@ -653,7 +653,7 @@
     {
       "sort": 1900000,
       "name": "Powder",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwPowder00000000",
       "system": {},
       "title": {
@@ -689,7 +689,7 @@
     {
       "sort": 2000000,
       "name": "Priority",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwPriority000000",
       "system": {},
       "title": {
@@ -725,7 +725,7 @@
     {
       "sort": 2100000,
       "name": "Push",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwPush0000000000",
       "system": {},
       "title": {
@@ -761,7 +761,7 @@
     {
       "sort": 2200000,
       "name": "Reaction",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwReaction000000",
       "system": {},
       "title": {
@@ -797,7 +797,7 @@
     {
       "sort": 2300000,
       "name": "Recoil",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwRecoil00000000",
       "system": {},
       "title": {
@@ -833,7 +833,7 @@
     {
       "sort": 2400000,
       "name": "Set-Up",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwSetUp00000000",
       "system": {},
       "title": {
@@ -869,7 +869,7 @@
     {
       "sort": 2500000,
       "name": "Shield",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwShield00000000",
       "system": {},
       "title": {
@@ -905,7 +905,7 @@
     {
       "sort": 2600000,
       "name": "Smite",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwSmite000000000",
       "system": {},
       "title": {
@@ -941,7 +941,7 @@
     {
       "sort": 2700000,
       "name": "Social",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwSocial00000000",
       "system": {},
       "title": {
@@ -977,7 +977,7 @@
     {
       "sort": 2800000,
       "name": "Sonic",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwSonic000000000",
       "system": {},
       "title": {
@@ -1013,7 +1013,7 @@
     {
       "sort": 2900000,
       "name": "Spirit Surge",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwSpiritSurge000",
       "system": {},
       "title": {
@@ -1049,7 +1049,7 @@
     {
       "sort": 3000000,
       "name": "Trigger",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwTrigger0000000",
       "system": {},
       "title": {
@@ -1085,7 +1085,7 @@
     {
       "sort": 3100000,
       "name": "Vortex",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwVortex00000000",
       "system": {},
       "title": {
@@ -1121,7 +1121,7 @@
     {
       "sort": 3200000,
       "name": "Weather",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwWeather0000000",
       "system": {},
       "title": {
@@ -1157,7 +1157,7 @@
     {
       "sort": 3300000,
       "name": "Weight Class",
-      "type": "text",
+      "type": "keyword",
       "_id": "kwWeightClass000",
       "system": {},
       "title": {
