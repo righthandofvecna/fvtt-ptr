@@ -1,0 +1,1431 @@
+{
+  "name": "Keywords Reference",
+  "_id": "keywordsReferenc",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "Aura",
+      "type": "keyword",
+      "_id": "kwAura0000000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Moves with this Keyword manipulate Aura and may be affected by certain Abilities or effects.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782601789814,
+        "modifiedTime": 1782601805606,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 200000,
+      "name": "Berry",
+      "type": "keyword",
+      "_id": "kwBerry000000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>@UUID[Compendium.ptu.moves.Item.rkPaIX8nSuJmwQiC]{Natural Gift} has a different Damage Base and Elemental Type based on the Berry the user has stored a Digestion Buff from. Consult the Chart below.</p><table><thead><tr><th><p><strong>Berry</strong></p></th><th><p><strong>DB</strong></p></th><th><p><strong>Type</strong></p></th><th><p><strong>Berry</strong></p></th><th><p><strong>DB</strong></p></th><th><p><strong>Type</strong></p></th></tr></thead><tbody><tr><td><p>@UUID[Compendium.ptu.items.Item.cv5eqwzldHxaSdUx]{Cheri}</p></td><td><p>6</p></td><td><p>Fire</p></td><td><p>@UUID[Compendium.ptu.items.Item.63QJ0JtoxTJQ5nc0]{Watmel}</p></td><td><p>8</p></td><td><p>Fire</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.Ui1HOOBmxt6iCjqM]{Chesto}</p></td><td><p>6</p></td><td><p>Water</p></td><td><p>@UUID[Compendium.ptu.items.Item.Z8CeZSs15ub588jA]{Durin }</p></td><td><p>8</p></td><td><p>Water</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.myUsKao9Dkcrkvky]{Pecha }</p></td><td><p>6</p></td><td><p>Electric</p></td><td><p>@UUID[Compendium.ptu.items.Item.34nn2TkdQjNbXL0U]{Belue }</p></td><td><p>8</p></td><td><p>Electric</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.nyubmMDwJSkeLJiM]{Rawst }</p></td><td><p>6</p></td><td><p>Grass</p></td><td><p>@UUID[Compendium.ptu.items.Item.6YJtA57wmDEOVtC7]{Occa }</p></td><td><p>6</p></td><td><p>Fire</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.1F4h8ATAl8MlaM7e]{Aspear }</p></td><td><p>6</p></td><td><p>Ice</p></td><td><p>@UUID[Compendium.ptu.items.Item.urfkI8QlslEsvqrV]{Passho }</p></td><td><p>6</p></td><td><p>Water</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.wKKRq8CKmvmmIxJv]{Leppa }</p></td><td><p>6</p></td><td><p>Fighting</p></td><td><p>@UUID[Compendium.ptu.items.Item.sSYi4rXcwYCUR9J0]{Wacan }</p></td><td><p>6</p></td><td><p>Electric</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.0txLVYw8LvBMSVdd]{Oran }</p></td><td><p>6</p></td><td><p>Poison</p></td><td><p>@UUID[Compendium.ptu.items.Item.0UYLtvxxgnwAbDUF]{Rindo }</p></td><td><p>6</p></td><td><p>Grass</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.UIukeOUhW7aQKDhe]{Persim }</p></td><td><p>6</p></td><td><p>Ground</p></td><td><p>@UUID[Compendium.ptu.items.Item.g6BHkwLi6oMYeTCS]{Yache }</p></td><td><p>6</p></td><td><p>Ice</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.HV1s0SlTRW15Czy4]{Lum }</p></td><td><p>6</p></td><td><p>Flying</p></td><td><p>@UUID[Compendium.ptu.items.Item.2Hz3FvCYLKM6GxqI]{Chople }</p></td><td><p>6</p></td><td><p>Fighting</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.aUCBw6tTWR2Jj8EH]{Sitrus }</p></td><td><p>6</p></td><td><p>Psychic</p></td><td><p>@UUID[Compendium.ptu.items.Item.seMAAnnI4h7ssAjv]{Kebia }</p></td><td><p>6</p></td><td><p>Poison</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.KANaICzUllgcccn6]{Figy}</p></td><td><p>6</p></td><td><p>Bug</p></td><td><p>@UUID[Compendium.ptu.items.Item.DcSCtsmyeHIdwbli]{Shuca }</p></td><td><p>6</p></td><td><p>Ground</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.xvhemPoZ4h4wBjUs]{Wiki }</p></td><td><p>6</p></td><td><p>Rock</p></td><td><p>@UUID[Compendium.ptu.items.Item.UkwrfJYxL3klZLA2]{Coba }</p></td><td><p>6</p></td><td><p>Flying</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.QVycESa0ERv6vnVx]{Mago }</p></td><td><p>6</p></td><td><p>Ghost</p></td><td><p>@UUID[Compendium.ptu.items.Item.wz0rz7B6Qrd1xkhD]{Payapa }</p></td><td><p>6</p></td><td><p>Psychic</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.XIUq1Al547PHDZXH]{Aguav }</p></td><td><p>6</p></td><td><p>Dragon</p></td><td><p>@UUID[Compendium.ptu.items.Item.ADMAWB03oV5wv0zd]{Tanga }</p></td><td><p>6</p></td><td><p>Bug</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.qHAQPjlnHjtkJ28h]{Iapapa }</p></td><td><p>6</p></td><td><p>Dark</p></td><td><p>@UUID[Compendium.ptu.items.Item.pU0mQdHTnUAYgVNw]{Charti }</p></td><td><p>6</p></td><td><p>Rock</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.6Ulf3uG4QRO9sEEK]{Razz }</p></td><td><p>6</p></td><td><p>Steel</p></td><td><p>@UUID[Compendium.ptu.items.Item.Zq6Rh3Tw1NCDXEFS]{Kasib }</p></td><td><p>6</p></td><td><p>Ghost</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.LOHaoajMrgco1NjQ]{Bluk }</p></td><td><p>7</p></td><td><p>Fire</p></td><td><p>@UUID[Compendium.ptu.items.Item.b0fjkhUpGjD3pjfN]{Haban }</p></td><td><p>6</p></td><td><p>Dragon</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.vlQ41G1No20eQlY9]{Nanab }</p></td><td><p>7</p></td><td><p>Water</p></td><td><p>@UUID[Compendium.ptu.items.Item.XpOAmnjq70PZgIKI]{Colbur }</p></td><td><p>6</p></td><td><p>Dark</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.4PebEIFVWG5hNGrz]{Wepear }</p></td><td><p>7</p></td><td><p>Electric</p></td><td><p>@UUID[Compendium.ptu.items.Item.kdQKZJ0UWyT73mHR]{Babiri }</p></td><td><p>6</p></td><td><p>Steel</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.AnzVYlXddqWdCUCQ]{Pinap }</p></td><td><p>7</p></td><td><p>Grass</p></td><td><p>@UUID[Compendium.ptu.items.Item.P1JwCLq7RN39KvIr]{Chilan }</p></td><td><p>6</p></td><td><p>Normal</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.XIe5IPZjyb1nxytx]{Pomeg }</p></td><td><p>7</p></td><td><p>Ice</p></td><td><p>@UUID[Compendium.ptu.items.Item.JsdmMnIq4DciokB6]{Liechi }</p></td><td><p>8</p></td><td><p>Grass</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.0IBizkBY2Kyq5KkH]{Kelpsy }</p></td><td><p>7</p></td><td><p>Fighting</p></td><td><p>@UUID[Compendium.ptu.items.Item.UQZg03UetHtq6tBK]{Ganlon }</p></td><td><p>8</p></td><td><p>Ice</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.OB3PSgoyi6o3yr3G]{Qualot }</p></td><td><p>7</p></td><td><p>Poison</p></td><td><p>@UUID[Compendium.ptu.items.Item.xUZ48QKktiO0cifN]{Salac }</p></td><td><p>8</p></td><td><p>Fighting</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.gsti929NeOTl8LUN]{Hondew }</p></td><td><p>7</p></td><td><p>Ground</p></td><td><p>@UUID[Compendium.ptu.items.Item.qYhgTWe598QR5KVp]{Petaya }</p></td><td><p>8</p></td><td><p>Poison</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.5c1Ra5oqykO2dMb9]{Grepa}</p></td><td><p>7</p></td><td><p>Flying</p></td><td><p>@UUID[Compendium.ptu.items.Item.g7OvsSZcfwkbMiVY]{Apicot }</p></td><td><p>8</p></td><td><p>Ground</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.EG9PIafCznbKmjbK]{Tamato }</p></td><td><p>7</p></td><td><p>Psychic</p></td><td><p>@UUID[Compendium.ptu.items.Item.1DRUhFxU6Y72ODAA]{Lansat }</p></td><td><p>8</p></td><td><p>Flying</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.gdeshTlDpJXxuXOq]{Cornn }</p></td><td><p>7</p></td><td><p>Bug</p></td><td><p>@UUID[Compendium.ptu.items.Item.tLbd4c0hcoukiAT0]{Starf }</p></td><td><p>8</p></td><td><p>Psychic</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.YvfMvlPLXjg1ObaG]{Magost}</p></td><td><p>7</p></td><td><p>Rock</p></td><td><p>@UUID[Compendium.ptu.items.Item.uahYsx6JSnsISmvH]{Enigma }</p></td><td><p>8</p></td><td><p>Bug</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.UX3xgG5stg8D8cy9]{Rabuta }</p></td><td><p>7</p></td><td><p>Ghost</p></td><td><p>@UUID[Compendium.ptu.items.Item.ooVt5GkL00bj2IKd]{Micle }</p></td><td><p>8</p></td><td><p>Rock</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.WoqejsstCRWX2tdD]{Nomel}</p></td><td><p>7</p></td><td><p>Dragon</p></td><td><p>@UUID[Compendium.ptu.items.Item.1RcHGmJQHWKigx54]{Custap}</p></td><td><p>8</p></td><td><p>Ghost</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.pR81Bf8454iI2LPj]{Spelon }</p></td><td><p>7</p></td><td><p>Dark</p></td><td><p>@UUID[Compendium.ptu.items.Item.v48SW5lvvEUEIvIt]{Jaboca }</p></td><td><p>8</p></td><td><p>Dragon</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.Pt8QZy6atB2PDZgK]{Pamtre }</p></td><td><p>7</p></td><td><p>Steel</p></td><td><p>@UUID[Compendium.ptu.items.Item.zSmw6LaCvKSj4mNd]{Rowap }</p></td><td><p>8</p></td><td><p>Dark</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.FqoZCJvoWrxmqYCr]{Roseli }</p></td><td><p>8</p></td><td><p>Fairy</p></td><td><p>@UUID[Compendium.ptu.items.Item.gE1PMK51swmhZMuc]{Maranga }</p></td><td><p>8</p></td><td><p>Dark</p></td></tr><tr><td><p>@UUID[Compendium.ptu.items.Item.kdAhVEVIFWW0LAJi]{Kee }</p></td><td><p>8</p></td><td><p>Fairy</p></td><td><p></p></td><td><p></p></td><td><p></p></td></tr></tbody></table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782601845095,
+        "modifiedTime": 1782601876557,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 300000,
+      "name": "Blessing",
+      "type": "keyword",
+      "_id": "kwBlessing000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>@UUID[Compendium.ptu.moves.Item.DkpT2ACVxH31hpo0]{Safeguard}, @UUID[Compendium.ptu.moves.Item.XKcx5LB3MJwO3rkS]{Lucky Chant}, @UUID[Compendium.ptu.moves.Item.eDFWwKCjaJ7vNNbJ]{Reflect}, and @UUID[Compendium.ptu.moves.Item.weEc5wlOZ5H7Tguh]{Light Screen} provide a Blessing shared by the entire team. All Pokémon and Trainers allied to the user may benefit from the Blessing. The Blessing persists until it’s used up, even if the original user is KO’d or switched out.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782601885366,
+        "modifiedTime": 1782601930115,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 400000,
+      "name": "Coat",
+      "type": "keyword",
+      "_id": "kwCoat0000000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Moves with the Coat keyword give the targets a certain effect while the Coat persists. Coats may be passed on by @UUID[Compendium.ptu.moves.Item.uZjoE8y3gbmlRVcc]{Baton Pass}.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782601961228,
+        "modifiedTime": 1782601968325,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 500000,
+      "name": "Dash",
+      "type": "keyword",
+      "_id": "kwDash0000000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>A Dash Move cannot be used if the user is Stuck.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782601978935,
+        "modifiedTime": 1782601984316,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 600000,
+      "name": "Double Strike",
+      "type": "keyword",
+      "_id": "kwDoubleStrike00",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Whenever a Move with Double Strike is used, make two Attack Rolls. If one Attack Roll hits, the Move does damage as indicated by its Damage Base value; if both Attack Rolls hit however, the Damage Base value is doubled. Each hit may Critically Hit separately; when adding damage from Critical Hit, add the Damage Base before it’s doubled. For example, if one @UUID[Compendium.ptu.moves.Item.24gRKtjHojSS9Vb0]{Double Kick} attack is a Critical Hit, add +1d8+5 to the damage roll. If both are Critical Hits, add +2d8+10.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602000915,
+        "modifiedTime": 1782602029022,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 650000,
+      "name": "Drain",
+      "type": "keyword",
+      "_id": "kwDrain000000000",
+      "system": {
+        "rules": [
+          {
+            "key": "HealOnDamageDealt",
+            "predicate": [],
+            "selectors": "{id}-damage-dealt",
+            "percent": 0.5,
+            "roundUp": false
+          }
+        ]
+      },
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>After the target takes damage, the user gains HP equal to half of the damage they dealt to the target.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602000915,
+        "modifiedTime": 1782602029022,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 700000,
+      "name": "Environ",
+      "type": "keyword",
+      "_id": "kwEnviron0000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>A Pokémon using a Move with the Environ keyword consults the chart below for what Move or effect to use.</p><table><thead><tr><th><p><strong>Area</strong></p></th><th><p><strong>@UUID[Compendium.ptu.moves.Item.FNtFpxkWjT9PhvEb]{Nature Power} Move</strong></p></th><th><p><strong>@UUID[Compendium.ptu.moves.Item.6Q0qjfHVNHd5fsec]{Secret Power} Effect</strong></p></th></tr></thead><tbody><tr><td><p><strong>Grassland</strong></p></td><td><p>@UUID[Compendium.ptu.moves.Item.jh2qDsk9mirEzqvu]{Grass Knot}</p></td><td><p>Sleep</p></td></tr><tr><td><p><strong>Forest</strong></p></td><td><p>@UUID[Compendium.ptu.moves.Item.GPc4UqyAsng4fPup]{Energy Ball}</p></td><td><p>Sleep</p></td></tr><tr><td><p><strong>Wetlands</strong></p></td><td><p>@UUID[Compendium.ptu.moves.Item.BAmSs75wp3OsvF8d]{Mud Bomb}</p></td><td><p>Lowers Speed by -1 CS.</p></td></tr><tr><td><p><strong>Ocean</strong></p></td><td><p>@UUID[Compendium.ptu.moves.Item.0O3ntZlEtOYU7vqT]{Bubble Beam}</p></td><td><p>Lowers Attack by -1 CS.</p></td></tr><tr><td><p><strong>Tundra</strong></p></td><td><p>@UUID[Compendium.ptu.moves.Item.UqFpnMAAoEOqvUDj]{Aurora Beam}</p></td><td><p>Freezing</p></td></tr><tr><td><p><strong>Mountain</strong></p></td><td><p>@UUID[Compendium.ptu.moves.Item.supS2UO9UHy5af12]{Power Gem}</p></td><td><p>Flinch</p></td></tr><tr><td><p><strong>Cave</strong></p></td><td><p>@UUID[Compendium.ptu.moves.Item.JtVhKjrnr8wc4BAH]{Ancient Power}</p></td><td><p>Flinch</p></td></tr><tr><td><p><strong>Urban</strong></p></td><td><p>@UUID[Compendium.ptu.moves.Item.IWDclyABMiQ3puo0]{Tri Attack}</p></td><td><p>Paralysis</p></td></tr><tr><td><p><strong>Desert</strong></p></td><td><p>@UUID[Compendium.ptu.moves.Item.VZYf1f6nsz9bp7vw]{Earth Power}</p></td><td><p>Lowers Accuracy by -1.</p></td></tr></tbody></table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602043380,
+        "modifiedTime": 1782602059875,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 800000,
+      "name": "Execute",
+      "type": "keyword",
+      "_id": "kwExecute0000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>These Moves automatically KO the target if they hit. The 1d100 roll may not be modified in any way or re-rolled through any means.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602071734,
+        "modifiedTime": 1782602083960,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 900000,
+      "name": "Exhaust",
+      "type": "keyword",
+      "_id": "kwExhaust0000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>If a Move has the Exhaust keyword, the user forfeits their Standard and Shift actions on their next turn, and forfeits their trainer’s Command. If any of these actions has already been used up, the move Fails and does not activate.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602101278,
+        "modifiedTime": 1782602107089,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1000000,
+      "name": "Fling",
+      "type": "keyword",
+      "_id": "kwFling000000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>The Move @UUID[Compendium.ptu.moves.Item.fDc6STMtfRenewU6]{Fling} is very unique! Its effect depends on the held item of the user. If used by a Trainer, they must throw an item in either hand.</p><table><thead><tr><th><p><strong>Item</strong></p></th><th><p><strong>Damage Base</strong></p></th><th><p><strong>Effect</strong></p></th></tr></thead><tbody><tr><td><p>Consumables</p></td><td><p>No Damage</p></td><td><p>The target of the attack takes no damage, and instead consumes the thrown item. This includes Basic Restoratives and Herbs, but not Bandages, Refreshments, or other items that are used as an Extended Action. When used this way, Restoratives don’t cause the target to forfeit a turn.</p></td></tr><tr><td><p>Poison Items</p></td><td><p>DB 3</p></td><td><p>The target becomes Poisoned. This category includes @UUID[Compendium.ptu.items.Item.VMNoBXqSokNQCLow]{Toxic Orb}s, and Poison-Type Boosters, Braces, and Plates.</p></td></tr><tr><td><p>Fire Items</p></td><td><p>DB 3</p></td><td><p>The target becomes Burned. This category includes @UUID[Compendium.ptu.items.Item.1DxTrZruoXl3hp7u]{Flame Orb}s, and Fire-type Boosters, Braces, and Plates.</p></td></tr><tr><td><p>Poké Balls</p></td><td><p>DB 3</p></td><td><p>A Capture Attempt may be made after damage is applied, if the ball is thrown at a valid target. This category includes all Poké Balls and Apricorn Balls.</p></td></tr><tr><td><p>Other</p></td><td><p>DB 6</p></td><td><p>Anything not specifically falling in any other category.</p></td></tr><tr><td><p>Held Items</p></td><td><p>DB 7</p></td><td><p>This has no special effect. This category includes all Evolutionary Stones, Keepsakes, and Held Items not otherwise listed here.</p></td></tr><tr><td><p>Rare Item</p></td><td><p>DB 10</p></td><td><p>This includes the @UUID[Compendium.ptu.items.Item.2e0raLBaUD59XRdB]{Metal Powder}, @UUID[Compendium.ptu.items.Item.horp5SPziquIVMF5]{Rare Leek}, @UUID[Compendium.ptu.items.Item.vabigvqHJ9OqFM0V]{Thick Club}, and @UUID[Compendium.ptu.items.Item.Vi8Xv56BQkGvoo9o]{Pink Pearl} Items, but only if the user is able to benefit from that item.</p></td></tr><tr><td><p>Lagging Item</p></td><td><p>DB 12</p></td><td><p>This includes @UUID[Compendium.ptu.items.Item.ewGvyFGcqKkMAOS3]{Iron Ball}s, and any Lagging Item.</p></td></tr><tr><td><p>Weapon</p></td><td><p>See Effect</p></td><td><p>The user instead makes a ranged Struggle Attack using the thrown Weapon to determine damage, but using Fling’s Accuracy.</p></td></tr></tbody></table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602116102,
+        "modifiedTime": 1782602145070,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1100000,
+      "name": "Friendly",
+      "type": "keyword",
+      "_id": "kwFriendly000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Moves with the Friendly Keyword do not hit allies.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602296109,
+        "modifiedTime": 1782602300326,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1200000,
+      "name": "Five Strike",
+      "type": "keyword",
+      "_id": "kwFiveStrike0000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Whenever a Move with Five Strike is used, roll 1d8. On a result of 1, the attack hits one time. On a result of 2 or 3, the attack hits two times. On a result of 4, 5, or 6, the attack hits three times. On a result of 7, the attack hits four times. On a roll of 8, the attack hits five times. Multiply the Move’s Damage Base by the number of times hit; that becomes its new Damage Base. You may always apply Technician to Moves with Five Strike. Apply STAB and all other effects that raise Damage Base only after the Move’s final Damage Base has been calculated.</p><p><strong>This effect is wholly automated by Foundry.</strong></p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602311922,
+        "modifiedTime": 1782602328908,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1300000,
+      "name": "Groundsource",
+      "type": "keyword",
+      "_id": "kwGroundSource00",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Moves with the Groundsource keyword do not have their Accuracy modified by targeting into Rough Terrain and ignore Blocking Terrain.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602340725,
+        "modifiedTime": 1782602345486,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1400000,
+      "name": "Hazard",
+      "type": "keyword",
+      "_id": "kwHazard00000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>If a Move has the Hazard keyword, the effect covers a portion of the field of battle. A Hazard only affects the foes under certain circumstances. You may put extra Layers of the Move with Hazard if the Move allows, but only one per usage of the Move. A Fire Hazard is a special type of Hazard. Any targets that begin or end their turn on a Fire Hazard are Burned. Anyone that passes through a Fire Hazard takes damage equal to 1/8th of their Max Hit Points. If a Ground, Rock, or Water-Type Move targets a square (or a target in a square) with Fire Hazard in them, the Fire Hazards are destroyed. All effects that destroy Hazards extinguish Fire Hazards.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602356581,
+        "modifiedTime": 1782602498594,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1500000,
+      "name": "Illusion",
+      "type": "keyword",
+      "_id": "kwIllusion000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>These Moves are Illusions, and may be ignored by Trainers with the @UUID[Compendium.ptu.feats.Item.nm2c856xToBdM9Yb]{Unveiled Sight} Feature.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602534871,
+        "modifiedTime": 1782602544331,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1600000,
+      "name": "Interrupt",
+      "type": "keyword",
+      "_id": "kwInterrupt00000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Interrupt Moves may be declared in the middle of another combatant’s turn to allow the user to take an action. They work similarly to Priority (Advanced, Limited) effects in that they only allow you to take the action that has Interrupt and not a full turn.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602559630,
+        "modifiedTime": 1782602569958,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1650000,
+      "name": "Jaw",
+      "type": "keyword",
+      "_id": "kwJaw00000000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>This Move is affected by the @UUID[Compendium.ptu.abilities.Item.Gqv7K8YBzWY2e5Zt]{Strong Jaw} ability.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602559630,
+        "modifiedTime": 1782602569958,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1700000,
+      "name": "Pass",
+      "type": "keyword",
+      "_id": "wkPass0000000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>At any point during a Shift, the user may declare a move with the Pass keyword. Once the Move is declared, the user may move forward only in a straight line, for up to 4 meters, treating foes as Regular Terrain and moving through any enemies in its path. The user must end in an empty square. The Pass Move attacks all targets in each square it dashes through, but each target may be hit only once. The user must end their Shift at the end of the dash. Shifting as a result of the Pass keyword does not provoke Attacks of Opportunity.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602578705,
+        "modifiedTime": 1782602585651,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1800000,
+      "name": "Pledge",
+      "type": "keyword",
+      "_id": "kwPledge00000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Pledge Moves can generate a number of special effects. A <strong>Rainbow</strong> lasts for 5 rounds and increases the Effect Range of all allies’ attacks by +3.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602594062,
+        "modifiedTime": 1782602607279,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 1900000,
+      "name": "Powder",
+      "type": "keyword",
+      "_id": "kwPowder00000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Moves with the Powder keyword have no effect on Grass Type Pokémon.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602637979,
+        "modifiedTime": 1782602643157,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2000000,
+      "name": "Priority",
+      "type": "keyword",
+      "_id": "kwPriority000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>If the user has not already acted this turn, a Move with the Priority keyword may be declared to act immediately; the user takes their full turn, ignoring initiative. This counts as their turn for the round. A priority Move may not be declared during someone else’s turn; it must be declared between turns. Priority also comes in Priority (Limited) and Priority (Advanced) varieties. The Priority (Limited) keyword is like Priority except the user may not take their full turn; they may only take the action that itself has Priority and take the rest of their turn on their own Initiative Count. For example, Orders are Priority (Limited), meaning the user only uses their Standard Action and does not take a full turn. Priority (Advanced) Moves don’t require that the user hasn’t acted that turn; if they have, they simply give up their turn on the following round.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602658737,
+        "modifiedTime": 1782602724961,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2100000,
+      "name": "Push",
+      "type": "keyword",
+      "_id": "kwPush0000000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>The target of the attack is Pushed a specified amount of meters. Unless specified, the Push direction should be away from the user.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602736688,
+        "modifiedTime": 1782602741469,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2200000,
+      "name": "Reaction",
+      "type": "keyword",
+      "_id": "kwReaction000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Reactions work exactly like Interrupts, except that they happen after the triggering condition is fully resolved, instead of before. Thus, the user must survive the trigger condition to be able to perform the reaction.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602752870,
+        "modifiedTime": 1782602757263,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2300000,
+      "name": "Recoil",
+      "type": "keyword",
+      "_id": "kwRecoil00000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>When a Move says to Recoil, total the amount of damage the target took from your attack, then multiply by the fraction paired with the Keyword Recoil. The Move’s user loses Hit Points equal to that result.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602764817,
+        "modifiedTime": 1782603409340,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2302000,
+      "name": "Recoil 1/2",
+      "type": "keyword",
+      "_id": "kwRecoil12000000",
+      "system": {
+        "rules": [
+          {
+            "key": "HealOnDamageDealt",
+            "predicate": [],
+            "selectors": "{id}-damage-dealt",
+            "percent": -0.5,
+            "roundUp": false
+          }
+        ]
+      },
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>After the target takes damage, the user loses HP equal to half of the damage they dealt to the target.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602764817,
+        "modifiedTime": 1782603409340,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2303000,
+      "name": "Recoil 1/3",
+      "type": "keyword",
+      "_id": "kwRecoil13000000",
+      "system": {
+        "rules": [
+          {
+            "key": "HealOnDamageDealt",
+            "predicate": [],
+            "selectors": "{id}-damage-dealt",
+            "percent": -0.3333,
+            "roundUp": false
+          }
+        ]
+      },
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>After the target takes damage, the user loses HP equal to one third of the damage they dealt to the target.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602764817,
+        "modifiedTime": 1782603409340,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2304000,
+      "name": "Recoil 1/4",
+      "type": "keyword",
+      "_id": "kwRecoil14000000",
+      "system": {
+        "rules": [
+          {
+            "key": "HealOnDamageDealt",
+            "predicate": [],
+            "selectors": "{id}-damage-dealt",
+            "percent": -0.25,
+            "roundUp": false
+          }
+        ]
+      },
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>After the target takes damage, the user loses HP equal to one quarter of the damage they dealt to the target.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602764817,
+        "modifiedTime": 1782603409340,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2400000,
+      "name": "Set-Up",
+      "type": "keyword",
+      "_id": "kwSetUp00000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>These are two-turn Moves which require the user to prepare in some way. On the first turn, the Set-Up Effect is used; then on the following turn the Resolution Effect occurs.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782603421304,
+        "modifiedTime": 1782603428095,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2500000,
+      "name": "Shield",
+      "type": "keyword",
+      "_id": "kwShield00000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Moves with this Keyword are Interrupts that are triggered by foes’ attacks. They usually prevent the effect of attacks in some manner.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782603436382,
+        "modifiedTime": 1782603441494,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2600000,
+      "name": "Smite",
+      "type": "keyword",
+      "_id": "kwSmite000000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>When Moves with the Smite keyword Miss, instead of doing no damage, they deal damage as if the attack were resisted one step further. Targets dealt damage this way do not suffer any secondary effects of the Move.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782603450490,
+        "modifiedTime": 1782603454535,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2700000,
+      "name": "Social",
+      "type": "keyword",
+      "_id": "kwSocial00000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Moves with the Social Keyword are based on social manipulation. They cannot be Intercepted and ignore the effects of Substitute. Some Features and other effects also take advantage of this Keyword.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782603462439,
+        "modifiedTime": 1782603467103,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2800000,
+      "name": "Sonic",
+      "type": "keyword",
+      "_id": "kwSonic000000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Moves with the Sonic Keyword are based on sound. They ignore the effects of Substitute.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782603475945,
+        "modifiedTime": 1782603480782,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2900000,
+      "name": "Spirit Surge",
+      "type": "keyword",
+      "_id": "kwSpiritSurge000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>A Move with the Spirit Surge keyword will have its Effect activate even if the Move does not hit a target. If the Move requires a certain Accuracy Roll, the roll must still be met.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782603494874,
+        "modifiedTime": 1782603498904,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 3000000,
+      "name": "Trigger",
+      "type": "keyword",
+      "_id": "kwTrigger0000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Moves with the Trigger keyword are ONLY able to be used whenever the condition in their Effect line is met.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782603504060,
+        "modifiedTime": 1782603508525,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 3100000,
+      "name": "Vortex",
+      "type": "keyword",
+      "_id": "kwVortex00000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>While in a Vortex, the target is Slowed, Trapped, and loses a Tick of Hit Points at the beginning of each turn. At the end of each turn, the user may roll 1d20 to end all of these effects; during the first turn, they must roll a 20 or higher to dispel the vortex. The DC is lowered by 6 each following turn, automatically wearing off on the fifth turn (20, 14, 8, 2, Dispel)</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782605105162,
+        "modifiedTime": 1782605117050,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 3200000,
+      "name": "Weather",
+      "type": "keyword",
+      "_id": "kwWeather0000000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Moves with the Weather keyword affects an area, changing the rules of the battle. Damage can be altered and even the Effects of moves can change depending on the Weather in battle. There can only be one Weather Effect in place at a time; new Weather Effects replace old Weather Effects. Weather Conditions last 5 rounds.</p><p>Note that despite their names, Weather Conditions are not usually found as natural occurrences. A bright and sunny day does not count as Sunny Weather, nor does rain count as Rainy Weather. However, particularly severe examples of the corresponding weather can count. For example, a tropical rainstorm could count as Rainy weather.</p><p>The following are the four Weather Conditions and their effects:</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782605126752,
+        "modifiedTime": 1782605173324,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 3300000,
+      "name": "Weight Class",
+      "type": "keyword",
+      "_id": "kwWeightClass000",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>A Move with the Weight Class Keyword refers to the following: @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.sNkd4ZrutCGdN70O]{Weight Classes}</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782605194499,
+        "modifiedTime": 1782606066454,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    }
+  ],
+  "folder": null,
+  "categories": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.35",
+    "createdTime": 1782601760302,
+    "modifiedTime": 1782601760302,
+    "lastModifiedBy": "ptubuilder000000"
+  }
+}

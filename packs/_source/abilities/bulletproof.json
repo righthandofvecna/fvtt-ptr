@@ -63,7 +63,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "Dylan - Reword this so it's not super confusing"
     }
   },
   "_stats": {

@@ -85,7 +85,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "l7sqm6Fyaz6kQL9A",
   "effects": [],
@@ -95,7 +96,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

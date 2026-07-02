@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "Whenever anyone within 10 meters would use the Moves Self-Destruct, Explosion or Mind Blown, or activate the Aftermath ability, those effects fail and instead do nothing. The user gains a +1d10 Bonus to Damage Rolls with Water-Typed Moves.",
+    "effect": "Whenever anyone within 10 meters would use the Moves Self-Destruct, Explosion or Mind Blown, or activate the Aftermath ability, those effects fail and instead do nothing. The user gains a +1d10 Bonus to Damage Rolls with Water-Typed Moves. Defensive.",
     "snippet": "",
     "rules": [
       {
@@ -60,18 +60,20 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "VeCeKD06r2h3Iuyd",
   "effects": [],
-  "folder": null,
   "sort": 27300000,
   "ownership": {
     "default": 0
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

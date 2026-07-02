@@ -5,7 +5,7 @@
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
-    "effect": "You choose one of the target's Abilities. Simple Beam changes that Ability to Simple for the remainder of the encounter.",
+    "effect": "You choose one of the target's Abilities. Simple Beam changes that Ability to @UUID[Compendium.ptu.abilities.Item.vQHsvwM1ELbK2H3D] for the remainder of the encounter.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -71,7 +71,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "cygG6UHmGeS7mExy",
   "effects": [],
@@ -81,7 +82,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

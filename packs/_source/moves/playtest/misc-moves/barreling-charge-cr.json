@@ -71,7 +71,8 @@
     "damageBonus": 0,
     "isStruggle": false,
     "contentSet": "class-rework",
-    "replacesSlug": "barreling-charge"
+    "replacesSlug": "barreling-charge",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 100000,
@@ -80,7 +81,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

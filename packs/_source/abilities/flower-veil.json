@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "Grass-Type Pokemon within 5 meters cannot have their Combat Stages lowered.",
+    "effect": "Grass-Type Pokemon within 5 meters cannot have their Combat Stages lowered. Defensive.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -52,16 +52,22 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "kgOFpvCBfajZXsxQ",
   "effects": [],
-  "folder": null,
   "sort": 39900000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

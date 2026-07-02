@@ -64,8 +64,8 @@
     },
     "type": "Normal",
     "category": "Physical",
-    "damageBase": 9,
-    "ac": 5,
+    "damageBase": "9",
+    "ac": "5",
     "range": "Melee",
     "contestType": "Tough - Steady Performance",
     "stab": false,
@@ -73,7 +73,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "rmDcfFfrdq5PgwF9",
   "effects": [],
@@ -81,7 +82,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

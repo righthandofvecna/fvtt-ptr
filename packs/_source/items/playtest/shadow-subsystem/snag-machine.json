@@ -1,12 +1,9 @@
 {
   "folder": "lpdptis936rBZFDU",
   "name": "Snag Machine",
-  "type": "item",
-  "_id": "7BXZMJOuJfLRxJkb",
-  "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "",
-    "effect": "Snag Machines are extremely illegal machines that allow trainers to steal another Trainer’s Pokémon. The Snag Machine is an Accessory-Slot Item, generally worn on one arm. When a Trainer inserts a Poké Ball into the Snag Machine, they may spend a Rapid Action to turn the Poké Ball into a Snag Ball (as in, a Ball affected by a Snag Case) until it is thrown, or the Scene ends.\n\nSnag Machines cannot be bought in stores, but may be sold on the black market for prices of $30,000 or more.",
+    "effect": "Snag Machines are extremely illegal machines that allow trainers to steal another Trainer’s Pokémon. They come in both large, immovable varieties and smaller portable varieties. The Portable Variety is an Accessory-Slot Item. Inserting a Poké Ball into a Large Snag Machine turns it into a Snag Ball permanently, but Large Snag Machines may only turn 5 Poké Balls into Snag Balls per day. Inserting a Poké Ball into a Portable Snag Machine, which is a Rapid Action, turns it into a Snag Ball after one round, but only for that round. Snag Balls have the same properties as the Poké Ball type they were before being inserted into the machine, but receive a -2 penalty on all Poké Ball attack rolls, and are capable of capturing owned Pokémon. Snag Machines cannot be bought in stores, but may sell on the black market for prices of $30,000 or more.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -14,9 +11,9 @@
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:41.117Z",
+        "datetime": "2026-05-08T00:40:41.232Z",
         "version": {
-          "schema": null,
+          "schema": 0.11,
           "foundry": "13.351",
           "system": "4.4.3.16"
         }
@@ -24,7 +21,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -57,30 +54,32 @@
     "quantity": "1",
     "category": "",
     "cost": "30000",
-    "consumable": 0,
+    "consumable": "0",
     "subtype": "",
     "container": false,
+    "automation": [],
+    "name": "Snag Machine",
+    "useCount": 0,
     "contentSet": "",
     "replacesSlug": ""
   },
+  "type": "item",
+  "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "effects": [],
-  "sort": 0,
   "ownership": {
     "default": 0
   },
-  "flags": {
-    "ptu": {
-      "showInTokenPanel": false
-    }
-  },
+  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
     "coreVersion": "13.351",
-    "createdTime": 1697672490787,
-    "modifiedTime": 1778200841159,
+    "createdTime": 1683368864790,
+    "modifiedTime": 1778200841272,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "sort": 15500000,
+  "_id": "CCeFV1vugoyDAu3c"
 }

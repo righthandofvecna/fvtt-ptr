@@ -4,9 +4,21 @@
     "origin": "",
     "effect": "HP stealing moves restore double HP. Cannot be used by Trainers.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "HealOnDamageDealt",
+        "predicate": [
+          "move:drain"
+        ],
+        "selectors": "damage-dealt",
+        "percent": 0.5,
+        "roundUp": false
+      }
+    ],
     "enabled": true,
     "slug": "big-root",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -27,7 +39,7 @@
       "Held Item"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -49,6 +61,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "quantity": "1",
     "category": "",
     "cost": "1000",
@@ -57,9 +70,7 @@
     "container": false,
     "automation": [],
     "name": "Big Root",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": ""
+    "useCount": 0
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/big root.webp",
@@ -67,13 +78,19 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.35",
     "coreVersion": "13.351",
     "createdTime": 1683368814971,
-    "modifiedTime": 1778200842347,
+    "modifiedTime": 1782977438397,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

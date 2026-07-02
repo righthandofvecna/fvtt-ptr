@@ -4,7 +4,7 @@
   "img": "systems/ptu/static/css/images/types2/DragonIC_Icon.png",
   "system": {
     "origin": "",
-    "effect": "--",
+    "effect": "",
     "snippet": "",
     "rules": [],
     "enabled": true,

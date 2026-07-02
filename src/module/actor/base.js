@@ -63,6 +63,10 @@ class PTUActor extends Actor {
         return this.system.alliance;
     }
 
+    get trainer() {
+        return null;
+    }
+
     get isPrivate() {
         // TODO : make this a meta knowledge setting
         return !(this.permission >= CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER);
@@ -111,7 +115,7 @@ class PTUActor extends Actor {
         const iwr = this._iwr ?? this.prepareIwr();
 
         /** @type {IWRData[]} */
-        const effectiveness = this.synthetics.effectiveness.flatMap(d => d({ injectables: { acor: this }, test: this.getRollOptions(["all", "initiative"]) }) ?? []).reduce((acc, curr) => {
+        const effectiveness = this.synthetics.effectiveness.flatMap(d => d({ injectables: { actor: this }, test: this.getRollOptions(["all", "initiative"]) }) ?? []).reduce((acc, curr) => {
             acc.set(`${curr.type}:${curr.source}`, curr);
             return acc;
         }, new Map());

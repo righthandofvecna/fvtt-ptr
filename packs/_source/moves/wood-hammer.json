@@ -5,7 +5,7 @@
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
-    "effect": "--",
+    "effect": "",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -73,7 +73,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "EOjVWwZLa33n8M7P",
   "effects": [],
@@ -84,7 +85,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "no-automation-needed"
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

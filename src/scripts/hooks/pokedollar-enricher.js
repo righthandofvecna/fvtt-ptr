@@ -88,7 +88,7 @@ export const PokeDollarEnricher = {
         Hooks.on("renderJournalTextPageSheet", (journal, $html) => {
             // maybe related to why this does do need a filter? https://github.com/foundryvtt/foundryvtt/issues/3088
             const journalHtmlElement = $html.filter(".journal-page-content").get(0);
-            activateListeners(journalHtmlElement)
+            if (journalHtmlElement) activateListeners(journalHtmlElement);
 
         });
         Hooks.on("renderChatMessageHTML", (message, html) => {

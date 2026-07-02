@@ -1,0 +1,28 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    {{> journalEntryPageHeader}}
+    {{editor editor.content target="text.content" class="journal-page-content" button=false editable=true engine=editor.engine collaborate=editor.collaborate}}
+    <div class="rules" style="overflow-y: auto; flex: 1; min-height: 0;">
+        <div class="rules-list">
+            {{#each rules.elements}}
+                <div class="rule-element">
+                    <div class="rule-header">
+                        <h3>{{localize (concat "RULES.Types." rule.key)}}</h3>
+                        <div class="item-controls">
+                            <a class="item-control remove-rule-element" data-rule-index="{{index}}" title="Delete Rule"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div class="rule-body" data-key="{{rule.key}}" data-idx="{{index}}">
+                        {{{template}}}
+                    </div>
+                </div>
+                <hr />
+            {{/each}}
+            <div class="create-rule-element">
+                <select data-action="select-rule-element">
+                    {{selectOptions rules.selection.types selected=rules.selection.selected localize=true}}
+                </select>
+                <a class="add-rule-element"><i class="fas fa-plus"></i> {{localize "ITEM.AddRulesButton"}}</a>
+            </div>
+        </div>
+    </div>
+</form>

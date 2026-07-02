@@ -38,6 +38,8 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Added a Rest button for natural healing and Pokemon centers
+- Added Keyword description system and some automation
 - Fix Shadow Condition
 - Make hidden data on conditions visible and editable
 - Add predicate field to token image rule element form

@@ -68,27 +68,29 @@ export default class TokenRulerPTU extends foundry.canvas.placeables.tokens.Toke
 
   #getSpeedBasedStyle(waypoint, style) {
     try {
-      if (!(game.user.id in this.token._plannedMovement) || (CONFIG.Token?.movement?.actions?.[waypoint.action]?.teleport)) return style;
+      if (style?.alpha === 0) return style;
+      if (!(this.token._plannedMovement && (game.user.id in this.token._plannedMovement)) || (CONFIG.Token?.movement?.actions?.[waypoint.action]?.teleport)) return style;
 
       const movement = this.token.actor?.system?.capabilities;
       if (!movement) return style;
 
       const movementType = (()=>{
         const allOptions = Object.entries(CONFIG.PTU.tokenMovementCapabilityMap).filter(([key, value]) => (value === waypoint.action));
+        if (!allOptions.length) return "overland";
         // find the fastest movement type that can perform the current action
-        return allOptions.reduce((fastest, [key, value]) => {
+        return allOptions.reduce((fastest, [key]) => {
           if ((movement[key] ?? 0) > (movement[fastest] ?? 0)) return key;
           return fastest;
-        }, "overland");
+        }, allOptions[0][0]);
       })();
 
       // Determine the current action speed. Fall back to "overland" when missing.
       let currActionSpeed = movement[movementType] ?? movement.overland ?? 0;
 
       const { normal, double, triple } = CONFIG.PTU.tokenRulerColors ?? {};
-      const increment = (waypoint.measurement.cost - 0.1) / Math.max(currActionSpeed, 0.000001);
-      if (increment <= 1) style.color = normal ?? style.color;
-      else if (increment <= 2) style.color = double ?? style.color;
+      const distance = waypoint.measurement.cost - 0.1;
+      if (distance <= currActionSpeed) style.color = normal ?? style.color;
+      else if (distance <= Math.ceil(currActionSpeed * 1.5)) style.color = double ?? style.color;
       else style.color = triple ?? style.color;
     } catch (err) {
       // Swallow errors and return default style

@@ -5,17 +5,9 @@
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
-    "effect": "After the target takes damage, the user gains HP equal to half of the damage they dealt to the target.",
+    "effect": "",
     "snippet": "",
-    "rules": [
-      {
-        "key": "HealOnDamageDealt",
-        "predicate": [],
-        "selectors": "{id}-damage-dealt",
-        "percent": 0.5,
-        "roundUp": false
-      }
-    ],
+    "rules": [],
     "enabled": true,
     "slug": "absorb",
     "contentSet": "",
@@ -37,7 +29,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1"
+      "Target 1",
+      "Drain"
     ],
     "sheerForce": false,
     "toughClaws": false,

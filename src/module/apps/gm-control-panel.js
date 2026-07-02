@@ -17,6 +17,7 @@ export class GMControlPanel extends HandlebarsApplicationMixin(ApplicationV2) {
       resetDailyUses: GMControlPanel.#resetDailyUses,
       resetCustomFrequencyUses: GMControlPanel.#resetCustomFrequencyUses,
       healAllActors: GMControlPanel.#healAllActors,
+      rest: GMControlPanel.#rest,
     },
   };
 
@@ -103,5 +104,100 @@ export class GMControlPanel extends HandlebarsApplicationMixin(ApplicationV2) {
     }
     game.ptu.tokenPanel?.refresh?.();
     ui.notifications.info(`Healed ${actorUpdates.length} actor(s).`);
+  }
+
+  static async #rest() {
+    const dialogHTML = `
+      <form class="rest-dialog">
+        <div class="form-group">
+          <a class="content-link" draggable="true" data-link="" data-uuid="Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.NAEMeEwuP73MtrDX" data-id="NAEMeEwuP73MtrDX" data-type="JournalEntryPage" data-pack="ptu.journals" data-tooltip="Page" data-tooltip-text="Resting"><i class="fa-solid fa-file-lines" inert=""></i>Resting Rules Reference</a>
+        </div>
+        <div class="form-group">
+            <label>Rest Duration</label>
+            <div class="form-fields">
+                <input type="range" name="hours" min="0.5" step="0.5" value="8" max="8" />
+                <span class="time-label">1 hour</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Pokémon Center</label>
+            <div class="form-fields">
+                <input type="checkbox" name="pokemonCenter" />
+            </div>
+        </div>
+        <div class="poke-center-warning"></div>
+      </form>
+    `;
+
+    const getPokeCenterWarnings = (hours) => {
+        const actors = [...game.actors.values()].filter(a => a.hasPlayerOwner);
+        const warnings = actors
+            .map(actor => {
+                const injuries = Math.max(actor.system.health.injuries ?? 0, 0);
+                const requiredHours = injuries < 5 ? (2 + injuries) / 2 : 1 + injuries;
+                return { actor, requiredHours };
+            })
+            .filter(({ requiredHours }) => requiredHours > hours);
+
+        if (warnings.length === 0) return "";
+
+        const warningList = warnings.map(({ actor, requiredHours }) => {
+            const hours = Math.floor(requiredHours);
+            const minutes = (requiredHours % 1) * 60;
+            const timeString = `${hours > 0 ? `${hours}h` : ""}${minutes > 0 ? `${minutes}m` : ""}`.trim() || "0m";
+            return `<li>${actor.trainer?.name ?? "No Trainer"}'s ${actor.name} (requires ${timeString})</li>`;
+        }).join("");
+
+        return `<p>The following actors won't receive full Pokémon Center benefits:</p><ul>${warningList}</ul>`;
+    };
+
+    const result = await DialogV2.prompt({
+        window: { title: "Rest" },
+        content: dialogHTML,
+        ok: {
+            label: "Rest",
+            callback: (event, button) => {
+                const form = button.closest("form");
+                const formData = new FormData(form);
+                return {
+                    hours: Number(formData.get("hours")),
+                    pokemonCenter: formData.get("pokemonCenter") === "on",
+                }
+            }
+        },
+        cancel: { label: "Cancel" },
+        render: (event, app) => {
+            let html = app.element;
+          console.log("Rest dialog rendered", html);
+            const hoursInput = html.querySelector('input[name="hours"]');
+            const pokemonCenterInput = html.querySelector('input[name="pokemonCenter"]');
+            const timeLabel = html.querySelector('.time-label');
+            const warningDiv = html.querySelector('.poke-center-warning');
+
+            const updateDialog = () => {
+                const halfHours = Number(hoursInput.value) * 2;
+                const hours = Math.floor(halfHours / 2);
+                const minutes = (halfHours % 2) * 30;
+                timeLabel.textContent = `${hours > 0 ? `${hours} hour${hours > 1 ? "s" : ""}` : ""}${minutes > 0 ? ` ${minutes} minutes` : ""}`.trim() || "0 minutes";
+
+                if (pokemonCenterInput.checked) {
+                    warningDiv.innerHTML = getPokeCenterWarnings(halfHours / 2);
+                } else {
+                    warningDiv.innerHTML = "";
+                }
+            };
+
+            hoursInput.addEventListener("input", updateDialog);
+            pokemonCenterInput.addEventListener("change", updateDialog);
+            updateDialog();
+        }
+    });
+
+    if (!result) return;
+
+    await game.ptu.macros.applyRest(result.hours, result.pokemonCenter);
+
+    game.ptu.tokenPanel?.refresh?.();
+    ui.notifications.info("Actors have rested.");
   }
 }

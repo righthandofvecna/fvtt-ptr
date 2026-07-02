@@ -2,7 +2,7 @@
   "name": "Heart Scale",
   "system": {
     "origin": "",
-    "effect": "This tiny rainbow scale from a Luvdisc is valued by Apothecary Researchers, because it can be used to create the Heart Booster vitamin. Luvdiscs will produce them occasionally; they can be found along sandy beaches, and ancient ones can be found in desert, caves, or underground.",
+    "effect": "This tiny rainbow scale from a Luvdisc is valued by Apothecary Researchers, because it can be used to create the Heart Booster Vitamin. Luvdiscs will produce them occasionally; they can be found along sandy beaches, and ancient ones can be found in desert, caves, or underground.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -57,7 +57,8 @@
     "name": "Heart Scale",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/heart scale.webp",
@@ -65,7 +66,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +83,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 27200000,
   "_id": "MVgde5bSqt7dgxDk"
 }

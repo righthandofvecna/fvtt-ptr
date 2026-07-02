@@ -332,7 +332,9 @@ class GithubSyncManager {
         }
 
         const itemSlug = getItemSlug(document.toObject?.() ?? document);
-        const slugFromName = slugify(document.name);
+        const contentSet = document.system.contentSet;
+        const suffix = contentSet ? (CONFIG.PTU.contentSets?.[contentSet]?.suffix ?? "") : "";
+        const slugFromName = slugify(document.name) + suffix;
         if (itemSlug !== slugFromName) {
             const proceed = await foundry.applications.api.DialogV2.confirm({
                 title: "Slug Mismatch",

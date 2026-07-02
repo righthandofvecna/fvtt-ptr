@@ -40,6 +40,12 @@ export const Init = {
             CONFIG.Actor.documentClass = PTUCONFIG.Actor.proxy;
             CONFIG.Item.documentClass = PTUCONFIG.Item.proxy;
 
+            // Register typed JournalEntryPage document classes
+            CONFIG.JournalEntryPage.documentClasses ??= {};
+            for (const [type, cls] of Object.entries(PTUCONFIG.JournalEntryPage.documentClasses)) {
+                CONFIG.JournalEntryPage.documentClasses[type] = cls;
+            }
+
             // Disable Active Effects
             CONFIG.ActiveEffect.documentClass = PTUCONFIG.ActiveEffect.documentClass
 

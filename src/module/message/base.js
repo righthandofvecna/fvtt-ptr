@@ -98,6 +98,11 @@ class ChatMessagePTU extends ChatMessage {
         return game.scenes.get(sceneId)?.tokens.get(tokenId) ?? null;
     }
 
+    /** @returns {User | undefined} */
+    get user() {
+        return this.author;
+    }
+
     get outcome() {
         return this.rolls[0]?.options?.outcome ?? null;
     }
