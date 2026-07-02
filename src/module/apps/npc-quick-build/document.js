@@ -151,7 +151,7 @@ export class NpcQuickBuildData {
 
         this.multiselects = foundry.utils.deepClone(this._staticMultiselects);
 
-        // source selection
+        // Pokémon species source selection (habitat rolltable)
         this.source = undefined;
         this.sourceSelect = {
             value: undefined,
@@ -166,6 +166,30 @@ export class NpcQuickBuildData {
                 _id: undefined,
             }
         }
+
+        // Feature (feat) source selection (optional rolltable)
+        this.featureSource = undefined;
+        this.featureSourceSelect = {
+            value: undefined,
+            updated: false,
+            options: [
+                { label: "Compendium Browser Settings", uuid: "" },
+                ...game.tables.map(t => ({ label: t.name, uuid: t.uuid, group: t.folder?.name }))
+            ],
+            link: { label: undefined, uuid: undefined, _id: undefined }
+        };
+
+        // Edge source selection (optional rolltable)
+        this.edgeSource = undefined;
+        this.edgeSourceSelect = {
+            value: undefined,
+            updated: false,
+            options: [
+                { label: "Compendium Browser Settings", uuid: "" },
+                ...game.tables.map(t => ({ label: t.name, uuid: t.uuid, group: t.folder?.name }))
+            ],
+            link: { label: undefined, uuid: undefined, _id: undefined }
+        };
 
 
         this.helpText = {
@@ -440,18 +464,43 @@ export class NpcQuickBuildData {
         }
 
         let numChosen = newFeatures.length + this.trainer.features.computed.length;
-        for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
-            const chosen = chooseFrom(this.multiselects.features.options);
 
-            const { allNewFeatures, allNewUnmet } = await this.allItemPrereqs(chosen.prerequisites, { level: this.trainer.level, allComputed, skillsComputed })
-            // check if there are any new classes in there, and we're not allowed to add new classes
-            const isRestricted = this.trainer.classes.restricted && allNewFeatures.some(f=>f?.system?.keywords?.includes("Class"));
-            if (!isRestricted && allNewUnmet.length == 0 && numChosen + 1 + allNewFeatures.length <= N) {
-                newFeatures.push(chosen);
-                numChosen += 1 + allNewFeatures.length;
+        if (this.featureSource) {
+            // Roll from the configured rolltable
+            for (let attempt = 0; attempt < MAX_ATTEMPTS && numChosen < N; attempt++) {
+                const { results } = await this.featureSource.roll();
+                if (!results?.length) continue;
+                const [result] = results;
+                const uuid = result.documentUuid || (()=>{
+                    switch (result.type) {
+                        case "pack": return `Compendium.${result.documentCollection}.Item.${result.documentId}`;
+                        case "document": return `${result.documentCollection}.${result.documentId}`;
+                        default: return "";
+                    }
+                })();
+                if (!uuid) continue;
+                const item = await fromUuid(uuid);
+                if (!item || item.type !== "feat") continue;
+                if ((item.system?.keywords ?? []).includes("Class")) continue; // skip classes
+                const option = this.multiselects.features.options.find(o => o.uuid === uuid || o.label === item.name);
+                if (!option || newFeatures.find(f => f.uuid === option.uuid)) continue;
+                newFeatures.push({ label: option.label, value: option.value, uuid: option.uuid });
+                numChosen += 1;
             }
+        } else {
+            for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+                const chosen = chooseFrom(this.multiselects.features.options);
 
-            if (numChosen >= N) break;
+                const { allNewFeatures, allNewUnmet } = await this.allItemPrereqs(chosen.prerequisites, { level: this.trainer.level, allComputed, skillsComputed })
+                // check if there are any new classes in there, and we're not allowed to add new classes
+                const isRestricted = this.trainer.classes.restricted && allNewFeatures.some(f=>f?.system?.keywords?.includes("Class"));
+                if (!isRestricted && allNewUnmet.length == 0 && numChosen + 1 + allNewFeatures.length <= N) {
+                    newFeatures.push(chosen);
+                    numChosen += 1 + allNewFeatures.length;
+                }
+
+                if (numChosen >= N) break;
+            }
         }
         this.trainer.features.selected = newFeatures;
         await this.refresh()
@@ -475,20 +524,46 @@ export class NpcQuickBuildData {
             skillsComputed[skill] = Math.max(skillLimit, this.trainer.skills[skill].value ?? 1);
         }
 
-        const curatedOptions = this.multiselects.edges.options.filter(e=>!["Basic Skills", "Adept Skills", "Expert Skills", "Master Skills"].includes(e.label));
+        const curatedOptions = this.multiselects.edges.options.filter(e=>![
+            "Basic Skills", "Adept Skills", "Expert Skills", "Master Skills"
+        ].includes(e.label));
 
         let numChosen = newEdges.length + this.trainer.edges.computed.length;
-        for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
-            const chosen = chooseFrom(curatedOptions);
 
-            const { allNewFeatures, allNewEdges, allNewUnmet } = await this.allItemPrereqs(chosen.prerequisites, { level: this.trainer.level, allComputed, skillsComputed })
-            const isRestricted = this.trainer.classes.restricted && allNewFeatures.some(f=>f?.system?.keywords?.includes("Class"));
-            if (!isRestricted && allNewUnmet.length == 0 && numChosen + 1 + allNewEdges.length <= N) {
-                newEdges.push(chosen);
-                numChosen += 1 + allNewEdges.length;
+        if (this.edgeSource) {
+            // Roll from the configured rolltable
+            for (let attempt = 0; attempt < MAX_ATTEMPTS && numChosen < N; attempt++) {
+                const { results } = await this.edgeSource.roll();
+                if (!results?.length) continue;
+                const [result] = results;
+                const uuid = result.documentUuid || (()=>{
+                    switch (result.type) {
+                        case "pack": return `Compendium.${result.documentCollection}.Item.${result.documentId}`;
+                        case "document": return `${result.documentCollection}.${result.documentId}`;
+                        default: return "";
+                    }
+                })();
+                if (!uuid) continue;
+                const item = await fromUuid(uuid);
+                if (!item || item.type !== "edge") continue;
+                const option = this.multiselects.edges.options.find(o => o.uuid === uuid || o.label === item.name);
+                if (!option || newEdges.find(e => e.uuid === option.uuid)) continue;
+                newEdges.push({ label: option.label, value: option.value, uuid: option.uuid });
+                numChosen += 1;
             }
+        } else {
+            for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+                const chosen = chooseFrom(curatedOptions);
 
-            if (numChosen >= N) break;
+                const { allNewFeatures, allNewEdges, allNewUnmet } = await this.allItemPrereqs(chosen.prerequisites, { level: this.trainer.level, allComputed, skillsComputed })
+                const isRestricted = this.trainer.classes.restricted && allNewFeatures.some(f=>f?.system?.keywords?.includes("Class"));
+                if (!isRestricted && allNewUnmet.length == 0 && numChosen + 1 + allNewEdges.length <= N) {
+                    newEdges.push(chosen);
+                    numChosen += 1 + allNewEdges.length;
+                }
+
+                if (numChosen >= N) break;
+            }
         }
         this.trainer.edges.selected = newEdges;
         await this.refresh()
@@ -1367,6 +1442,28 @@ export class NpcQuickBuildData {
                 label: undefined,
             }
         }
+
+        // feat source
+        if (this.featureSourceSelect.updated) {
+            if (!this.featureSourceSelect.value) this.featureSource = undefined;
+            else if (!isNaN(Number(this.featureSourceSelect.value))) this.featureSource = game.tables.get(this.featureSourceSelect.value);
+            else if (this.featureSourceSelect.value.includes("RollTable.")) this.featureSource = await fromUuid(this.featureSourceSelect.value);
+            this.featureSourceSelect.updated = false;
+        }
+        this.featureSourceSelect.link = this.featureSource
+            ? { uuid: this.featureSource.uuid, _id: this.featureSource._id, label: this.featureSource.name }
+            : { uuid: undefined, _id: undefined, label: undefined };
+
+        // edge source
+        if (this.edgeSourceSelect.updated) {
+            if (!this.edgeSourceSelect.value) this.edgeSource = undefined;
+            else if (!isNaN(Number(this.edgeSourceSelect.value))) this.edgeSource = game.tables.get(this.edgeSourceSelect.value);
+            else if (this.edgeSourceSelect.value.includes("RollTable.")) this.edgeSource = await fromUuid(this.edgeSourceSelect.value);
+            this.edgeSourceSelect.updated = false;
+        }
+        this.edgeSourceSelect.link = this.edgeSource
+            ? { uuid: this.edgeSource.uuid, _id: this.edgeSource._id, label: this.edgeSource.name }
+            : { uuid: undefined, _id: undefined, label: undefined };
 
         unlock();
     }

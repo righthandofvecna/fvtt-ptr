@@ -188,6 +188,28 @@ export class PTUNpcQuickBuild extends HandlebarsApplicationMixin(ApplicationV2) 
             });
         }
 
+        // Feature roll-table source selector
+        const featureSourceSelect = html.querySelector("#featureSourceSelect");
+        if (featureSourceSelect) {
+            featureSourceSelect.addEventListener("change", event => {
+                event.preventDefault();
+                this.data.featureSourceSelect.value = featureSourceSelect.value;
+                this.data.featureSourceSelect.updated = true;
+                this.render(true);
+            });
+        }
+
+        // Edge roll-table source selector
+        const edgeSourceSelect = html.querySelector("#edgeSourceSelect");
+        if (edgeSourceSelect) {
+            edgeSourceSelect.addEventListener("change", event => {
+                event.preventDefault();
+                this.data.edgeSourceSelect.value = edgeSourceSelect.value;
+                this.data.edgeSourceSelect.updated = true;
+                this.render(true);
+            });
+        }
+
         // Generate / Submit button
         html.querySelectorAll("input.submit[type='button']").forEach(el => el.addEventListener('click', event => {
             event.preventDefault();
@@ -206,6 +228,8 @@ export class PTUNpcQuickBuild extends HandlebarsApplicationMixin(ApplicationV2) 
             if (input.closest('.button-set')) return;
             // Skip the habitat source select — handled above
             if (input.id === "sourceSelect") return;
+            if (input.id === "featureSourceSelect") return;
+            if (input.id === "edgeSourceSelect") return;
 
             let value;
             if (input.type === "checkbox") value = input.checked;

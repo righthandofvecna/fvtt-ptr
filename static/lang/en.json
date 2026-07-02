@@ -620,7 +620,9 @@
       "Next": "Next",
       "Submit": "Submit",
       "DropActorHint": "Drop a character actor here to import their data",
-      "FeaturesRestricted": "Restrict Features to General + Selected Classes"
+      "FeaturesRestricted": "Restrict Features to General + Selected Classes",
+      "FeaturesSource": "Feature Roll Table",
+      "EdgesSource": "Edge Roll Table"
     },
 
     "Stats": {

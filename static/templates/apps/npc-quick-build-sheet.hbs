@@ -70,6 +70,16 @@
                 <input class="ptu-tagify trainer-features" name="trainer.features.selected" data-filter-name="features" value="{{json data.trainer.features.selected}}" data-dtype="JSON" />
             </div>
 
+            <div class="generation-source-row">
+                <label>{{localize "PTU.NpcQuickBuild.FeaturesSource"}}</label>
+                <select id="featureSourceSelect">
+                    {{selectOptions data.featureSourceSelect.options selected=data.featureSourceSelect.value valueAttr="uuid"}}
+                </select>
+                {{#if data.featureSourceSelect.link.uuid}}
+                <a class="content-link" draggable="true" data-link="" data-uuid="{{data.featureSourceSelect.link.uuid}}" data-id="{{data.featureSourceSelect.link._id}}" data-type="RollTable" data-tooltip="Roll Table"><i class="fas fa-th-list"></i>{{data.featureSourceSelect.link.label}}</a>
+                {{/if}}
+            </div>
+
             <div class="computed-links computed-features">
                 {{#each data.trainer.features.computed as |feature|}}
                     <a class="content-link{{#if feature.auto}} auto{{/if}}" draggable="true" data-link="" data-uuid="{{feature.uuid}}" data-id="{{feature._id}}" data-type="Item" data-tooltip="Feature Item"><i class="fas fa-suitcase"></i>{{feature.name}}</a>
@@ -79,6 +89,16 @@
             <div class="selected-edges">
                 <h4>{{localize "PTU.NpcQuickBuild.Edges"}}</h4>
                 <input class="ptu-tagify trainer-edges" name="trainer.edges.selected" data-filter-name="edges" value="{{json data.trainer.edges.selected}}" data-dtype="JSON" />
+            </div>
+
+            <div class="generation-source-row">
+                <label>{{localize "PTU.NpcQuickBuild.EdgesSource"}}</label>
+                <select id="edgeSourceSelect">
+                    {{selectOptions data.edgeSourceSelect.options selected=data.edgeSourceSelect.value valueAttr="uuid"}}
+                </select>
+                {{#if data.edgeSourceSelect.link.uuid}}
+                <a class="content-link" draggable="true" data-link="" data-uuid="{{data.edgeSourceSelect.link.uuid}}" data-id="{{data.edgeSourceSelect.link._id}}" data-type="RollTable" data-tooltip="Roll Table"><i class="fas fa-th-list"></i>{{data.edgeSourceSelect.link.label}}</a>
+                {{/if}}
             </div>
 
             <div class="computed-links computed-edges">
