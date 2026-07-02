@@ -19,13 +19,6 @@
         "value": "",
         "affects": "target",
         "even": false
-      },
-      {
-        "key": "HealOnDamageDealt",
-        "predicate": [],
-        "selectors": "{id}-damage-dealt",
-        "percent": -0.33,
-        "roundUp": false
       }
     ],
     "enabled": true,

@@ -13,13 +13,6 @@
         "hideIfDisabled": false,
         "selectors": "{item|id}-crit-range",
         "value": 2
-      },
-      {
-        "key": "HealOnDamageDealt",
-        "predicate": [],
-        "selectors": "{id}-damage-dealt",
-        "percent": -0.25,
-        "roundUp": false
       }
     ],
     "enabled": true,

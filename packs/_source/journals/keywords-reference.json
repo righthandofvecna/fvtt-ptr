@@ -913,6 +913,144 @@
       }
     },
     {
+      "sort": 2302000,
+      "name": "Recoil 1/2",
+      "type": "keyword",
+      "_id": "kwRecoil12000000",
+      "system": {
+        "rules": [
+          {
+            "key": "HealOnDamageDealt",
+            "predicate": [],
+            "selectors": "{id}-damage-dealt",
+            "percent": -0.5,
+            "roundUp": false
+          }
+        ]
+      },
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>After the target takes damage, the user loses HP equal to half of the damage they dealt to the target.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602764817,
+        "modifiedTime": 1782603409340,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2303000,
+      "name": "Recoil 1/3",
+      "type": "keyword",
+      "_id": "kwRecoil13000000",
+      "system": {
+        "rules": [
+          {
+            "key": "HealOnDamageDealt",
+            "predicate": [],
+            "selectors": "{id}-damage-dealt",
+            "percent": -0.3333,
+            "roundUp": false
+          }
+        ]
+      },
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>After the target takes damage, the user loses HP equal to one third of the damage they dealt to the target.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602764817,
+        "modifiedTime": 1782603409340,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
+      "sort": 2304000,
+      "name": "Recoil 1/4",
+      "type": "keyword",
+      "_id": "kwRecoil14000000",
+      "system": {
+        "rules": [
+          {
+            "key": "HealOnDamageDealt",
+            "predicate": [],
+            "selectors": "{id}-damage-dealt",
+            "percent": -0.25,
+            "roundUp": false
+          }
+        ]
+      },
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>After the target takes damage, the user loses HP equal to one quarter of the damage they dealt to the target.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.35",
+        "createdTime": 1782602764817,
+        "modifiedTime": 1782603409340,
+        "lastModifiedBy": "ptubuilder000000"
+      }
+    },
+    {
       "sort": 2400000,
       "name": "Set-Up",
       "type": "keyword",

@@ -7,15 +7,7 @@
     "origin": "",
     "effect": "--",
     "snippet": "",
-    "rules": [
-      {
-        "key": "HealOnDamageDealt",
-        "predicate": [],
-        "selectors": "{id}-damage-dealt",
-        "percent": -0.33,
-        "roundUp": false
-      }
-    ],
+    "rules": [],
     "enabled": true,
     "slug": "double-edge",
     "schema": {

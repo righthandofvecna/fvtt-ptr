@@ -7,15 +7,7 @@
     "origin": "",
     "effect": "--",
     "snippet": "",
-    "rules": [
-      {
-        "key": "HealOnDamageDealt",
-        "predicate": [],
-        "selectors": "{id}-damage-dealt",
-        "percent": -0.25,
-        "roundUp": false
-      }
-    ],
+    "rules": [],
     "enabled": true,
     "slug": "wild-charge",
     "schema": {

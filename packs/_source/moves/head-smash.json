@@ -7,15 +7,7 @@
     "origin": "",
     "effect": "The target is pushed 2 meters.",
     "snippet": "",
-    "rules": [
-      {
-        "key": "HealOnDamageDealt",
-        "predicate": [],
-        "selectors": "{id}-damage-dealt",
-        "percent": 0,
-        "roundUp": false
-      }
-    ],
+    "rules": [],
     "enabled": true,
     "slug": "head-smash",
     "schema": {
