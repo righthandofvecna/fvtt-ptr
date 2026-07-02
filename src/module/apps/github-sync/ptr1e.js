@@ -42,7 +42,7 @@ export function transform(data) {
   if (data?.system?.exportSource) data._stats.exportSource = null;
   if (data?.system?.lastModifiedBy) data._stats.lastModifiedBy = "ptubuilder000000";
   // set slug if null
-  if (!data?.system?.slug) {
+  if (data.system && !data?.system?.slug) {
     data.system.slug = GithubSyncManager.config.slugify(data.name, { separator: "-", lowercase: true, strict: true });
   }
   return data;
