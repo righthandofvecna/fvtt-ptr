@@ -84,6 +84,7 @@ export class NpcQuickBuildData {
             features: {
                 selected: [],
                 computed: [],
+                restricted: false,
             },
             edges: {
                 selected: [],
@@ -219,6 +220,7 @@ export class NpcQuickBuildData {
                     uuid: feature.uuid,
                     prerequisites: feature?.system?.prerequisites ?? [],
                     class: feature?.system?.class,
+                    keywords: feature?.system?.keywords ?? [],
                 })
             }
         }
@@ -1326,6 +1328,13 @@ export class NpcQuickBuildData {
         const selectedClasses = this.trainer.classes.selected.map(c=>c.value);
         for (const featureOption of this.multiselects.features.options) {
             featureOption.crossClass = (selectedClasses.length > 0 && featureOption?.class) ? !selectedClasses.includes(featureOption.class) : false;
+        }
+        // When features are restricted, only show General-tagged feats and feats from selected classes
+        if (this.trainer.features.restricted) {
+            const selectedClassLabels = this.trainer.classes.selected.map(c => c.label);
+            this.multiselects.features.options = this.multiselects.features.options.filter(f =>
+                (f.keywords ?? []).includes("General") || selectedClassLabels.includes(f.class)
+            );
         }
         this.multiselects.features.options.sort((a, b)=> a.crossClass - b.crossClass || a.label.localeCompare(b.label));
         

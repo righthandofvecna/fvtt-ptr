@@ -619,7 +619,8 @@
       "ApproximatePointsRemaining": "Approximate Points Remaining: {points}",
       "Next": "Next",
       "Submit": "Submit",
-      "DropActorHint": "Drop a character actor here to import their data"
+      "DropActorHint": "Drop a character actor here to import their data",
+      "FeaturesRestricted": "Restrict Features to General + Selected Classes"
     },
 
     "Stats": {
