@@ -39,6 +39,10 @@ export const Keywords = {
           if (!token.actor?.isToken) continue;
           token.actor.reset();
         }
+        // Re-prepare all items so they pick up keyword effects and rules
+        for (const item of game.items.values()) {
+          item.reset();
+        }
       }
     });
 

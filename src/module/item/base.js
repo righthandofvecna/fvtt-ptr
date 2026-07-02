@@ -169,13 +169,21 @@ class PTUItem extends Item {
         return super.delete(context);
     }
 
+    get fullEffectText() {
+        const keywordTexts = this._keywordEffectTexts ?? [];
+        let effect = this.system?.effect ?? "";
+        if (keywordTexts.length > 0) {
+            if (effect) effect += "\n<hr/>\n";
+            effect += keywordTexts.join("\n<hr/>\n");
+        }
+        return effect;
+    }
+
     /** @override */
     async _buildEmbedHTML(config, options = {}) {
         options = { ...options, _embedDepth: options._embedDepth + 1, relativeTo: this };
         const keywordTexts = this._keywordEffectTexts ?? [];
-        const effect = keywordTexts.length > 0
-            ? `${this.system?.effect ?? ""}\n<hr/>\n${keywordTexts.join("\n<hr/>\n")}`
-            : this.system?.effect;
+        const effect = this.fullEffectText;
         if (!effect) return document.createElement("div");
         const {
             secrets = options.secrets,
