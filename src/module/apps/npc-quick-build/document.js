@@ -673,7 +673,9 @@ export class NpcQuickBuildData {
                 return;
             }
             const [result] = results;
-            const constructedUuid = (()=>{
+            // Foundry v13 carries the full UUID on the result directly; fall back to
+            // reconstructing it from the older documentCollection + documentId fields.
+            const constructedUuid = result.documentUuid || (()=>{
                 switch (result.type) {
                     case "pack": return `Compendium.${result.documentCollection}.Item.${result.documentId}`;
                     case "document": return `${result.documentCollection}.${result.documentId}`;
@@ -1352,6 +1354,96 @@ export class NpcQuickBuildData {
 
     async finalize() {
         // TODO: fill unfilled required fields
+    }
+
+    /**
+     * Pre-populate trainer data from an existing character actor.
+     * Imports level, name, image, classes, features, edges, and base skill values.
+     * @param {PTUTrainerActor} actor
+     */
+    async populateFromActor(actor) {
+        if (!actor || actor.type !== "character") return;
+
+        // Level
+        const level = actor.system?.level?.current;
+        if (level) {
+            this.trainer.level = level;
+            this.manuallyUpdatedFields.add("trainer.level");
+        }
+
+        // Name & image
+        if (actor.name) {
+            this.trainer.name = actor.name;
+            this.manuallyUpdatedFields.add("trainer.name");
+        }
+        if (actor.img && actor.img !== "icons/svg/mystery-man.svg") {
+            this.trainer.img = actor.img;
+            this.manuallyUpdatedFields.add("trainer.img");
+        }
+
+        // Classes (feats with keyword "Class")
+        const classes = [];
+        for (const item of actor.items) {
+            if (item.type !== "feat") continue;
+            if (!(item.system?.keywords ?? []).includes("Class")) continue;
+            const sourceId = item.flags?.core?.sourceId;
+            const option = this._staticMultiselects.classes.options.find(
+                o => (sourceId && o.uuid === sourceId) || o.label === item.name
+            );
+            if (option && !classes.find(c => c.uuid === option.uuid)) {
+                classes.push({ label: option.label, value: option.value, uuid: option.uuid });
+            }
+        }
+        if (classes.length > 0) {
+            this.trainer.classes.selected = classes;
+            this.manuallyUpdatedFields.add("trainer.classes.selected");
+        }
+
+        // Features (non-class feats)
+        const features = [];
+        for (const item of actor.items) {
+            if (item.type !== "feat") continue;
+            if ((item.system?.keywords ?? []).includes("Class")) continue;
+            const sourceId = item.flags?.core?.sourceId;
+            const option = this._staticMultiselects.features.options.find(
+                o => (sourceId && o.uuid === sourceId) || o.label === item.name
+            );
+            if (option && !features.find(f => f.uuid === option.uuid)) {
+                features.push({ label: option.label, value: option.value, uuid: option.uuid });
+            }
+        }
+        if (features.length > 0) {
+            this.trainer.features.selected = features;
+            this.manuallyUpdatedFields.add("trainer.features.selected");
+        }
+
+        // Edges
+        const edges = [];
+        const actorEdgeItems = actor.items.filter(i => i.type === "edge");
+        console.debug("NPC Quick Build | Actor edge items:", actorEdgeItems.map(i => ({ name: i.name, type: i.type, sourceId: i.flags?.core?.sourceId })));
+        console.debug("NPC Quick Build | Available edge options count:", this._staticMultiselects.edges.options.length);
+        for (const item of actorEdgeItems) {
+            const sourceId = item.flags?.core?.sourceId;
+            const option = this._staticMultiselects.edges.options.find(
+                o => (sourceId && o.uuid === sourceId) || o.label === item.name
+            );
+            if (option && !edges.find(e => e.uuid === option.uuid)) {
+                edges.push({ label: option.label, value: option.value, uuid: option.uuid });
+            }
+        }
+        if (edges.length > 0) {
+            this.trainer.edges.selected = edges;
+            this.manuallyUpdatedFields.add("trainer.edges.selected");
+        }
+
+        // Base skill values (use the stored base value, not computed total)
+        for (const skill of CONFIG.PTU.data.skills.keys) {
+            const baseValue = actor.system?.skills?.[skill]?.value?.value;
+            if (typeof baseValue === "number" && baseValue >= 1 && baseValue <= 6) {
+                this.trainer.skills[skill].value = baseValue;
+                this.manuallyUpdatedFields.add(`trainer.skills.${skill}.value`);
+            }
+        }
     }
 
     async generate() {

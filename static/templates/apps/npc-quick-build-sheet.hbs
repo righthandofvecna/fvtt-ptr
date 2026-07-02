@@ -1,7 +1,8 @@
-<form class="{{cssClass}} container-fluid d-flex flex-column" autocomplete="off" data-page="{{data.page}}">
+<form class="container-fluid d-flex flex-column" autocomplete="off" data-page="{{data.page}}">
     <div class="d-flex flex-column">
         <div class="header-bar">
             <h2 class="title">{{localize "PTU.NpcQuickBuild.TrainerQuickBuild"}}</h2>
+            <p class="drop-hint"><i class="fa-solid fa-person-arrow-down-to-line"></i> {{localize "PTU.NpcQuickBuild.DropActorHint"}}</p>
             <nav>
                 <a class="page {{#if (eq data.page 1)}}current{{/if}}" data-page="1" {{#if (eq data.page 1)}}disabled{{/if}}>{{localize "PTU.NpcQuickBuild.Page.TrainerInfo"}}</a>
                 <a class="page {{#if (eq data.page 2)}}current{{/if}}" data-page="2" {{#if (eq data.page 2)}}disabled{{/if}}>{{localize "PTU.NpcQuickBuild.Page.FeaturesEdges"}}</a>

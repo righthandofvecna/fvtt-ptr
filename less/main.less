@@ -1932,6 +1932,15 @@ a.content-link {
 }
 .ptu.pokemon.npc-quick-build {
 	.window-content {
+		// Ensure stat/skill inputs inherit their parent's text color so they remain
+		// readable regardless of the active Foundry theme.
+		input[type="number"], input[type="text"] {
+			color: inherit;
+		}
+		// Sub-choice labels always have a light background; force dark text.
+		.sub-choices .options .sub-choice {
+			color: #191813;
+		}
 		.header-bar {
 			border-bottom: 2px solid #222224;
 			margin-bottom: 1.3em;
@@ -1939,6 +1948,13 @@ a.content-link {
 			padding-bottom: 0.2em;
 			.title {
 				text-align: center;
+			}
+			.drop-hint {
+				text-align: center;
+				font-style: italic;
+				font-size: 0.8em;
+				opacity: 0.6;
+				margin: 0.2em 0;
 			}
 			nav {
 				display: flex;

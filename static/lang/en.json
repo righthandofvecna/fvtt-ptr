@@ -618,7 +618,8 @@
       },
       "ApproximatePointsRemaining": "Approximate Points Remaining: {points}",
       "Next": "Next",
-      "Submit": "Submit"
+      "Submit": "Submit",
+      "DropActorHint": "Drop a character actor here to import their data"
     },
 
     "Stats": {
