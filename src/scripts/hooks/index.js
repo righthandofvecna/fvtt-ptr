@@ -19,6 +19,7 @@ import { GMControlPanelHook } from "./gm-control-panel.js";
 import { QuickInsertCompat } from "./quick-insert-compat.js";
 import { ChatContextMenu } from "./chat-context-menu.js";
 import { Keywords } from "./keywords.js";
+import { LowHpReminder } from "./low-hp-reminder.js";
 
 export const PtuHooks = {
     listen() {
@@ -45,6 +46,7 @@ export const PtuHooks = {
             QuickInsertCompat,
             ChatContextMenu,
             Keywords,
+            LowHpReminder,
         ]
         for(const listener of listeners) listener.listen();
     }

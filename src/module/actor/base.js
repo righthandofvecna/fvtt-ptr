@@ -522,6 +522,12 @@ class PTUActor extends Actor {
                 oldMaxHp: this.system.health.max,
             };
         }
+        // Track old HP value so post-update hooks can detect reductions
+        if (foundry.utils.hasProperty(changed, "system.health.value")) {
+            options.ptu ??= {};
+            options.ptu[this.id] ??= {};
+            options.ptu[this.id].oldHpValue = this.system.health.value;
+        }
         await super._preUpdate(changed, options, user);
     }
 
