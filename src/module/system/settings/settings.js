@@ -158,6 +158,15 @@ export function registerSettings() {
         requiresReload: true,
     })
 
+    game.settings.register("ptu", "lowHpReminder", {
+        name: "Low HP Reminder",
+        hint: "Show a whispered reminder with available healing options whenever a trainer or Pokémon's HP is updated to below 50%.",
+        type: Boolean,
+        default: true,
+        scope: "user",
+        config: true,
+    })
+
     game.settings.register("ptu", "training.lastSession", {
         scope: "client",
         config: false,
