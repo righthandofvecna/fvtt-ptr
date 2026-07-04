@@ -8,7 +8,7 @@ function hasAdvancementPending(actor) {
   const system = actor.system;
 
   if (actor.type === "character") {
-    if ((system.level?.xpPool ?? 0) > 0) return true;
+    // if ((system.level?.xpPool ?? 0) > 0) return true;
     if ((system.levelUpPoints ?? 0) > 0) return true;
     if (system.feats && system.feats.total < system.feats.max) return true;
     if (system.edges && system.edges.total < system.edges.max) return true;
