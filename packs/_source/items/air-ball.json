@@ -2,7 +2,7 @@
   "name": "Air Ball",
   "system": {
     "origin": "",
-    "effect": "-25 Modifier if the target is Flying or Ice type.",
+    "effect": "-25 Modifier if the target is Flying or Ice type. Test air ball!",
     "snippet": "",
     "rules": [
       {
@@ -73,7 +73,8 @@
     "useCount": 0,
     "modifier": null,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/air ball.webp",
@@ -96,7 +97,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 34100000,
   "_id": "Sy3rPHhhNa0ZjGaq"
 }
