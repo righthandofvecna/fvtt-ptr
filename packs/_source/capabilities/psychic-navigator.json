@@ -1,0 +1,59 @@
+{
+  "name": "Psychic Navigator",
+  "type": "capability",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Pokémon with the Psychic Navigator capability can put their psionic powers to use in charting a safe path for spacecraft to take toward their destination. With access to a warp drive capable ship or equivalent vessel that can manage faster than light travel, this is an extended action requiring a series of Perception or Focus checks. Each check represents 5 minutes of time attempting to divine a safe path through space. The DC is 15 per light year, and subsequent rolls add on to previous rolls. For example, a 3 light year jump requires a total of 45 on Perception or Focus checks. An Alakazam rolls 20, then 21, then 18, therefore calculating a safe path in 15 minutes. Multiple navigators can collaborate on one jump, adding their rolls together. \n\nSometimes you need to make that jump before you’re done navigating. The GM should compare the accumulated total from the skill checks to the DC, then decide what consequences the spacecraft should face from not having properly navigated. This can range from minor inconveniences such as being slightly off course to major problems such as crashing into an asteroid upon jumping or getting hopelessly lost in space.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "psychic-navigator",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_id": "B3RVBDuftjtAQQsU"
+}
