@@ -2,7 +2,7 @@
   "name": "Smooth",
   "system": {
     "origin": "",
-    "effect": "You gain +4 Evasion against Moves with the Social keyword, and gain a +2 Bonus on Save Checks against Rage and Infatuation.",
+    "effect": "You gain +4 Evasion against Moves with the @CompSearch[Moves keywords=Social]{Social} keyword, and gain a +2 Bonus on Save Checks against @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Rage} and @UUID[Compendium.ptu.effects.Item.ABTHN2VM50VQabZq]{Infatuation}.",
     "snippet": "",
     "rules": [
       {
@@ -68,7 +68,8 @@
     "name": "Smooth",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -78,7 +79,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert Charm or Focus"
+      "prereqBackup": "Expert Charm or Focus",
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -91,7 +95,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "JLsJ4Jvqw9NcIZIr"
 }
