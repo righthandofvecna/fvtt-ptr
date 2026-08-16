@@ -55,7 +55,8 @@
     "name": "Mystic Senses",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Intuition"
+      "prereqBackup": "Novice Intuition",
+      "showInTokenPanel": false,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {

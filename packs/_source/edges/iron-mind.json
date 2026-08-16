@@ -2,7 +2,7 @@
   "name": "Iron Mind",
   "system": {
     "origin": "",
-    "effect": "You become aware of all attempts to read your mind with Telepathy, whether the attempt is successful or not.",
+    "effect": "You become aware of all attempts to read your mind with @UUID[Compendium.ptu.capabilities.Item.Qy7Cft4o4FAbHQ8G]{Telepathy}, whether the attempt is successful or not.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -55,7 +55,8 @@
     "name": "Iron Mind",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Focus"
+      "prereqBackup": "Novice Focus",
+      "showInTokenPanel": false,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -78,7 +82,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "80LqzME9iDpVQWko"
 }

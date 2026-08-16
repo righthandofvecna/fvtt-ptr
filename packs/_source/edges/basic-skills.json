@@ -7,11 +7,10 @@
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "choices": [
           {
-            "label": "acrobatics",
             "value": "system.skills.acrobatics.value.mod",
+            "label": "acrobatics",
             "predicate": [
               {
                 "lte": [
@@ -22,8 +21,8 @@
             ]
           },
           {
-            "label": "athletics",
             "value": "system.skills.athletics.value.mod",
+            "label": "athletics",
             "predicate": [
               {
                 "lte": [
@@ -34,8 +33,8 @@
             ]
           },
           {
-            "label": "charm",
             "value": "system.skills.charm.value.mod",
+            "label": "charm",
             "predicate": [
               {
                 "lte": [
@@ -46,8 +45,8 @@
             ]
           },
           {
-            "label": "combat",
             "value": "system.skills.combat.value.mod",
+            "label": "combat",
             "predicate": [
               {
                 "lte": [
@@ -58,8 +57,8 @@
             ]
           },
           {
-            "label": "command",
             "value": "system.skills.command.value.mod",
+            "label": "command",
             "predicate": [
               {
                 "lte": [
@@ -70,8 +69,8 @@
             ]
           },
           {
-            "label": "generalEd",
             "value": "system.skills.generalEd.value.mod",
+            "label": "generalEd",
             "predicate": [
               {
                 "lte": [
@@ -82,8 +81,8 @@
             ]
           },
           {
-            "label": "medicineEd",
             "value": "system.skills.medicineEd.value.mod",
+            "label": "medicineEd",
             "predicate": [
               {
                 "lte": [
@@ -94,8 +93,8 @@
             ]
           },
           {
-            "label": "occultEd",
             "value": "system.skills.occultEd.value.mod",
+            "label": "occultEd",
             "predicate": [
               {
                 "lte": [
@@ -106,8 +105,8 @@
             ]
           },
           {
-            "label": "pokemonEd",
             "value": "system.skills.pokemonEd.value.mod",
+            "label": "pokemonEd",
             "predicate": [
               {
                 "lte": [
@@ -118,8 +117,8 @@
             ]
           },
           {
-            "label": "techEd",
             "value": "system.skills.techEd.value.mod",
+            "label": "techEd",
             "predicate": [
               {
                 "lte": [
@@ -130,8 +129,8 @@
             ]
           },
           {
-            "label": "focus",
             "value": "system.skills.focus.value.mod",
+            "label": "focus",
             "predicate": [
               {
                 "lte": [
@@ -142,8 +141,8 @@
             ]
           },
           {
-            "label": "guile",
             "value": "system.skills.guile.value.mod",
+            "label": "guile",
             "predicate": [
               {
                 "lte": [
@@ -154,8 +153,8 @@
             ]
           },
           {
-            "label": "intimidate",
             "value": "system.skills.intimidate.value.mod",
+            "label": "intimidate",
             "predicate": [
               {
                 "lte": [
@@ -166,8 +165,8 @@
             ]
           },
           {
-            "label": "intuition",
             "value": "system.skills.intuition.value.mod",
+            "label": "intuition",
             "predicate": [
               {
                 "lte": [
@@ -178,8 +177,8 @@
             ]
           },
           {
-            "label": "perception",
             "value": "system.skills.perception.value.mod",
+            "label": "perception",
             "predicate": [
               {
                 "lte": [
@@ -190,8 +189,8 @@
             ]
           },
           {
-            "label": "stealth",
             "value": "system.skills.stealth.value.mod",
+            "label": "stealth",
             "predicate": [
               {
                 "lte": [
@@ -202,8 +201,8 @@
             ]
           },
           {
-            "label": "survival",
             "value": "system.skills.survival.value.mod",
+            "label": "survival",
             "predicate": [
               {
                 "lte": [
@@ -275,7 +274,8 @@
     "name": "Basic Skills",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -285,7 +285,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "-"
+      "prereqBackup": "-",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -298,7 +301,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "_id": "HSJnMW0wcFNtbhp7",
   "sort": 0
 }

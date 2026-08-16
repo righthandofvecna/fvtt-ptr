@@ -2,7 +2,7 @@
   "name": "Charmer",
   "system": {
     "origin": "",
-    "effect": "You learn the Move Baby-Doll Eyes.",
+    "effect": "You learn the Move @UUID[Compendium.ptu.moves.Item.dIkyKSyZGctjHX9O]{Baby-Doll Eyes}.",
     "snippet": "",
     "rules": [
       {
@@ -64,7 +64,8 @@
     "name": "Charmer",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -74,7 +75,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Charm"
+      "prereqBackup": "Novice Charm",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -87,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "UczPJDLHyhhvoBiq"
 }

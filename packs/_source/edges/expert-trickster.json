@@ -2,7 +2,7 @@
   "name": "Expert Trickster",
   "system": {
     "origin": "",
-    "effect": "You gain a +2 Opposed Checks with all Dirty Trick Maneuvers. The “Once per Scene per Foe” Limitation of each Dirty Trick Maneuver is expended only upon successfully affecting a foe with that Dirty Trick Maneuver.",
+    "effect": "You gain a +2 Opposed Checks with all @UUID[Compendium.ptu.moves.Item.vINbKBHt2nQ7N37v]{Dirty Trick Maneuvers}. The “Once per Scene per Foe” Limitation of each Dirty Trick Maneuver is expended only upon successfully affecting a foe with that Dirty Trick Maneuver.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -55,7 +55,8 @@
     "name": "Expert Trickster",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Stealth"
+      "prereqBackup": "Adept Stealth",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -78,7 +82,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "JLPa73sufq6xlErA"
 }
