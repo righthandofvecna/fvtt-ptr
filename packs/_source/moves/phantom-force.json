@@ -63,8 +63,8 @@
     },
     "type": "Ghost",
     "category": "Physical",
-    "damageBase": 9,
-    "ac": 2,
+    "damageBase": "9",
+    "ac": "2",
     "range": "Melee",
     "contestType": "Smart - Seen Nothing Yet",
     "stab": false,
@@ -72,7 +72,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "reV2bQhOVinmpzub",
   "effects": [],
@@ -80,7 +81,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

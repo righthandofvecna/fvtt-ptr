@@ -2,7 +2,7 @@
   "name": "Apparition",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: When wielding Melee Weapons, you may use Occult Education or Intimidate instead of Combat to determine the Damage Base of your Struggle Attacks, to resist Disarm Maneuvers, and to qualify for a Weapon’s Moves. Your Weapon Attacks always treat you as having the Reach Capability, and foes may not activate Reaction effects against them that specify being hit by a Melee Attack.",
+    "effect": "Effect: When wielding Melee Weapons, you may use Occult Education or Intimidate instead of Combat to determine the Damage Base of your Struggle Attacks, to resist @UUID[Compendium.ptu.moves.Item.h0slhD40dRasSRXj]{Disarm Maneuvers}, and to qualify for a Weapon’s Moves. Your Weapon Attacks always treat you as having the @UUID[Compendium.ptu.capabilities.Item.o7NdOFXqtOAIFv6x]{Reach} Capability, and foes may not activate Reaction effects against them that specify being hit by a Melee Attack.",
     "snippet": "",
     "rules": [
       {
@@ -72,7 +72,8 @@
     "class": "Apparition",
     "name": "Apparition [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "apparition"
+    "replacesSlug": "apparition",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -85,7 +86,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
