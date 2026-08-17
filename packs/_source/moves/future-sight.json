@@ -62,7 +62,7 @@
     },
     "type": "Psychic",
     "category": "Special",
-    "damageBase": 12,
+    "damageBase": "12",
     "ac": "--",
     "range": "Range 10",
     "contestType": "Smart - Exhausting Act",
@@ -71,7 +71,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "4gPfx0ONfNK8vio2",
   "effects": [],
@@ -79,7 +80,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "used": null,
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "An effect or reminder of some kind might be useful, and if such a thing is possible, Haunted Wounds would benefit from the same setup"
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

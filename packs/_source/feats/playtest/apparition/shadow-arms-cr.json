@@ -2,7 +2,7 @@
   "name": "Shadow Arms",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Shadow Claw, Shadow Punch, and Shadow Sneak. You may use these as Weapon Attacks when wielding Melee Weapons.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.pT1I4vwhSiqnVRkr]{Shadow Claw}, @UUID[Compendium.ptu.moves.Item.TXPzXlSA5R7gCowi]{Shadow Punch}, and @UUID[Compendium.ptu.moves.Item.ShchrVmRnyokSkTh]{Shadow Sneak}. You may use these as Weapon Attacks when wielding Melee Weapons.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,24 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.pT1I4vwhSiqnVRkr"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.TXPzXlSA5R7gCowi"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.ShchrVmRnyokSkTh"
       }
     ],
     "enabled": true,
@@ -70,7 +88,8 @@
     "class": "Apparition",
     "name": "Shadow Arms [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "shadow-arms"
+    "replacesSlug": "shadow-arms",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -83,7 +102,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
