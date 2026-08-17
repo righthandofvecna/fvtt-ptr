@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "[Contest Playtest]",
-    "effect": "For each rank in this feat, the trainer learns 3 Contest Moves from the Contest Move List. These moves can then be taught to a Pokemon at the cost of 1 Tutor Point per move.",
+    "effect": "For each rank in this feat, the trainer learns 3 Contest Moves from the @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.DvL825iwysdYuNHV]{Contest Move} List. These moves can then be taught to a Pokemon at the cost of 1 Tutor Slot per move.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -60,7 +60,8 @@
     "free": false,
     "class": "",
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
@@ -69,7 +70,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": "Should these not cost any Tutor Slots at all per the Tutoring Rework as it applies to TM and Tutor Moves?"
     }
   },
   "_stats": {
