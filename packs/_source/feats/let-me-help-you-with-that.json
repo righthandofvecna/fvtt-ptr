@@ -2,7 +2,7 @@
   "name": "Let Me Help You With That",
   "system": {
     "origin": "",
-    "effect": "Trigger - An allied Trainer fails a Skill Check in a Skill you have Ranked at Novice or higher.\nEffect: The ally may re-roll the Skill Check with a Bonus equal to your Skill Rank.",
+    "effect": "Trigger: An allied Trainer fails a Skill Check in a Skill you have Ranked at Novice or higher.\nEffect: The ally may re-roll the Skill Check with a Bonus equal to your Skill Rank.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -55,7 +55,8 @@
     "automation": [],
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -66,7 +67,10 @@
   "flags": {
     "ptu": {
       "prereqBackup": "-",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
@@ -79,7 +83,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 25400000,
   "_id": "NVnFquC0fdo74toT"
 }

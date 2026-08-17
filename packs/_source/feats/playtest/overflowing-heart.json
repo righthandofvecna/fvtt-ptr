@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Target: Your Pokemon with Friendship 3 or Higher. While this Pokemon is at Positive Spirit, they gain +1 Dice to all Skill Checks and +2 to all Saves.",
+    "effect": "Target: Your Pokemon with Friendship 3 or Higher.\nEffect: While this Pokemon is at Positive Spirit, they gain +1 Dice to all Skill Checks and +2 to all Saves.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -57,13 +57,16 @@
     "free": false,
     "class": "",
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "3 Skills at Master"
+      "prereqBackup": "3 Skills at Master",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

@@ -2,7 +2,7 @@
   "name": "Precision Orders",
   "system": {
     "origin": "",
-    "effect": "You gain the Pinpoint Strike and Perfect Aim Orders.",
+    "effect": "You gain the @UUID[Compendium.ptu.feats.Item.L0viDAeWk0z7Neg8]{Pinpoint Strike} and @UUID[Compendium.ptu.feats.Item.aeJMZkCePMsERnbw]{Perfect Aim} Orders.",
     "snippet": "",
     "rules": [
       {
@@ -70,7 +70,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -80,7 +81,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert Command or Perception"
+      "prereqBackup": "Expert Command or Perception",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -93,7 +97,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 27800000,
   "_id": "Phenl8QYGXnXaWm5"
 }

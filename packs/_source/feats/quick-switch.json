@@ -2,7 +2,7 @@
   "name": "Quick Switch",
   "system": {
     "origin": "",
-    "effect": "Trigger - Your Pokémon Faints; or an opponent sends out a Pokémon\nEffect: You may return and send out a Pokémon as a Free Action. You may perform this Feature on your turn without a Trigger. Pokémon sent out by Quick Switch cannot trigger another trainer’s Quick Switch. When you swap Pokémon using Quick Switch, you do not lose a Pokémon turn.",
+    "effect": "Trigger: Your Pokémon Faints; or an opponent sends out a Pokémon\nEffect: You may return and send out a Pokémon as a Free Action. You may perform this Feature on your turn without a Trigger. Pokémon sent out by Quick Switch cannot trigger another trainer’s Quick Switch. When you swap Pokémon using Quick Switch, you do not lose a Pokémon turn.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -57,7 +57,8 @@
     "automation": [],
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +68,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Acrobatics or Guile"
+      "prereqBackup": "Novice Acrobatics or Guile",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -80,7 +84,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 59800000,
   "_id": "r1OvX4IECRfZUkwJ"
 }

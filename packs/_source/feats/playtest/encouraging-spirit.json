@@ -60,13 +60,16 @@
     "free": false,
     "class": "",
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Any Spirit Skill Expert, Three Friendship 4 Pokemon or One Friendship 5 Pokemon"
+      "prereqBackup": "Any Spirit Skill Expert, Three Friendship 4 Pokemon or One Friendship 5 Pokemon",
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {

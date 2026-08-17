@@ -2,14 +2,17 @@
   "name": "Smith Rank 1",
   "system": {
     "origin": "",
-    "effect": "You may create Simple Weapons for $1000, Light Shields for $1,500, and Light Armor for $4,000.",
+    "effect": "You may create @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.p4sqLE6UObkpyYdA]{Simple Weapons} for @Poke[1000], @UUID[Compendium.ptu.items.Item.amyGa2iDJk9KgbQM]{Shields} for @Poke[1500], and @UUID[Compendium.ptu.items.Item.TG2nIcDgX0ricIPu]{Light Armor} for @Poke[4000].",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.atk.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -68,7 +71,8 @@
     "name": "Smith Rank 1",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -78,7 +82,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Focus, Novice Athletics"
+      "prereqBackup": "Novice Focus, Novice Athletics",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -91,7 +98,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 13700000,
   "_id": "Cp2aIRdqOYq2fIqQ"
 }
