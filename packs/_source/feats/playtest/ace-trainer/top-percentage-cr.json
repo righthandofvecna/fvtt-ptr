@@ -59,7 +59,8 @@
     "class": "Ace Trainer",
     "name": "Top Percentage [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "top-percentage"
+    "replacesSlug": "top-percentage",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -72,7 +73,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {

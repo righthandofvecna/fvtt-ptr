@@ -59,7 +59,8 @@
     "class": "Ace Trainer",
     "name": "Ace Trainer [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "ace-trainer"
+    "replacesSlug": "ace-trainer",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
