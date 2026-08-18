@@ -87,7 +87,7 @@
     "ptu": {
       "showInTokenPanel": true,
       "automationStatus": "needs-automation",
-      "devNote": ""
+      "devNote": "An effect or modifier for Soul Bond that could be added to weapons rather than having to make manual edits to weapons could be helpful"
     }
   },
   "_stats": {

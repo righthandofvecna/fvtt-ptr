@@ -70,7 +70,8 @@
     "class": "Arcanist",
     "name": "Recoup Energy [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "recoup-energy"
+    "replacesSlug": "recoup-energy",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -83,7 +84,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

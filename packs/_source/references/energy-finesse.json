@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Arcanist Rank 1 Power Manipulations",
-    "effect": "Condition: The triggering Move is an Arcane Weapon Move and has an Effect Range Effect: In addition to its existing Effect Range, the Effect triggers on all natural Even-Numbered Rolls.",
+    "effect": "Condition: The triggering Move is an Arcane Weapon Move and has an Effect Range\nEffect: In addition to its existing Effect Range, the Effect triggers on all natural Even-Numbered Rolls.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "E96dE1iaMcGOJMP3",
   "effects": [],
-  "folder": null,
   "sort": 7200000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
