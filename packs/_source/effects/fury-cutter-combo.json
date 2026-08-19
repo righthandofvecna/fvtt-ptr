@@ -1,24 +1,28 @@
 {
-  "name": "Effect: Harden",
+  "folder": "k6G4cQaV0Rb2ovJk",
+  "name": "Fury cutter Combo",
   "type": "effect",
+  "_id": "omTqxPn41u98Q4oI",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "+1 Def CS",
-    "snippet": "+1 Def CS",
+    "effect": "",
+    "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "predicate": [],
         "mode": "add",
-        "path": "system.stats.def.stage.mod",
+        "path": "flags.ptu.furycutter",
         "phase": "applyAEs",
         "value": 1,
         "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-harden",
+    "slug": "fury-cutter-combo",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -27,14 +31,14 @@
     "source": {
       "value": "Homebrew"
     },
-    "stackSlugs": true,
+    "stackSlugs": false,
     "keywords": [],
     "level": {
       "value": 1
     },
     "duration": {
       "value": -1,
-      "unit": "encounter",
+      "unit": "unlimited",
       "expiry": null
     },
     "start": {
@@ -46,21 +50,12 @@
       "show": true
     },
     "badge": null,
-    "context": null,
-    "contentSet": "",
-    "replacesSlug": ""
+    "context": null
   },
   "effects": [],
-  "folder": "vvYHstuSI4986bjM",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
-      "devNote": ""
-    },
-    "scene-packer": {
-      "hash": "f56cb1fb0ff5b330ab0e9e466165a731f345d591",
-      "sourceId": "Item.lxmolmhXMxtCHumc"
+      "showInTokenPanel": true
     },
     "LocknKey": {
       "IDKeysFlag": "",
@@ -71,26 +66,5 @@
       "LBFormulaOverrideFlag": false,
       "ReplacementItemFlag": ""
     }
-  },
-  "_stats": {
-    "coreVersion": "13.350",
-    "systemId": "ptu",
-    "systemVersion": "4.2.2",
-    "createdTime": 1709368049132,
-    "modifiedTime": 1710851809956,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": {
-      "worldId": "pokemon-test-world",
-      "uuid": null,
-      "coreVersion": "11.315",
-      "systemId": "ptu",
-      "systemVersion": "4.2.2"
-    }
-  },
-  "_id": "furDPMEDN2zDTNpu",
-  "sort": 3700000,
-  "ownership": {
-    "default": 0
   }
 }

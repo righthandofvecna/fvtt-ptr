@@ -11,15 +11,17 @@
       {
         "key": "ApplyEffect",
         "predicate": [],
-        "affects": "origin",
-        "selectors": "{item|id}-damage-dealt",
+        "selectors": "{item|id}-apply-effects",
         "uuid": "Compendium.ptu.effects.Item.g0Dr7ZmsyNb8ne4U",
-        "range": "1",
-        "value": ""
+        "range": "",
+        "value": "",
+        "affects": "origin"
       }
     ],
     "enabled": true,
     "slug": "hone-claws",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -68,6 +70,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Dark",
     "category": "Status",
     "damageBase": "--",
@@ -77,29 +80,13 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "rtmTimpeb0k1Njsy",
+  "_id": "HYLB7Vj9XLOH4lUt",
   "effects": [],
-  "sort": 77400000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200825844,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }
