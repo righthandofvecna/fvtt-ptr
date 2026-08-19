@@ -1,0 +1,68 @@
+{
+  "folder": "tde1yjOd239IVpLI",
+  "name": "Wear it Better",
+  "type": "capability",
+  "_id": "XwnymStQhTW5Xu9k",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "While wearing Body Equipment worth at least ₽1000, you gain +5 Damage Reduction. This does not stack with any Damage Reduction granted by any Body Equipment.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "wear-it-better",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:35.541Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "Compendium.ptu.effects.Item.OtIHDc2xeAAHt1iK",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Backpacker Talent"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}

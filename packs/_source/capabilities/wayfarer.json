@@ -1,0 +1,68 @@
+{
+  "folder": "tde1yjOd239IVpLI",
+  "name": "Wayfarer",
+  "type": "capability",
+  "_id": "1GG6KVr3GmMUexIP",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "You may use your Survival Skill when making Opposed Rolls when defending against Disarm, Grapple, Push, and Trip Maneuvers. When wielding a Weapon, you may use Survival instead of Combat to determine the Damage Base of your Struggle Attacks and to qualify for a Weapon’s Moves.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "wayfarer",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:35.541Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Backpacker Talent"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}

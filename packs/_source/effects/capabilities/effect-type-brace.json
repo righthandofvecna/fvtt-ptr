@@ -1,0 +1,79 @@
+{
+  "folder": "mPgTCXDywTV4kW8J",
+  "name": "Effect: Wear it Better",
+  "type": "effect",
+  "_id": "OtIHDc2xeAAHt1iK",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "While wearing Body Equipment worth at least ₽1000, you gain +5 Damage Reduction. This does not stack with any Damage Reduction granted by any Body Equipment.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.damageReduction.physical.mod",
+        "phase": "applyAEs",
+        "value": 5,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.damageReduction.special.mod",
+        "phase": "applyAEs",
+        "value": 5,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-type-brace",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:34.825Z",
+        "version": {
+          "schema": 0.111,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}
