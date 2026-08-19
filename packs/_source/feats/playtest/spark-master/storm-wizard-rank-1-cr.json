@@ -13,6 +13,180 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.hi7gAfufnGgdttyo",
+            "label": "Charge",
+            "predicate": [
+              {
+                "not": "move:charge"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Z38TtI0Rkj5fIHLD",
+            "label": "Charge Beam",
+            "predicate": [
+              {
+                "not": "move:charge-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.KKoqb3PXbdV2gpAA",
+            "label": "Eerie Impulse",
+            "predicate": [
+              {
+                "not": "move:eerie-impulse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.i3pBrEvJz6tycWOT",
+            "label": "Shock Wave",
+            "predicate": [
+              {
+                "not": "move:shock-wave"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2Bldc8dEEOuOSx39",
+            "label": "Spark",
+            "predicate": [
+              {
+                "not": "move:spark"
+              }
+            ]
+          }
+        ],
+        "adjustName": false,
+        "flag": "storm1-1"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.storm1-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.hi7gAfufnGgdttyo",
+            "label": "Charge",
+            "predicate": [
+              {
+                "not": "move:charge"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Z38TtI0Rkj5fIHLD",
+            "label": "Charge Beam",
+            "predicate": [
+              {
+                "not": "move:charge-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.KKoqb3PXbdV2gpAA",
+            "label": "Eerie Impulse",
+            "predicate": [
+              {
+                "not": "move:eerie-impulse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.i3pBrEvJz6tycWOT",
+            "label": "Shock Wave",
+            "predicate": [
+              {
+                "not": "move:shock-wave"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2Bldc8dEEOuOSx39",
+            "label": "Spark",
+            "predicate": [
+              {
+                "not": "move:spark"
+              }
+            ]
+          }
+        ],
+        "adjustName": false,
+        "flag": "storm1-2"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.storm1-2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.hi7gAfufnGgdttyo",
+            "label": "Charge",
+            "predicate": [
+              {
+                "not": "move:charge"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Z38TtI0Rkj5fIHLD",
+            "label": "Charge Beam",
+            "predicate": [
+              {
+                "not": "move:charge-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.KKoqb3PXbdV2gpAA",
+            "label": "Eerie Impulse",
+            "predicate": [
+              {
+                "not": "move:eerie-impulse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.i3pBrEvJz6tycWOT",
+            "label": "Shock Wave",
+            "predicate": [
+              {
+                "not": "move:shock-wave"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2Bldc8dEEOuOSx39",
+            "label": "Spark",
+            "predicate": [
+              {
+                "not": "move:spark"
+              }
+            ]
+          }
+        ],
+        "adjustName": false,
+        "flag": "storm1-3"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.storm1-3}"
       }
     ],
     "enabled": true,
@@ -70,7 +244,8 @@
     "class": "Spark Master",
     "name": "Storm Wizard [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "storm-wizard-rank-1"
+    "replacesSlug": "storm-wizard-rank-1",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -83,7 +258,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.dV6KnuhzAKFn9zvo",
     "source": {
       "value": "Homebrew"
     },
@@ -63,12 +63,15 @@
     "free": false,
     "class": "Stat Ace (Attack)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-stratagem-attack"
+    "replacesSlug": "stat-stratagem-attack",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "Jozgm4YvmqVnLRLe",

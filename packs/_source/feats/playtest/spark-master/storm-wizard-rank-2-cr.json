@@ -13,6 +13,312 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.hi7gAfufnGgdttyo",
+            "label": "Charge",
+            "predicate": [
+              {
+                "not": "move:charge"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Z38TtI0Rkj5fIHLD",
+            "label": "Charge Beam",
+            "predicate": [
+              {
+                "not": "move:charge-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.KKoqb3PXbdV2gpAA",
+            "label": "Eerie Impulse",
+            "predicate": [
+              {
+                "not": "move:eerie-impulse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.i3pBrEvJz6tycWOT",
+            "label": "Shock Wave",
+            "predicate": [
+              {
+                "not": "move:shock-wave"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2Bldc8dEEOuOSx39",
+            "label": "Spark",
+            "predicate": [
+              {
+                "not": "move:spark"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.0OG6qacE7JQqxM5a",
+            "label": "Electro Ball",
+            "predicate": [
+              {
+                "not": "move:electro-ball"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.0gi5EtY9Gq2yZ4eY",
+            "label": "Thunder Punch",
+            "predicate": [
+              {
+                "not": "move:thunder-punch"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.rYgXflBIrAnN8GkK",
+            "label": "Thunder Wave",
+            "predicate": [
+              {
+                "not": "move:thunder-wave"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.y9WyqqBWO4tAaX8G",
+            "label": "Thunderbolt",
+            "predicate": [
+              {
+                "not": "move:thunderbolt"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.idhhi7YJRDHnUUMR",
+            "label": "Wild Charge",
+            "predicate": [
+              {
+                "not": "move:wild-charge"
+              }
+            ]
+          }
+        ],
+        "flag": "storm2-1"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.storm2-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "storm2-2",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.hi7gAfufnGgdttyo",
+            "label": "Charge",
+            "predicate": [
+              {
+                "not": "move:charge"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Z38TtI0Rkj5fIHLD",
+            "label": "Charge Beam",
+            "predicate": [
+              {
+                "not": "move:charge-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.KKoqb3PXbdV2gpAA",
+            "label": "Eerie Impulse",
+            "predicate": [
+              {
+                "not": "move:eerie-impulse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.i3pBrEvJz6tycWOT",
+            "label": "Shock Wave",
+            "predicate": [
+              {
+                "not": "move:shock-wave"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2Bldc8dEEOuOSx39",
+            "label": "Spark",
+            "predicate": [
+              {
+                "not": "move:spark"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.0OG6qacE7JQqxM5a",
+            "label": "Electro Ball",
+            "predicate": [
+              {
+                "not": "move:electro-ball"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.0gi5EtY9Gq2yZ4eY",
+            "label": "Thunder Punch",
+            "predicate": [
+              {
+                "not": "move:thunder-punch"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.rYgXflBIrAnN8GkK",
+            "label": "Thunder Wave",
+            "predicate": [
+              {
+                "not": "move:thunder-wave"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.y9WyqqBWO4tAaX8G",
+            "label": "Thunderbolt",
+            "predicate": [
+              {
+                "not": "move:thunderbolt"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.idhhi7YJRDHnUUMR",
+            "label": "Wild Charge",
+            "predicate": [
+              {
+                "not": "move:wild-charge"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.storm2-2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.hi7gAfufnGgdttyo",
+            "label": "Charge",
+            "predicate": [
+              {
+                "not": "move:charge"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Z38TtI0Rkj5fIHLD",
+            "label": "Charge Beam",
+            "predicate": [
+              {
+                "not": "move:charge-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.KKoqb3PXbdV2gpAA",
+            "label": "Eerie Impulse",
+            "predicate": [
+              {
+                "not": "move:eerie-impulse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.i3pBrEvJz6tycWOT",
+            "label": "Shock Wave",
+            "predicate": [
+              {
+                "not": "move:shock-wave"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2Bldc8dEEOuOSx39",
+            "label": "Spark",
+            "predicate": [
+              {
+                "not": "move:spark"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.0OG6qacE7JQqxM5a",
+            "label": "Electro Ball",
+            "predicate": [
+              {
+                "not": "move:electro-ball"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.0gi5EtY9Gq2yZ4eY",
+            "label": "Thunder Punch",
+            "predicate": [
+              {
+                "not": "move:thunder-punch"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.rYgXflBIrAnN8GkK",
+            "label": "Thunder Wave",
+            "predicate": [
+              {
+                "not": "move:thunder-wave"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.y9WyqqBWO4tAaX8G",
+            "label": "Thunderbolt",
+            "predicate": [
+              {
+                "not": "move:thunderbolt"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.idhhi7YJRDHnUUMR",
+            "label": "Wild Charge",
+            "predicate": [
+              {
+                "not": "move:wild-charge"
+              }
+            ]
+          }
+        ],
+        "flag": "storm2-3"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.storm2-3}"
       }
     ],
     "enabled": true,
@@ -70,7 +376,8 @@
     "class": "Spark Master",
     "name": "Storm Wizard [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "storm-wizard-rank-2"
+    "replacesSlug": "storm-wizard-rank-2",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +389,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
