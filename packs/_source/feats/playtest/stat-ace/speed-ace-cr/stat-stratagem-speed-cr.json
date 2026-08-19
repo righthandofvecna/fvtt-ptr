@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.lciCD9haQpbeQuF5",
     "source": {
       "value": "Homebrew"
     },
@@ -63,7 +63,8 @@
     "free": false,
     "class": "Stat Ace (Speed)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-stratagem-speed"
+    "replacesSlug": "stat-stratagem-speed",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {

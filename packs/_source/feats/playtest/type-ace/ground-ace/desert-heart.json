@@ -1,22 +1,22 @@
 {
-  "folder": "6meG7SeyLvR39TI3",
-  "name": "Highlander",
+  "folder": "mgQuQp95v3EdrKC1",
+  "name": "Desert Heart",
   "type": "feat",
-  "_id": "avcMBnpC3rK6gw8i",
+  "_id": "zEIOIwjJGnyvqQ2H",
   "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Target: Your Dragon-Type Pokemon\nEffect: While this Feature is Bound, the target resists Dragon-Type attacks one step further, and its attacks targeting Dragon-Type creatures are one step more effective.",
+    "effect": "Target: Your Pokémon\nEffect: While this Stratagem is bound, the target may activate Moves and Abilities as if they were in a Sand Weather Condition. While in Sand Weather Conditions, the target gains +5 Initiative, and +2 to their Effect and Critical Ranges.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "highlander-cr",
+    "slug": "desert-heart",
     "contentSet": "homebrew",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-06-28T12:56:34.967Z",
+        "datetime": "2026-06-28T12:56:34.539Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.364",
@@ -24,22 +24,22 @@
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.co9rvISmZQHNtRAL",
+    "referenceEffect": "Compendium.ptu.effects.Item.oJf9Qb0p6JwXhS3s",
     "source": {
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
-      "Branch",
+      "Orders",
+      "Stratagem",
       "Playtest",
       "CR",
-      "Order",
-      "Stratagem"
+      "Branch"
     ],
     "frequency": {
-      "type": "static",
+      "type": "at-will",
       "max": 0,
-      "custom": "Bind 2AP - Standard Action",
+      "custom": "Bind 2 AP - Standard Action",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -61,13 +61,13 @@
     },
     "leagueLegal": false,
     "prerequisites": [
-      "Tyrant's Roar",
-      "Type-Linked Skill at Adept"
+      "Type-Linked Skill at Adept",
+      "Geothermal Energy [CR]"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Dragon)",
-    "name": "Highlander",
+    "class": "Type Ace (Ground)",
+    "name": "Desert Heart",
     "useCount": 0,
     "automation": []
   },
@@ -75,7 +75,13 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Tyrant's Roar, Type-Linked Skill at Adept"
+      "prereqBackup": "Mold the Earth, Type-Linked Skill at Adept",
+      "grantedBy": {
+        "id": "cxGqerNDwVbP6Oge",
+        "onDelete": "detach"
+      },
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "LocknKey": {
       "IDKeysFlag": "",

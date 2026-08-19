@@ -1,0 +1,118 @@
+{
+  "folder": "BVPmmioce03nFm21",
+  "name": "Effect: Reactive Armour",
+  "type": "effect",
+  "_id": "lrQpcbxDL1LJJmn3",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.modifiers.damageReduction.physical.mod",
+        "phase": "afterDerived",
+        "value": "(@actor.system.skills.athletics.value.total - @actor.system.skills.focus.value.total) * 2",
+        "priority": null,
+        "predicate": {
+          "gte": [
+            "{actor|system.skills.athletics.value.total}",
+            "{actor|system.skills.focus.value.total}"
+          ]
+        }
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "gte": [
+            "{actor|system.skills.athletics.value.total}",
+            "{actor|system.skills.focus.value.total}"
+          ]
+        },
+        "mode": "add",
+        "path": "system.modifiers.damageReduction.special.mod",
+        "phase": "afterDerived",
+        "value": "(@actor.system.skills.athletics.value.total - @actor.system.skills.focus.value.total) * 2",
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "gte": [
+            "{actor|system.skills.focus.value.total}",
+            "{actor|system.skills.athletics.value.total}"
+          ]
+        },
+        "mode": "add",
+        "path": "system.modifiers.damageReduction.physical.mod",
+        "phase": "afterDerived",
+        "value": "(@actor.system.skills.focus.value.total - @actor.system.skills.athletics.value.total) * 2",
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "gte": [
+            "{actor|system.skills.focus.value.total}",
+            "{actor|system.skills.athletics.value.total}"
+          ]
+        },
+        "mode": "add",
+        "path": "system.modifiers.damageReduction.special.mod",
+        "phase": "afterDerived",
+        "value": "(@actor.system.skills.focus.value.total - @actor.system.skills.athletics.value.total) * 2",
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-reactive-armour",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:34.684Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null,
+      "round": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}

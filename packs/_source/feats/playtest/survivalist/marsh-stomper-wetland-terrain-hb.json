@@ -1,0 +1,63 @@
+{
+  "folder": "jwSUGJETAKuub2Ws",
+  "name": "Marsh Stomper – Wetland Terrain",
+  "type": "feat",
+  "_id": "Bg23s9MsvvLy7e0A",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "You can handle the toxic fauna and flora of the marshes. You do not lose Hit Points from Poison and lose only 1 instead of 2 Combat Stages from Poison. You still count as Poisoned for the purpose of Moves and effects.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "marsh-stomper-wetland-terrain-hb",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "prerequisites": [],
+    "notes": "",
+    "free": false,
+    "class": ""
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}
