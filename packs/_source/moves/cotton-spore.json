@@ -7,7 +7,17 @@
     "origin": "",
     "effect": "All legal targets have their Speed lowered 2 Combat Stages.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.PK2dsGRBlBsD4yqV",
+        "range": "",
+        "value": "",
+        "affects": "target"
+      }
+    ],
     "enabled": true,
     "slug": "cotton-spore",
     "schema": {
@@ -71,7 +81,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "08DZcCU0jqyEQ3jv",
   "effects": [],

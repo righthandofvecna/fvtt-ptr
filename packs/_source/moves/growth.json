@@ -5,18 +5,30 @@
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
-    "effect": "Raise the user's Attack and Special Attack by 1 Combat Stage each. If it is Sunny, double the amount of Combat Stages gained. *Grants Inflatable\n\n@UUID[Compendium.ptu.effects.Item.cdt6QIX2JFQxhRft]",
+    "effect": "Raise the user's Attack and Special Attack by 1 Combat Stage each. If it is Sunny, double the amount of Combat Stages gained. *Grants Inflatable*",
     "snippet": "",
     "rules": [
       {
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.capabilities.Item.ZRme14ZKXtdxknem"
+        "uuid": "Compendium.ptu.capabilities.Item.ZRme14ZKXtdxknem",
+        "flag": "inflatable"
+      },
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.Uq3ErLQLOvNwmIZd",
+        "range": "",
+        "value": "",
+        "affects": "origin"
       }
     ],
     "enabled": true,
     "slug": "growth",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -65,6 +77,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Normal",
     "category": "Status",
     "damageBase": "--",
@@ -74,29 +87,21 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "Bcv2CeJg9qU1q0Cb",
+  "_id": "EkTxn6E4glEhttl6",
   "effects": [],
-  "sort": 15600000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "itemGrants": {
+        "inflatable": {
+          "id": "BX3AqS6IawvK7NeR",
+          "onDelete": "detach"
+        }
+      },
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200823571,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

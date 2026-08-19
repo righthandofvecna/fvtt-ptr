@@ -5,11 +5,13 @@
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
-    "effect": "Roll 1d6. On a result of 1, raise the target's Attack by 2 Combat Stages. On a result of 2, raise the target's Defense by 2 Combat Stages. On a result of 3, raise the target's Special Attack by 2 Combat Stages. On a result of 4, raise the target's Special Defense by 2 Combat Stages. On a result of 5, raise the target's Speed by 2 Combat Stages. On a result of 6, raise the target's Accuracy by 2.",
+    "effect": "Roll 1d6. \nOn a result of 1, raise the target's Attack by 2 Combat Stages. @UUID[Compendium.ptu.effects.Item.YJKlieSN9eYMAVrg]\nOn a result of 2, raise the target's Defense by 2 Combat Stages. @UUID[Compendium.ptu.effects.Item.0nSnVrYGy444n2l0]\nOn a result of 3, raise the target's Special Attack by 2 Combat Stages. @UUID[Compendium.ptu.effects.Item.6Opkg5d0WZcTzTN1]\nOn a result of 4, raise the target's Special Defense by 2 Combat Stages. @UUID[Compendium.ptu.effects.Item.vKBMJCfSAgHUS2EH]\nOn a result of 5, raise the target's Speed by 2 Combat Stages. @UUID[Compendium.ptu.effects.Item.1AOyseyPfbVwxzZn]\nOn a result of 6, raise the target's Accuracy by 2. @UUID[Compendium.ptu.effects.Item.qd3ks0VbFiQ7il4K]",
     "snippet": "",
     "rules": [],
     "enabled": true,
     "slug": "acupressure",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -60,6 +62,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Normal",
     "category": "Status",
     "damageBase": "--",
@@ -69,29 +72,15 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "iQXpUEYL3sawCfvM",
+  "_id": "oogllo5WikS65EJL",
   "effects": [],
-  "sort": 63700000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200825258,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

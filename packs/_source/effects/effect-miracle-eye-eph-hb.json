@@ -1,0 +1,56 @@
+{
+  "name": "Effect: Miracle Eye (eph)",
+  "type": "effect",
+  "_id": "NsCN6Y12Ov5SS9UZ",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "RollOption",
+        "option": "self:immunity-blocked:dark"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-miracle-eye-eph-hb",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "k6G4cQaV0Rb2ovJk",
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false
+    }
+  }
+}
