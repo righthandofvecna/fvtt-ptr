@@ -2,6 +2,7 @@
   "folder": "VrgkSS17WexYz7or",
   "name": "Psionic Wellspring",
   "type": "feat",
+  "_id": "3hY7pyg4gnQtoD3O",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
@@ -10,18 +11,20 @@
     "rules": [],
     "enabled": true,
     "slug": "psionic-wellspring-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:28.933Z",
+        "datetime": "2026-06-28T12:56:35.393Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.abilities.Item.f8tIfjUCzGkIOah4",
     "source": {
       "value": "Homebrew"
     },
@@ -29,7 +32,7 @@
     "keywords": [
       "Branch",
       "Playtest",
-      "Class Rework"
+      "CR"
     ],
     "frequency": {
       "type": "at-will",
@@ -54,40 +57,31 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
-      "Type Ace (Psychic)"
+      "Type Ace (Psychic) [CR]"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Psychic)",
-    "contentSet": "class-rework",
-    "replacesSlug": "psionic-wellspring"
+    "class": "Type Ace (Psychic)"
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
-    }
-  },
-  "_id": "AAAQkCtKAqTSQiHT",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "_stats": {
-    "coreVersion": "13.351",
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "createdTime": 1710767168043,
-    "modifiedTime": 1778200829000,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": {
-      "worldId": "the-chosen",
-      "uuid": null,
-      "coreVersion": "11.315",
-      "systemId": "ptu",
-      "systemVersion": "4.2.2"
+      "showInTokenPanel": true,
+      "grantedBy": {
+        "id": "fkjYwivs5Tadh5lY",
+        "onDelete": "detach"
+      }
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
     }
   }
 }

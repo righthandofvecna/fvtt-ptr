@@ -18,7 +18,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.LkI7Vir2615KgjK4",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -62,7 +62,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
-    "replacesSlug": "potent-venom"
+    "replacesSlug": "potent-venom",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
