@@ -1,8 +1,12 @@
 {
+  "folder": "ArQ1VkEqvLAXjU2D",
   "name": "Arcanist",
+  "type": "feat",
+  "_id": "LBbuUiWcmXiXpos2",
+  "img": "/systems/ptu/css/images/icons/class_feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: An Arcane Weapon\nEffect: You create a Soul Bond with the target Weapon. You may make a Soul Bond with only one weapon at a time. If you create a new Soul Bond, previously Soul Bound weapons lose the Bond. Soul Bound Weapons gain the following benefits:\n- Increase the Damage Base and Effect Range of Struggle Attacks and Arcane Weapon Moves made with your Soul Bonded Weapon equal to your Occult Education Rank divided by 2, rounded up.\n- As a Shift Action, you may beckon your Soul Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Occult vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal.",
+    "effect": "Target: An Arcane Weapon\nEffect: You create a Soul Bond with the target Weapon. You may make a Soul Bond with only one weapon at a time. If you create a new Soul Bond, previously Soul Bound weapons lose the Bond. Soul Bound Weapons gain\nthe following benefits:\n- Increase the Damage Base and Effect Range of Struggle Attacks and Arcane Weapon Moves made with your Soul Bonded Weapon equal to your Occult Education Rank divided by 2, rounded up.\n- As a Shift Action, you may beckon your Soul Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Occult vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal.",
     "snippet": "",
     "rules": [
       {
@@ -13,18 +17,40 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "move:arcane"
+        ],
+        "hideIfDisabled": false,
+        "selectors": "damage-base",
+        "value": "floor(@actor.system.skills.occultEd.value.total) / 2"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "move:arcane"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.effectRange.mod",
+        "phase": "afterDerived",
+        "value": "floor(@actor.system.skills.occultEd.value.total) / 2",
+        "priority": null
       }
     ],
     "enabled": true,
     "slug": "arcanist-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:30.445Z",
+        "datetime": "2026-06-28T12:56:34.388Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -41,7 +67,7 @@
       "Class Rework"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "At-Will – Extended Action",
       "modifiers": {
@@ -63,41 +89,40 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Arcane Training"
     ],
     "notes": "",
     "free": false,
     "class": "Arcanist",
-    "name": "Arcanist [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "arcanist",
-    "leagueLegal": false
+    "name": "Arcanist [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
-  "type": "feat",
-  "folder": "ArQ1VkEqvLAXjU2D",
-  "_id": "VMwd7JnYdcSyyQF0",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
+      "itemGrants": {
+        "xE44XQR6SMmZCR6l": {
+          "id": "xE44XQR6SMmZCR6l",
+          "onDelete": "detach"
+        },
+        "bndkDHl77g1ZKPxP": {
+          "id": "bndkDHl77g1ZKPxP",
+          "onDelete": "detach"
+        }
+      },
       "automationStatus": "needs-automation",
       "devNote": ""
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200830478,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }
