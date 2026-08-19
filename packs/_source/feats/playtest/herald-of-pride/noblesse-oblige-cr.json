@@ -1,5 +1,8 @@
 {
   "name": "Noblesse Oblige",
+  "type": "feat",
+  "_id": "6gYyjpDBbCcnV3FS",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Regal Challenge Ability.",
@@ -13,20 +16,21 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.7QhiKxrM6NO3tbuP"
       }
     ],
     "enabled": true,
     "slug": "noblesse-oblige-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
-      "lastMigration": {
-        "datetime": "2026-05-08T00:40:30.523Z",
-        "version": {
-          "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
-        }
-      }
+      "version": null,
+      "lastMigration": null
     },
     "referenceEffect": "",
     "source": {
@@ -40,8 +44,8 @@
     ],
     "frequency": {
       "type": "static",
-      "max": null,
-      "custom": "Static",
+      "max": 0,
+      "custom": "",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -61,34 +65,22 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Herald of Pride"
     ],
     "notes": "",
     "free": false,
     "class": "Herald of Pride",
-    "name": "Noblesse Oblige [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "noblesse-oblige"
+    "name": "Noblesse Oblige [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "lZqjsR5bQoFGXnFK",
-  "_id": "YUivmoYcJBMTVejf",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200830555,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "folder": "lZqjsR5bQoFGXnFK",
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
   }
 }

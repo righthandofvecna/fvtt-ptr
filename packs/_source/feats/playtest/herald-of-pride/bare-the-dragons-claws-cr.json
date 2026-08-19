@@ -1,5 +1,8 @@
 {
-  "name": "Bare the Dragon's Claws",
+  "name": "Bare the Dragon’s Claws",
+  "type": "feat",
+  "_id": "dG8TFcPBlbnEQjAO",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Breaking Swipe, Dragon Claw, and Dragon Tail. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
@@ -13,20 +16,33 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.fQxEojo3sSwnLk1q"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.ulXmidTSzjPqUrfI"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.lA7uzkBcGhFOexAT"
       }
     ],
     "enabled": true,
     "slug": "bare-the-dragons-claws-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
-      "lastMigration": {
-        "datetime": "2026-05-08T00:40:30.972Z",
-        "version": {
-          "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
-        }
-      }
+      "version": null,
+      "lastMigration": null
     },
     "referenceEffect": "",
     "source": {
@@ -41,8 +57,8 @@
     ],
     "frequency": {
       "type": "static",
-      "max": null,
-      "custom": "Static",
+      "max": 0,
+      "custom": "",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -62,6 +78,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Herald of Pride",
       "Adept Command or Intimidate"
@@ -69,28 +86,13 @@
     "notes": "",
     "free": false,
     "class": "Herald of Pride",
-    "name": "Bare the Dragon’s Claws [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "bare-the-dragons-claws"
+    "name": "Bare the Dragon’s Claws [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "lZqjsR5bQoFGXnFK",
-  "_id": "iivLOBXjKE4qkJdW",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200831019,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "folder": "lZqjsR5bQoFGXnFK",
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
   }
 }

@@ -1,5 +1,8 @@
 {
+  "folder": null,
   "name": "Advanced Capture Techniques Rank 1",
+  "type": "feat",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
     "effect": "You gain two Capture Techniques of your choice. You must meet any prerequisites of the Technique. You may qualify for Advanced Capture Techniques’ prerequisites with the Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills only.",
@@ -23,12 +26,12 @@
         "rollOption": "capture",
         "choices": [
           {
-            "label": "Capture Skills",
-            "value": "Item.JqZRtIEdnOtSZKxx"
+            "value": "Compendium.ptu.references.Item.tdhGpjXjYnFGsg5r",
+            "label": "Capture Skills"
           },
           {
+            "value": "Compendium.ptu.references.Item.6OR2Bt76V2jmS9qG",
             "label": "Catch Combo",
-            "value": "Item.PcbjVB0csoyS9GkG",
             "predicate": [
               {
                 "not": "capability:catch-combo"
@@ -36,8 +39,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.oCbNYdXL9EM5YyXo",
             "label": "Curve Ball",
-            "value": "Item.EK0CFoez5qOoQXtF",
             "predicate": [
               {
                 "not": "capability:curve-ball"
@@ -45,8 +48,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.95Z0ep7uSZb4GYce",
             "label": "Devitalizing Throw",
-            "value": "Item.j4W1xdKJ6T6yP7DD",
             "predicate": [
               {
                 "not": "capability:devitalizing-throw"
@@ -54,8 +57,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.dQ3pQXZtBVg9vEwd",
             "label": "False Strike",
-            "value": "Item.0w5nwGJZ5t8963ho",
             "predicate": [
               {
                 "not": "capability:false-strike"
@@ -63,8 +66,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.pJLz9aGZzPMhMMZd",
             "label": "Fast Pitch",
-            "value": "Item.v3XNoYN0EJOquOQD",
             "predicate": [
               {
                 "not": "capability:fast-pitch"
@@ -72,8 +75,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.h0xrKDLhLNwESAh7",
             "label": "Relentless Pursuit",
-            "value": "Item.Bbf0NOpLg9v3oOmS",
             "predicate": [
               {
                 "not": "capability:relentless-pursuit"
@@ -81,8 +84,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.K24Mww4alZrOwtv2",
             "label": "Snare",
-            "value": "Item.XjOYK3FmwmFcvSJ3",
             "predicate": [
               {
                 "not": "capability:snare"
@@ -90,8 +93,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.bdkhDY1yYn4MPP2d",
             "label": "Tools of the Trade",
-            "value": "Item.BF66Z8cf7LD5Wlxs",
             "predicate": [
               {
                 "not": "capability:tools-of-the-trade"
@@ -115,12 +118,12 @@
         "rollOption": "capture",
         "choices": [
           {
-            "label": "Capture Skills",
-            "value": "Item.JqZRtIEdnOtSZKxx"
+            "value": "Compendium.ptu.references.Item.tdhGpjXjYnFGsg5r",
+            "label": "Capture Skills"
           },
           {
+            "value": "Compendium.ptu.references.Item.6OR2Bt76V2jmS9qG",
             "label": "Catch Combo",
-            "value": "Item.PcbjVB0csoyS9GkG",
             "predicate": [
               {
                 "not": "capability:catch-combo"
@@ -128,8 +131,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.oCbNYdXL9EM5YyXo",
             "label": "Curve Ball",
-            "value": "Item.EK0CFoez5qOoQXtF",
             "predicate": [
               {
                 "not": "capability:curve-ball"
@@ -137,8 +140,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.95Z0ep7uSZb4GYce",
             "label": "Devitalizing Throw",
-            "value": "Item.j4W1xdKJ6T6yP7DD",
             "predicate": [
               {
                 "not": "capability:devitalizing-throw"
@@ -146,8 +149,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.dQ3pQXZtBVg9vEwd",
             "label": "False Strike",
-            "value": "Item.0w5nwGJZ5t8963ho",
             "predicate": [
               {
                 "not": "capability:false-strike"
@@ -155,8 +158,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.pJLz9aGZzPMhMMZd",
             "label": "Fast Pitch",
-            "value": "Item.v3XNoYN0EJOquOQD",
             "predicate": [
               {
                 "not": "capability:fast-pitch"
@@ -164,8 +167,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.h0xrKDLhLNwESAh7",
             "label": "Relentless Pursuit",
-            "value": "Item.Bbf0NOpLg9v3oOmS",
             "predicate": [
               {
                 "not": "capability:relentless-pursuit"
@@ -173,8 +176,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.K24Mww4alZrOwtv2",
             "label": "Snare",
-            "value": "Item.XjOYK3FmwmFcvSJ3",
             "predicate": [
               {
                 "not": "capability:snare"
@@ -182,8 +185,8 @@
             ]
           },
           {
+            "value": "Compendium.ptu.references.Item.bdkhDY1yYn4MPP2d",
             "label": "Tools of the Trade",
-            "value": "Item.BF66Z8cf7LD5Wlxs",
             "predicate": [
               {
                 "not": "capability:tools-of-the-trade"
@@ -201,14 +204,16 @@
     ],
     "enabled": true,
     "slug": "advanced-capture-techniques-rank-1",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:29.256Z",
+        "datetime": "2026-06-28T12:56:34.388Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -244,6 +249,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Capture Specialist"
     ],
@@ -252,33 +258,25 @@
     "class": "Capture Specialist",
     "automation": [],
     "name": "Advanced Capture Techniques Rank 1",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": ""
+    "useCount": 0
   },
-  "type": "feat",
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "effects": [],
   "flags": {
     "ptu": {
+      "showInTokenPanel": true,
       "prereqBackup": "Capture Specialist",
-      "showInTokenPanel": true
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
     }
   },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1683368079326,
-    "modifiedTime": 1778200829324,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  },
-  "folder": "jpLcXij2i9NorfO0",
-  "_id": "GGTPvNY9GBwpdsqs",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  }
+  "_id": "DNL58BWOdkc7zxVC"
 }

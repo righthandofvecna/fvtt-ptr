@@ -13,10 +13,44 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.DcNfimWHEweMv9YS",
+            "label": "Spinning Dance",
+            "predicate": [
+              {
+                "not": "ability:spinning-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.Fp7nWb0csK9MHRsZ",
+            "label": "Own Tempo",
+            "predicate": [
+              {
+                "not": "ability:own-tempo"
+              }
+            ]
+          }
+        ],
+        "flag": "dancer",
+        "adjustName": false,
+        "allowedDrops": null
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.dancer}"
       }
     ],
     "enabled": true,
     "slug": "dancer-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "dancer",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -62,38 +96,35 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Novice Acrobatics or Athletics or Charm"
     ],
     "notes": "",
     "free": false,
     "class": "Dancer",
-    "name": "Dancer [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "dancer"
+    "name": "Dancer [CR]"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
   "folder": "5JFKPKlyJEga6GKY",
-  "_id": "4cvt6gLXQyBm8WLw",
+  "_id": "vd0AWlLvEhLLTpgE",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "itemGrants": {
+        "vd0AWlLvEhLLTpgE": {
+          "id": "vd0AWlLvEhLLTpgE",
+          "onDelete": "detach"
+        }
+      },
+      "grantedBy": {
+        "id": "vd0AWlLvEhLLTpgE",
+        "onDelete": "detach"
+      },
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200828680,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

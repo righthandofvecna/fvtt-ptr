@@ -1,0 +1,93 @@
+{
+  "name": "Tools of the Trade",
+  "type": "capability",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Add +2 to all Accuracy Rolls made with Poké Balls, Hand Nets, Lassos, Weighted Nets, Glue Cannons, and Cap Cannons. Add +2 to Athletics Checks made when reeling in a Pokémon with a Fishing Rod, and add +4 to 1d20 rolls made to see if a Pokémon is attracted by Bait or a Fishing Lure.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "pokeball-throw",
+        "value": 2,
+        "label": "Tools of the Trade"
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": {
+          "and": [
+            "skill:athletics",
+            "manual"
+          ]
+        },
+        "hideIfDisabled": false,
+        "selectors": "skill-check",
+        "value": 2,
+        "label": "Fishing"
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "move:fish"
+        ],
+        "hideIfDisabled": false,
+        "selectors": "attack-roll",
+        "value": 4,
+        "label": "Fishing - lure?"
+      }
+    ],
+    "enabled": true,
+    "slug": "tools-of-the-trade",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:41:18.608Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Capture Technique"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": "jpLcXij2i9NorfO0",
+  "_id": "bdkhDY1yYn4MPP2d"
+}

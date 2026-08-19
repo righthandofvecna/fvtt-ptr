@@ -13,6 +13,157 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.etQ46pkobBuyW3Xx",
+            "label": "Feather Dance",
+            "predicate": [
+              {
+                "not": "move:feather-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.TjyskB7OEbBoJ819",
+            "label": "Fiery Dance",
+            "predicate": [
+              {
+                "not": "move:fiery-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.z5hgetbLhLvsd800",
+            "label": "Swords Dance",
+            "predicate": [
+              {
+                "not": "move:swords-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.bcsQuXZz2B9Jnpmt",
+            "label": "Teeter Dance",
+            "predicate": [
+              {
+                "not": "move:teeter-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.dJm387VzcoJlHf8I",
+            "label": "Dragon Dance",
+            "predicate": [
+              {
+                "not": "move:dragon-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.JEquTUzbVYPNvhNp",
+            "label": "Petal Dance",
+            "predicate": [
+              {
+                "not": "move:petal-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.8zsezmtkgLoLe6XJ",
+            "label": "Aqua Step",
+            "predicate": [
+              {
+                "not": "move:aqua-step"
+              }
+            ]
+          }
+        ],
+        "adjustName": false,
+        "flag": "fancy2-1"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.fancy2-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.etQ46pkobBuyW3Xx",
+            "label": "Feather Dance",
+            "predicate": [
+              {
+                "not": "move:feather-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.TjyskB7OEbBoJ819",
+            "label": "Fiery Dance",
+            "predicate": [
+              {
+                "not": "move:fiery-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.z5hgetbLhLvsd800",
+            "label": "Swords Dance",
+            "predicate": [
+              {
+                "not": "move:swords-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.bcsQuXZz2B9Jnpmt",
+            "label": "Teeter Dance",
+            "predicate": [
+              {
+                "not": "move:teeter-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.dJm387VzcoJlHf8I",
+            "label": "Dragon Dance",
+            "predicate": [
+              {
+                "not": "move:dragon-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.JEquTUzbVYPNvhNp",
+            "label": "Petal Dance",
+            "predicate": [
+              {
+                "not": "move:petal-dance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.8zsezmtkgLoLe6XJ",
+            "label": "Aqua Step",
+            "predicate": [
+              {
+                "not": "move:aqua-step"
+              }
+            ]
+          }
+        ],
+        "flag": "fancy2-2"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.fancy2-2}"
       }
     ],
     "enabled": true,
@@ -71,7 +222,8 @@
     "class": "Dancer",
     "name": "Fancy Footwork [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "fancy-footwork-rank-2"
+    "replacesSlug": "fancy-footwork-rank-2",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
