@@ -59,11 +59,11 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "vKXX0T04RnD0Olx5",
   "effects": [],
-  "folder": null,
   "sort": 50300000,
   "ownership": {
     "default": 0
