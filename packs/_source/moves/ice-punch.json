@@ -84,7 +84,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "I0Cy1NP2brM1jq1h",
   "effects": [],
