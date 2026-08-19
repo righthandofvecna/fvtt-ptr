@@ -7,9 +7,21 @@
     "origin": "",
     "effect": "The user's Defense is raised 1 Combat Stage.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.WHF44ZYCCgFEXlpX",
+        "range": "",
+        "value": "",
+        "affects": "origin"
+      }
+    ],
     "enabled": true,
     "slug": "withdraw",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -58,6 +70,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Water",
     "category": "Status",
     "damageBase": "--",
@@ -67,29 +80,13 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "PLNrSnH8aJCbQSAq",
+  "_id": "MH4dZJQw1DLM1Cvj",
   "effects": [],
-  "sort": 34100000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200824271,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

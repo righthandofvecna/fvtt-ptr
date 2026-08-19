@@ -11,10 +11,11 @@
       {
         "key": "ApplyEffect",
         "predicate": [],
-        "selectors": "{item|id}-damage-received",
+        "selectors": "{item|id}-apply-effects",
         "uuid": "Compendium.ptu.effects.Item.eMPsvGnslThZfXly",
-        "range": "1",
-        "value": ""
+        "range": "",
+        "value": "",
+        "affects": "target"
       }
     ],
     "enabled": true,
@@ -78,7 +79,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "kxvFjyRtAzf99FIX",
   "effects": [],

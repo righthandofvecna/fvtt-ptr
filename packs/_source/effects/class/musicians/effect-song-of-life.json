@@ -13,14 +13,18 @@
         "path": "system.modifiers.damageReduction.physical.mod",
         "mode": "add",
         "priority": -2,
-        "value": 5
+        "value": 5,
+        "predicate": [],
+        "phase": "applyAEs"
       },
       {
         "key": "ActiveEffectLike",
         "path": "system.modifiers.damageReduction.special.mod",
         "mode": "add",
         "priority": -2,
-        "value": 5
+        "value": 5,
+        "predicate": [],
+        "phase": "applyAEs"
       }
     ],
     "enabled": true,
@@ -46,9 +50,9 @@
       "value": 1
     },
     "duration": {
-      "value": -1,
-      "unit": "unlimited",
-      "expiry": null
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-end"
     },
     "start": {
       "value": 0,
@@ -67,7 +71,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.0.0.beta.3",

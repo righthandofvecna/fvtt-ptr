@@ -4,17 +4,29 @@
     "origin": "",
     "effect": "Heals 25 Hit Points - Herbal Restorative.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.fDin1M5koZPLFH60",
+        "range": "",
+        "value": "",
+        "affects": "target"
+      }
+    ],
     "enabled": true,
     "slug": "energy-powder",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:41.230Z",
+        "datetime": "2026-07-06T12:14:57.162Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
@@ -24,8 +36,7 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Medicine",
-      "Herbal"
+      "Medicine"
     ],
     "frequency": {
       "type": "at-will",
@@ -50,42 +61,27 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "quantity": "1",
-    "category": "",
+    "category": "Medical",
     "cost": "150",
     "consumable": "0",
     "subtype": "",
     "container": false,
     "automation": [],
     "name": "Energy Powder",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": ""
+    "useCount": 0
   },
   "type": "item",
-  "img": "systems/ptu/static/images/item_icons/energy powder.webp",
+  "img": "systems/ptu/images/item_icons/energy powder.webp",
   "effects": [],
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
+      "showInTokenPanel": false,
       "automationStatus": "needs-automation",
-      "devNote": "",
-      "showInTokenPanel": false
+      "devNote": ""
     }
   },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1683368856277,
-    "modifiedTime": 1778200841272,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  },
   "folder": null,
-  "sort": 13900000,
-  "_id": "AbfaIrLufx5RwVvv"
+  "_id": "ScqK9tyEHKDwlmIW"
 }

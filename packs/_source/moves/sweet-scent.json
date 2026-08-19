@@ -1,23 +1,35 @@
 {
   "name": "Sweet Scent",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "img": "/systems/ptu/css/images/types2/NormalIC_Icon.png",
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "Targets hit by Sweet Scent gain a -2 Penalty to Evasion. (Total Evasion may not be lowered to a negative value.) *Grants Alluring",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.ciADvbrPLkN1ZMKb",
+        "range": "",
+        "value": "",
+        "affects": "target"
+      }
+    ],
     "enabled": true,
     "slug": "sweet-scent",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:25.492Z",
+        "datetime": "2026-07-06T12:14:57.163Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
@@ -60,6 +72,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Normal",
     "category": "Status",
     "damageBase": "--",
@@ -69,29 +82,14 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "nJhqaS0PzJJ7w1pS",
+  "_id": "CDMHE36OXtK49jO4",
   "effects": [],
-  "sort": 71300000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": null
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200825548,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

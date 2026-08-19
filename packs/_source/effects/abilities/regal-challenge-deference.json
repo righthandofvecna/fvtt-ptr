@@ -1,0 +1,89 @@
+{
+  "name": "Effect: Regal Challenge (Deference)",
+  "type": "effect",
+  "img": "systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "If they choose Deference, the target loses their next Shift action and loses 3 CS in the Stat of the user’s choice.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "deference",
+        "choices": [
+          {
+            "value": "system.stats.atk.stage.mod",
+            "label": "Attack -3"
+          },
+          {
+            "value": "system.stats.def.stage.mod",
+            "label": "Defense -3"
+          },
+          {
+            "value": "system.stats.spatk.stage.mod",
+            "label": "Special Attack -3"
+          },
+          {
+            "value": "system.stats.spdef.stage.mod",
+            "label": "Special Defense -3"
+          },
+          {
+            "value": "system.stats.spd.stage.mod",
+            "label": "Speed -3"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "subtract",
+        "path": "{item|flags.ptu.rulesSelections.deference}",
+        "phase": "applyAEs",
+        "value": 3,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "regal-challenge-deference",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "encounter",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "HTNFGIxy9zsCONjI",
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  },
+  "_id": "XEkq9g4BRWiy916y"
+}

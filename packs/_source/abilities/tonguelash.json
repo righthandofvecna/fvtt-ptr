@@ -1,22 +1,31 @@
 {
   "name": "Tonguelash",
   "type": "ability",
-  "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
+  "img": "/systems/ptu/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "Trigger - The user hits a target with Lick\nConnection - Lick. Lick automatically Paralyzes and Flinches its target. The user may use Lick as if it was Normal-Typed.",
+    "effect": "Trigger - The user hits a target with Lick\\nConnection - Lick. Lick automatically Paralyzes and Flinches its target. The user may use Lick as if it was Normal-Typed.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.6ePYnDDvYpss2MsY"
+      }
+    ],
     "enabled": true,
     "slug": "tonguelash",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:16.010Z",
+        "datetime": "2026-07-06T12:14:59.199Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
@@ -49,27 +58,18 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "7xlLELwgr1fiellq",
+  "_id": "VdKsQfOiSqT85mEf",
   "effects": [],
   "folder": null,
-  "sort": 8200000,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692968394056,
-    "modifiedTime": 1778200816053,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "abilityChosen": "basic",
+      "showInTokenPanel": true,
+      "used": null
+    }
   }
 }

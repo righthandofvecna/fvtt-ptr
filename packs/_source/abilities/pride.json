@@ -6,9 +6,29 @@
     "origin": "",
     "effect": "While suffering from Burn, Poison, Paralysis, Freezing, or while Asleep, the user’s Special Attack is raised 2 Combat Stages. If suffering from none of these conditions, the user loses any Combat Stages gained this way.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "or": [
+            "condition:burned",
+            "condition:paralysis",
+            "condition:poisoned",
+            "condition:sleep",
+            "condition:frozen"
+          ]
+        },
+        "mode": "add",
+        "path": "system.stats.spatk.stage.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "pride",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -49,27 +69,19 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "8brN3Vlz1joXVmO2",
+  "_id": "Us3WMNnhSkYbgFhj",
   "effects": [],
   "folder": null,
-  "sort": 8900000,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692968394056,
-    "modifiedTime": 1778200816053,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "abilityChosen": "basic",
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
   }
 }

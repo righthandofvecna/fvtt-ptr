@@ -7,9 +7,21 @@
     "origin": "",
     "effect": "Raise the user's Attack by 1 Combat Stage.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.BTDSDRrsJXzPwxSF",
+        "range": "",
+        "value": "",
+        "affects": "origin"
+      }
+    ],
     "enabled": true,
     "slug": "sharpen",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -58,6 +70,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Normal",
     "category": "Status",
     "damageBase": "--",
@@ -67,29 +80,13 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "0T6UdFilX3WHVIyg",
+  "_id": "mQkDOIHjwu2vyYFO",
   "effects": [],
-  "sort": 1200000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200823027,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }
