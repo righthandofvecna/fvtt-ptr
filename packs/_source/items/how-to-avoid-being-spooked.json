@@ -2,7 +2,7 @@
   "name": "How To Avoid Being Spooked",
   "system": {
     "origin": "",
-    "effect": "A questionable old tome filled with Ghost-related esoterica.\n\nRank 1 - Adept Occult Education: While holding a Cleanse Tag in your Main or Off-Hand Equipment Slot, you can see Pokémon and Trainers using the Invisibility Capability.\nRank 2 - Expert Occult Education: While holding a Cleanse Tag in your Main or Off-Hand Equipment Slot, you are immune to the Cursed Status Affliction.",
+    "effect": "A questionable old tome filled with Ghost-related esoterica.\n\nRank 1 - Adept Occult Education: While holding a @UUID[Compendium.ptu.items.Item.wrzb9IOaAJoFoU7R]{Cleanse Tag} in your Main or Off-Hand Equipment Slot, you can see Pokémon and Trainers using the @UUID[Compendium.ptu.capabilities.Item.6sANE4BU79H8FAUR]{Invisibility} Capability.\nRank 2 - Expert Occult Education: While holding a Cleanse Tag in your Main or Off-Hand Equipment Slot, you are immune to the @UUID[Compendium.ptu.effects.Item.Su7r4LU2xSVK9WY6]{Cursed} Status Affliction.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "How To Avoid Being Spooked",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 25800000,
   "_id": "LZi6AHf9HrnHiZ3a"
 }

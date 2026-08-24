@@ -2,7 +2,7 @@
   "name": "Pokémon Daycare Licensing Guide",
   "system": {
     "origin": "",
-    "effect": "This book teaches advanced Pokémon Breeding techniques.\n\nRank 1 - Adept Pokémon Education: When Breeding Pokémon of this Book’s Egg Group, you may choose which parent’s species the Egg is of.\nRank 2 - Master Pokémon Education: When hatching Eggs of Pokémon of this Book’s Egg Group, the hatched Pokémon learns their first Inheritance Move at Level 10 instead of Level 20.",
+    "effect": "This book teaches advanced Pokémon Breeding techniques for a specific Egg Group.\n\nRank 1 - Adept Pokémon Education: When Breeding Pokémon of this Book’s Egg Group, you may choose which parent’s species the Egg is of.\nRank 2 - Master Pokémon Education: When hatching Eggs of Pokémon of this Book’s Egg Group, the hatched Pokémon learns their first Inheritance Move at Level 10 instead of Level 20.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "Pokémon Daycare Licensing Guide",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 40300000,
   "_id": "Xs90ZmqW66BCiQmA"
 }
