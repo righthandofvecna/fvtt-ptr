@@ -2,7 +2,7 @@
   "name": "Nurse",
   "system": {
     "origin": "",
-    "effect": "Trigger - You take an Extended Rest\nEffect: During this Extended Rest, Pokémon and Trainers in your care gain the benefits listed below. The AP Drain cost from triggering this Feature is applied after the Extended Rest is completed and AP Drain has otherwise been restored.\n»» They heal 1/8th of their Max Hit Points per half hour of rest instead of 1/16th (does not stack with Bandages).\n»» If the Extended Rest lasts at least 6 hours, they may remove 1 Injury.",
+    "effect": "Trigger - You take an Extended Rest\nEffect: During this Extended Rest, Pokémon and Trainers in your care gain the benefits listed below. The AP Drain cost from triggering this Feature is applied after the Extended Rest is completed and AP Drain has otherwise been restored.\n»» They heal 1/8th of their Max Hit Points per half hour of rest instead of 1/16th (does not stack with @UUID[Compendium.ptu.items.Item.kTXHG6L2b6NzrWQY]{Bandages}).\n»» If the Extended Rest lasts at least 6 hours, they may remove 1 Injury.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -57,7 +57,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +68,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert Medicine Education"
+      "prereqBackup": "Expert Medicine Education",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -80,7 +84,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 16400000,
   "_id": "G3FxaPfnkNH88PiA"
 }

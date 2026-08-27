@@ -2,7 +2,7 @@
   "name": "First Aid Manual",
   "system": {
     "origin": "",
-    "effect": "A training manual given to all EMTs.\n\nRank 1 - Novice Medicine Education: You gain a +10 Bonus to Medicine Education Checks made to use a First Aid Kit.\nRank 2 - Expert Medicine Education: You may use the First Aid Expertise Feature once per day.",
+    "effect": "A training manual given to all EMTs.\n\nRank 1 - Novice Medicine Education: You gain a +10 Bonus to Medicine Education Checks made to use a @UUID[Compendium.ptu.items.Item.NJAgpzbxLuwzaRdx]{First Aid Kit}.\nRank 2 - Expert Medicine Education: You may use the @UUID[Compendium.ptu.feats.Item.beL0mQ0ddaiE24tt]{First Aid Expertise} Feature once per day.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "First Aid Manual",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 27100000,
   "_id": "MPD8ZrLpnRmtUHYI"
 }
