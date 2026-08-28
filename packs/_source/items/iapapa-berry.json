@@ -2,7 +2,7 @@
   "name": "Iapapa Berry",
   "system": {
     "origin": "",
-    "effect": "Sour Treat. Heals 1/8th of the Pokémon’s Max HP. If the user likes the Treat’s flavor, it heals 1/6th instead. If the user dislikes the treat’s flavor, the user is Confused. Tough Poffin Ingredient. Tier 2.",
+    "effect": "Sour Treat. Heals 1/8th of the Pokémon’s Max HP. If the user likes the Treat’s flavor, it heals 1/6th instead. If the user dislikes the treat’s flavor, the user is @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confused}. Tough Poffin Ingredient. Tier 2.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -62,7 +62,8 @@
     "container": false,
     "automation": [],
     "name": "Iapapa Berry",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/iapapa berry.webp",
@@ -87,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 58500000,
   "_id": "qHAQPjlnHjtkJ28h"
 }

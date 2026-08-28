@@ -2,7 +2,7 @@
   "name": "Persim Berry",
   "system": {
     "origin": "",
-    "effect": "Cures Confusion. Tier 1.",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confusion}. Tier 1.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -65,7 +65,8 @@
     "container": false,
     "automation": [],
     "name": "Persim Berry",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/persim berry.webp",
@@ -90,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 36000000,
   "_id": "UIukeOUhW7aQKDhe"
 }

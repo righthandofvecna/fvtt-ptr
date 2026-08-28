@@ -2,7 +2,7 @@
   "name": "Nomel Berry",
   "system": {
     "origin": "",
-    "effect": "Cures Infatuated condition. Tier 2.",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.ABTHN2VM50VQabZq]{Infatuated} condition. Tier 2.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -63,7 +63,8 @@
     "container": false,
     "automation": [],
     "name": "Nomel Berry",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/nomel berry.webp",
@@ -88,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 39300000,
   "_id": "WoqejsstCRWX2tdD"
 }
