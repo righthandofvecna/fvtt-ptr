@@ -2,7 +2,7 @@
   "name": "Blue Shard",
   "system": {
     "origin": "",
-    "effect": "Associated with Water, Ice, & Flying. With Gem Lore, 4 can be combined into a Water Stone.",
+    "effect": "Associated with Water, Ice, & Flying. With @UUID[Compendium.ptu.edges.Item.KjZ1VN3rZpnoSRVk]{Gem Lore}, 4 can be combined into a @UUID[Compendium.ptu.items.Item.AG560Qb5L1AslrQE]{Water Stone}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -29,7 +29,7 @@
       "Artificer"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -61,7 +61,8 @@
     "name": "Blue Shard",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/blue shard.webp",
@@ -69,7 +70,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -80,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 65400000,
   "_id": "w6eiB1WS68v4Tp9y"
 }
