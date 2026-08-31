@@ -24,6 +24,15 @@
         "phase": "applyAEs",
         "value": 1,
         "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "flags.ptu.stockpile",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,

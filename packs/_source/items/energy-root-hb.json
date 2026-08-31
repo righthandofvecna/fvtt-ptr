@@ -1,31 +1,28 @@
 {
-  "name": "Will-O-Wisp",
-  "type": "move",
-  "img": "/systems/ptu/css/images/types2/FireIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "name": "Energy Root",
   "system": {
     "origin": "",
-    "effect": "The target is Burned.",
+    "effect": "Heals 70 Hit Points - Herbal Restorative.",
     "snippet": "",
     "rules": [
       {
         "key": "ApplyEffect",
         "predicate": [],
         "selectors": "{item|id}-apply-effects",
-        "uuid": "Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj",
+        "uuid": "Compendium.ptu.effects.Item.vCjcN8T79NY3rwA1",
         "range": "",
         "value": "",
         "affects": "target"
       }
     ],
     "enabled": true,
-    "slug": "will-o-wisp",
+    "slug": "energy-root-hb",
     "contentSet": "homebrew",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-07-06T12:14:59.184Z",
+        "datetime": "2026-07-06T12:14:57.162Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.361",
@@ -33,26 +30,19 @@
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj",
+    "referenceEffect": "",
     "source": {
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1"
+      "Medicine",
+      "Herbal"
     ],
-    "sheerForce": false,
-    "toughClaws": false,
-    "technician": false,
-    "reckless": false,
-    "ironFist": false,
-    "megaLauncher": false,
-    "punkRock": false,
-    "strongJaw": false,
     "frequency": {
-      "type": "eot",
-      "max": null,
-      "custom": "EOT",
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -62,7 +52,7 @@
       }
     },
     "actionCost": {
-      "standard": true,
+      "standard": false,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -73,22 +63,26 @@
       "bind": false
     },
     "leagueLegal": false,
-    "type": "Fire",
-    "category": "Status",
-    "damageBase": "--",
-    "ac": "5",
-    "range": "Range 6",
-    "contestType": "Beauty - Exhausting Act",
-    "stab": false,
-    "damageBonus": 0,
-    "isStruggle": false,
-    "automation": []
+    "quantity": "1",
+    "category": "Medical",
+    "cost": "500",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Energy Root",
+    "useCount": 0
   },
-  "_id": "Ev7VAhpvAb0qJEAz",
+  "type": "item",
+  "img": "systems/ptu/images/item_icons/energy root.webp",
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
-  }
+  },
+  "folder": null,
+  "_id": "mAQcc0mBkffucnb7"
 }

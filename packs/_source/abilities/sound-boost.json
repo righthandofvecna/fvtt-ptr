@@ -1,42 +1,37 @@
 {
-  "name": "Landslide",
+  "name": "Sound Boost",
   "type": "ability",
-  "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
+  "flags": {
+    "ptu": {
+      "abilityChosen": "basic",
+      "showInTokenPanel": false
+    }
+  },
+  "effects": [],
+  "_id": "eHFPba0B2gBDz2Tv",
   "system": {
     "origin": "",
-    "effect": "The user gains a +5 bonus to Damage Rolls when using Ground-Type attacks. This bonus increases to +10 when the user is under 1/3rd of their Maximum Hit Points.",
+    "effect": "The user increases the Damage Base of all Sonic Moves by +2.",
     "snippet": "",
     "rules": [
       {
         "key": "FlatModifier",
-        "predicate": [],
+        "predicate": [
+          "move:sonic"
+        ],
         "hideIfDisabled": false,
-        "selectors": "ground-damage",
-        "value": {
-          "brackets": [
-            {
-              "start": 34,
-              "end": 100,
-              "value": 5
-            },
-            {
-              "start": -100,
-              "end": 33,
-              "value": 10
-            }
-          ],
-          "field": "actor|system.health.percent"
-        }
+        "selectors": "damage-base",
+        "value": 2
       }
     ],
     "enabled": true,
-    "slug": "landslide",
+    "slug": "sound-boost",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:16.221Z",
+        "datetime": "2026-05-08T00:40:16.989Z",
         "version": {
           "schema": 0.11,
           "foundry": "13.351",
@@ -75,17 +70,10 @@
     },
     "leagueLegal": false,
     "tier": "",
-    "automation": []
+    "name": "",
+    "automation": [],
+    "useCount": 0
   },
-  "_id": "FeTLEWcR7OGiiR4p",
-  "effects": [],
-  "folder": "uxoML8Yq3h8KXzmw",
-  "flags": {
-    "ptu": {
-      "abilityChosen": "basic",
-      "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
-      "devNote": ""
-    }
-  }
+  "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
+  "folder": null
 }

@@ -11,7 +11,7 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.moves.Item.qRvLgOrsmdXEsBsU"
+        "uuid": "Compendium.ptu.moves.Item.hi7gAfufnGgdttyo"
       }
     ],
     "enabled": true,
@@ -59,13 +59,16 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "folder": "tTEKmUGjpYYdsHvJ",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

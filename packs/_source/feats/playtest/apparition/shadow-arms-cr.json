@@ -1,5 +1,9 @@
 {
+  "folder": "9Lj9g7fcD9O4Gws1",
   "name": "Shadow Arms",
+  "type": "feat",
+  "_id": "3aeEEG95l9F2uY5N",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Shadow Claw, Shadow Punch, and Shadow Sneak. You may use these as Weapon Attacks when wielding Melee Weapons.",
@@ -13,18 +17,41 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.pT1I4vwhSiqnVRkr",
+        "flag": "shadow-claw"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.TXPzXlSA5R7gCowi",
+        "flag": "shadow-punch"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.ShchrVmRnyokSkTh",
+        "flag": "shadow-sneak"
       }
     ],
     "enabled": true,
     "slug": "shadow-arms-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:31.128Z",
+        "datetime": "2026-06-28T12:56:35.394Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -62,38 +89,48 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Apparition"
     ],
     "notes": "",
     "free": false,
     "class": "Apparition",
-    "name": "Shadow Arms [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "shadow-arms"
+    "name": "Shadow Arms [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "9Lj9g7fcD9O4Gws1",
-  "_id": "lRuBU3MTL78YuveQ",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "grantedBy": {
+        "id": "bffAwvKW5M1HggAL",
+        "onDelete": "detach"
+      },
+      "itemGrants": {
+        "shadow-claw": {
+          "id": "bvuiwd9NkoK3Yq0i",
+          "onDelete": "detach"
+        },
+        "shadow-punch": {
+          "id": "JQDu5pU60gq0vh56",
+          "onDelete": "detach"
+        },
+        "shadow-sneak": {
+          "id": "sbQ4RWrqRJSWI0cf",
+          "onDelete": "detach"
+        }
+      },
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200831195,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

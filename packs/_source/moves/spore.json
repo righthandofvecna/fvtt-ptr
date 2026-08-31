@@ -7,7 +7,17 @@
     "origin": "",
     "effect": "The target falls Asleep.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.RekZDOcIsADhrfH3",
+        "range": "",
+        "value": "",
+        "affects": "target"
+      }
+    ],
     "enabled": true,
     "slug": "spore",
     "schema": {
@@ -72,7 +82,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "soZ40VFFxCDiniJu",
   "effects": [],
@@ -82,7 +93,8 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": null
     }
   },
   "_stats": {

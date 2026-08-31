@@ -1,42 +1,35 @@
 {
-  "name": "Mach Speed",
+  "name": "Fluffy",
   "type": "ability",
   "img": "/systems/ptu/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "The user gains a +5 bonus to Damage Rolls when using Flying-Type attacks. This bonus increases to +10 when the user is under 1/3rd of their Maximum Hit Points.",
+    "effect": "The user resists damaging Melee attacks one step further, but resists Fire-Type attacks one step less. Defensive.",
     "snippet": "",
     "rules": [
       {
-        "key": "FlatModifier",
+        "key": "EphemeralEffect",
         "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "flying-damage",
-        "value": {
-          "brackets": [
-            {
-              "start": 34,
-              "end": 100,
-              "value": 5
-            },
-            {
-              "start": -100,
-              "end": 33,
-              "value": 10
-            }
-          ],
-          "field": "actor|system.health.percent"
-        }
+        "selectors": "melee-damage",
+        "affects": "origin",
+        "uuid": "Compendium.ptu.effects.Item.DQbQb7SHdnMGoHuu"
+      },
+      {
+        "key": "EphemeralEffect",
+        "predicate": [],
+        "selectors": "fire-damage",
+        "affects": "origin",
+        "uuid": "Compendium.ptu.effects.Item.YirEcq7HUwGSPBBO"
       }
     ],
     "enabled": true,
-    "slug": "mach-speed",
+    "slug": "fluffy-hb",
     "contentSet": "homebrew",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-07-06T12:14:57.163Z",
+        "datetime": "2026-07-06T12:14:57.159Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.361",
@@ -77,13 +70,15 @@
     "tier": "",
     "automation": []
   },
-  "_id": "AOyBivJI3c0zaCo2",
+  "_id": "fSpfcpS8Y7iywP75",
   "effects": [],
   "folder": null,
   "flags": {
     "ptu": {
       "abilityChosen": "basic",
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   }
 }

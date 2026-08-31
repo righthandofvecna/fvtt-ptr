@@ -1,7 +1,7 @@
 {
   "name": "Taunt",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
+  "img": "/systems/ptu/css/images/types2/DarkIC_Icon.png",
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
@@ -11,23 +11,25 @@
       {
         "key": "ApplyEffect",
         "predicate": [],
-        "affects": "target",
-        "selectors": "{item|id}-damage-received",
+        "selectors": "{item|id}-apply-effects",
         "uuid": "Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh",
-        "range": "1",
-        "value": ""
+        "range": "",
+        "value": "",
+        "affects": "target"
       }
     ],
     "enabled": true,
     "slug": "taunt",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:24.217Z",
+        "datetime": "2026-07-06T12:14:59.174Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
@@ -71,6 +73,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Dark",
     "category": "Status",
     "damageBase": "--",
@@ -80,29 +83,13 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "PPcOINwAtEYByNNN",
+  "_id": "fSZAgbPOj1xa7wbE",
   "effects": [],
-  "sort": 34300000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200824271,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }
