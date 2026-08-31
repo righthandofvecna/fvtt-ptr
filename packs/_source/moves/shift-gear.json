@@ -7,7 +7,17 @@
     "origin": "",
     "effect": "Raise the user's Attack by 1 Combat Stage and Speed by 2 Combat Stages.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.6ugXmtsjIsaGbtRS",
+        "range": "",
+        "value": "",
+        "affects": "origin"
+      }
+    ],
     "enabled": true,
     "slug": "shift-gear",
     "schema": {
@@ -21,7 +31,7 @@
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.XG7elhckWLSxaaY1",
+    "referenceEffect": "Compendium.ptu.effects.Item.6ugXmtsjIsaGbtRS",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -69,12 +79,16 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": null,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

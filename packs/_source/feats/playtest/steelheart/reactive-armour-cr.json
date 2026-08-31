@@ -1,5 +1,9 @@
 {
+  "folder": "ragCbmOsDCUz60wA",
   "name": "Reactive Armour",
+  "type": "feat",
+  "_id": "U4yQAhqrFKFI8uOw",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Trigger: You gain an Injury or take a Critical Hit while wearing metallic Armor\nEffect: All foes within a Burst 1 lose Hit Points equal to double your Athletics or Focus Rank, and you gain Damage Reduction equal to double your Athletics or Focus Rank for one full round.",
@@ -17,18 +21,20 @@
     ],
     "enabled": true,
     "slug": "reactive-armour-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:28.934Z",
+        "datetime": "2026-06-28T12:56:35.393Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.lrQpcbxDL1LJJmn3",
     "source": {
       "value": "Homebrew"
     },
@@ -61,6 +67,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Steelheart",
       "Adept Athletics or Focus"
@@ -68,28 +75,13 @@
     "notes": "",
     "free": false,
     "class": "Steelheart",
-    "name": "Reactive Armour [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "reactive-armour"
+    "name": "Reactive Armour [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "ragCbmOsDCUz60wA",
-  "_id": "AtrMoZ1xSNkVpTJi",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200829000,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "used": null
+    }
   }
 }

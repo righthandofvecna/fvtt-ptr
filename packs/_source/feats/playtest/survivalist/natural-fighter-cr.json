@@ -1,8 +1,8 @@
 {
-  "name": "Natural Fighter",
+  "name": "Natural Fighter [CR]",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You and your Pokémon become adept at using the environment to your advantage in battle. You or your Pokémon may activate Natural Fighter as a Standard Action to use the Move below corresponding to the current terrain. You and your Pokémon must still follow all Frequency limitations for the Move.\n- Grassland: Grass Whistle or Cotton Spore\n- Forest: Aromatherapy or Grass Knot\n- Wetlands: Mud Slap or Mud Sport\n- Ocean: Aqua Ring or Water Sport\n- Tundra: Haze or Icy Wind\n- Mountain: Smack Down or Stealth Rock\n- Cave: Astonish or Covet\n- Urban: Spikes or Pay Day\n- Desert: Sand Attack or Sand Tomb\n> Note: GMs! Don’t be super duper strict about the terrains here. Obviously a beach is analogous enough to a desert to use Sand Attack, and a lake can count as ocean terrain. In urban terrain, there’ll probably at least be trash around to Fling with the standard 6 DB option. On the other hand, most standard arenas for League matches won’t qualify for any of the terrains. However, some arenas may be specifically designed to emulate a terrain type, such as a rocky stadium or a set of floating platforms in a pool.\n{.is-info}",
+    "effect": "Effect: You and your Pokémon become adept at using the environment to your advantage in battle. You or your Pokémon may activate Natural Fighter as a Standard Action to use the Move below corresponding to the current terrain. You and your Pokémon must still follow all Frequency limitations for the Move.\n- Grassland: Grass Whistle @UUID[Compendium.world.updated-classes-not-in-system-yet.Item.mZCEecYoFXEPlGtu] or Cotton Spore @UUID[Compendium.world.updated-classes-not-in-system-yet.Item.08DZcCU0jqyEQ3jv]\n- Forest: Aromatherapy @UUID[Compendium.ptu.moves.Item.QzP3iamQFsN5S4FS] or Grass Knot @UUID[Compendium.ptu.moves.Item.jh2qDsk9mirEzqvu]\n- Wetlands: Mud Slap @UUID[Compendium.ptu.moves.Item.rDlHKWGG9k3AxIlP] or Mud Sport @UUID[Compendium.ptu.moves.Item.GorxsfqD0s09olBW]\n- Ocean: Aqua Ring @UUID[Compendium.world.updated-classes-not-in-system-yet.Item.hsTeK70y3vDOnrx7] or Water Sport @UUID[Compendium.ptu.moves.Item.aQC3OZK3LUV4UHj2]\n- Tundra: Haze @UUID[Compendium.ptu.moves.Item.xOwF6QzLLB5POWAK] or Icy Wind @UUID[Compendium.ptu.moves.Item.OI05tbugvNMMOqmc]\n- Mountain: Smack Down @UUID[Compendium.ptu.moves.Item.YG7EABDKQsFjDi8E] or Stealth Rock @UUID[Compendium.ptu.moves.Item.XklsarNBfkknbU8O]\n- Cave: Astonish @UUID[Compendium.ptu.moves.Item.VtkRa05N67wR9RcG] or Covet @UUID[Compendium.ptu.moves.Item.Ys1GdaKIZDiaptNB]\n- Urban: Spikes @UUID[Compendium.ptu.moves.Item.nJnfeqvu1znRWtOl] or Pay Day @UUID[Compendium.ptu.moves.Item.tDMkTUqGOU9Lxcw7]\n- Desert: Sand Attack @UUID[Compendium.world.updated-classes-not-in-system-yet.Item.CFlRmSlFPpHyNsGS] or Sand Tomb @UUID[Compendium.ptu.moves.Item.gL2f9k8qYJ1OwiZO]\n> Note: GMs! Don’t be super duper strict about the terrains here. Obviously a beach is analogous enough to a desert to use Sand Attack, and a lake can count as ocean terrain. In urban terrain, there’ll probably at least be trash around to Fling with the standard 6 DB option. On the other hand, most standard arenas for League matches won’t qualify for any of the terrains. However, some arenas may be specifically designed to emulate a terrain type, such as a rocky stadium or a set of floating platforms in a pool.\n{.is-info}",
     "snippet": "",
     "rules": [
       {
@@ -17,14 +17,16 @@
     ],
     "enabled": true,
     "slug": "natural-fighter-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:30.446Z",
+        "datetime": "2026-07-06T12:14:57.154Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
@@ -61,38 +63,29 @@
       "cost": 1,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Survivalist"
     ],
     "notes": "",
     "free": false,
     "class": "Survivalist",
-    "name": "Natural Fighter [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "natural-fighter"
+    "name": "Natural Fighter [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "type": "feat",
   "folder": "jwSUGJETAKuub2Ws",
-  "_id": "WXQpWat0hwWeuc9T",
+  "_id": "FgpYl7NbOex0rGSL",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "grantedBy": {
+        "id": "TmY6zR5dVkkTqF4l",
+        "onDelete": "detach"
+      },
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200830478,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }
