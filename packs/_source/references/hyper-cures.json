@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Apothecary Recipes",
-    "effect": "Prerequisites: Medical Techniques Effect: You can create Full Heals for $300, Hyper Potions for $400, and Full Restores for $700.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.bNVcfm2VHWfhEQGi]{Medical Techniques}\nEffect: You can create @UUID[Compendium.ptu.items.Item.5P6ANxofYLtykhvN]{Full Heals} for @Poke[300], @UUID[Compendium.ptu.items.Item.4m1zVnoahZHlSVcd]{Hyper Potions} for @Poke[400], and @UUID[Compendium.ptu.items.Item.Tb8yKIXVEcWvhmvk]{Full Restores} for @Poke[700].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "Nrj5IX1uTO6ql5VF",
   "effects": [],
-  "folder": null,
   "sort": 12200000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

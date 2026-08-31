@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Apothecary Recipes",
-    "effect": "Prerequisites: Patch Cure Cost: $200 Effect: You can create Revives and Super Potions. ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.7sbk6CnMBxkjUMBa]{Patch Cure}\nCost: @Poke[200]\nEffect: You can create @UUID[Compendium.ptu.items.Item.1HkqyxFShtqF6wac]{Revives} and @UUID[Compendium.ptu.items.Item.SpizuCWOBHGbyOyd]{Super Potions}. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "qWz1Re2Hy51kPz7H",
   "effects": [],
-  "folder": null,
   "sort": 27400000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

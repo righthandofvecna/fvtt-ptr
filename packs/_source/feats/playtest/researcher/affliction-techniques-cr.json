@@ -2,7 +2,7 @@
   "name": "Affliction Techniques",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You use an Antidote, Burn Heal, Ice Heal, or Paralyze Heal\nEffect: If the target successfully cures the target of its linked Status Affliction, the item has additional effects.\n- Antidote: The target gains +1 Special Defense Combat Stage\n- Burn Heal: The target gains +1 Defense Combat Stage.\n- Ice Heal: The target gains +1 Attack or Special Attack Combat Stage.\n- Paralyze Heal: The target gains +1 Speed Combat Stage.",
+    "effect": "Trigger: You use an @UUID[Compendium.ptu.items.Item.HzoRdjFC7xbRj460]{Antidote}, @UUID[Compendium.ptu.items.Item.WgG0d3bNUMElJxk5]{Burn Heal}, @UUID[Compendium.ptu.items.Item.7he7IuXJJDfvWhyC]{Ice Heal}, or @UUID[Compendium.ptu.items.Item.qlgi2CMVsHbNLJqI]{Paralyze Heal}\nEffect: If the target successfully cures the target of its linked Status Affliction, the item has additional effects.\n- Antidote: The target gains +1 Special Defense Combat Stage\n- Burn Heal: The target gains +1 Defense Combat Stage.\n- Ice Heal: The target gains +1 Attack or Special Attack Combat Stage.\n- Paralyze Heal: The target gains +1 Speed Combat Stage.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "class": "Researcher",
     "name": "Affliction Techniques [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "affliction-techniques"
+    "replacesSlug": "affliction-techniques",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -70,7 +71,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

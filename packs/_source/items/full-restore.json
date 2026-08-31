@@ -2,7 +2,7 @@
   "name": "Full Restore",
   "system": {
     "origin": "",
-    "effect": "Heals a Pokémon for 80 Hit Points and cures any Status Afflictions",
+    "effect": "Heals a Pokémon for 80 Hit Points and cures any Status Afflictions.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "Full Restore",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/full restore.webp",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 34900000,
   "_id": "Tb8yKIXVEcWvhmvk"
 }
