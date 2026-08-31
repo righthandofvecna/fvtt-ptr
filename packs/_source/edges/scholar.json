@@ -9,37 +9,55 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "value": 1,
-        "path": "system.skills.generalEd.modifier.mod"
+        "path": "system.skills.generalEd.modifier.mod",
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "value": 1,
-        "path": "system.skills.medicineEd.modifier.mod"
+        "path": "system.skills.medicineEd.modifier.mod",
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "value": 1,
-        "path": "system.skills.occultEd.modifier.mod"
+        "path": "system.skills.occultEd.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null,
+        "predicate": []
       },
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "value": 1,
-        "path": "system.skills.pokemonEd.modifier.mod"
+        "path": "system.skills.pokemonEd.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null,
+        "predicate": []
       },
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "value": 1,
-        "path": "system.skills.techEd.modifier.mod"
+        "path": "system.skills.techEd.modifier.mod",
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "value": 1,
-        "path": "system.skills.survival.modifier.mod"
+        "path": "system.skills.survival.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null,
+        "predicate": []
       }
     ],
     "enabled": true,
@@ -84,15 +102,14 @@
       "cost": 0,
       "bind": false
     },
-    "prerequisites": [
-      "Expert General Education"
-    ],
+    "prerequisites": [],
     "notes": "",
     "free": false,
     "name": "Scholar",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -102,7 +119,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert General Education"
+      "prereqBackup": "Expert General Education",
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -115,7 +135,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "gfL6Y9zvI5Ub5Ye0"
 }

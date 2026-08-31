@@ -56,12 +56,16 @@
     "notes": "",
     "free": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert Command or Intimidate"
+      "prereqBackup": "Expert Command or Intimidate",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

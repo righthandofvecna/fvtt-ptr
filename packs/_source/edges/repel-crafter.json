@@ -2,7 +2,7 @@
   "name": "Repel Crafter",
   "system": {
     "origin": "",
-    "effect": "Create a Repel for $100 or a Super Repel for $150. Requires access to a Chemistry Set.",
+    "effect": "Create a @UUID[Compendium.ptu.items.Item.vo6LUh99xOWwgAZP]{Repel} for @Poke[100] or a @UUID[Compendium.ptu.items.Item.hnlgR0P46wIZeIuv]{Super Repel} for @Poke[150]. Requires access to a @UUID[Compendium.ptu.items.Item.TKvIfu9P1hJDodK5]{Chemistry Set}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -55,7 +55,8 @@
     "name": "Repel Crafter",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Medicine or Technology Education"
+      "prereqBackup": "Novice Medicine or Technology Education",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -78,7 +82,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "2rUgHr7755xzp25k"
 }

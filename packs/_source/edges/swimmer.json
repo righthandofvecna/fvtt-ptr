@@ -9,7 +9,10 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "value": 2,
-        "path": "system.modifiers.capabilities.swim"
+        "path": "system.modifiers.capabilities.swim",
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -62,7 +65,8 @@
     "name": "Swimmer",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -72,7 +76,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Athletics or Survival"
+      "prereqBackup": "Novice Athletics or Survival",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -85,7 +92,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "BEKoMxGkYLzJyMsG"
 }

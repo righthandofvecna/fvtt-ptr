@@ -7,13 +7,12 @@
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "skillEnhancement1",
         "rollOption": "skill-enhancement",
         "choices": [
           {
-            "label": "Acrobatics",
             "value": "acrobatics",
+            "label": "Acrobatics",
             "predicate": [
               {
                 "not": "skill-enhancement:acrobatics"
@@ -21,8 +20,8 @@
             ]
           },
           {
-            "label": "Athletics",
             "value": "athletics",
+            "label": "Athletics",
             "predicate": [
               {
                 "not": "skill-enhancement:athletics"
@@ -30,8 +29,8 @@
             ]
           },
           {
-            "label": "Charm",
             "value": "charm",
+            "label": "Charm",
             "predicate": [
               {
                 "not": "skill-enhancement:charm"
@@ -39,8 +38,8 @@
             ]
           },
           {
-            "label": "Combat",
             "value": "combat",
+            "label": "Combat",
             "predicate": [
               {
                 "not": "skill-enhancement:combat"
@@ -48,8 +47,8 @@
             ]
           },
           {
-            "label": "Command",
             "value": "command",
+            "label": "Command",
             "predicate": [
               {
                 "not": "skill-enhancement:command"
@@ -57,8 +56,8 @@
             ]
           },
           {
-            "label": "General Education",
             "value": "generalEd",
+            "label": "General Education",
             "predicate": [
               {
                 "not": "skill-enhancement:generalEd"
@@ -66,8 +65,8 @@
             ]
           },
           {
-            "label": "Medicine Education",
             "value": "medicineEd",
+            "label": "Medicine Education",
             "predicate": [
               {
                 "not": "skill-enhancement:medicinEed"
@@ -75,8 +74,8 @@
             ]
           },
           {
-            "label": "Occult Education",
             "value": "occultEd",
+            "label": "Occult Education",
             "predicate": [
               {
                 "not": "skill-enhancement:occultEd"
@@ -84,8 +83,8 @@
             ]
           },
           {
-            "label": "Pokemon Education",
             "value": "pokemonEd",
+            "label": "Pokemon Education",
             "predicate": [
               {
                 "not": "skill-enhancement:pokemonEd"
@@ -93,8 +92,8 @@
             ]
           },
           {
-            "label": "Tech Education",
             "value": "techEd",
+            "label": "Tech Education",
             "predicate": [
               {
                 "not": "skill-enhancement:techEd"
@@ -102,8 +101,8 @@
             ]
           },
           {
-            "label": "Focus",
             "value": "focus",
+            "label": "Focus",
             "predicate": [
               {
                 "not": "skill-enhancement:focus"
@@ -111,8 +110,8 @@
             ]
           },
           {
-            "label": "Guile",
             "value": "guile",
+            "label": "Guile",
             "predicate": [
               {
                 "not": "skill-enhancement:guile"
@@ -120,8 +119,8 @@
             ]
           },
           {
-            "label": "Intimidate",
             "value": "intimidate",
+            "label": "Intimidate",
             "predicate": [
               {
                 "not": "skill-enhancement:intimidate"
@@ -129,8 +128,8 @@
             ]
           },
           {
-            "label": "Intuition",
             "value": "intuition",
+            "label": "Intuition",
             "predicate": [
               {
                 "not": "skill-enhancement:intuition"
@@ -138,8 +137,8 @@
             ]
           },
           {
-            "label": "Perception",
             "value": "perception",
+            "label": "Perception",
             "predicate": [
               {
                 "not": "skill-enhancement:perception"
@@ -147,8 +146,8 @@
             ]
           },
           {
-            "label": "Stealth",
             "value": "stealth",
+            "label": "Stealth",
             "predicate": [
               {
                 "not": "skill-enhancement:stealth"
@@ -156,8 +155,8 @@
             ]
           },
           {
-            "label": "Survival",
             "value": "survival",
+            "label": "Survival",
             "predicate": [
               {
                 "not": "skill-enhancement:survival"
@@ -165,8 +164,8 @@
             ]
           },
           {
-            "label": "Fossils",
             "value": "fossils",
+            "label": "Fossils",
             "predicate": [
               {
                 "not": "skill-enhancement:fossils"
@@ -177,13 +176,12 @@
       },
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "skillEnhancement2",
         "rollOption": "skill-enhancement",
         "choices": [
           {
-            "label": "Acrobatics",
             "value": "acrobatics",
+            "label": "Acrobatics",
             "predicate": [
               {
                 "not": "skill-enhancement:acrobatics"
@@ -191,8 +189,8 @@
             ]
           },
           {
-            "label": "Athletics",
             "value": "athletics",
+            "label": "Athletics",
             "predicate": [
               {
                 "not": "skill-enhancement:athletics"
@@ -200,8 +198,8 @@
             ]
           },
           {
-            "label": "Charm",
             "value": "charm",
+            "label": "Charm",
             "predicate": [
               {
                 "not": "skill-enhancement:charm"
@@ -209,8 +207,8 @@
             ]
           },
           {
-            "label": "Combat",
             "value": "combat",
+            "label": "Combat",
             "predicate": [
               {
                 "not": "skill-enhancement:combat"
@@ -218,8 +216,8 @@
             ]
           },
           {
-            "label": "Command",
             "value": "command",
+            "label": "Command",
             "predicate": [
               {
                 "not": "skill-enhancement:command"
@@ -227,8 +225,8 @@
             ]
           },
           {
-            "label": "General Education",
             "value": "generalEd",
+            "label": "General Education",
             "predicate": [
               {
                 "not": "skill-enhancement:generalEd"
@@ -236,8 +234,8 @@
             ]
           },
           {
-            "label": "Medicine Education",
             "value": "medicineEd",
+            "label": "Medicine Education",
             "predicate": [
               {
                 "not": "skill-enhancement:medicinEed"
@@ -245,8 +243,8 @@
             ]
           },
           {
-            "label": "Occult Education",
             "value": "occultEd",
+            "label": "Occult Education",
             "predicate": [
               {
                 "not": "skill-enhancement:occultEd"
@@ -254,8 +252,8 @@
             ]
           },
           {
-            "label": "Pokemon Education",
             "value": "pokemonEd",
+            "label": "Pokemon Education",
             "predicate": [
               {
                 "not": "skill-enhancement:pokemonEd"
@@ -263,8 +261,8 @@
             ]
           },
           {
-            "label": "Tech Education",
             "value": "techEd",
+            "label": "Tech Education",
             "predicate": [
               {
                 "not": "skill-enhancement:techEd"
@@ -272,8 +270,8 @@
             ]
           },
           {
-            "label": "Focus",
             "value": "focus",
+            "label": "Focus",
             "predicate": [
               {
                 "not": "skill-enhancement:focus"
@@ -281,8 +279,8 @@
             ]
           },
           {
-            "label": "Guile",
             "value": "guile",
+            "label": "Guile",
             "predicate": [
               {
                 "not": "skill-enhancement:guile"
@@ -290,8 +288,8 @@
             ]
           },
           {
-            "label": "Intimidate",
             "value": "intimidate",
+            "label": "Intimidate",
             "predicate": [
               {
                 "not": "skill-enhancement:intimidate"
@@ -299,8 +297,8 @@
             ]
           },
           {
-            "label": "Intuition",
             "value": "intuition",
+            "label": "Intuition",
             "predicate": [
               {
                 "not": "skill-enhancement:intuition"
@@ -308,8 +306,8 @@
             ]
           },
           {
-            "label": "Perception",
             "value": "perception",
+            "label": "Perception",
             "predicate": [
               {
                 "not": "skill-enhancement:perception"
@@ -317,8 +315,8 @@
             ]
           },
           {
-            "label": "Stealth",
             "value": "stealth",
+            "label": "Stealth",
             "predicate": [
               {
                 "not": "skill-enhancement:stealth"
@@ -326,8 +324,8 @@
             ]
           },
           {
-            "label": "Survival",
             "value": "survival",
+            "label": "Survival",
             "predicate": [
               {
                 "not": "skill-enhancement:survival"
@@ -335,8 +333,8 @@
             ]
           },
           {
-            "label": "Fossils",
             "value": "fossils",
+            "label": "Fossils",
             "predicate": [
               {
                 "not": "skill-enhancement:fossils"
@@ -351,7 +349,8 @@
         "value": 2,
         "path": "system.skills.{item|flags.ptu.rulesSelections.skillEnhancement1}.modifier.mod",
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -359,7 +358,8 @@
         "value": 2,
         "path": "system.skills.{item|flags.ptu.rulesSelections.skillEnhancement2}.modifier.mod",
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -412,7 +412,8 @@
     "name": "Skill Enhancement",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -422,7 +423,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "-"
+      "prereqBackup": "-",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -435,7 +439,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "EQgpwUEg5apFH5rE"
 }
