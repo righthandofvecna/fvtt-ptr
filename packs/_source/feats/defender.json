@@ -2,14 +2,17 @@
   "name": "Defender",
   "system": {
     "origin": "",
-    "effect": "Using the Intercept Maneuvers requires only a Shift Action Interrupt.",
+    "effect": "Using the @CompSearch[Moves Intercept]{Intercept Maneuvers} requires only a Shift Action Interrupt.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.hp.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -66,7 +69,8 @@
     "name": "Defender",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -76,7 +80,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Athletics"
+      "prereqBackup": "Adept Athletics",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -89,7 +96,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 27400000,
   "_id": "PMI58lLIZJqHwuwW"
 }

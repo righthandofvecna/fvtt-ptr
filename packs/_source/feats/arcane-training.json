@@ -2,7 +2,7 @@
   "name": "Arcane Training",
   "system": {
     "origin": "",
-    "effect": "You may use Arcane Weapons. Attacks made with your Arcane Weapons share the Type of your Elemental Connection. If you have Mystic Senses, these Attacks deal Normal Type Damage. Arcane Weapon users that qualified through Mystic Senses or Elemental Connection (Normal) gain a +5 Bonus to Damage Rolls and a +2 Bonus to Effect Range when using Arcane Weapon Attacks. When wielding an Arcane Weapon, you may resist Disarm Maneuvers with your Occult Education.",
+    "effect": "You may use @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.dF5LFIsf6EgtVncf]{Arcane Weapons}. Attacks made with your Arcane Weapons share the Type of your @UUID[Compendium.ptu.edges.Item.fURF8NQAVF1jzsBc]{Elemental Connection}. If you have @UUID[Compendium.ptu.edges.Item.qvIqXtN2QM5dIwgX]{Mystic Senses}, these Attacks deal Normal Type Damage. Arcane Weapon users that qualified through Mystic Senses or Elemental Connection (Normal) gain a +5 Bonus to Damage Rolls and a +2 Bonus to Effect Range when using Arcane Weapon Attacks. When wielding an Arcane Weapon, you may resist @UUID[Compendium.ptu.moves.Item.h0slhD40dRasSRXj]{Disarm Maneuvers} with your Occult Education.",
     "snippet": "",
     "rules": [
       {
@@ -11,7 +11,8 @@
         "path": "system.modifiers.baseStats.spatk.mod",
         "value": 1,
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -70,7 +71,8 @@
     "name": "Arcane Training",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -81,7 +83,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Novice Occult Education, Elemental Connection or Mystic Senses"
+      "prereqBackup": "Novice Occult Education, Elemental Connection or Mystic Senses",
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -94,7 +98,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 500000,
   "_id": "05Ja23XlT2nE7tNb"
 }

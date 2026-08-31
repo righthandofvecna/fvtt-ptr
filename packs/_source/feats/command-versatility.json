@@ -57,7 +57,8 @@
     "automation": [],
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +69,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Adept Command, Guile, or Pokémon Education"
+      "prereqBackup": "Adept Command, Guile, or Pokémon Education",
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -81,7 +84,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 2600000,
   "_id": "1otscPPJIq4HWkwD"
 }

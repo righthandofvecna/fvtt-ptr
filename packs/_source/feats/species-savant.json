@@ -57,7 +57,8 @@
     "automation": [],
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +68,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "3 different individual Pokémon of the same evolutionary line"
+      "prereqBackup": "3 different individual Pokémon of the same evolutionary line",
+      "automationStatus": "needs-automation",
+      "devNote": "Might be able to add an Effect or something like a Poke-Edge for easier application?",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -80,7 +84,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 55100000,
   "_id": "mIqSUpYJRx7QoIWd"
 }

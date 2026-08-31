@@ -2,7 +2,7 @@
   "name": "Guardian Orders",
   "system": {
     "origin": "",
-    "effect": "You gain the Brace for Impact and Sentinel Stance Orders.",
+    "effect": "You gain the @UUID[Compendium.ptu.feats.Item.e7ETKHW8saUCf5l8]{Brace for Impact} and @UUID[Compendium.ptu.feats.Item.SlLaxSkmeRNWnslg]{Sentinel Stance} Orders.",
     "snippet": "",
     "rules": [
       {
@@ -70,7 +70,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -80,7 +81,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert Charm or Intimidate"
+      "prereqBackup": "Expert Charm or Intimidate",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -93,7 +97,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 69000000,
   "_id": "zy3F5IZmiosjU2HJ"
 }
