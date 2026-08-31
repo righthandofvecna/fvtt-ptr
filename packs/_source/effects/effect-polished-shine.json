@@ -1,35 +1,49 @@
 {
-  "folder": "PYV1oTT1agJnu0Uf",
-  "name": "Effect: Potent Venom",
+  "folder": "BSs5UGtnqlUmhRBn",
+  "name": "Effect: Polished Shine",
   "type": "effect",
+  "_id": "zZ5iNtneZlpUDyuW",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "the Effect Range of your Poison-Type Pokémon's Moves increases by +2.",
+    "effect": "",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
+        "predicate": [
+          "move:steel"
+        ],
         "mode": "add",
         "path": "system.modifiers.effectRange.mod",
-        "value": 2,
+        "phase": "afterDerived",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
         "predicate": [
-          "move:poison"
+          "move:steel"
         ],
+        "mode": "add",
+        "path": "system.modifiers.critRange.mod",
         "phase": "applyAEs",
+        "value": 1,
         "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-potent-venom",
+    "slug": "effect-polished-shine",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.112,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2024-01-16T22:16:23.548Z",
+        "datetime": "2026-06-28T12:56:34.684Z",
         "version": {
-          "schema": 0.11,
-          "foundry": "11.315",
-          "system": "4.0.13"
+          "schema": null,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -56,9 +70,7 @@
       "show": true
     },
     "badge": null,
-    "context": null,
-    "contentSet": "",
-    "replacesSlug": ""
+    "context": null
   },
   "effects": [],
   "flags": {
@@ -66,21 +78,15 @@
       "showInTokenPanel": true,
       "automationStatus": "needs-automation",
       "devNote": ""
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.3.v12-beta.1",
-    "coreVersion": "13.351",
-    "createdTime": 1694203308552,
-    "modifiedTime": 1722708201650,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  },
-  "_id": "LkI7Vir2615KgjK4",
-  "sort": 0,
-  "ownership": {
-    "default": 0
   }
 }
