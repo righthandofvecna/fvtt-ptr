@@ -59,7 +59,8 @@
     "name": "Stat Booster (Accuracy)",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Recommend deleting in favor of: Compendium.ptu.items.Item.Yx4lm7zJf4fhgzGb",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 66700000,
   "_id": "wsuHUbTNhm6b5NmU"
 }
