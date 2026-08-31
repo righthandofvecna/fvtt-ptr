@@ -37,7 +37,7 @@
       "Artificer"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -61,7 +61,7 @@
     },
     "quantity": "1",
     "category": "",
-    "cost": "6000",
+    "cost": "4000",
     "consumable": "0",
     "subtype": "",
     "container": false,
@@ -69,14 +69,17 @@
     "name": "Focus",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "folder": "UVsLKp3sKVOGdClM",
