@@ -1,59 +1,50 @@
 {
-  "folder": "S8f1tL26M52IDjLP",
-  "name": "Water’s Shroud",
+  "folder": "I8pouPxZOCgCVom3",
+  "name": "Flexible Form",
   "type": "feat",
-  "_id": "SptIjiEsMYtjYHph",
+  "_id": "fugbfNow3LKoq4ha",
   "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose Wash Away or Storm Drain. You gain the Chosen Ability.",
+    "effect": "Effect: Your body becomes more malleable, and even your bones are able to flex when required. You do not gain Injuries from taking Massive damage, and you gain a +2 Bonus to any Acrobatics or Athletics Check made to bend, squeeze, or otherwise contort your body - including those to avoid Trip or Grapple maneuvers.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
-        "path": "system.modifiers.baseStats.spd.mod",
+        "path": "system.modifiers.baseStats.def.mod",
         "value": 1,
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
       },
       {
-        "key": "ChoiceSet",
-        "flag": "WaterShroud",
-        "adjustName": false,
-        "choices": [
-          {
-            "label": "Wash Away",
-            "value": "Compendium.ptu.abilities.Item.xSdfPpetsaum7unj",
-            "predicate": {
-              "not": "ability:wash-away"
-            }
-          },
-          {
-            "label": "Storm Drain",
-            "value": "Compendium.ptu.abilities.Item.gPFOWD8FeI5TQrum",
-            "predicate": {
-              "not": "ability:storm-drain"
-            }
-          }
-        ]
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.skills.athletics.modifier.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
       },
       {
-        "key": "GrantItem",
+        "key": "ActiveEffectLike",
         "predicate": [],
-        "allowDuplicate": false,
-        "uuid": "{item|flags.ptu.rulesSelections.WaterShroud}"
+        "mode": "add",
+        "path": "system.skills.acrobatics.modifier.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
       }
     ],
     "enabled": true,
-    "slug": "waters-shroud-cr",
+    "slug": "flexible-form-cr",
     "contentSet": "homebrew",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-06-28T12:56:35.541Z",
+        "datetime": "2026-06-28T12:56:34.826Z",
         "version": {
           "schema": null,
           "foundry": "14.364",
@@ -67,7 +58,7 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "+Speed",
+      "+Defense",
       "Playtest",
       "Class Rework"
     ],
@@ -96,12 +87,12 @@
     },
     "leagueLegal": false,
     "prerequisites": [
-      "Call The Current Rank 2"
+      "Miasmic"
     ],
     "notes": "",
     "free": false,
-    "class": "Maelstrom",
-    "name": "Water’s Shroud [CR]"
+    "class": "Miasmic",
+    "name": "Flexible Form [CR]"
   },
   "effects": [],
   "flags": {

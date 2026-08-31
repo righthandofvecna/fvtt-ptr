@@ -1,7 +1,7 @@
 {
   "name": "Thunder Wave",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/ElectricIC_Icon.png",
+  "img": "/systems/ptu/css/images/types2/ElectricIC_Icon.png",
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
@@ -13,23 +13,25 @@
         "predicate": {
           "not": "target:types:electric"
         },
-        "selectors": "{item|id}-damage-received",
+        "selectors": "{item|id}-apply-effects",
         "uuid": "Compendium.ptu.effects.Item.bzZaLfYxVyKbJOCo",
-        "range": "1",
+        "range": "",
         "value": "",
         "affects": "target"
       }
     ],
     "enabled": true,
     "slug": "thunder-wave",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:26.093Z",
+        "datetime": "2026-07-06T12:14:57.136Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
@@ -72,6 +74,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Electric",
     "category": "Status",
     "damageBase": "--",
@@ -81,29 +84,16 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "wxMkDV7tasspdddy",
+  "_id": "rYgXflBIrAnN8GkK",
   "effects": [],
-  "sort": 84600000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": null,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200826150,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

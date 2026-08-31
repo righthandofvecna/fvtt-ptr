@@ -50,16 +50,15 @@
       "bind": false
     },
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "O00WEaCeKskK8vY4",
   "effects": [],
-  "folder": null,
   "sort": 4300000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
