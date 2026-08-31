@@ -69,7 +69,8 @@
     "name": "Razor Claw",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/razor claw.webp",
@@ -79,7 +80,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -92,7 +95,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 17500000,
   "_id": "DnWPPBYKgwKyovxF"
 }
