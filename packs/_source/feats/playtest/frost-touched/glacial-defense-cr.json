@@ -7,7 +7,6 @@
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "glacialdefense",
         "choices": [
           {
@@ -28,6 +27,37 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.qLsGWyGaBuWfJMYk",
+            "label": "Ice Shield",
+            "predicate": [
+              {
+                "not": "ability:ice-shield"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.ysdI7l7jNsUsmsqt",
+            "label": "Winter's Kiss",
+            "predicate": [
+              {
+                "not": "ability:winters-kiss"
+              }
+            ]
+          }
+        ],
+        "adjustName": false,
+        "flag": "glacialdefense"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.glacialdefense}"
       }
     ],
     "enabled": true,
@@ -84,7 +114,8 @@
     "class": "Frost Touched",
     "name": "Glacial Defense [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "glacial-defense"
+    "replacesSlug": "glacial-defense",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -1,5 +1,9 @@
 {
+  "folder": "S8f1tL26M52IDjLP",
   "name": "Call The Current Rank 2",
+  "type": "feat",
+  "_id": "aMr2I2tdOwAiFcjt",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn 3 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\nRank 1: Aqua Jet, Aqua Ring, Chilling Water, Water Pulse, Water Sport\nRank 2: Brine, Rain Dance, Scald, Waterfall, Whirlpool\nRank 3: Aqua Tail, Dive, Hydro Pump, Surf, Wave Crash",
@@ -13,18 +17,269 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "CallCurentRank2-1",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.Htb3LXoNd24yFNEG",
+            "label": "Aqua Jet",
+            "predicate": {
+              "not": "move:aqua-jet"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.hsTeK70y3vDOnrx7",
+            "label": "Aqua Ring",
+            "predicate": {
+              "not": "move:aqua-ring"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Mh5MHyCuN80yItfC",
+            "label": "Chilling Water",
+            "predicate": {
+              "not": "move:chilling-water"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.9TnRLGZ6WIGqIeQ4",
+            "label": "Water Pulse",
+            "predicate": {
+              "not": "move:water-pulse"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.aQC3OZK3LUV4UHj2",
+            "label": "Water Sport",
+            "predicate": {
+              "not": "move:water-sport"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.5ORKWU9EYYyzJOaH",
+            "label": "Brine",
+            "predicate": {
+              "not": "move:brine"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.mwyMas4TIBJtb24c",
+            "label": "Rain Dance",
+            "predicate": {
+              "not": "move:rain-dance-weather-playtest"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Nu3QmPfiZVzOccNU",
+            "label": "Scald",
+            "predicate": {
+              "not": "move:scald"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.72Gli6hv7dk4QRdN",
+            "label": "Waterfall",
+            "predicate": {
+              "not": "move:waterfall"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.DUWjQv05jUb2p6gj",
+            "label": "Whirlpool",
+            "predicate": {
+              "not": "move:whirlpool"
+            }
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.CallCurentRank2-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "CallCurentRank2-2",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.Htb3LXoNd24yFNEG",
+            "label": "Aqua Jet",
+            "predicate": {
+              "not": "move:aqua-jet"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.hsTeK70y3vDOnrx7",
+            "label": "Aqua Ring",
+            "predicate": {
+              "not": "move:aqua-ring"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Mh5MHyCuN80yItfC",
+            "label": "Chilling Water",
+            "predicate": {
+              "not": "move:chilling-water"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.9TnRLGZ6WIGqIeQ4",
+            "label": "Water Pulse",
+            "predicate": {
+              "not": "move:water-pulse"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.aQC3OZK3LUV4UHj2",
+            "label": "Water Sport",
+            "predicate": {
+              "not": "move:water-sport"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.5ORKWU9EYYyzJOaH",
+            "label": "Brine",
+            "predicate": {
+              "not": "move:brine"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.mwyMas4TIBJtb24c",
+            "label": "Rain Dance",
+            "predicate": {
+              "not": "move:rain-dance-weather-playtest"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Nu3QmPfiZVzOccNU",
+            "label": "Scald",
+            "predicate": {
+              "not": "move:scald"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.72Gli6hv7dk4QRdN",
+            "label": "Waterfall",
+            "predicate": {
+              "not": "move:waterfall"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.DUWjQv05jUb2p6gj",
+            "label": "Whirlpool",
+            "predicate": {
+              "not": "move:whirlpool"
+            }
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.CallCurentRank2-2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "CallCurentRank2-3",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.Htb3LXoNd24yFNEG",
+            "label": "Aqua Jet",
+            "predicate": {
+              "not": "move:aqua-jet"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.hsTeK70y3vDOnrx7",
+            "label": "Aqua Ring",
+            "predicate": {
+              "not": "move:aqua-ring"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Mh5MHyCuN80yItfC",
+            "label": "Chilling Water",
+            "predicate": {
+              "not": "move:chilling-water"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.9TnRLGZ6WIGqIeQ4",
+            "label": "Water Pulse",
+            "predicate": {
+              "not": "move:water-pulse"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.aQC3OZK3LUV4UHj2",
+            "label": "Water Sport",
+            "predicate": {
+              "not": "move:water-sport"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.5ORKWU9EYYyzJOaH",
+            "label": "Brine",
+            "predicate": {
+              "not": "move:brine"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.mwyMas4TIBJtb24c",
+            "label": "Rain Dance",
+            "predicate": {
+              "not": "move:rain-dance-weather-playtest"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Nu3QmPfiZVzOccNU",
+            "label": "Scald",
+            "predicate": {
+              "not": "move:scald"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.72Gli6hv7dk4QRdN",
+            "label": "Waterfall",
+            "predicate": {
+              "not": "move:waterfall"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.DUWjQv05jUb2p6gj",
+            "label": "Whirlpool",
+            "predicate": {
+              "not": "move:whirlpool"
+            }
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.CallCurentRank2-3}"
       }
     ],
     "enabled": true,
     "slug": "call-the-current-rank-2-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:32.181Z",
+        "datetime": "2026-06-28T12:56:34.390Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -62,38 +317,21 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Adept Athletics or Acrobatics"
     ],
     "notes": "",
     "free": false,
     "class": "Maelstrom",
-    "name": "Call The Current [CR]Rank 1 [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "call-the-current-rank-2"
+    "name": "Call The Current [CR]Rank 1 [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "S8f1tL26M52IDjLP",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200832242,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  },
-  "_id": "zap74TisW7RnnB1Y"
+  }
 }

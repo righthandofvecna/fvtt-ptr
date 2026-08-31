@@ -7,7 +7,6 @@
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "frosttouched",
         "choices": [
           {
@@ -18,7 +17,8 @@
             "value": "spatk",
             "label": "Special Attack"
           }
-        ]
+        ],
+        "adjustName": false
       },
       {
         "key": "ActiveEffectLike",
@@ -28,6 +28,180 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.UqFpnMAAoEOqvUDj",
+            "label": "Aurora Beam",
+            "predicate": [
+              {
+                "not": "move:aurora-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.xOwF6QzLLB5POWAK",
+            "label": "Haze",
+            "predicate": [
+              {
+                "not": "move:haze"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.SUduMarNZi7p42fG",
+            "label": "Ice Shard",
+            "predicate": [
+              {
+                "not": "move:ice-shard"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.uaOHYAjzdGsqGBJ0",
+            "label": "Mist",
+            "predicate": [
+              {
+                "not": "move:mist"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.l4TzdGjtPZHycF5b",
+            "label": "Powder Snow",
+            "predicate": [
+              {
+                "not": "move:powder-snow"
+              }
+            ]
+          }
+        ],
+        "flag": "frost1"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.frost1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.UqFpnMAAoEOqvUDj",
+            "label": "Aurora Beam",
+            "predicate": [
+              {
+                "not": "move:aurora-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.xOwF6QzLLB5POWAK",
+            "label": "Haze",
+            "predicate": [
+              {
+                "not": "move:haze"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.SUduMarNZi7p42fG",
+            "label": "Ice Shard",
+            "predicate": [
+              {
+                "not": "move:ice-shard"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.uaOHYAjzdGsqGBJ0",
+            "label": "Mist",
+            "predicate": [
+              {
+                "not": "move:mist"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.l4TzdGjtPZHycF5b",
+            "label": "Powder Snow",
+            "predicate": [
+              {
+                "not": "move:powder-snow"
+              }
+            ]
+          }
+        ],
+        "flag": "frost2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.frost2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.UqFpnMAAoEOqvUDj",
+            "label": "Aurora Beam",
+            "predicate": [
+              {
+                "not": "move:aurora-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.xOwF6QzLLB5POWAK",
+            "label": "Haze",
+            "predicate": [
+              {
+                "not": "move:haze"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.SUduMarNZi7p42fG",
+            "label": "Ice Shard",
+            "predicate": [
+              {
+                "not": "move:ice-shard"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.uaOHYAjzdGsqGBJ0",
+            "label": "Mist",
+            "predicate": [
+              {
+                "not": "move:mist"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.l4TzdGjtPZHycF5b",
+            "label": "Powder Snow",
+            "predicate": [
+              {
+                "not": "move:powder-snow"
+              }
+            ]
+          }
+        ],
+        "flag": "frost3",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.frost3}"
       }
     ],
     "enabled": true,
@@ -86,7 +260,8 @@
     "class": "Frost Touched",
     "name": "Frost Touched [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "frost-touched"
+    "replacesSlug": "frost-touched",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -97,7 +272,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

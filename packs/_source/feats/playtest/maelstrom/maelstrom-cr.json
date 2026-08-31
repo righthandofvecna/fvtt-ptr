@@ -1,5 +1,9 @@
 {
+  "folder": "S8f1tL26M52IDjLP",
   "name": "Maelstrom",
+  "type": "feat",
+  "_id": "vyrDnWOlWcJUvbCq",
+  "img": "/systems/ptu/css/images/icons/class_feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Gilled Capability, and a +2 bonus to your Swim speed. Whenever your Water-Type Moves miss all targets, you gain a Tick of Temporary Hit Points.",
@@ -13,18 +17,35 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.Sr5UjqsO8FydTuNw"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.capabilities.swim",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
       }
     ],
     "enabled": true,
     "slug": "maelstrom-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:30.730Z",
+        "datetime": "2026-06-28T12:56:34.969Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -62,6 +83,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Elemental Connection (Water)",
       "Novice Athletics or Novice Acrobatics"
@@ -69,28 +91,12 @@
     "notes": "",
     "free": false,
     "class": "Maelstrom",
-    "name": "Maelstrom [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "maelstrom"
+    "name": "Maelstrom [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
-  "type": "feat",
-  "folder": "S8f1tL26M52IDjLP",
-  "_id": "biAe4zkqmFksWtqZ",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200830795,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
   }
 }
