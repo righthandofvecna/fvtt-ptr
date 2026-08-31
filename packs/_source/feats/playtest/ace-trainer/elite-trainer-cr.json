@@ -2,7 +2,7 @@
   "name": "Elite Trainer",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose Agility Training, Brutal Training, Focused Training, or Inspired Training. You gain the chosen Feature, even if you do not meet the prerequisites. When training, you may apply up to two different [Training] Features on each of your Pokémon. If you already have all of these Features, instead pick another Feature for which you qualify.",
+    "effect": "Effect: Choose @UUID[Compendium.ptu.feats.Item.TQ6scoBM3iZKMuZT]{Agility Training}, @UUID[Compendium.ptu.feats.Item.MolTHMn3UrNiIZ3h]{Brutal Training}, @UUID[Compendium.ptu.feats.Item.FLSt79Zix8j69T07]{Focused Training}, or @UUID[Compendium.ptu.feats.Item.WfLcIrUmRwblAaYr]{Inspired Training}. You gain the chosen Feature, even if you do not meet the prerequisites. When training, you may apply up to two different [Training] Features on each of your Pokémon. If you already have all of these Features, instead pick another Feature for which you qualify.",
     "snippet": "",
     "rules": [
       {
@@ -12,24 +12,28 @@
         "choices": [
           {
             "value": "Compendium.ptu.feats.Item.TQ6scoBM3iZKMuZT",
+            "label": "Agility Training",
             "predicate": {
               "not": "feat:agility-training"
             }
           },
           {
             "value": "Compendium.ptu.feats.Item.MolTHMn3UrNiIZ3h",
+            "label": "Brutal Training",
             "predicate": {
               "not": "feat:brutal-training"
             }
           },
           {
             "value": "Compendium.ptu.feats.Item.FLSt79Zix8j69T07",
+            "label": "Focused Training",
             "predicate": {
               "not": "feat:focused-training"
             }
           },
           {
             "value": "Compendium.ptu.feats.Item.WfLcIrUmRwblAaYr",
+            "label": "Inspired Training",
             "predicate": {
               "not": "feat:inspired-training"
             }
@@ -96,7 +100,8 @@
     "class": "Ace Trainer",
     "name": "Elite Trainer [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "elite-trainer"
+    "replacesSlug": "elite-trainer",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -109,7 +114,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
