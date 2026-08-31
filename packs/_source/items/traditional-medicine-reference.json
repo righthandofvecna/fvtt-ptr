@@ -2,7 +2,7 @@
   "name": "Traditional Medicine Reference",
   "system": {
     "origin": "",
-    "effect": "A volume dedicated to properly preparing herbal medications. See PTU May 2015 Playtest Packet - Miscellaneous Errata for Herbal Restorative errata.\n\nRank 1 - Adept Medicine Education: Targets you administer Herbal Restoratives to do not lose Combat Stages no matter how many Herbal Restoratives they’ve had in the same day.\nRank 2 - Expert Medicine Education: Whenever you administer an Herbal Restorative to a target, they may choose to gain the Food Buff associated with Herbal Restoratives, regardless of how many Herbal Restoratives they’ve used this day.",
+    "effect": "A volume dedicated to properly preparing herbal medications.\n\nRank 1 - Adept Medicine Education: Targets you administer @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.6MVWYNp3wr9O6t3f]{Herbal Restoratives} to do not lose Combat Stages no matter how many Herbal Restoratives they’ve had in the same day.\nRank 2 - Expert Medicine Education: Whenever you administer an Herbal Restorative to a target, they may choose to gain the Food Buff associated with Herbal Restoratives, regardless of how many Herbal Restoratives they’ve used this day.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "Traditional Medicine Reference",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 11300000,
   "_id": "8EK4iPBHRc5Ua91Y"
 }
