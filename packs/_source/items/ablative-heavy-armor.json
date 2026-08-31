@@ -4,7 +4,17 @@
     "origin": "",
     "effect": "A weighty but brittle armor that is self-repairing. Grants 20 Damage Reduction, but each damaging attack removes 5 Damage Reduction from the armor. Every five minutes, the armor repairs 5 Damage Reduction. The user’s Speed Combat Stage defaults to -1.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.spd.stage.mod",
+        "phase": "applyAEs",
+        "value": -1,
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "ablative-heavy-armor",
     "schema": {
@@ -57,7 +67,8 @@
     "name": "Ablative Heavy Armor",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +76,11 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 24700000,
   "_id": "KPWoxlQtVwsUTmR4"
 }
