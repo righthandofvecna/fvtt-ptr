@@ -2,7 +2,7 @@
   "name": "Rawst Berry",
   "system": {
     "origin": "",
-    "effect": "Cures Burn, Smart Poffin Ingredient. Tier 1.",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj]{Burn}, Smart Poffin Ingredient. Tier 1.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -62,7 +62,8 @@
     "container": false,
     "automation": [],
     "name": "Rawst Berry",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/rawst berry.webp",
@@ -87,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 56800000,
   "_id": "nyubmMDwJSkeLJiM"
 }
