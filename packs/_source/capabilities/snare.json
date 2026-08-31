@@ -1,0 +1,72 @@
+{
+  "name": "Snare",
+  "type": "capability",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "You subtract -10 from Capture Rolls made against Pokémon drawn into an encounter by Bait, that are currently distracted by Bait, or are in a Hand Net, Lasso, Weighted Net, or Stuck because of a Glue Cannon.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "manual"
+        ],
+        "label": "Snare - bait used?",
+        "hideIfDisabled": false,
+        "selectors": "capture-roll",
+        "value": -10
+      }
+    ],
+    "enabled": true,
+    "slug": "snare",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:41:18.461Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Capture Technique"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": "jpLcXij2i9NorfO0",
+  "_id": "K24Mww4alZrOwtv2"
+}

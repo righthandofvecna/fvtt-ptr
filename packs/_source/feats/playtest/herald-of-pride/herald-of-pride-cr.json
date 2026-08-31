@@ -1,8 +1,11 @@
 {
   "name": "Herald of Pride",
+  "type": "feat",
+  "_id": "VXAU2wpyU7AKmhxe",
+  "img": "/systems/ptu/css/images/icons/class_feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: When wielding Melee Weapons, you may use Command or Intimidate instead of Combat to determine\nthe Damage Base of your Struggle Attacks, to resist Disarm Maneuvers, and to qualify for a Weapon’s Moves. Your Weapon Attacks ignore Damage Reduction up to your Command or Intimidate Rank.",
+    "effect": "Effect: When wielding Melee Weapons, you may use Command or Intimidate instead of Combat to determine the Damage Base of your Struggle Attacks, to resist Disarm Maneuvers, and to qualify for a Weapon’s Moves. Your Weapon Attacks ignore Damage Reduction up to your Command or Intimidate Rank.",
     "snippet": "",
     "rules": [
       {
@@ -13,22 +16,24 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "EphemeralEffect",
+        "predicate": [],
+        "affects": "target",
+        "selectors": "damage-received",
+        "uuid": "Compendium.ptu.effects.Item.xxnFUnD1nGthmJj3"
       }
     ],
     "enabled": true,
     "slug": "herald-of-pride-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
-      "lastMigration": {
-        "datetime": "2026-05-08T00:40:30.849Z",
-        "version": {
-          "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
-        }
-      }
+      "version": null,
+      "lastMigration": null
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.xxnFUnD1nGthmJj3",
     "source": {
       "value": "Homebrew"
     },
@@ -42,8 +47,8 @@
     ],
     "frequency": {
       "type": "static",
-      "max": null,
-      "custom": "Static",
+      "max": 0,
+      "custom": "",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -63,35 +68,23 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Elemental Connection (Dragon)",
       "Novice Command or Novice Intimidate"
     ],
     "notes": "",
     "free": false,
-    "class": "Herald of Pride",
-    "name": "Herald of Pride [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "herald-of-pride"
+    "class": "Herald of Pride [CR]",
+    "name": "Herald of Pride [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
-  "type": "feat",
-  "folder": "lZqjsR5bQoFGXnFK",
-  "_id": "e4vK07oR7q91N1dC",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200830876,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "folder": "lZqjsR5bQoFGXnFK",
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
   }
 }

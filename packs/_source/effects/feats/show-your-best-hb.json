@@ -1,0 +1,78 @@
+{
+  "folder": "Uv4mgOt4xtb28hzB",
+  "name": "Effect: Show Your Best!",
+  "type": "effect",
+  "_id": "gRcD70tgms6rGKOm",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Choose Def, or Sp.Def, all allies on the Field gain +1 CS in the chosen Stat and become Excited. @UUID[Compendium.ptu.effects.Item.R4VCsfCLQffgSWFO]",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "def",
+            "label": "Defense"
+          },
+          {
+            "value": "spdef",
+            "label": "Special Defense"
+          }
+        ],
+        "flag": "best",
+        "adjustName": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.{item|flags.ptu.rulesSelections.best}.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "show-your-best-hb",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "encounter",
+      "expiry": "turn-end"
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}

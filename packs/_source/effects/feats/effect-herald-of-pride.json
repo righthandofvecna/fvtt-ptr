@@ -1,0 +1,72 @@
+{
+  "name": "Effect: Herald of Pride",
+  "type": "effect",
+  "_id": "xxnFUnD1nGthmJj3",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Effect: When wielding Melee Weapons, you may use Command or Intimidate instead of Combat to determine the Damage Base of your Struggle Attacks, to resist Disarm Maneuvers, and to qualify for a Weapon’s Moves. Your Weapon Attacks ignore Damage Reduction up to your Command or Intimidate Rank.\n\n//change the skill from command to intimidate if needed//",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "subtract",
+        "path": "system.modifiers.damageReduction.physical.mod",
+        "phase": "afterDerived",
+        "value": "@actor.system.skills.command.value.total",
+        "priority": null,
+        "predicate": []
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "subtract",
+        "path": "system.modifiers.damageReduction.special.mod",
+        "phase": "afterDerived",
+        "value": "@actor.system.skills.command.value.total",
+        "priority": null,
+        "predicate": []
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-herald-of-pride",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "Uv4mgOt4xtb28hzB",
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}

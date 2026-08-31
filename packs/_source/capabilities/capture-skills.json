@@ -1,0 +1,106 @@
+{
+  "name": "Capture Skills",
+  "type": "capability",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "You gain a Skill Edge for which you qualify. It must be applied to Acrobatics, Athletics, Stealth, Survival, Guile, or Perception. You may take Capture Skills up to two times.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "label": "Capture Skills",
+        "prompt": "Choose a Skill Edge.",
+        "flag": "captureskill",
+        "rollOption": "capture-skill",
+        "choices": [
+          {
+            "label": "Basic Skills",
+            "value": "Compendium.ptu.edges.Item.HSJnMW0wcFNtbhp7"
+          },
+          {
+            "label": "Adept Skills",
+            "value": "Compendium.ptu.edges.Item.w2e269IE7eNm8oBc"
+          },
+          {
+            "label": "Expert Skills",
+            "value": "Compendium.ptu.edges.Item.fNh3bjUEhWFdW9FE"
+          },
+          {
+            "label": "Master Skills",
+            "value": "Compendium.ptu.edges.Item.JzVNlI5Mdq3kbmG9"
+          },
+          {
+            "label": "Virtuoso",
+            "value": "Compendium.ptu.edges.Item.6QbP4LOoyEMgerm6"
+          },
+          {
+            "label": "Skill Enhancement",
+            "value": "Compendium.ptu.edges.Item.EQgpwUEg5apFH5rE"
+          },
+          {
+            "label": "Skill Stunt",
+            "value": "Compendium.ptu.edges.Item.eg9RIJE6jQbM96Ti"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.captureskill}"
+      }
+    ],
+    "enabled": true,
+    "slug": "capture-skills",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:41:18.749Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": true,
+    "keywords": [
+      "Capture Technique"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": "jpLcXij2i9NorfO0",
+  "_id": "tdhGpjXjYnFGsg5r"
+}
