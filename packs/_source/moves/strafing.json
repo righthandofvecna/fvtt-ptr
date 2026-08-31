@@ -6,9 +6,28 @@
     "origin": "",
     "effect": "The user continues to use Strafing on each of its turns until they miss any target with Strafing, or are not able to hit any target with Strafing during their turn. Each successive use of Strafing increases Strafing's Damage Base by +4 to a maximum of DB 15.\nBonus: This Pokemon can shift up to its Sky Capability each turn before striking and is considered Airborne for the purposes of being targeted. (Groundsource, non-airborne Melee attacks cannot target it)",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-damage-dealt",
+        "uuid": "Compendium.ptu.effects.Item.Vvj5cQerDBPZYnbX",
+        "range": "",
+        "value": "",
+        "affects": "origin"
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "{item|id}-damage-base",
+        "value": "min(max(@actor.flags.ptu.strafing,0), 3) * 4"
+      }
+    ],
     "enabled": true,
     "slug": "strafing",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -60,6 +79,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Flying",
     "category": "Physical",
     "damageBase": "3",
@@ -69,30 +89,16 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "effects": [],
   "folder": null,
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
-  "_stats": {
-    "coreVersion": "13.351",
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "createdTime": 1751140056503,
-    "modifiedTime": 1778200823708,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  },
-  "_id": "He1H4l9py8OcGKHs",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  }
+  "_id": "a3sr6vcJe32aWiBN"
 }

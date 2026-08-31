@@ -13,6 +13,12 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.O00WEaCeKskK8vY4"
       }
     ],
     "enabled": true,
@@ -70,7 +76,8 @@
     "class": "Spark Master",
     "name": "Magnetize [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "magnetize"
+    "replacesSlug": "magnetize",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +88,11 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

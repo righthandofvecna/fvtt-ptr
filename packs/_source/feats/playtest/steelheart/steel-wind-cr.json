@@ -1,5 +1,9 @@
 {
+  "folder": "ragCbmOsDCUz60wA",
   "name": "Steel Wind",
+  "type": "feat",
+  "_id": "Pr3SRyrw46hpwHI5",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Bullet Punch, Metal Claw, and Shift Gear. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
@@ -13,18 +17,38 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.vIUPVX3M1r2jsyKN"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.XkiKEwN1gZtlAkUi"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.OJrKu4mCgMTQEJ6u"
       }
     ],
     "enabled": true,
     "slug": "steel-wind-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:31.301Z",
+        "datetime": "2026-06-28T12:56:35.539Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -62,34 +86,25 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Steelheart"
     ],
     "notes": "",
     "free": false,
     "class": "Steelheart",
-    "name": "Steel Wind [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "steel-wind"
+    "name": "Steel Wind [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "ragCbmOsDCUz60wA",
-  "_id": "mpBAwOL6nBl73CYL",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200831368,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "grantedBy": {
+        "id": "tCEAmSTUodbQlAei",
+        "onDelete": "detach"
+      },
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
   }
 }

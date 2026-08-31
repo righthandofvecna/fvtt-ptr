@@ -1,0 +1,99 @@
+{
+  "folder": "I8pouPxZOCgCVom3",
+  "name": "Miasmic",
+  "type": "feat",
+  "_id": "5yu32GgLiIX9GDhv",
+  "img": "/systems/ptu/css/images/icons/class_feat_icon.png",
+  "system": {
+    "origin": "Class Rework",
+    "effect": "Effect: You learn the Moves Acid and Clear Smog.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.modifiers.baseStats.def.mod",
+        "value": 1,
+        "priority": 20,
+        "predicate": [],
+        "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.Rj7PzPVf9YeEn5mG"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.RKyKtJkj75j2CNJF"
+      }
+    ],
+    "enabled": true,
+    "slug": "miasmic-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:34.969Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Class",
+      "+Defense",
+      "Playtest",
+      "Class Rework"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "prerequisites": [
+      "Elemental Connection (Poison)",
+      "Novice Stealth or Novice Guile"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Miasmic",
+    "name": "Miasmic [CR]"
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  }
+}

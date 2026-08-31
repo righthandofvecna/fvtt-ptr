@@ -2,7 +2,7 @@
   "name": "Fishing Rod",
   "system": {
     "origin": "",
-    "effect": "Fishing Rods are used to Fish. They are two-handed items. They come in three varieties; Old Rods, Good Rods, and Super Rods.",
+    "effect": "Fishing Rods are used to Fish. They are two-handed items. They come in three varieties; @UUID[Compendium.ptu.items.Item.quJEcLDXKQxNL8Ov]{Old Rods}, @UUID[Compendium.ptu.items.Item.7TrnYWHd3gnwtOYK]{Good Rods}, and @UUID[Compendium.ptu.items.Item.eLoWPRzahOnCq1jB]{Super Rods}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -60,7 +60,8 @@
     "name": "Fishing Rod",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -68,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Might be worth removing in favor of the three defined rod types already present, reference links included just in case",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -79,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 38900000,
   "_id": "W8nm4lZZCcQkXhgh"
 }

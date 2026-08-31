@@ -1,0 +1,86 @@
+{
+  "folder": "vv929D9klzsY0yL0",
+  "name": "Effect: Highlander",
+  "type": "effect",
+  "_id": "co9rvISmZQHNtRAL",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "EphemeralEffect",
+        "predicate": [
+          "target:types:dragon"
+        ],
+        "affects": "target",
+        "selectors": "damage-received",
+        "uuid": "Compendium.ptu.effects.Item.4pmfrxE6xgtWnalO"
+      },
+      {
+        "key": "EphemeralEffect",
+        "predicate": [],
+        "affects": "origin",
+        "selectors": "dragon-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.KBS1AbERPJHJqUhu"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-highlander",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:34.683Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
+    }
+  }
+}

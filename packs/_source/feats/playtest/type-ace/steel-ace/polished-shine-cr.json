@@ -18,7 +18,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.zZ5iNtneZlpUDyuW",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -62,7 +62,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
-    "replacesSlug": "polished-shine"
+    "replacesSlug": "polished-shine",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",

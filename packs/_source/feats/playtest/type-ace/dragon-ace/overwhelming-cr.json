@@ -2,6 +2,7 @@
   "folder": "6meG7SeyLvR39TI3",
   "name": "Overwhelming",
   "type": "feat",
+  "_id": "NCaORfErZT4Y6Znh",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
@@ -10,18 +11,20 @@
     "rules": [],
     "enabled": true,
     "slug": "overwhelming-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:28.774Z",
+        "datetime": "2026-06-28T12:56:35.114Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.B5ttII9wQwdPH0XE",
     "source": {
       "value": "Homebrew"
     },
@@ -29,7 +32,7 @@
     "keywords": [
       "Branch",
       "Playtest",
-      "Class Rework"
+      "CR"
     ],
     "frequency": {
       "type": "static",
@@ -54,43 +57,23 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
-      "Tyrant's Roar",
+      "Tyrant's Roar [CR]",
       "Type-Linked Skill at Expert Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Dragon)",
-    "contentSet": "class-rework",
-    "replacesSlug": "overwhelming"
+    "class": "Type Ace (Dragon)"
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
-      "devNote": ""
-    }
-  },
-  "_id": "8MddVltNQSurblOp",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "_stats": {
-    "coreVersion": "13.351",
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.21",
-    "createdTime": 1710766944910,
-    "modifiedTime": 1778569218118,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": {
-      "worldId": "the-chosen",
-      "uuid": null,
-      "coreVersion": "11.315",
-      "systemId": "ptu",
-      "systemVersion": "4.2.2"
+      "grantedBy": {
+        "id": "1vQUZwGkxpawuWEC",
+        "onDelete": "detach"
+      }
     }
   }
 }

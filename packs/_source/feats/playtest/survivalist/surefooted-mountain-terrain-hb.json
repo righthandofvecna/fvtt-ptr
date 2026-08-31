@@ -1,0 +1,72 @@
+{
+  "folder": "jwSUGJETAKuub2Ws",
+  "name": "Surefooted – Mountain Terrain",
+  "type": "feat",
+  "_id": "zzguMvR2nO8gRCsH",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "You’re not afraid of precarious ledges and steep hills. You gain a +2 Bonus to Skill Checks made to climb, balance, or maintain footing – including resisting Push and Trip maneuvers. Whenever you take falling damage, ignore one meter and receive one less Injury when determining damage.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "label": "maintain footing?",
+        "hideIfDisabled": false,
+        "selectors": "skill-check",
+        "value": 2
+      }
+    ],
+    "enabled": true,
+    "slug": "surefooted-mountain-terrain-hb",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "prerequisites": [],
+    "notes": "",
+    "free": false,
+    "class": ""
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}

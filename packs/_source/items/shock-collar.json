@@ -40,7 +40,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -87,5 +87,6 @@
     "exportSource": null
   },
   "sort": 25400000,
-  "_id": "Kuh2OOUFmXKFExco"
+  "_id": "Kuh2OOUFmXKFExco",
+  "folder": null
 }

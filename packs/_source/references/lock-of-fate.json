@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Arcanist Rank 2 Power Manipulations",
-    "effect": "Effect: The Move cannot be Intercepted, and targets may not avoid the attack in any way if hits (such as via Dodge, Parry, Shield Moves, etc). Evasion still applies, and the Move can still Miss.",
+    "effect": "Effect: The Move cannot be @CompSearch[Moves Intercept]{Intercepted}, and targets may not avoid the attack in any way if hits (such as via @UUID[Compendium.ptu.abilities.Item.TAtIrb9iZKJLUtQT]{Dodge}, @UUID[Compendium.ptu.abilities.Item.jbw03WAPa9wuHCBX]{Parry}, @CompSearch[Moves keywords=Shield]{Shield Moves}, etc). Evasion still applies, and the Move can still Miss.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "pXORMX2fcGpdZkXD",
   "effects": [],
-  "folder": null,
   "sort": 27000000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

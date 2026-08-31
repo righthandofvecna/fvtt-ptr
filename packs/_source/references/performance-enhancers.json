@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Apothecary Recipes",
-    "effect": "Prerequisites: Medicinal Blend Cost: $4900 Effect: You create a PP Up or Heart Booster. If you have a Heart Scale, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.QltBo8DwCLPUykFv]{Medicinal Blend}\nCost: @Poke[4900]\nEffect: You create a @UUID[Compendium.ptu.items.Item.EOP9AI3BAO1mpo0q]{PP Up} or @UUID[Compendium.ptu.items.Item.hKIOclVchHCJQ57J]{Heart Booster}. If you have a @UUID[Compendium.ptu.items.Item.MVgde5bSqt7dgxDk]{Heart Scale}, you may destroy the Heart Scale to create a Heart Booster without paying the monetary cost.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "MDDtt5kSC9dWVOV7",
   "effects": [],
-  "folder": null,
   "sort": 11100000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

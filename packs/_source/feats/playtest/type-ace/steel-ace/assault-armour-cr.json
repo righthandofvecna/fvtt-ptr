@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.xyvgdG4xqWrAAPHV",
     "source": {
       "value": "Homebrew"
     },
@@ -64,7 +64,8 @@
     "free": false,
     "class": "Type Ace (Steel)",
     "contentSet": "class-rework",
-    "replacesSlug": "assault-armour"
+    "replacesSlug": "assault-armour",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {

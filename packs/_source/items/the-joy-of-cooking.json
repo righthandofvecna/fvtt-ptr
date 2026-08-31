@@ -2,7 +2,7 @@
   "name": "The Joy of Cooking",
   "system": {
     "origin": "",
-    "effect": "A cookbook for novice and experienced chefs alike.\n\nRank 1 - Novice General Education: Your material costs for crafting Food Items of any variety are reduced by 10%.\nRank 2 - Expert General Education: Meal and Refreshment Items you create cause whoever eats them to gain a Tick of Hit Points.",
+    "effect": "A cookbook for novice and experienced chefs alike.\n\nRank 1 - Novice General Education: Your material costs for crafting Food Items of any variety are reduced by 10%.\nRank 2 - Expert General Education: @UUID[Compendium.ptu.items.Item.0s6tb7UT2xZ0YT9q]{Meal} and @CompSearch[Items keywords=Refreshment]{Refreshment} Items you create cause whoever eats them to gain a Tick of Hit Points.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "The Joy of Cooking",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 1900000,
   "_id": "0o21OoTy1p3LWM1b"
 }

@@ -1,5 +1,9 @@
 {
+  "folder": "6meG7SeyLvR39TI3",
   "name": "Highlander",
+  "type": "feat",
+  "_id": "avcMBnpC3rK6gw8i",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
     "effect": "Target: Your Dragon-Type Pokemon\nEffect: While this Feature is Bound, the target resists Dragon-Type attacks one step further, and its attacks targeting Dragon-Type creatures are one step more effective.",
@@ -7,18 +11,20 @@
     "rules": [],
     "enabled": true,
     "slug": "highlander-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:29.105Z",
+        "datetime": "2026-06-28T12:56:34.967Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.co9rvISmZQHNtRAL",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -26,12 +32,12 @@
     "keywords": [
       "Branch",
       "Playtest",
-      "Class Rework",
+      "CR",
       "Order",
       "Stratagem"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "Bind 2AP - Standard Action",
       "modifiers": {
@@ -53,6 +59,7 @@
       "cost": 2,
       "bind": true
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Tyrant's Roar",
       "Type-Linked Skill at Adept"
@@ -62,41 +69,22 @@
     "class": "Type Ace (Dragon)",
     "name": "Highlander",
     "useCount": 0,
-    "automation": [],
-    "contentSet": "class-rework",
-    "replacesSlug": "highlander"
+    "automation": []
   },
-  "type": "feat",
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "effects": [],
   "flags": {
     "ptu": {
-      "prereqBackup": "Tyrant's Roar, Type-Linked Skill at Adept",
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
-      "devNote": ""
-    }
-  },
-  "folder": "6meG7SeyLvR39TI3",
-  "_id": "DsVu60K0m8R8e9G8",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "_stats": {
-    "coreVersion": "13.351",
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.21",
-    "createdTime": 1710766944910,
-    "modifiedTime": 1778569243028,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": {
-      "worldId": "the-chosen",
-      "uuid": null,
-      "coreVersion": "11.315",
-      "systemId": "ptu",
-      "systemVersion": "4.2.2"
+      "prereqBackup": "Tyrant's Roar, Type-Linked Skill at Adept"
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
     }
   }
 }

@@ -1,5 +1,9 @@
 {
+  "folder": "ragCbmOsDCUz60wA",
   "name": "Impenetrable",
+  "type": "feat",
+  "_id": "e6yWexhmb0uYmb45",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Bulletproof Ability.",
@@ -13,18 +17,26 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.sK4HKyvIQrumnNOm"
       }
     ],
     "enabled": true,
     "slug": "impenetrable-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:29.105Z",
+        "datetime": "2026-06-28T12:56:34.968Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -61,6 +73,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Steelheart",
       "Expert Athletics or Focus"
@@ -68,28 +81,12 @@
     "notes": "",
     "free": false,
     "class": "Steelheart",
-    "name": "Impenetrable [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "impenetrable"
+    "name": "Impenetrable [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "ragCbmOsDCUz60wA",
-  "_id": "E7YL0ctFnpnhR2j3",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200829165,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
   }
 }

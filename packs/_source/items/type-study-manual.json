@@ -8,79 +8,78 @@
       {
         "key": "ChoiceSet",
         "flag": "typestudy",
-        "adjustName": true,
         "choices": [
           {
-            "label": "Bug",
-            "value": "bug"
+            "value": "bug",
+            "label": "Bug"
           },
           {
-            "label": "Dark",
-            "value": "dark"
+            "value": "dark",
+            "label": "Dark"
           },
           {
-            "label": "Dragon",
-            "value": "dragon"
+            "value": "dragon",
+            "label": "Dragon"
           },
           {
-            "label": "Electric",
-            "value": "electric"
+            "value": "electric",
+            "label": "Electric"
           },
           {
-            "label": "Fairy",
-            "value": "fairy"
+            "value": "fairy",
+            "label": "Fairy"
           },
           {
-            "label": "Fighting",
-            "value": "fighting"
+            "value": "fighting",
+            "label": "Fighting"
           },
           {
-            "label": "Fire",
-            "value": "fire"
+            "value": "fire",
+            "label": "Fire"
           },
           {
-            "label": "Flying",
-            "value": "flying"
+            "value": "flying",
+            "label": "Flying"
           },
           {
-            "label": "Ghost",
-            "value": "ghost"
+            "value": "ghost",
+            "label": "Ghost"
           },
           {
-            "label": "Grass",
-            "value": "grass"
+            "value": "grass",
+            "label": "Grass"
           },
           {
-            "label": "Ground",
-            "value": "ground"
+            "value": "ground",
+            "label": "Ground"
           },
           {
-            "label": "Ice",
-            "value": "ice"
+            "value": "ice",
+            "label": "Ice"
           },
           {
-            "label": "Normal",
-            "value": "normal"
+            "value": "normal",
+            "label": "Normal"
           },
           {
-            "label": "Poison",
-            "value": "poison"
+            "value": "poison",
+            "label": "Poison"
           },
           {
-            "label": "Psychic",
-            "value": "psychic"
+            "value": "psychic",
+            "label": "Psychic"
           },
           {
-            "label": "Rock",
-            "value": "rock"
+            "value": "rock",
+            "label": "Rock"
           },
           {
-            "label": "Steel",
-            "value": "steel"
+            "value": "steel",
+            "label": "Steel"
           },
           {
-            "label": "Water",
-            "value": "water"
+            "value": "water",
+            "label": "Water"
           }
         ]
       },
@@ -93,7 +92,8 @@
         },
         "hideIfDisabled": false,
         "selectors": "capture-roll",
-        "value": -5
+        "value": -5,
+        "label": "Studied Type"
       }
     ],
     "enabled": true,
@@ -150,7 +150,8 @@
     "name": "Type Study Manual",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -160,7 +161,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": "Rank 1 has a capture modifier prepared already"
     }
   },
   "_stats": {
@@ -173,7 +176,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 62200000,
   "_id": "tfnVzPB41TDm0UTY"
 }

@@ -2,7 +2,7 @@
   "name": "Orange Shard",
   "system": {
     "origin": "",
-    "effect": "Associated with Normal, Fighting, & Dragon.  With Gem Lore, 4 can be combined into a Shiny Stone.",
+    "effect": "Associated with Normal, Fighting, & Dragon.  With @UUID[Compendium.ptu.edges.Item.KjZ1VN3rZpnoSRVk]{Gem Lore}, 4 can be combined into a @UUID[Compendium.ptu.items.Item.pAQBFBZV5HgjZSTg]{Shiny Stone}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -29,7 +29,7 @@
       "Artificer"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -61,7 +61,8 @@
     "name": "Orange Shard",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -69,7 +70,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -80,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 55600000,
   "_id": "mvL2ySkR2aNfCsz0"
 }
