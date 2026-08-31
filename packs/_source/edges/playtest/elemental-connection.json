@@ -8,79 +8,78 @@
       {
         "key": "ChoiceSet",
         "flag": "elementalConnection",
-        "adjustName": true,
         "choices": [
           {
-            "label": "Bug",
-            "value": "target:types:bug"
+            "value": "target:types:bug",
+            "label": "Bug"
           },
           {
-            "label": "Dark",
-            "value": "target:types:dark"
+            "value": "target:types:dark",
+            "label": "Dark"
           },
           {
-            "label": "Dragon",
-            "value": "target:types:dragon"
+            "value": "target:types:dragon",
+            "label": "Dragon"
           },
           {
-            "label": "Electric",
-            "value": "target:types:electric"
+            "value": "target:types:electric",
+            "label": "Electric"
           },
           {
-            "label": "Fairy",
-            "value": "target:types:fairy"
+            "value": "target:types:fairy",
+            "label": "Fairy"
           },
           {
-            "label": "Fighting",
-            "value": "target:types:fighting"
+            "value": "target:types:fighting",
+            "label": "Fighting"
           },
           {
-            "label": "Fire",
-            "value": "target:types:fire"
+            "value": "target:types:fire",
+            "label": "Fire"
           },
           {
-            "label": "Flying",
-            "value": "target:types:flying"
+            "value": "target:types:flying",
+            "label": "Flying"
           },
           {
-            "label": "Ghost",
-            "value": "target:types:ghost"
+            "value": "target:types:ghost",
+            "label": "Ghost"
           },
           {
-            "label": "Grass",
-            "value": "target:types:grass"
+            "value": "target:types:grass",
+            "label": "Grass"
           },
           {
-            "label": "Ground",
-            "value": "target:types:ground"
+            "value": "target:types:ground",
+            "label": "Ground"
           },
           {
-            "label": "Ice",
-            "value": "target:types:ice"
+            "value": "target:types:ice",
+            "label": "Ice"
           },
           {
-            "label": "Normal",
-            "value": "target:types:normal"
+            "value": "target:types:normal",
+            "label": "Normal"
           },
           {
-            "label": "Poison",
-            "value": "target:types:poison"
+            "value": "target:types:poison",
+            "label": "Poison"
           },
           {
-            "label": "Psychic",
-            "value": "target:types:psychic"
+            "value": "target:types:psychic",
+            "label": "Psychic"
           },
           {
-            "label": "Rock",
-            "value": "target:types:rock"
+            "value": "target:types:rock",
+            "label": "Rock"
           },
           {
-            "label": "Steel",
-            "value": "target:types:steel"
+            "value": "target:types:steel",
+            "label": "Steel"
           },
           {
-            "label": "Water",
-            "value": "target:types:water"
+            "value": "target:types:water",
+            "label": "Water"
           }
         ]
       },
@@ -154,7 +153,8 @@
     "name": "Elemental Connection",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -164,7 +164,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "-"
+      "prereqBackup": "-",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

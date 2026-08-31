@@ -2,7 +2,7 @@
   "name": "Demoralize",
   "system": {
     "origin": "",
-    "effect": "Whenever you land a Critical Hit on a foe, that foe becomes Vulnerable. Status-Class Moves with an Accuracy Roll can “Crit” for the purposes of activating this effect on a natural roll of 19 or higher, and any effects that expand your Critical-Hit Range also expand this range.",
+    "effect": "Whenever you land a Critical Hit on a foe, that foe becomes @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI]{Vulnerable}. Status-Class Moves with an Accuracy Roll can “Crit” for the purposes of activating this effect on a natural roll of 19 or higher, and any effects that expand your Critical-Hit Range also expand this range.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -55,14 +55,18 @@
     "name": "Demoralize",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
   "effects": [],
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Intimidate"
+      "prereqBackup": "Adept Intimidate",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

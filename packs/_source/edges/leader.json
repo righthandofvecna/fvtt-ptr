@@ -2,7 +2,7 @@
   "name": "Leader",
   "system": {
     "origin": "",
-    "effect": "You learn the Move After You.",
+    "effect": "You learn the Move @UUID[Compendium.ptu.moves.Item.x8xJKEwM5Zp3jqGw]{After You}.",
     "snippet": "",
     "rules": [
       {
@@ -64,7 +64,8 @@
     "name": "Leader",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -74,7 +75,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Command"
+      "prereqBackup": "Adept Command",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -87,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "heioWMGV1L57da0d"
 }

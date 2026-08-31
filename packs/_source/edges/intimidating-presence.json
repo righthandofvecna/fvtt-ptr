@@ -2,7 +2,7 @@
   "name": "Intimidating Presence",
   "system": {
     "origin": "",
-    "effect": "You learn the Move Leer.",
+    "effect": "You learn the Move @UUID[Compendium.ptu.moves.Item.XQOEuOenSzYNz4eO]{Leer}.",
     "snippet": "",
     "rules": [
       {
@@ -64,7 +64,8 @@
     "name": "Intimidating Presence",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -74,7 +75,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Intimidate"
+      "prereqBackup": "Novice Intimidate",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -87,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "4hq51JxDQWMVn4BR"
 }

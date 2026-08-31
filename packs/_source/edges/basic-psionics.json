@@ -2,7 +2,7 @@
   "name": "Basic Psionics",
   "system": {
     "origin": "",
-    "effect": "You learn the Move Confusion.",
+    "effect": "You learn the Move @UUID[Compendium.ptu.moves.Item.wGfMIdaCB5sim3hx]{Confusion}.",
     "snippet": "",
     "rules": [
       {
@@ -64,7 +64,8 @@
     "name": "Basic Psionics",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -74,7 +75,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Elemental Connection (Psychic)"
+      "prereqBackup": "Elemental Connection (Psychic)",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -87,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "TDLH7XMQmlUqHgPV"
 }
