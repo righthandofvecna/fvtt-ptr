@@ -2,7 +2,7 @@
   "name": "Bait Attachment",
   "system": {
     "origin": "",
-    "effect": "These attachments afix a piece of bait to the triggering device of a Poké Ball. When the bait is taken, the attachment automatically triggers a capture attempt along with any effect that would be caused by a Poké Ball Cases.",
+    "effect": "These attachments afix a piece of @UUID[Compendium.ptu.items.Item.hTnlXJmwPgdbDWXL]{Bait} to the triggering device of a Poké Ball. When the bait is taken, the attachment automatically triggers a capture attempt along with any effect that would be caused by a Poké Ball Cases.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -60,7 +60,8 @@
     "name": "Bait Attachment",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -68,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -79,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 54400000,
   "_id": "lcYzC7jY5MaDUeum"
 }
