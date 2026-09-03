@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Stacked Deck",
-    "effect": "Should list proper table",
+    "effect": "@UUID[Compendium.ptu.effects.Item.eV20dozhkjLHhciF]{Bad Sleep}, @UUID[Compendium.ptu.effects.Item.Su7r4LU2xSVK9WY6]{Cursed}, @UUID[Compendium.ptu.effects.Item.h3mI5ak5eazEafbP]{Seeded}, @UUID[Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj]{Burn}, @UUID[Compendium.ptu.effects.Item.299X6pActAV8ITz7]{Poison}: Whenever the target loses Hit Points from the chosen condition, they lose an additional 5 Hit Points.\n\n@UUID[Compendium.ptu.effects.Item.bzZaLfYxVyKbJOCo]{Paralysis}, @UUID[Compendium.ptu.effects.Item.7F4dkJoDuD7wNcEK]{Frozen}, @UUID[Compendium.ptu.effects.Item.BuK1xNKNhBn1DZDu]{Vortex}, @UUID[Compendium.ptu.effects.Item.RekZDOcIsADhrfH3]{Sleep}: The next time the target passes their Save Check for the chosen condition, they become @UUID[Compendium.ptu.effects.Item.4lqKV4CxikZxxNWJ]{Tripped} and @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed}.\n\n@UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confused}, @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Enraged}, @UUID[Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY]{Suppressed}, @UUID[Compendium.ptu.effects.Item.ABTHN2VM50VQabZq]{Infatuation}: The target suffers a -2 penalty to their Accuracy and Evasion while suffering from the chosen condition.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "4DhwT9UVfGPG9jRm",
   "effects": [],
-  "folder": null,
   "sort": 2000000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
