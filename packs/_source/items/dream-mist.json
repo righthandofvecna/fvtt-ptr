@@ -2,7 +2,7 @@
   "name": "Dream Mist",
   "system": {
     "origin": "",
-    "effect": "Dream Mist may be used as an AC 6 Melee Status Attack, performed as a Standard Action. If it hits, the target falls Asleep. Dream Mist is collected from Pokémon with the eponymous Capability using a Collection Jar.",
+    "effect": "Dream Mist may be used as an AC 6 Melee Status Attack, performed as a Standard Action. If it hits, the target falls @UUID[Compendium.ptu.effects.Item.RekZDOcIsADhrfH3]{Asleep}. Dream Mist is collected from Pokémon with the eponymous @UUID[Compendium.ptu.capabilities.Item.UQIGU7D570K0h1hH]{Capability} using a @UUID[Compendium.ptu.items.Item.w9JX62zPK8CoWL7O]{Collection Jar}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -59,7 +59,8 @@
     "name": "Dream Mist",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 67500000,
   "_id": "xQ0rqoDEsPAR4uP8"
 }
