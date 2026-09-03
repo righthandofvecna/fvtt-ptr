@@ -40,7 +40,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -60,7 +60,8 @@
     "name": "X Defend",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/x defend.webp",
@@ -68,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -79,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 53000000,
   "_id": "kG8qoD4ueWURGPOt"
 }

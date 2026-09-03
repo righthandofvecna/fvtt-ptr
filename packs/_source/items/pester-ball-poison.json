@@ -2,7 +2,7 @@
   "name": "Pester Ball (Poison)",
   "system": {
     "origin": "",
-    "effect": "Inflicts Poison on the target. After being hit by any Pester Ball, a target becomes immune to the effects of further Pester Balls of the same status for the rest of the Scene. Throwing and hitting with Pester Balls is the same as with Poké Balls.",
+    "effect": "Inflicts @UUID[Compendium.ptu.effects.Item.299X6pActAV8ITz7]{Poison} on the target. After being hit by any Pester Ball, a target becomes immune to the effects of further Pester Balls of the same status for the rest of the Scene. Throwing and hitting with Pester Balls is the same as with Poké Balls.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -59,7 +59,8 @@
     "name": "Pester Ball (Poison)",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -69,7 +70,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -82,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 26900000,
   "_id": "MDrPagcMCLgcfebb"
 }
