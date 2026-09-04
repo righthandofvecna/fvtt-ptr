@@ -2,7 +2,7 @@
   "name": "Re-Breather",
   "system": {
     "origin": "",
-    "effect": "This small partial face mask allows Trainers and Pokémon to breathe underwater as if they had the Gilled Capability for up to an hour. The Re-Breather is refilled automatically in 5 minutes while in open air.",
+    "effect": "This small partial face mask allows Trainers and Pokémon to breathe underwater as if they had the @UUID[Compendium.ptu.capabilities.Item.Sr5UjqsO8FydTuNw]{Gilled} Capability for up to an hour. The Re-Breather is refilled automatically in 5 minutes while in open air.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -28,7 +28,7 @@
       "Head"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -60,7 +60,8 @@
     "name": "Re-Breather",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -68,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -79,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 37500000,
   "_id": "VA26XxbAiTBsfJvb"
 }
