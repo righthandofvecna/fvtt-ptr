@@ -2,7 +2,7 @@
   "name": "Poffin Mixer",
   "system": {
     "origin": "",
-    "effect": "A Poffin Mixer can be used by any Trainer to create Poffins. You simply insert cooking ingredients worth $500, and at least one of the listed berries. You create two Poffins that raises the Contest Stat most represented by the berries used by +1 Contest Die. Some Berries can raise multiple Contest Stats; you choose which to raise when using these Berries to make Poffins. Poffins can be purchased for $500 in bakeries.\n\nCheri, Figy, Razz, Spelon and Belue Berries raise Cool; Chesto, Wiki, Bluk, Spelon and Pamtre Berries raise Beauty; Pecha, Mago, Nanab, Pamtre, and Watmel Berries raise Cute; Rawst, Aguav, Wepear, Watmel, and Durin Berries raise Smart; Aspear, Iapapa, Pinap, Durin, and Belue Berries raise Tough.",
+    "effect": "A Poffin Mixer can be used by any Trainer to create @CompSearch[Items Poffin]{Poffins}. You simply insert cooking ingredients worth @Poke[500], and at least one of the listed berries. You create two Poffins that raises the Contest Stat most represented by the berries used by +1 Contest Die. Some Berries can raise multiple Contest Stats; you choose which to raise when using these Berries to make Poffins. Poffins can be purchased for @Poke[500] in bakeries.\n\nCool: @UUID[Compendium.ptu.items.Item.cv5eqwzldHxaSdUx]{Cheri}, @UUID[Compendium.ptu.items.Item.KANaICzUllgcccn6]{Figy}, @UUID[Compendium.ptu.items.Item.6Ulf3uG4QRO9sEEK]{Razz}, @UUID[Compendium.ptu.items.Item.pR81Bf8454iI2LPj]{Spelon} and @UUID[Compendium.ptu.items.Item.34nn2TkdQjNbXL0U]{Belue} Berries\nBeauty: @UUID[Compendium.ptu.items.Item.Ui1HOOBmxt6iCjqM]{Chesto}, @UUID[Compendium.ptu.items.Item.xvhemPoZ4h4wBjUs]{Wiki}, @UUID[Compendium.ptu.items.Item.LOHaoajMrgco1NjQ]{Bluk}, @UUID[Compendium.ptu.items.Item.pR81Bf8454iI2LPj]{Spelon} and @UUID[Compendium.ptu.items.Item.Pt8QZy6atB2PDZgK]{Pamtre} Berries\nCute: @UUID[Compendium.ptu.items.Item.myUsKao9Dkcrkvky]{Pecha}, @UUID[Compendium.ptu.items.Item.QVycESa0ERv6vnVx]{Mago}, @UUID[Compendium.ptu.items.Item.vlQ41G1No20eQlY9]{Nanab}, @UUID[Compendium.ptu.items.Item.Pt8QZy6atB2PDZgK]{Pamtre}, and @UUID[Compendium.ptu.items.Item.63QJ0JtoxTJQ5nc0]{Watmel} Berries\nSmart: @UUID[Compendium.ptu.items.Item.nyubmMDwJSkeLJiM]{Rawst}, @UUID[Compendium.ptu.items.Item.XIUq1Al547PHDZXH]{Aguav}, @UUID[Compendium.ptu.items.Item.4PebEIFVWG5hNGrz]{Wepear}, @UUID[Compendium.ptu.items.Item.63QJ0JtoxTJQ5nc0]{Watmel}, and @UUID[Compendium.ptu.items.Item.Z8CeZSs15ub588jA]{Durin} Berries\nTough: @UUID[Compendium.ptu.items.Item.1F4h8ATAl8MlaM7e]{Aspear}, @UUID[Compendium.ptu.items.Item.qHAQPjlnHjtkJ28h]{Iapapa}, @UUID[Compendium.ptu.items.Item.AnzVYlXddqWdCUCQ]{Pinap}, @UUID[Compendium.ptu.items.Item.Z8CeZSs15ub588jA]{Durin}, and @UUID[Compendium.ptu.items.Item.34nn2TkdQjNbXL0U]{Belue} Berries",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -43,7 +43,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -59,7 +59,8 @@
     "name": "Poffin Mixer",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 22600000,
   "_id": "IFfK3UPE3yZj1GGO"
 }

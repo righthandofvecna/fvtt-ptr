@@ -2,7 +2,7 @@
   "name": "Dowsing Rod",
   "system": {
     "origin": "",
-    "effect": "Dowsing Rods have been attuned to the energy resonance given off by Shards and may be used while in any route, cave, or outside area. They may be activated by spending 10 minutes searching an area, and may be activated a number of times per day equal to half of the trainer’s Occult Education Rank.\n\nRoll 1d6 per Occult Ed Rank. If the area being searched is a beach, cave, desert, or any other sandy/rocky area, roll +1d6. If you have Skill Stunt (Dowsing), roll an additional 1d6. For each die that results in 4 or higher, you find 1 Shard of a random color: Red, Orange, Yellow, Green, Blue, or Violet. You may reroll any die that result in 6, gaining that shard and potentially more.",
+    "effect": "Dowsing Rods have been attuned to the energy resonance given off by Shards and may be used while in any route, cave, or outside area. They may be activated by spending 10 minutes searching an area, and may be activated a number of times per day equal to half of the trainer’s Occult Education Rank.\n\nRoll 1d6 per Occult Ed Rank. If the area being searched is a beach, cave, desert, or any other sandy/rocky area, roll +1d6. If you have @UUID[Compendium.ptu.edges.Item.eg9RIJE6jQbM96Ti]{Skill Stunt (Dowsing)}, roll an additional 1d6. For each die that results in 4 or higher, you find 1 Shard of a random color: Red, Orange, Yellow, Green, Blue, or Violet. You may reroll any die that result in 6, gaining that shard and potentially more.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -43,7 +43,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -59,7 +59,8 @@
     "name": "Dowsing Rod",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/dowsing rod.webp",
@@ -69,7 +70,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -82,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 25900000,
   "_id": "LklZUgxgGpLZipQE"
 }
