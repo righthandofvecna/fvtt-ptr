@@ -28,8 +28,8 @@
       "Mega Stone"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -41,7 +41,7 @@
     },
     "actionCost": {
       "standard": false,
-      "rapid": false,
+      "rapid": true,
       "shift": false,
       "free": false,
       "extended": false
@@ -73,7 +73,8 @@
     "ptu": {
       "showInTokenPanel": false,
       "automationStatus": "no-automation-needed",
-      "devNote": ""
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
