@@ -37,7 +37,7 @@
       "Keepsake"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -96,5 +96,6 @@
     "exportSource": null
   },
   "sort": 17500000,
-  "_id": "DnWPPBYKgwKyovxF"
+  "_id": "DnWPPBYKgwKyovxF",
+  "folder": null
 }
