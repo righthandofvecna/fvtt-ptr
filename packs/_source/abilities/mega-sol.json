@@ -61,10 +61,10 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
-  "folder": null,
   "flags": {
     "ptu": {
       "showInTokenPanel": true
