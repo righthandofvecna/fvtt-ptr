@@ -2,33 +2,32 @@
   "name": "Choice Item",
   "system": {
     "origin": "",
-    "effect": "Choice Items are tied to a Specific Stat. While worn, the default state of the Stat is +2 Combat Stages instead of 0. However, the user is Suppressed and cannot be cured until the end of Combat, even if the item is removed. Cannot be used by Trainers.",
+    "effect": "Choice Items are tied to a Specific Stat. While worn, the default state of the Stat is +2 Combat Stages instead of 0. However, the user is @UUID[Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY]{Suppressed} and cannot be cured until the end of Combat, even if the item is removed. Cannot be used by Trainers.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
         "flag": "choice-item",
-        "adjustName": true,
         "choices": [
           {
-            "label": "Attack",
-            "value": "atk"
+            "value": "atk",
+            "label": "Attack"
           },
           {
-            "label": "Defense",
-            "value": "def"
+            "value": "def",
+            "label": "Defense"
           },
           {
-            "label": "Special Attack",
-            "value": "spatk"
+            "value": "spatk",
+            "label": "Special Attack"
           },
           {
-            "label": "Special Defense",
-            "value": "spdef"
+            "value": "spdef",
+            "label": "Special Defense"
           },
           {
-            "label": "Speed",
-            "value": "spd"
+            "value": "spd",
+            "label": "Speed"
           }
         ]
       },
@@ -70,7 +69,7 @@
       "Held Item"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -102,7 +101,8 @@
     "name": "Choice Item",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -112,7 +112,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -125,7 +127,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 49000000,
   "_id": "gBqnRcFuHbuol8VX"
 }

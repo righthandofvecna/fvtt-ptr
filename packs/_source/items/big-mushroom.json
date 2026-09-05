@@ -2,7 +2,7 @@
   "name": "Big Mushroom",
   "system": {
     "origin": "",
-    "effect": "The user becomes Poisoned; if they do, they gain +1 Combat Stage in two random Stats.",
+    "effect": "The user becomes @UUID[Compendium.ptu.effects.Item.299X6pActAV8ITz7]{Poisoned}; if they do, they gain +1 Combat Stage in two random Stats.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -42,7 +42,7 @@
     "actionCost": {
       "standard": false,
       "rapid": false,
-      "shift": false,
+      "shift": true,
       "free": false,
       "extended": false
     },
@@ -87,5 +87,6 @@
     "exportSource": null
   },
   "sort": 59100000,
-  "_id": "qjXGxkVxalQcIpuD"
+  "_id": "qjXGxkVxalQcIpuD",
+  "folder": null
 }
