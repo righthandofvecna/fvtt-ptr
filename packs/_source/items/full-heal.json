@@ -2,7 +2,7 @@
   "name": "Full Heal",
   "system": {
     "origin": "",
-    "effect": "Cures all Persistent Status Afflictions.",
+    "effect": "Cures all Persistent @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.OrrT285900adyGby]{Status Afflictions}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -59,7 +59,8 @@
     "name": "Full Heal",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/full heal.webp",
@@ -84,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 7900000,
   "_id": "5P6ANxofYLtykhvN"
 }

@@ -2,7 +2,7 @@
   "name": "Full Restore",
   "system": {
     "origin": "",
-    "effect": "Heals a Pokémon for 80 Hit Points and cures any Status Afflictions.",
+    "effect": "Heals a Pokémon for 80 Hit Points and cures any @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.OrrT285900adyGby]{Status Afflictions}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -86,5 +86,6 @@
     "exportSource": null
   },
   "sort": 34900000,
-  "_id": "Tb8yKIXVEcWvhmvk"
+  "_id": "Tb8yKIXVEcWvhmvk",
+  "folder": null
 }
