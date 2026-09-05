@@ -2,7 +2,7 @@
   "name": "Honey",
   "system": {
     "origin": "",
-    "effect": "Snack. Grants a Food Buff that heals 5 Hit Points. May be used as Bait",
+    "effect": "Snack. Grants a Food Buff that heals 5 Hit Points. May be used as @UUID[Compendium.ptu.items.Item.hTnlXJmwPgdbDWXL]{Bait}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -44,7 +44,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -60,7 +60,8 @@
     "name": "Honey",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -68,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -79,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 29900000,
   "_id": "Op2TZv6Qoz4Y65e2"
 }
