@@ -11,8 +11,12 @@
       {
         "key": "TokenImage",
         "predicate": [
-          "species:abomasnow",
-          "self:pokemon:shiny"
+          {
+            "value": "species:abomasnow"
+          },
+          {
+            "value": "self:pokemon:shiny"
+          }
         ],
         "value": "/systems/ptu/static/images/sprites/460s_MEGA.webp"
       },
@@ -31,7 +35,9 @@
       {
         "key": "TemporarySpecies",
         "predicate": [
-          "species:abomasnow"
+          {
+            "value": "species:abomasnow"
+          }
         ],
         "uuid": "Compendium.ptu.species.Item.RZGiXvhK4bSV2oJ3"
       },
@@ -62,7 +68,7 @@
     "duration": {
       "value": -1,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -83,7 +89,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

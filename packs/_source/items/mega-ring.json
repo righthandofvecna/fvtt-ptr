@@ -28,8 +28,8 @@
       "Accessory"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -41,7 +41,7 @@
     },
     "actionCost": {
       "standard": false,
-      "rapid": false,
+      "rapid": true,
       "shift": false,
       "free": false,
       "extended": false
@@ -73,7 +73,8 @@
     "ptu": {
       "automationStatus": "no-automation-needed",
       "devNote": "",
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "used": 0
     }
   },
   "_stats": {
@@ -87,5 +88,6 @@
     "exportSource": null
   },
   "sort": 55800000,
-  "_id": "n2L3hDlHQ82zQhDu"
+  "_id": "n2L3hDlHQ82zQhDu",
+  "folder": null
 }
