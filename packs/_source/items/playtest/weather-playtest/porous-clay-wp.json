@@ -38,7 +38,7 @@
       "Playtest"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -67,7 +67,8 @@
     "subtype": "",
     "container": false,
     "contentSet": "weather-playtest",
-    "replacesSlug": "porous-clay"
+    "replacesSlug": "porous-clay",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
@@ -76,7 +77,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
