@@ -44,7 +44,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -60,7 +60,8 @@
     "name": "Candy Bar",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -68,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -79,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 17100000,
   "_id": "DbMh7oSIBQdOinsl"
 }
