@@ -2,7 +2,7 @@
   "name": "Ice Heal",
   "system": {
     "origin": "",
-    "effect": "Cures Freezing.",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.7F4dkJoDuD7wNcEK]{Freezing}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -59,7 +59,8 @@
     "name": "Ice Heal",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/ice heal.webp",
@@ -84,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 10600000,
   "_id": "7he7IuXJJDfvWhyC"
 }

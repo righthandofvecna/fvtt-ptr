@@ -2,7 +2,7 @@
   "name": "Burn Heal",
   "system": {
     "origin": "",
-    "effect": "Cures Burns.",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj]{Burns}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -59,7 +59,8 @@
     "name": "Burn Heal",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/burn heal.webp",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 39200000,
   "_id": "WgG0d3bNUMElJxk5"
 }
