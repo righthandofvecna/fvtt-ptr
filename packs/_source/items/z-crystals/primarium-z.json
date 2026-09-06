@@ -6,7 +6,7 @@
   "img": "systems/ptu/static/images/item_icons/primarium z.webp",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "@Embed[Compendium.ptu.moves.Item.zLwlE7U1UbssTSB6]",
     "snippet": "",
     "rules": [
       {
@@ -38,8 +38,8 @@
       "Z-Crystal"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -50,7 +50,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -67,7 +67,8 @@
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 171290,
@@ -77,8 +78,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
-      "devNote": ""
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
