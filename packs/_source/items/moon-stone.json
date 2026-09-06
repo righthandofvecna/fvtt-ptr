@@ -2,7 +2,7 @@
   "name": "Moon Stone",
   "system": {
     "origin": "",
-    "effect": "Evolves Nidorina, Nidorino, Clefairy, Jigglypuff, Eevee, Skitty, Munna",
+    "effect": "Evolves Nidorina, Nidorino, Clefairy, Jigglypuff, Eevee, Skitty, Munna.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,10 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Evo. Stone",
+      "Evo. Item"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -41,7 +44,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -57,7 +60,8 @@
     "name": "Moon Stone",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/moon stone.webp",
@@ -65,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 7500000,
   "_id": "5ECVx9CV4q7awLVL"
 }
