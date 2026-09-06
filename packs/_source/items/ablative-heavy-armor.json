@@ -33,9 +33,12 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Equipment",
+      "Body"
+    ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -78,7 +81,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -92,5 +97,6 @@
     "exportSource": null
   },
   "sort": 24700000,
-  "_id": "KPWoxlQtVwsUTmR4"
+  "_id": "KPWoxlQtVwsUTmR4",
+  "folder": null
 }
