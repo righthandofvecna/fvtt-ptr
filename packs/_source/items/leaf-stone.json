@@ -2,7 +2,7 @@
   "name": "Leaf Stone",
   "system": {
     "origin": "",
-    "effect": "Evolves Gloom, Weepinbell, Exeggcute, Eevee, Nuzleaf, Pansage",
+    "effect": "Evolves Gloom, Weepinbell, Exeggcute, Eevee, Nuzleaf, Pansage.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Evo. Item"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -41,7 +43,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -57,7 +59,8 @@
     "name": "Leaf Stone",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/leaf stone.webp",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 1800000,
   "_id": "0mGUZY8Uj2keO5a2"
 }
