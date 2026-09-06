@@ -2,7 +2,7 @@
   "name": "Spray Case",
   "system": {
     "origin": "",
-    "effect": "A Spray Case may be filled with a Pester Ball or Repel of any variety. This consumes the used item. Upon hitting a target, the Spray Case is emptied, spraying the item it was filled with onto its target, automatically hitting. This can occur when attempting to catch Pokémon (the effect is resolved before the capture roll), or when releasing a Pokémon from its Poké Ball (the effect is resolved before the Pokémon within is released). Spray Cases may be refilled numerous times, but may only have one sort of consumable in them at a time.",
+    "effect": "A Spray Case may be filled with a @UUID[Compendium.ptu.items.Item.1e63A4th1XwoZ3Xf]{Pester Ball} or @UUID[Compendium.ptu.items.Item.vo6LUh99xOWwgAZP]{Repel} of any variety. This consumes the used item. Upon hitting a target, the Spray Case is emptied, spraying the item it was filled with onto its target, automatically hitting. This can occur when attempting to catch Pokémon (the effect is resolved before the capture roll), or when releasing a Pokémon from its Poké Ball (the effect is resolved before the Pokémon within is released). Spray Cases may be refilled numerous times, but may only have one sort of consumable in them at a time.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -59,7 +59,8 @@
     "name": "Spray Case",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 55000000,
   "_id": "mHuu0GrMLIKqS1So"
 }
