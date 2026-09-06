@@ -73,7 +73,8 @@
     "damageBonus": 0,
     "isStruggle": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 166407,
