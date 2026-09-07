@@ -1,7 +1,7 @@
 {
   "name": "Defend Order",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
+  "img": "/systems/ptu/css/images/types2/BugIC_Icon.png",
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
@@ -12,22 +12,24 @@
         "key": "ApplyEffect",
         "predicate": [],
         "affects": "origin",
-        "selectors": "{item|id}-damage-dealt",
+        "selectors": "{item|id}-apply-effects",
         "uuid": "Compendium.ptu.effects.Item.SwTrCa9QaIudkmyX",
-        "range": "1",
+        "range": "",
         "value": ""
       }
     ],
     "enabled": true,
     "slug": "defend-order",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:23.214Z",
+        "datetime": "2026-07-06T12:14:57.152Z",
         "version": {
-          "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "schema": 0.115,
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
@@ -68,6 +70,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Bug",
     "category": "Status",
     "damageBase": "--",
@@ -77,29 +80,17 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "7hrNCJ06sxq0OB9q",
   "effects": [],
-  "sort": 9900000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "grantedBy": {
+        "id": "SXARt3Pmsgu2yNEj",
+        "onDelete": "cascade"
+      }
     }
   },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200823277,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  }
+  "_id": "gIxt7Wz7OciosA0K"
 }

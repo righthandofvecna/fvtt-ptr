@@ -12,11 +12,23 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.capabilities.Item.v4OOr4KlIO0DKw5r"
+        "uuid": "Compendium.ptu.capabilities.Item.v4OOr4KlIO0DKw5r",
+        "flag": "glow"
+      },
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.MPgTZ8QcPNal4lC3",
+        "range": "",
+        "value": "",
+        "affects": "target"
       }
     ],
     "enabled": true,
     "slug": "flash",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -65,6 +77,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Normal",
     "category": "Status",
     "damageBase": "--",
@@ -74,29 +87,19 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "itemGrants": {
+        "glow": {
+          "id": "2Z8zU36aQAdjQQHY",
+          "onDelete": "detach"
+        }
+      }
     }
   },
-  "_stats": {
-    "coreVersion": "13.351",
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "createdTime": 1749994078262,
-    "modifiedTime": 1778200825400,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  },
-  "_id": "joekwsOGEcyJt9BB",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  }
+  "_id": "31iaqekeCELunPfW"
 }

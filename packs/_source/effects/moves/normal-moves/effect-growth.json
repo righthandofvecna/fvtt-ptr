@@ -24,6 +24,28 @@
         "phase": "applyAEs",
         "value": 1,
         "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "effect:sunny"
+        ],
+        "mode": "add",
+        "path": "system.stats.atk.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "effect:sunny"
+        ],
+        "mode": "add",
+        "path": "system.stats.spatk.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -63,7 +85,9 @@
   "folder": "vvYHstuSI4986bjM",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "scene-packer": {
       "hash": "138d8fbaa7e88e84c0d418a49474ea145eb8cd64",

@@ -1,23 +1,35 @@
 {
   "name": "Defense Curl",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "img": "/systems/ptu/css/images/types2/NormalIC_Icon.png",
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "The user becomes Curled Up. While Curled Up, the user becomes immune to Critical Hits, and gains 10 Damage Reduction and +1 Defense Combat Stage. However, while Curled Up, the user is Slowed and their Accuracy is lowered by 4. The user may stop being Curled Up as a Rapid Action, or if they are Recalled or Take a Breather. If the user has Rollout or Ice Ball in their Move List, they do not become Slowed while Curled Up, and the user gains a +10 bonus to the damage rolls of those Moves and does not suffer Accuracy Penalties from being Curled Up when using those moves.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.2rVbX71BeIqrailD",
+        "range": "",
+        "value": "",
+        "affects": "origin"
+      }
+    ],
     "enabled": true,
     "slug": "defense-curl",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:24.771Z",
+        "datetime": "2026-07-06T12:14:59.177Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
@@ -58,6 +70,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Normal",
     "category": "Status",
     "damageBase": "--",
@@ -67,29 +80,13 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "Y5R5mbVcGq6fwoFj",
+  "_id": "fkeTPO59BZNq3Vsi",
   "effects": [],
-  "sort": 50000000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200824834,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

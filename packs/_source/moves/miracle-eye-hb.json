@@ -1,44 +1,46 @@
 {
-  "name": "Amnesia",
+  "name": "Miracle Eye",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
+  "img": "/systems/ptu/css/images/types2/PsychicIC_Icon.png",
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
-    "effect": "Raise the user's Special Defense 2 Combat Stages.",
+    "effect": "Miracle Eye may be activated as a Rapid Action on the user's turn. For the rest of the turn, the user's Psychic-Type Moves can hit and affect Dark-Type targets, and the user can see through the Illusion Ability, Moves with the Illusion keyword, and effect created by the Illusionist Capability, ignoring all effect from those.",
     "snippet": "",
     "rules": [
       {
         "key": "ApplyEffect",
         "predicate": [],
         "selectors": "{item|id}-apply-effects",
-        "uuid": "Compendium.ptu.effects.Item.V8QBZMEeIinYP9Nt",
+        "uuid": "Compendium.ptu.effects.Item.9kj0BXcEUmST4NJQ",
         "range": "",
         "value": "",
         "affects": "origin"
       }
     ],
     "enabled": true,
-    "slug": "amnesia",
-    "contentSet": "",
+    "slug": "miracle-eye-hb",
+    "contentSet": "homebrew",
     "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:22.988Z",
+        "datetime": "2026-07-06T12:15:00.594Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.V8QBZMEeIinYP9Nt",
+    "referenceEffect": "",
     "source": {
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Rapid Action"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
@@ -48,9 +50,9 @@
     "punkRock": false,
     "strongJaw": false,
     "frequency": {
-      "type": "eot",
-      "max": null,
-      "custom": "EOT",
+      "type": "scene",
+      "max": 2,
+      "custom": "Scene x2",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -60,8 +62,8 @@
       }
     },
     "actionCost": {
-      "standard": true,
-      "rapid": false,
+      "standard": false,
+      "rapid": true,
       "shift": false,
       "free": false,
       "extended": false
@@ -76,17 +78,20 @@
     "damageBase": "--",
     "ac": "--",
     "range": "Self",
-    "contestType": "Cute - Get Ready!",
+    "contestType": "Cute - Good Show!",
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
     "automation": []
   },
-  "_id": "h8cEoUyDlMpH2a2t",
+  "_id": "2TBtW15986V7mWSR",
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "used": null,
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   }
 }
