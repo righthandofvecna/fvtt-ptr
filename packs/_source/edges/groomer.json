@@ -55,7 +55,8 @@
     "name": "Groomer",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Pokémon Education or Novice General Education"
+      "prereqBackup": "Novice Pokémon Education or Novice General Education",
+      "automationStatus": "needs-automation",
+      "devNote": "Can potentially be removed since it has been rendered mostly obsolete by the Experience Training System",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -78,7 +82,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "b9Y1rKIPqKEWPcrc"
 }

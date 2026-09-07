@@ -13,14 +13,222 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.feats.Item.TsZF8PslsO8TLTn6",
+            "label": "Arctic Pilgrim – Tundra Terrain",
+            "predicate": [
+              "capability:naturewalk-tundra-hb",
+              {
+                "not": "feat:arctic-pilgrim-tundra-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.9gsjgdwtdh5zrMJQ",
+            "label": "Cave Dweller – Cave Terrain",
+            "predicate": [
+              "capability:naturewalk-cave-hb",
+              {
+                "not": "feat:cave-dweller-cave-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.YJ1cHRVsA9mCEPYV",
+            "label": "Deep Diver – Ocean Terrain",
+            "predicate": [
+              "capability:naturewalk-ocean-hb",
+              {
+                "not": "feat:deep-diver-ocean-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.679KkrBYb2SlQ2ET",
+            "label": "Dune Walker – Desert Terrain",
+            "predicate": [
+              "capability:naturewalk-desert-hb",
+              {
+                "not": "feat:arcticdune-walker-desert-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.EjYFbtfkCMejE28V",
+            "label": "Forest Ranger – Forest Terrain",
+            "predicate": [
+              "capability:naturewalk-forest",
+              {
+                "not": "feat:forest-ranger-forest-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.Bg23s9MsvvLy7e0A",
+            "label": "Marsh Stomper – Wetland Terrain",
+            "predicate": [
+              "capability:naturewalk-wetlands-hb",
+              {
+                "not": "feat:marsh-stomper-wetland-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.1q88VTfgiLNYT0uX",
+            "label": "Plains Runner – Grassland Terrain",
+            "predicate": [
+              "capability:naturewalk-grassland",
+              {
+                "not": "feat:plains-runner-grassland-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.zzguMvR2nO8gRCsH",
+            "label": "Surefooted – Mountain Terrain",
+            "predicate": [
+              "capability:naturewalk-mountain-hb",
+              {
+                "not": "feat:surefooted-mountain-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.SO9jGPQK0tC0BsLV",
+            "label": "Traceur – Urban Terrain",
+            "predicate": [
+              "capability:naturewalk-urban-hb",
+              {
+                "not": "feat:traceur-urban-terrain-hb"
+              }
+            ]
+          }
+        ],
+        "flag": "terrain2-1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.terrain2-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "flag": "terrain2-2",
+        "choices": [
+          {
+            "value": "Compendium.ptu.feats.Item.TsZF8PslsO8TLTn6",
+            "label": "Arctic Pilgrim – Tundra Terrain",
+            "predicate": [
+              "capability:naturewalk-tundra-hb",
+              {
+                "not": "feat:arctic-pilgrim-tundra-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.9gsjgdwtdh5zrMJQ",
+            "label": "Cave Dweller – Cave Terrain",
+            "predicate": [
+              "capability:naturewalk-cave-hb",
+              {
+                "not": "feat:cave-dweller-cave-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.YJ1cHRVsA9mCEPYV",
+            "label": "Deep Diver – Ocean Terrain",
+            "predicate": [
+              "capability:naturewalk-ocean-hb",
+              {
+                "not": "feat:deep-diver-ocean-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.679KkrBYb2SlQ2ET",
+            "label": "Dune Walker – Desert Terrain",
+            "predicate": [
+              "capability:naturewalk-desert-hb",
+              {
+                "not": "feat:arcticdune-walker-desert-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.EjYFbtfkCMejE28V",
+            "label": "Forest Ranger – Forest Terrain",
+            "predicate": [
+              "capability:naturewalk-forest",
+              {
+                "not": "feat:forest-ranger-forest-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.Bg23s9MsvvLy7e0A",
+            "label": "Marsh Stomper – Wetland Terrain",
+            "predicate": [
+              "capability:naturewalk-wetlands-hb",
+              {
+                "not": "feat:marsh-stomper-wetland-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.1q88VTfgiLNYT0uX",
+            "label": "Plains Runner – Grassland Terrain",
+            "predicate": [
+              "capability:naturewalk-grassland",
+              {
+                "not": "feat:plains-runner-grassland-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.zzguMvR2nO8gRCsH",
+            "label": "Surefooted – Mountain Terrain",
+            "predicate": [
+              "capability:naturewalk-mountain-hb",
+              {
+                "not": "feat:surefooted-mountain-terrain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.SO9jGPQK0tC0BsLV",
+            "label": "Traceur – Urban Terrain",
+            "predicate": [
+              "capability:naturewalk-urban-hb",
+              {
+                "not": "feat:traceur-urban-terrain-hb"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.terrain2-2}"
       }
     ],
     "enabled": true,
     "slug": "terrain-talent-rank-2-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "terrain-talent-rank-2",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:31.474Z",
+        "datetime": "2026-05-08T00:40:30.523Z",
         "version": {
           "schema": null,
           "foundry": "13.351",
@@ -62,6 +270,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Survivalist",
       "4 Mastered Terrains"
@@ -69,32 +278,18 @@
     "notes": "",
     "free": false,
     "class": "Survivalist",
-    "name": "Terrain Talent [CR]Rank 1 [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "terrain-talent-rank-2"
+    "name": "Terrain Talent [CR]Rank 1 [CR]"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
   "folder": "jwSUGJETAKuub2Ws",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200831544,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  },
-  "_id": "pr28px3nz4knlpjY"
+  "_id": "Oiasx60Ws0bjUfpT"
 }

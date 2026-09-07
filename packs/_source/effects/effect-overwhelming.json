@@ -1,0 +1,77 @@
+{
+  "folder": "vv929D9klzsY0yL0",
+  "name": "Effect: Overwhelming",
+  "type": "effect",
+  "_id": "B5ttII9wQwdPH0XE",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Effect: Your Dragon-Type Pokemon's Dragon-Type Moves can hit and affect Fairy-Type targets.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "EphemeralEffect",
+        "predicate": [],
+        "selectors": "dragon-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.XDpmqDnKc9a7K9Cg",
+        "affects": "target"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-overwhelming",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:34.684Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
+    }
+  }
+}

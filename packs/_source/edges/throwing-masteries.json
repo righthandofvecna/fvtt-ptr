@@ -65,7 +65,8 @@
     "name": "Throwing Masteries",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -75,7 +76,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Acrobatics"
+      "prereqBackup": "Adept Acrobatics",
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -88,7 +92,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "8eoPOpv2Si3F64tt"
 }

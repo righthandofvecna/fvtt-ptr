@@ -59,7 +59,8 @@
     "class": "Ace Trainer",
     "name": "Champ in the Making [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "champ-in-the-making"
+    "replacesSlug": "champ-in-the-making",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -72,7 +73,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": "Can simply add another stack of the Ace Trainer > Default Combat Stage effect, unless we want to add a separate effect for this Feature"
     }
   },
   "_stats": {

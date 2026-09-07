@@ -2,7 +2,7 @@
   "name": "Safety Goggles",
   "system": {
     "origin": "",
-    "effect": "The holder is immune to Moves with the Powder Keyword. Accessory or Head Item for Trainers.",
+    "effect": "The holder is immune to Moves with the @CompSearch[Moves keywords=Powder]{Powder} Keyword. Accessory or Head Item for Trainers.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -30,7 +30,7 @@
       "Fashionista"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -62,7 +62,8 @@
     "name": "Safety Goggles",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -70,7 +71,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -81,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 24200000,
   "_id": "KCMw8tlwHQ2uqS0C"
 }

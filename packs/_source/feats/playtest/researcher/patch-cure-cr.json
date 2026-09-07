@@ -2,7 +2,7 @@
   "name": "Patch Cure",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: A Restorative Item\nEffect: You distill the target, gaining 3 Restorative atches. Restorative Patches have the same effect as the tems from which they were created, but can only be applied as an Extended Action.",
+    "effect": "Target: A Restorative Item\nEffect: You distill the target, gaining 3 Restorative Patches. Restorative Patches have the same effect as the tems from which they were created, but can only be applied as an Extended Action.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "class": "Researcher",
     "name": "Patch Cure [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "patch-cure"
+    "replacesSlug": "patch-cure",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -70,7 +71,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

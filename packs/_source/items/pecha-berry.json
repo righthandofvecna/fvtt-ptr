@@ -2,7 +2,7 @@
   "name": "Pecha Berry",
   "system": {
     "origin": "",
-    "effect": "Cures Poison, Cute Poffin Ingredient. Tier 1.",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.299X6pActAV8ITz7]{Poison}, Cute Poffin Ingredient. Tier 1.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -62,7 +62,8 @@
     "container": false,
     "automation": [],
     "name": "Pecha Berry",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/pecha berry.webp",
@@ -87,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 55700000,
   "_id": "myUsKao9Dkcrkvky"
 }

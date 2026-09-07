@@ -57,7 +57,8 @@
     "automation": [],
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +68,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Pokémon Education"
+      "prereqBackup": "Adept Pokémon Education",
+      "automationStatus": "needs-automation",
+      "devNote": "Can be deleted in favor of Compendium.ptu.feats.Item.HrcEC7rRfqY9LMwD (which could then have an updated slug)",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -80,7 +84,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 1700000,
   "_id": "1DFCJm5rhnTh8pJz"
 }

@@ -2,7 +2,7 @@
   "name": "Study Manual",
   "system": {
     "origin": "",
-    "effect": "A Study Manual is always assigned to a single Skill and covers a specific narrow field that can be taken as a Skill Stunt.\n\nRank 1 - Novice General Education: You gain a Skill Stunt in the associated Skill of the Study Manual covering the narrow field specified by the Study Manual.\nRank 2 - Expert General Education: You gain a general +2 Bonus to the associated Skill. This Bonus does not stack with other bonuses from Books or Equipment to the same Skill.",
+    "effect": "A Study Manual is always assigned to a single Skill and covers a specific narrow field that can be taken as a Skill Stunt.\n\nRank 1 - Novice General Education: You gain a @UUID[Compendium.ptu.edges.Item.eg9RIJE6jQbM96Ti]{Skill Stunt} in the associated Skill of the Study Manual covering the narrow field specified by the Study Manual.\nRank 2 - Expert General Education: You gain a general +2 Bonus to the associated Skill. This Bonus does not stack with other bonuses from Books or Equipment to the same Skill.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "Study Manual",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -69,7 +70,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -82,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 52500000,
   "_id": "jw8mH3AFRX9PXDnT"
 }

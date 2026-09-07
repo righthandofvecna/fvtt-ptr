@@ -2,7 +2,7 @@
   "name": "The Anarchist Cookbook",
   "system": {
     "origin": "",
-    "effect": "The simple act of owning this book isn’t illegal, but carrying out its suggestions might be.\n\nRank 1 - Novice Technology Education: Whenever you apply a Repel to a target, they become Blinded until the end of their next turn. This may only affect a target once per Scene.\nRank 2 - Expert Technology Education: Whenever you hit a target with a Repel or Pester Ball, they lose Hit Points equal to your Technology Education Rank.",
+    "effect": "The simple act of owning this book isn’t illegal, but carrying out its suggestions might be.\n\nRank 1 - Novice Technology Education: Whenever you apply a @UUID[Compendium.ptu.items.Item.vo6LUh99xOWwgAZP]{Repel} to a target, they become @UUID[Compendium.ptu.effects.Item.g2QutQJutABxFIw6]{Blinded} until the end of their next turn. This may only affect a target once per Scene.\nRank 2 - Expert Technology Education: Whenever you hit a target with a Repel or @UUID[Compendium.ptu.items.Item.1e63A4th1XwoZ3Xf]{Pester Ball}, they lose Hit Points equal to your Technology Education Rank.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "The Anarchist Cookbook",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 40600000,
   "_id": "YK96vKhkjGw6xoMU"
 }

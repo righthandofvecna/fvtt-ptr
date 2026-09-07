@@ -2,7 +2,7 @@
   "name": "Helmet",
   "system": {
     "origin": "",
-    "effect": "The user gains 15 Damage Reduction against Critical Hits. The user resists the Moves Headbutt and Zen Headbutt and can’t be flinched by these Moves.",
+    "effect": "The user gains 15 Damage Reduction against Critical Hits. The user resists the Moves @UUID[Compendium.ptu.moves.Item.4a68jMGmkXi2pkfF]{Headbutt} and @UUID[Compendium.ptu.moves.Item.bbYMsmddMV20isEx]{Zen Headbutt} and can’t be @UUID[Compendium.ptu.effects.Item.xE6uIFWZoYXAZQxA]{Flinched} by these Moves.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -28,7 +28,7 @@
       "Head"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -60,7 +60,8 @@
     "name": "Helmet",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -68,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -79,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 31100000,
   "_id": "QBt2nQ5PdgpSPciX"
 }

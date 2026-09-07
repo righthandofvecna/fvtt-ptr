@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.dmO40gFAbDtV0qXh",
+    "referenceEffect": "",
     "source": {
       "value": "Homebrew"
     },
@@ -56,13 +56,20 @@
     "cost": 0,
     "category": "",
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",

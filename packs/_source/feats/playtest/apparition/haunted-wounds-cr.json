@@ -71,7 +71,8 @@
     "class": "Apparition",
     "name": "Haunted Wounds [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "haunted-wounds"
+    "replacesSlug": "haunted-wounds",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +83,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "An effect or reminder of some kind might be useful, and if such a thing is possible, Future Sight would benefit from the same setup",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

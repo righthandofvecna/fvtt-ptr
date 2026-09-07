@@ -72,7 +72,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "weather-playtest",
-    "replacesSlug": "rain-dance"
+    "replacesSlug": "rain-dance",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 100000,

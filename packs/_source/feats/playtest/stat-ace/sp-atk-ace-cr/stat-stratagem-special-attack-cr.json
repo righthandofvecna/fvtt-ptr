@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.UpouomT3KWzZrnpt",
     "source": {
       "value": "Homebrew"
     },
@@ -63,7 +63,8 @@
     "free": false,
     "class": "Stat Ace (Special Attack)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-stratagem-special-attack"
+    "replacesSlug": "stat-stratagem-special-attack",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {

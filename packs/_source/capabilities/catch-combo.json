@@ -1,0 +1,61 @@
+{
+  "name": "Catch Combo",
+  "type": "capability",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisites: 3 of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills at Expert Rank\nDaily – Free Action\nTrigger: Your Pokémon’s attack faints a Wild Pokémon.\nEffect: You may immediately throw a Poké Ball against the triggering Wild Pokémon, and it may be Captured even though it is knocked out. Calculate Capture Rate as if the target had 1 HP. If the Capture Attempt fails, the Pokémon is knocked out as normal.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "catch-combo",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:41:18.336Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Capture Technique"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": "jpLcXij2i9NorfO0",
+  "_id": "6OR2Bt76V2jmS9qG"
+}

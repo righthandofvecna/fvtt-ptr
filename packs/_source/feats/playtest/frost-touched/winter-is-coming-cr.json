@@ -7,7 +7,6 @@
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "winteriscoming",
         "choices": [
           {
@@ -28,6 +27,12 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.I0qzmUj5HSvUYTKX"
       }
     ],
     "enabled": true,
@@ -84,7 +89,8 @@
     "class": "Frost Touched",
     "name": "Winter is Coming [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "winter-is-coming"
+    "replacesSlug": "winter-is-coming",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

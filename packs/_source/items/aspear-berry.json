@@ -2,7 +2,7 @@
   "name": "Aspear Berry",
   "system": {
     "origin": "",
-    "effect": "Cures Freeze, Tough Poffin Ingredient. Tier 1",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Freeze}, Tough Poffin Ingredient. Tier 1",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -62,7 +62,8 @@
     "container": false,
     "automation": [],
     "name": "Aspear Berry",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/aspear berry.webp",
@@ -87,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 2700000,
   "_id": "1F4h8ATAl8MlaM7e"
 }

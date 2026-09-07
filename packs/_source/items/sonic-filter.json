@@ -2,7 +2,7 @@
   "name": "Sonic Filter",
   "system": {
     "origin": "",
-    "effect": "Creates a portable field of directed white noise with a 2 meter radius when activated. Anyone within can hold a conversation normally, but anyone outside the field just hears static coming from the direction of the wearer. Moves with the Sonic Keyword aimed at a target within the field require 2 more on Accuracy Roll to hit. Accessory equipment slot.",
+    "effect": "Creates a portable field of directed white noise with a 2 meter radius when activated. Anyone within can hold a conversation normally, but anyone outside the field just hears static coming from the direction of the wearer. Moves with the @CompSearch[Moves keywords=Sonic]{Sonic} Keyword aimed at a target within the field require 2 more on Accuracy Roll to hit. Accessory equipment slot.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,10 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Equipment",
+      "Accessory"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -57,7 +60,8 @@
     "name": "Sonic Filter",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 50600000,
   "_id": "hRWftiQlWiYyJ9xH"
 }

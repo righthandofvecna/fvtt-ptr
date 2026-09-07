@@ -72,7 +72,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "weather-playtest",
-    "replacesSlug": "acid-rain"
+    "replacesSlug": "acid-rain",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 100000,

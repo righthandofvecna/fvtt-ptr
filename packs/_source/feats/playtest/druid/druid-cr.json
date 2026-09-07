@@ -2,36 +2,33 @@
   "name": "Druid",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Your powers begin to take after either Flowers, Fungi, or Trees. Depending on your oath, you gain an Ability and Stat Tags. Whenever you gain a Druid Feature, you gain the same Stat Tags.\nFlower Oath -> Aroma Veil -> [+Special Attack]\nFungal Oath -> Effect Spore -> [+Special Defense]\nWood Oath -> Effect Spore -> [+Attack]",
+    "effect": "Effect: Your powers begin to take after either Flowers, Fungi, or Trees. Depending on your oath, you gain an Ability and Stat Tags. Whenever you gain a Druid Feature, you gain the same Stat Tags.\nFlower Oath -> Aroma Veil -> [+Special Attack]\nFungal Oath -> Effect Spore -> [+Special Defense]\nTree Oath -> Effect Spore -> [+Attack]",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "druid",
         "choices": [
           {
-            "value": "atk",
-            "label": "Attack"
+            "value": "Compendium.ptu.capabilities.Item.gVT7CKrPtJDnLLBZ",
+            "label": "Tree Oath"
           },
           {
-            "value": "spatk",
-            "label": "Special Attack"
+            "value": "Compendium.ptu.capabilities.Item.cmLKV6vMGkCnYT2A",
+            "label": "Flower Oath"
           },
           {
-            "value": "spdef",
-            "label": "Special Defense"
+            "value": "Compendium.ptu.capabilities.Item.AIMaQY9iotFxB5Zo",
+            "label": "Fungal Oath"
           }
-        ]
+        ],
+        "adjustName": false
       },
       {
-        "key": "ActiveEffectLike",
-        "mode": "add",
-        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.druid}.mod",
-        "value": 1,
-        "priority": 20,
+        "key": "GrantItem",
         "predicate": [],
-        "phase": "applyAEs"
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.druid}"
       }
     ],
     "enabled": true,
@@ -90,7 +87,8 @@
     "class": "Druid",
     "name": "Druid [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "druid"
+    "replacesSlug": "druid",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -103,7 +101,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

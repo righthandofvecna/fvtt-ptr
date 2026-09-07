@@ -2,7 +2,7 @@
   "name": "Mental Herb",
   "system": {
     "origin": "",
-    "effect": "Cures all Volatile Status Effects.",
+    "effect": "Snack. Grants a Food Buff that when traded in cures all Volatile Status Effects. Herbal Restorative.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -24,7 +24,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Herbal"
+      "Herbal",
+      "Snack"
     ],
     "frequency": {
       "type": "at-will",
@@ -43,7 +44,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -59,7 +60,8 @@
     "name": "Mental Herb",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 45100000,
   "_id": "cV0b4kZaHh5OuGC8"
 }

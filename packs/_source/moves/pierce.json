@@ -2,6 +2,7 @@
   "name": "Pierce!",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "Pierce deals an additional +10 damage against targets with Damage Reduction.",

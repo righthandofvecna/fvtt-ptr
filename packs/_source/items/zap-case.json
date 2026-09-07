@@ -2,7 +2,7 @@
   "name": "Zap Case",
   "system": {
     "origin": "",
-    "effect": "Whenever a Poké Ball with a Zap Case hits a target it deals damage as if using a Struggle Attack. This Damage is Electric-Typed. If the Ball is already used as a Struggle Attack (such as with Curve Ball), then the Zap Case changes the damage to Electric-Type and adds bonus damage equal to twice the user’s Technology Education skill. When attempting to catch Pokémon, damage is resolved before the capture roll. This can also be used when releasing a Pokémon (damage is resolved before the Pokémon is released).",
+    "effect": "Whenever a Poké Ball with a Zap Case hits a target it deals damage as if using a Struggle Attack. This Damage is Electric-Typed. If the Ball is already used as a Struggle Attack (such as with @UUID[Compendium.ptu.references.Item.oCbNYdXL9EM5YyXo]{Curve Ball}), then the Zap Case changes the damage to Electric-Type and adds bonus damage equal to twice the user’s Technology Education skill. When attempting to catch Pokémon, damage is resolved before the capture roll. This can also be used when releasing a Pokémon (damage is resolved before the Pokémon is released).",
     "snippet": "",
     "rules": [
       {
@@ -50,7 +50,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -70,7 +70,8 @@
     "name": "Zap Case",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -80,7 +81,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -93,7 +96,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 43300000,
   "_id": "aWifcCgpkbMK3s32"
 }

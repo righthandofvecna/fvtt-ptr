@@ -1,0 +1,63 @@
+{
+  "folder": "Ft9RArsRLUaxiY6c",
+  "name": "Effect: The Crown Chakra",
+  "type": "effect",
+  "_id": "SfaUAdwU628l0iUp",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Effect: Your Psychic Type Pokémon's Psychic-Type Moves can hit and affect Dark-Type targets, and the target can see through the Illusion Ability, Moves with the Illusion keyword, and effect created by the Illusionist Capability, ignoring all effects from those.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "RollOption",
+        "option": "self:immunity-blocked:psychic"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-the-crown-chakra",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:34.825Z",
+        "version": {
+          "schema": 0.112,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  }
+}

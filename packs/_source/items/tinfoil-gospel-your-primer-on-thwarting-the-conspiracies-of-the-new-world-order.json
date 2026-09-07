@@ -2,7 +2,7 @@
   "name": "Tinfoil Gospel: Your Primer on Thwarting the Conspiracies of the New World Order",
   "system": {
     "origin": "",
-    "effect": "An even more questionable tome, filled with laughable conspiracy theories. Its mental exercises are strangely effective, however.\n\nRank 1 - Novice Occult Education: You gain the Iron Mind Edge and the Skill Stunt - Focus (resisting Telepathy).\nRank 2 - Expert Occult Education: Your Aura becomes muddled and difficult to read. Pokémon and Trainers with the Aura Reader Capability cannot discern the tint of your Aura and must succeed on an opposed Intuition or Focus Check vs your Occult Education or Focus in order to read the hue of your Aura. Upon failure, they may not attempt to read your Aura again for the remainder of the Scene.",
+    "effect": "An even more questionable tome, filled with laughable conspiracy theories. Its mental exercises are strangely effective, however.\n\nRank 1 - Novice Occult Education: You gain the @UUID[Compendium.ptu.edges.Item.80LqzME9iDpVQWko]{Iron Mind} Edge and the @UUID[Compendium.ptu.edges.Item.eg9RIJE6jQbM96Ti]{Skill Stunt} - Focus (resisting Telepathy).\nRank 2 - Expert Occult Education: Your Aura becomes muddled and difficult to read. Pokémon and Trainers with the @UUID[Compendium.ptu.capabilities.Item.TtY94KGl4bDY1e0b]{Aura Reader} Capability cannot discern the tint of your Aura and must succeed on an opposed Intuition or Focus Check vs your Occult Education or Focus in order to read the hue of your Aura. Upon failure, they may not attempt to read your Aura again for the remainder of the Scene.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "Tinfoil Gospel: Your Primer on Thwarting the Conspiracies of the New World Order",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 48300000,
   "_id": "fWpUuc3CyCNX3B1R"
 }

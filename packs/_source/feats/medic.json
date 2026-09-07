@@ -2,7 +2,7 @@
   "name": "Medic",
   "system": {
     "origin": "",
-    "effect": "You are always considered to have access to a First Aid Manual and a Combat Medic’s Primer, and are\n always considered to be Binding their Rank 1 Effects without actually using any AP.",
+    "effect": "You are always considered to have access to a @UUID[Compendium.ptu.items.Item.MPD8ZrLpnRmtUHYI]{First Aid Manual} and a @UUID[Compendium.ptu.items.Item.N2bJbPIcolivz0s6]{Combat Medic’s Primer}, and are always considered to be Binding their Rank 1 Effects without actually using any AP.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -69,7 +70,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Medicine Education"
+      "prereqBackup": "Novice Medicine Education",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -82,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 9700000,
   "_id": "8LSVWBFxlRbYovtw"
 }

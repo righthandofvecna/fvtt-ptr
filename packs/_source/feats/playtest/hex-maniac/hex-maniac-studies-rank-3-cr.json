@@ -16,47 +16,54 @@
       },
       {
         "key": "ChoiceSet",
-        "flag": "move1",
+        "flag": "move3-1",
         "adjustName": false,
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.WUgXHLrvnUAn2vky",
+            "label": "Confuse Ray",
             "predicate": {
               "not": "move:confuse-ray"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.5A0ZjnRjOwj1i7n8",
+            "label": "Curse",
             "predicate": {
               "not": "move:curse"
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.3abHb5scrH2j6qMF",
+            "value": "Compendium.ptu.moves.Item.Rte47RBw2X8NHMHZ",
+            "label": "Hypnosis",
             "predicate": {
               "not": "move:hypnosis"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.7sMVSFGaJax6lWuM",
+            "label": "Spite",
             "predicate": {
               "not": "move:spite"
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.qltGKDIhEJpOqswU",
+            "value": "Compendium.ptu.moves.Item.Ev7VAhpvAb0qJEAz",
+            "label": "Will-O-Wisp",
             "predicate": {
               "not": "move:will-o-wisp"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.XbAfCHhH425Ldmj4",
+            "label": "Hex",
             "predicate": {
               "not": "move:hex"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.hGvLkFzRbc1D0FX0",
+            "label": "Dream Eater",
             "predicate": {
               "not": "move:dream-eater"
             }
@@ -67,51 +74,58 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "{item|flags.ptu.rulesSelections.move1}"
+        "uuid": "{item|flags.ptu.rulesSelections.move3-1}"
       },
       {
         "key": "ChoiceSet",
-        "flag": "move2",
+        "flag": "move3-2",
         "adjustName": false,
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.WUgXHLrvnUAn2vky",
+            "label": "Confuse Ray",
             "predicate": {
               "not": "move:confuse-ray"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.5A0ZjnRjOwj1i7n8",
+            "label": "Curse",
             "predicate": {
               "not": "move:curse"
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.3abHb5scrH2j6qMF",
+            "value": "Compendium.ptu.moves.Item.Rte47RBw2X8NHMHZ",
+            "label": "Hypnosis",
             "predicate": {
               "not": "move:hypnosis"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.7sMVSFGaJax6lWuM",
+            "label": "Spite",
             "predicate": {
               "not": "move:spite"
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.qltGKDIhEJpOqswU",
+            "value": "Compendium.ptu.moves.Item.Ev7VAhpvAb0qJEAz",
+            "label": "Will-O-Wisp",
             "predicate": {
               "not": "move:will-o-wisp"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.XbAfCHhH425Ldmj4",
+            "label": "Hex",
             "predicate": {
               "not": "move:hex"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.hGvLkFzRbc1D0FX0",
+            "label": "Dream Eater",
             "predicate": {
               "not": "move:dream-eater"
             }
@@ -122,7 +136,7 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "{item|flags.ptu.rulesSelections.move2}"
+        "uuid": "{item|flags.ptu.rulesSelections.move3-2}"
       }
     ],
     "enabled": true,
@@ -181,7 +195,8 @@
     "class": "Hex Maniac",
     "name": "Hex Maniac Studies [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "hex-maniac-studies-rank-3"
+    "replacesSlug": "hex-maniac-studies-rank-3",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -193,7 +208,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

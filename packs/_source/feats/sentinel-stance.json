@@ -2,7 +2,7 @@
   "name": "Sentinel Stance",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon\nEffect: Until the end of your next turn, the target may attempt to Intercept attacks for allies as a Shift Action. If they do so, they gain 10 Damage Reduction against the attack. If the target is also under the effect of Brace for Impact, they may gain 5 Damage Reduction from it as if they had used a self-targeting Status Move.",
+    "effect": "Target: Your Pokémon\nEffect: Until the end of your next turn, the target may attempt to @CompSearch[Moves Intercept]{Intercept} attacks for allies as a Shift Action. If they do so, they gain 10 Damage Reduction against the attack. If the target is also under the effect of @UUID[Compendium.ptu.feats.Item.e7ETKHW8saUCf5l8]{Brace for Impact}, they may gain 5 Damage Reduction from it as if they had used a self-targeting Status Move.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +70,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Guardian Orders"
+      "prereqBackup": "Guardian Orders",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -82,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 31100000,
   "_id": "SlLaxSkmeRNWnslg"
 }

@@ -2,7 +2,7 @@
   "name": "Wiki Berry",
   "system": {
     "origin": "",
-    "effect": "Dry Treat. Heals 1/8th of the Pokémon’s Max HP. If the user likes the Treat’s flavor, it heals 1/6th instead. If the user dislikes the treat’s flavor, the user is Confused. Beauty Poffin Ingredient. Tier 2.",
+    "effect": "Dry Treat. Heals 1/8th of the Pokémon’s Max HP. If the user likes the Treat’s flavor, it heals 1/6th instead. If the user dislikes the treat’s flavor, the user is @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confused}. Beauty Poffin Ingredient. Tier 2.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -62,7 +62,8 @@
     "container": false,
     "automation": [],
     "name": "Wiki Berry",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/wiki berry.webp",
@@ -87,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 68100000,
   "_id": "xvhemPoZ4h4wBjUs"
 }

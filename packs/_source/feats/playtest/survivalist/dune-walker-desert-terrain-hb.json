@@ -1,0 +1,71 @@
+{
+  "folder": "jwSUGJETAKuub2Ws",
+  "name": "Dune Walker – Desert Terrain",
+  "type": "feat",
+  "_id": "679KkrBYb2SlQ2ET",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You’re immune to the effects of Sandstorm, Sand-Attack, and Sand Tomb, and you gain 5 Damage Reduction against Fire-Type attacks. ",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "EphemeralEffect",
+        "predicate": [],
+        "affects": "origin",
+        "selectors": "fire-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.U2Y8KrVxDHgdQgCi"
+      }
+    ],
+    "enabled": true,
+    "slug": "dune-walker-desert-terrain-hb",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "prerequisites": [],
+    "notes": "",
+    "free": false,
+    "class": ""
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}

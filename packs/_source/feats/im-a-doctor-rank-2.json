@@ -2,7 +2,7 @@
   "name": "I'm A Doctor Rank 2",
   "system": {
     "origin": "",
-    "effect": "Each Rank, you gain one of Field Clinic or Medic Training and one of Nurse or First Aid Expertise.",
+    "effect": "Each Rank, you gain one of @UUID[Compendium.ptu.edges.Item.j6KUhupcGmKRD1wr]{Field Clinic} or @UUID[Compendium.ptu.edges.Item.EN9bBp3zK0OVe7Yp]{Medic Training} and one of @UUID[Compendium.ptu.feats.Item.G3FxaPfnkNH88PiA]{Nurse} or @UUID[Compendium.ptu.feats.Item.beL0mQ0ddaiE24tt]{First Aid Expertise}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -60,7 +60,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -70,7 +71,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Medic, Adept Medicine Education"
+      "prereqBackup": "Medic, Adept Medicine Education",
+      "automationStatus": "needs-automation",
+      "devNote": "Choice Set?",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -83,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 37500000,
   "_id": "YDfiIOSn2VuMH3va"
 }

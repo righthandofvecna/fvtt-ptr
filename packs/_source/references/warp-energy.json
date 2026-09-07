@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Arcanist Rank 1 Power Manipulations",
-    "effect": "Condition: The triggering Move is a Cone, Line, Burst, or Blast Effect: Instead of its usual range, you may use the Move as if it had a range of Burst 1, Cone 2, Close Blast 2, Line 4, or 2-Target with a range of 4.",
+    "effect": "Condition: The triggering Move is a Cone, Line, Burst, or Blast\nEffect: Instead of its usual range, you may use the Move as if it had a range of Burst 1, Cone 2, Close Blast 2, Line 4, or 2-Target with a range of 4.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "L6FARt9x9lPKsbMM",
   "effects": [],
-  "folder": null,
   "sort": 10500000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

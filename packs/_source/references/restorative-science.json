@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Apothecary Recipes",
-    "effect": "Prerequisites: Apothecary Cost: $100 Effect: You create an Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal, or Potion.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.t61TbzR85SGcuOjn]{Apothecary}\nCost: @Poke[100]\nEffect: You create an @UUID[Compendium.ptu.items.Item.HzoRdjFC7xbRj460]{Antidote}, @UUID[Compendium.ptu.items.Item.qlgi2CMVsHbNLJqI]{Paralyze Heal}, @UUID[Compendium.ptu.items.Item.W2uER94RJkl5d3dH]{Awakening}, @UUID[Compendium.ptu.items.Item.WgG0d3bNUMElJxk5]{Burn Heal}, @UUID[Compendium.ptu.items.Item.7he7IuXJJDfvWhyC]{Ice Heal}, or @UUID[Compendium.ptu.items.Item.2kQmUgVMnwb8JfW4]{Potion}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "7CaMXneTmpDyK93G",
   "effects": [],
-  "folder": null,
   "sort": 3800000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -2,7 +2,7 @@
   "name": "Beauty Poffin",
   "system": {
     "origin": "",
-    "effect": "Raises Beauty Contest Stat by +1 Contest Die.  Made with Chesto, Wiki, Bluk, Spelon and Pamtre Berries.",
+    "effect": "Raises Beauty Contest Stat by +1 Contest Die.  Made with @UUID[Compendium.ptu.items.Item.Ui1HOOBmxt6iCjqM]{Chesto}, @UUID[Compendium.ptu.items.Item.xvhemPoZ4h4wBjUs]{Wiki}, @UUID[Compendium.ptu.items.Item.LOHaoajMrgco1NjQ]{Bluk}, @UUID[Compendium.ptu.items.Item.pR81Bf8454iI2LPj]{Spelon} and @UUID[Compendium.ptu.items.Item.Pt8QZy6atB2PDZgK]{Pamtre} Berries.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Contest"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -57,7 +59,8 @@
     "name": "Beauty Poffin",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 21400000,
   "_id": "HVuak7maNbyLbiYh"
 }

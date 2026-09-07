@@ -13,10 +13,24 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.DkpT2ACVxH31hpo0"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.weEc5wlOZ5H7Tguh"
       }
     ],
     "enabled": true,
     "slug": "mystic-defense-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "mystic-defense",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -61,34 +75,29 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Sage"
     ],
     "notes": "",
     "free": false,
     "class": "Sage",
-    "name": "Mystic Defense [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "mystic-defense"
+    "name": "Mystic Defense [CR]"
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
   "folder": "3RdR0bAuym3k8na2",
-  "_id": "3DkPq8BOv2MS59d6",
+  "_id": "Kv65oc5tIafzA2SB",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200828533,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "grantedBy": {
+        "id": "ker0oUdKCKj4yogm",
+        "onDelete": "detach"
+      },
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
   }
 }

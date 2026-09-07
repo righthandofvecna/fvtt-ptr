@@ -2,7 +2,7 @@
   "name": "Chesto Berry",
   "system": {
     "origin": "",
-    "effect": "Cures Sleep, Beauty Poffin Ingredient. Tier 1.",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Sleep}, Beauty Poffin Ingredient. Tier 1.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -62,7 +62,8 @@
     "container": false,
     "automation": [],
     "name": "Chesto Berry",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/chesto berry.webp",
@@ -87,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 37100000,
   "_id": "Ui1HOOBmxt6iCjqM"
 }

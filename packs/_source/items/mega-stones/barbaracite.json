@@ -29,8 +29,8 @@
       "Mega Stone"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -42,7 +42,7 @@
     },
     "actionCost": {
       "standard": false,
-      "rapid": false,
+      "rapid": true,
       "shift": false,
       "free": false,
       "extended": false
@@ -59,7 +59,8 @@
     "container": false,
     "automation": [],
     "name": "Barbaracite",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/images/item_icons/barbaracite.webp",
@@ -68,7 +69,8 @@
     "ptu": {
       "automationStatus": "completed",
       "devNote": "",
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "used": null
     }
   },
   "folder": "3aYHO5npuCcYqxoX",

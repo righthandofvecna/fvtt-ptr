@@ -2,7 +2,7 @@
   "name": "Proper Care",
   "system": {
     "origin": "",
-    "effect": "You gain additional bonuses to using Restoratives and Features while in a Field Clinic, Poke Center, Hospital, or other dedicated healing space that lets you access supplies.\n»» When you trigger First Aid Expertise here, the injury that is Removed does not count towards the total number of Injuries that may be removed each day.\n»» When you trigger Nurse here, Bandages cure 1 Injury after three hours, in addition the injury healed after 6 hours.\n»» All Restoratives heal an additional 5 Hit Points. This stacks with the bonus granted by Field Clinic.",
+    "effect": "You gain additional bonuses to using Restoratives and Features while in a @UUID[Compendium.ptu.edges.Item.j6KUhupcGmKRD1wr]{Field Clinic}, Poke Center, Hospital, or other dedicated healing space that lets you access supplies.\n»» When you trigger @UUID[Compendium.ptu.feats.Item.beL0mQ0ddaiE24tt]{First Aid Expertise} here, the injury that is Removed does not count towards the total number of Injuries that may be removed each day.\n»» When you trigger @UUID[Compendium.ptu.feats.Item.G3FxaPfnkNH88PiA]{Nurse} here, @UUID[Compendium.ptu.items.Item.kTXHG6L2b6NzrWQY]{Bandages} cure 1 Injury after three hours, in addition the injury healed after 6 hours.\n»» All Restoratives heal an additional 5 Hit Points. This stacks with the bonus granted by Field Clinic.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +70,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "I'm a Doctor Rank 1, Field Clinic, Expert Medicine Education"
+      "prereqBackup": "I'm a Doctor Rank 1, Field Clinic, Expert Medicine Education",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -82,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 50200000,
   "_id": "iqPfq91Cv45iNHqq"
 }

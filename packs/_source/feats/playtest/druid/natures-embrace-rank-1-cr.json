@@ -6,32 +6,301 @@
     "snippet": "",
     "rules": [
       {
-        "key": "ChoiceSet",
-        "adjustName": true,
-        "flag": "naturesembracerank1",
-        "choices": [
-          {
-            "value": "atk",
-            "label": "Attack"
-          },
-          {
-            "value": "spatk",
-            "label": "Special Attack"
-          },
-          {
-            "value": "spdef",
-            "label": "Special Defense"
-          }
-        ]
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:tree-hb"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.atk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:flower-hb"
+        ],
         "mode": "add",
-        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.naturesembracerank1}.mod",
+        "path": "system.modifiers.baseStats.spatk.mod",
+        "phase": "applyAEs",
         "value": 1,
-        "priority": 20,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:fungal-hb"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spdef.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.08DZcCU0jqyEQ3jv",
+            "label": "Cotton Spore",
+            "predicate": [
+              {
+                "not": "move:cotton-spore"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.tx9xc6m8Z6bTqBcv",
+            "label": "Forest's Curse",
+            "predicate": [
+              {
+                "not": "move:forests-curse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2ky0KrGcz81tQ5X3",
+            "label": "Ingrain",
+            "predicate": [
+              "capability:tree-hb",
+              {
+                "not": "move:ingrain"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.9PVNtUbbwbRhZimy",
+            "label": "Mega Drain",
+            "predicate": [
+              {
+                "not": "move:mega-drain"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.JOu7BVqN29cQ2lj6",
+            "label": "Needle Arm",
+            "predicate": [
+              {
+                "not": "move:needle-arm"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.wYz4RubDs84tDVul",
+            "label": "Razor Leaf",
+            "predicate": [
+              {
+                "not": "move:razor-leaf"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.XssTGMznjX8N33L7",
+            "label": "Stun Spore",
+            "predicate": [
+              "capability:fungal-hb",
+              {
+                "not": "move:stun-spore"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.CDMHE36OXtK49jO4",
+            "label": "Sweet Scent",
+            "predicate": [
+              "capability:flower-hb",
+              {
+                "not": "move:sweet-scent"
+              }
+            ]
+          }
+        ],
+        "flag": "embrace1-1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.embrace1-1}",
+        "predicate": []
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.08DZcCU0jqyEQ3jv",
+            "label": "Cotton Spore",
+            "predicate": [
+              {
+                "not": "move:cotton-spore"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.tx9xc6m8Z6bTqBcv",
+            "label": "Forest's Curse",
+            "predicate": [
+              {
+                "not": "move:forests-curse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2ky0KrGcz81tQ5X3",
+            "label": "Ingrain",
+            "predicate": [
+              "capability:tree-hb",
+              {
+                "not": "move:ingrain"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.9PVNtUbbwbRhZimy",
+            "label": "Mega Drain",
+            "predicate": [
+              {
+                "not": "move:mega-drain"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.JOu7BVqN29cQ2lj6",
+            "label": "Needle Arm",
+            "predicate": [
+              {
+                "not": "move:needle-arm"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.wYz4RubDs84tDVul",
+            "label": "Razor Leaf",
+            "predicate": [
+              {
+                "not": "move:razor-leaf"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.XssTGMznjX8N33L7",
+            "label": "Stun Spore",
+            "predicate": [
+              "capability:fungal-hb",
+              {
+                "not": "move:stun-spore"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.CDMHE36OXtK49jO4",
+            "label": "Sweet Scent",
+            "predicate": [
+              "capability:flower-hb",
+              {
+                "not": "move:sweet-scent"
+              }
+            ]
+          }
+        ],
+        "flag": "embrace1-2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
         "predicate": [],
-        "phase": "applyAEs"
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.embrace1-2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "embrace1-3",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.08DZcCU0jqyEQ3jv",
+            "label": "Cotton Spore",
+            "predicate": [
+              {
+                "not": "move:cotton-spore"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.tx9xc6m8Z6bTqBcv",
+            "label": "Forest's Curse",
+            "predicate": [
+              {
+                "not": "move:forests-curse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2ky0KrGcz81tQ5X3",
+            "label": "Ingrain",
+            "predicate": [
+              "capability:tree-hb",
+              {
+                "not": "move:ingrain"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.9PVNtUbbwbRhZimy",
+            "label": "Mega Drain",
+            "predicate": [
+              {
+                "not": "move:mega-drain"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.JOu7BVqN29cQ2lj6",
+            "label": "Needle Arm",
+            "predicate": [
+              {
+                "not": "move:needle-arm"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.wYz4RubDs84tDVul",
+            "label": "Razor Leaf",
+            "predicate": [
+              {
+                "not": "move:razor-leaf"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.XssTGMznjX8N33L7",
+            "label": "Stun Spore",
+            "predicate": [
+              "capability:fungal-hb",
+              {
+                "not": "move:stun-spore"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.CDMHE36OXtK49jO4",
+            "label": "Sweet Scent",
+            "predicate": [
+              "capability:flower-hb",
+              {
+                "not": "move:sweet-scent"
+              }
+            ]
+          }
+        ],
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.embrace1-3}"
       }
     ],
     "enabled": true,
@@ -88,7 +357,8 @@
     "class": "Druid",
     "name": "Nature's Embrace [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "natures-embrace-rank-1"
+    "replacesSlug": "natures-embrace-rank-1",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -101,7 +371,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

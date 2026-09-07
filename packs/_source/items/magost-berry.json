@@ -2,7 +2,7 @@
   "name": "Magost Berry",
   "system": {
     "origin": "",
-    "effect": "Cures Enraged condition. Tier 2.",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Enraged} condition. Tier 2.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -63,7 +63,8 @@
     "container": false,
     "automation": [],
     "name": "Magost Berry",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/magost berry.webp",
@@ -88,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 41200000,
   "_id": "YvfMvlPLXjg1ObaG"
 }

@@ -1,0 +1,104 @@
+{
+  "name": "Miasma’s Call",
+  "type": "feat",
+  "_id": "4vGjuxsMeF2J8iJn",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "system": {
+    "origin": "Class Rework",
+    "effect": "Effect: You learn the moves Acid Armor and Sludge Bomb.\nBonus: You learn the move Acid Rain.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.modifiers.baseStats.def.mod",
+        "value": 1,
+        "priority": 20,
+        "predicate": [],
+        "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.joCaLnLmgcLh36ym"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.T4KEAGNoEIpiO0G5"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.Tt8ssSf6NLQzZFOO"
+      }
+    ],
+    "enabled": true,
+    "slug": "miasmas-call-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:34.969Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "+Defense",
+      "Playtest",
+      "Class Rework"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "prerequisites": [
+      "Vile Body",
+      "Expert Stealth or Guile"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Miasmic ",
+    "name": "Miasma’s Call [CR]"
+  },
+  "effects": [],
+  "folder": "I8pouPxZOCgCVom3",
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  }
+}

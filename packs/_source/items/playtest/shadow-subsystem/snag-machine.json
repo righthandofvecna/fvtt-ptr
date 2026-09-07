@@ -1,6 +1,9 @@
 {
   "folder": "lpdptis936rBZFDU",
   "name": "Snag Machine",
+  "type": "item",
+  "_id": "7BXZMJOuJfLRxJkb",
+  "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "",
     "effect": "Snag Machines are extremely illegal machines that allow trainers to steal another Trainer’s Pokémon. They come in both large, immovable varieties and smaller portable varieties. The Portable Variety is an Accessory-Slot Item. Inserting a Poké Ball into a Large Snag Machine turns it into a Snag Ball permanently, but Large Snag Machines may only turn 5 Poké Balls into Snag Balls per day. Inserting a Poké Ball into a Portable Snag Machine, which is a Rapid Action, turns it into a Snag Ball after one round, but only for that round. Snag Balls have the same properties as the Poké Ball type they were before being inserted into the machine, but receive a -2 penalty on all Poké Ball attack rolls, and are capable of capturing owned Pokémon. Snag Machines cannot be bought in stores, but may sell on the black market for prices of $30,000 or more.",

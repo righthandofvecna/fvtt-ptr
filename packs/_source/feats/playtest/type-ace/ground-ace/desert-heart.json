@@ -1,0 +1,96 @@
+{
+  "folder": "mgQuQp95v3EdrKC1",
+  "name": "Desert Heart",
+  "type": "feat",
+  "_id": "zEIOIwjJGnyvqQ2H",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Target: Your Pokémon\nEffect: While this Stratagem is bound, the target may activate Moves and Abilities as if they were in a Sand Weather Condition. While in Sand Weather Conditions, the target gains +5 Initiative, and +2 to their Effect and Critical Ranges.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "desert-heart",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:34.539Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "Compendium.ptu.effects.Item.oJf9Qb0p6JwXhS3s",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Orders",
+      "Stratagem",
+      "Playtest",
+      "CR",
+      "Branch"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "Bind 2 AP - Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": true
+    },
+    "leagueLegal": false,
+    "prerequisites": [
+      "Type-Linked Skill at Adept",
+      "Geothermal Energy [CR]"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Type Ace (Ground)",
+    "name": "Desert Heart",
+    "useCount": 0,
+    "automation": []
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "prereqBackup": "Mold the Earth, Type-Linked Skill at Adept",
+      "grantedBy": {
+        "id": "cxGqerNDwVbP6Oge",
+        "onDelete": "detach"
+      },
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
+    }
+  }
+}

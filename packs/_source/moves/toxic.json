@@ -7,7 +7,17 @@
     "origin": "",
     "effect": "The target is Badly Poisoned. If the user is Poison Type, Toxic cannot miss.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.39Ty93ddaWcIhagZ",
+        "range": "",
+        "value": "",
+        "affects": "target"
+      }
+    ],
     "enabled": true,
     "slug": "toxic",
     "schema": {
@@ -71,7 +81,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "eFxRUdqQgdnJybY4",
   "effects": [],
@@ -81,7 +92,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": null,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

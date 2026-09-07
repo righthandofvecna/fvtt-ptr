@@ -2,7 +2,7 @@
   "name": "Skill Monkey",
   "system": {
     "origin": "",
-    "effect": "Trigger - You make a Skill Check\nEffect: You may re-roll the triggering Skill Check with a +2 Bonus, taking the new result. This Feature may be used to re-roll a specific roll only once.",
+    "effect": "Trigger: You make a Skill Check\nEffect: You may re-roll the triggering Skill Check with a +2 Bonus, taking the new result. This Feature may be used to re-roll a specific roll only once.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -57,7 +57,8 @@
     "automation": [],
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +69,10 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Three Skills at Adept Rank or higher",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
@@ -81,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 3000000,
   "_id": "2WbLqVLtcQhLOUyi"
 }

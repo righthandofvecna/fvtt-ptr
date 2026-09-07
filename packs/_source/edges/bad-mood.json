@@ -20,7 +20,9 @@
               "condition:badly-poisoned"
             ]
           }
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -41,7 +43,9 @@
               "condition:suppressed"
             ]
           }
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -94,7 +98,8 @@
     "name": "Bad Mood",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -104,7 +109,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert Intimidate"
+      "prereqBackup": "Expert Intimidate",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -117,7 +125,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "5vx2u15hCXc2RFtM"
 }

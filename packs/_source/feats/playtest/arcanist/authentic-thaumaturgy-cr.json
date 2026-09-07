@@ -2,7 +2,7 @@
   "name": "Authentic Thaumaturgy",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You use a Special Move\nEffect: You may apply a Rank 2 Power Manipulation to your attack.",
+    "effect": "Trigger: You use a Special Move\nEffect: You may apply a Rank 2 Power Manipulation to your attack.\n@UUID[Compendium.ptu.references.Item.SPMUO2lZwmgUeCkE]{Berserk Blow}\n@UUID[Compendium.ptu.references.Item.jIYS6tXrR8hNWfyB]{Energy Link}\n@UUID[Compendium.ptu.references.Item.A5ef6sgJt2xJ2Vpj]{Enlarged Power}\n@UUID[Compendium.ptu.references.Item.pXORMX2fcGpdZkXD]{Lock of Fate}",
     "snippet": "",
     "rules": [
       {
@@ -70,7 +70,8 @@
     "class": "Arcanist",
     "name": "Authentic Thaumaturgy [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "authentic-thaumaturgy"
+    "replacesSlug": "authentic-thaumaturgy",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -83,7 +84,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

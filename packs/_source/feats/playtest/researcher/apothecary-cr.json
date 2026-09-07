@@ -2,7 +2,7 @@
   "name": "Apothecary",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effects: You gain use any Apothecary Recipe for which\nyou qualify.",
+    "effect": "Effects: You gain use any Apothecary Recipe for which you qualify.\n@UUID[Compendium.ptu.references.Item.7CaMXneTmpDyK93G]{Restorative Science}\n@UUID[Compendium.ptu.references.Item.qWz1Re2Hy51kPz7H]{Super Cures}\n@UUID[Compendium.ptu.references.Item.Nrj5IX1uTO6ql5VF]{Hyper Cures}\n@UUID[Compendium.ptu.references.Item.MDDtt5kSC9dWVOV7]{Performance Enhancers}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -58,7 +58,8 @@
     "class": "Researcher",
     "name": "Apothecary [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "apothecary"
+    "replacesSlug": "apothecary",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -69,7 +70,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

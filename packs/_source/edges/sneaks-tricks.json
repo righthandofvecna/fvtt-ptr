@@ -2,7 +2,7 @@
   "name": "Sneak's Tricks",
   "system": {
     "origin": "",
-    "effect": "You learn the Move Astonish.",
+    "effect": "You learn the Move @UUID[Compendium.ptu.moves.Item.VtkRa05N67wR9RcG]{Astonish}.",
     "snippet": "",
     "rules": [
       {
@@ -64,7 +64,8 @@
     "name": "Sneak's Tricks",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -74,7 +75,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Stealth"
+      "prereqBackup": "Adept Stealth",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -87,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "39LYcTE6X92OtliQ"
 }
