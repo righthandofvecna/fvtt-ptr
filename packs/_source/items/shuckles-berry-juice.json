@@ -47,7 +47,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -88,5 +88,6 @@
     "exportSource": null
   },
   "sort": 10400000,
-  "_id": "7fMNsUfMhbr6ZB8W"
+  "_id": "7fMNsUfMhbr6ZB8W",
+  "folder": null
 }

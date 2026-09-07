@@ -44,7 +44,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -60,7 +60,8 @@
     "name": "Black Sludge",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -70,7 +71,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -83,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 23100000,
   "_id": "JEHdxfn8EPwDrYmm"
 }
