@@ -2,7 +2,7 @@
   "name": "Rough Fashion",
   "system": {
     "origin": "",
-    "effect": "Fashionista Skill: Intimidate\nThe holder may activate this item once a Scene as a Free Action to cause a foe within 5 meters to take a -2 penalty to all rolls for one full round.",
+    "effect": "@UUID[Compendium.ptu.feats.Item.QrSXkvNqHIQ8AJla]{Fashionista} Skill: Intimidate\nThe holder may activate this item once a Scene as a Free Action to cause a foe within 5 meters to take a -2 penalty to all rolls for one full round.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -27,8 +27,8 @@
       "Fashionista"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -59,7 +59,8 @@
     "name": "Rough Fashion",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false,
+      "used": null
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 36900000,
   "_id": "UgPJIWTsB4lB925k"
 }
