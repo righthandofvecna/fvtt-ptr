@@ -51,7 +51,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -70,7 +70,10 @@
     "container": false,
     "automation": [],
     "name": "Energy Powder",
-    "useCount": 0
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/images/item_icons/energy powder.webp",
@@ -82,6 +85,16 @@
       "devNote": ""
     }
   },
-  "folder": null,
-  "_id": "ScqK9tyEHKDwlmIW"
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368856277,
+    "modifiedTime": 1778200841272,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 13900000,
+  "_id": "AbfaIrLufx5RwVvv"
 }
