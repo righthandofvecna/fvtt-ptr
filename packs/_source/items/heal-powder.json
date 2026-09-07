@@ -2,7 +2,7 @@
   "name": "Heal Powder",
   "system": {
     "origin": "",
-    "effect": "Cure all Persistent Status Afflictions – Herbal Restorative.",
+    "effect": "Cure all Persistent @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.OrrT285900adyGby]{Status Afflictions}. Herbal Restorative.",
     "snippet": "",
     "rules": [],
     "enabled": true,

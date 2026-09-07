@@ -5,7 +5,7 @@
   "img": "systems/ptu/static/images/item_icons/awakening.webp",
   "system": {
     "origin": "",
-    "effect": "Wakes a Pokémon from Sleep.",
+    "effect": "Wakes a Pokémon from @UUID[Compendium.ptu.effects.Item.RekZDOcIsADhrfH3]{Sleep}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -42,7 +42,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -60,10 +60,10 @@
     "container": true,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
-  "folder": null,
   "sort": 38700000,
   "ownership": {
     "default": 0
