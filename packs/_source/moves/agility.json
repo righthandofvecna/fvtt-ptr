@@ -80,7 +80,10 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
@@ -94,5 +97,22 @@
       "devNote": ""
     }
   },
-  "_id": "WiO4NUbCuv16irNl"
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1692963260348,
+    "modifiedTime": 1778200824834,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "ptr-dev-world",
+      "uuid": null,
+      "coreVersion": "11.311",
+      "systemId": "ptu",
+      "systemVersion": "4.0.0.beta.12"
+    }
+  },
+  "_id": "aS33KlxhRCP0s5Zd",
+  "sort": 0
 }
