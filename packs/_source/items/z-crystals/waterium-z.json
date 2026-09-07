@@ -6,7 +6,7 @@
   "img": "https://assets.forge-vtt.com/6464e7dd7cb6da75187d728c/worlds/Pokemon%20The%20Chosen/Dream_Waterium_Z_Sprite.png",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "@Embed[Compendium.ptu.moves.Item.gzoemLPnSliRsEyv]",
     "snippet": "",
     "rules": [
       {
@@ -38,8 +38,8 @@
       "Z-Crystal"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -50,7 +50,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -67,7 +67,8 @@
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 170973,
@@ -77,8 +78,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
-      "devNote": ""
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

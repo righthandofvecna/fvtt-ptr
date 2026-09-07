@@ -60,7 +60,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +69,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Novice Command"
+      "prereqBackup": "Novice Command",
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -87,7 +90,6 @@
       "systemVersion": "4.0.0.alpha.32"
     }
   },
-  "folder": null,
   "ownership": {
     "default": 0
   },

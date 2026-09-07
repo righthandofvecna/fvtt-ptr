@@ -2,7 +2,7 @@
   "name": "First Aid Kit",
   "system": {
     "origin": "",
-    "effect": "Required to use the First Aid Expertise Feature. By Draining 1 AP, any Trainer can make a Medicine Education Check on a target as an Extended Action. The target gains Hit Points equal to the result, and is cured of Burn, Poison, and Paralysis.",
+    "effect": "Required to use the @UUID[Compendium.ptu.feats.Item.beL0mQ0ddaiE24tt]{First Aid Expertise} Feature. By Draining 1 AP, any Trainer can make a Medicine Education Check on a target as an Extended Action. The target gains Hit Points equal to the result, and is cured of @UUID[Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj]{Burn}, @UUID[Compendium.ptu.effects.Item.299X6pActAV8ITz7]{Poison}, and @UUID[Compendium.ptu.effects.Item.bzZaLfYxVyKbJOCo]{Paralysis}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -43,7 +43,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -59,7 +59,8 @@
     "name": "First Aid Kit",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 28000000,
   "_id": "NJAgpzbxLuwzaRdx"
 }

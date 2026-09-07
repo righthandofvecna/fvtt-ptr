@@ -49,7 +49,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -60,7 +60,8 @@
     "cost": "600",
     "consumable": 0,
     "subtype": "",
-    "container": false
+    "container": false,
+    "leagueLegal": false
   },
   "effects": [],
   "ownership": {

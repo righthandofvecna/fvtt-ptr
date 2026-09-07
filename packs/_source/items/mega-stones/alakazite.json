@@ -27,8 +27,8 @@
       "Mega Stone"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -40,7 +40,7 @@
     },
     "actionCost": {
       "standard": false,
-      "rapid": false,
+      "rapid": true,
       "shift": false,
       "free": false,
       "extended": false
@@ -59,7 +59,8 @@
     "name": "Alakazite",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/alakazite.webp",
@@ -69,7 +70,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

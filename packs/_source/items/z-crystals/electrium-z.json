@@ -6,7 +6,7 @@
   "img": "systems/ptu/static/images/item_icons/electrium z.webp",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "@Embed[Compendium.ptu.moves.Item.KQPkuhqygFNFZAZg]",
     "snippet": "",
     "rules": [
       {
@@ -34,12 +34,10 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": [
-      "Z-Crystal"
-    ],
+    "keywords": [],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -50,8 +48,8 @@
       }
     },
     "actionCost": {
-      "standard": false,
-      "rapid": false,
+      "standard": true,
+      "rapid": true,
       "shift": false,
       "free": false,
       "extended": false
@@ -67,7 +65,8 @@
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 156250,
@@ -77,8 +76,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
-      "devNote": ""
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

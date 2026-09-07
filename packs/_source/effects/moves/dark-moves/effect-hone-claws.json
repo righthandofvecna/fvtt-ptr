@@ -63,7 +63,9 @@
   "folder": "4MiLyCku5E4H17ZF",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "scene-packer": {
       "hash": "82b3d114e9333fc9a3db9510d1f7f6f7f0f9d374",

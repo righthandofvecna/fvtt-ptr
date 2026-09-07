@@ -2,7 +2,7 @@
   "name": "Kip Up",
   "system": {
     "origin": "",
-    "effect": "You may stand up from being Tripped as a Rapid Action.",
+    "effect": "You may stand up from being @UUID[Compendium.ptu.effects.Item.4lqKV4CxikZxxNWJ]{Tripped} as a Rapid Action.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -55,7 +55,8 @@
     "name": "Kip Up",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert Acrobatics"
+      "prereqBackup": "Expert Acrobatics",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -78,7 +82,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "vHHC0R2h6hQTNngd"
 }

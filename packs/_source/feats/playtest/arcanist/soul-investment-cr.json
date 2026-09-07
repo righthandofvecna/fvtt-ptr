@@ -2,7 +2,7 @@
   "name": "Soul Investment",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: Your Soul Bonded Weapon\nEffect: Choose one Novice and one Expert Arcane Weapon Move. Your Soul Bonded Weapon adds those Moves to your Move List as long as this Feature is Bound. You may only Bind one instance of this Feature at a time, and you may not have multiple instances of the same Move in your Move List.",
+    "effect": "Target: Your Soul Bonded Weapon\nEffect: Choose one Novice and one Expert @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.dF5LFIsf6EgtVncf]{Arcane Weapon Move}. Your Soul Bonded Weapon adds those Moves to your Move List as long as this Feature is Bound. You may only Bind one instance of this Feature at a time, and you may not have multiple instances of the same Move in your Move List.",
     "snippet": "",
     "rules": [
       {
@@ -71,7 +71,8 @@
     "class": "Arcanist",
     "name": "Soul Investment [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "soul-investment"
+    "replacesSlug": "soul-investment",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -84,7 +85,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {

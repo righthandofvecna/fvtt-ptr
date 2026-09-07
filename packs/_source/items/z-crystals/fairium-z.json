@@ -6,7 +6,7 @@
   "img": "systems/ptu/static/images/item_icons/fairium z.webp",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "@Embed[Compendium.ptu.moves.Item.250CTkT6aRXGKT3x]",
     "snippet": "",
     "rules": [
       {
@@ -38,8 +38,8 @@
       "Z-Crystal"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -50,8 +50,8 @@
       }
     },
     "actionCost": {
-      "standard": false,
-      "rapid": false,
+      "standard": true,
+      "rapid": true,
       "shift": false,
       "free": false,
       "extended": false
@@ -67,7 +67,8 @@
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 187500,
@@ -77,8 +78,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
-      "devNote": ""
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

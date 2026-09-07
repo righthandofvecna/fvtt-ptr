@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Effect: Your Psychic Type Pokémon's Psychic-Type Moves can hit and affect Dark-Type targets, and the target can see through the Illusion Ability, Moves with the Illusion keyword, and effect created by the Illusionist Capability, ignoring all effects from those.",
+    "effect": "Effect: Your Psychic Type Pokémon's Psychic-Type Moves can hit and affect Dark-Type targets, and the target can see through the Illusion Ability, Moves with the Illusion keyword, and effect created by the Illusionist Capability, ignoring all effects from those.\n\n@UUID[Compendium.ptu.capabilities.Item.ToLo2O89su4dpqHQ]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.SfaUAdwU628l0iUp",
     "source": {
       "value": "Homebrew"
     },
@@ -62,12 +62,15 @@
     "free": false,
     "class": "Type Ace (Psychic)",
     "contentSet": "class-rework",
-    "replacesSlug": "the-crown-chakra"
+    "replacesSlug": "the-crown-chakra",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "jNLYZBsE4wNBbBOI",

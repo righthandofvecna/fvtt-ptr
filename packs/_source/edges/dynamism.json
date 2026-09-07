@@ -63,7 +63,8 @@
     "name": "Dynamism",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -73,7 +74,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Guile"
+      "prereqBackup": "Novice Guile",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -86,7 +90,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "XCYP5vlWl3u3s7LS"
 }

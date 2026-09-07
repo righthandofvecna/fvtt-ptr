@@ -1,0 +1,95 @@
+{
+  "folder": "lWQOqDm2AOGwGM16",
+  "name": "Song of Life",
+  "type": "move",
+  "img": "systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "system": {
+    "origin": "Class Rework",
+    "effect": "Trigger: Song\nEffect: All Allies in the Area of Effect gain 5 Damage Reduction until the end of your next turn.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.YaiVsWb3XBv5dgag",
+        "range": "",
+        "value": "",
+        "affects": "target"
+      }
+    ],
+    "enabled": true,
+    "slug": "song-of-life-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "song-of-life",
+    "schema": {
+      "version": 0.117,
+      "lastMigration": {
+        "datetime": "2026-07-21T03:10:08.106Z",
+        "version": {
+          "schema": 0.116,
+          "foundry": "14.364",
+          "system": "4.4.3.37"
+        }
+      }
+    },
+    "referenceEffect": "Compendium.ptu.effects.Item.YaiVsWb3XBv5dgag",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "sheerForce": false,
+    "toughClaws": false,
+    "technician": false,
+    "reckless": false,
+    "ironFist": false,
+    "megaLauncher": false,
+    "punkRock": false,
+    "strongJaw": false,
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "1 AP – Special",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 1,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "type": "Normal",
+    "category": "Status",
+    "damageBase": "",
+    "ac": "",
+    "range": "Special",
+    "contestType": "",
+    "stab": false,
+    "damageBonus": 0,
+    "isStruggle": false
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "grantedBy": {
+        "id": "O7eciIBdFyAQwnjI",
+        "onDelete": "cascade"
+      }
+    }
+  },
+  "_id": "LhTnUoIfqL3gYmZB"
+}

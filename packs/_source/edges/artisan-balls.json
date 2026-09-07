@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
   "system": {
     "origin": "",
-    "effect": "Allows you to craft Ultra Balls or Specialty Balls for 375 Yen.",
+    "effect": "Allows you to craft @UUID[Compendium.ptu.items.Item.yJco0xyHka0Bfk0C]{Ultra Balls} or Specialty Balls for @Poke[375]. Requires access to a @UUID[Compendium.ptu.items.Item.pDHEUiwQcKCdHJAI]{Poké Ball Tool Box}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -56,14 +56,20 @@
     "notes": "",
     "free": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
-  "folder": null,
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.Qf4PVP525ONM8iec",
     "source": {
       "value": "Homebrew"
     },
@@ -63,7 +63,8 @@
     "free": false,
     "class": "Stat Ace (Defense)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-stratagem-defense"
+    "replacesSlug": "stat-stratagem-defense",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {

@@ -2,7 +2,7 @@
   "name": "Full Incense",
   "system": {
     "origin": "",
-    "effect": "The holder gains the Stall ability. Cannot be used by Trainers.",
+    "effect": "The holder gains the @UUID[Compendium.ptu.abilities.Item.CdFsUXWLeP4uOL7R]{Stall} ability. Cannot be used by Trainers.",
     "snippet": "",
     "rules": [
       {
@@ -35,7 +35,7 @@
       "Fashionista"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -67,7 +67,8 @@
     "name": "Full Incense",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/full incense.webp",
@@ -77,7 +78,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -90,7 +93,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 40700000,
   "_id": "YUMXPQyow8nKJcrE"
 }

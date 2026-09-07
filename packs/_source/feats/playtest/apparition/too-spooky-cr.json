@@ -2,7 +2,7 @@
   "name": "Too Spooky",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose Pressure or Frighten. You gain the chosen Ability.",
+    "effect": "Effect: Choose @UUID[Compendium.ptu.abilities.Item.FrTjgCVwTEhGA5Sn]{Pressure} or @UUID[Compendium.ptu.abilities.Item.eKg9pZRDbRf40GME]{Frighten}. You gain the chosen Ability.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,26 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.FrTjgCVwTEhGA5Sn",
+            "label": "Pressure"
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.eKg9pZRDbRf40GME",
+            "label": "Frighten"
+          }
+        ],
+        "flag": "ability1"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.ability1}"
       }
     ],
     "enabled": true,
@@ -69,7 +89,8 @@
     "class": "Apparition",
     "name": "Too Spooky [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "too-spooky"
+    "replacesSlug": "too-spooky",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +103,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

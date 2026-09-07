@@ -10,7 +10,8 @@
         "predicate": [],
         "hideIfDisabled": false,
         "selectors": "attack-roll",
-        "value": 1
+        "value": 1,
+        "label": "Luck Incense"
       }
     ],
     "enabled": true,
@@ -36,7 +37,7 @@
       "Fashionista"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -68,7 +69,8 @@
     "name": "Luck Incense",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/luck incense.webp",
@@ -78,7 +80,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -91,7 +95,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 45600000,
   "_id": "ckQ8TcdPzRlOZq2O"
 }

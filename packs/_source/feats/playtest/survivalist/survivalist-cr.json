@@ -13,6 +13,121 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.capabilities.Item.FeGAWvrt4kYkmepl",
+            "label": "Naturewalk (Cave)",
+            "predicate": [
+              {
+                "not": "capability:naturewalk-cave-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.B22OPPi9PctiZkws",
+            "label": "Naturewalk (Desert)",
+            "predicate": [
+              {
+                "not": "capability:naturewalk-desert-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.pWX1jPzShRjT2w5n",
+            "label": "Naturewalk (Forest)",
+            "predicate": [
+              {
+                "not": "capability:naturewalk-forest"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.axjUCAkFILlwlIhN",
+            "label": "Naturewalk (Grassland)",
+            "predicate": [
+              {
+                "not": "capability:naturewalk-grassland"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.pwbTZH9BjW9HUBZP",
+            "label": "Naturewalk (Mountain)",
+            "predicate": [
+              {
+                "not": "capability:naturewalk-mountain-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.xBxolTvWkMIvz1nW",
+            "label": "Naturewalk (Ocean)",
+            "predicate": [
+              {
+                "not": "capability:naturewalk-ocean-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.JxfnaqlVTjGaXTmF",
+            "label": "Naturewalk (Tundra)",
+            "predicate": [
+              {
+                "not": "capability:naturewalk-tundra-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.PuAw6Df8sJHlTmTr",
+            "label": "Naturewalk (Urban)",
+            "predicate": [
+              {
+                "not": "capability:naturewalk-urban-hb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.pwzQXyWuhZyGxnbl",
+            "label": "Naturewalk (Wetlands)",
+            "predicate": [
+              {
+                "not": "capability:naturewalk-wetlands-hb"
+              }
+            ]
+          }
+        ],
+        "adjustName": false,
+        "flag": "survivalist"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.survivalist}"
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Favoured Terrain?",
+        "hideIfDisabled": false,
+        "selectors": "skill-check",
+        "value": 2,
+        "predicate": {
+          "and": [
+            "{manual",
+            {
+              "or": [
+                "skill:athletics",
+                "skill:acrobatics",
+                "skill:stealth",
+                "skill:perception",
+                "skill:survival"
+              ]
+            }
+          ]
+        }
       }
     ],
     "enabled": true,
@@ -70,7 +185,8 @@
     "class": "Survivalist",
     "name": "Survivalist [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "survivalist"
+    "replacesSlug": "survivalist",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -81,7 +197,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

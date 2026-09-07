@@ -2,7 +2,7 @@
   "name": "Metamagic",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You use a Special Move\nEffect: You may apply a Rank 1 Power Manipulation to your attack.",
+    "effect": "Trigger: You use a Special Move\nEffect: You may apply a Rank 1 Power Manipulation to your attack.\n@UUID[Compendium.ptu.references.Item.E96dE1iaMcGOJMP3]{Energy Finesse}\n@UUID[Compendium.ptu.references.Item.L6FARt9x9lPKsbMM]{Warp Energy}\n@UUID[Compendium.ptu.references.Item.0aAWHINRDMaI4mYf]{Directed Barrier}\n@UUID[Compendium.ptu.references.Item.4KmQa7w3ViBr7PTg]{Power Overdrive}",
     "snippet": "",
     "rules": [
       {
@@ -70,7 +70,8 @@
     "class": "Arcanist",
     "name": "Metamagic [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "metamagic"
+    "replacesSlug": "metamagic",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +82,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

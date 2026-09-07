@@ -63,7 +63,8 @@
     "tier": "",
     "automation": [],
     "contentSet": "weather-playtest",
-    "replacesSlug": "snow-warning"
+    "replacesSlug": "snow-warning",
+    "leagueLegal": false
   },
   "effects": [],
   "folder": "MsdL8dYgE7JbY1ya",

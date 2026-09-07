@@ -2,7 +2,7 @@
   "name": "Poké Ball Crafter",
   "system": {
     "origin": "",
-    "effect": "You may craft Dusk, Dive, Heal, Luxury, Net, Nest, Quick, Repeat, or Timer Balls for $700. Requires access to a Poké Ball Tool Box.",
+    "effect": "You may craft @UUID[Compendium.ptu.items.Item.vwGtLLZ0U1mbHzEk]{Dusk}, @UUID[Compendium.ptu.items.Item.Be5yPkNoR5HYkp9h]{Dive}, @UUID[Compendium.ptu.items.Item.2kThT4G7lRriGgkb]{Heal}, @UUID[Compendium.ptu.items.Item.okhcdkoCYYKcNHMD]{Luxury}, @UUID[Compendium.ptu.items.Item.BVXqYbshv4HIgOmA]{Net}, @UUID[Compendium.ptu.items.Item.2CqsSkD7AQQPDcgl]{Nest}, @UUID[Compendium.ptu.items.Item.3WZ1SjFAF8nSQfBn]{Quick}, @UUID[Compendium.ptu.items.Item.ZnKwJTJTk5p5S6LV]{Repeat}, or @UUID[Compendium.ptu.items.Item.DHGOva7RuJIosngC]{Timer} Balls for @Poke[700]. Requires access to a @UUID[Compendium.ptu.items.Item.pDHEUiwQcKCdHJAI]{Poké Ball Tool Box}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -41,7 +41,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -59,7 +59,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +70,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Basic Balls, Poké Ball Repair, Expert Technology Education"
+      "prereqBackup": "Basic Balls, Poké Ball Repair, Expert Technology Education",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -82,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 29200000,
   "_id": "R6O1UULwZzsCJXyA"
 }

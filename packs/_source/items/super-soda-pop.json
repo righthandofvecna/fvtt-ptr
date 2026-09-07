@@ -2,7 +2,7 @@
   "name": "Super Soda Pop",
   "system": {
     "origin": "",
-    "effect": "Heals 30 Hit Points. A Pokémon or Trainer can only consume one refreshment per half hour, unless they have the Gluttony Ability.",
+    "effect": "Heals 30 Hit Points. A Pokémon or Trainer can only consume one refreshment per half hour, unless they have the @UUID[Compendium.ptu.abilities.Item.r5RAP7wiKkOLZ81U]{Gluttony} Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -45,7 +45,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -61,7 +61,8 @@
     "name": "Super Soda Pop",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -69,7 +70,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -80,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 59000000,
   "_id": "qiptJsMrVGl2CfdS"
 }

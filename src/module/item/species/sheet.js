@@ -137,6 +137,21 @@ class PTUSpeciesSheet extends PTUItemSheet {
             event.currentTarget.classList.remove("dragover");
         });
 
+        // Also highlight the full drop-zone section (including header) on dragover so the
+        // visual feedback matches the actual droppable area.
+        html.find('.drop-zone').on('dragover', (event) => {
+            event.preventDefault();
+            event.currentTarget.classList.add("dragover");
+        });
+
+        html.find('.drop-zone').on('dragleave', (event) => {
+            // Only remove the highlight when the cursor leaves the whole section,
+            // not just when it moves into a child element.
+            if (!event.currentTarget.contains(event.relatedTarget)) {
+                event.currentTarget.classList.remove("dragover");
+            }
+        });
+
         $(html).find('.linked-item').each(async (i, element) => {
 			await CONFIG.PTU.util.Enricher.enrichContentLinks(element);
 		});
@@ -154,10 +169,12 @@ class PTUSpeciesSheet extends PTUItemSheet {
         // type: "Item" + uuid makes this recognizable as a standard Foundry item drop on any
         // other sheet. _category carries the species-sheet-specific routing info so that
         // _onDrop on this sheet can distinguish intra-sheet reorders from external drops.
+        // _sourceItemId ensures cross-species-sheet drags are treated as external, not reorders.
         event.dataTransfer.setData('text/plain', JSON.stringify({
             type: "Item",
             uuid,
             _category: type,
+            _sourceItemId: this.item.id,
             slug: itemSlug,
             subtype: itemSubtype,
             index: Number(itemIndex),
@@ -167,71 +184,81 @@ class PTUSpeciesSheet extends PTUItemSheet {
 
     /** @override */
     async _onDrop(event) {
+        // Prevent double-fire: when a drop lands on a child element (e.g. li.move-item), the drop
+        // event bubbles up through all ancestor drop targets (the specific item AND the form).
+        // Only the first (most-specific, deepest) handler should process the drop.
+        if (event._ptuHandled) return;
+        event._ptuHandled = true;
+
         const data = JSON.parse(event.dataTransfer.getData('text/plain'));
-        $(event.currentTarget)?.find('.item-list')?.removeClass("dragover");
 
-        // Intra-sheet reorder/move: data originated from _onDragStart on this sheet.
-        // _category is the item kind (ability/move/…) used for routing.
-        if(data._category) {
+        // Clean up all dragover highlights
+        $(this.element).find('.item-list, .drop-zone').removeClass("dragover");
+
+        // Traverse from event.target upward to find the actual drop context, so that drops
+        // anywhere within a section (header, empty space, specific item) route correctly.
+        const dropItemEl = event.target.closest('[data-item-subtype]');
+        const dropZoneEl = event.target.closest('[data-zone]');
+        const targetSubtype = dropItemEl?.dataset.itemSubtype ?? dropZoneEl?.dataset.subZone;
+        const targetZone = dropItemEl?.dataset.type ?? dropItemEl?.dataset.itemType ?? dropZoneEl?.dataset.zone;
+        const targetIndex = (dropItemEl?.dataset.itemIndex !== undefined && dropItemEl?.dataset.itemIndex !== "")
+            ? Number(dropItemEl.dataset.itemIndex) : undefined;
+
+        // Intra-sheet reorder/move: data originated from _onDragStart on THIS exact sheet.
+        // _sourceItemId distinguishes drags from this sheet vs. another species sheet.
+        if (data._category && data._sourceItemId === this.item.id) {
             const { _category: category, subtype, index } = data;
-            const { type: itemType, itemIndex, itemSubtype: dropSubtype, zone, subZone } = event.currentTarget.dataset;
-            let itemSubtype = dropSubtype;
+            let itemSubtype = targetSubtype;
 
-            if(category == "ability") {
-                if(itemType != "ability") {
-                    if(zone != "ability") return;
-                    if(!itemSubtype) itemSubtype = subZone;
-                }
+            if (category == "ability") {
+                // Must be dropped within the ability zone or on a known ability subtype
+                if (targetZone != "ability" && !["basic", "advanced", "high"].includes(targetSubtype)) return;
+                if (!itemSubtype) return;
 
                 // re-order within same subtype
-                if(itemSubtype == subtype) {
+                if (itemSubtype == subtype) {
                     const abilities = this.item.system.abilities;
                     const ability = abilities[subtype][index];
-                    if(!ability) return;
+                    if (!ability) return;
                     abilities[subtype].splice(index, 1);
-                    abilities[subtype].splice(itemIndex, 0, ability);
+                    abilities[subtype].splice(targetIndex ?? abilities[subtype].length, 0, ability);
                     return this.item.update({"system.abilities": abilities});
                 }
                 // move to different subtype
                 else {
                     const abilities = this.item.system.abilities;
                     const ability = abilities[subtype][index];
-                    if(!ability || abilities[itemSubtype].find(a => a.slug == ability.slug)) return;
+                    if (!ability || abilities[itemSubtype]?.find(a => a.slug == ability.slug)) return;
                     abilities[subtype].splice(index, 1);
-                    if(itemIndex) abilities[itemSubtype].splice(itemIndex, 0, ability);
+                    if (targetIndex !== undefined) abilities[itemSubtype].splice(targetIndex, 0, ability);
                     else abilities[itemSubtype].push(ability);
                     return this.item.update({"system.abilities": abilities});
                 }
             }
 
-            if(category == "move") {
-                if(itemType != "move") {
-                    if(zone != "move") return;
-                    if(!itemSubtype) itemSubtype = subZone;
-                }
+            if (category == "move") {
+                // Must be dropped within the move zone or on a known move subtype
+                if (targetZone != "move" && !["level", "machine", "tutor", "egg"].includes(targetSubtype)) return;
+                if (!itemSubtype) return;
 
                 // re-order within same subtype
-                if(itemSubtype == subtype) {
+                if (itemSubtype == subtype) {
                     const moves = this.item.system.moves;
                     const move = moves[subtype][index];
-                    if(!move) return;
+                    if (!move) return;
                     moves[subtype].splice(index, 1);
-                    moves[subtype].splice(itemIndex, 0, move);
+                    moves[subtype].splice(targetIndex ?? moves[subtype].length, 0, move);
                     return this.item.update({"system.moves": moves});
                 }
                 // move to different subtype
                 else {
                     const moves = this.item.system.moves;
                     const move = moves[subtype][index];
-                    if(!move || moves[itemSubtype].find(m => m.slug == move.slug)) return;
-                    if(subtype == "level") {
-                        delete move.level;
-                    }
-                    if(itemSubtype == "level") {
-                        move.level = 1;
-                    }
+                    if (!move || moves[itemSubtype]?.find(m => m.slug == move.slug)) return;
+                    if (subtype == "level") delete move.level;
+                    if (itemSubtype == "level") move.level = 1;
                     moves[subtype].splice(index, 1);
-                    if(itemIndex) moves[itemSubtype].splice(itemIndex, 0, move);
+                    if (targetIndex !== undefined) moves[itemSubtype].splice(targetIndex, 0, move);
                     else moves[itemSubtype].push(move);
                     return this.item.update({"system.moves": moves});
                 }
@@ -240,82 +267,62 @@ class PTUSpeciesSheet extends PTUItemSheet {
             return;
         }
 
-        // External drops: compendium browser, world sidebar, other sheets, etc.
-        if(data.type == "Item" && data.uuid) {
+        // External drops: compendium browser, world sidebar, other species sheets, actor sheets, etc.
+        if (data.type == "Item" && data.uuid) {
             const item = await fromUuid(data.uuid);
 
-            if(!item) return;
-            if(!this.allowedDropTypes.includes(item.type)) return;
+            if (!item) return;
+            if (!this.allowedDropTypes.includes(item.type)) return;
 
-            switch(item.type) {
+            switch (item.type) {
                 case "capability": {
                     const otherCapabilities = this.item.system.capabilities.other ?? [];
-                    if(otherCapabilities.find(c => c.slug == item.slug)) return;
-
+                    if (otherCapabilities.find(c => c.slug == item.slug)) return;
                     otherCapabilities.push({slug: item.slug, uuid: item.uuid});
                     return this.item.update({"system.capabilities.other": otherCapabilities});
                 }
                 case "ability": {
                     const abilities = this.item.system.abilities;
-                    
-                    if(abilities.basic?.find(a => a.slug == item.slug)) return;
-                    if(abilities.advanced?.find(a => a.slug == item.slug)) return;
-                    if(abilities.high?.find(a => a.slug == item.slug)) return;
+                    if (abilities.basic?.find(a => a.slug == item.slug)) return;
+                    if (abilities.advanced?.find(a => a.slug == item.slug)) return;
+                    if (abilities.high?.find(a => a.slug == item.slug)) return;
 
-                    const {itemType, itemSubtype} = event.currentTarget?.dataset ?? {};
-
-                    if(itemType == "ability" && itemSubtype) {
-                        abilities[itemSubtype].push({slug: item.slug, uuid: item.uuid});
-                    }
-                    else {
-                        abilities.basic.push({slug: item.slug, uuid: item.uuid});
-                    }
-
+                    // Route to the section the user dropped onto; default to basic
+                    const subtype = (targetZone == "ability" || ["basic", "advanced", "high"].includes(targetSubtype))
+                        ? (targetSubtype ?? "basic") : "basic";
+                    abilities[subtype].push({slug: item.slug, uuid: item.uuid});
                     return this.item.update({"system.abilities": abilities});
                 }
                 case "move": {
                     const moves = this.item.system.moves;
+                    // Route to the section the user dropped onto; default to level
+                    const subtype = (targetZone == "move" || ["machine", "tutor", "egg"].includes(targetSubtype))
+                        ? (targetSubtype ?? "level") : "level";
 
-                    const {itemType, itemSubtype} = event.currentTarget?.dataset ?? {};
-
-                    if(itemType == "move" && itemSubtype && itemSubtype != "level") {
-                        if(moves[itemSubtype]?.find(m => m.slug == item.slug)) return;
-                        moves[itemSubtype].push({uuid: item.uuid, slug: item.slug});
-
-                        this.dragMove = item.slug;
-                    }
-                    else {
-                        if(moves.level?.find(m => m.slug == item.slug)) return;
-                        if(this.dragMove == item.slug) {
-                            this.dragMove = null;
-                            return;
-                        }
+                    if (moves[subtype]?.find(m => m.slug == item.slug)) return;
+                    if (subtype == "level") {
                         moves.level.unshift({uuid: item.uuid, slug: item.slug, level: Number(data.level) || 1});
+                    } else {
+                        moves[subtype].push({uuid: item.uuid, slug: item.slug});
                     }
-
                     return this.item.update({"system.moves": moves});
                 }
                 case "species": {
                     const evolutions = this.item.system.evolutions;
-                    if(evolutions.find(e => e.slug == item.slug)) return;
-
+                    if (evolutions.find(e => e.slug == item.slug)) return;
                     const level = item.system?.evolutions?.find(e => e.slug == item.slug)?.level ?? 0;
                     const evolutionItem = item.system?.evolutions?.find(e => e.slug == item.slug)?.other?.evolutionItem ?? undefined;
                     const restrictions = item.system?.evolutions?.find(e => e.slug == item.slug)?.other?.restrictions ?? [];
-
-                    evolutions.push({level, slug: item.slug, uuid: item.uuid, other: {
-                        evolutionItem,
-                        restrictions
-                    }});
+                    evolutions.push({level, slug: item.slug, uuid: item.uuid, other: {evolutionItem, restrictions}});
                     return this.item.update({"system.evolutions": evolutions});
                 }
                 case "item": {
-                    const {index} = event.currentTarget?.dataset ?? {};
-                    if(index === undefined) return;
-
+                    // Evolution item drop — must land on a specific evolution-item drop zone
+                    const evolutionEl = event.target.closest('[data-index]');
+                    const index = evolutionEl?.dataset.index ?? event.currentTarget?.dataset.index;
+                    if (index === undefined) return;
                     const evolutions = this.item.system.evolutions;
-                    if(evolutions[index]?.other?.evolutionItem?.slug == item.slug) return;
-
+                    if (evolutions[index]?.other?.evolutionItem?.slug == item.slug) return;
                     evolutions[index].other.evolutionItem = {slug: item.slug, uuid: item.uuid};
                     return this.item.update({"system.evolutions": evolutions});
                 }

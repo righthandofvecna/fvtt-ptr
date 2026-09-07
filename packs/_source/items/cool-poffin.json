@@ -2,7 +2,7 @@
   "name": "Cool Poffin",
   "system": {
     "origin": "",
-    "effect": "Raises Cool Contest Stat by +1 Contest Die.  Made with Cheri, Figy, Razz, Spelon and Belue Berries.",
+    "effect": "Raises Cool Contest Stat by +1 Contest Die.  Made with @UUID[Compendium.ptu.items.Item.cv5eqwzldHxaSdUx]{Cheri}, @UUID[Compendium.ptu.items.Item.KANaICzUllgcccn6]{Figy}, @UUID[Compendium.ptu.items.Item.6Ulf3uG4QRO9sEEK]{Razz}, @UUID[Compendium.ptu.items.Item.pR81Bf8454iI2LPj]{Spelon} and @UUID[Compendium.ptu.items.Item.34nn2TkdQjNbXL0U]{Belue} Berries.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Contest"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -57,7 +59,8 @@
     "name": "Cool Poffin",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 25000000,
   "_id": "KdiuSnUIdE6IXG7n"
 }

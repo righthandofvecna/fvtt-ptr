@@ -1,0 +1,79 @@
+{
+  "name": "Sound Boost",
+  "type": "ability",
+  "flags": {
+    "ptu": {
+      "abilityChosen": "basic",
+      "showInTokenPanel": false
+    }
+  },
+  "effects": [],
+  "_id": "eHFPba0B2gBDz2Tv",
+  "system": {
+    "origin": "",
+    "effect": "The user increases the Damage Base of all Sonic Moves by +2.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "move:sonic"
+        ],
+        "hideIfDisabled": false,
+        "selectors": "damage-base",
+        "value": 2
+      }
+    ],
+    "enabled": true,
+    "slug": "sound-boost",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:16.989Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "tier": "",
+    "name": "",
+    "automation": [],
+    "useCount": 0
+  },
+  "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
+  "folder": null
+}

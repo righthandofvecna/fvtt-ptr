@@ -13,6 +13,27 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.zskFfuRkiVBWICxG",
+            "label": "Static"
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.4cIJr5LMQXpPUMah",
+            "label": "Electrodash"
+          }
+        ],
+        "flag": "spark"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.spark}"
       }
     ],
     "enabled": true,
@@ -71,7 +92,8 @@
     "class": "Spark Master",
     "name": "Spark Master [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "spark-master"
+    "replacesSlug": "spark-master",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -82,7 +104,11 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

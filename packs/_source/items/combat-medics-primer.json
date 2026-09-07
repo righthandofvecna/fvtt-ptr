@@ -2,7 +2,7 @@
   "name": "Combat Medic's Primer",
   "system": {
     "origin": "",
-    "effect": "An invaluable guide to patient care, praised by rangers and others who need to administer first-aid on the job.\nRank 1 – Novice Medicine Education: After taking a Sprint Maneuver, you may apply a Restorative Item on an adjacent target as a Rapid Action.\nRank 2 – Expert Medicine Education: Once per Scene as a Standard Action, you may target an adjacent ally. The target may immediately Take a Breather as a Full-Action Interrupt if they wish. They do not Shift and do not become Tripped as part of this action. If the target is Confused or Enraged, you must make a Medicine Education Check with a DC of 12 for them to be able to Take a Breather.",
+    "effect": "An invaluable guide to patient care, praised by rangers and others who need to administer first-aid on the job.\nRank 1 – Novice Medicine Education: After taking a @UUID[Compendium.ptu.moves.Item.BQydSEgKG2slhO9l]{Sprint Maneuver}, you may apply a Restorative Item on an adjacent target as a Rapid Action.\nRank 2 – Expert Medicine Education: Once per Scene as a Standard Action, you may target an adjacent ally. The target may immediately Take a Breather as a Full-Action Interrupt if they wish. They do not Shift and do not become @UUID[Compendium.ptu.effects.Item.4lqKV4CxikZxxNWJ]{Tripped} as part of this action. If the target is @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confused} or @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Enraged}, you must make a Medicine Education Check with a DC of 12 for them to be able to Take a Breather.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "Combat Medic's Primer",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 27700000,
   "_id": "N2bJbPIcolivz0s6"
 }

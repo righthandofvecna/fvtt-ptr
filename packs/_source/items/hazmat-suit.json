@@ -2,7 +2,7 @@
   "name": "Hazmat Suit",
   "system": {
     "origin": "",
-    "effect": "Acts as a Gas Mask but also grants the Hazard Immunity capability and immunity to non-damaging Poison Type Moves. Body and Head equipment slots.",
+    "effect": "Acts as a @UUID[Compendium.ptu.items.Item.k4wrPe9NEEBrqDYE]{Gas Mask} but also grants the @UUID[Compendium.ptu.capabilities.Item.DAR8qvKaxdNgwbYs]{Hazard Immunity} Capability and immunity to non-damaging Poison Type Moves. Body and Head equipment slots.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,11 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Equipment",
+      "Body",
+      "Head"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -57,7 +61,8 @@
     "name": "Hazmat Suit",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +70,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 42800000,
   "_id": "aOw7owDlnDym8b4U"
 }

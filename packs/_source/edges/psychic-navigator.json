@@ -2,9 +2,16 @@
   "name": "Psychic Navigator",
   "system": {
     "origin": "",
-    "effect": "You gain the Psychic Navigator Capability.",
+    "effect": "You gain the @UUID[Compendium.ptu.capabilities.Item.B3RVBDuftjtAQQsU]{Psychic Navigator} Capability.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.B3RVBDuftjtAQQsU"
+      }
+    ],
     "enabled": true,
     "slug": "psychic-navigator",
     "schema": {
@@ -56,7 +63,8 @@
     "name": "Psychic Navigator",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -66,7 +74,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Elemental Connection (Psychic), Adept Perception or Focus"
+      "prereqBackup": "Elemental Connection (Psychic), Adept Perception or Focus",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -79,7 +90,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "mvp27CbW0g6nWfai"
 }

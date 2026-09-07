@@ -2,7 +2,7 @@
   "name": "Balm Mushroom",
   "system": {
     "origin": "",
-    "effect": "The user is cured of Burn, Paralysis, or Poison. If they are, they lose 1 Combat Stage in a random Stat.",
+    "effect": "The user is cured of @UUID[Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj]{Burn}, @UUID[Compendium.ptu.effects.Item.bzZaLfYxVyKbJOCo]{Paralysis}, or @UUID[Compendium.ptu.effects.Item.299X6pActAV8ITz7]{Poison}. If they are, they lose 1 Combat Stage in a random Stat.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -42,7 +42,7 @@
     "actionCost": {
       "standard": false,
       "rapid": false,
-      "shift": false,
+      "shift": true,
       "free": false,
       "extended": false
     },
@@ -87,5 +87,6 @@
     "exportSource": null
   },
   "sort": 69700000,
-  "_id": "zwuNF6cJs843IqJj"
+  "_id": "zwuNF6cJs843IqJj",
+  "folder": null
 }

@@ -2,7 +2,7 @@
   "name": "Thick Club",
   "system": {
     "origin": "",
-    "effect": "When held by a Cubone or Marowak, this rare, dense bone grants the Pure Power Ability. Thick Clubs are Wielded. Cannot be used by Trainers.",
+    "effect": "When held by a Cubone or Marowak, this rare, dense bone grants the @UUID[Compendium.ptu.abilities.Item.nuGa21WQ0QD07kQj]{Pure Power} Ability. Thick Clubs are Wielded. Cannot be used by Trainers.",
     "snippet": "",
     "rules": [
       {
@@ -40,7 +40,7 @@
       "Held Item"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -72,7 +72,8 @@
     "name": "Thick Club",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/thick club.webp",
@@ -82,7 +83,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -95,7 +98,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 64500000,
   "_id": "vabigvqHJ9OqFM0V"
 }

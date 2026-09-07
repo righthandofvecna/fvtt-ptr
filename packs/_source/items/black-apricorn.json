@@ -2,7 +2,7 @@
   "name": "Black Apricorn",
   "system": {
     "origin": "",
-    "effect": "Used to make Heavy Balls.",
+    "effect": "Used to make @UUID[Compendium.ptu.items.Item.0W7lg1gF7uWIYtsU]{Heavy Balls}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Apricorn"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -57,7 +59,8 @@
     "name": "Black Apricorn",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/black apricorn.webp",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 13400000,
   "_id": "AOpwLlhEyyupgxoQ"
 }

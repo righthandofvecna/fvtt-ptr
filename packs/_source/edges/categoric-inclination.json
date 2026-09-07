@@ -7,11 +7,10 @@
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "choices": [
           {
-            "label": "Body",
             "value": "body",
+            "label": "Body",
             "predicate": [
               {
                 "not": "edge:categoric-inclination-body"
@@ -19,8 +18,8 @@
             ]
           },
           {
-            "label": "Mind",
             "value": "mind",
+            "label": "Mind",
             "predicate": [
               {
                 "not": "edge:categoric-inclination-mind"
@@ -28,8 +27,8 @@
             ]
           },
           {
-            "label": "Spirit",
             "value": "spirit",
+            "label": "Spirit",
             "predicate": [
               {
                 "not": "edge:categoric-inclination-spirit"
@@ -48,7 +47,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.acrobatics.modifier.mod"
+        "path": "system.skills.acrobatics.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -60,7 +61,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.athletics.modifier.mod"
+        "path": "system.skills.athletics.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -72,7 +75,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.charm.modifier.mod"
+        "path": "system.skills.charm.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -84,7 +89,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.combat.modifier.mod"
+        "path": "system.skills.combat.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -96,7 +103,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.command.modifier.mod"
+        "path": "system.skills.command.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -108,7 +117,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.generalEd.modifier.mod"
+        "path": "system.skills.generalEd.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -120,7 +131,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.medicineEd.modifier.mod"
+        "path": "system.skills.medicineEd.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -132,7 +145,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.occultEd.modifier.mod"
+        "path": "system.skills.occultEd.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -144,7 +159,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.pokemonEd.modifier.mod"
+        "path": "system.skills.pokemonEd.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -156,7 +173,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.techEd.modifier.mod"
+        "path": "system.skills.techEd.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -168,7 +187,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.focus.modifier.mod"
+        "path": "system.skills.focus.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -180,7 +201,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.guile.modifier.mod"
+        "path": "system.skills.guile.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -192,7 +215,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.intimidate.modifier.mod"
+        "path": "system.skills.intimidate.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -204,7 +229,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.intuition.modifier.mod"
+        "path": "system.skills.intuition.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -216,7 +243,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.perception.modifier.mod"
+        "path": "system.skills.perception.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -228,7 +257,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.stealth.modifier.mod"
+        "path": "system.skills.stealth.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -240,7 +271,9 @@
             "{item|flags.ptu.rulesSelections.categoricInclination}"
           ]
         },
-        "path": "system.skills.survival.modifier.mod"
+        "path": "system.skills.survival.modifier.mod",
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -293,7 +326,8 @@
     "name": "Categoric Inclination",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -303,7 +337,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "-"
+      "prereqBackup": "-",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -316,7 +353,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "REYVuT7qPBMVbwMo"
 }

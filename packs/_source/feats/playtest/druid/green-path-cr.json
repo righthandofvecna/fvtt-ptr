@@ -4,7 +4,60 @@
     "origin": "Class Rework",
     "effect": "Effect: You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword.\nBonus: You gain the Sap Sipper Ability.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.vKXX0T04RnD0Olx5"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.pWX1jPzShRjT2w5n",
+        "replaceSelf": true
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.axjUCAkFILlwlIhN"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:tree-hb"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.atk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:fungal-hb"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spdef.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:flower-hb"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.atk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "green-path-cr",
     "schema": {
@@ -58,7 +111,8 @@
     "class": "Druid",
     "name": "Green Path [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "green-path"
+    "replacesSlug": "green-path",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -71,7 +125,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

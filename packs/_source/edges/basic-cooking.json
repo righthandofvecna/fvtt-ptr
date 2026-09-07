@@ -2,7 +2,7 @@
   "name": "Basic Cooking",
   "system": {
     "origin": "",
-    "effect": "You may create “Candy Bars” or “Baby Food” with cooking ingredients costing $50. You may fluff the food in any reasonable manner you like.",
+    "effect": "You may create @UUID[Compendium.ptu.items.Item.DbMh7oSIBQdOinsl]{Candy Bars} or @UUID[Compendium.ptu.items.Item.CAc9BnKthLpMW4lS]{Baby Food} with cooking ingredients costing @Poke[50]. You may fluff the food in any reasonable manner you like.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -55,7 +55,8 @@
     "name": "Basic Cooking",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Intuition"
+      "prereqBackup": "Novice Intuition",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -78,7 +82,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "Gmg2iQ6uI5EceU6L"
 }

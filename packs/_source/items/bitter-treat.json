@@ -2,7 +2,7 @@
   "name": "Bitter Treat",
   "system": {
     "origin": "",
-    "effect": "The user may trade in this Snack’s Food Buff when being hit by a Special Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Bitter Food, they gain +10 Damage Reduction instead. If the user dislikes Bitter Food, they become Enraged.",
+    "effect": "The user may trade in this Snack’s Food Buff when being hit by a Special Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Bitter Food, they gain +10 Damage Reduction instead. If the user dislikes Bitter Food, they become @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Enraged}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -45,7 +45,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -61,7 +61,8 @@
     "name": "Bitter Treat",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -86,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 22400000,
   "_id": "I7fQC6KCl84HgTvy"
 }

@@ -2,7 +2,7 @@
   "name": "Treecko Gear",
   "system": {
     "origin": "",
-    "effect": "Grants the Wallclimber capability. Main Hand, Off Hand and Feet equipment slots.",
+    "effect": "Grants the @UUID[Compendium.ptu.capabilities.Item.pvTnoGYp0kBhHmMD]{Wallclimber} Capability. Main Hand, Off Hand and Feet equipment slots.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,12 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Equipment",
+      "Main Hand",
+      "Off-Hand",
+      "Feet"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -57,7 +62,8 @@
     "name": "Treecko Gear",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +71,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 11200000,
   "_id": "8DIxGu9wNaUwf81s"
 }

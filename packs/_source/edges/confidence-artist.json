@@ -2,7 +2,7 @@
   "name": "Confidence Artist",
   "system": {
     "origin": "",
-    "effect": "You learn the Move Confide.",
+    "effect": "You learn the Move @UUID[Compendium.ptu.moves.Item.43i757GW8pptWB5j]{Confide}.",
     "snippet": "",
     "rules": [
       {
@@ -64,7 +64,8 @@
     "name": "Confidence Artist",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -74,7 +75,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Guile"
+      "prereqBackup": "Novice Guile",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -87,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "mc6Z3CPS05sxCeTL"
 }

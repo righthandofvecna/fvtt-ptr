@@ -2,7 +2,7 @@
   "name": "Art of Stealth",
   "system": {
     "origin": "",
-    "effect": "You gain the Stealth Capability.",
+    "effect": "You gain the @UUID[Compendium.ptu.capabilities.Item.a1N1M1GMjMClaOdj]{Stealth} Capability.",
     "snippet": "",
     "rules": [
       {
@@ -62,7 +62,8 @@
     "name": "Art of Stealth",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -72,7 +73,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert Stealth"
+      "prereqBackup": "Expert Stealth",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -85,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "sPvuHJVG5cMuoInm"
 }

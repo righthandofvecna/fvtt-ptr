@@ -7,7 +7,7 @@
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
+        "adjustName": false,
         "flag": "wintersheraldrank1",
         "choices": [
           {
@@ -28,6 +28,180 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.AZn05DqBo1RGVRLH",
+            "label": "Freeze-Dry",
+            "predicate": [
+              {
+                "not": "move:freeze-dry"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.ipZPqONhX7WsWJ5U",
+            "label": "Ice Beam",
+            "predicate": [
+              {
+                "not": "move:ice-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.I0Cy1NP2brM1jq1h",
+            "label": "Ice Punch",
+            "predicate": [
+              {
+                "not": "move:ice-punch"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.PljheBBLgIqBu5GY",
+            "label": "Ice Spinner",
+            "predicate": [
+              {
+                "not": "move:ice-spinner"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.IiLJ3J3xpWhhTqvw",
+            "label": "Icicle Crash",
+            "predicate": [
+              {
+                "not": "move:icicle-crash"
+              }
+            ]
+          }
+        ],
+        "adjustName": false,
+        "flag": "winter1-1"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.winter1-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.AZn05DqBo1RGVRLH",
+            "label": "Freeze-Dry",
+            "predicate": [
+              {
+                "not": "move:freeze-dry"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.ipZPqONhX7WsWJ5U",
+            "label": "Ice Beam",
+            "predicate": [
+              {
+                "not": "move:ice-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.I0Cy1NP2brM1jq1h",
+            "label": "Ice Punch",
+            "predicate": [
+              {
+                "not": "move:ice-punch"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.PljheBBLgIqBu5GY",
+            "label": "Ice Spinner",
+            "predicate": [
+              {
+                "not": "move:ice-spinner"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.IiLJ3J3xpWhhTqvw",
+            "label": "Icicle Crash",
+            "predicate": [
+              {
+                "not": "move:icicle-crash"
+              }
+            ]
+          }
+        ],
+        "adjustName": false,
+        "flag": "winter1-2"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.winter1-2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.AZn05DqBo1RGVRLH",
+            "label": "Freeze-Dry",
+            "predicate": [
+              {
+                "not": "move:freeze-dry"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.ipZPqONhX7WsWJ5U",
+            "label": "Ice Beam",
+            "predicate": [
+              {
+                "not": "move:ice-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.I0Cy1NP2brM1jq1h",
+            "label": "Ice Punch",
+            "predicate": [
+              {
+                "not": "move:ice-punch"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.PljheBBLgIqBu5GY",
+            "label": "Ice Spinner",
+            "predicate": [
+              {
+                "not": "move:ice-spinner"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.IiLJ3J3xpWhhTqvw",
+            "label": "Icicle Crash",
+            "predicate": [
+              {
+                "not": "move:icicle-crash"
+              }
+            ]
+          }
+        ],
+        "flag": "winter1-3"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.winter1-3}"
       }
     ],
     "enabled": true,
@@ -85,7 +259,8 @@
     "class": "Frost Touched",
     "name": "Winter's Herald [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "winters-herald-rank-1"
+    "replacesSlug": "winters-herald-rank-1",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

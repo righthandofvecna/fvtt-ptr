@@ -11,7 +11,8 @@
         "value": 1,
         "path": "system.modifiers.capabilities.highJump",
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -19,7 +20,8 @@
         "value": 1,
         "path": "system.modifiers.capabilities.longJump",
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -72,7 +74,8 @@
     "name": "Acrobat",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -82,7 +85,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Acrobatics"
+      "prereqBackup": "Novice Acrobatics",
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -95,7 +101,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "EUkre7TTFIJ6e9Tn"
 }

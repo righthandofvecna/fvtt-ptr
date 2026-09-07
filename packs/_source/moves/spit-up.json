@@ -7,17 +7,27 @@
     "origin": "",
     "effect": "For each Stockpiled Count the user has, Spit Up's Damage Base is increased by 8. If the user has no Stockpiled count, Spit Up cannot be used.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "spit-up-damage-base",
+        "value": "- 1 + min(max(@actor.flags.ptu.stockpile,0), 3) * 8"
+      }
+    ],
     "enabled": true,
     "slug": "spit-up",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
         "datetime": "2026-05-08T00:40:25.936Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "13.361",
+          "system": "4.4.3.17"
         }
       }
     },
@@ -60,38 +70,24 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Normal",
     "category": "Special",
-    "damageBase": "X, See Effect",
+    "damageBase": "1",
     "ac": "2",
     "range": "Range 4",
     "contestType": "Tough - Desperation",
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "srUwReOeuVGAPTa5",
+  "_id": "44BR8z4tUjcldJzZ",
   "effects": [],
-  "sort": 79300000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": 0
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200825993,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

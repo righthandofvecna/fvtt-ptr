@@ -7,9 +7,19 @@
     "origin": "",
     "effect": "Frustration’s Damage Base is equal to 6 plus two times the number of times this Pokémon has been hit since the end of this Pokémon’s last turn (to a maximum of DB 12).",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "{item|id}-damage-base",
+        "value": "min(max(@actor.flags.ptu.frustration,0), 3) * 2"
+      }
+    ],
     "enabled": true,
     "slug": "frustration",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -21,7 +31,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.XOHYuI4aWEd74yaK",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -60,34 +70,23 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Normal",
     "category": "Physical",
-    "damageBase": "X, See Effect",
-    "ac": 2,
+    "damageBase": "6",
+    "ac": "2",
     "range": "Melee",
     "contestType": "Cute - Desperation",
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "sMByqeVz0Wq8Ybby",
+  "_id": "842xBnm00yMurO5Q",
   "effects": [],
-  "sort": 78200000,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200825844,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
   }
 }

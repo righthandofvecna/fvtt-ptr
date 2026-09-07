@@ -2,7 +2,7 @@
   "name": "X-Ray Goggles",
   "system": {
     "origin": "",
-    "effect": "Grants the user the X-Ray Vision Capability. Head equipment slot.",
+    "effect": "Grants the user the @UUID[Compendium.ptu.capabilities.Item.Ur20jokx7wBTH2zJ]{X-Ray Vision} Capability. Head equipment slot.",
     "snippet": "",
     "rules": [
       {
@@ -37,7 +37,7 @@
       "Head"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -69,7 +69,8 @@
     "name": "X-Ray Goggles",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -79,7 +80,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
@@ -92,7 +96,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 62300000,
   "_id": "tir2PSSY49VR30QT"
 }

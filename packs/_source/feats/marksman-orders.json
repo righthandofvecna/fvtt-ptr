@@ -2,7 +2,7 @@
   "name": "Marksman Orders",
   "system": {
     "origin": "",
-    "effect": "You gain the Trick Shot and Long Shot Orders.",
+    "effect": "You gain the @UUID[Compendium.ptu.feats.Item.vguUuo9epqsU66ps]{Trick Shot} and @UUID[Compendium.ptu.feats.Item.iIzgbpKtLj5Nat3l]{Long Shot} Orders.",
     "snippet": "",
     "rules": [
       {
@@ -70,7 +70,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -80,7 +81,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert Perception or Guile"
+      "prereqBackup": "Expert Perception or Guile",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -93,7 +97,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 54600000,
   "_id": "m0mQ75HwcMpOL7YS"
 }

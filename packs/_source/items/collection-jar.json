@@ -2,7 +2,7 @@
   "name": "Collection Jar",
   "system": {
     "origin": "",
-    "effect": "A simple sealable glass jar. Useful when collecting Items from Pokémon, such as Honey from Pokémon with the Honey Gather Ability, or MooMoo Milk from Pokémon with the Milk Collection Ability. Available almost everywhere.",
+    "effect": "A simple sealable glass jar. Useful when collecting Items from Pokémon, such as @UUID[Compendium.ptu.items.Item.Op2TZv6Qoz4Y65e2]{Honey} from Pokémon with the @UUID[Compendium.ptu.capabilities.Item.mTnhVNSiCK8f5nij]{Honey Gather} Capability, or @UUID[Compendium.ptu.items.Item.YswiehoUnTqeuvg2]{MooMoo Milk} from Pokémon with the @UUID[Compendium.ptu.capabilities.Item.Ie2EJGV6sDVmznVA]{Milk Collection} Capability. Available almost everywhere.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "Collection Jar",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 65500000,
   "_id": "w9JX62zPK8CoWL7O"
 }

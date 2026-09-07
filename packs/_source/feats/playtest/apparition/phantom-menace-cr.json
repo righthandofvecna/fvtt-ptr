@@ -2,7 +2,7 @@
   "name": "Phantom Menace",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Moves Last Respects, Phantom Force, and Poltergeist. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
+    "effect": "Effect: You gain the Moves @UUID[Compendium.ptu.moves.Item.jwGAWj2BOOFkAqIi]{Last Respects}, @UUID[Compendium.ptu.moves.Item.reV2bQhOVinmpzub]{Phantom Force}, and @UUID[Compendium.ptu.moves.Item.Y4a0mYc5kRDAzG1Y]{Poltergeist}. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,24 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.jwGAWj2BOOFkAqIi"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.reV2bQhOVinmpzub"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.Y4a0mYc5kRDAzG1Y"
       }
     ],
     "enabled": true,
@@ -71,7 +89,8 @@
     "class": "Apparition",
     "name": "Phantom Menace [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "phantom-menace"
+    "replacesSlug": "phantom-menace",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -84,7 +103,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

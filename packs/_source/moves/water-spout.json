@@ -7,9 +7,73 @@
     "origin": "",
     "effect": "For each 10% of HP the user is missing, Water Spout's Damage Base is reduced by 1. Water Spout creates a 1 meter burst, but also affects an area 10 meters tall straight up.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "water-spout-damage-base",
+        "value": {
+          "brackets": [
+            {
+              "start": 81,
+              "end": 90,
+              "value": -1
+            },
+            {
+              "start": 71,
+              "end": 80,
+              "value": -2
+            },
+            {
+              "start": 61,
+              "end": 70,
+              "value": -3
+            },
+            {
+              "start": 51,
+              "end": 60,
+              "value": -4
+            },
+            {
+              "start": 41,
+              "end": 50,
+              "value": -5
+            },
+            {
+              "start": 31,
+              "end": 40,
+              "value": -6
+            },
+            {
+              "start": 21,
+              "end": 30,
+              "value": -7
+            },
+            {
+              "start": 11,
+              "end": 20,
+              "value": -8
+            },
+            {
+              "start": 1,
+              "end": 10,
+              "value": -9
+            },
+            {
+              "start": -100,
+              "end": 0,
+              "value": -10
+            }
+          ],
+          "field": "actor|system.health.percent"
+        }
+      }
+    ],
     "enabled": true,
     "slug": "water-spout",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -58,6 +122,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Water",
     "category": "Special",
     "damageBase": "15",
@@ -67,29 +132,14 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "Nwh51csVMKXOHWDp",
+  "_id": "QHNQR2epRja7HkHk",
   "effects": [],
-  "sort": 32100000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": 0
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200824130,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

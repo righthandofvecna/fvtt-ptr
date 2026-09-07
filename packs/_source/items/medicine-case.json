@@ -2,7 +2,7 @@
   "name": "Medicine Case",
   "system": {
     "origin": "",
-    "effect": "A Medicine Case may be filled with an Antidote, Paralyze Heal, Burn Heal, Ice Heal, or Full Heal. This consumes the used item. When a Pokémon is recalled into a Poké Ball with a filled Medicine Case, the item is automatically used on the Pokémon. Filling a Medicine Case is an Standard Action. Medicine Cases may be refilled multiple times but may only have one sort of consumable in them at a time.",
+    "effect": "A Medicine Case may be filled with an @UUID[Compendium.ptu.items.Item.HzoRdjFC7xbRj460]{Antidote}, @UUID[Compendium.ptu.items.Item.qlgi2CMVsHbNLJqI]{Paralyze Heal}, @UUID[Compendium.ptu.items.Item.WgG0d3bNUMElJxk5]{Burn Heal}, @UUID[Compendium.ptu.items.Item.7he7IuXJJDfvWhyC]{Ice Heal}, or @UUID[Compendium.ptu.items.Item.5P6ANxofYLtykhvN]{Full Heal}. This consumes the used item. When a Pokémon is recalled into a Poké Ball with a filled Medicine Case, the item is automatically used on the Pokémon. Filling a Medicine Case is an Standard Action. Medicine Cases may be refilled multiple times but may only have one sort of consumable in them at a time.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -59,7 +59,8 @@
     "name": "Medicine Case",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 23800000,
   "_id": "JpfkXVU1CrkQP937"
 }

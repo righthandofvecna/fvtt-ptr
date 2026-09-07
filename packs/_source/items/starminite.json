@@ -27,8 +27,8 @@
       "Mega Stone"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -40,7 +40,7 @@
     },
     "actionCost": {
       "standard": false,
-      "rapid": false,
+      "rapid": true,
       "shift": false,
       "free": false,
       "extended": false
@@ -59,7 +59,8 @@
     "name": "Starminite",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/images/item_icons/starminite.webp",
@@ -69,7 +70,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
@@ -82,7 +86,6 @@
     "modifiedTime": 1778200842056,
     "lastModifiedBy": "ptubuilder000000"
   },
-  "folder": null,
   "_id": "gdIlnkYDbfR2sNxQ",
   "sort": 0
 }

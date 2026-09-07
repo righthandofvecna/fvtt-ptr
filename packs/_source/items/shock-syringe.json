@@ -2,7 +2,7 @@
   "name": "Shock Syringe",
   "system": {
     "origin": "",
-    "effect": "This drug enhances the sensitivity of the user’s nerves, enhancing their perception and making it incredibly useful for scouts and recon missions. However, the enhanced sense of touch greatly lowers the user’s pain tolerance. The user gains a +3 bonus to Perception, Focus, and Guile and a +1 bonus to Accuracy. However, each time the user takes an Injury, they are Flinched. The effects of Shock Syringe last for an hour.",
+    "effect": "This drug enhances the sensitivity of the user’s nerves, enhancing their perception and making it incredibly useful for scouts and recon missions. However, the enhanced sense of touch greatly lowers the user’s pain tolerance. The user gains a +3 bonus to Perception, Focus, and Guile and a +1 bonus to Accuracy. However, each time the user takes an Injury, they are @UUID[Compendium.ptu.effects.Item.xE6uIFWZoYXAZQxA]{Flinched}. The effects of Shock Syringe last for an hour.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -59,7 +59,8 @@
     "name": "Shock Syringe",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 47600000,
   "_id": "ej9LvcA45YE3TYK3"
 }

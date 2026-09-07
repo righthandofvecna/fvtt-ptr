@@ -1,0 +1,171 @@
+{
+  "folder": "I8pouPxZOCgCVom3",
+  "name": "Vile Body",
+  "type": "feat",
+  "_id": "SQ2W8UdZf4bPxuiR",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "system": {
+    "origin": "Class Rework",
+    "effect": "Effect: Choose two of Absorb Force, Poison Point, or Poison Touch. You gain the chosen Abilities.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.modifiers.baseStats.def.mod",
+        "value": 1,
+        "priority": 20,
+        "predicate": [],
+        "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "label": "Vile Body",
+        "prompt": "Choose two Abilitiess.",
+        "flag": "vilebody1",
+        "rollOption": "capture",
+        "choices": [
+          {
+            "label": "Absorb Force",
+            "value": "Compendium.ptu.abilities.Item.KjHj0iWe2S1gs9m6",
+            "predicate": [
+              {
+                "not": "ability:absorb-force"
+              }
+            ]
+          },
+          {
+            "label": "Poison Point",
+            "value": "Compendium.ptu.abilities.Item.osJgodPktGSkPJf4",
+            "predicate": [
+              {
+                "not": "ability:poison-point"
+              }
+            ]
+          },
+          {
+            "label": "Poison Touch",
+            "value": "Compendium.ptu.abilities.Item.tZqCQEp1Y7W3J3TG",
+            "predicate": [
+              {
+                "not": "ability:poison-touch"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.vilebody1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "label": "Vile Body",
+        "prompt": "Choose two Abilitiess.",
+        "flag": "vilebody2",
+        "rollOption": "capture",
+        "choices": [
+          {
+            "label": "Absorb Force",
+            "value": "Compendium.ptu.abilities.Item.KjHj0iWe2S1gs9m6",
+            "predicate": [
+              {
+                "not": "ability:absorb-force"
+              }
+            ]
+          },
+          {
+            "label": "Poison Point",
+            "value": "Compendium.ptu.abilities.Item.osJgodPktGSkPJf4",
+            "predicate": [
+              {
+                "not": "ability:poison-point"
+              }
+            ]
+          },
+          {
+            "label": "Poison Touch",
+            "value": "Compendium.ptu.abilities.Item.tZqCQEp1Y7W3J3TG",
+            "predicate": [
+              {
+                "not": "ability:poison-touch"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.vilebody2}"
+      }
+    ],
+    "enabled": true,
+    "slug": "vile-body-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:35.541Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "+Defense",
+      "Playtest",
+      "Class Rework"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": null,
+      "custom": "Static",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "prerequisites": [
+      "Adept Guile or Stealth"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Miasmic",
+    "name": "Vile Body [CR]"
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  }
+}

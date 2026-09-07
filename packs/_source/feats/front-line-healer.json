@@ -2,7 +2,7 @@
   "name": "Front Line Healer",
   "system": {
     "origin": "",
-    "effect": "When you apply a Restorative, you gain +5 Damage Reduction for 1 full round. Whenever you use Combat Medic’s Primer’s Rank 2 effect, you may apply the same effect on yourself. Damage Reduction from this Feature does not stack with itself.",
+    "effect": "When you apply a Restorative, you gain +5 Damage Reduction for 1 full round. Whenever you use @UUID[Compendium.ptu.items.Item.N2bJbPIcolivz0s6]{Combat Medic’s Primer}’s Rank 2 effect, you may apply the same effect on yourself. Damage Reduction from this Feature does not stack with itself.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -57,7 +57,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +68,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Medic"
+      "prereqBackup": "Medic",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -80,7 +84,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 36400000,
   "_id": "XAJLbqh6PBfnKl9d"
 }

@@ -2,7 +2,7 @@
   "name": "Gas Mask",
   "system": {
     "origin": "",
-    "effect": "Gas Masks are invaluable equipment when trying to breathe in toxic environments or heavy smoke. They not only let you breathe through environmental toxins or smoke, but you become immune to the Moves Rage Powder, Poison Gas, Poisonpowder, Sleep Powder, Smog, Smokescreen, Spore, Stun Spore, and Sweet Scent.",
+    "effect": "Gas Masks are invaluable equipment when trying to breathe in toxic environments or heavy smoke. They not only let you breathe through environmental toxins or smoke, but you become immune to the Moves @UUID[Compendium.ptu.moves.Item.fM5WQyilyABYub1f]{Rage Powder}, @UUID[Compendium.ptu.moves.Item.2YHDxImu2aLCkeYO]{Poison Gas}, @UUID[Compendium.ptu.moves.Item.NisjPhyvzfHCfgSx]{Poison Powder}, @UUID[Compendium.ptu.moves.Item.QhX27aIM6MPFqya8]{Sleep Powder}, @UUID[Compendium.ptu.moves.Item.1C4eSkywCcdopGkD]{Smog}, @UUID[Compendium.ptu.moves.Item.kvvdzOdMFvhMbQga]{Smokescreen}, @UUID[Compendium.ptu.moves.Item.soZ40VFFxCDiniJu]{Spore}, @UUID[Compendium.ptu.moves.Item.XssTGMznjX8N33L7]{Stun Spore}, and @UUID[Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS]{Sweet Scent}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -28,7 +28,7 @@
       "Head"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -60,7 +60,8 @@
     "name": "Gas Mask",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -68,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -79,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 52800000,
   "_id": "k4wrPe9NEEBrqDYE"
 }

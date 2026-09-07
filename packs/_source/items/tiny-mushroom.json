@@ -42,7 +42,7 @@
     "actionCost": {
       "standard": false,
       "rapid": false,
-      "shift": false,
+      "shift": true,
       "free": false,
       "extended": false
     },
@@ -87,5 +87,6 @@
     "exportSource": null
   },
   "sort": 65300000,
-  "_id": "w5F8OjCc7rGRSlXz"
+  "_id": "w5F8OjCc7rGRSlXz",
+  "folder": null
 }

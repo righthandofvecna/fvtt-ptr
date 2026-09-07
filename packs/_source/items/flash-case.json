@@ -2,7 +2,7 @@
   "name": "Flash Case",
   "system": {
     "origin": "",
-    "effect": "When a Poké Ball with a Flash Case is thrown, it uses the Move Flash originating from the spot where it landed.",
+    "effect": "When a Poké Ball with a Flash Case is thrown, it uses the Move @UUID[Compendium.ptu.moves.Item.joekwsOGEcyJt9BB]{Flash} originating from the spot where it landed.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -59,7 +59,8 @@
     "name": "Flash Case",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 29500000,
   "_id": "ODreo8uTxSpkZYdb"
 }

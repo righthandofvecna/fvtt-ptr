@@ -2,7 +2,7 @@
   "name": "Fishing 101",
   "system": {
     "origin": "",
-    "effect": "A good way to waste an afternoon sitting at the side of a boat.\n\nRank 1 - Novice Survival: You gain the Snare Capture Technique, but it only applies to Pokémon you have fished up.\nRank 2 - Adept Survival: Whenever you fish up a Pokémon, choose two Combat Stats. That Pokémon becomes Flinched and loses 1 Combat Stage in each of the chosen Stats.",
+    "effect": "A good way to waste an afternoon sitting at the side of a boat.\n\nRank 1 - Novice Survival: You gain the @UUID[Compendium.ptu.references.Item.K24Mww4alZrOwtv2]{Snare} Capture Technique, but it only applies to Pokémon you have fished up.\nRank 2 - Adept Survival: Whenever you fish up a Pokémon, choose two Combat Stats. That Pokémon becomes @UUID[Compendium.ptu.effects.Item.xE6uIFWZoYXAZQxA]{Flinched} and loses 1 Combat Stage in each of the chosen Stats.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "Fishing 101",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 62600000,
   "_id": "uDSNV4CJurGvzrN4"
 }

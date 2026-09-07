@@ -2,7 +2,7 @@
   "name": "Cornn Berry",
   "system": {
     "origin": "",
-    "effect": "Cures Disabled condition. Tier 2.",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.GUKAMwsFi0EJ56WD]{Disabled} condition. Tier 2.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -63,7 +63,8 @@
     "container": false,
     "automation": [],
     "name": "Cornn Berry",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/cornn berry.webp",
@@ -88,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 49400000,
   "_id": "gdeshTlDpJXxuXOq"
 }

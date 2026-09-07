@@ -2,7 +2,7 @@
   "name": "Nimble Movement",
   "system": {
     "origin": "",
-    "effect": "Whenever you Disengage, you Shift 2 meters instead of 1.",
+    "effect": "Whenever you @UUID[Compendium.ptu.moves.Item.SY3j4DR2EGyRkvRr]{Disengage}, you Shift 2 meters instead of 1.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -55,7 +55,8 @@
     "name": "Nimble Movement",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Acrobatics or Stealth"
+      "prereqBackup": "Adept Acrobatics or Stealth",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -78,7 +82,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "aczRot8F2nvBPjDG"
 }

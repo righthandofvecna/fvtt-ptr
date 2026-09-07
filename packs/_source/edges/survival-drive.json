@@ -2,7 +2,7 @@
   "name": "Survival Drive",
   "system": {
     "origin": "",
-    "effect": "You learn the Move Bulk Up.",
+    "effect": "You learn the Move @UUID[Compendium.ptu.moves.Item.du6VccHCQ2VjQ0D8]{Bulk Up}.",
     "snippet": "",
     "rules": [
       {
@@ -64,7 +64,8 @@
     "name": "Survival Drive",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -74,7 +75,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Survival"
+      "prereqBackup": "Adept Survival",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -87,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "jiRIx77CYw3YSid8"
 }

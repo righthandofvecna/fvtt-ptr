@@ -2,7 +2,7 @@
   "name": "Cute Poffin",
   "system": {
     "origin": "",
-    "effect": "Raises Cute Contest Stat by +1 Contest Die.  Made with Pecha, Mago, Nanab, Pamtre, and Watmel Berries.",
+    "effect": "Raises Cute Contest Stat by +1 Contest Die.  Made with @UUID[Compendium.ptu.items.Item.myUsKao9Dkcrkvky]{Pecha}, @UUID[Compendium.ptu.items.Item.QVycESa0ERv6vnVx]{Mago}, @UUID[Compendium.ptu.items.Item.vlQ41G1No20eQlY9]{Nanab}, @UUID[Compendium.ptu.items.Item.Pt8QZy6atB2PDZgK]{Pamtre}, and @UUID[Compendium.ptu.items.Item.63QJ0JtoxTJQ5nc0]{Watmel} Berries.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Contest"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -57,7 +59,8 @@
     "name": "Cute Poffin",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 6600000,
   "_id": "4OPTExQVxmQQYnRP"
 }

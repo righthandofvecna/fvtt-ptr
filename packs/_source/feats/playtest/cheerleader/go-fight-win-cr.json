@@ -2,7 +2,7 @@
   "name": "Go, Fight, Win!",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose and perform one of the cheers below. You may perform each Cheer only once per Scene.\n» Don’t Stop Now!: All allies on the Field gain Temporary Hit Points equal to your Charm Rank and become Motivated.\n» I Believe In You!: All allies on the Field gain a +2 Bonus to evasion for 1 full round and become Cheered.\n» Show Your Best!: Choose Def, or Sp.Def, all allies on the Field gain +1 CS in the chosen Stat and become Excited.\n» You Can Do It!: Choose Atk, Sp.Atk, or Spd, all allies on the Field gain +1 CS in the chosen Stat and become Encouraged.",
+    "effect": "Effect: Choose and perform one of the cheers below. You may perform each Cheer only once per Scene.\n\n» Don’t Stop Now!: All allies on the Field gain Temporary Hit Points equal to your Charm Rank and become Motivated. @UUID[Compendium.ptu.effects.Item.gLauExV34WJ0NvRX]\n\n» I Believe In You!: All allies on the Field gain a +2 Bonus to evasion for 1 full round and become Cheered. @UUID[Compendium.ptu.effects.Item.cNMIhl2yvy7hWc6d]\n@UUID[Compendium.ptu.effects.Item.pZO043r8mNBFfbCD] \n\n» Show Your Best!: Choose Def, or Sp.Def, all allies on the Field gain +1 CS in the chosen Stat and become Excited. @UUID[Compendium.ptu.effects.Item.gRcD70tgms6rGKOm] @UUID[Compendium.ptu.effects.Item.R4VCsfCLQffgSWFO]\n\n» You Can Do It!: Choose Atk, Sp.Atk, or Spd, all allies on the Field gain +1 CS in the chosen Stat and become Encouraged. @UUID[Compendium.ptu.effects.Item.d3TZl3w59v3WY9Ce] @UUID[Compendium.ptu.effects.Item.qRDaSypajeZhawMD]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -60,7 +60,8 @@
     "class": "Cheerleader",
     "name": "Go, Fight, Win! [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "go-fight-win"
+    "replacesSlug": "go-fight-win",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -73,7 +74,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": null,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

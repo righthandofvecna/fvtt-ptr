@@ -2,7 +2,7 @@
   "name": "Field Clinic",
   "system": {
     "origin": "",
-    "effect": "Whenever your party Sets Up Camp, you may spend $200 worth of Medical Scrap to set up a Field Clinic. While using the Field Clinic, all members gain the following benefits;\n»» You may spend $300 of Medical Scrap to create and apply a Bandage or use a First Aid Kit\n»» If you have the Nurse Feature, you may spend $300 to activate it without Draining AP.\n»» Potions, Super Potions, Hyper Potions, Full Restores, Revives, Energy Powders, and Energy Roots used in this area heal their target an additional 5 Hit Points.",
+    "effect": "Whenever your party Sets Up Camp, you may spend @Poke[200] worth of Medical Scrap to set up a Field Clinic. While using the Field Clinic, all members gain the following benefits;\n»» You may spend @Poke[300] of Medical Scrap to create and apply a @UUID[Compendium.ptu.items.Item.kTXHG6L2b6NzrWQY]{Bandage} or use a @UUID[Compendium.ptu.items.Item.NJAgpzbxLuwzaRdx]{First Aid Kit}.\n»» If you have the @UUID[Compendium.ptu.feats.Item.G3FxaPfnkNH88PiA]{Nurse} Feature, you may spend @Poke[300] to activate it without Draining AP.\n»» @UUID[Compendium.ptu.items.Item.2kQmUgVMnwb8JfW4]{Potions}, @UUID[Compendium.ptu.items.Item.SpizuCWOBHGbyOyd]{Super Potions}, @UUID[Compendium.ptu.items.Item.4m1zVnoahZHlSVcd]{Hyper Potions}, @UUID[Compendium.ptu.items.Item.Tb8yKIXVEcWvhmvk]{Full Restores}, @UUID[Compendium.ptu.items.Item.1HkqyxFShtqF6wac]{Revives}, @UUID[Compendium.ptu.items.Item.AbfaIrLufx5RwVvv]{Energy Powders}, and @UUID[Compendium.ptu.items.Item.7rq6umzCl1cTm5ny]{Energy Roots} used in this area heal their target an additional 5 Hit Points.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -55,7 +55,8 @@
     "name": "Field Clinic",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Medicine Education"
+      "prereqBackup": "Adept Medicine Education",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -78,7 +82,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 0,
   "_id": "j6KUhupcGmKRD1wr"
 }

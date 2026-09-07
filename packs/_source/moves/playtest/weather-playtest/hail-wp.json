@@ -72,7 +72,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "weather-playtest",
-    "replacesSlug": "hail"
+    "replacesSlug": "hail",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 100000,

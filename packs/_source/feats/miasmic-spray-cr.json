@@ -1,0 +1,113 @@
+{
+  "folder": "I8pouPxZOCgCVom3",
+  "name": "Miasmic Spray",
+  "type": "feat",
+  "_id": "Bht6BgqNjJFoWfxk",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "system": {
+    "origin": "Class Rework",
+    "effect": "Trigger: You hit with Acid, Clear Smog, Sludge Bomb, Sludge Wave, or Toxic; or use Acid Armor.\nEffect: The Effect of this feature depends on the triggering move.\n- Acid: Instead of its usual effect, Acid lowers the Special Defense of all targets hit by -2 Combat Stages.\n- Clear Smog: Clear Smog’s target loses 5 HP for each Combat Stage lost.\n- Sludge Bomb: The Target receives a -3 penalty to Accuracy Rolls until the end of your next turn.\n- Sludge Wave: All targets in Sludge Wave’s Burst are Slowed until the end of their next turn.\n- Toxic: The target’s Badly Poison Hit Point Loss begins at 10 instead of 5.\n- Acid Armor: You are not Slowed while Liquefied and resist all Special Attacks one step.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.modifiers.baseStats.def.mod",
+        "value": 1,
+        "priority": 20,
+        "predicate": [],
+        "phase": "applyAEs"
+      },
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "affects": "target",
+        "selectors": "acid-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.DSXd33NkJkdeFnnc",
+        "range": "1",
+        "value": ""
+      },
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "affects": "target",
+        "selectors": "sludge-bomb-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.StOU5tMmTDCZhuow",
+        "range": "1",
+        "value": ""
+      },
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "affects": "target",
+        "selectors": "sludge-wave-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt",
+        "range": "1",
+        "value": ""
+      }
+    ],
+    "enabled": true,
+    "slug": "miasmic-spray-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:34.969Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "+Defense",
+      "Playtest",
+      "Class Rework"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "2 AP – Rapid Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 2,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "prerequisites": [
+      "Miasma’s Call",
+      "Master Stealth or Guile"
+    ],
+    "notes": "",
+    "free": false,
+    "class": "Miasmic",
+    "name": "Miasmic Spray [CR]"
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
+  }
+}

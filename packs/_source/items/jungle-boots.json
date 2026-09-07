@@ -2,7 +2,7 @@
   "name": "Jungle Boots",
   "system": {
     "origin": "",
-    "effect": "Jungle Boots grant you the Naturewalk (Forest) capability",
+    "effect": "Jungle Boots grant you the @UUID[Compendium.ptu.capabilities.Item.ddJDiI6dBWUc3WlA]{Naturewalk (Forest)} capability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -28,7 +28,7 @@
       "Feet"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -60,7 +60,8 @@
     "name": "Jungle Boots",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -68,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -79,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 27500000,
   "_id": "MtwAJfW08AEDEy4O"
 }

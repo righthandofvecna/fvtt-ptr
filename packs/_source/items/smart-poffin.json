@@ -2,7 +2,7 @@
   "name": "Smart Poffin",
   "system": {
     "origin": "",
-    "effect": "Raises Smart Contest Stat by +1 Contest Die.  Made with Rawst, Aguav, Wepear, Watmel, and Durin Berries.",
+    "effect": "Raises Smart Contest Stat by +1 Contest Die.  Made with @UUID[Compendium.ptu.items.Item.nyubmMDwJSkeLJiM]{Rawst}, @UUID[Compendium.ptu.items.Item.XIUq1Al547PHDZXH]{Aguav}, @UUID[Compendium.ptu.items.Item.4PebEIFVWG5hNGrz]{Wepear}, @UUID[Compendium.ptu.items.Item.63QJ0JtoxTJQ5nc0]{Watmel}, and @UUID[Compendium.ptu.items.Item.Z8CeZSs15ub588jA]{Durin} Berries.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Contest"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -57,7 +59,8 @@
     "name": "Smart Poffin",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 56200000,
   "_id": "nNG1zTIolYQ5P7oY"
 }

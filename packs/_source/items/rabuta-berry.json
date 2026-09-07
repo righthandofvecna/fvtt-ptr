@@ -2,7 +2,7 @@
   "name": "Rabuta Berry",
   "system": {
     "origin": "",
-    "effect": "Cures Suppressed condition. Tier 2.",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY]{Suppressed} condition. Tier 2.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -63,7 +63,8 @@
     "container": false,
     "automation": [],
     "name": "Rabuta Berry",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/rabuta berry.webp",
@@ -88,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 36500000,
   "_id": "UX3xgG5stg8D8cy9"
 }

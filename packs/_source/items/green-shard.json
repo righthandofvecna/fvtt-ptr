@@ -2,7 +2,7 @@
   "name": "Green Shard",
   "system": {
     "origin": "",
-    "effect": "Associated with Bug, Grass, & Ground.  With Gem Lore, 4 can be combined into a Leaf Stone.",
+    "effect": "Associated with Bug, Grass, & Ground.  With @UUID[Compendium.ptu.edges.Item.KjZ1VN3rZpnoSRVk]{Gem Lore}, 4 can be combined into a @UUID[Compendium.ptu.items.Item.0mGUZY8Uj2keO5a2]{Leaf Stone}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -61,7 +61,8 @@
     "name": "Green Shard",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/green shard.webp",
@@ -69,7 +70,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -80,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 13700000,
   "_id": "ASttzswAilKpkQ2q"
 }

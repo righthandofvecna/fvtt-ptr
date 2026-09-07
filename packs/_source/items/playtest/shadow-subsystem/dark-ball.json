@@ -6,7 +6,7 @@
   "img": "systems/ptu/static/images/item_icons/dark_ball.webp",
   "system": {
     "origin": "",
-    "effect": "Effect: -20 Modifier, if the target is Shadow Type.",
+    "effect": "-20 Modifier, if the target is Shadow Type.",
     "snippet": "",
     "rules": [
       {
@@ -53,7 +53,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -71,7 +71,8 @@
     "container": false,
     "modifier": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
@@ -80,7 +81,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

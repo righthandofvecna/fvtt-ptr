@@ -58,14 +58,18 @@
     "name": "Beast Master",
     "useCount": 0,
     "contentSet": "friendship-spirit",
-    "replacesSlug": "beast-master"
+    "replacesSlug": "beast-master",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
   "effects": [],
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Intimidate"
+      "prereqBackup": "Novice Intimidate",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

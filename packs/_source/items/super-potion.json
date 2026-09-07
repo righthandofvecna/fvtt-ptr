@@ -69,7 +69,8 @@
     "container": false,
     "automation": [],
     "name": "Super Potion",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/super potion.webp",
@@ -79,7 +80,7 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -94,7 +95,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 33700000,
   "_id": "SpizuCWOBHGbyOyd"
 }

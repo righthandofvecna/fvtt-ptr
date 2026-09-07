@@ -61,7 +61,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
-    "replacesSlug": "alpha-strike"
+    "replacesSlug": "alpha-strike",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -72,7 +73,10 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Ravager Orders",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

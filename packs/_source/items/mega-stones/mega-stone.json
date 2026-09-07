@@ -2,7 +2,7 @@
   "name": "Mega Stone",
   "system": {
     "origin": "",
-    "effect": "An item that allows a Pokémon to Mega Evolve when used in conjunction with a Mega Ring. Each Mega Stone is specific to one species and Mega Evolved form.",
+    "effect": "An item that allows a Pokémon to Mega Evolve when used in conjunction with a @UUID[Compendium.ptu.items.Item.n2L3hDlHQ82zQhDu]{Mega Ring}. Each Mega Stone is specific to one species and Mega Evolved form.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -28,8 +28,8 @@
       "Mega Stone"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -41,7 +41,7 @@
     },
     "actionCost": {
       "standard": false,
-      "rapid": false,
+      "rapid": true,
       "shift": false,
       "free": false,
       "extended": false
@@ -60,7 +60,8 @@
     "name": "Mega Stone",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/mega stone.webp",
@@ -70,7 +71,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
