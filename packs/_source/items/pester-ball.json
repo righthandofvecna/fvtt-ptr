@@ -2,7 +2,7 @@
   "name": "Pester Ball",
   "system": {
     "origin": "",
-    "effect": "Pester Balls are small balls full of chemicals that come in six varieties, each of which inflicts a different Status Affliction when they hit a target. The Status Afflictions they can cause are: Rage, Confusion, Burn, Poison, Paralysis, and Sleep.\n\nAfter being hit by any Pester Ball, a target becomes immune to the effects of further Pester Balls of the same status for the rest of the Scene. Throwing and hitting with Pester Balls is the same as with Poké Balls.",
+    "effect": "Pester Balls are small balls full of chemicals that come in six varieties, each of which inflicts a different Status Affliction when they hit a target. The Status Afflictions they can cause are: @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Rage}, @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confusion}, @UUID[Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj]{Burn}, @UUID[Compendium.ptu.effects.Item.299X6pActAV8ITz7]{Poison}, @UUID[Compendium.ptu.effects.Item.bzZaLfYxVyKbJOCo]{Paralysis}, and @UUID[Compendium.ptu.effects.Item.RekZDOcIsADhrfH3]{Sleep}.\n\nAfter being hit by any Pester Ball, a target becomes immune to the effects of further Pester Balls of the same status for the rest of the Scene. Throwing and hitting with Pester Balls is the same as with Poké Balls.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -59,7 +59,8 @@
     "name": "Pester Ball",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -69,7 +70,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -82,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 3300000,
   "_id": "1e63A4th1XwoZ3Xf"
 }
