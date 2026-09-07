@@ -1,42 +1,20 @@
 {
-  "name": "Mach Speed",
+  "name": "Suction Cups",
   "type": "ability",
   "img": "/systems/ptu/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "The user gains a +5 bonus to Damage Rolls when using Flying-Type attacks. This bonus increases to +10 when the user is under 1/3rd of their Maximum Hit Points.",
+    "effect": "The user gains +5 Damage Reduction for 1 full round. The user is immune to Push effects. Defensive.",
     "snippet": "",
-    "rules": [
-      {
-        "key": "FlatModifier",
-        "predicate": [],
-        "hideIfDisabled": false,
-        "selectors": "flying-damage",
-        "value": {
-          "brackets": [
-            {
-              "start": 34,
-              "end": 100,
-              "value": 5
-            },
-            {
-              "start": -100,
-              "end": 33,
-              "value": 10
-            }
-          ],
-          "field": "actor|system.health.percent"
-        }
-      }
-    ],
+    "rules": [],
     "enabled": true,
-    "slug": "mach-speed",
+    "slug": "suction-cups-hb",
     "contentSet": "homebrew",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-07-06T12:14:57.163Z",
+        "datetime": "2026-07-06T12:14:57.148Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.361",
@@ -44,16 +22,16 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.lbx2ipzCgcXzSYGN",
     "source": {
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "static",
-      "max": null,
-      "custom": "Static",
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will - Shift Action",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -65,7 +43,7 @@
     "actionCost": {
       "standard": false,
       "rapid": false,
-      "shift": false,
+      "shift": true,
       "free": false,
       "extended": false
     },
@@ -77,13 +55,15 @@
     "tier": "",
     "automation": []
   },
-  "_id": "AOyBivJI3c0zaCo2",
+  "_id": "DQRaEk6iEol0avyL",
   "effects": [],
   "folder": null,
   "flags": {
     "ptu": {
       "abilityChosen": "basic",
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   }
 }

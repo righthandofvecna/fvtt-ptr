@@ -1,23 +1,35 @@
 {
   "name": "Tail Whip",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "img": "/systems/ptu/css/images/types2/NormalIC_Icon.png",
   "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "All legal targets have their Defense lowered by 1 Combat Stage.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.zdodc9aTUJwdQ96l",
+        "range": "",
+        "value": "",
+        "affects": "target"
+      }
+    ],
     "enabled": true,
     "slug": "tail-whip",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:23.213Z",
+        "datetime": "2026-07-06T12:14:57.145Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
@@ -60,6 +72,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Normal",
     "category": "Status",
     "damageBase": "--",
@@ -69,29 +82,13 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
-  "_id": "6lQy212f7N3GH5KS",
+  "_id": "gQkcXomS6t7sCzwu",
   "effects": [],
-  "sort": 9000000,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778200823277,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }
