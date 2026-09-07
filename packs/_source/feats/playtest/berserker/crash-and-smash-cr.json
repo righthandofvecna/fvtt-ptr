@@ -2,8 +2,8 @@
   "folder": "MSOd61MfWpXDlAfE",
   "name": "Crash and Smash",
   "type": "feat",
-  "_id": "QIFfEDsk0UQPACwj",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "_id": "bPpQMcuCdW9PchKh",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Double Edge and Thrash. You may use these moves as a Weapon Attack when wielding Melee Weapons.",
@@ -90,10 +90,6 @@
     "class": "Berserker",
     "name": "Crash and Smash [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "MSOd61MfWpXDlAfE",
-  "_id": "bPpQMcuCdW9PchKh",
   "effects": [],
   "flags": {
     "ptu": {

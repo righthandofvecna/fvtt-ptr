@@ -3,7 +3,7 @@
   "name": "Call The Current Rank 3",
   "type": "feat",
   "_id": "LTISdEkVVmM3STry",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn 3 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\nRank 1: Aqua Jet, Aqua Ring, Chilling Water, Water Pulse, Water Sport\nRank 2: Brine, Rain Dance, Scald, Waterfall, Whirlpool\nRank 3: Aqua Tail, Dive, Hydro Pump, Surf, Wave Crash",
@@ -431,9 +431,6 @@
     "class": "Maelstrom",
     "name": "Call The Current [CR]Rank 1 [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "S8f1tL26M52IDjLP",
   "effects": [],
   "flags": {
     "ptu": {

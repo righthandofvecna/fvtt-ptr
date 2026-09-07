@@ -2,8 +2,8 @@
   "folder": "S8f1tL26M52IDjLP",
   "name": "Maelstrom",
   "type": "feat",
-  "_id": "vyrDnWOlWcJUvbCq",
-  "img": "/systems/ptu/css/images/icons/class_feat_icon.png",
+  "_id": "biAe4zkqmFksWtqZ",
+  "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Gilled Capability, and a +2 bonus to your Swim speed. Whenever your Water-Type Moves miss all targets, you gain a Tick of Temporary Hit Points.",
@@ -93,10 +93,6 @@
     "class": "Maelstrom",
     "name": "Maelstrom [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
-  "type": "feat",
-  "folder": "S8f1tL26M52IDjLP",
-  "_id": "biAe4zkqmFksWtqZ",
   "effects": [],
   "flags": {
     "ptu": {

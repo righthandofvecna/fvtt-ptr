@@ -3,7 +3,7 @@
   "name": "Highlander",
   "type": "feat",
   "_id": "avcMBnpC3rK6gw8i",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
     "effect": "Target: Your Dragon-Type Pokemon\nEffect: While this Feature is Bound, the target resists Dragon-Type attacks one step further, and its attacks targeting Dragon-Type creatures are one step more effective.",
@@ -71,8 +71,6 @@
     "useCount": 0,
     "automation": []
   },
-  "type": "feat",
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "effects": [],
   "flags": {
     "ptu": {

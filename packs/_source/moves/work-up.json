@@ -20,7 +20,7 @@
     ],
     "enabled": true,
     "slug": "work-up",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -80,10 +80,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "automation": []
   },
   "_id": "cvTIVAOhbypquDrl",
   "effects": [],

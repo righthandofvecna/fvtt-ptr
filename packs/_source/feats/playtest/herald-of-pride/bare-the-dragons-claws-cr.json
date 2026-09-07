@@ -1,8 +1,8 @@
 {
-  "name": "Bare the Dragon’s Claws",
+  "name": "Bare the Dragon's Claws",
   "type": "feat",
-  "_id": "dG8TFcPBlbnEQjAO",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "_id": "iivLOBXjKE4qkJdW",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Breaking Swipe, Dragon Claw, and Dragon Tail. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
@@ -88,12 +88,8 @@
     "class": "Herald of Pride",
     "name": "Bare the Dragon’s Claws [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
   "folder": "lZqjsR5bQoFGXnFK",
-  "_id": "iivLOBXjKE4qkJdW",
   "effects": [],
-  "folder": "lZqjsR5bQoFGXnFK",
   "flags": {
     "ptu": {
       "showInTokenPanel": true

@@ -17,7 +17,7 @@
     ],
     "enabled": true,
     "slug": "energy-powder",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -70,10 +70,7 @@
     "container": false,
     "automation": [],
     "name": "Energy Powder",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "useCount": 0
   },
   "type": "item",
   "img": "systems/ptu/images/item_icons/energy powder.webp",

@@ -1,8 +1,8 @@
 {
-  "name": "Call the Dragon’s Rage",
+  "name": "Call the Dragon's Rage",
   "type": "feat",
-  "_id": "aK7vErTsHKf8SiPy",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "_id": "bDerP9Wt93D0OpaU",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Dragon Hammer, Dragon Rush, and Outrage. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
@@ -88,12 +88,8 @@
     "class": "Herald of Pride",
     "name": "Call the Dragon’s Rage [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
   "folder": "lZqjsR5bQoFGXnFK",
-  "_id": "bDerP9Wt93D0OpaU",
   "effects": [],
-  "folder": "lZqjsR5bQoFGXnFK",
   "flags": {
     "ptu": {
       "showInTokenPanel": true

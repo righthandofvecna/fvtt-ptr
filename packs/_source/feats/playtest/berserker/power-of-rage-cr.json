@@ -2,8 +2,8 @@
   "folder": "MSOd61MfWpXDlAfE",
   "name": "Power of Rage",
   "type": "feat",
-  "_id": "PJ3ViL10WplyaVU0",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "_id": "1pbzPDBAmwCESn9s",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Moves: Choose Enduring Rage, or White Flame. You gain the chosen Ability.",
@@ -103,10 +103,6 @@
     "class": "Berserker",
     "name": "Power of Rage [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "MSOd61MfWpXDlAfE",
-  "_id": "1pbzPDBAmwCESn9s",
   "effects": [],
   "flags": {
     "ptu": {

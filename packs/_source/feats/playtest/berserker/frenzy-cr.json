@@ -2,8 +2,8 @@
   "folder": "MSOd61MfWpXDlAfE",
   "name": "Frenzy",
   "type": "feat",
-  "_id": "XRofe1Fus0iGTAQN",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "_id": "cJITHOSKRHJJEnhi",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Condition: You must be Enraged to use this Feature\nEffect: You may immediately take your turn with Priority. If you do, you are instantly cured of Slowed and Stuck, and for the rest of this turn gain a +2 Bonus to Critical Hit Range, +2 Bonus to Movement Speed, and +2 Bonus to Acrobatics, Athletics, Combat, and Intimidate Checks.\nBonus: You gain the Anger Point Ability.",
@@ -83,10 +83,6 @@
     "class": "Berserker",
     "name": "Frenzy [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "MSOd61MfWpXDlAfE",
-  "_id": "cJITHOSKRHJJEnhi",
   "effects": [],
   "flags": {
     "ptu": {

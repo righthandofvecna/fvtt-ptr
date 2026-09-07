@@ -23,7 +23,11 @@
         ],
         "predicate": [
           {
-            "or":["condition:save:rage", "condition:save:infatuation", "condition:save:confused"]
+            "or": [
+              "condition:save:rage",
+              "condition:save:infatuation",
+              "condition:save:confused"
+            ]
           }
         ],
         "value": "-inf"

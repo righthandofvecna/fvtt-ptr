@@ -2,8 +2,8 @@
   "folder": "9Lj9g7fcD9O4Gws1",
   "name": "Shadow Arms",
   "type": "feat",
-  "_id": "3aeEEG95l9F2uY5N",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "_id": "lRuBU3MTL78YuveQ",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.pT1I4vwhSiqnVRkr]{Shadow Claw}, @UUID[Compendium.ptu.moves.Item.TXPzXlSA5R7gCowi]{Shadow Punch}, and @UUID[Compendium.ptu.moves.Item.ShchrVmRnyokSkTh]{Shadow Sneak}. You may use these as Weapon Attacks when wielding Melee Weapons.",
@@ -42,8 +42,8 @@
     ],
     "enabled": true,
     "slug": "shadow-arms-cr",
-    "contentSet": "homebrew",
-    "replacesSlug": "",
+    "contentSet": "class-rework",
+    "replacesSlug": "shadow-arms",
     "schema": {
       "version": 0.119,
       "lastMigration": {
@@ -96,15 +96,8 @@
     "notes": "",
     "free": false,
     "class": "Apparition",
-    "name": "Shadow Arms [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "shadow-arms",
-    "leagueLegal": false
+    "name": "Shadow Arms [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "9Lj9g7fcD9O4Gws1",
-  "_id": "lRuBU3MTL78YuveQ",
   "effects": [],
   "flags": {
     "ptu": {

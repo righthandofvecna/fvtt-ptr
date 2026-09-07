@@ -20,7 +20,7 @@
     ],
     "enabled": true,
     "slug": "leer",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -83,10 +83,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "automation": []
   },
   "_id": "NEILbzn0HJTcVVYQ",
   "effects": [],

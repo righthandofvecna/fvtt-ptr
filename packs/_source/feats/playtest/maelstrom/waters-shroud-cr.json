@@ -1,9 +1,9 @@
 {
   "folder": "S8f1tL26M52IDjLP",
-  "name": "Water’s Shroud",
+  "name": "Water's Shroud",
   "type": "feat",
-  "_id": "SptIjiEsMYtjYHph",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "_id": "6e0q3LEA1JbNMRyp",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Choose Wash Away or Storm Drain. You gain the Chosen Ability.",
@@ -103,10 +103,6 @@
     "class": "Maelstrom",
     "name": "Water’s Shroud [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "S8f1tL26M52IDjLP",
-  "_id": "6e0q3LEA1JbNMRyp",
   "effects": [],
   "flags": {
     "ptu": {

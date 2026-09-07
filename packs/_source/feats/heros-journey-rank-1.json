@@ -3,7 +3,7 @@
   "name": "Hero's Journey Rank 1",
   "type": "feat",
   "_id": "bC79izG3FE0CACvV",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
     "effect": "Each Rank, you may gain two Backpacker Talents for which you qualify.\nTalents: Call to Adventure, Hat Trick, Frisk, Handyman, Movement Mastery, Sole Power, Wayfarer, Wear It Better",
@@ -253,8 +253,6 @@
     "name": "Hero's Journey Rank 1",
     "useCount": 0
   },
-  "type": "feat",
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "effects": [],
   "flags": {
     "ptu": {

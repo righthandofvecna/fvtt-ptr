@@ -1,8 +1,8 @@
 {
   "name": "Herald of Pride",
   "type": "feat",
-  "_id": "VXAU2wpyU7AKmhxe",
-  "img": "/systems/ptu/css/images/icons/class_feat_icon.png",
+  "_id": "e4vK07oR7q91N1dC",
+  "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: When wielding Melee Weapons, you may use Command or Intimidate instead of Combat to determine the Damage Base of your Struggle Attacks, to resist Disarm Maneuvers, and to qualify for a Weapon’s Moves. Your Weapon Attacks ignore Damage Reduction up to your Command or Intimidate Rank.",
@@ -78,12 +78,8 @@
     "class": "Herald of Pride [CR]",
     "name": "Herald of Pride [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
-  "type": "feat",
   "folder": "lZqjsR5bQoFGXnFK",
-  "_id": "e4vK07oR7q91N1dC",
   "effects": [],
-  "folder": "lZqjsR5bQoFGXnFK",
   "flags": {
     "ptu": {
       "showInTokenPanel": true,

@@ -1,8 +1,8 @@
 {
   "name": "Sovereignty",
   "type": "feat",
-  "_id": "9snTorsGCWJI5eGG",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "_id": "dSqTlA2kFKylnuUS",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: While this Feature is bound, you gain a +3 Bonus to Save Checks against Volatile Status Afflictions, and a +3 Bonus to Opposed Checks when defending against being Disarmed, Grappled, Pushed, or Tripped.",
@@ -76,12 +76,8 @@
     "class": "Herald of Pride",
     "name": "Sovereignty [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
   "folder": "lZqjsR5bQoFGXnFK",
-  "_id": "dSqTlA2kFKylnuUS",
   "effects": [],
-  "folder": "lZqjsR5bQoFGXnFK",
   "flags": {
     "ptu": {
       "showInTokenPanel": true,

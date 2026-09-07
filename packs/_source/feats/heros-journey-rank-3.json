@@ -3,7 +3,7 @@
   "name": "Hero's Journey Rank 3",
   "type": "feat",
   "_id": "AdgRVvSeu7J1TzLC",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
     "effect": "Each Rank, you may gain two Backpacker Talents for which you qualify.",
@@ -254,8 +254,6 @@
     "name": "Hero's Journey Rank 3",
     "useCount": 0
   },
-  "type": "feat",
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "effects": [],
   "flags": {
     "ptu": {

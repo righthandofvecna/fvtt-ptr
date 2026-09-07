@@ -2,8 +2,8 @@
   "folder": "ragCbmOsDCUz60wA",
   "name": "Man of Steel",
   "type": "feat",
-  "_id": "hLTo1VZqyJx5fRM5",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "_id": "PNcX6tScydRWiDRK",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves King’s Shield, Metal Burst, and Meteor Mash. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
@@ -96,10 +96,6 @@
     "class": "Steelheart",
     "name": "Man of Steel [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "ragCbmOsDCUz60wA",
-  "_id": "PNcX6tScydRWiDRK",
   "effects": [],
   "flags": {
     "ptu": {

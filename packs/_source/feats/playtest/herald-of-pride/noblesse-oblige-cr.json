@@ -1,8 +1,8 @@
 {
   "name": "Noblesse Oblige",
   "type": "feat",
-  "_id": "6gYyjpDBbCcnV3FS",
-  "img": "/systems/ptu/css/images/icons/feat_icon.png",
+  "_id": "YUivmoYcJBMTVejf",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Regal Challenge Ability.",
@@ -74,12 +74,8 @@
     "class": "Herald of Pride",
     "name": "Noblesse Oblige [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
   "folder": "lZqjsR5bQoFGXnFK",
-  "_id": "YUivmoYcJBMTVejf",
   "effects": [],
-  "folder": "lZqjsR5bQoFGXnFK",
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
