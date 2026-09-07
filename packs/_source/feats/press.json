@@ -2,7 +2,7 @@
   "name": "Press",
   "system": {
     "origin": "",
-    "effect": "Target: Your own Pokémon.\nEffect: You hit your Pokémon, and they lose 1/6th of their Max Hit Points and are cured of Sleep. Raise any two of their Stats by +1 CS each, and you may add half of your Intimidate Rank to any Skill Checks made this round to make this Pokémon obey orders. Using Press on a Pokémon may make them dislike you.",
+    "effect": "Target: Your own Pokémon.\nEffect: You hit your Pokémon, and they lose 1/6th of their Max Hit Points and are cured of @UUID[Compendium.ptu.effects.Item.RekZDOcIsADhrfH3]{Sleep}. Raise any two of their Stats by +1 CS each, and you may add half of your Intimidate Rank to any Skill Checks made this round to make this Pokémon obey orders. Using Press on a Pokémon may make them dislike you.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -57,7 +57,8 @@
     "automation": [],
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +68,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Intimidate"
+      "prereqBackup": "Adept Intimidate",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -80,7 +84,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 33000000,
   "_id": "UF07jMVuiSeRawZR"
 }

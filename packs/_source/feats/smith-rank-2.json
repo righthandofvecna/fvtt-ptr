@@ -2,14 +2,17 @@
   "name": "Smith Rank 2",
   "system": {
     "origin": "",
-    "effect": "You may create Fine Weapons for $2,000, Helmets for $1,125, Heavy Shields for $2,250 and Heavy Armor for $5,000.",
+    "effect": "You may create @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.p4sqLE6UObkpyYdA]{Fine Weapons} for @Poke[2000], @UUID[Compendium.ptu.items.Item.QBt2nQ5PdgpSPciX]{Helmets} for @Poke[1125], and @UUID[Compendium.ptu.items.Item.G13kdog7n4ELzWNo]{Heavy Armor} for @Poke[5000].",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.atk.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -68,7 +71,8 @@
     "name": "Smith Rank 2",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -78,7 +82,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Focus, Adept Athletics"
+      "prereqBackup": "Adept Focus, Adept Athletics",
+      "automationStatus": "no-automation-needed",
+      "devNote": "Removed Heavy Shield since they no longer exist",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -91,7 +98,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 23200000,
   "_id": "Lqv6TvOjd5Wt2UIl"
 }

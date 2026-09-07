@@ -12,28 +12,28 @@
         "prompt": "Choose which stat to increase.",
         "choices": [
           {
-            "label": "HP",
-            "value": "system.modifiers.baseStats.hp.mod"
+            "value": "system.modifiers.baseStats.hp.mod",
+            "label": "HP"
           },
           {
-            "label": "ATK",
-            "value": "system.modifiers.baseStats.atk.mod"
+            "value": "system.modifiers.baseStats.atk.mod",
+            "label": "ATK"
           },
           {
-            "label": "DEF",
-            "value": "system.modifiers.baseStats.def.mod"
+            "value": "system.modifiers.baseStats.def.mod",
+            "label": "DEF"
           },
           {
-            "label": "SPATK",
-            "value": "system.modifiers.baseStats.spatk.mod"
+            "value": "system.modifiers.baseStats.spatk.mod",
+            "label": "SPATK"
           },
           {
-            "label": "SPDEF",
-            "value": "system.modifiers.baseStats.spdef.mod"
+            "value": "system.modifiers.baseStats.spdef.mod",
+            "label": "SPDEF"
           },
           {
-            "label": "SPD",
-            "value": "system.modifiers.baseStats.spd.mod"
+            "value": "system.modifiers.baseStats.spd.mod",
+            "label": "SPD"
           }
         ]
       },
@@ -41,7 +41,10 @@
         "key": "ActiveEffectLike",
         "path": "{item|flags.ptu.rulesSelections.fightersVersatility}",
         "mode": "add",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -98,7 +101,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -108,7 +112,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Learned two Scene or Daily Moves"
+      "prereqBackup": "Learned two Scene or Daily Moves",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -121,7 +129,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 54400000,
   "_id": "lsyn69Zu42KmdTta"
 }
