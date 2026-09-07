@@ -261,6 +261,8 @@
     "name": "Capture Specialist",
     "useCount": 0
   },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "effects": [],
   "flags": {
     "ptu": {

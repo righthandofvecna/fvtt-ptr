@@ -2,6 +2,7 @@
   "name": "Spirit Lance",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "Spirit Lance deals +3 damage to all targets for each target beyond the first that it successfully hits.",

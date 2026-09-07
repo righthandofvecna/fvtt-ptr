@@ -74,6 +74,10 @@
     "class": "Herald of Pride",
     "name": "Noblesse Oblige [CR]"
   },
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "type": "feat",
+  "folder": "lZqjsR5bQoFGXnFK",
+  "_id": "YUivmoYcJBMTVejf",
   "effects": [],
   "folder": "lZqjsR5bQoFGXnFK",
   "flags": {

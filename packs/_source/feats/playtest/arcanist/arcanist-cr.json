@@ -98,6 +98,10 @@
     "class": "Arcanist",
     "name": "Arcanist [CR]"
   },
+  "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
+  "type": "feat",
+  "folder": "ArQ1VkEqvLAXjU2D",
+  "_id": "VMwd7JnYdcSyyQF0",
   "effects": [],
   "flags": {
     "ptu": {

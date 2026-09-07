@@ -98,6 +98,10 @@
     "class": "Berserker",
     "name": "Lessons In Rage & Pain [CR]"
   },
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "type": "feat",
+  "folder": "MSOd61MfWpXDlAfE",
+  "_id": "mQq0ZI8ce6gaahWV",
   "effects": [],
   "flags": {
     "ptu": {

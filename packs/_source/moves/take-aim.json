@@ -2,6 +2,7 @@
   "name": "Take Aim",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "Raise the user's Accuracy by 1. If the user performs an Weapon Move on their next turn that deals damage, add its Damage Dice Roll an extra time to the damage.",

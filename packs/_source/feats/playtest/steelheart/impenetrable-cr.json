@@ -83,6 +83,10 @@
     "class": "Steelheart",
     "name": "Impenetrable [CR]"
   },
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "type": "feat",
+  "folder": "ragCbmOsDCUz60wA",
+  "_id": "E7YL0ctFnpnhR2j3",
   "effects": [],
   "flags": {
     "ptu": {

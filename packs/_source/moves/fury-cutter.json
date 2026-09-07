@@ -2,8 +2,8 @@
   "folder": "lWQOqDm2AOGwGM16",
   "name": "Fury Cutter",
   "type": "move",
-  "_id": "vl0akuzy1EEKwAgc",
-  "img": "/systems/ptu/css/images/types2/BugIC_Icon.png",
+  "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
+  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "If Fury Cutter is used successfully and consecutively on the same target, the Damage Base is increased by +4; the first hit has a Damage Base of 4; the second hit a Damage Base of 8, the third hit a Damage Base of 12, and the fourth and all further hits have a Damage Base of 16. If Fury Cutter misses or fails to damage its target, its Damage Base resets.",

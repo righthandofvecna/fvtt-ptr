@@ -71,6 +71,8 @@
     "useCount": 0,
     "automation": []
   },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "effects": [],
   "flags": {
     "ptu": {

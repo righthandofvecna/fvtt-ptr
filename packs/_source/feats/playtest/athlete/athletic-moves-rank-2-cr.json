@@ -262,6 +262,9 @@
     "class": "Athlete",
     "name": "Athletic Moves [CR]Rank 1 [CR]"
   },
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "type": "feat",
+  "folder": "VZSMHMJcCWCVyQIC",
   "effects": [],
   "flags": {
     "ptu": {

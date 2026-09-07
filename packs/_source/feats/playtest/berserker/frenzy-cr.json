@@ -83,6 +83,10 @@
     "class": "Berserker",
     "name": "Frenzy [CR]"
   },
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "type": "feat",
+  "folder": "MSOd61MfWpXDlAfE",
+  "_id": "cJITHOSKRHJJEnhi",
   "effects": [],
   "flags": {
     "ptu": {

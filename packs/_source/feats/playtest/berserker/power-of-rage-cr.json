@@ -103,6 +103,10 @@
     "class": "Berserker",
     "name": "Power of Rage [CR]"
   },
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "type": "feat",
+  "folder": "MSOd61MfWpXDlAfE",
+  "_id": "1pbzPDBAmwCESn9s",
   "effects": [],
   "flags": {
     "ptu": {

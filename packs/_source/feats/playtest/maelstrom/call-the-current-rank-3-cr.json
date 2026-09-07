@@ -431,6 +431,9 @@
     "class": "Maelstrom",
     "name": "Call The Current [CR]Rank 1 [CR]"
   },
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "type": "feat",
+  "folder": "S8f1tL26M52IDjLP",
   "effects": [],
   "flags": {
     "ptu": {

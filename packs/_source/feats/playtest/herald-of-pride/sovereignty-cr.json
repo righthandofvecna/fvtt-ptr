@@ -76,6 +76,10 @@
     "class": "Herald of Pride",
     "name": "Sovereignty [CR]"
   },
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "type": "feat",
+  "folder": "lZqjsR5bQoFGXnFK",
+  "_id": "dSqTlA2kFKylnuUS",
   "effects": [],
   "folder": "lZqjsR5bQoFGXnFK",
   "flags": {

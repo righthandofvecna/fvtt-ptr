@@ -2,6 +2,7 @@
   "name": "Riposte",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "folder": "lWQOqDm2AOGwGM16",
   "system": {
     "origin": "",
     "effect": "Trigger - Your Target misses you with a melee Attack.\nLimitations: Melee or Short-Ranged Weapons Only",
