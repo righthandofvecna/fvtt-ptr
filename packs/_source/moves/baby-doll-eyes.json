@@ -84,7 +84,10 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "Ik2IUoPZB767TSal",
   "effects": [],

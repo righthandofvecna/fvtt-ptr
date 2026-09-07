@@ -83,17 +83,27 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "grantedBy": {
-        "id": "YsaKaSZwOSUQFd9U",
-        "onDelete": "cascade"
-      }
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
-  "_id": "Mk3Uj5Wk1phdUy3f"
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1692963260348,
+    "modifiedTime": 1778200823126,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
 }

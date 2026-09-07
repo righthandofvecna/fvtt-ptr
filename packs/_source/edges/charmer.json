@@ -2,7 +2,7 @@
   "name": "Charmer",
   "system": {
     "origin": "",
-    "effect": "You learn the Move Baby-Doll Eyes.",
+    "effect": "You learn the Move @UUID[Compendium.ptu.moves.Item.dIkyKSyZGctjHX9O]{Baby-Doll Eyes}.",
     "snippet": "",
     "rules": [
       {
