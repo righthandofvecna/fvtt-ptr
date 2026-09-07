@@ -2,7 +2,7 @@
   "folder": "lpdptis936rBZFDU",
   "name": "Snag Machine",
   "type": "item",
-  "_id": "7BXZMJOuJfLRxJkb",
+  "_id": "CCeFV1vugoyDAu3c",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "",
@@ -66,8 +66,6 @@
     "contentSet": "",
     "replacesSlug": ""
   },
-  "type": "item",
-  "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "effects": [],
   "ownership": {
     "default": 0
@@ -83,6 +81,5 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "sort": 15500000,
-  "_id": "CCeFV1vugoyDAu3c"
+  "sort": 15500000
 }

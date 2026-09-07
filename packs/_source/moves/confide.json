@@ -1,4 +1,5 @@
 {
+  "_id": "Mk3Uj5Wk1phdUy3f",
   "name": "Confide",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
@@ -83,10 +84,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "automation": []
   },
   "effects": [],
   "flags": {

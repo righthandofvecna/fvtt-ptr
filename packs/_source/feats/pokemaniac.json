@@ -1,15 +1,22 @@
 {
-  "name": "PokeManiac",
+  "name": "PokéManiac",
   "system": {
     "origin": "",
     "effect": "Target: A Pokémon\nEffect: Make a Pokemon Education Check with a DC of 10. If you succeed, you determine the target’s Level, Types, Nature, and Abilities.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "",
+    "slug": "pokemaniac",
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.422Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
     },
     "referenceEffect": "",
     "source": {
@@ -17,16 +24,41 @@
     },
     "stackSlugs": false,
     "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will - Standard Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
     "prerequisites": [
       "Adept Pokémon Education"
     ],
-    "frequency": "At-Will - Standard Action",
     "notes": "",
     "free": false,
     "class": "",
-    "name": "PokeManiac",
+    "name": "PokéManiac",
+    "useCount": 0,
     "automation": [],
-    "useCount": 0
+    "contentSet": "",
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -36,20 +68,22 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Adept Pokémon Education"
+      "prereqBackup": "Adept Pokémon Education",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
-    "createdTime": 1683368081691,
-    "modifiedTime": 1707818613949,
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368084455,
+    "modifiedTime": 1778200829484,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
-  "sort": 1700000,
-  "_id": "1DFCJm5rhnTh8pJz"
+  "sort": 18600000,
+  "_id": "HrcEC7rRfqY9LMwD"
 }
