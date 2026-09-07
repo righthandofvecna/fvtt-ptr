@@ -2,7 +2,7 @@
   "name": "Basic Balls",
   "system": {
     "origin": "",
-    "effect": "You may craft @UUID[Compendium.ptu.items.Item.slWfCt4O8yD0cXuC]{Basic Balls} for @Poke[100] and @UUID[Compendium.ptu.items.Item.dQLYYQDlmCbgFHz6]{Great Balls} for @Poke[175]. Requires access to a Poké Ball Tool Box.",
+    "effect": "You may craft @UUID[Compendium.ptu.items.Item.slWfCt4O8yD0cXuC]{Basic Balls} for @Poke[100] and @UUID[Compendium.ptu.items.Item.dQLYYQDlmCbgFHz6]{Great Balls} for @Poke[175]. Requires access to a @UUID[Compendium.ptu.items.Item.pDHEUiwQcKCdHJAI]{Poké Ball Tool Box}.",
     "snippet": "",
     "rules": [],
     "enabled": true,

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
   "system": {
     "origin": "",
-    "effect": "Allows you to craft @UUID[Compendium.ptu.items.Item.yJco0xyHka0Bfk0C]{Ultra Balls} or Specialty Balls for @Poke[375].",
+    "effect": "Allows you to craft @UUID[Compendium.ptu.items.Item.yJco0xyHka0Bfk0C]{Ultra Balls} or Specialty Balls for @Poke[375]. Requires access to a @UUID[Compendium.ptu.items.Item.pDHEUiwQcKCdHJAI]{Poké Ball Tool Box}.",
     "snippet": "",
     "rules": [],
     "enabled": true,

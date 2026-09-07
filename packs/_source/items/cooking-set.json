@@ -2,7 +2,7 @@
   "name": "Cooking Set",
   "system": {
     "origin": "",
-    "effect": "Used by Chefs to create Snacks and Refreshments.",
+    "effect": "Used by @UUID[Compendium.ptu.feats.Item.YhVGlEUkq6BLORNM]{Chefs} to create @CompSearch[Items keywords=Snack]{Snacks} and @CompSearch[Items keywords=Refreshment]{Refreshments}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -43,7 +43,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -59,7 +59,8 @@
     "name": "Cooking Set",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 20400000,
   "_id": "Ge4pxy8WA0wraphQ"
 }
