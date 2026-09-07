@@ -6,7 +6,7 @@
   "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Shadow Claw, Shadow Punch, and Shadow Sneak. You may use these as Weapon Attacks when wielding Melee Weapons.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.pT1I4vwhSiqnVRkr]{Shadow Claw}, @UUID[Compendium.ptu.moves.Item.TXPzXlSA5R7gCowi]{Shadow Punch}, and @UUID[Compendium.ptu.moves.Item.ShchrVmRnyokSkTh]{Shadow Sneak}. You may use these as Weapon Attacks when wielding Melee Weapons.",
     "snippet": "",
     "rules": [
       {
@@ -96,7 +96,10 @@
     "notes": "",
     "free": false,
     "class": "Apparition",
-    "name": "Shadow Arms [CR]"
+    "name": "Shadow Arms [CR]",
+    "contentSet": "class-rework",
+    "replacesSlug": "shadow-arms",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
