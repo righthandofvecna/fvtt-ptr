@@ -1,0 +1,61 @@
+{
+  "name": "False Strike",
+  "type": "capability",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisites: 3 of Acrobatics, Athletics, Stealth, Survival, Guile, or Perception at Expert Rank\nScene x2 – Free Action\nTrigger: You or your Pokémon’s attack faints a Wild Pokémon.\nEffect: The Wild Pokémon is instead lowered to 1 Hit Point.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "false-strike",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:41:18.609Z",
+        "version": {
+          "schema": null,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Capture Technique"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": "jpLcXij2i9NorfO0",
+  "_id": "dQ3pQXZtBVg9vEwd"
+}

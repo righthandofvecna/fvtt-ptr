@@ -1,21 +1,22 @@
 {
-  "name": "Dragon Hammer",
+  "name": "Curve Ball",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "img": "/systems/ptu/static/images/item_icons/basic%20ball.webp",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "Whenever you hit a target with a Poké Ball, you may deal damage as if you had hit them with a Struggle Attack. This damage triggers before any of the Poké Ball’s functions (such as making a Capture Check, releasing a Pokémon, etc.).",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "dragon-hammer",
+    "slug": "curve-ball",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:25.060Z",
+        "datetime": "2026-05-08T00:41:18.675Z",
         "version": {
-          "schema": 0.11,
+          "schema": null,
           "foundry": "13.351",
           "system": "4.4.3.16"
         }
@@ -23,11 +24,11 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "PTR Compendiums"
+      "value": "Homebrew"
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1 or Line 3"
+      "Capture Technique"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -38,9 +39,9 @@
     "punkRock": false,
     "strongJaw": false,
     "frequency": {
-      "type": "eot",
-      "max": null,
-      "custom": "EOT",
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -60,41 +61,23 @@
       "cost": 0,
       "bind": false
     },
-    "type": "Dragon",
+    "leagueLegal": false,
+    "type": "Untyped",
     "category": "Physical",
-    "damageBase": "9",
-    "ac": "2",
-    "range": "Melee",
-    "contestType": "Cool - Big Show",
+    "damageBase": "4",
+    "ac": "4",
+    "range": "Throwing Range",
+    "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "isStruggle": false
   },
-  "_id": "fyPQ73PudZoy588D",
   "effects": [],
-  "sort": 61200000,
-  "ownership": {
-    "default": 0
-  },
+  "folder": "jpLcXij2i9NorfO0",
   "flags": {
     "ptu": {
-      "automationStatus": "no-automation-needed",
-      "devNote": "",
-      "showInTokenPanel": false
+      "showInTokenPanel": true
     }
   },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.21",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778567948806,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  }
+  "_id": "oCbNYdXL9EM5YyXo"
 }

@@ -1,5 +1,8 @@
 {
-  "name": "Call the Dragon's Rage",
+  "name": "Call the Dragon’s Rage",
+  "type": "feat",
+  "_id": "aK7vErTsHKf8SiPy",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Dragon Hammer, Dragon Rush, and Outrage. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
@@ -13,20 +16,33 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.Pc0fIapOkBRR4J8L"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.jvtENU2Q9nhemWwU"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.fyPQ73PudZoy588D"
       }
     ],
     "enabled": true,
     "slug": "call-the-dragons-rage-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
-      "lastMigration": {
-        "datetime": "2026-05-08T00:40:30.599Z",
-        "version": {
-          "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
-        }
-      }
+      "version": null,
+      "lastMigration": null
     },
     "referenceEffect": "",
     "source": {
@@ -41,8 +57,8 @@
     ],
     "frequency": {
       "type": "static",
-      "max": null,
-      "custom": "Static",
+      "max": 0,
+      "custom": "",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -62,6 +78,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Bare the Dragon’s Claws",
       "Master Command or Intimidate"
@@ -69,28 +86,13 @@
     "notes": "",
     "free": false,
     "class": "Herald of Pride",
-    "name": "Call the Dragon’s Rage [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "call-the-dragons-rage"
+    "name": "Call the Dragon’s Rage [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "lZqjsR5bQoFGXnFK",
-  "_id": "bDerP9Wt93D0OpaU",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200830629,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "folder": "lZqjsR5bQoFGXnFK",
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true
+    }
   }
 }

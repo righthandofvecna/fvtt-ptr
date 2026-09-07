@@ -275,7 +275,8 @@
     "name": "Basic Skills",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -298,7 +299,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "_id": "HSJnMW0wcFNtbhp7",
   "sort": 0
 }

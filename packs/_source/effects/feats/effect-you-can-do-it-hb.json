@@ -1,0 +1,81 @@
+{
+  "folder": "Uv4mgOt4xtb28hzB",
+  "name": "Effect: You Can Do It!",
+  "type": "effect",
+  "_id": "d3TZl3w59v3WY9Ce",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Choose Atk, Sp.Atk, or Spd, all allies on the Field gain +1 CS in the chosen Stat and become Encouraged. @UUID[Compendium.ptu.effects.Item.qRDaSypajeZhawMD]",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "doit",
+        "choices": [
+          {
+            "value": "atk",
+            "label": "Attack"
+          },
+          {
+            "value": "spatk",
+            "label": "Special Attack"
+          },
+          {
+            "value": "spd",
+            "label": "Speed"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.{item|flags.ptu.rulesSelections.doit}.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-you-can-do-it-hb",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "encounter",
+      "expiry": "turn-end"
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}

@@ -52,16 +52,15 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "Fp7nWb0csK9MHRsZ",
   "effects": [],
-  "folder": null,
   "sort": 14900000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
