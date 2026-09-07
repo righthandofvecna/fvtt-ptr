@@ -2,7 +2,7 @@
   "name": "Mind Aegis",
   "system": {
     "origin": "",
-    "effect": "Grants a +6 bonus to Focus checks to resist Telepathy. If the wearer has the Iron Mind Edge, Mind Aegis grants the Mindlock capability instead.",
+    "effect": "Grants a +6 bonus to Focus checks to resist Telepathy. If the wearer has the @UUID[Compendium.ptu.edges.Item.80LqzME9iDpVQWko]{Iron Mind} Edge, Mind Aegis grants the @UUID[Compendium.ptu.capabilities.Item.nWv1YhLcYfwOtDCF]{Mindlock} Capability instead.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,10 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Equipment",
+      "Head"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -57,7 +60,8 @@
     "name": "Mind Aegis",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +69,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 56900000,
   "_id": "o43uhs0av4nuq3WA"
 }
