@@ -2,7 +2,7 @@
   "name": "Work Up",
   "system": {
     "origin": "",
-    "effect": "You learn the Move Work Up.",
+    "effect": "You learn the Move @UUID[Compendium.ptu.moves.Item.gCofXErMduyn6zwf]{Work Up}.",
     "snippet": "",
     "rules": [
       {

@@ -9,7 +9,10 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "value": 2,
-        "path": "system.modifiers.capabilities.swim"
+        "path": "system.modifiers.capabilities.swim",
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -73,7 +76,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Athletics or Survival"
+      "prereqBackup": "Novice Athletics or Survival",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

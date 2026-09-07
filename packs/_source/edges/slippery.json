@@ -2,7 +2,7 @@
   "name": "Slippery",
   "system": {
     "origin": "",
-    "effect": "You may use your Stealth Skill when defending in Opposed Grapple, Push, or Trip checks. When Grappling, if you win an Opposed Check when using Stealth, you must choose to end the Grapple (you cannot choose to gain Dominance).",
+    "effect": "You may use your Stealth Skill when defending in Opposed @UUID[Compendium.ptu.moves.Item.gBjnwPNmaFiIeqIs]{Grapple}, @UUID[Compendium.ptu.moves.Item.79nCOdXheYY2AXTB]{Push}, or @UUID[Compendium.ptu.moves.Item.wF3ORK20xylO1ZGs]{Trip} checks. When Grappling, if you win an Opposed Check when using Stealth, you must choose to end the Grapple (you cannot choose to gain Dominance).",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -66,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Stealth"
+      "prereqBackup": "Novice Stealth",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

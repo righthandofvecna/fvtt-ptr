@@ -68,7 +68,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "A Skill at Novice Rank or higher"
+      "prereqBackup": "A Skill at Novice Rank or higher",
+      "showInTokenPanel": false,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {
