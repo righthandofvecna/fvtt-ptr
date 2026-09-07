@@ -1,16 +1,18 @@
 {
-  "name": "Victreebelite",
+  "name": "Scolipite",
   "system": {
     "origin": "",
-    "effect": "Mega Evolves Victreebel when used in conjunction with a Mega Ring.",
+    "effect": "Mega Evolves Scolipede when used in conjunction with a Mega Ring.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "victreebelite",
+    "slug": "scolipite",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:41.439Z",
+        "datetime": "2026-05-08T00:40:41.230Z",
         "version": {
           "schema": 0.11,
           "foundry": "13.351",
@@ -18,7 +20,7 @@
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.aGw6HytOvK0vkQxA",
+    "referenceEffect": "Compendium.ptu.effects.Item.uZpgk24lzCIOU9oa",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -56,37 +58,21 @@
     "subtype": "",
     "container": false,
     "automation": [],
-    "name": "Victreebelite",
+    "name": "Steelixite",
     "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": "",
     "leagueLegal": false
   },
   "type": "item",
-  "img": "/systems/ptu/static/images/item_icons/victreebelite.webp",
+  "img": "/systems/ptu/static/images/item_icons/scolipite.webp",
   "effects": [],
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false,
       "automationStatus": "completed",
       "devNote": "",
+      "showInTokenPanel": false,
       "used": null
     }
   },
-  "_stats": {
-    "duplicateSource": null,
-    "exportSource": null,
-    "coreVersion": "13.351",
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "createdTime": 1776463326139,
-    "modifiedTime": 1778200841475,
-    "lastModifiedBy": "ptubuilder000000"
-  },
   "folder": "3aYHO5npuCcYqxoX",
-  "_id": "IDzBnVNRcuCo7bQl",
-  "sort": 102363
+  "_id": "ZMEc1HNAzIp7JdbF"
 }
