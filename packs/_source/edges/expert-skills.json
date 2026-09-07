@@ -247,7 +247,7 @@
       "Skill"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -270,9 +270,11 @@
       "bind": false
     },
     "prerequisites": [
-      "Level 6"
+      "Level 8 (Standard)",
+      "Level 6 (Condensed)",
+      "Level 10 (Extended)"
     ],
-    "notes": "",
+    "notes": "Progression Track may affect the level prerequisite",
     "free": false,
     "name": "Expert Skills",
     "useCount": 0,

@@ -247,7 +247,7 @@
       "Skill"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -271,9 +271,11 @@
     },
     "prerequisites": [
       "A Skill at Master Rank",
-      "Level 20"
+      "Level 20 (Standard)",
+      "Level 20 (Condensed)",
+      "Level 30 (Extended)"
     ],
-    "notes": "",
+    "notes": "Progression Track may affect the level prerequisite",
     "free": false,
     "name": "Virtuoso",
     "useCount": 0,

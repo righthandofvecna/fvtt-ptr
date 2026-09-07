@@ -247,7 +247,7 @@
       "Skill"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -270,9 +270,11 @@
       "bind": false
     },
     "prerequisites": [
-      "Level 2"
+      "Level 2 (Standard)",
+      "Level 2 (Condensed)",
+      "Level 1 (Extended)"
     ],
-    "notes": "",
+    "notes": "Progression Track may affect the level prerequisite",
     "free": false,
     "name": "Adept Skills",
     "useCount": 0,

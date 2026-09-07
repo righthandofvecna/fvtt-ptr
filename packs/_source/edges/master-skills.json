@@ -247,7 +247,7 @@
       "Skill"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -270,9 +270,11 @@
       "bind": false
     },
     "prerequisites": [
-      "Level 12"
+      "Level 16 (Standard)",
+      "Level 12 (Condensed)",
+      "Level 20 (Extended)"
     ],
-    "notes": "",
+    "notes": "Progression Track may affect the level prerequisite",
     "free": false,
     "name": "Master Skills",
     "useCount": 0,
