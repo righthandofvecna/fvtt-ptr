@@ -12,7 +12,7 @@
         }
       }
     },
-    "dexentry": "",
+    "dexentry": "Rotom are mischievous Pokémon that enjoy playing pranks on others. They have the unique ability to possess electronic devices and use them as they please; oftentimes, this means causing them to malfunction or act unexpectedly to bewilder users. Their bodies are composed almost entirely of plasma, giving them their electrical abilities. Recent research has led to a promising discovery; their ability to possess electrical appliances could possibly help power a unique motor that would work far more efficiently than any design that currently exists. Indeed, there has been much progress in the development of new and improved Rotom-efficient appliances. In battle, while their Electric-typings remain constant throughout all of their forms, their other type can be influenced by the machine they are possessing. While trained Rotom can possess electronics and leave them entirely unharmed, wild ones tend to short out the circuits of devices they enter. They appear to have affinities for old televisions; they will briefly flash their maniacally grinning faces for just a split second before returning to standard programming to frighten watchers. ",
     "number": 479,
     "form": "",
     "stats": {
@@ -493,7 +493,7 @@
       "2": ""
     },
     "source": {
-      "value": ""
+      "value": "PTR Core Dex"
     },
     "stackSlugs": false,
     "enabled": false,
@@ -509,7 +509,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.2.5",
