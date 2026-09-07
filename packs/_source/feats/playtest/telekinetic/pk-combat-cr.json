@@ -13,6 +13,16 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "move:range:wr"
+        ],
+        "label": "PK Combat - Use SpAtk?",
+        "hideIfDisabled": false,
+        "selectors": "damage-roll",
+        "value": "@actor.system.stats.spatk.total - @actor.system.stats.atk.total"
       }
     ],
     "enabled": true,
@@ -71,7 +81,8 @@
     "class": "Telekinetic",
     "name": "PK Combat [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "pk-combat"
+    "replacesSlug": "pk-combat",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -84,7 +95,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "Flat Modifier to use SpAtk instead of Atk on moves with range of \"WR\" included"
     }
   },
   "_stats": {
