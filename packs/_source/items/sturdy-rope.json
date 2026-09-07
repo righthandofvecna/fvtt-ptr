@@ -2,7 +2,7 @@
   "name": "Sturdy Rope",
   "system": {
     "origin": "",
-    "effect": "Sturdy Rope with a tensile strength of 225 kg or roughly 500lbs. 30 Hit Points and 20 Damage Reduction.\n\nRope can only be damaged by Fire-Type attacks, attacks made with sharp objects(knives, swords, sharp teeth), and moves like Scratch, Slash, Leaf Blade, Razor Leaf, etc. The Move Cut ignores all Damage Reduction against Rope. Rope can be bought in any length of 25 ft up to 300.",
+    "effect": "Sturdy Rope with a tensile strength of 225kg or roughly 500lbs. 30 Hit Points and 20 Damage Reduction.\n\nRope can only be damaged by Fire-Type attacks, attacks made with sharp objects (knives, swords, sharp teeth), and moves like @UUID[Compendium.ptu.moves.Item.1Sk8xyD2S2J6qU1K]{Scratch}, @UUID[Compendium.ptu.moves.Item.sm3q5D8SkQcEmiGB]{Slash}, @UUID[Compendium.ptu.moves.Item.0wyKb3JsjxCnVsr6]{Leaf Blade}, @UUID[Compendium.ptu.moves.Item.wYz4RubDs84tDVul]{Razor Leaf}, etc. The Move @UUID[Compendium.ptu.moves.Item.UkCThqEzC82ABM7h]{Cut} ignores all Damage Reduction against Rope. Rope can be bought in any length from 25ft. up to 300ft.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "name": "Sturdy Rope",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -67,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -78,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 8000000,
   "_id": "5Vtb9zCSzplQZrLi"
 }
