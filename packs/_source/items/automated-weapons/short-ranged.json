@@ -26,7 +26,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Weapon"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -64,7 +66,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   },
