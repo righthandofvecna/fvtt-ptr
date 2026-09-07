@@ -1,20 +1,149 @@
 {
+  "folder": "VZSMHMJcCWCVyQIC",
   "name": "Athletic Moves Rank 1",
+  "type": "feat",
+  "_id": "pZCQ7f3lbqiiwSOM",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower.\nRank 1: Blind, Block, Slam, Strenght\nRank 2: Body Slam, Take Down, Extreme Speed\nRank 3: Mega Kick, Facade, Retaliate",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "athleticMovesRank1Feat1",
+        "adjustName": false,
+        "choices": [
+          {
+            "label": "Bind",
+            "value": "Compendium.ptu.moves.Item.nzd3auiq1JwJFmCb",
+            "predicate": {
+              "not": "move:bind"
+            }
+          },
+          {
+            "label": "Block",
+            "value": "Compendium.ptu.moves.Item.PvmLk3AU04nOjH4x",
+            "predicate": {
+              "not": "move:block"
+            }
+          },
+          {
+            "label": "Slam",
+            "value": "Compendium.ptu.moves.Item.B6mHk3zIO3QaXnIQ",
+            "predicate": {
+              "not": "move:slam"
+            }
+          },
+          {
+            "label": "Strength",
+            "value": "Compendium.ptu.moves.Item.v7BArKd17sdkD59s",
+            "predicate": {
+              "not": "move:strength"
+            }
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.athleticMovesRank1Feat1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "athleticMovesRank1Feat2",
+        "adjustName": false,
+        "choices": [
+          {
+            "label": "Bind",
+            "value": "Compendium.ptu.moves.Item.nzd3auiq1JwJFmCb",
+            "predicate": [
+              {
+                "not": {
+                  "eq": [
+                    "{item|flags.ptu.rulesSelections.athleticMovesRank1Feat1}",
+                    "Compendium.ptu.moves.Item.nzd3auiq1JwJFmCb"
+                  ]
+                }
+              },
+              {
+                "not": "move:bind"
+              }
+            ]
+          },
+          {
+            "label": "Block",
+            "value": "Compendium.ptu.moves.Item.PvmLk3AU04nOjH4x",
+            "predicate": [
+              {
+                "not": {
+                  "eq": [
+                    "{item|flags.ptu.rulesSelections.athleticMovesRank1Feat1}",
+                    "Compendium.ptu.moves.Item.PvmLk3AU04nOjH4x"
+                  ]
+                }
+              },
+              {
+                "not": "move:block"
+              }
+            ]
+          },
+          {
+            "label": "Slam",
+            "value": "Compendium.ptu.moves.Item.B6mHk3zIO3QaXnIQ",
+            "predicate": [
+              {
+                "not": {
+                  "eq": [
+                    "{item|flags.ptu.rulesSelections.athleticMovesRank1Feat1}",
+                    "Compendium.ptu.moves.Item.B6mHk3zIO3QaXnIQ"
+                  ]
+                }
+              },
+              {
+                "not": "move:slam"
+              }
+            ]
+          },
+          {
+            "label": "Strength",
+            "value": "Compendium.ptu.moves.Item.v7BArKd17sdkD59s",
+            "predicate": [
+              {
+                "not": {
+                  "eq": [
+                    "{item|flags.ptu.rulesSelections.athleticMovesRank1Feat1}",
+                    "Compendium.ptu.moves.Item.v7BArKd17sdkD59s"
+                  ]
+                }
+              },
+              {
+                "not": "move:strength"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.athleticMovesRank1Feat2}"
+      }
+    ],
     "enabled": true,
     "slug": "athletic-moves-rank-1-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:29.104Z",
+        "datetime": "2026-06-28T12:56:34.389Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -50,40 +179,32 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Athlete"
     ],
     "notes": "",
     "free": false,
     "class": "Athlete",
-    "name": "Athletic Moves [CR]Rank 1 [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "athletic-moves-rank-1"
+    "name": "Athletic Moves [CR]Rank 1 [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "VZSMHMJcCWCVyQIC",
-  "_id": "Doveh6H010fbsioS",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "completed",
-      "devNote": ""
+      "grantedBy": {
+        "id": "3PYlHqFLDzN5K4fU",
+        "onDelete": "detach"
+      }
+    },
+    "LocknKey": {
+      "IDKeysFlag": "",
+      "RemoveKeyonUseFlag": false,
+      "LPFormulaFlag": "",
+      "LPFormulaOverrideFlag": false,
+      "LBFormulaFlag": "",
+      "LBFormulaOverrideFlag": false,
+      "ReplacementItemFlag": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.21",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778569109962,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

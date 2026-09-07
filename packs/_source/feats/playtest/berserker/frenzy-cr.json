@@ -1,5 +1,9 @@
 {
+  "folder": "MSOd61MfWpXDlAfE",
   "name": "Frenzy",
+  "type": "feat",
+  "_id": "XRofe1Fus0iGTAQN",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Condition: You must be Enraged to use this Feature\nEffect: You may immediately take your turn with Priority. If you do, you are instantly cured of Slowed and Stuck, and for the rest of this turn gain a +2 Bonus to Critical Hit Range, +2 Bonus to Movement Speed, and +2 Bonus to Acrobatics, Athletics, Combat, and Intimidate Checks.\nBonus: You gain the Anger Point Ability.",
@@ -13,22 +17,30 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.l0RWurLqH7ER4k13"
       }
     ],
     "enabled": true,
     "slug": "frenzy-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:30.731Z",
+        "datetime": "2026-06-28T12:56:34.826Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.deaPtzhOnTlPZ4nB",
     "source": {
       "value": "Homebrew"
     },
@@ -61,6 +73,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Berserker",
       "Adept Combat"
@@ -68,28 +81,15 @@
     "notes": "",
     "free": false,
     "class": "Berserker",
-    "name": "Frenzy [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "frenzy"
+    "name": "Frenzy [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "MSOd61MfWpXDlAfE",
-  "_id": "cJITHOSKRHJJEnhi",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200830795,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "used": null,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
   }
 }

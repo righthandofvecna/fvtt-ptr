@@ -1,5 +1,9 @@
 {
+  "folder": "MSOd61MfWpXDlAfE",
   "name": "Crash and Smash",
+  "type": "feat",
+  "_id": "QIFfEDsk0UQPACwj",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You learn the Moves Double Edge and Thrash. You may use these moves as a Weapon Attack when wielding Melee Weapons.",
@@ -13,18 +17,32 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.7Gi57ZcOWjyjhU0A"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.czDZWjn9TbP9ON4q"
       }
     ],
     "enabled": true,
     "slug": "crash-and-smash-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:30.599Z",
+        "datetime": "2026-06-28T12:56:34.537Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -62,6 +80,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Frenzy",
       "Expert Combat"
@@ -69,32 +88,14 @@
     "notes": "",
     "free": false,
     "class": "Berserker",
-    "name": "Crash and Smash [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "crash-and-smash"
+    "name": "Crash and Smash [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "MSOd61MfWpXDlAfE",
-  "_id": "bPpQMcuCdW9PchKh",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200830629,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

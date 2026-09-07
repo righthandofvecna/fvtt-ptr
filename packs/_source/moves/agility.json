@@ -89,7 +89,9 @@
       "grantedBy": {
         "id": "TcXs4fuYSSGp3ggh",
         "onDelete": "cascade"
-      }
+      },
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "WiO4NUbCuv16irNl"

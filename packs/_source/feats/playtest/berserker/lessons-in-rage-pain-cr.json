@@ -1,5 +1,9 @@
 {
+  "folder": "MSOd61MfWpXDlAfE",
   "name": "Lessons In Rage & Pain",
+  "type": "feat",
+  "_id": "zLqS1SV4hR8yRruw",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect:  You gain the move Revenge and can use it as a Weapon Move.\nWhile you have at least 1 Injury, add +X to your Damage Rolls with Rage, Flail, Double Edge, Thrash, and Weapon Attacks. X is equal to your Intimidate Rank plus the number of Injuries you have. You do not lose Hit Points from being Heavily Injured, and Injuries beyond the 5th do not lower your Maximum Hit Points.",
@@ -13,18 +17,48 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.eWzbtm5EjwcP1GoO",
+        "flag": "revenge"
+      },
+      {
+        "key": "FlatModifier",
+        "hideIfDisabled": false,
+        "selectors": [
+          "flail-damage",
+          "double-edge-damage",
+          "rage-damage",
+          "thrash-damage"
+        ],
+        "value": "@actor.system.skills.intimidate.value.total + @actor.system.health.injuries",
+        "predicate": []
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "move:weapon"
+        ],
+        "hideIfDisabled": false,
+        "selectors": "damage-roll",
+        "value": "@actor.system.skills.intimidate.value.total + @actor.system.health.injuries"
       }
     ],
     "enabled": true,
     "slug": "lessons-in-rage-pain-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:31.301Z",
+        "datetime": "2026-06-28T12:56:34.969Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -57,36 +91,23 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [],
     "notes": "",
     "free": false,
     "class": "Berserker",
-    "name": "Lessons In Rage & Pain [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "lessons-in-rage-pain"
+    "name": "Lessons In Rage & Pain [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "MSOd61MfWpXDlAfE",
-  "_id": "mQq0ZI8ce6gaahWV",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "itemGrants": {
+        "revenge": {
+          "id": "txFsN9GFPfZww6l3",
+          "onDelete": "detach"
+        }
+      }
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200831368,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

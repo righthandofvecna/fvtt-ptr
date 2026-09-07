@@ -1,5 +1,9 @@
 {
+  "folder": "MSOd61MfWpXDlAfE",
   "name": "Power of Rage",
+  "type": "feat",
+  "_id": "PJ3ViL10WplyaVU0",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
     "effect": "Moves: Choose Enduring Rage, or White Flame. You gain the chosen Ability.",
@@ -13,18 +17,47 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "PowerRage",
+        "adjustName": false,
+        "choices": [
+          {
+            "label": "Enduring Rage",
+            "value": "Compendium.ptu.abilities.Item.SPD8UhzfdpeeTrCS",
+            "predicate": {
+              "not": "ability:enduring-rage"
+            }
+          },
+          {
+            "label": "White Flame",
+            "value": "Compendium.ptu.abilities.Item.VhXF2GEX2WWHmkqF",
+            "predicate": {
+              "not": "ability:white-flame"
+            }
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.PowerRage}"
       }
     ],
     "enabled": true,
     "slug": "power-of-rage-cr",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:28.315Z",
+        "datetime": "2026-06-28T12:56:35.393Z",
         "version": {
           "schema": null,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -61,38 +94,19 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Berserker"
     ],
     "notes": "",
     "free": false,
     "class": "Berserker",
-    "name": "Power of Rage [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "power-of-rage"
+    "name": "Power of Rage [CR]"
   },
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
-  "type": "feat",
-  "folder": "MSOd61MfWpXDlAfE",
-  "_id": "1pbzPDBAmwCESn9s",
   "effects": [],
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
       "showInTokenPanel": true
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1699736627730,
-    "modifiedTime": 1778200828364,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
   }
 }

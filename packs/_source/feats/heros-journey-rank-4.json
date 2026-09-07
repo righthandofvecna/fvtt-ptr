@@ -1,5 +1,9 @@
 {
+  "folder": null,
   "name": "Hero's Journey Rank 4",
+  "type": "feat",
+  "_id": "6nsWjH4YwpKtFiGc",
+  "img": "/systems/ptu/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
     "effect": "Each Rank, you may gain two Backpacker Talents for which you qualify.",
@@ -9,19 +13,200 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
+      },
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "label": "Hero's Journey Rank 4",
+        "prompt": "Choose two Backpacker Talents.",
+        "flag": "herosJourney4-1",
+        "rollOption": "heros-journey",
+        "choices": [
+          {
+            "value": "Compendium.ptu.capabilities.Item.rgZARySYBFTnoMNZ",
+            "label": "Call to Adventure",
+            "predicate": [
+              {
+                "not": "capability:call-to-adventure"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.JNf8suPf2nzG4rmo",
+            "label": "Frisk",
+            "predicate": [
+              {
+                "not": "capability:frisk"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.cYmfaYp6eN94F9CF",
+            "label": "Handyman",
+            "predicate": [
+              {
+                "not": "capability:handyman"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.FnEb80T4dtIfCTJT",
+            "label": "Hat Trick",
+            "predicate": [
+              {
+                "not": "capability:hat-trick"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.eh4cGM2DpLFprazD",
+            "label": "Movement Mastery",
+            "predicate": [
+              {
+                "not": "capability:movement-mastery"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.l35R0FpQysFZ072H",
+            "label": "Sole Power",
+            "predicate": [
+              {
+                "not": "capability:sole-power"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.1GG6KVr3GmMUexIP",
+            "label": "Wayfarer",
+            "predicate": [
+              {
+                "not": "capability:wayfarer"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.XwnymStQhTW5Xu9k",
+            "label": "Wear it Better",
+            "predicate": [
+              {
+                "not": "capability:wear-it-better"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.herosJourney4-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "label": "Hero's Journey Rank 4",
+        "prompt": "Choose two Backpacker Talents.",
+        "flag": "herosJourney4-2",
+        "rollOption": "heros-journey",
+        "choices": [
+          {
+            "value": "Compendium.ptu.capabilities.Item.rgZARySYBFTnoMNZ",
+            "label": "Call to Adventure",
+            "predicate": [
+              {
+                "not": "capability:call-to-adventure"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.JNf8suPf2nzG4rmo",
+            "label": "Frisk",
+            "predicate": [
+              {
+                "not": "capability:frisk"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.cYmfaYp6eN94F9CF",
+            "label": "Handyman",
+            "predicate": [
+              {
+                "not": "capability:handyman"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.FnEb80T4dtIfCTJT",
+            "label": "Hat Trick",
+            "predicate": [
+              {
+                "not": "capability:hat-trick"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.eh4cGM2DpLFprazD",
+            "label": "Movement Mastery",
+            "predicate": [
+              {
+                "not": "capability:movement-mastery"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.l35R0FpQysFZ072H",
+            "label": "Sole Power",
+            "predicate": [
+              {
+                "not": "capability:sole-power"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.1GG6KVr3GmMUexIP",
+            "label": "Wayfarer",
+            "predicate": [
+              {
+                "not": "capability:wayfarer"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.XwnymStQhTW5Xu9k",
+            "label": "Wear it Better",
+            "predicate": [
+              {
+                "not": "capability:wear-it-better"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.herosJourney4-2}"
       }
     ],
     "enabled": true,
     "slug": "heros-journey-rank-4",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:29.422Z",
+        "datetime": "2026-06-28T12:56:34.967Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.364",
+          "system": "4.4.3.34"
         }
       }
     },
@@ -57,6 +242,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Backpacker",
       "Expert Survival"
@@ -66,32 +252,15 @@
     "class": "Backpacker",
     "automation": [],
     "name": "Hero's Journey Rank 4",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": ""
+    "useCount": 0
   },
-  "type": "feat",
-  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "effects": [],
-  "ownership": {
-    "default": 0
-  },
   "flags": {
     "ptu": {
-      "prereqBackup": "Backpacker, Expert Survival"
+      "showInTokenPanel": true,
+      "prereqBackup": "Backpacker, Expert Survival",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1683368084327,
-    "modifiedTime": 1778200829484,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  },
-  "folder": null,
-  "sort": 18200000,
-  "_id": "HWFtCf1FbTHX3gTG"
+  }
 }

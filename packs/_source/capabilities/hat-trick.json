@@ -1,0 +1,68 @@
+{
+  "folder": "tde1yjOd239IVpLI",
+  "name": "Hat Trick",
+  "type": "capability",
+  "_id": "FnEb80T4dtIfCTJT",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "While wearing Head Equipment worth at least ₽1000, you gain 15 Damage Reduction against Critical Hits. This does not stack with any Damage eduction granted by any Head Equipment.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "hat-trick",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.119,
+      "lastMigration": {
+        "datetime": "2026-06-28T12:56:34.967Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.364",
+          "system": "4.4.3.34"
+        }
+      }
+    },
+    "referenceEffect": "Compendium.ptu.effects.Item.Qi8IfjYK5fo6bw9Z",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Backpack Talent"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}
