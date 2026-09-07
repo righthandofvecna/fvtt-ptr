@@ -2,7 +2,7 @@
   "name": "Critical Moment",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: Your Pokemon with [Training] Features applied\nEffect: The bonuses from your Pokemon’s [Training] are tripled until the end of your next turn.\n@UUID[Item.HuC1TXnposDVE87A]",
+    "effect": "Target: Your Pokemon with [Training] Features applied\nEffect: The bonuses from your Pokemon’s [Training] are tripled until the end of your next turn.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -18,7 +18,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.HuC1TXnposDVE87A",
     "source": {
       "value": "Homebrew"
     },
@@ -60,7 +60,8 @@
     "class": "Ace Trainer",
     "name": "Critical Moment [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "critical-moment"
+    "replacesSlug": "critical-moment",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -73,7 +74,7 @@
         "id": "clN70mmp5f0qNjZT",
         "onDelete": "detach"
       },
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "Linked effect is missing",
       "used": null
     },
