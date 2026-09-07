@@ -35,7 +35,9 @@
       {
         "key": "TemporarySpecies",
         "predicate": [
-          "species:eelektross"
+          {
+            "value": "species:eelektross"
+          }
         ],
         "uuid": "Compendium.ptu.species.Item.nMoejf3f7gBqLGAD"
       },
@@ -97,7 +99,6 @@
     }
   },
   "_stats": {
-    "compendiumSource": "Compendium.ptu.effects.Item.bnLiE1Yv9HC7CtE1",
     "duplicateSource": null,
     "exportSource": {
       "worldId": "copy",

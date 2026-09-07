@@ -52,11 +52,11 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "uM561WHxXwcdrMWl",
   "effects": [],
-  "folder": null,
   "sort": 49400000,
   "ownership": {
     "default": 0
