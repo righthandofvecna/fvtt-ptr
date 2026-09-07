@@ -2,7 +2,7 @@
   "name": "Enriched Water",
   "system": {
     "origin": "",
-    "effect": "Heals 20 Hit Points. A Pokémon or Trainer can only consume one refreshment per half hour, unless they have the Gluttony Ability.",
+    "effect": "Heals 20 Hit Points. A Pokémon or Trainer can only consume one refreshment per half hour, unless they have the @UUID[Compendium.ptu.abilities.Item.r5RAP7wiKkOLZ81U]{Gluttony} Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,

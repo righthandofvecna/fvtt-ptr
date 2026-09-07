@@ -2,7 +2,7 @@
   "name": "Salty Surprise",
   "system": {
     "origin": "",
-    "effect": "The user may trade in this Snack’s Food Buff when being hit by an attack to gain 5 Temporary Hit Points. If the user likes Salty Flavors, they gain 10 Temporary Hit Points Instead. If the user dislikes Salty Food, they become Enraged.",
+    "effect": "The user may trade in this Snack’s Food Buff when being hit by an attack to gain 5 Temporary Hit Points. If the user likes Salty Flavors, they gain 10 Temporary Hit Points Instead. If the user dislikes Salty Food, they become @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Enraged}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -45,7 +45,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -61,7 +61,8 @@
     "name": "Salty Surprise",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -86,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 22900000,
   "_id": "Itms60XgmQLCzqUp"
 }
