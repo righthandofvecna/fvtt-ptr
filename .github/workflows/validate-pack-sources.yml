@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Check _id presence and global uniqueness
         run: |
@@ -34,3 +36,30 @@ jobs:
           fi
 
           echo "All $(find packs/_source -name '*.json' | wc -l) files have a unique _id."
+
+      - name: Warn on _id changes vs base branch
+        run: |
+          BASE_REF="origin/${{ github.base_ref }}"
+          git fetch origin "${{ github.base_ref }}" --depth=1
+
+          CHANGED=$(git diff --name-only "$BASE_REF...HEAD" -- 'packs/_source/*.json' 'packs/_source/**/*.json')
+
+          WARNINGS=0
+          while IFS= read -r file; do
+            [[ -z "$file" ]] && continue
+
+            current_id=$(jq -r '._id // empty' "$file" 2>/dev/null)
+            base_content=$(git show "$BASE_REF:$file" 2>/dev/null) || continue
+            base_id=$(echo "$base_content" | jq -r '._id // empty' 2>/dev/null)
+
+            if [[ -n "$base_id" && -n "$current_id" && "$base_id" != "$current_id" ]]; then
+              echo "::warning file=$file::_id changed: '$base_id' -> '$current_id'"
+              WARNINGS=$((WARNINGS + 1))
+            fi
+          done <<< "$CHANGED"
+
+          if [[ $WARNINGS -gt 0 ]]; then
+            echo "$WARNINGS _id change(s) detected. These are usually unintentional — verify before merging."
+          else
+            echo "No _id changes detected."
+          fi
