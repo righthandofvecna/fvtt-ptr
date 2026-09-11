@@ -1,6 +1,6 @@
 {
   "folder": "4nwbdfjztaUgcVw8",
-  "name": "Accuracy -3",
+  "name": "-3 Accuracy",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
@@ -17,7 +17,7 @@
       }
     ],
     "enabled": true,
-    "slug": "accuracy-3",
+    "slug": "--3-accuracy",
     "schema": {
       "version": null,
       "lastMigration": null
