@@ -155,6 +155,11 @@
                             <img src="/systems/ptu/static/css/images/icons/granted_icon.png"/>
                         </div>
                     {{/if}}
+                    {{#if item.isWeatherEffect}}
+                        <div class="tag shadowless tooltip" title="Applied by Weather">
+                            <i class="fas fa-cloud-sun-rain"></i>
+                        </div>
+                    {{/if}}
                     {{#unless (or (is type "effect") (is type "condition"))}}
                         {{#if item.hasAutomation}}
                             {{#if item.enabled}}

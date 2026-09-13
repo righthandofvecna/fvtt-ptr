@@ -127,10 +127,92 @@ class Weather extends Application {
         this.render(true);
     }
 
+    /**
+     * Syncs real Effect items to/from actors based on the current weather configuration and the active scene's tokens.
+     * Only runs on the GM client since it writes to the database.
+     */
+    static async applyWeatherEffectsToActors() {
+        if (!game.user.isGM) return;
+
+        const activeScene = game.scenes.active;
+
+        // If there is no active scene, remove all weather items from linked actors
+        if (!activeScene) {
+            for (const actor of game.actors) {
+                const weatherItems = actor.items.filter(i => i.flags?.ptu?.weatherEffect);
+                if (weatherItems.length) {
+                    await actor.deleteEmbeddedDocuments("Item", weatherItems.map(i => i.id), { weatherEffect: true });
+                }
+            }
+            return;
+        }
+
+        const activeEffects = Array.from(Weather.globalEffects.values())
+            .filter(e => e.system.mode !== 'disabled');
+
+        const linkedActorIds = new Set();
+        const actorsToProcess = [];
+
+        for (const tokenDoc of activeScene.tokens) {
+            const actor = tokenDoc.actor;
+            if (!actor) continue;
+
+            // Deduplicate linked actors (multiple tokens may share one actor)
+            if (tokenDoc.isLinked) {
+                if (linkedActorIds.has(actor.id)) continue;
+                linkedActorIds.add(actor.id);
+            }
+
+            actorsToProcess.push(actor);
+        }
+
+        // Apply correct weather items to each actor on the active scene
+        for (const actor of actorsToProcess) {
+            const shouldHave = activeEffects.filter(effect => {
+                switch (effect.system.mode) {
+                    case "all": return true;
+                    case "players": return actor.alliance === "party";
+                    case "opposition": return actor.alliance === "opposition";
+                    default: return false;
+                }
+            });
+
+            const shouldHaveIds = new Set(shouldHave.map(e => e.id));
+            const currentWeather = actor.items.filter(i => i.flags?.ptu?.weatherEffect);
+            const currentIds = new Set(currentWeather.map(i => i.flags.ptu.weatherEffectId));
+
+            const toRemove = currentWeather.filter(i => !shouldHaveIds.has(i.flags.ptu.weatherEffectId));
+            if (toRemove.length) {
+                await actor.deleteEmbeddedDocuments("Item", toRemove.map(i => i.id), { weatherEffect: true });
+            }
+
+            const toAdd = shouldHave.filter(e => !currentIds.has(e.id));
+            if (toAdd.length) {
+                const itemData = toAdd.map(effect => {
+                    const data = effect.toObject();
+                    data._id = foundry.utils.randomID();
+                    foundry.utils.setProperty(data, "flags.ptu.weatherEffect", true);
+                    foundry.utils.setProperty(data, "flags.ptu.weatherEffectId", effect.id);
+                    return data;
+                });
+                await actor.createEmbeddedDocuments("Item", itemData, { weatherEffect: true, keepId: true });
+            }
+        }
+
+        // Remove weather items from linked actors that no longer have tokens on the active scene
+        for (const actor of game.actors) {
+            if (linkedActorIds.has(actor.id)) continue;
+            const weatherItems = actor.items.filter(i => i.flags?.ptu?.weatherEffect);
+            if (weatherItems.length) {
+                await actor.deleteEmbeddedDocuments("Item", weatherItems.map(i => i.id), { weatherEffect: true });
+            }
+        }
+    }
+
     static async updateGameState() {
         Weather._initializeGlobalEffects();
-        game.actors.forEach(actor => actor.reset());
-        ui.notifications.info("Weather Effects Updated on all actors!");
+        await Weather.applyWeatherEffectsToActors();
+        if (game.user.isGM) ui.notifications.info("Weather Effects Updated!");
     }
 
     static openWeatherMenu() {

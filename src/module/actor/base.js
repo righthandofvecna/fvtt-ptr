@@ -1,5 +1,4 @@
 import { sluggify } from "../../util/misc.js";
-import { Weather } from "../apps/weather.js";
 import { PTUCombatant } from "../combat/combatant.js";
 import { PTUCondition } from "../item/index.js";
 import { ChatMessagePTU } from "../message/base.js";
@@ -370,35 +369,8 @@ class PTUActor extends Actor {
     }
 
     prepareRuleElements() {
-        const globalEffects = [];
-        try {
-            for (const effect of Weather.globalEffects?.values?.() ?? []) {
-                switch(effect.system.mode) {
-                    case "disabled": 
-                        continue;
-                    case "all":
-                        break;
-                    case "players":
-                        if (this.alliance !== "party") continue;
-                        break;
-                    case "opposition":
-                        if (this.alliance !== "opposition") continue;
-                        break;
-                }
-
-                const item = new CONFIG.PTU.Item.proxy(effect.toObject(), { temporary: true, parent: this })
-                item.updateSource({ "flags.core.sourceId": effect.flags?.core?.sourceId ?? effect.uuid });
-                globalEffects.push(item);
-            }
-        }
-        catch (error) {
-            console.error("PTU | Failed to prepare global effects.", error);
-        }
-        return [
-            this.items.contents.flatMap((item) => item.prepareRuleElements()),
-            globalEffects.flatMap((effect) => effect.prepareRuleElements())
-        ]
-            .flat()
+        return this.items.contents
+            .flatMap((item) => item.prepareRuleElements())
             .filter((rule) => !rule.ignored)
             .sort((a, b) => a.priority - b.priority);
     }
