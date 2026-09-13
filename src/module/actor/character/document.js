@@ -18,6 +18,32 @@ class PTUTrainerActor extends PTUActor {
         return topParty.length > 0 ? totalLevel / topParty.length : 0;
     }
 
+    get trainerTierNum() {
+        // based on the trainer's level and variant.trainerAdvancement
+        const level = this.system.level.current;
+        const advancement = game.settings.get("ptu", "variant.trainerAdvancement");
+        const progression = CONFIG.PTU.data.trainerProgressions[advancement] ?? CONFIG.PTU.data.trainerProgressions["ptr-update"];
+        // count how many tiers are below or at the level
+        let tier = 0;
+        for (const t of Object.keys(progression.tier)) {
+            if (level >= t) tier++;
+        }
+        return tier;
+    }
+
+    get trainerTier() {
+        // based on the trainer's level and variant.trainerAdvancement
+        const level = this.system.level.current;
+        const advancement = game.settings.get("ptu", "variant.trainerAdvancement");
+        const progression = CONFIG.PTU.data.trainerProgressions[advancement] ?? CONFIG.PTU.data.trainerProgressions["ptr-update"];
+        // count how many tiers are below or at the level
+        let tier = 0;
+        for (const t of Object.keys(progression.tier)) {
+            if (level >= t && t > tier) tier = t;
+        }
+        return progression.tier[tier] ?? "Unknown";
+    }
+
     /**
      * Get EXP Training data without side effects and duplicating other data effects
      * Calculates trainer level and milestone data for Pokemon EXP Training Level Cap

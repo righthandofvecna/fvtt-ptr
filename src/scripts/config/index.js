@@ -4,7 +4,7 @@ import { PTUItemProxy, PTUItem, PTUEffect, PTUEdge, PTUFeat, PTUMove, PTUSpecies
 import { PTUItemSheet, PTUEffectSheet, PTUEdgeSheet, PTUFeatSheet, PTUMoveSheet } from '../../module/item/index.js';
 import { PTUSkills } from '../../module/actor/index.js';
 import { PTUCombat } from '../../module/combat/document.js';
-import { levelProgression, typeEffectiveness, natureData, pokemonData, dbData, helpText } from './data/index.js';
+import { levelProgression, trainerProgressions, typeEffectiveness, natureData, pokemonData, dbData, helpText } from './data/index.js';
 import { pokeballStyles, pokeballShapes } from './data/pokeball-themes.js';
 import { RuleElements } from '../../module/rules/index.js';
 import { PTUPredicate } from '../../module/system/predication.js';
@@ -80,6 +80,7 @@ const data = {
     ],
   },
   levelProgression,
+  trainerProgressions,
   typeEffectiveness,
   natureData,
   sheetThemes: {

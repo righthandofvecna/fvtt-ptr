@@ -47,7 +47,7 @@ const VariantSettingsConfig = {
             "ptr-update": "PTU.Settings.Variant.trainerAdvancement.PTRUpdate",
             "long-track": "PTU.Settings.Variant.trainerAdvancement.LongTrack",
         },
-        default: "original",
+        default: "ptr-update",
         requiresReload: true,
     },
     "useContestRules": {
