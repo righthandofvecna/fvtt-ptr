@@ -14,11 +14,32 @@
         "path": "system.modifiers.baseStats.hp.mod",
         "value": "1 + floor(@actor.system.level.current / 10)",
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
+      },
+      {
+        "key": "InstantChange",
+        "predicate": [],
+        "trigger": "onCombatStart",
+        "mode": "upgrade",
+        "path": "system.tempHp.value",
+        "value": "max({trainer|system.skills.athletics.value.value},0)",
+        "priority": null
+      },
+      {
+        "key": "InstantChange",
+        "predicate": [],
+        "trigger": "onCombatStart",
+        "mode": "upgrade",
+        "path": "system.tempHp.value",
+        "value": "max({trainer|system.skills.focus.value.value},0)",
+        "priority": null
       }
     ],
     "enabled": true,
     "slug": "effect-enduring-soul",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.112,
       "lastMigration": {
@@ -42,7 +63,7 @@
     "duration": {
       "value": -1,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -53,9 +74,7 @@
       "show": true
     },
     "badge": null,
-    "context": null,
-    "contentSet": "",
-    "replacesSlug": ""
+    "context": null
   },
   "effects": [],
   "ownership": {
@@ -63,15 +82,17 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.0.12",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.39",
+    "coreVersion": "14.367",
     "createdTime": 1694533590342,
-    "modifiedTime": 1705331731747,
+    "modifiedTime": 1789291483030,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

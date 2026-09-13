@@ -5,7 +5,7 @@ class RollOptionRuleElement extends RuleElementPTU {
     constructor(source, item, options = {}) {
         const sourceValue = source.value;
 
-        super({ priority: CONST.ACTIVE_EFFECT_MODES.OVERRIDE * 10, ...source }, item, options);
+        super({ priority: CONST.ACTIVE_EFFECT_CHANGE_TYPES.override * 10, ...source }, item, options);
 
         this.value = typeof sourceValue === "string" ? sourceValue : !!(sourceValue?.value ?? true);
 
