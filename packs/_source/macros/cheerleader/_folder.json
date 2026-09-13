@@ -1,0 +1,22 @@
+{
+  "type": "Macro",
+  "folder": null,
+  "name": "Cheerleader",
+  "color": null,
+  "sorting": "a",
+  "_id": "ODE9CTYFPQT3UgKw",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1789293974552,
+    "modifiedTime": 1789293974552,
+    "lastModifiedBy": "GFCVv4EMgQDa5fGR",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

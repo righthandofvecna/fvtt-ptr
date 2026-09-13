@@ -21,6 +21,7 @@ import { ChatContextMenu } from "./chat-context-menu.js";
 import { Keywords } from "./keywords.js";
 import { LowHpReminder } from "./low-hp-reminder.js";
 import { WeatherHooks } from "./weather-hooks.js";
+import { MacroLinkContext } from "./macro-link-context.js";
 
 export const PtuHooks = {
     listen() {
@@ -49,6 +50,7 @@ export const PtuHooks = {
             Keywords,
             LowHpReminder,
             WeatherHooks,
+            MacroLinkContext,
         ]
         for(const listener of listeners) listener.listen();
     }

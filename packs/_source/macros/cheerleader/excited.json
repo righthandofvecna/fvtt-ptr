@@ -1,0 +1,25 @@
+{
+  "folder": "ODE9CTYFPQT3UgKw",
+  "name": "Excited",
+  "type": "script",
+  "_id": "nFG4GsAzPrP78N6c",
+  "author": "GFCVv4EMgQDa5fGR",
+  "img": "systems/ptu/static/css/images/icons/effect_icon.png",
+  "scope": "global",
+  "command": "// Compendium.ptu.effects.Item.DJF77iklb3nnGp2v\nconst itemUuid = context.message?.flags?.ptu?.reminder?.item;\nconst item = await fromUuid(itemUuid);\nconst actor = item?.actor;\n\nif (!item || !actor) {\n  ui.notifications.error(\"Could not find source effect or actor\");\n  return;\n}\n\nconst newEffect = await fromUuid(\"Compendium.ptu.effects.Item.DJF77iklb3nnGp2v\");\n\nif (!newEffect) {\n  ui.notifications.error(\"Could not find new effect to apply\");\n  return;\n}\n\nawait actor.createEmbeddedDocuments(\"Item\", [{...newEffect}]);\nawait item.delete();\n\nconsole.log(\"Applied!\", { arguments })",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1789294055208,
+    "modifiedTime": 1789294851502,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

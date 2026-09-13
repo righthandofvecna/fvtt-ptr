@@ -1,0 +1,77 @@
+{
+  "folder": "NnfaFh8VNQHvCKdr",
+  "name": "Cheered",
+  "type": "effect",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Pokémon or Trainers may give up the Cheered condition when making a Save Check to roll twice, and take the best result.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "Reminder",
+        "predicate": [],
+        "selectors": "save-check",
+        "message": "You can re-roll this save check by expending the Cheered effect!",
+        "frequency": "always",
+        "messagePredicate": [],
+        "affects": "origin"
+      }
+    ],
+    "enabled": true,
+    "slug": "cheered",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 0,
+      "unit": "encounter",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1728099703898,
+    "modifiedTime": 1789293362905,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "pZO043r8mNBFfbCD",
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  }
+}
