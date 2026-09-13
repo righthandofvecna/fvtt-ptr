@@ -340,7 +340,7 @@ class PTUMove extends PTUItem {
                 const statements = results.map((effect) =>
                     game.i18n.format("PTU.Broadcast.ApplyEffect", { actor: effect.actor.link, effect: effect.link, source: this.actor.link })
                 ).filter(s => s).join("<br/>")
-                const enrichedHtml = await foundry.applications.ux.TextEditor.implementation.enrichHTML(statements, { async: true })
+                const enrichedHtml = await foundry.applications.ux.TextEditor.implementation.enrichHTML(statements, { async: true, relativeTo: this })
                 const chatData = {
                     user: game.user.id,
                     speaker: ChatMessage.getSpeaker({ actor: this.actor }),

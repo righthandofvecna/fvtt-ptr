@@ -597,7 +597,7 @@ class PTUItem extends Item {
                 .join("");
         })();
 
-        const referenceEffect = this.referenceEffect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(`@UUID[${foundry.utils.duplicate(this.referenceEffect)}]`, { async: true }) : null;
+        const referenceEffect = this.referenceEffect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(`@UUID[${foundry.utils.duplicate(this.referenceEffect)}]`, { async: true, relativeTo: this }) : null;
 
         const chatData = {
             user: game.user._id,
