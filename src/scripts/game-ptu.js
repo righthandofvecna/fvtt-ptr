@@ -86,6 +86,18 @@ const GamePTU = {
         game.ptu.compendiumBrowser = new CompendiumBrowser();
         game.ptu.typeMatrix = new TypeMatrix()
 
+        // Pre-load all spirit actions for phantom display on actor sheets.
+        // The cache is an array of Item documents; sheets filter to unowned ones.
+        game.ptu.spiritActionCache = null;
+        const spiritActionPack = game.packs.get("ptu.spirit-actions");
+        if (spiritActionPack) {
+            spiritActionPack.getDocuments().then(docs => {
+                game.ptu.spiritActionCache = docs;
+            }).catch(err => {
+                console.error("PTU | Failed to load spirit action cache:", err);
+            });
+        }
+
         Hooks.on("targetToken", (user, _token, _targeted) => {
             if (user.id === game.user.id) game.ptu.tokenPanel.refresh();
         });

@@ -1,3 +1,5 @@
+const { deepClone } = foundry.utils;
+
 /**
  * @param {Array<string>} values ["athlete", "ace-trainer-cr"]
  * @param {string} paramName Parameter name as named in compendium browser filter data, e.g. "types"

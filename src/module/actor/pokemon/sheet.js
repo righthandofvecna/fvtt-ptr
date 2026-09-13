@@ -159,8 +159,26 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		sheetData.effects = effects;
 		sheetData.conditions = conditions;
 		sheetData.contestmoves = contestmoves;
-		sheetData.spiritactions = spiritactions;
 		sheetData.items = items;
+
+		// Augment spirit actions with phantom entries from the compendium cache
+		// (those not yet owned by this actor).
+		this._phantomSpiritActions = new Map();
+		if (game.settings.get("ptu", "variant.spiritPlaytest")) {
+			const cache = game.ptu?.spiritActionCache;
+			if (cache?.length) {
+				const ownedSlugs = new Set(spiritactions.map(sa => sa.system?.slug).filter(Boolean));
+				for (const sa of cache) {
+					if (ownedSlugs.has(sa.system?.slug)) continue;
+					const data = sa.toObject();
+					foundry.utils.setProperty(data, 'flags.ptu.phantom', true);
+					foundry.utils.setProperty(data, 'flags.ptu.sourceUuid', sa.uuid);
+					spiritactions.push(data);
+					this._phantomSpiritActions.set(data._id, data);
+				}
+			}
+		}
+		sheetData.spiritactions = spiritactions;
 
 		sheetData.actions = await (async () => {
 			const moves = [];
@@ -298,9 +316,11 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		});
 
 		// Update Inventory Item
-		html.find('.item-edit').click((ev) => {
+		html.find('.item-edit').click(async (ev) => {
 			const li = $(ev.currentTarget).parents('.item');
-			const item = this.actor.items.get(li.data('itemId'));
+			const itemId = li.data('itemId');
+			const item = this.actor.items.get(itemId) ?? await this._materializePhantomItem(itemId);
+			if (!item) return;
 			item.sheet.render(true);
 		});
 
@@ -341,10 +361,11 @@ export class PTUPokemonSheet extends PTUActorSheet {
 			{
 				name: "Edit",
 				icon: '<i class="fas fa-edit"></i>',
-				callback: (ev) => {
+				callback: async (ev) => {
 					const li = ev.closest('.item');
 					const itemId = li.dataset.itemId;
-					const item = this.actor.items.get(itemId);
+					const item = this.actor.items.get(itemId) ?? await this._materializePhantomItem(itemId);
+					if (!item) return;
 					item.sheet.render(true);
 				}
 			},

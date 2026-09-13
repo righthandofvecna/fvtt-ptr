@@ -326,9 +326,11 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		});
 
 		// Update Inventory Item
-		html.find('.item-edit').click((ev) => {
+		html.find('.item-edit').click(async (ev) => {
 			const li = $(ev.currentTarget).parents('.item');
-			const item = this.actor.items.get(li.data('itemId'));
+			const itemId = li.data('itemId');
+			const item = this.actor.items.get(itemId) ?? await this._materializePhantomItem(itemId);
+			if (!item) return;
 			item.sheet.render(true);
 		});
 

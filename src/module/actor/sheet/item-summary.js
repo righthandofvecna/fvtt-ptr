@@ -37,8 +37,12 @@ class ItemSummaryRenderer {
 
         const duration = 0.4;
 
-        const item = actor.items.get(itemId);
+        // Fall back to phantom items (struggles, spirit actions) when not a real owned item
+        const item = actor.items.get(itemId)
+            ?? actor.phantomItems?.get(itemId)
+            ?? this.sheet._phantomSpiritActions?.get(itemId);
         if(!item) return;
+        const isPhantom = !!(item.flags?.ptu?.phantom);
 
         const summary = await (async () => {
             const existing = element.querySelector(':scope > .item-summary');
@@ -67,13 +71,15 @@ class ItemSummaryRenderer {
             summary.hidden = false;
             await new Promise(resolve => setTimeout(resolve, 1));
             summary.classList.add('show');
-            await game.user.setFlag("ptu", "sheetStates", foundry.utils.mergeObject(game.user.getFlag("ptu", "sheetStates") || {}, {
-                [actor.id]: {
-                    [item.type]: {
-                        [item.id]: true
+            if(!isPhantom) {
+                await game.user.setFlag("ptu", "sheetStates", foundry.utils.mergeObject(game.user.getFlag("ptu", "sheetStates") || {}, {
+                    [actor.id]: {
+                        [item.type]: {
+                            [item.id]: true
+                        }
                     }
-                }
-            }));
+                }));
+            }
         }
         else {
             element.classList.remove('expanded');
@@ -82,13 +88,15 @@ class ItemSummaryRenderer {
             await new Promise(resolve => setTimeout(resolve, duration * 1000));
             summary.classList.remove('transitioning')
             summary.hidden = true;
-            await game.user.setFlag("ptu", "sheetStates", foundry.utils.mergeObject(game.user.getFlag("ptu", "sheetStates") || {}, {
-                [actor.id]: {
-                    [item.type]: {
-                        [item.id]: false
+            if(!isPhantom) {
+                await game.user.setFlag("ptu", "sheetStates", foundry.utils.mergeObject(game.user.getFlag("ptu", "sheetStates") || {}, {
+                    [actor.id]: {
+                        [item.type]: {
+                            [item.id]: false
+                        }
                     }
-                }
-            }));
+                }));
+            }
         }
     }
 

@@ -110,6 +110,11 @@ class PTUActor extends Actor {
         return this.system.attacks;
     }
 
+    /** @returns {Map<string, PTUMove>} Synthetic (phantom) items shown on the sheet but not persisted. */
+    get phantomItems() {
+        return this._phantomItems;
+    }
+
     get iwr() {
         const iwr = this._iwr ?? this.prepareIwr();
 
@@ -245,6 +250,7 @@ class PTUActor extends Actor {
         this.rules = [];
         this.initiative = null;
         this.conditions = new ActorConditions();
+        this._phantomItems = new Map();
 
         this.synthetics = {
             ephemeralEffects: {},
@@ -1058,6 +1064,8 @@ class PTUActor extends Actor {
             return this.system.skills?.combat?.value?.total > 4;
         })();
 
+        const STRUGGLE_SOURCE_UUID = "Compendium.ptu.moves.Item.jK9TuStruggle001";
+
         const constructStruggleItem = (type, category, range, ptuFlags, isRangedStruggle = false) => {
             return new Item.implementation({
                 name: `Struggle (${type})`,
@@ -1077,7 +1085,22 @@ class PTUActor extends Actor {
                     type: type
                 },
                 flags: {
-                    ptu: ptuFlags || {}
+                    ptu: {
+                        ...(ptuFlags || {}),
+                        phantom: true,
+                        sourceUuid: STRUGGLE_SOURCE_UUID,
+                        // Store the variant parameters so materialization can build a typed copy
+                        phantomData: {
+                            name: `Struggle (${type})`,
+                            img: CONFIG.PTU.data.typeEffectiveness[type].images.icon,
+                            type,
+                            category,
+                            range,
+                            ac: isStrugglePlus ? 3 : 4,
+                            damageBase: isStrugglePlus ? 5 : 4,
+                            isRangedStruggle
+                        }
+                    }
                 }
             },
                 {
@@ -1119,6 +1142,12 @@ class PTUActor extends Actor {
 
     prepareMoves({ includeStruggles = true } = {}) {
         const struggles = includeStruggles ? this._prepareStruggles() : [];
+
+        // Register struggle phantoms so sheets can look them up for materialization
+        this._phantomItems = new Map();
+        for (const struggle of struggles) {
+            this._phantomItems.set(struggle.realId, struggle);
+        }
 
         const moves = [];
         this.flags.ptu.disabledOptions = [];

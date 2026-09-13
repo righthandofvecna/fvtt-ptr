@@ -1,0 +1,97 @@
+{
+  "name": "Struggle",
+  "type": "move",
+  "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "folder": null,
+  "system": {
+    "origin": "",
+    "effect": "Struggle is an emergency move used when all other options are exhausted. It deals Normal-type physical damage with no special properties.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "struggle-normal",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-09-13T00:00:00.000Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.30"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Target 1"
+    ],
+    "sheerForce": false,
+    "toughClaws": false,
+    "technician": false,
+    "reckless": false,
+    "ironFist": false,
+    "megaLauncher": false,
+    "punkRock": false,
+    "strongJaw": false,
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "type": "Normal",
+    "category": "Physical",
+    "damageBase": 4,
+    "ac": 4,
+    "range": "Melee, 1 Target",
+    "contestType": "--",
+    "stab": false,
+    "damageBonus": 0,
+    "isStruggle": true,
+    "automation": [],
+    "contentSet": "",
+    "replacesSlug": ""
+  },
+  "_id": "jK9TuStruggle001",
+  "effects": [],
+  "sort": 71700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed"
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.30",
+    "coreVersion": "13.351",
+    "createdTime": 1757779200000,
+    "modifiedTime": 1757779200000,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}
