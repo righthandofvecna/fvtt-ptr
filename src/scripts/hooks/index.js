@@ -23,6 +23,7 @@ import { Keywords } from "./keywords.js";
 import { LowHpReminder } from "./low-hp-reminder.js";
 import { WeatherHooks } from "./weather-hooks.js";
 import { MacroLinkContext } from "./macro-link-context.js";
+import { LinkedEffects } from "./linked-effects.js";
 
 export const PtuHooks = {
     listen() {
@@ -53,6 +54,7 @@ export const PtuHooks = {
             LowHpReminder,
             WeatherHooks,
             MacroLinkContext,
+            LinkedEffects,
         ]
         for(const listener of listeners) listener.listen();
     }

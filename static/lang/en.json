@@ -904,6 +904,9 @@
         "ReevaluateOnUpdate": "Reevaluate on Update",
         "ReplaceSelf": "Replace Self"
       },
+      "ApplyEffect": {
+        "LinkedGroup": "Linked Group"
+      },
       "Reminder": {
         "Message": "Message",
         "MessageHint": "The whisper content. Use {actor|name} for the actor's name and {item|name} for the item's name.",

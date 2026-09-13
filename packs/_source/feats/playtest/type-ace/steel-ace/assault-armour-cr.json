@@ -7,9 +7,34 @@
     "origin": "",
     "effect": "Target: Your Steel-Type Pokémon\nEffect: While this Feature is Bound, when the target uses a Steel-Type attack, it may use its Defense for their Damage Roll in place of the attack’s normal offensive stat. Once per Scene for a specific target, when the target takes super-effective damage, they gain Temporary Hit Points equal to twice your Type-Linked Skill Rank.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [
+          "target:types:steel"
+        ],
+        "affects": "target",
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.xyvgdG4xqWrAAPHV",
+        "range": "",
+        "linked": true,
+        "value": ""
+      },
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.VCbLNzKb3IprNHhX",
+        "range": "",
+        "linked": true,
+        "value": "",
+        "affects": "origin"
+      }
+    ],
     "enabled": true,
     "slug": "assault-armour-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "assault-armor",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -56,21 +81,21 @@
       "cost": 2,
       "bind": true
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Polished Shine",
       "Type-Linked Skill at Expert Rank"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Steel)",
-    "contentSet": "class-rework",
-    "replacesSlug": "assault-armour",
-    "leagueLegal": false
+    "class": "Type Ace (Steel)"
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "gX8WiWi1z3sGWafv",
@@ -79,11 +104,11 @@
     "default": 0
   },
   "_stats": {
-    "coreVersion": "13.351",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.39",
     "createdTime": 1710767205181,
-    "modifiedTime": 1778200830936,
+    "modifiedTime": 1789309252211,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

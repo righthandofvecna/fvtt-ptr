@@ -21,6 +21,7 @@ class ApplyEffectRuleElement extends RuleElementPTU {
             ),
             range: new ResolvableValueField({ required: false, nullable: false, initial: undefined }),
             even: new fields.BooleanField({ required: false, nullable: false, initial: false }),
+            linked: new fields.BooleanField({ required: false, nullable: false, initial: false }),
         };
     }
 
@@ -92,6 +93,10 @@ class ApplyEffectRuleElement extends RuleElementPTU {
                 const itemObject = grantedItem.toObject();
                 itemObject.system.effect ??= "";
                 itemObject.system.effect += `<blockquote>Applied by ${this.label ?? this.item.name} from ${this.actor.name}</blockquote>`;
+
+                if (this.linked) {
+                    foundry.utils.setProperty(itemObject, "flags.ptu.linked", true);
+                }
 
                 return itemObject;
             }
