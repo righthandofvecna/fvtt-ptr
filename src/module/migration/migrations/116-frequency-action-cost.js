@@ -106,6 +106,7 @@ export class Migration116FrequencyActionCost extends MigrationBase {
      */
     async updateItem(item) {
         if (!AFFECTED_TYPES.includes(item.type)) return;
+        if (!item.system) return;
 
         // Only migrate if frequency is still a legacy string
         if (typeof item.system.frequency !== "string") return;
