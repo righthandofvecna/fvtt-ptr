@@ -98,6 +98,7 @@ const GamePTU = {
             });
         }
 
+        game.ptu.tokenPanel.refresh({force: true});
         Hooks.on("targetToken", (user, _token, _targeted) => {
             if (user.id === game.user.id) game.ptu.tokenPanel.refresh();
         });
