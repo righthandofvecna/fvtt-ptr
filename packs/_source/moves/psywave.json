@@ -2,7 +2,7 @@
   "name": "Psywave",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Roll 1d4; on 1 the target loses HP equal to half the user's Level; on 2 the target loses HP equal to the user's Level; on 3 the target loses HP equal to 1.5x the user's level; on 4 the target loses HP equal to the user's Level doubled. Do not apply weakness or resistance, and do not apply Stats. Do apply Immunity.",

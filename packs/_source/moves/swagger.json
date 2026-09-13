@@ -2,7 +2,7 @@
   "name": "Swagger",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Raise the target's Attack by 2 Combat Stages. The target is Confused.",

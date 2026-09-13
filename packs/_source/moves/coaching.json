@@ -2,7 +2,7 @@
   "name": "Coaching",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user and any allies in the Burst have their Attack and Defense raised by 1 Combat Stage.",

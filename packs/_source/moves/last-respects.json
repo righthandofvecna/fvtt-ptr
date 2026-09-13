@@ -2,7 +2,7 @@
   "name": "Last Respects",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GhostIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "This attacks DB is increased by 4 for each Fainted ally in the user's Party (max 25) ",

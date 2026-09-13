@@ -2,7 +2,7 @@
   "name": "Fillet Away",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user increases Attack, Sp. Attack, and Speed Combat Stages by 2 and loses 50% of its Maximum HP.",

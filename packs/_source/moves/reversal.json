@@ -2,7 +2,7 @@
   "name": "Reversal",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "For each Injury the user has, Reversal's Damage Base is increased by 1.",

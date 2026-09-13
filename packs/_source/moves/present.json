@@ -2,7 +2,7 @@
   "name": "Present",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Roll 1d6; Present has a Damage Base equal to twice the result. On a result of 1, instead of taking damage the target gains 20 HP.",

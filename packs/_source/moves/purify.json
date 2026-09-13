@@ -2,7 +2,7 @@
   "name": "Purify",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target is cured of all Permanent and Volatile Statuses. For every status removed, the user recovers a Tick of Hit Points.",

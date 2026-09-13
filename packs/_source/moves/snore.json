@@ -2,7 +2,7 @@
   "name": "Snore",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Snore Flinches all legal targets on 15+. Snore may only be used by Sleeping users.",

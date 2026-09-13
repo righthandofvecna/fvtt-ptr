@@ -2,7 +2,7 @@
   "name": "Power Trip",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "This Move gains 2 to its Damage Base for every positive Combat Stage held by the user, to a maximum of Damage Base 20.",

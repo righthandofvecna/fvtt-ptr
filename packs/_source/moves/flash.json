@@ -2,7 +2,7 @@
   "name": "Flash",
   "type": "move",
   "img": "/systems/ptu/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Lower the Accuracy of all legal targets by 1. *Grants Glow",

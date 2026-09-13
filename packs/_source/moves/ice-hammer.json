@@ -2,7 +2,7 @@
   "name": "Ice Hammer",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": "GkwllhqsP3lPNs7O",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Lower the user's Speed by 1 Combat Stage.",

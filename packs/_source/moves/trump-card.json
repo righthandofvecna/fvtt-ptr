@@ -2,7 +2,7 @@
   "name": "Trump Card",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Whenever the user uses Trump Card, the user gains a Trump Count after the attack is resolved. Trump Card's Damage Base is increased by 2 for each Trump Count.",

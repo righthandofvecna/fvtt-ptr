@@ -2,7 +2,7 @@
   "name": "Clear Smog",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target's Combat Stages are reset to their defaults, and all Coats on the target are destroyed. Clear Smog cannot miss.",

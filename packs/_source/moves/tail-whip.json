@@ -2,7 +2,7 @@
   "name": "Tail Whip",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "All legal targets have their Defense lowered by 1 Combat Stage.",

@@ -2,7 +2,7 @@
   "name": "Noble Roar",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Noble Roar lowers all legal targets' Attack and Special Attack by 1 Combat Stage.",

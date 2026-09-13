@@ -2,7 +2,7 @@
   "name": "Revival Blessing",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target is immediately cured of up to 5 injuries and healed to half their Maximum Hit Points. Revival Blessing must target a Fainted Pokémon. Revival Blessing does not restore the Frequency of Healing Wish, Lunar Dance, or Revival Blessing. Injuries healed through Revival Blessing does not count toward the total number of Injuries that can be healed each day.",

@@ -2,7 +2,7 @@
   "name": "Force Palm",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Force Palm Paralyzes the target on 18+.",

@@ -2,7 +2,7 @@
   "name": "Furious Strikes",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "For each hit rolled on your Five Strike roll, the target of the attack has their Evasion reduced by 1 for one full round.\nLimitation: Melee or Short Ranged Weapons Only",

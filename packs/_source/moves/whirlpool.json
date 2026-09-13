@@ -2,7 +2,7 @@
   "name": "Whirlpool",
   "type": "move",
   "img": "/systems/ptu/css/images/types2/WaterIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target is put in a Vortex.",

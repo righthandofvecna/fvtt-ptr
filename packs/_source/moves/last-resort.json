@@ -2,7 +2,7 @@
   "name": "Last Resort",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Last Resort can only be used after the user has performed 5 other different Moves in its Move List during a single fight, without being switched out.",

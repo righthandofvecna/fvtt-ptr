@@ -2,7 +2,7 @@
   "name": "Gouge",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If both hits of Gouge successfully hit the target, the target gains an Injury.\nLimitation: Small Melee and Short Ranged Weapons Only",

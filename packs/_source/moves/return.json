@@ -2,7 +2,7 @@
   "name": "Return",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Return’s Damage Base is equal to 4 plus two times the number of allies that have hit the target since the end of this Pokémon’s last turn (to a maximum of DB 12).",

@@ -2,7 +2,7 @@
   "name": "Belly Drum",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user gains 6 Attack Combat Stages and loses HP equal to 1/2 of their Max HP.",

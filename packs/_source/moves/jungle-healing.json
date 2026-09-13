@@ -2,7 +2,7 @@
   "name": "Jungle Healing",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GrassIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user and any allies in the burst gain Hit Points equal to 1/4 of their Maximum Hit Point Value, and are cured of any Persistent or Volatile Status Conditions.",

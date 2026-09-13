@@ -2,7 +2,7 @@
   "name": "Grassy Terrain",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GrassIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The area becomes Grassy for 5 rounds. While Grassy, all Pokémon and Trainers standing on the ground recover 1/10th of their maximum Hit Points at the start of every turn, and Grass-Type attacks performed by grounded Pokémon and Trainers gain a +10 bonus to Damage Rolls.",

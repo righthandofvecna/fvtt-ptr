@@ -2,7 +2,7 @@
   "name": "Sparkling Aria",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/WaterIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "When you hit a target with Sparkling Aria, the user may choose to deal no damage and instead cures that target of Burn, Confusion, Infatuation, Rage, or Provocation.",

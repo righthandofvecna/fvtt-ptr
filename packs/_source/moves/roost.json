@@ -2,7 +2,7 @@
   "name": "Roost",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FlyingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user regains HP equal to half of its full HP. If the user is a Flying Type, it loses the Flying Type until the start of their next turn.",

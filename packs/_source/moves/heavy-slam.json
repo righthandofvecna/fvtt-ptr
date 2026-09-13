@@ -2,7 +2,7 @@
   "name": "Heavy Slam",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/SteelIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "For each weight class the user is above the target, increase Heavy Slam's Damage Base by 2.",

@@ -2,7 +2,7 @@
   "name": "Captivate",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Captivate lowers the target's Special Attack by 2 Combat Stages. Captivate may not affect something that is the same gender as the user or something that is genderless.",

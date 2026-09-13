@@ -2,7 +2,7 @@
   "name": "Glaive Rush",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Until the end of the user's next turn, all Foes succeed Accuracy Checks against the User and deal damage as if one step more effective.",

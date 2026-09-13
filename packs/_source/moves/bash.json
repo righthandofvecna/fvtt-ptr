@@ -2,7 +2,7 @@
   "name": "Bash!",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Bash! lowers the target's Initiative to 0 for 1 full round on 15+.",

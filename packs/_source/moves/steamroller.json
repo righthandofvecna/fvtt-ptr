@@ -2,7 +2,7 @@
   "name": "Steamroller",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Steamroller Flinches the target on 15+. If the target is Small, Steamroller deals an additional +5 Damage.",

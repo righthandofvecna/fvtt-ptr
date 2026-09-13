@@ -2,7 +2,7 @@
   "name": "Clangorous Soul",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user loses 1/3rd of their Max Hit Points and has each of its stats raised by 1 Combat Stage.",

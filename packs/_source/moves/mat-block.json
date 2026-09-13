@@ -2,7 +2,7 @@
   "name": "Mat Block",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the user or an adjacent ally is hit by a damaging attack, the user may use Mat Block. The attack instead does not hit any targets, and it deals no damage and has no effect. You may only use Mat Block during the first round of an encounter",

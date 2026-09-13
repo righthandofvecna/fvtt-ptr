@@ -2,7 +2,7 @@
   "name": "Power Shift",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user's Attack stat and Defense stat are switched and the user's Special Attack stat and Special Defense stat are switched. These changes last for the remainder of the scene, or until the user is switched out or Fainted.",

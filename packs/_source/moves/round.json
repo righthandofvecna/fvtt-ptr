@@ -2,7 +2,7 @@
   "name": "Round",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Round's Damage Base is equal to 6, plus 2 more for each use of Round by any Trainer or Pokémon this round, up to a maximum of Damage Base 12 (3d12+10 / 30).",

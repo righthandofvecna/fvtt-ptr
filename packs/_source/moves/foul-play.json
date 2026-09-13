@@ -2,7 +2,7 @@
   "name": "Foul Play",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target reveals its Attack stat. When calculating damage, add the target's Attack stat instead of the user's Attack stat.",

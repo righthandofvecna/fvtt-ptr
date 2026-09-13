@@ -2,7 +2,7 @@
   "name": "Thousand Arrows",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GroundIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "When calculating Weakness and Resistance for Thousand Arrows, Flying-Typed targets calculate damage as if Ground was neutral to Ice. Thousand Arrows ignores the Levitate Ability, The target is knocked down to ground level, and loses all Sky or Levitate Speeds for 3 turns. During this time, they may be hit by Ground-Type Moves even if normally immune.",

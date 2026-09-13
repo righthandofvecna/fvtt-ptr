@@ -2,7 +2,7 @@
   "name": "Spotlight",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Until the end of the user's next turn, the target is Blinded and Vulnerable.",

@@ -2,7 +2,7 @@
   "name": "Phantom Force",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GhostIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Set-Up Effect: The user is removed from the field, and their turn ends. Resolution Effect: Phantom Force's user appears adjacent to any legal target on the field, ignoring Movement Capabilities, and then uses Phantom Force's attack. Phantom Force cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effect, and Intercepts may not be attempted in response.",

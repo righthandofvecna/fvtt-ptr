@@ -2,7 +2,7 @@
   "name": "Fell Stinger",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
-  "folder": "15Q3AhBTZ2qx24UK",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the user successfully knocks out the target with Fell Stinger, raise the user's Attack by 2 Combat Stages.",

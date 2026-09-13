@@ -2,7 +2,7 @@
   "name": "Dragon Energy",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "For each 10% of HP the user is missing, Dragon Energy's Damage Base is reduced by 1.",

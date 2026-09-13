@@ -2,7 +2,7 @@
   "name": "Headlong Rush",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GroundIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user's Defense and Special Defense are each lowered by 1 Combat Stage.\nHeadlong Rush may be used as a Free Action at the end of a Sprit Maneuver taken as a Standard Action, as long as the user Shifted as least 3 meters in a straight line towards the target. When used this way, Headlong Rush Trips the target on a hit",

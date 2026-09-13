@@ -2,7 +2,7 @@
   "name": "Gastro Acid",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target's Ability is disabled until the end of the encounter. If the target has more than one ability, you choose one of them to disable.",

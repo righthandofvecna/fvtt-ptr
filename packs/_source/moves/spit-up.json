@@ -2,7 +2,7 @@
   "name": "Spit Up",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "For each Stockpiled Count the user has, Spit Up's Damage Base is increased by 8. If the user has no Stockpiled count, Spit Up cannot be used.",

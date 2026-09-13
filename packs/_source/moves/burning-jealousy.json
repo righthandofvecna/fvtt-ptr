@@ -2,7 +2,7 @@
   "name": "Burning Jealousy",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "After Burning Jealousy has resolved, the user may choose to Burn foes within 5m that have had any Combat Stages raised since the beginning of that foe's last turn. This Effect may trigger only once per Scene.",

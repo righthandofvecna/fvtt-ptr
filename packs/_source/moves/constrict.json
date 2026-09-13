@@ -2,7 +2,7 @@
   "name": "Constrict",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Lower the target's Speed by 1 Combat Stage. Constrict may be used as a Rapid Action against targets the user is Grappling and automatically hits when performed this way.",

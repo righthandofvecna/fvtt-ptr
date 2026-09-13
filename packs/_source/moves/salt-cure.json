@@ -2,7 +2,7 @@
   "name": "Salt Cure",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/RockIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target becomes Salt Cured. This attack is one step more effective on Water and Steel types.\n\n@Embed[Compendium.ptu.effects.Item.goLSpno4l7EqYspe]",

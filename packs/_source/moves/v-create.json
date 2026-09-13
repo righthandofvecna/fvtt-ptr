@@ -2,7 +2,7 @@
   "name": "V-Create",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Lowers the user's Defense, Special Defense, and Speed by 1 Combat Stage each.",

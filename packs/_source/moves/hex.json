@@ -2,7 +2,7 @@
   "name": "Hex",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GhostIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Once a Scene, if Hex's target has a Status Affliction, you may have Hex's Damage Base be 13 instead (4d10+10 / 35)",

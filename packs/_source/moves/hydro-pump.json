@@ -2,7 +2,7 @@
   "name": "Hydro Pump",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/WaterIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target is pushed away from the user 3 meters.",

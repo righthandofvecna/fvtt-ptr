@@ -2,7 +2,7 @@
   "name": "Shadow Bone",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GhostIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Lower the target's Defense by 1 Combat Stage on a 17+. Counts as a Bone Move for Cubone/Marowak's Abilities, etc.",

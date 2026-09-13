@@ -2,7 +2,7 @@
   "name": "Parabolic Charge",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/ElectricIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user gains HP equal to half of the total damage the user dealt to all legal targets.",

@@ -2,7 +2,7 @@
   "name": "Sacred Fire",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Sacred Fire Burns the target on Even-Numbered Rolls.",

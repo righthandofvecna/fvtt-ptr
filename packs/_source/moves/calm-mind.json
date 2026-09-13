@@ -2,7 +2,7 @@
   "name": "Calm Mind",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Raise the user's Special Attack and Special Defense by 1 Combat Stage each.",

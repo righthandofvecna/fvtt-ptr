@@ -2,7 +2,7 @@
   "name": "Crush Grip",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "For every 10% the target is below their full Hit Points, Crush Grip's Damage Base is reduced by 1.",

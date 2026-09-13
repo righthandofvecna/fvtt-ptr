@@ -2,7 +2,7 @@
   "name": "Echoed Voice",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If Echoed Voice was used by any Pokémon or Trainer in the Encounter on the previous round, increase its Damage Base by 4. If Echoed Voice was used by any Pokémon or Trainers during both the previous two rounds, increase its Damage Base by 8.",

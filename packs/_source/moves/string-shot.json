@@ -2,7 +2,7 @@
   "name": "String Shot",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Lower the Speed of all legal targets by 2 Combat Stages. If this lowers their Speed Combat Stage to -6, or if their Speed Combat Stage was already at -6, they are instead Stuck. *Grants Threaded",
