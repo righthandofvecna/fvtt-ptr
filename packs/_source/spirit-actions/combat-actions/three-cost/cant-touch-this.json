@@ -43,7 +43,7 @@
       "standard": false,
       "rapid": false,
       "shift": false,
-      "free": false,
+      "free": true,
       "extended": false
     },
     "ap": {
