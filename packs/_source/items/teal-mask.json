@@ -1,13 +1,20 @@
 {
-  "folder": null,
   "name": "Teal Mask",
   "type": "item",
   "img": "systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "",
-    "effect": "While Ogerpon is holding this, it's Grass Type moves DB are increased by 1.",
+    "effect": "While Ogerpon is holding this, its Grass Type moves DB are increased by 1.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "grass-damage-base",
+        "value": 1
+      }
+    ],
     "enabled": true,
     "slug": "teal-mask",
     "schema": {
@@ -26,9 +33,11 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Held Item"
+    ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -57,7 +66,8 @@
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "ownership": {
@@ -65,7 +75,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
