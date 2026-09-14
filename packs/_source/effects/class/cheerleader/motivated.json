@@ -1,0 +1,67 @@
+{
+  "folder": "NnfaFh8VNQHvCKdr",
+  "name": "Motivated",
+  "type": "effect",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Pokémon or Trainers may give up the Motivated condition as a Free Action to increase a Combat Stage that is below its Default Value (usually 0 CS) by +1 CS.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "motivated",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 0,
+      "unit": "encounter",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1728098434033,
+    "modifiedTime": 1789293549302,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "gLauExV34WJ0NvRX",
+  "sort": 150000,
+  "ownership": {
+    "default": 0
+  }
+}

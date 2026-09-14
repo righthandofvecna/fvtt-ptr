@@ -33,7 +33,7 @@ export class CompendiumBrowserItemsTab extends CompendiumBrowserTab {
             indexFields
         )) {
             for (const itemData of index) {
-                if (itemData.type !== "item") continue;
+                if (itemData.type !== "item" && itemData.type !== "pokeball") continue;
                 if (!this.hasAllIndexFields(itemData, indexFields)) continue;
 
                 const source = itemData.system.source?.value ?? "";

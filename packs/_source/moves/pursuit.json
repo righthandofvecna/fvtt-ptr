@@ -2,7 +2,7 @@
   "name": "Pursuit",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If an adjacent foe Shifts away without Disengaging, or a foe attempts to leave the Scene, Pursuit may be triggered as a Full Action Reaction. If a foe is Recalled or Switched Out, Pursuit may be triggered as a Full Action Interrupt. When triggered, the user may Shift with a +5 bonus to all movement speeds, ending adjacent to the triggering foe. The user may then attack with Pursuit, with a Damage Base of 8 (2d8+10 / 19).",

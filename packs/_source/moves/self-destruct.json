@@ -2,7 +2,7 @@
   "name": "Self-Destruct",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user's HP is set to -50% of its full HP. This HP loss may not be prevented or reduced in any way. The user's loyalty may be lowered.",

@@ -207,6 +207,9 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
         .filter(o => o.startsWith("self:"))
         .map(o => o.replace(/^self/, "origin"));
 
+    // One shared group ID for all linked effects from this single damage application.
+    const linkedGroupId = foundry.utils.randomID();
+
     let totalActualDamageDealt = 0;
 
     for (const token of targets) {
@@ -277,6 +280,8 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
         });
         totalActualDamageDealt += Math.max(0, hpDamage ?? 0);
 
+        stampLinkedGroup(applyEffectsTarget, linkedGroupId);
+
         if (applyEffectsTarget.length > 0) {
             const newItems = await contextClone.createEmbeddedDocuments("Item", applyEffectsTarget);
             if (newItems.length > 0)
@@ -302,6 +307,8 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
         if (!a[b.slug]) a[b.slug] = b;
         return a;
     }, {}));
+
+    stampLinkedGroup(applyEffectsOrigin, linkedGroupId);
 
     if (applyEffectsOrigin.length > 0) {
         const newItems = await message.actor.createEmbeddedDocuments("Item", applyEffectsOrigin);
@@ -421,6 +428,21 @@ async function shiftAdjustDamage(message, targets, mode) {
         close: () => {
         },
     }).render(true);
+}
+
+/**
+ * Stamps a shared linkedGroup ID onto any effects marked as linked by their
+ * ApplyEffect rule element (`flags.ptu.linked = true`).
+ *
+ * @param {object[]} effects  Array of item data objects to stamp.
+ * @param {string}   groupId  The shared group identifier for this use.
+ */
+function stampLinkedGroup(effects, groupId) {
+    for (const e of effects) {
+        if (foundry.utils.getProperty(e, "flags.ptu.linked")) {
+            foundry.utils.setProperty(e, "flags.ptu.linkedGroup", groupId);
+        }
+    }
 }
 
 export { DamageMessagePTU, applyDamageFromMessage }

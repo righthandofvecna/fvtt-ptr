@@ -2,7 +2,7 @@
   "name": "Hyperspace Hole",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Make and resolve of Hyperspace Hole's attacks separately. In between each attack, the user may Shift using their Teleporter capability, ending the Shift next to a legal target. Interrupts may not be triggered against Hyperspace Hole..",

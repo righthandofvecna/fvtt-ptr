@@ -2,11 +2,13 @@
   "name": "Commander's Voice",
   "system": {
     "origin": "",
-    "effect": "You may give two different [Orders] as a single Standard Action, or you may give one set of [Orders] as a Rapid Action.\nSpecial - If this is used to use @UUID[Compendium.ptu.feats.Item.bokpJe67zY99O0Jd]{Focused Command} and another [Order] that has targets, the second Order applies to both Pokémon you are commanding that turn. Commander’s Voice doesn’t allow you to use Focused Command as a Rapid Action.",
+    "effect": "You may give two different [Orders] as a single Standard Action, or you may give one set of [Orders] as a Rapid Action.\nSpecial - If this is used to use @UUID[Compendium.ptu.feats.Item.bokpJe67zY99O0Jd]{Focused Command} and another [Order] that has targets, the second Order applies to both Pokémon you are commanding that turn. Commander’s Voice doesn’t allow you to use Focused Command as a Rapid Action.\n\n<strong>Your Orders:</strong> @ItemSearch[keyword=\"Orders\"]",
     "snippet": "",
     "rules": [],
     "enabled": true,
     "slug": "commanders-voice",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -47,6 +49,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Two Features with the [Orders] tag"
     ],
@@ -55,10 +58,7 @@
     "class": "",
     "name": "Commander's Voice",
     "automation": [],
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "useCount": 0
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -76,14 +76,15 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.39",
+    "coreVersion": "14.367",
     "createdTime": 1683368078901,
-    "modifiedTime": 1778200830478,
+    "modifiedTime": 1789307113029,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
   },
   "sort": 36100000,
-  "_id": "Wvs66BTJ7t6965f2"
+  "_id": "Wvs66BTJ7t6965f2",
+  "folder": null
 }

@@ -2,7 +2,7 @@
   "name": "Ice Ball",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": "GkwllhqsP3lPNs7O",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user continues to use Ice Ball on each of its turns until they miss any target with Ice Ball or are not able to hit any target with Ice Ball during their turn. Each successive use of Ice Ball increases Ice Ball's Damage Base by 3 to a maximum of Damage Base 15.",

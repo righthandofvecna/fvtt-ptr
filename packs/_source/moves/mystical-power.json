@@ -2,7 +2,7 @@
   "name": "Mystical Power",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Increase the user's highest non-HP stat by 1 Combat Stage in their highest non-HP stat.",

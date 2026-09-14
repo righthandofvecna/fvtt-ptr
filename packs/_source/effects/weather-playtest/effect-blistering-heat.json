@@ -74,9 +74,9 @@
       {
         "key": "EphemeralEffect",
         "predicate": [
-          "target:types:water"
+          "self:types:water"
         ],
-        "affects": "target",
+        "affects": "origin",
         "selectors": "fire-damage-received",
         "uuid": "Compendium.ptu.effects.Item.YirEcq7HUwGSPBBO"
       },
@@ -94,6 +94,8 @@
     ],
     "enabled": true,
     "slug": "effect-blistering-heat",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -124,9 +126,7 @@
       "show": true
     },
     "badge": null,
-    "context": null,
-    "contentSet": "",
-    "replacesSlug": ""
+    "context": null
   },
   "effects": [],
   "sort": 0,
@@ -135,15 +135,17 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
+    "systemVersion": "4.4.3.39",
     "createdTime": 1708178841231,
-    "modifiedTime": 1710763642819,
+    "modifiedTime": 1789275601192,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

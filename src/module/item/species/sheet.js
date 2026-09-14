@@ -267,12 +267,25 @@ class PTUSpeciesSheet extends PTUItemSheet {
             return;
         }
 
+        // if the drop is external, but doesn't have a uuid, infer the uuid
+        if (data.type == "Item" && !data.uuid && data?.data?._id) {
+            data.uuid = `Item.${data.data._id}`;
+        }
+
         // External drops: compendium browser, world sidebar, other species sheets, actor sheets, etc.
         if (data.type == "Item" && data.uuid) {
             const item = await fromUuid(data.uuid);
 
             if (!item) return;
-            if (!this.allowedDropTypes.includes(item.type)) return;
+            if (!this.allowedDropTypes.includes(item.type)) {
+                ui.notifications.warn(`Cannot drop item of type ${item.type} onto species sheet.`);
+                return;
+            }
+
+            if (!item.pack) {
+                const confirmation = await foundry.applications.api.DialogV2.confirm({ window: {title: "Add Non-Compendium Item?"}, content: "<p>Are you sure you want to reference this non-compendium item?</p>"});
+                if (!confirmation) return;
+            }
 
             switch (item.type) {
                 case "capability": {
@@ -328,6 +341,7 @@ class PTUSpeciesSheet extends PTUItemSheet {
                 }
             }
         }
+        console.warn("PTU | Dropped item was not handled:", data);
     }
 
     /** @override */

@@ -2,7 +2,7 @@
   "name": "Mud Shot",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GroundIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target's Speed is lowed by 1 Combat Stage.",

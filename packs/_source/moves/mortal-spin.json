@@ -2,7 +2,7 @@
   "name": "Mortal Spin",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user breaks all Grapples and Seeded effects at the end of this turn. All legal targets are now poisoned.",

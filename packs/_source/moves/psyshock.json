@@ -2,7 +2,7 @@
   "name": "Psyshock",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "When calculating damage, the target subtracts their Defense from Psyshock's damage instead of their Special Defense. Psyshock is still otherwise Special (Special Evasion is used to avoid it, Mirror Coat can reflect it, etc.)",

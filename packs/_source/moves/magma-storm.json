@@ -2,7 +2,7 @@
   "name": "Magma Storm",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target is put in a Vortex; this effect occurs even if Magma Storm misses its target.",

@@ -1,0 +1,103 @@
+{
+  "name": "Rain Ball",
+  "system": {
+    "origin": "",
+    "effect": "-25 Modifier if the weather is rainy when used.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "manual"
+        ],
+        "label": "Rainy?",
+        "hideIfDisabled": false,
+        "selectors": "{item|id}-capture-roll",
+        "value": -25
+      }
+    ],
+    "enabled": true,
+    "slug": "rain-ball",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:41.635Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Poke Ball"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "300",
+    "consumable": "0",
+    "modifier": null,
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Rain Ball",
+    "useCount": 0
+  },
+  "type": "pokeball",
+  "img": "systems/ptu/static/images/item_icons/rain ball.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "14.367",
+    "createdTime": 1683368843698,
+    "modifiedTime": 1789352690098,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 40126,
+  "_id": "QsrRnjkh1RRTfiRn",
+  "folder": "IVRTgXiB0UTigTh5"
+}

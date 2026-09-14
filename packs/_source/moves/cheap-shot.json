@@ -2,7 +2,7 @@
   "name": "Cheap Shot",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Cheap Shot cannot miss.\nLimitation: Small Melee and Short Ranged Weapons Only",

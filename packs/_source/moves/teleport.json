@@ -2,7 +2,7 @@
   "name": "Teleport",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user Teleports up to X meters, where X is its Teleporter Capability. Any Move that targeted Teleport's user continue through the desired target's space if the Move allows for it as if the user hadn't been there; single target moves simply miss. *Grants @UUID[Compendium.ptu.capabilities.Item.ylhIk5i0Xtp65asH]",

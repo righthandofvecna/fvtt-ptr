@@ -2,7 +2,7 @@
   "name": "Dig",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GroundIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Set-Up Effect: The user shifts 25 meters underground and their turn ends. Resolution Effect: The user may shift horizontally using their burrow or overland speed, and then shifts 25 meters straight up. Upon reaching the surface, the user attacks with Dig, creating a Burst 1. *Grants: Burrow +3",

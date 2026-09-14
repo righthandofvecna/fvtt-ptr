@@ -2,7 +2,7 @@
   "name": "Foresight",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Foresight may be activated as a Rapid Action on the user's turn. For the rest of the turn, the user's Normal-Type and Fighting-Type Moves can hit and affect Ghost-Type targets, and the user can see through the Illusion Ability, Moves with the Illusion keyword, and effect created by the Illusionist Capability, ignoring all effect from those.",

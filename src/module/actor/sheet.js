@@ -86,6 +86,67 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
         return this._onDropItem({ preventDefault: () => { } }, data);
     }
 
+    /**
+     * Materialize a phantom item: create it as a real owned item on the actor and return it.
+     * Phantom items are synthetic items shown on the sheet but not persisted to the database.
+     * @param {string} itemId  The data-item-id of the phantom item (struggle realId or spirit action compendium _id)
+     * @returns {Promise<Item|null>}
+     */
+    async _materializePhantomItem(itemId) {
+        // Actor-level phantoms: struggle variants registered in prepareMoves
+        const actorPhantom = this.actor.phantomItems?.get(itemId);
+        // Sheet-level phantoms: spirit actions added in getData
+        const sheetPhantom = this._phantomSpiritActions?.get(itemId);
+
+        const phantom = actorPhantom ?? sheetPhantom;
+        if (!phantom) return null;
+
+        let itemData;
+
+        if (actorPhantom) {
+            // For struggle phantoms, build a typed copy from the compendium base entry
+            const ptuFlags = actorPhantom.flags?.ptu ?? {};
+            const sourceUuid = ptuFlags.sourceUuid;
+            const variantData = ptuFlags.phantomData;
+
+            const baseItem = sourceUuid ? await fromUuid(sourceUuid) : null;
+            if (baseItem && variantData) {
+                itemData = baseItem.toObject();
+                // Apply variant-specific overrides
+                itemData.name = variantData.name;
+                itemData.img = variantData.img;
+                itemData.system.type = variantData.type;
+                itemData.system.category = variantData.category;
+                itemData.system.range = variantData.range;
+                itemData.system.ac = variantData.ac;
+                itemData.system.damageBase = variantData.damageBase;
+                itemData.system.isStruggle = true;
+                itemData.system.isRangedStruggle = variantData.isRangedStruggle ?? false;
+            } else {
+                // Fallback: use the phantom's own data directly
+                itemData = actorPhantom.toObject();
+            }
+        } else {
+            // Spirit action phantoms are plain data objects stored in _phantomSpiritActions
+            itemData = foundry.utils.duplicate(sheetPhantom);
+        }
+
+        // Strip phantom metadata so the created item is a normal owned item
+        delete itemData._id;
+        if (itemData.flags?.ptu) {
+            delete itemData.flags.ptu.phantom;
+            delete itemData.flags.ptu.sourceUuid;
+            delete itemData.flags.ptu.phantomData;
+        }
+        // Struggle variants should become regular owned moves once materialized
+        if (itemData.system?.isStruggle) {
+            itemData.system.isStruggle = false;
+        }
+
+        const [created] = await this.actor.createEmbeddedDocuments('Item', [itemData]);
+        return created ?? null;
+    }
+
     async openNotes() {
         const folder = await (async () => {
             const folderId = game.settings.get("ptu", "worldNotesFolder");

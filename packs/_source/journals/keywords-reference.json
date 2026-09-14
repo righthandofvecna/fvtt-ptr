@@ -1409,6 +1409,53 @@
         "modifiedTime": 1782606066454,
         "lastModifiedBy": "ptubuilder000000"
       }
+    },
+    {
+      "sort": 3400000,
+      "name": "Legendary",
+      "type": "keyword",
+      "_id": "SxkoEAJORobfAqo1",
+      "system": {
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "predicate": [],
+            "label": "Legendary",
+            "hideIfDisabled": false,
+            "selectors": "capture-dc",
+            "value": -30
+          }
+        ]
+      },
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>This is a Legendary Pokemon. Its Capture DC is reduced by 30.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.39",
+        "createdTime": 1789287802718,
+        "modifiedTime": 1789287853517,
+        "lastModifiedBy": "ptubuilder000000",
+        "duplicateSource": null,
+        "exportSource": null
+      }
     }
   ],
   "folder": null,

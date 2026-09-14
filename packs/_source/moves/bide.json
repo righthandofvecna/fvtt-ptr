@@ -2,7 +2,7 @@
   "name": "Bide",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user may use Bide as a Reaction Move upon being Hit by a Damaging Move, using up their next Standard Action as Normal. During the next turn where they have an available Standard Action, the user may Shift and then use Bide, causing all Adjacent foes to lose X HP, where X is the amount of Damage taken since declaring use of Bide (Loss of life through effects such as Poison is not 'Damage'). Until Bide is released, the user may not voluntarily trigger any other effects that would use a Standard Action or prevent a Standard Action from being used.",

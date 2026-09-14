@@ -114,6 +114,9 @@ async function applyEffectsFromUsage({ message }) {
 
     const domains = ["apply-effects", ...itemDomains];
 
+    // One shared group ID for all linked effects from this single use.
+    const linkedGroupId = foundry.utils.randomID();
+
     // Targets: prefer user targets, fall back to controlled tokens.
     const rawTargets = game.user.targets.size > 0
         ? [...game.user.targets]
@@ -137,6 +140,8 @@ async function applyEffectsFromUsage({ message }) {
                 return acc;
             }, {})
         );
+
+        stampLinkedGroup(effects, linkedGroupId);
 
         if (effects.length > 0) {
             const newItems = await targetActor.createEmbeddedDocuments("Item", effects);
@@ -169,6 +174,8 @@ async function applyEffectsFromUsage({ message }) {
         }, {})
     );
 
+    stampLinkedGroup(originEffects, linkedGroupId);
+
     if (originEffects.length > 0) {
         const newItems = await originActor.createEmbeddedDocuments("Item", originEffects);
         if (newItems.length > 0) {
@@ -180,6 +187,21 @@ async function applyEffectsFromUsage({ message }) {
                 speaker: ChatMessage.getSpeaker({ actor: originActor }),
                 whisper: ChatMessage.getWhisperRecipients("GM"),
             });
+        }
+    }
+}
+
+/**
+ * Stamps a shared linkedGroup ID onto any effects that were marked as linked
+ * by their ApplyEffect rule element (`flags.ptu.linked = true`).
+ *
+ * @param {object[]} effects   Array of item data objects to stamp.
+ * @param {string}   groupId   The shared group identifier for this use.
+ */
+function stampLinkedGroup(effects, groupId) {
+    for (const e of effects) {
+        if (foundry.utils.getProperty(e, "flags.ptu.linked")) {
+            foundry.utils.setProperty(e, "flags.ptu.linkedGroup", groupId);
         }
     }
 }

@@ -2,7 +2,7 @@
   "name": "Techno Blast",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Techno Blast's Type can be any Type while holding the appropriate Drive item or Plate item.",

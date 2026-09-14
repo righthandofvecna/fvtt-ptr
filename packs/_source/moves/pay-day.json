@@ -2,7 +2,7 @@
   "name": "Pay Day",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Pay Day scatters metal coins equal in value to 1d8 times the user's level. If it is a trainer battle, the winner of the battle gets to pick up the coins.",

@@ -2,7 +2,7 @@
   "name": "Clanging Scales",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user adds half their Defense Stat to Clanging Scale's Damage Roll. After the Move is resolved, the user's Defense is lowered by 1 Combat Stage.",

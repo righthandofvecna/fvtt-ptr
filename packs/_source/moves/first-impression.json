@@ -2,7 +2,7 @@
   "name": "First Impression",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "You may only use First Impression with Priority upon joining an encounter; if you do, First Impression Flinches the target. Switching out resets the requirement of joining an encounter.",

@@ -2,7 +2,7 @@
   "name": "Psyblade",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "This attacks DB is increased to 12 while the user is on Electric Terrain.",

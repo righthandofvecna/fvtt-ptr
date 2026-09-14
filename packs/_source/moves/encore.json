@@ -2,7 +2,7 @@
   "name": "Encore",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Roll 1d6. On a result of 1 or 2, the target becomes Confused; on a result of 3 or 4 the target becomes Suppressed; on a result of 5 or 6 the target becomes Enraged.",

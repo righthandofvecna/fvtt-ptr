@@ -2,7 +2,7 @@
   "name": "Spicy Extract",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GrassIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target's Attack Combat Stages are increased by 2. The targets Defense Combat Stages are lowered by 2.",

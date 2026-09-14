@@ -2,7 +2,7 @@
   "name": "Sunsteel Strike",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/SteelIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "This Move ignores any Abilities that would cause it to fail or miss; those Abilities cannot be activated in response to Sunsteel Strike (ex: Dodge, Wonder Guard)",

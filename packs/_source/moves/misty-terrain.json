@@ -2,7 +2,7 @@
   "name": "Misty Terrain",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FairyIC_Icon.png",
-  "folder": "dyo8VgtZvOSLvFHk",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The area becomes Misty for 5 turns, While Misty, all Pokemon and Trainers standing on the ground ignore the first turn of all Status Afflictions, and Dragon-type attacks targeting or origination from a grounded Pokemon or Trainer take a -10 Penalty to Damage Rolls.",

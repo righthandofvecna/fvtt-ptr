@@ -2,7 +2,7 @@
   "name": "Psychic",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target is Pushed 1 meter in any direction. Psychic lowers the target's Special Defense 1 Combat Stage on 17+.  Grants Telekinetic.",

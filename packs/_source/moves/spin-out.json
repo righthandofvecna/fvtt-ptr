@@ -2,7 +2,7 @@
   "name": "Spin Out",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/SteelIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Lower the user's Speed by 2 Combat Stages. The User is removed from all Grapples and Seeded Conditions at the end of this attack.",

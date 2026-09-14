@@ -2,7 +2,7 @@
   "name": "Twineedle",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Twineedle Poisons the target on an Accuracy Check of 18+.",

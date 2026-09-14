@@ -127,6 +127,9 @@ async function applyEffectsFromAttack({ message, targets }) {
 
     const domains = ["apply-effects", ...itemDomains];
 
+    // One shared group ID for all linked effects from this single use.
+    const linkedGroupId = foundry.utils.randomID();
+
     // Apply effects to each hit target.
     for (const target of targets) {
         if (!target.actor) continue;
@@ -146,6 +149,8 @@ async function applyEffectsFromAttack({ message, targets }) {
                 return acc;
             }, {})
         );
+
+        stampLinkedGroup(effects, linkedGroupId);
 
         if (effects.length > 0) {
             const newItems = await target.actor.createEmbeddedDocuments("Item", effects);
@@ -178,6 +183,8 @@ async function applyEffectsFromAttack({ message, targets }) {
         }, {})
     );
 
+    stampLinkedGroup(originEffects, linkedGroupId);
+
     if (originEffects.length > 0) {
         const newItems = await message.actor.createEmbeddedDocuments("Item", originEffects);
         if (newItems.length > 0) {
@@ -194,6 +201,21 @@ async function applyEffectsFromAttack({ message, targets }) {
 
     // Do NOT mark the message resolved — keep the Apply Effects button available
     // for repeated use, consistent with the no-roll usage message behaviour.
+}
+
+/**
+ * Stamps a shared linkedGroup ID onto any effects marked as linked by their
+ * ApplyEffect rule element (`flags.ptu.linked = true`).
+ *
+ * @param {object[]} effects  Array of item data objects to stamp.
+ * @param {string}   groupId  The shared group identifier for this use.
+ */
+function stampLinkedGroup(effects, groupId) {
+    for (const e of effects) {
+        if (foundry.utils.getProperty(e, "flags.ptu.linked")) {
+            foundry.utils.setProperty(e, "flags.ptu.linkedGroup", groupId);
+        }
+    }
 }
 
 export { AttackMessagePTU, applyEffectsFromAttack }

@@ -586,6 +586,7 @@
       "move",
       "contestmove",
       "item",
+      "pokeball",
       "capability",
       "pokeedge",
       "dexentry",
@@ -640,7 +641,7 @@
           }
         },
         "actionCost": {
-          "standard": false,
+          "standard": true,
           "rapid": false,
           "shift": false,
           "free": false,
@@ -753,6 +754,16 @@
       "category": "",
       "cost": 0,
       "consumable": 0,
+      "subtype": "",
+      "container": false
+    },
+    "pokeball": {
+      "templates": ["base", "frequencyTracked"],
+      "quantity": 1,
+      "category": "",
+      "cost": 0,
+      "consumable": 0,
+      "modifier": 0,
       "subtype": "",
       "container": false
     },

@@ -2,7 +2,7 @@
   "name": "Fire Pledge",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If an ally uses Grass Pledge or Water Pledge, you may use Fire Pledge as Priority (Advanced) immediately after their turn to target the same foe. If used in conjunction with Grass Pledge, Fire Hazards are created in a Brust 1 around the target. If used in conjucntion with Water Pledge, a Rainbow is created that lasts for 5 rouns. Counsult the Pledge keyword for additional details.",

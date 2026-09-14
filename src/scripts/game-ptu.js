@@ -86,6 +86,31 @@ const GamePTU = {
         game.ptu.compendiumBrowser = new CompendiumBrowser();
         game.ptu.typeMatrix = new TypeMatrix()
 
+        // Pre-load all spirit actions for phantom display on actor sheets.
+        // The cache is an array of Item documents; sheets filter to unowned ones.
+        game.ptu.spiritActionCache = null;
+        const spiritActionPack = game.packs.get("ptu.spirit-actions");
+        if (spiritActionPack) {
+            spiritActionPack.getDocuments().then(docs => {
+                game.ptu.spiritActionCache = docs;
+            }).catch(err => {
+                console.error("PTU | Failed to load spirit action cache:", err);
+            });
+        }
+
+        
+        // because this rendering seems to be acting quite silly, we ensure the token panel is refreshed at multiple points
+        // TODO: figure out why without this, the token panel just sometimes doesn't appear until you select a token
+        let refreshed = false;
+        const refreshOnce = async () => {
+            if (!refreshed) {
+                await game.ptu.tokenPanel.refresh({force: true});
+                refreshed = true;
+            }
+        }
+        Hooks.once("renderAbstractSidebarTab", refreshOnce);
+        setTimeout(refreshOnce, 2500);
+
         Hooks.on("targetToken", (user, _token, _targeted) => {
             if (user.id === game.user.id) game.ptu.tokenPanel.refresh();
         });

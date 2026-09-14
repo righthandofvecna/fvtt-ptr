@@ -2,7 +2,7 @@
   "name": "Ion Deluge",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/ElectricIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "An Ion Cloud Hazard is dispersed in the targeted area. All Normal-Type Moves targeting into or originating from the Ion Cloud become Electric-Typed Moves.",

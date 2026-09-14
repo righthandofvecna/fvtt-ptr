@@ -2,7 +2,7 @@
   "name": "King's Shield",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/SteelIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the user is hit by an attack, the user may use King's Shield. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effect. In addition, if the triggering attack was Melee ranged, the attacker's Attack is lowered by 2 Combat Stages.",

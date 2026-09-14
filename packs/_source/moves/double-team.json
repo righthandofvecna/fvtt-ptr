@@ -2,7 +2,7 @@
   "name": "Double Team",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user gains 3 activations of Double Team. The user may either activate Double Team when being targeted by an attack to increase their Evasion by 2 against that attack or when making an attack to increase their Accuracy by 2 for that attack.",

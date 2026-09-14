@@ -11,9 +11,9 @@ class MigrationRunnerBase {
     /** @type {MigrationBase[]} */
     migrations = []
 
-    static LATEST_SCHEMA_VERSION = 0.117;
+    static LATEST_SCHEMA_VERSION = 0.120;
     static MINIMUM_SAFE_VERSION = 0.103;
-    static RECOMMENDED_SAFE_VERSION = 0.117;
+    static RECOMMENDED_SAFE_VERSION = 0.120;
 
     /**
      * @param {MigrationBase[]} migrations
@@ -77,14 +77,29 @@ class MigrationRunnerBase {
 
         for (const migration of migrations) {
             for (const currentItem of currentActor.items) {
-                await migration.preUpdateItem?.(currentItem, currentActor);
+                try {
+                    await migration.preUpdateItem?.(currentItem, currentActor);
+                } catch (err) {
+                    console.error(`PTU | Migration ${migration.version} (preUpdateItem) failed for item "${currentItem.name}" on actor "${currentActor.name}":`, err);
+                    throw err;
+                }
             }
         }
 
         for (const migration of migrations) {
-            await migration.updateActor?.(currentActor);
+            try {
+                await migration.updateActor?.(currentActor);
+            } catch (err) {
+                console.error(`PTU | Migration ${migration.version} (updateActor) failed for actor "${currentActor.name}":`, err);
+                throw err;
+            }
             for (const currentItem of currentActor.items) {
-                await migration.updateItem?.(currentItem, currentActor);
+                try {
+                    await migration.updateItem?.(currentItem, currentActor);
+                } catch (err) {
+                    console.error(`PTU | Migration ${migration.version} (updateItem) failed for item "${currentItem.name}" on actor "${currentActor.name}":`, err);
+                    throw err;
+                }
             }
         }
 
@@ -109,15 +124,29 @@ class MigrationRunnerBase {
         const current = foundry.utils.deepClone(itemSource);
 
         for (const migration of migrations) {
-            await migration.preUpdateItem?.(current);
+            try {
+                await migration.preUpdateItem?.(current);
+            } catch (err) {
+                console.error(`PTU | Migration ${migration.version} (preUpdateItem) failed for item "${current.name}":`, err);
+                throw err;
+            }
         }
 
         for (const migration of migrations) {
-            await migration.updateItem?.(current);
+            try {
+                await migration.updateItem?.(current);
+            } catch (err) {
+                console.error(`PTU | Migration ${migration.version} (updateItem) failed for item "${current.name}":`, err);
+                throw err;
+            }
         }
 
         if(itemSource.type === "dexentry") return current;
-        if (migrations.length > 0) this.updateSchemaRecord(current.system.schema, migrations.at(-1));
+        if (migrations.length > 0) {
+            current.system ??= {};
+            current.system.schema ??= { version: null, lastMigration: null };
+            this.updateSchemaRecord(current.system.schema, migrations.at(-1));
+        }
         
         return current;
     }

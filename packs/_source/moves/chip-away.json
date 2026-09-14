@@ -2,7 +2,7 @@
   "name": "Chip Away",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Ignore any Armor, Damage Reduction, or changes in the target's Defense or Special Defense (such as from Combat Stages) when calculating damage.",

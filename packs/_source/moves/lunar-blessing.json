@@ -2,7 +2,7 @@
   "name": "Lunar Blessing",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "All targets regain Hit Points equal to 25% of their respective Hit Point totals, and they are cured of all of their Status Ailments.",

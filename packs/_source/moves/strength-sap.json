@@ -2,7 +2,7 @@
   "name": "Strength Sap",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GrassIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user gains Hit Points equal to the higher of the target's Attack or Special Attack; the target then loses 1 Combat Stage in that Stat.\n\n@UUID[Compendium.ptu.effects.Item.EsSXR6WL6am3hLWI]\n@UUID[Compendium.ptu.effects.Item.kPWQIe8hEv6JIfEw]",

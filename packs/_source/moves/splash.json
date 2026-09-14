@@ -2,7 +2,7 @@
   "name": "Splash",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Shift Action - The user may make a single Jump, adding +1 to their Long Jump and High Jump values, and gains a +2 Bonus to Evasion until the end of their next turn. *Grants +1 Long Jump",

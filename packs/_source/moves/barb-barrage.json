@@ -2,7 +2,7 @@
   "name": "Barb Barrage",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target is Poisoned on a 17+. Once a Scene, if Barb Barrage's target has a Status Condition, you may choose to not roll for Five Strike. Instead, treat Barb Barrage as though it automatically rolled an 8 for Five Strike.",

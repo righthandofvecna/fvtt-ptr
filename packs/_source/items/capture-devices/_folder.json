@@ -1,0 +1,22 @@
+{
+  "type": "Item",
+  "folder": null,
+  "name": "Capture Devices",
+  "color": null,
+  "sorting": "a",
+  "_id": "IVRTgXiB0UTigTh5",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1789352242887,
+    "modifiedTime": 1789352242887,
+    "lastModifiedBy": "GFCVv4EMgQDa5fGR",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

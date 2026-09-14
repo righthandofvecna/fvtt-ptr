@@ -36,6 +36,10 @@ class PTUItem extends Item {
         return this.flags.ptu.grantedBy ? this.flags.ptu.grantedBy.onDelete != "detach" : false;
     }
 
+    get isWeatherEffect() {
+        return !!this.flags?.ptu?.weatherEffect;
+    }
+
     get hasAutomation() {
         return this.rules.length > 0 && this.rules.some((rule) => !rule.ignored);
     }
@@ -358,6 +362,16 @@ class PTUItem extends Item {
         if (actor) {
             const items = ids.flatMap((id) => actor.items.get(id) ?? []);
 
+            // Prevent UI deletion of items applied by the Weather system
+            if (!context.weatherEffect) {
+                for (const item of [...items]) {
+                    if (item.flags?.ptu?.weatherEffect) {
+                        ui.notifications.warn(`${item.name} cannot be deleted because it is applied by the Weather system.`);
+                        items.splice(items.indexOf(item), 1);
+                    }
+                }
+            }
+
             for (const item of [...items]) {
                 for (const rule of item.rules) {
                     await rule.preDelete?.({ pendingItems: items, context });
@@ -583,7 +597,7 @@ class PTUItem extends Item {
                 .join("");
         })();
 
-        const referenceEffect = this.referenceEffect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(`@UUID[${foundry.utils.duplicate(this.referenceEffect)}]`, { async: true }) : null;
+        const referenceEffect = this.referenceEffect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(`@UUID[${foundry.utils.duplicate(this.referenceEffect)}]`, { async: true, relativeTo: this }) : null;
 
         const chatData = {
             user: game.user._id,

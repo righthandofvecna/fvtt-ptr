@@ -2,7 +2,7 @@
   "name": "Roar of Time",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Roar of Time Slows all legal targets, even if the attack misses.",

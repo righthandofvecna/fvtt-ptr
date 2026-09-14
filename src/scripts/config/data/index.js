@@ -1,5 +1,6 @@
 export { typeEffectiveness } from "./effectiveness.js";
 export { levelProgression } from "./level-progression.js";
+export { trainerProgressions } from "./trainer-progression.js";
 export { natureData } from "./nature.js";
 export { pokemonData } from "./species.js";
 export { dbData } from "./damage-base.js";

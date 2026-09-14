@@ -2,7 +2,7 @@
   "name": "Body Press",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": "GoEUfOf3y8kkX6aj",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user's Defense Stat is added to the damage roll instead of the Attack Stat.",

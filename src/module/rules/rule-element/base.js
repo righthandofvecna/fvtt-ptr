@@ -265,9 +265,15 @@ class RuleElementPTU extends foundry.abstract.DataModel {
 
         // If the source is a string, parse it for injected properties
         if(typeof source === "string") {
-            const regex = /{(actor|item|rule)\|(.*)}/g;
+            const regex = /{(actor|item|trainer|rule)\|([^\}]*)}/g;
             function replaceFunc(_match, key, prop) {
-                const data = key === "rule" ? this.data : key === "actor" ? actor : key === "item" ? item : this.item;
+                const data = (()=>{
+                    if (key === "rule") return this.data;
+                    if (key === "actor") return actor;
+                    if (key === "trainer") return actor.trainer;
+                    if (key === "item") return item;
+                    return this.item;
+                })();
 
                 const property = prop.replace(regex, replaceFunc.bind(this));
 

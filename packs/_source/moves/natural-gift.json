@@ -2,7 +2,7 @@
   "name": "Natural Gift",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Refer to the Move Keywords Berry list. Natural Gift deals damage according to the Berry list and Natural Gift's Type is also defined there. The Berry's Food Buff is nullified and is not used.",

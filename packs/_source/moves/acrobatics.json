@@ -2,7 +2,7 @@
   "name": "Acrobatics",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FlyingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the user is not holding an item, Acrobatics instead has a Damage Base of 11 (3d10+10/27)",

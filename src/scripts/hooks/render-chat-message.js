@@ -23,10 +23,46 @@ export const RenderChatMessage = {
 
             // Wire up the "Apply Effects" button on usage messages (no-roll items/moves).
             if (message.flags?.ptu?.context?.type === "usage") {
-                $html.find(".button.apply-effects[data-action='apply-effects']").on("click", async event => {
+                const $applyButton = $html.find(".button.apply-effects[data-action='apply-effects']");
+
+                $applyButton.on("click", async event => {
                     event.preventDefault();
                     await applyEffectsFromUsage({ message });
                 });
+
+                // Hide the button until we confirm applicable effects exist for the origin actor.
+                $applyButton.hide();
+
+                (async () => {
+                    const originUUID = message.flags?.ptu?.origin?.actor;
+                    const itemUUID = message.flags?.ptu?.origin?.item;
+
+                    const originActor = originUUID ? await fromUuid(originUUID) : null;
+                    const item = itemUUID ? await fromUuid(itemUUID) : null;
+
+                    if (!originActor?.synthetics?.applyEffects) return;
+
+                    // Build domains — mirrors the logic in applyEffectsFromUsage.
+                    const itemDomains = item ? [
+                        `${item.id}-apply-effects`,
+                        `${item.slug}-apply-effects`,
+                    ] : [];
+                    if (item?.type === "move") {
+                        itemDomains.push(
+                            `${item.system.category.toLocaleLowerCase(game.i18n.lang)}-apply-effects`,
+                            `${item.system.type.toLocaleLowerCase(game.i18n.lang)}-apply-effects`,
+                            `${item.system.frequency?.type ?? "at-will"}-apply-effects`,
+                        );
+                    }
+                    const domains = ["apply-effects", ...itemDomains];
+
+                    const hasEffects = domains.some(domain => {
+                        const entry = originActor.synthetics.applyEffects[domain];
+                        return (entry?.target?.length > 0) || (entry?.origin?.length > 0);
+                    });
+
+                    if (hasEffects) $applyButton.show();
+                })();
             }
 
             // Append reminder UI for reminder messages

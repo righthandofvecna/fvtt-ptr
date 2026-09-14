@@ -2,7 +2,7 @@
   "name": "Mind Blown",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user's Hit Points are reduced by 50% of their full Hit Point Value. This hit point loss cannot be prevented or reduced in any way.",

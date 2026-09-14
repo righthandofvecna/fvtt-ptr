@@ -2,7 +2,7 @@
   "name": "Kinesis",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the user or an Ally within 6 meters is about to be hit by an attack, the user may use Kinesis as an interrupt. The triggering Accuracy Roll receives a -4 penalty. This may cause Moves to miss.",

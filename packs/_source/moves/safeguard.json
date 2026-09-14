@@ -2,7 +2,7 @@
   "name": "Safeguard",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Any user affected by Safeguard may activate it when receiving a Status Affliction to ignore the effect of that Status Affliction on their next turn. Safeguard may be activated 3 times, and then disappears.",

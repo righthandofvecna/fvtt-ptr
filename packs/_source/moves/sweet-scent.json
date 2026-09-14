@@ -2,7 +2,7 @@
   "name": "Sweet Scent",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Targets hit by Sweet Scent gain a -2 Penalty to Evasion. (Total Evasion may not be lowered to a negative value.) *Grants Alluring",

@@ -2,7 +2,7 @@
   "name": "Retaliate",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Retaliate's Damage Base is doubled to Damage Base 14 (4d10+15 / 40) if an ally has been Fainted by a Damaging Move used by the Target in the last 2 rounds of Combat.",

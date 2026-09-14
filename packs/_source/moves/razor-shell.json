@@ -2,7 +2,7 @@
   "name": "Razor Shell",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/WaterIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Razor Shell lowers the target's Defense by 1 Combat Stage on an Even-Numbered Roll.",

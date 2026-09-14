@@ -2,7 +2,7 @@
   "name": "Grassy Glide",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GrassIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the user is on Grassy Terrain, Grassy Glide may be used with Priority. After Grassy Glide has been resolved, the user may choose to create Grassy Terrain in the spaces Passed over (including those it started and ended in), that lasts for 5 turns. Any creatures in those spaces are affected as if by the Field Move Grassy Terrain, rather than any other Field Move.",

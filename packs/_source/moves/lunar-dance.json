@@ -2,7 +2,7 @@
   "name": "Lunar Dance",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user immediately Faints, lowering its Hit Points to 0. The user takes no Injuries from Hit Point Markers when using Lunar Dance. The target is immediately cured of up to 3 injuries, healed to their Maximum Hit Points, and has the Frequency of all Moves restored. Lunar Dance may target a Pokémon in a Poké Ball. Lunar Dance does not restore the Frequency of Healing Wish or Lunar Dance. Injuries healed through Lunar Dance count toward the total number of Injuries that can be healed each day, and this healing is limited by the same.",

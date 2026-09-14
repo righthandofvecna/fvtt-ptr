@@ -2,7 +2,7 @@
   "name": "U-Turn",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user deals damage and then is immediately recalled to its Poké Ball in the same turn. A New Pokémon may immediately be sent out. Using U-Turn lets a Trapped user be recalled.",

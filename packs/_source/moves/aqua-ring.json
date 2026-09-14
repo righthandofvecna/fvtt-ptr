@@ -2,7 +2,7 @@
   "name": "Aqua Ring",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/WaterIC_Icon.png",
-  "folder": "QUBRPKWoQJ9is4iN",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Aqua Ring covers the user in a Coat that heals the user at the beginning of their turn. The user is healed a Tick of Hit Points each turn.",

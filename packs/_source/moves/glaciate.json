@@ -2,7 +2,7 @@
   "name": "Glaciate",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "All Legal Targets have their Speed lowered 1 Combat Stage. On an Even-Numbered Roll, all Legal Targets on the ground are Slowed.",

@@ -2,7 +2,7 @@
   "name": "Stomping Tantrum",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GroundIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the user's last attack failed or missed, Stomping Tantrum is Damage Base 15 instead.",

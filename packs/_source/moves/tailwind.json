@@ -2,7 +2,7 @@
   "name": "Tailwind",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FlyingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "For the remainder of the encounter, all allied trainers and Pokémon gain +5 to their Initiative. Multiple instances of Tailwind cannot stack. *Grants: Guster\n\nAlt: @UUID[Compendium.ptu.effects.Item.9uDrqDIX9OxOn7th]",

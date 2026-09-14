@@ -53,7 +53,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 			await this._prepareCharacterItems(data);
 		}
 		// TODO: merge this into _prepareCharacterItems
-		data['totalWealth'] = this.actor.itemTypes.item.reduce((total, item) => total + (!isNaN(Number(item.system.cost)) ? Number(item.system.cost) * (Number(item.system.quantity) ?? 0) : 0), Number(this.actor.system.money));
+		data['totalWealth'] = [...this.actor.itemTypes.item, ...(this.actor.itemTypes.pokeball ?? [])].reduce((total, item) => total + (!isNaN(Number(item.system.cost)) ? Number(item.system.cost) * (Number(item.system.quantity) ?? 0) : 0), Number(this.actor.system.money));
 
 		data["ballStyle"] = this.ballStyle;
 
@@ -163,10 +163,21 @@ export class PTUCharacterSheet extends PTUActorSheet {
 				}
 				items_categorized[cat].push(item);
 			}
+			if (item.type == 'pokeball') {
+				let cat = item.system.category;
+				if (cat === undefined || cat == "") {
+					cat = "PokeBalls";
+				}
+				if (!(items_categorized[cat])) {
+					items_categorized[cat] = [];
+				}
+				items_categorized[cat].push(item);
+			}
 			switch (item.type) {
 				case 'feat': feats.push(item); break;
 				case 'edge': edges.push(item); break;
 				case 'item': items.push(item); break;
+				case 'pokeball': items.push(item); break;
 				case 'ability': abilities.push(item); break;
 				case 'capability': capabilities.push(item); break;
 				case 'effect': effects.push(item); break;
@@ -326,9 +337,11 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		});
 
 		// Update Inventory Item
-		html.find('.item-edit').click((ev) => {
+		html.find('.item-edit').click(async (ev) => {
 			const li = $(ev.currentTarget).parents('.item');
-			const item = this.actor.items.get(li.data('itemId'));
+			const itemId = li.data('itemId');
+			const item = this.actor.items.get(itemId) ?? await this._materializePhantomItem(itemId);
+			if (!item) return;
 			item.sheet.render(true);
 		});
 

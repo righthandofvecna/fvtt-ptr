@@ -2,7 +2,7 @@
   "name": "Sharpen",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Raise the user's Attack by 1 Combat Stage.",

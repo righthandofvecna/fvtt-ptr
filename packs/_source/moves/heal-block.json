@@ -2,7 +2,7 @@
   "name": "Heal Block",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Until the end of the encounter, the target may not gain HP or Temporary HP from any source. This effect ends if the target is switched out or Takes a Breather.",

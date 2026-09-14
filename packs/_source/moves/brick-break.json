@@ -2,7 +2,7 @@
   "name": "Brick Break",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Light Screen, Reflect, and Aurora Veil may not be activated in response to Brick Break.",

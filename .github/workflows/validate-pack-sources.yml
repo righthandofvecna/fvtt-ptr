@@ -64,3 +64,31 @@ jobs:
           else
             echo "No _id changes detected."
           fi
+      - name: Validate JSON folders match folder id in same path
+        run: |
+          ERRORS=0
+          while IFS= read -r -d '' file; do
+            # skip _folder.json
+            if [[ "$(basename "$file")" == "_folder.json" ]]; then
+              continue
+            fi
+            folder=$(jq -r '.folder // empty' "$file")
+            expected_folder_path=$(dirname "$file")
+            if [[ -f "$expected_folder_path/_folder.json" ]]; then
+              expected_folder_id=$(jq -r '._id' "$expected_folder_path/_folder.json")
+              if [[ -n "$folder" && "$folder" != "$expected_folder_id" ]]; then
+                echo "::error file=$file::Folder mismatch: top-level folder is '$folder', but expected folder id '$expected_folder_id'"
+                ERRORS=$((ERRORS + 1))
+              fi
+            elif [[ -n "$folder" ]]; then
+              echo "::error file=$file::Expected folder file '$expected_folder_path/_folder.json' not found. Folder '$folder'"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done < <(find packs/_source -name '*.json' -print0)
+
+          if [[ $ERRORS -gt 0 ]]; then
+            echo "$ERRORS JSON folder id mismatch error(s) found in packs/_source."
+            exit 1
+          fi
+
+          echo "All $(find packs/_source -name '*.json' | wc -l) files have matching top-level folder ids."

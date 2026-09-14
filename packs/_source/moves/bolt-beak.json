@@ -2,7 +2,7 @@
   "name": "Bolt Beak",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/ElectricIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Bolt Beak deals +10 damage against targets with a lower initiative that have not yet acted this round.",

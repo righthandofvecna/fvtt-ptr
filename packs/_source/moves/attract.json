@@ -2,7 +2,7 @@
   "name": "Attract",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Attract Infatuates the target if its gender is the opposite of the user's. Attract fails when used by or against Genderless targets.",

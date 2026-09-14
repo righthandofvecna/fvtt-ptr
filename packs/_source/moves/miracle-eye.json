@@ -2,7 +2,7 @@
   "name": "Miracle Eye",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Miracle Eye may be activated as a Rapid Action on the user's turn. For the rest of the turn, the user's Psychic-Type Moves can hit and affect Dark-Type targets, and the user can see through the Illusion Ability, Moves with the Illusion keyword, and effect created by the Illusionist Capability, ignoring all effect from those.",

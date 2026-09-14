@@ -23,7 +23,8 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
 
     /** @override */
     get template() {
-        return `systems/ptu/static/templates/item/${this.object.type}-sheet.hbs`;
+        const type = this.object.type === "pokeball" ? "item" : this.object.type;
+        return `systems/ptu/static/templates/item/${type}-sheet.hbs`;
     }
 
     /** @override */
@@ -37,12 +38,12 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
 
         data.referenceEffect = this.item.referenceEffect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(`@UUID[${foundry.utils.duplicate(this.item.referenceEffect)}]`, {async: true}) : null;
         const fullEffect = this.item.fullEffectText;
-        data.itemEffect = fullEffect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(fullEffect), {async: true}) : fullEffect;
+        data.itemEffect = fullEffect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(fullEffect), {async: true, relativeTo: this.item}) : fullEffect;
         data.itemCost = await (async () => {
             const cost = parseInt(this.item.system.cost);
             if(!cost) return this.item.system.cost || "-";
 
-            return foundry.applications.ux.TextEditor.implementation.enrichHTML(`@Poke[${this.item.uuid} noname]`, {async: true})
+            return foundry.applications.ux.TextEditor.implementation.enrichHTML(`@Poke[${this.item.uuid} noname]`, {async: true, relativeTo: this.item})
         })();
 
         const rules = this.item.toObject().system.rules ?? [];

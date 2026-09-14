@@ -1,5 +1,4 @@
 import { sluggify } from "../../util/misc.js";
-import { Weather } from "../apps/weather.js";
 import { PTUCombatant } from "../combat/combatant.js";
 import { PTUCondition } from "../item/index.js";
 import { ChatMessagePTU } from "../message/base.js";
@@ -109,6 +108,11 @@ class PTUActor extends Actor {
 
     get attacks() {
         return this.system.attacks;
+    }
+
+    /** @returns {Map<string, PTUMove>} Synthetic (phantom) items shown on the sheet but not persisted. */
+    get phantomItems() {
+        return this._phantomItems;
     }
 
     get iwr() {
@@ -246,6 +250,7 @@ class PTUActor extends Actor {
         this.rules = [];
         this.initiative = null;
         this.conditions = new ActorConditions();
+        this._phantomItems = new Map();
 
         this.synthetics = {
             ephemeralEffects: {},
@@ -370,35 +375,8 @@ class PTUActor extends Actor {
     }
 
     prepareRuleElements() {
-        const globalEffects = [];
-        try {
-            for (const effect of Weather.globalEffects?.values?.() ?? []) {
-                switch(effect.system.mode) {
-                    case "disabled": 
-                        continue;
-                    case "all":
-                        break;
-                    case "players":
-                        if (this.alliance !== "party") continue;
-                        break;
-                    case "opposition":
-                        if (this.alliance !== "opposition") continue;
-                        break;
-                }
-
-                const item = new CONFIG.PTU.Item.proxy(effect.toObject(), { temporary: true, parent: this })
-                item.updateSource({ "flags.core.sourceId": effect.flags?.core?.sourceId ?? effect.uuid });
-                globalEffects.push(item);
-            }
-        }
-        catch (error) {
-            console.error("PTU | Failed to prepare global effects.", error);
-        }
-        return [
-            this.items.contents.flatMap((item) => item.prepareRuleElements()),
-            globalEffects.flatMap((effect) => effect.prepareRuleElements())
-        ]
-            .flat()
+        return this.items.contents
+            .flatMap((item) => item.prepareRuleElements())
             .filter((rule) => !rule.ignored)
             .sort((a, b) => a.priority - b.priority);
     }
@@ -711,7 +689,7 @@ class PTUActor extends Actor {
             : null;
 
         const statements = [hpStatement, tempHpStatement, bossStatement, ...injuryStatements].filter(s => s).join("<br>");
-        const enrichedHtml = await foundry.applications.ux.TextEditor.implementation.enrichHTML(statements, { async: true })
+        const enrichedHtml = await foundry.applications.ux.TextEditor.implementation.enrichHTML(statements, { async: true, relativeTo: this })
         const canUndoDamage = !!hpDamage
 
         const content = await foundry.applications.handlebars.renderTemplate("systems/ptu/static/templates/chat/damage/damage-taken.hbs", {
@@ -1086,6 +1064,8 @@ class PTUActor extends Actor {
             return this.system.skills?.combat?.value?.total > 4;
         })();
 
+        const STRUGGLE_SOURCE_UUID = "Compendium.ptu.moves.Item.jK9TuStruggle001";
+
         const constructStruggleItem = (type, category, range, ptuFlags, isRangedStruggle = false) => {
             return new Item.implementation({
                 name: `Struggle (${type})`,
@@ -1096,7 +1076,7 @@ class PTUActor extends Actor {
                     damageBase: isStrugglePlus ? 5 : 4,
                     stab: false,
                     frequency: { type: "at-will", max: 0 },
-                    actionCost: { standard: false, swift: false, move: false, free: false },
+                    actionCost: { standard: true, swift: false, move: false, free: false },
                     ap: 0,
                     isStruggle: true,
                     isRangedStruggle: isRangedStruggle,
@@ -1105,7 +1085,22 @@ class PTUActor extends Actor {
                     type: type
                 },
                 flags: {
-                    ptu: ptuFlags || {}
+                    ptu: {
+                        ...(ptuFlags || {}),
+                        phantom: true,
+                        sourceUuid: STRUGGLE_SOURCE_UUID,
+                        // Store the variant parameters so materialization can build a typed copy
+                        phantomData: {
+                            name: `Struggle (${type})`,
+                            img: CONFIG.PTU.data.typeEffectiveness[type].images.icon,
+                            type,
+                            category,
+                            range,
+                            ac: isStrugglePlus ? 3 : 4,
+                            damageBase: isStrugglePlus ? 5 : 4,
+                            isRangedStruggle
+                        }
+                    }
                 }
             },
                 {
@@ -1147,6 +1142,12 @@ class PTUActor extends Actor {
 
     prepareMoves({ includeStruggles = true } = {}) {
         const struggles = includeStruggles ? this._prepareStruggles() : [];
+
+        // Register struggle phantoms so sheets can look them up for materialization
+        this._phantomItems = new Map();
+        for (const struggle of struggles) {
+            this._phantomItems.set(struggle.realId, struggle);
+        }
 
         const moves = [];
         this.flags.ptu.disabledOptions = [];

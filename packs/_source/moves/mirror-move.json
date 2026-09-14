@@ -2,7 +2,7 @@
   "name": "Mirror Move",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FlyingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Use the Move the target has used on their last turn. You may choose new targets for the Move. Mirror Move cannot miss.",

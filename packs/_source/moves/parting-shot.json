@@ -2,7 +2,7 @@
   "name": "Parting Shot",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If Parting Shot successfully hits, the target's Attack and Special Attack stats are lowered by 1 Combat Stage and the user is immediately recalled in the same turn. A new Pokemon may immediately be sent out. using Parting Shot lets a Trapped user be recalled.",

@@ -2,7 +2,7 @@
   "name": "Luster Purge",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Luster Purge lowers the target's Special Defense by 1 Combat Stage on an Even-Numbered Roll.",

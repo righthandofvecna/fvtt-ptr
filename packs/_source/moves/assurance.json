@@ -2,7 +2,7 @@
   "name": "Assurance",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If Assurance's target has already been damaged by a Move on the same round Assurance is being used, Assurance has a Damage Base of 12 (3d12+10 / 30) instead. This effect may trigger only once per Scene per Target.",

@@ -2,7 +2,7 @@
   "name": "Expanding Force",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "After Expanding Force is resolved, you may create Psychic Terrain in a Blast 7, centered on the user, that lasts for 5 turns. Any creatures in those spaces are affected as if by the Field Move Psychic Terrain, rather than any other Field Move. This Effect may trigger only once per Scene.",

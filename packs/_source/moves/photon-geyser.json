@@ -2,7 +2,7 @@
   "name": "Photon Geyser",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "SchyRsGFKIiqSe5d",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "This attack uses the highest of the user's Attack or Special Attack Stat, though it remains a Special Move. This Move ignores any Abilities that would cause it to fail or miss, such as Dodge or Wonder Guard; those Abilities cannot be activated in response to Photon Geyser.",

@@ -2,7 +2,7 @@
   "name": "Life Dew",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/WaterIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user and all allies in the burst regain Hit Points equal to 1/4 of their Maximum Hit Points.",

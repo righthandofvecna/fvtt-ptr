@@ -2,7 +2,7 @@
   "name": "Tar Shot",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/RockIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The targets gains a Coat that is automatically expended upon being hit with a Fire Type attack in order to make them one step more vulnerable to that attack. In addition, the target's Speed is lowered by 1 Combat Stage.",

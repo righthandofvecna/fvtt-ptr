@@ -2,7 +2,7 @@
   "name": "Guard Split",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target loses 5 Defense and 5 Special Defense. If they do, the user gains 5 Damage Reduction. These effect last until the end of the Scene.",

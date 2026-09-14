@@ -1,0 +1,22 @@
+{
+  "type": "Item",
+  "folder": "EocPVDSzmfxadVPq",
+  "name": "Cheerleader",
+  "color": null,
+  "sorting": "a",
+  "_id": "NnfaFh8VNQHvCKdr",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1789293061461,
+    "modifiedTime": 1789293061461,
+    "lastModifiedBy": "GFCVv4EMgQDa5fGR",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

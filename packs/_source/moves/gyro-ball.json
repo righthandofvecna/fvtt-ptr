@@ -2,7 +2,7 @@
   "name": "Gyro Ball",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/SteelIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target reveals their Speed Stat (including Combat Stages). If it is higher than the user's (including Combat Stages), subtract the user's Speed Stat from the target's and apply the difference as Bonus Damage.",

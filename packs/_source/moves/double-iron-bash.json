@@ -2,7 +2,7 @@
   "name": "Double Iron Bash",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/SteelIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Double Iron Bash Flinches the targets on 15+.",

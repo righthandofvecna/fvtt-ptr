@@ -2,7 +2,7 @@
   "name": "Take Down",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "You may perform a Trip Maneuver against the target as a Free Action.",

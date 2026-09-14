@@ -2,7 +2,7 @@ export class PTUUser extends User {
     /** @override */
     prepareData() {
         super.prepareData();
-        if (canvas.ready && canvas.tokens.controlled.length > 0) {
+        if (canvas.ready) {
             game.ptu.tokenPanel.refresh();
         }
     }

@@ -2,7 +2,7 @@
   "name": "Tera Blast",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If Terastallized, the user deals damage with this attack as that type. This attacks category is also the higher of its Special Attack or Attack. If the user is Stellar type, this move is super-effective against Terastallized Pokemon.",

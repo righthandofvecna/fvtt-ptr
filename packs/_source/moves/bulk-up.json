@@ -2,7 +2,7 @@
   "name": "Bulk Up",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Raise the user's Attack and Defense by 1 Combat Stage each.",

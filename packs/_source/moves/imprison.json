@@ -2,7 +2,7 @@
   "name": "Imprison",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target is Locked for the rest of the Scene. A Locked target may not use any Moves the user knows. Imprison cannot miss.",

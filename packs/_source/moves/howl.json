@@ -2,7 +2,7 @@
   "name": "Howl",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user and all allies in the Burst have their Attack Combat Stage raised by 1.",

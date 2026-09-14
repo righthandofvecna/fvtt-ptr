@@ -2,7 +2,7 @@
   "name": "Seismic Toss",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target loses HP equal to the level of Seismic Toss's user. Do not apply weakness or resistance. Do not apply stats.",

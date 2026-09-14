@@ -2,7 +2,7 @@
   "name": "Core Enforcer",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Each Target has its Ability disabled until the end of the encounter. If a target has more than one Ability, you choose one of them to disable.",

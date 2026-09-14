@@ -2,7 +2,7 @@
   "name": "Wake-Up Slap",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the target is Asleep, Wake-Up Slap has a Damage Base of 10 (3d8+10 / 24) instead, and cures the target of Sleep.",

@@ -2,7 +2,7 @@
   "name": "Water Sport",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/WaterIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "All targets in the burst, including the user, gain a Coat which grants them 1 Step of Resistance to Fire Type Moves. After a target has been hit by a damaging Fire Type Move, the coat is removed. *Grants Fountain",

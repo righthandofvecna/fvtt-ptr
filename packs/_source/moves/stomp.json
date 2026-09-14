@@ -2,7 +2,7 @@
   "name": "Stomp",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Stomp Flinches the target on 15+. If the target is at least one size category smaller than the user, Stomp deals an additional 10 damage.",

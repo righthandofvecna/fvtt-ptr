@@ -2,7 +2,7 @@
   "name": "Freeze Shock",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Set-Up Effect: The user may shift, then ends their turn. Resolution Effect: The user attacks with Freeze Shock. Freeze Shock paralyzes on 15+.",

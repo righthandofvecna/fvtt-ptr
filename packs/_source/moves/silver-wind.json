@@ -2,7 +2,7 @@
   "name": "Silver Wind",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Silver Wind raises each of the user's stats by 1 Combat Stage on 19+.",

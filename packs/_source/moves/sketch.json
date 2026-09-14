@@ -2,7 +2,7 @@
   "name": "Sketch",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Sketch cannot miss. Once Sketch has been used, remove Sketch from the user's Move list. The last Move that the target used is added to the user's Move list permanently. Sketch may not be Interrupted or Intercepted.",

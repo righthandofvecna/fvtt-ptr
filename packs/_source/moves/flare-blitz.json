@@ -2,7 +2,7 @@
   "name": "Flare Blitz",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Flare Blitz Burns the target on 19+.",

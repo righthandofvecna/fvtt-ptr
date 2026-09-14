@@ -2,7 +2,7 @@
   "name": "Signal Beam",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Signal Beam Confuses the target on 19+.",

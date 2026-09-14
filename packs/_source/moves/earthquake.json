@@ -2,7 +2,7 @@
   "name": "Earthquake",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GroundIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Earthquake can hit targets that are underground, including those using the Move Dig. *Grants Groundshaper",

@@ -2,7 +2,7 @@
   "name": "Fire Fang",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Fire Fang Burns or Flinches on 18-19 during Accuracy Check; flip a coin to determine whether the foe becomes Burned or Flinched. On 20 during Accuracy Check, the foe is both Burned and Flinched.",

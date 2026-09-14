@@ -2,7 +2,7 @@
   "name": "Relic Song",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "All legal targets fall Asleep on 16+. As long as Meloetta knows Relic Song, it may change between Aria Form and Step Form as a Rapid Action when using Relic Song or as a Standard Action otherwise. Both Aria and Step Form must be statted with the same HP Stat.",

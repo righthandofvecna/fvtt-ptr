@@ -1,0 +1,25 @@
+{
+  "name": "Add Effects to Targets",
+  "type": "script",
+  "_id": "g4RwxoMNTTKBN0bJ",
+  "author": "GFCVv4EMgQDa5fGR",
+  "img": "systems/ptu/static/css/images/icons/effect_icon.png",
+  "scope": "global",
+  "command": "// get all targets\nconst targets = [...game.user.targets.map(t=>t.actor)];\n\n(new Promise(async (resolve, reject) => {\n  class ItemDialog extends foundry.applications.api.DialogV2 {\n      _onRender(context, options) {\n        super._onRender(context, options);\n        const html = $(this.element);\n\n        //\n        // set up drag and drop area\n        //\n        const dropZone = html.find('#item-drop-zone')[0];\n        const itemsList = html.find('#dropped-items-list');\n        const items = [];\n\n        // Set up drag and drop handlers\n        dropZone.addEventListener('dragover', (e) => {\n          e.preventDefault();\n          dropZone.style.backgroundColor = '#f0f0f0';\n        });\n\n        dropZone.addEventListener('dragleave', (e) => {\n          e.preventDefault();\n          dropZone.style.backgroundColor = 'transparent';\n        });\n\n        dropZone.addEventListener('drop', async (e) => {\n          e.preventDefault();\n          dropZone.style.backgroundColor = 'transparent';\n          \n          const data = TextEditor.getDragEventData(e);\n          const item = await (async ()=>{\n            let item = await fromUuid(data.uuid);\n            if (!item) return null;\n            if (item instanceof RollTable) {\n              let result = await item.roll();\n              if (result.results.length != 1) {\n                return null;\n              } else {\n                let r = result.results[0];\n                let uuid = \"\";\n                if (r.type == \"pack\") {\n                  uuid = `Compendium.${r.documentCollection}.Item.${r.documentId}`;\n                } else {\n                  return null;\n                }\n                item = await fromUuid(uuid);\n              }\n            }\n            return item;\n          })()\n          if (!item) return;\n\n          items.push(item.uuid);\n          itemsList.data('items', items);\n\n          // Update visual list\n          const itemElement = document.createElement('div');\n          itemElement.innerHTML = `\n            <div class=\"item\" style=\"display: flex; align-items: center; margin: 5px 0;\">\n              <img src=\"${item.img}\" width=\"24\" height=\"24\" style=\"margin-right: 8px;\">\n              <span>${item.name}</span>\n              <a class=\"remove-item\" style=\"margin-left: auto;\"><i class=\"fas fa-times\"></i></a>\n            </div>\n          `;\n\n          // Add remove handler\n          itemElement.querySelector('.remove-item').addEventListener('click', () => {\n            const index = items.indexOf(item);\n            if (index > -1) {\n              items.splice(index, 1);\n              itemsList.data('items', items);\n              itemElement.remove();\n            }\n          });\n\n          itemsList.append(itemElement);\n        });\n      }\n    }\n\n  ItemDialog.wait({\n    window: { title: 'Effect to Add' },\n    content: `\n          <fieldset>\n            <legend>Targets</legend>\n            <ul>\n              ${targets.map(t => `<li>${t.name}</li>`).join('')}\n            </ul>\n          </fieldset>\n          <div class=\"form-group\">\n            <label>Temp HP Addition</label>\n            <input type=\"number\" name=\"tempHP\" value=\"0\" style=\"width: 100%;\">\n          </div>\n          <div class=\"form-group\">\n            <div id=\"item-drop-zone\" style=\"min-height: 100px; border: 2px dashed #ccc; padding: 10px; margin-bottom: 10px;\">\n              <p class=\"drop-text\">Drag and drop effects here</p>\n              <div id=\"dropped-items-list\"></div>\n            </div>\n          </div>\n      `,\n    buttons: [{\n      action: \"ok\",\n      label: \"OK\",\n      default: true,\n      callback: (event, button, dialog) => {\n        const items = $(dialog.element).find('#dropped-items-list').data('items') || [];\n        const tempHP = parseInt($(dialog.element).find('input[name=\"tempHP\"]').val()) || 0;\n        resolve({ items, tempHP });\n      },\n    }],\n    close: () => reject(null),\n  }).catch(() => {\n    reject(null);\n  });\n})).then(async ({ items, tempHP }) => {\n  if (!items) return;\n  const itemObjects = await Promise.all(items.map(uuid => fromUuid(uuid)));\n  for (const target of targets) {\n    await target.createEmbeddedDocuments(\"Item\", itemObjects.map(i => i.toObject()));\n    if (tempHP > 0) {\n      const currentTempHP = target.system.tempHp.value || 0;\n      await target.update({ \"system.tempHp.value\": currentTempHP + tempHP });\n    }\n  }\n}).catch();",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1789293858687,
+    "modifiedTime": 1789293955315,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

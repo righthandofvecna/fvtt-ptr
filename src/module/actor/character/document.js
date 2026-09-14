@@ -7,7 +7,7 @@ import { sluggify } from "../../../util/misc.js";
 class PTUTrainerActor extends PTUActor {
 
     get allowedItemTypes() {
-        return ["feat", "edge", "move", "contestmove", "ability", "item", "capability", "effect", "condition", "dexentry"]
+        return ["feat", "edge", "move", "contestmove", "ability", "item", "pokeball", "capability", "effect", "condition", "dexentry"]
     }
 
     get apl() {
@@ -16,6 +16,32 @@ class PTUTrainerActor extends PTUActor {
         const topParty = party.sort((a, b) => b.system.level.current - a.system.level.current).slice(0, 3);
         const totalLevel = topParty.reduce((sum, actor) => sum + actor.system.level.current, 0);
         return topParty.length > 0 ? totalLevel / topParty.length : 0;
+    }
+
+    get trainerTierNum() {
+        // based on the trainer's level and variant.trainerAdvancement
+        const level = this.system.level.current;
+        const advancement = game.settings.get("ptu", "variant.trainerAdvancement");
+        const progression = CONFIG.PTU.data.trainerProgressions[advancement] ?? CONFIG.PTU.data.trainerProgressions["ptr-update"];
+        // count how many tiers are below or at the level
+        let tier = 0;
+        for (const t of Object.keys(progression.tier)) {
+            if (level >= t) tier++;
+        }
+        return tier;
+    }
+
+    get trainerTier() {
+        // based on the trainer's level and variant.trainerAdvancement
+        const level = this.system.level.current;
+        const advancement = game.settings.get("ptu", "variant.trainerAdvancement");
+        const progression = CONFIG.PTU.data.trainerProgressions[advancement] ?? CONFIG.PTU.data.trainerProgressions["ptr-update"];
+        // count how many tiers are below or at the level
+        let tier = 0;
+        for (const t of Object.keys(progression.tier)) {
+            if (level >= t && t > tier) tier = t;
+        }
+        return progression.tier[tier] ?? "Unknown";
     }
 
     /**

@@ -2,7 +2,7 @@
   "name": "Arcane Fury",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Arcane Fury's Targets become Vulnerable on 19+.",

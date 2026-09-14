@@ -2,7 +2,7 @@
   "name": "Role Play",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user gains one of the target's Abilities, chosen at random, for the remainder of the encounter. This effect ends if the user Faints or is switched out. Role Play cannot miss.",

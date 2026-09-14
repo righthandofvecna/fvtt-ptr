@@ -2,7 +2,7 @@
   "name": "Triple Dive",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/RockIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "After attacking with Triple Dive, hit or miss, the user may Shift 2m, ignoring Attacks of Opportunity from their target. It may then make an additional attack with this Move on a different target. This effect may be repeated a second time, the third attack targeting a creature that has not yet been targeted by either prior attack. Before making each attack roll, the user can elect to give up triggering all remaining additional shifts and attacks. Increase Triple Dives' Damage Base by 3 for each attack that is given up.",

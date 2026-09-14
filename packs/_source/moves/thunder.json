@@ -2,7 +2,7 @@
   "name": "Thunder",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/ElectricIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Thunder Paralyzes the target on 15+. If the target is in Sunny Weather, Thunder's Accuracy Check is 11. If the target is in Rainy Weather, Thunder cannot miss. If the target is airborne as a result of Bounce, Fly, or Sky Drop, Thunder cannot miss.",

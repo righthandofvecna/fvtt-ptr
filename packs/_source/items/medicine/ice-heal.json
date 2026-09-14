@@ -1,0 +1,91 @@
+{
+  "name": "Ice Heal",
+  "system": {
+    "origin": "",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.7F4dkJoDuD7wNcEK]{Freezing}.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "ice-heal",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:41.117Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Medicine"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "200",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Ice Heal",
+    "useCount": 0
+  },
+  "type": "item",
+  "img": "systems/ptu/static/images/item_icons/ice heal.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "14.367",
+    "createdTime": 1683368793551,
+    "modifiedTime": 1789352432036,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 159375,
+  "_id": "7he7IuXJJDfvWhyC",
+  "folder": "UmW4Ev3e0iI1XQ0D"
+}

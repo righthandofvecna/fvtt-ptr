@@ -2,7 +2,7 @@
   "name": "Baton Pass",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user is replaced with another Pokémon from their trainer's roster. All Combat Stage, Coats, and [Stratagems] on Baton Pass' user are transferred to the replacement. Baton Pass may be used to switch even if the user is Trapped. [Stratagems] that transfer to an ineligible target immediately become unbound",

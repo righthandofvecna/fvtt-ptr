@@ -2,7 +2,7 @@
   "name": "Mist Ball",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Mist Ball lowers the target's Special Attack by 1 Combat Stage on an Even-Numbered Roll.",

@@ -2,7 +2,7 @@
   "name": "Rock Smash",
   "type": "move",
   "img": "/systems/ptu/css/images/types2/FightingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Rock Smash lowers the target's Defense 1 Combat Stage on 17+.",

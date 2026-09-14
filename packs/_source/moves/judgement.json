@@ -2,7 +2,7 @@
   "name": "Judgement",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Judgment's Type can be whatever Elemental Type the user wants it to be.",

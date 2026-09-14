@@ -2,7 +2,7 @@
   "name": "Dire Claw",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Dire Claw gives the target a Status ailment on a 15+. If this is triggered, roll 1d3; on 1 the target is Poisoned; on 2 the target is Paralyzed; on 3 the target is Flinched.",

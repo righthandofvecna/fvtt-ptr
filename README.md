@@ -11,10 +11,10 @@ The Pokemon Tabletop Reunited system for FoundryVTT is a continuation of the Pok
 Feel free to open an issue or join our [Discord Server](https://discord.gg/ptrfvtt) for any questions & feedback.
 
 ## Contributing Content
-To contribute content, please message @dylan.is.super.ok on Discord for contributor access to this repository. You can contribute either directly via Git (with a branch + pull request), or with the Content Sync system in this dev build.
+To contribute content, please message @dylan.is.super.ok on Discord for contributor access to this repository. You can contribute either directly via Git (with a branch + pull request), or with the Content Sync system in this dev build, which works directly in Foundry.
 
 ## How to Install
-#### Dev Build (V13)
+#### Dev Build (V13 & V14)
 If you would like to use this fast-releasing dev build with Content Sync features, import the following manifest into foundry:
 ```
 https://github.com/righthandofvecna/fvtt-ptr/releases/latest/download/system.json
@@ -38,6 +38,19 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Automatically Apply Legendary Catch Penalty](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/984)
+- [Split Pokeballs Into Their Own Item Type So Custom Balls Can Be Made](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/974)
+- [Fix Token Panel Not Minimizing When No Tokens Selected](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/981)
+- Fixed migration failures
+- Added Grouped Effect system (see Assault Armor)
+- Only show the Apply Effects button if there are effects that could theoretically be applied
+- Added @ItemSearch enricher (see Commander's Voice)
+- Expanded information Macros automatically get when running from chat messages (to automate Cheerleader's Excited effect)
+- Fixed the "On Combat Start" trigger for the Instant Change effect not correctly triggering
+- Added the ability to edit Struggles and showed Spirit Actions on all sheets where they're enabled
+- [Made the Weather System create real Effect items](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/986)
+- [Fixed Dragging Moves and Effects to the Hotbar to create Macros](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/945)
+- Fixed a bug preventing dropping non-compendium items onto a species sheet
 - [Don't show Granted Moves in Level Up Screen](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/978)
 - [Fixed Pokeball Theme Styling](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/914)
 - [NPC Quick Builder Improvements](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/805)

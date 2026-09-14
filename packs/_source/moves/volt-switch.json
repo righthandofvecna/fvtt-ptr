@@ -2,7 +2,7 @@
   "name": "Volt Switch",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/ElectricIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If Volt Switch successfully hits its target, the user deals damage and then immediately is returned to its Poke Ball in the same turn. A New Pokemon may immediately be sent out. Using Volt Switch lets a Trapped user be recalled",

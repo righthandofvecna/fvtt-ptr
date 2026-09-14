@@ -141,6 +141,7 @@ class InstantChangeRuleElement extends RuleElementPTU {
         newValue = this.#postProcessValue(path, newValue);
 
         foundry.utils.mergeObject(actorUpdates, { [path]: newValue });
+        this.#postProcessActorUpdates(actorUpdates);
     }
 
     /**
@@ -159,8 +160,6 @@ class InstantChangeRuleElement extends RuleElementPTU {
             case "system.spirit.value":
                 // Spirit can legitimately go below 0 (weary state); only cap at max
                 return Math.min(value, actor.system.spirit.max ?? value);
-            case "system.tempHp.value":
-                return Math.clamp(value, 0, actor.system.tempHp?.max ?? 0);
             case "system.ap.value":
                 return Math.clamp(value, 0, actor.system.ap?.max ?? value);
             default:
@@ -169,16 +168,23 @@ class InstantChangeRuleElement extends RuleElementPTU {
     }
 
     /**
+     * Make other changes as necessary to the actorUpdates
+     */
+    #postProcessActorUpdates(actorUpdates) {
+        const { actor } = this;
+        if (actorUpdates?.system?.tempHp?.value !== undefined && (actor.system.tempHp?.max ?? 0) < actorUpdates?.system?.tempHp?.value) {
+            actorUpdates.system.tempHp.max = actorUpdates?.system?.tempHp?.value;
+        }
+    }
+
+    /**
      * Compute the resulting value from the current actor value, the change, and the chosen mode.
      * This mirrors AELikeRuleElement#getNewValue exactly so the two rule elements behave consistently.
      */
     #getNewValue(current, change) {
-        const addOrSubtract = (value) => {
-            if (typeof value === "string") {
-                const test = Number(value);
-                if (!isNaN(test)) value = test;
-            }
+        if ([ "add", "subtract", "multiply", "downgrade", "upgrade" ].includes(this.mode) && Number.isNumeric(change)) change = Number(change);
 
+        const addOrSubtract = (value) => {
             const isNumericAdd =
                 typeof value === "number" && (typeof current === "number" || current === undefined || current === null);
             const isArrayAdd = Array.isArray(current) && current.every((e) => typeof e === typeof value);
@@ -195,7 +201,7 @@ class InstantChangeRuleElement extends RuleElementPTU {
 
         switch (this.mode) {
             case "multiply": {
-                if (!(typeof change === "number" && (typeof current === "number" || current === undefined))) {
+                if (!(typeof change === "number" && (typeof current === "number" || current === undefined || current === null))) {
                     this.failValidation("Invalid path for multiply mode");
                     return null;
                 }
@@ -206,20 +212,20 @@ class InstantChangeRuleElement extends RuleElementPTU {
             case "subtract":
             case "remove": {
                 const addedChange =
-                    (typeof current === "number" || current === undefined) && typeof change === "number"
+                    (typeof current === "number" || current === undefined || current === null) && typeof change === "number"
                         ? -1 * change
                         : change;
                 return addOrSubtract(addedChange);
             }
             case "downgrade": {
-                if (!(typeof change === "number" && (typeof current === "number" || current === undefined))) {
+                if (!(typeof change === "number" && (typeof current === "number" || current === undefined || current === null))) {
                     this.failValidation("Invalid path for downgrade mode");
                     return null;
                 }
                 return Math.min(current ?? 0, change);
             }
             case "upgrade": {
-                if (!(typeof change === "number" && (typeof current === "number" || current === undefined))) {
+                if (!(typeof change === "number" && (typeof current === "number" || current === undefined || current === null))) {
                     this.failValidation("Invalid path for upgrade mode");
                     return null;
                 }

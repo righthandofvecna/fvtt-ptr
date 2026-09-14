@@ -2,7 +2,7 @@
   "name": "Make It Rain",
   "type": "move",
   "img": "/systems/ptu/css/images/types2/SteelIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Lower the user's Special Attack by 1 Combat Stage after damage is resolved. Make it Rain scatters equal in value to 2d12 times the users level. If it is a trainer battle, the winner of the battle gets to pick up the coins.",

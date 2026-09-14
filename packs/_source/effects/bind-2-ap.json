@@ -1,0 +1,73 @@
+{
+  "name": "Bind 2 AP",
+  "type": "effect",
+  "_id": "VCbLNzKb3IprNHhX",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Bind 2 AP",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActionPoint",
+        "drainedValue": 0,
+        "boundValue": 2
+      }
+    ],
+    "enabled": true,
+    "slug": "bind-2-ap",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1789308811990,
+    "modifiedTime": 1789308842361,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

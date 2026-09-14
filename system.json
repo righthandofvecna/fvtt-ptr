@@ -4,9 +4,9 @@
   "description": "A re-imagining of the Pokemon Tabletop United TTRPG System now made with FoundryVTT as a central pillar.",
   "compatibility": {
     "minimum": "13",
-    "verified": "14.363"
+    "verified": "14.367"
   },
-  "version": "4.4.3.39",
+  "version": "4.4.3.40",
   "templateVersion": 2,
   "authors": [
     {
@@ -219,5 +219,5 @@
   "url": "https://github.com/righthandofvecna/fvtt-ptr",  
   "manifest": "https://github.com/righthandofvecna/fvtt-ptr/releases/latest/download/system.json",
   "changelog": "https://github.com/righthandofvecna/fvtt-ptr/raw/master/changelog.md",
-  "download": "https://github.com/righthandofvecna/fvtt-ptr/releases/download/4.4.3.39/system.zip"
+  "download": "https://github.com/righthandofvecna/fvtt-ptr/releases/download/4.4.3.40/system.zip"
 }

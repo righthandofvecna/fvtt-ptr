@@ -2,7 +2,7 @@
   "name": "Order Up",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Roll a d3. 1: Raise the User's Attack 1 Combat Stage. 2: Raise the User's Defense 1 Combat Stage. 3: Raise the User's Speed 1 Combat Stage. This effect only happens if this Pokemon has a Tatsugiri in its mouth.",

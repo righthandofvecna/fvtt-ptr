@@ -2,7 +2,7 @@
   "name": "False Swipe",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "False Swipe's damage cannot bring a target lower than 1 HP.",

@@ -2,7 +2,7 @@
   "name": "Thrash",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "rLhNf1PHSvJJoR3F",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "After damage is dealt, the user becomes Enraged and Confused.",

@@ -2,7 +2,7 @@
   "name": "Bug Bite",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the target has a stored Food Buff or has traded in a Food Buff this Scene, the user may gain the effect of the Food Buff. This does no count towards the Usual limit on the user's Food Buffs.",

@@ -2,7 +2,7 @@
   "name": "Conversion",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user becomes the elemental Type of their choice as long as they have a Move that is the same elemental Type until the end of the encounter. Replace all other Types.",

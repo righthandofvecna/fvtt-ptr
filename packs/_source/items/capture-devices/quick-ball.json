@@ -1,0 +1,92 @@
+{
+  "name": "Quick Ball",
+  "system": {
+    "origin": "",
+    "effect": "+5 to Modifier after 1 round of the encounter, +10 to Modifier after round 2, +25 to modifier after round 3.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "quick-ball",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:40.996Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Poke Ball"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "800",
+    "consumable": "0",
+    "modifier": -25,
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Quick Ball",
+    "useCount": 0
+  },
+  "type": "pokeball",
+  "img": "systems/ptu/static/images/item_icons/quick ball.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "14.367",
+    "createdTime": 1683368852072,
+    "modifiedTime": 1789352687574,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 40114,
+  "_id": "3WZ1SjFAF8nSQfBn",
+  "folder": "IVRTgXiB0UTigTh5"
+}

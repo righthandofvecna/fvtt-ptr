@@ -2,7 +2,7 @@
   "name": "Disarming Voice",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FairyIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Disarming Voice cannot miss.",

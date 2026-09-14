@@ -2,7 +2,7 @@
   "name": "Rain Dance",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/WaterIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The weather becomes Rainy for 5 rounds. While Rainy, Water-Type Attacks gain a +5 bonus to Damage Rolls, and Fire-Type Attacks suffer a -5 Damage penalty.",

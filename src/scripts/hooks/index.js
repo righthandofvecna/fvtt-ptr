@@ -9,6 +9,7 @@ import { DeleteToken } from "./tokenDocumentDeleted.js";
 import { AutocompleteInlinePropertiesSetup } from "./aip-setup.js";
 import { GetSceneControlButtons } from "./get-scene-control-buttons.js";
 import { CompendiumBrowserInlineEnricher } from "./compendium-browser-inline-enricher.js";
+import { ItemListerInlineEnricher } from "./item-lister-inline-enricher.js";
 import { TagifySheets } from "./tagify-sheets.js";
 import { PokeDollarEnricher } from "./pokedollar-enricher.js";
 import { RenderChatMessage } from "./render-chat-message.js";
@@ -20,6 +21,9 @@ import { QuickInsertCompat } from "./quick-insert-compat.js";
 import { ChatContextMenu } from "./chat-context-menu.js";
 import { Keywords } from "./keywords.js";
 import { LowHpReminder } from "./low-hp-reminder.js";
+import { WeatherHooks } from "./weather-hooks.js";
+import { MacroLinkContext } from "./macro-link-context.js";
+import { LinkedEffects } from "./linked-effects.js";
 
 export const PtuHooks = {
     listen() {
@@ -36,6 +40,7 @@ export const PtuHooks = {
             AutocompleteInlinePropertiesSetup,
             GetSceneControlButtons,
             CompendiumBrowserInlineEnricher,
+            ItemListerInlineEnricher,
             TagifySheets,
             PokeDollarEnricher,
             RenderChatMessage,
@@ -47,6 +52,9 @@ export const PtuHooks = {
             ChatContextMenu,
             Keywords,
             LowHpReminder,
+            WeatherHooks,
+            MacroLinkContext,
+            LinkedEffects,
         ]
         for(const listener of listeners) listener.listen();
     }

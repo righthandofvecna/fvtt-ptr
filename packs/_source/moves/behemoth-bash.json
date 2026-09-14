@@ -2,7 +2,7 @@
   "name": "Behemoth Bash",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/SteelIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The Damage Base of Behemoth Bash increases by 2 for each positive Combat Stage the target has, to a maximum of Damage Base 20.",

@@ -2,7 +2,7 @@
   "name": "Strength",
   "type": "move",
   "img": "/systems/ptu/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "You may immediately initiate a Push Maneuver as a Free Action. The Maneuver automatically hits, but you must still make the Opposed Roll. *Grants +1 Power",

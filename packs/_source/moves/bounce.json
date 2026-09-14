@@ -2,7 +2,7 @@
   "name": "Bounce",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FlyingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user first Shifts, gaining a +1 Bonus to Movement Speed and to their Jump Capabilities. After the user Shifts, they may attack with Bounce. The target becomes Vulnerable, and is Paralyzed on 16+. Grants +1 to High Jump.",

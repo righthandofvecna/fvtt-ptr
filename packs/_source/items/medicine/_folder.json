@@ -1,0 +1,22 @@
+{
+  "type": "Item",
+  "folder": null,
+  "name": "Medicine",
+  "color": null,
+  "sorting": "a",
+  "_id": "UmW4Ev3e0iI1XQ0D",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1789352235306,
+    "modifiedTime": 1789352283944,
+    "lastModifiedBy": "GFCVv4EMgQDa5fGR",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

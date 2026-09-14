@@ -211,6 +211,7 @@ class PTUCombat extends Combat {
         const isNewTurnUnacted = isTurnChange && this.turns[newTurn]?.hasActed === false;
         const isNextRound = isRoundChange && (previous.round === null || newRound > previous.round);
         const isNextTurn = isTurnChange && (previous.turn === null || newTurn > previous.turn || isNewTurnUnacted);
+        const isFirstRound = previous.round === null || previous.round === 0;
 
         // End early if no change
         if (!(isRoundChange || isTurnChange)) return;
@@ -238,7 +239,6 @@ class PTUCombat extends Combat {
             // Fire onCombatStart for all actors on the first round, and onRoundStart every round.
             // Deduplicate by actorId to avoid double-firing for boss combatants.
             if (isNextRound) {
-                const isFirstRound = previous.round === null || previous.round === 0;
                 const processedActors = new Set();
                 for (const c of this.combatants) {
                     const actor = c.actor;

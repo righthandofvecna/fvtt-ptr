@@ -1,0 +1,91 @@
+{
+  "name": "Full Restore",
+  "system": {
+    "origin": "",
+    "effect": "Heals a Pokémon for 80 Hit Points and cures any @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.OrrT285900adyGby]{Status Afflictions}.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "full-restore",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:41.714Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Medicine"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "1450",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Full Restore",
+    "useCount": 0
+  },
+  "type": "item",
+  "img": "systems/ptu/static/images/item_icons/full restore.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "14.367",
+    "createdTime": 1683368863216,
+    "modifiedTime": 1789352423758,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 156250,
+  "_id": "Tb8yKIXVEcWvhmvk",
+  "folder": "UmW4Ev3e0iI1XQ0D"
+}

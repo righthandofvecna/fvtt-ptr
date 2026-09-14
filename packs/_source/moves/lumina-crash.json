@@ -2,7 +2,7 @@
   "name": "Lumina Crash",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Lower the Target's Special Defense 2 Combat Stages. ",

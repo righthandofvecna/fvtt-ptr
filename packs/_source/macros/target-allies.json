@@ -1,0 +1,25 @@
+{
+  "name": "Target Allies",
+  "type": "script",
+  "_id": "dQGeUeEZspbRQBNH",
+  "author": "GFCVv4EMgQDa5fGR",
+  "img": "icons/svg/target.svg",
+  "scope": "global",
+  "command": "const me = canvas.tokens.controlled?.at(0)?.document;\nif (!me) {\n  ui.notifications.error(\"You need to select yourself to use this macro.\")\n  return;\n}\n\ncanvas.tokens.setTargets(game.scenes.active.tokens.filter(t=>t !== me && t.disposition == me.disposition).map(t=>t.object?.id), { mode: \"replace\" });",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1789293618859,
+    "modifiedTime": 1789293785437,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

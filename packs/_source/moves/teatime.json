@@ -2,7 +2,7 @@
   "name": "Teatime",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "All participants in the battle may choose to immediately consume one of their Food Buffs, regardless of if the conditions to do so are met.",

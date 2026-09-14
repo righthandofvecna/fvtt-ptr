@@ -2,7 +2,7 @@
   "name": "Shift Gear",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/SteelIC_Icon.png",
-  "folder": "OgshHYbiQq0MYxAd",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Raise the user's Attack by 1 Combat Stage and Speed by 2 Combat Stages.",

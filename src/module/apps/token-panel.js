@@ -60,7 +60,7 @@ export class TokenPanel extends Application {
             name: item.name,
             img: item.img,
             id: item.id,
-            effect: effectText ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(effectText), {async: true}) : "",
+            effect: effectText ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(effectText), {async: true, relativeTo: item}) : "",
             frequency: item.system.frequency ?? null,
             actionCost: item.system.actionCost ?? null,
             ap: item.system.ap ?? null,
@@ -119,7 +119,7 @@ export class TokenPanel extends Application {
                 id,
                 rollable: move.rollable,
                 onCooldown: move.onCooldown ?? false,
-                effect: move.system.effect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(move.system.effect), {async: true}) : "",
+                effect: move.system.effect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(move.system.effect), {async: true, relativeTo: move}) : "",
                 range: move.system.range ?? "",
                 keywords: move.system.keywords ?? [],
                 hasAllyKeyword: (move.system.keywords ?? []).some(k => typeof k === "string" && k.toLowerCase() === "ally"),
@@ -148,7 +148,7 @@ export class TokenPanel extends Application {
             else attacks.push(data);
         }
 
-        const items = actor.itemTypes.item?.sort((a, b) => a.sort - b.sort)?.reduce((acc, item) => {
+        const items = [...(actor.itemTypes.item ?? []), ...(actor.itemTypes.pokeball ?? [])].sort((a, b) => a.sort - b.sort).reduce((acc, item) => {
             if (!item.showInTokenPanel) return acc;
             if (item instanceof CONFIG.PTU.Item.documentClasses.pokeball) acc.balls.push(item);
             else acc.other.push(item);

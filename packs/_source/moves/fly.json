@@ -2,7 +2,7 @@
   "name": "Fly",
   "type": "move",
   "img": "/systems/ptu/css/images/types2/FlyingIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "Set-Up Effect: The user is moved up 25 meters into the air. Resolution Effect: The user may shift twice while in the air, using their overland or sky speed, and then comes down next to a legal target, and attacks with Fly. *Grants: Sky +3",

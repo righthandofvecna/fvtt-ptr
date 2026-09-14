@@ -2,7 +2,7 @@
   "name": "Fusion Flare",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": "lWQOqDm2AOGwGM16",
+  "folder": null,
   "system": {
     "origin": "",
     "effect": "If Fusion Bolt was used this round or last round by any participant of the encounter, Fusion Flare has its Damage Base increased by 3.",
