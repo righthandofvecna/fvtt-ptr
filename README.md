@@ -38,6 +38,7 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Automatically Apply Legendary Catch Penalty](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/984)
 - [Split Pokeballs Into Their Own Item Type So Custom Balls Can Be Made](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/974)
 - [Fix Token Panel Not Minimizing When No Tokens Selected](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/981)
 - Fixed migration failures
