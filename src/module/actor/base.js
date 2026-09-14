@@ -1076,7 +1076,7 @@ class PTUActor extends Actor {
                     damageBase: isStrugglePlus ? 5 : 4,
                     stab: false,
                     frequency: { type: "at-will", max: 0 },
-                    actionCost: { standard: false, swift: false, move: false, free: false },
+                    actionCost: { standard: true, swift: false, move: false, free: false },
                     ap: 0,
                     isStruggle: true,
                     isRangedStruggle: isRangedStruggle,
