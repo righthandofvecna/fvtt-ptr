@@ -27,7 +27,8 @@
       "Equipment",
       "Both Hands",
       "X-Item",
-      "Combat"
+      "Combat",
+      "Gadgeteer"
     ],
     "frequency": {
       "type": "at-will",
@@ -89,5 +90,6 @@
     "exportSource": null
   },
   "sort": 48600000,
-  "_id": "fjWY3tkAYRxxnF5p"
+  "_id": "fjWY3tkAYRxxnF5p",
+  "folder": null
 }
