@@ -1,0 +1,22 @@
+{
+  "type": "Item",
+  "folder": "YOFSDHg7L2IrQsvT",
+  "name": "Healing",
+  "color": null,
+  "sorting": "a",
+  "_id": "y5t72CsAiIk4F5xo",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1789352183554,
+    "modifiedTime": 1789352210769,
+    "lastModifiedBy": "GFCVv4EMgQDa5fGR",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

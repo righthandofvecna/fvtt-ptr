@@ -1,0 +1,92 @@
+{
+  "name": "Heal Ball",
+  "system": {
+    "origin": "",
+    "effect": "A caught Pokémon will heal to Max HP immediately upon capture. -5 Modifier.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "heal-ball",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:40.931Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Poke Ball"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "800",
+    "consumable": "0",
+    "modifier": -5,
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Heal Ball",
+    "useCount": 0
+  },
+  "type": "pokeball",
+  "img": "systems/ptu/static/images/item_icons/heal ball.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "14.367",
+    "createdTime": 1683368811907,
+    "modifiedTime": 1789352641037,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 40235,
+  "_id": "2kThT4G7lRriGgkb",
+  "folder": "IVRTgXiB0UTigTh5"
+}

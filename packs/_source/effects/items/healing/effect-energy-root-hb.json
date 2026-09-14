@@ -1,0 +1,77 @@
+{
+  "folder": "y5t72CsAiIk4F5xo",
+  "name": "Effect: Energy Root",
+  "type": "effect",
+  "_id": "vCjcN8T79NY3rwA1",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "InstantChange",
+        "predicate": [],
+        "trigger": "onCreate",
+        "mode": "add",
+        "path": "system.health.value",
+        "value": 70,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-energy-root-hb",
+    "contentSet": "homebrew",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.39",
+    "createdTime": 1789352219004,
+    "modifiedTime": 1789352219004,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 175000,
+  "ownership": {
+    "default": 0
+  }
+}

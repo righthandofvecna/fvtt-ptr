@@ -1,0 +1,92 @@
+{
+  "name": "Safari Ball",
+  "system": {
+    "origin": "",
+    "effect": "Used during Safari hunts.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "safari-ball",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:42.005Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Poke Ball"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "800",
+    "consumable": "0",
+    "modifier": -15,
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Safari Ball",
+    "useCount": 0
+  },
+  "type": "pokeball",
+  "img": "systems/ptu/static/images/item_icons/safari ball.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "14.367",
+    "createdTime": 1683368786901,
+    "modifiedTime": 1789352695322,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 40135,
+  "_id": "eZK0E0wJRtzFIyKh",
+  "folder": "IVRTgXiB0UTigTh5"
+}
