@@ -55,7 +55,7 @@
     "category": "",
     "cost": "250",
     "consumable": "0",
-    "subtype": "pokeball",
+    "subtype": "",
     "container": false,
     "automation": [],
     "name": "Fabulous Ball",
@@ -63,7 +63,7 @@
     "modifier": null,
     "leagueLegal": false
   },
-  "type": "item",
+  "type": "pokeball",
   "img": "systems/ptu/static/images/item_icons/fabulous ball.webp",
   "effects": [],
   "ownership": {

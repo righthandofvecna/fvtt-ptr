@@ -53,7 +53,7 @@
     "category": "",
     "cost": "800",
     "consumable": "0",
-    "subtype": "pokeball",
+    "subtype": "",
     "container": false,
     "automation": [],
     "name": "Quick Ball",
@@ -63,7 +63,7 @@
     "replacesSlug": "",
     "leagueLegal": false
   },
-  "type": "item",
+  "type": "pokeball",
   "img": "systems/ptu/static/images/item_icons/quick ball.webp",
   "effects": [],
   "ownership": {

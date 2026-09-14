@@ -1,7 +1,7 @@
 {
   "folder": "lpdptis936rBZFDU",
   "name": "Dark Ball",
-  "type": "item",
+  "type": "pokeball",
   "_id": "8bxLUIfAAdhrwPlv",
   "img": "systems/ptu/static/images/item_icons/dark_ball.webp",
   "system": {
@@ -67,7 +67,7 @@
     "category": "",
     "cost": "1500",
     "consumable": 0,
-    "subtype": "pokeball",
+    "subtype": "",
     "container": false,
     "modifier": 0,
     "contentSet": "",

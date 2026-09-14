@@ -23,7 +23,7 @@ class InventoryConfigSheet extends FormApplication {
         const categories = new Set([...data.columns.available, ...data.columns.one, ...data.columns.two]);
         const extraCategories = new Set();
 
-        for(const item of this.object.actor.itemTypes.item) {
+        for(const item of [...this.object.actor.itemTypes.item, ...(this.object.actor.itemTypes.pokeball ?? [])]) {
             const cat = item.system.category || "Misc";
             if(categories.has(cat)) continue;
             extraCategories.add(cat);

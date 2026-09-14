@@ -373,6 +373,7 @@ export const PTUCONFIG = {
     },
     sheetClasses: {
       item: PTUItemSheet,
+      pokeball: PTUItemSheet,
       edge: PTUEdgeSheet,
       feat: PTUFeatSheet,
       move: PTUMoveSheet,

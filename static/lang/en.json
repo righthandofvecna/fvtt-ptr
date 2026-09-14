@@ -8,6 +8,7 @@
   "TYPES.Item.ability": "Ability",
   "TYPES.Item.move": "Move",
   "TYPES.Item.item": "Item",
+  "TYPES.Item.pokeball": "Poké Ball",
   "TYPES.Item.capability": "Capability",
   "TYPES.Item.pokeedge": "Poké Edge",
   "TYPES.Item.dexentry": "Dex Entry",

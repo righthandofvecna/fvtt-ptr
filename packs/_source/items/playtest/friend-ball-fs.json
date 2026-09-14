@@ -1,6 +1,6 @@
 {
   "name": "Friend Ball",
-  "type": "item",
+  "type": "pokeball",
   "img": "systems/ptu/static/images/item_icons/friend%20ball.webp",
   "effects": [],
   "folder": "IT5MlkeTVPcxSRHe",
@@ -62,7 +62,7 @@
     "category": "",
     "cost": "800",
     "consumable": false,
-    "subtype": "pokeball",
+    "subtype": "",
     "container": false,
     "automation": [],
     "name": "Friend Ball",

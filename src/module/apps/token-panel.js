@@ -148,7 +148,7 @@ export class TokenPanel extends Application {
             else attacks.push(data);
         }
 
-        const items = actor.itemTypes.item?.sort((a, b) => a.sort - b.sort)?.reduce((acc, item) => {
+        const items = [...(actor.itemTypes.item ?? []), ...(actor.itemTypes.pokeball ?? [])].sort((a, b) => a.sort - b.sort).reduce((acc, item) => {
             if (!item.showInTokenPanel) return acc;
             if (item instanceof CONFIG.PTU.Item.documentClasses.pokeball) acc.balls.push(item);
             else acc.other.push(item);

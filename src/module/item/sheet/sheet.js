@@ -23,7 +23,8 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
 
     /** @override */
     get template() {
-        return `systems/ptu/static/templates/item/${this.object.type}-sheet.hbs`;
+        const type = this.object.type === "pokeball" ? "item" : this.object.type;
+        return `systems/ptu/static/templates/item/${type}-sheet.hbs`;
     }
 
     /** @override */
