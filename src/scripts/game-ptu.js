@@ -98,7 +98,19 @@ const GamePTU = {
             });
         }
 
-        game.ptu.tokenPanel.refresh({force: true});
+        
+        // because this rendering seems to be acting quite silly, we ensure the token panel is refreshed at multiple points
+        // TODO: figure out why without this, the token panel just sometimes doesn't appear until you select a token
+        let refreshed = false;
+        const refreshOnce = async () => {
+            if (!refreshed) {
+                await game.ptu.tokenPanel.refresh({force: true});
+                refreshed = true;
+            }
+        }
+        Hooks.once("renderAbstractSidebarTab", refreshOnce);
+        setTimeout(refreshOnce, 2500);
+
         Hooks.on("targetToken", (user, _token, _targeted) => {
             if (user.id === game.user.id) game.ptu.tokenPanel.refresh();
         });
