@@ -37,19 +37,15 @@
                         <h4>{{item.name}}</h4>
                     </div>
                     <div class="item-tags">
-                        {{#if item.grantedBy}}
-                            <div class="tag shadowless tooltip" title="Granted by {{item.grantedBy.name}}">
-                                <img src="/systems/ptu/static/css/images/icons/granted_icon.png"/>
-                            </div>
-                        {{/if}}
+                        {{> actionCosts item=item}}
                         {{#if item.hasAutomation}}
                             {{#if item.enabled}}
                                 <div class="tag shadowless tooltip" title="This item has automation!">
-                                    <img src="/systems/ptu/static/css/images/icons/automated_icon.png"/>
+                                    <img src="systems/ptu/static/css/images/icons/automated_icon.png"/>
                                 </div>
                             {{else}}
                                 <div class="tag shadowless tooltip" title="This item has disabled automation!">
-                                    <img src="/systems/ptu/static/css/images/icons/automated_disabled_icon.png" style="opacity: 0.5"/>
+                                    <img src="systems/ptu/static/css/images/icons/automated_disabled_icon.png" style="opacity: 0.5"/>
                                 </div>
                             {{/if}}
                         {{/if}}
@@ -145,6 +141,7 @@
                     <h4>{{item.name}}</h4>
                 </div>
                 <div class="item-tags">
+                    {{> actionCosts item=item}}
                     {{#if item.isOverriden}}
                         <div class="tag shadowless tooltip" title="Condition Overriden">
                             <i class="fa-solid fa-lock"></i>
@@ -231,6 +228,7 @@
                         <h4>{{item.name}}</h4>
                     </div>
                     <div class="item-tags">
+                        {{> actionCosts item=item}}
                         {{#if item.isGranted}}
                             <div class="tag shadowless tooltip" title="Granted by {{item.grantedBy.name}}">
                                 <img src="/systems/ptu/static/css/images/icons/granted_icon.png"/>
@@ -268,5 +266,38 @@
             </li>
         {{/each}}
     </ol>
+    {{/if}}
+{{/inline}}
+
+{{#*inline "actionCosts"}}
+    {{#if item.system.actionCost.extended}}
+        <div class="tag shadowless tooltip" title="Extended Action Cost">
+            <img src="systems/ptu/static/images/icons/ExtendedAction.svg"/>
+        </div>
+    {{/if}}
+    {{#if item.system.actionCost.standard}}
+        <div class="tag shadowless tooltip" title="Standard Action Cost">
+            <img src="systems/ptu/static/images/icons/StandardAction.svg"/>
+        </div>
+    {{/if}}
+    {{#if item.system.actionCost.rapid}}
+        <div class="tag shadowless tooltip" title="Rapid Action Cost">
+            <img src="systems/ptu/static/images/icons/RapidAction.svg"/>
+        </div>
+    {{/if}}
+    {{#if item.system.actionCost.shift}}
+        <div class="tag shadowless tooltip" title="Shift Action Cost">
+            <img src="systems/ptu/static/images/icons/ShiftAction.svg"/>
+        </div>
+    {{/if}}
+    {{#if item.system.actionCost.free}}
+        <div class="tag shadowless tooltip" title="Free Action Cost">
+            <img src="systems/ptu/static/images/icons/FreeAction.svg"/>
+        </div>
+    {{/if}}
+    {{#if item.grantedBy}}
+        <div class="tag shadowless tooltip" title="Granted by {{item.grantedBy.name}}">
+            <img src="systems/ptu/static/css/images/icons/granted_icon.png"/>
+        </div>
     {{/if}}
 {{/inline}}
