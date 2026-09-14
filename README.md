@@ -38,6 +38,18 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- [Split Pokeballs Into Their Own Item Type So Custom Balls Can Be Made](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/974)
+- [Fix Token Panel Not Minimizing When No Tokens Selected](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/981)
+- Fixed migration failures
+- Added Grouped Effect system (see Assault Armor)
+- Only show the Apply Effects button if there are effects that could theoretically be applied
+- Added @ItemSearch enricher (see Commander's Voice)
+- Expanded information Macros automatically get when running from chat messages (to automate Cheerleader's Excited effect)
+- Fixed the "On Combat Start" trigger for the Instant Change effect not correctly triggering
+- Added the ability to edit Struggles and showed Spirit Actions on all sheets where they're enabled
+- [Made the Weather System create real Effect items](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/986)
+- [Fixed Dragging Moves and Effects to the Hotbar to create Macros](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/945)
+- Fixed a bug preventing dropping non-compendium items onto a species sheet
 - [Don't show Granted Moves in Level Up Screen](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/978)
 - [Fixed Pokeball Theme Styling](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/914)
 - [NPC Quick Builder Improvements](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/805)
