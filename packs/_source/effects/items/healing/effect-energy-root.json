@@ -1,8 +1,8 @@
 {
   "folder": "y5t72CsAiIk4F5xo",
-  "name": "Effect: Energy Powder",
+  "name": "Effect: Energy Root",
   "type": "effect",
-  "_id": "fDin1M5koZPLFH60",
+  "_id": "vCjcN8T79NY3rwA1",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
@@ -15,13 +15,13 @@
         "trigger": "onCreate",
         "mode": "add",
         "path": "system.health.value",
-        "value": 25,
+        "value": 70,
         "priority": null
       }
     ],
     "enabled": true,
-    "slug": "effect-energy-powder-hb",
-    "contentSet": "homebrew",
+    "slug": "effect-energy-root",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": null,
@@ -29,7 +29,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [],
@@ -64,13 +64,13 @@
     "coreVersion": "14.367",
     "systemId": "ptu",
     "systemVersion": "4.4.3.39",
-    "createdTime": 1789352216888,
-    "modifiedTime": 1789352216888,
+    "createdTime": 1789352219004,
+    "modifiedTime": 1789352219004,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
   },
-  "sort": 125000,
+  "sort": 175000,
   "ownership": {
     "default": 0
   }
