@@ -5,7 +5,7 @@
   "img": "systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Held Item: While a Pokemon and Trainer both wear a matching Friendship Bracelet, the Friendship level of that Pokemon is considered 1 higher to a max of 4.",
+    "effect": "While a Pokemon and Trainer both wear a matching Friendship Bracelet, the Friendship level of that Pokemon is considered 1 higher to a max of 4.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -28,7 +28,8 @@
     "stackSlugs": false,
     "keywords": [
       "Held Item",
-      "Accessory"
+      "Accessory",
+      "F&S"
     ],
     "frequency": {
       "type": "at-will",

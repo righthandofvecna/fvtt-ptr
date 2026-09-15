@@ -1,11 +1,10 @@
 {
-  "folder": null,
   "name": "Zygarde Cells",
   "type": "item",
   "img": "https://assets.forge-vtt.com/6464e7dd7cb6da75187d728c/worlds/Pokemon%20The%20Chosen/600px-0718Zygarde-Cell.png",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "A cell-like component of the Legendary Pokémon Zygarde, making up the majority of its body. On their own, they have no will and little power, but by acting at the direction of a Zygarde Core, they can assemble Zygarde's different forms.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -51,13 +50,14 @@
       "bind": false
     },
     "quantity": "1",
-    "category": "",
+    "category": "Key",
     "cost": "0",
     "consumable": 0,
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "ownership": {
@@ -65,7 +65,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
