@@ -7,7 +7,7 @@
     "rules": [
       {
         "key": "ChoiceSet",
-        "flag": "{item|id}",
+        "flag": "virtuoso",
         "choices": [
           {
             "value": "system.skills.acrobatics.value.mod",
@@ -218,7 +218,7 @@
       {
         "key": "ActiveEffectLike",
         "mode": "add",
-        "path": "{item|flags.ptu.rulesSelections.{item|id}}",
+        "path": "{item|flags.ptu.rulesSelections.virtuoso}",
         "value": 2,
         "priority": 10,
         "predicate": [],
@@ -308,5 +308,6 @@
     "exportSource": null
   },
   "_id": "6QbP4LOoyEMgerm6",
-  "sort": 0
+  "sort": 0,
+  "folder": null
 }
