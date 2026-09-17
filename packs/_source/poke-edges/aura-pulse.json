@@ -2,7 +2,7 @@
   "name": "Aura Pulse",
   "system": {
     "origin": "",
-    "effect": "The Pokémon gains the Aura Pulse Capability.",
+    "effect": "The Pokémon gains the @UUID[Compendium.ptu.capabilities.Item.XTXkBsGDf4t4gKoa]{Aura Pulse} Capability.",
     "snippet": "",
     "rules": [
       {
@@ -32,7 +32,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -62,7 +62,8 @@
     "name": "Aura Pulse",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -72,7 +73,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Level 30, Aura Reading"
+      "prereqBackup": "Level 30, Aura Reading",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -85,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 1900000,
   "_id": "USLnQPfAyIKDFw1z"
 }

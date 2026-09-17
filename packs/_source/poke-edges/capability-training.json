@@ -8,19 +8,18 @@
       {
         "key": "ChoiceSet",
         "flag": "capability-training",
-        "adjustName": true,
         "choices": [
           {
-            "label": "High Jump",
-            "value": "highJump"
+            "value": "highJump",
+            "label": "High Jump"
           },
           {
-            "label": "Long Jump",
-            "value": "longJump"
+            "value": "longJump",
+            "label": "Long Jump"
           },
           {
-            "label": "Power",
-            "value": "power"
+            "value": "power",
+            "label": "Power"
           }
         ]
       },
@@ -54,7 +53,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -83,14 +82,18 @@
     "name": "Capability Training",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
   "effects": [],
   "flags": {
     "ptu": {
-      "prereqBackup": "Level 20"
+      "prereqBackup": "Level 20",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -109,7 +112,6 @@
       "systemVersion": "4.2.5"
     }
   },
-  "folder": null,
   "ownership": {
     "default": 0
   },

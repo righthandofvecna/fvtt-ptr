@@ -2,9 +2,16 @@
   "name": "Psychic Navigator",
   "system": {
     "origin": "",
-    "effect": "Grants the Psychic Navigator Capability.",
+    "effect": "Grants the @UUID[Compendium.ptu.capabilities.Item.B3RVBDuftjtAQQsU]{Psychic Navigator} Capability.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.B3RVBDuftjtAQQsU"
+      }
+    ],
     "enabled": true,
     "slug": "psychic-navigator",
     "schema": {
@@ -25,7 +32,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -55,7 +62,8 @@
     "name": "Psychic Navigator",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -65,7 +73,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Psychic Type, Level 20"
+      "prereqBackup": "Psychic Type, Level 20",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -78,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 2200000,
   "_id": "c7F8qKq2J5DqcB6V"
 }
