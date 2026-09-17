@@ -72,7 +72,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

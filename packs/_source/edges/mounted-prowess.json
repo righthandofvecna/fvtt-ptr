@@ -79,7 +79,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Acrobatics or Athletics"
+      "prereqBackup": "Novice Acrobatics or Athletics",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -93,5 +96,6 @@
     "exportSource": null
   },
   "sort": 0,
-  "_id": "e5w4Szs2uY8PdgNa"
+  "_id": "e5w4Szs2uY8PdgNa",
+  "folder": null
 }

@@ -1,5 +1,4 @@
 {
-  "folder": null,
   "name": "Hat Trick",
   "type": "capability",
   "_id": "FnEb80T4dtIfCTJT",
@@ -33,7 +32,7 @@
       "Backpack Talent"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -62,7 +61,7 @@
     "ptu": {
       "showInTokenPanel": false,
       "automationStatus": "needs-automation",
-      "devNote": ""
+      "devNote": "Effect applies universal DR, does not check for incoming critical hits, maybe a Reminder?"
     }
   }
 }
