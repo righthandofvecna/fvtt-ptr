@@ -2,14 +2,17 @@
   "name": "Frenzy",
   "system": {
     "origin": "",
-    "effect": "Condition: You must be Enraged to use this Feature\nEffect: You may immediately take your turn with Priority. If you do, you are instantly cured of Slowed and Stuck, and for the rest of this turn gain a +2 Bonus to Critical Hit Range, +2 Bonus to Movement Speed, and +2 Bonus to Acrobatics, Athletics, Combat, and Intimidate Checks.",
+    "effect": "Condition: You must be @UUID[Compendium.ptu.moves.Item.K3PXmG9E0s7QEUQ2]{Enraged} to use this Feature\nEffect: You may immediately take your turn with Priority. If you do, you are instantly cured of @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed} and @UUID[Compendium.ptu.effects.Item.OzGm9ZwyLd8yEhCK]{Stuck}, and for the rest of this turn gain a +2 Bonus to Critical Hit Range, +2 Bonus to Movement Speed, and +2 Bonus to Acrobatics, Athletics, Combat, and Intimidate Checks.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.hp.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -68,7 +71,8 @@
     "name": "Frenzy",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -78,7 +82,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Berserker, Adept Combat"
+      "prereqBackup": "Berserker, Adept Combat",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -91,7 +99,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 1500000,
   "_id": "1CRIpIXKY49C48xx"
 }

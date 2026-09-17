@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect:  You gain the move Revenge and can use it as a Weapon Move.\nWhile you have at least 1 Injury, add +X to your Damage Rolls with Rage, Flail, Double Edge, Thrash, and Weapon Attacks. X is equal to your Intimidate Rank plus the number of Injuries you have. You do not lose Hit Points from being Heavily Injured, and Injuries beyond the 5th do not lower your Maximum Hit Points.",
+    "effect": "Effect:  You gain the move @UUID[Compendium.ptu.moves.Item.eWzbtm5EjwcP1GoO]{Revenge} and can use it as a Weapon Move.\nWhile you have at least 1 Injury, add +X to your Damage Rolls with @UUID[Compendium.ptu.moves.Item.K3PXmG9E0s7QEUQ2]{Rage}, @UUID[Compendium.ptu.moves.Item.IWQXKwgnyM2CvDLV]{Flail}, @UUID[Compendium.ptu.moves.Item.7Gi57ZcOWjyjhU0A]{Double Edge}, @UUID[Compendium.ptu.moves.Item.czDZWjn9TbP9ON4q]{Thrash}, and Weapon Attacks. X is equal to your Intimidate Rank plus the number of Injuries you have. You do not lose Hit Points from being Heavily Injured, and Injuries beyond the 5th do not lower your Maximum Hit Points.",
     "snippet": "",
     "rules": [
       {
@@ -67,7 +67,12 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "+HP",
+      "Playtest",
+      "Class Rework",
+      "Weapon"
+    ],
     "frequency": {
       "type": "static",
       "max": null,
@@ -107,7 +112,9 @@
           "id": "txFsN9GFPfZww6l3",
           "onDelete": "detach"
         }
-      }
+      },
+      "automationStatus": "completed",
+      "devNote": ""
     }
   }
 }

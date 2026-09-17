@@ -2,14 +2,17 @@
   "name": "Power of Rage",
   "system": {
     "origin": "",
-    "effect": "Choose Enduring Rage or White Flame. You gain the chosen Ability.",
+    "effect": "Choose @UUID[Compendium.ptu.abilities.Item.SPD8UhzfdpeeTrCS]{Enduring Rage} or @UUID[Compendium.ptu.abilities.Item.VhXF2GEX2WWHmkqF]{White Flame}. You gain the chosen Ability.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.hp.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ChoiceSet",
@@ -17,10 +20,12 @@
         "adjustName": false,
         "choices": [
           {
-            "value": "Compendium.ptu.abilities.Item.SPD8UhzfdpeeTrCS"
+            "value": "Compendium.ptu.abilities.Item.SPD8UhzfdpeeTrCS",
+            "label": "Enduring Rage"
           },
           {
-            "value": "Compendium.ptu.abilities.Item.VhXF2GEX2WWHmkqF"
+            "value": "Compendium.ptu.abilities.Item.VhXF2GEX2WWHmkqF",
+            "label": "White Flame"
           }
         ]
       },
@@ -86,7 +91,8 @@
     "name": "Power of Rage",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -96,7 +102,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Berserker"
+      "prereqBackup": "Berserker",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -109,7 +118,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 17400000,
   "_id": "H5QwQy1KLxbcb2tf"
 }
