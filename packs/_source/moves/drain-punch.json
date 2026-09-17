@@ -2,7 +2,6 @@
   "name": "Drain Punch",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "",
@@ -74,7 +73,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "leagueLegal": false
   },
   "_id": "Dr7Eh1TGQHwQcreV",
   "effects": [],
