@@ -69,7 +69,8 @@
     "class": "Athlete",
     "name": "Coaching [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "coaching"
+    "replacesSlug": "coaching",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +83,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "Intercepts don't currently require skill checks to complete"
     }
   },
   "_stats": {
