@@ -2,7 +2,6 @@
   "name": "Heal Pulse",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Restores 50% of the target's max Hit Points. Heal Pulse's user may not target itself with Heal Pulse.",
@@ -73,7 +72,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "nqcLxXATvTYyFTCs",
   "effects": [],
@@ -83,7 +83,8 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "used": null
     }
   },
   "_stats": {

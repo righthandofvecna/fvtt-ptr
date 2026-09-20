@@ -2,7 +2,7 @@
   "name": "From the Sidelines Rank 2",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: At each rank, choose two moves from the following list.\nAssist, Brace, Heal Pulse, Beguile, Defensive Charm, Dispel, Offensive Charm, Speed Charm.",
+    "effect": "Effect: At each rank, choose two moves from the following list.\n@UUID[Compendium.ptu.moves.Item.OGcEIK4DjhajZg4s]{Assist}, @UUID[Compendium.ptu.moves.Item.SOLt8IpPbPOZVZCq]{Brace}, @UUID[Compendium.ptu.moves.Item.nqcLxXATvTYyFTCs]{Heal Pulse}, @UUID[Compendium.ptu.moves.Item.LdT7bwzKhtuBpR4Z]{Beguile}, @UUID[Compendium.ptu.moves.Item.6CxHDY1wKBeVb26e]{Defensive Charm}, @UUID[Compendium.ptu.moves.Item.tN8mJsaydjHVwmg7]{Dispel}, @UUID[Compendium.ptu.moves.Item.fYCIYwP3rgO9UDcX]{Offensive Charm}, @UUID[Compendium.ptu.moves.Item.cnaybNPcq7GJeIv4]{Speed Charm}.",
     "snippet": "",
     "rules": [
       {
@@ -12,48 +12,56 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.OGcEIK4DjhajZg4s",
+            "label": "Assist",
             "predicate": {
               "not": "move:assist"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.SOLt8IpPbPOZVZCq",
+            "label": "Brace",
             "predicate": {
               "not": "move:brace"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.nqcLxXATvTYyFTCs",
+            "label": "Heal Pulse",
             "predicate": {
               "not": "move:heal-pulse"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.LdT7bwzKhtuBpR4Z",
+            "label": "Beguile",
             "predicate": {
               "not": "move:beguile"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.6CxHDY1wKBeVb26e",
+            "label": "Defensive Charm",
             "predicate": {
               "not": "move:defensive-charm"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.tN8mJsaydjHVwmg7",
+            "label": "Dispel",
             "predicate": {
               "not": "move:dispel"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.fYCIYwP3rgO9UDcX",
+            "label": "Offensive Charm",
             "predicate": {
               "not": "move:offensive-charm"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.cnaybNPcq7GJeIv4",
+            "label": "Speed Charm",
             "predicate": {
               "not": "move:speed-charm"
             }
@@ -73,48 +81,56 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.OGcEIK4DjhajZg4s",
+            "label": "Assist",
             "predicate": {
               "not": "move:assist"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.SOLt8IpPbPOZVZCq",
+            "label": "Brace",
             "predicate": {
               "not": "move:brace"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.nqcLxXATvTYyFTCs",
+            "label": "Heal Pulse",
             "predicate": {
               "not": "move:heal-pulse"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.LdT7bwzKhtuBpR4Z",
+            "label": "Beguile",
             "predicate": {
               "not": "move:beguile"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.6CxHDY1wKBeVb26e",
+            "label": "Defensive Charm",
             "predicate": {
               "not": "move:defensive-charm"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.tN8mJsaydjHVwmg7",
+            "label": "Dispel",
             "predicate": {
               "not": "move:dispel"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.fYCIYwP3rgO9UDcX",
+            "label": "Offensive Charm",
             "predicate": {
               "not": "move:offensive-charm"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.cnaybNPcq7GJeIv4",
+            "label": "Speed Charm",
             "predicate": {
               "not": "move:speed-charm"
             }
@@ -182,7 +198,8 @@
     "class": "Cheerleader",
     "name": "From the Sidelines [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "from-the-sidelines-rank-2"
+    "replacesSlug": "from-the-sidelines-rank-2",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -194,7 +211,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
