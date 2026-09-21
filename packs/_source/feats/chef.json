@@ -2,7 +2,7 @@
   "name": "Chef",
   "system": {
     "origin": "",
-    "effect": "You may use any Chef Recipe for which you qualify.\nRecipes - @UUID[Compendium.ptu.references.Item.98MnkOJAGDuSYv7C], @UUID[Compendium.ptu.references.Item.l7AHefBzQJp3M5hL], @UUID[Compendium.ptu.references.Item.JaC2CGqH3qpoJiwp], @UUID[Compendium.ptu.references.Item.aBrvpJfpy6A3cFGt], @UUID[Compendium.ptu.references.Item.bajfkZcAu5T2Pqt7], @UUID[Compendium.ptu.references.Item.YEuKDIALD23rzEZa], @UUID[Compendium.ptu.references.Item.Au0ZNfWlMPtdYEJC]",
+    "effect": "You may use any Chef Recipe for which you qualify.\nRecipes - @UUID[Compendium.ptu.references.Item.98MnkOJAGDuSYv7C]{Meal Planner} and @UUID[Item.6LOQT8LrBC5Ggdp4]{Tasty Snacks}(@UUID[Compendium.ptu.references.Item.l7AHefBzQJp3M5hL]{Salty Surprise}, @UUID[Compendium.ptu.references.Item.JaC2CGqH3qpoJiwp]{Spicy Wrap}, @UUID[Compendium.ptu.references.Item.aBrvpJfpy6A3cFGt]{Sour Candy}, @UUID[Compendium.ptu.references.Item.bajfkZcAu5T2Pqt7]{Dry Wafer}, @UUID[Compendium.ptu.references.Item.YEuKDIALD23rzEZa]{Bitter Treat}, @UUID[Compendium.ptu.references.Item.Au0ZNfWlMPtdYEJC]{Sweet Confection})\n\n<em>Note: Chefs need access to a kitchen or to a @UUID[Compendium.ptu.items.Item.Ge4pxy8WA0wraphQ]{Cooking Set} to create food.</em>",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -60,7 +60,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -71,7 +72,7 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Basic Cooking, Novice Intuition",
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -86,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 37900000,
   "_id": "YhVGlEUkq6BLORNM"
 }
