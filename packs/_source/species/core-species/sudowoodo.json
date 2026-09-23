@@ -533,11 +533,13 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Galar",
-      "Kalos",
       "Alola",
-      "Sinnoh",
-      "Johto"
+      "Galar",
+      "Hisui",
+      "Johto",
+      "Kalos",
+      "Paldea",
+      "Sinnoh"
     ],
     "contentSet": "",
     "replacesSlug": ""

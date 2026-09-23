@@ -608,7 +608,9 @@
       "0": "Fire",
       "1": ""
     },
-    "keywords": [],
+    "keywords": [
+      "Paldea"
+    ],
     "contentSet": "",
     "replacesSlug": ""
   },

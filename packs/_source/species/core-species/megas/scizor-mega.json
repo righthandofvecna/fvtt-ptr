@@ -501,10 +501,13 @@
     },
     "keywords": [
       "Alola",
-      "Sinnoh",
-      "Kalos",
+      "Galar",
+      "Hisui",
       "Johto",
-      "Mega"
+      "Kalos",
+      "Mega",
+      "Paldea",
+      "Sinnoh"
     ],
     "stackSlugs": false,
     "enabled": false,

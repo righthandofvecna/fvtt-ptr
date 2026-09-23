@@ -494,11 +494,12 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Hoenn",
-      "Galar",
-      "Kalos",
       "Alola",
-      "Johto"
+      "Galar",
+      "Hoenn",
+      "Johto",
+      "Kalos",
+      "Paldea"
     ],
     "contentSet": "",
     "replacesSlug": ""

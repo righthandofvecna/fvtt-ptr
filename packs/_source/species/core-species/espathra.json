@@ -575,7 +575,9 @@
       "0": "Psychic",
       "1": ""
     },
-    "keywords": [],
+    "keywords": [
+      "Paldea"
+    ],
     "contentSet": "",
     "replacesSlug": ""
   },

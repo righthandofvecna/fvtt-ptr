@@ -613,13 +613,15 @@
       "value": "PTR Core Dex Megas"
     },
     "keywords": [
-      "Galar",
-      "Kalos",
       "Alola",
-      "Sinnoh",
-      "Kanto",
+      "Galar",
+      "Hisui",
       "Johto",
-      "Mega"
+      "Kalos",
+      "Kanto",
+      "Mega",
+      "Paldea",
+      "Sinnoh"
     ],
     "contentSet": "",
     "replacesSlug": "",

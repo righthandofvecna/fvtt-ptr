@@ -478,7 +478,11 @@
     "source": {
       "value": "PTR Exclusive Dex Megas"
     },
-    "keywords": [],
+    "keywords": [
+      "Galar",
+      "Legendary",
+      "Unova"
+    ],
     "contentSet": "",
     "replacesSlug": ""
   },

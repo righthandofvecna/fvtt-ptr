@@ -516,12 +516,14 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Hoenn",
-      "Unova",
-      "Galar",
       "Alola",
+      "Galar",
+      "Hisui",
+      "Hoenn",
+      "Johto",
       "Kanto",
-      "Johto"
+      "Paldea",
+      "Unova"
     ],
     "contentSet": "",
     "replacesSlug": ""

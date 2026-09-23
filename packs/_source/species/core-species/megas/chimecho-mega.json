@@ -538,10 +538,12 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
+      "Hisui",
       "Hoenn",
-      "Sinnoh",
       "Kalos",
-      "Mega"
+      "Mega",
+      "Paldea",
+      "Sinnoh"
     ],
     "type": {
       "0": "Psychic",

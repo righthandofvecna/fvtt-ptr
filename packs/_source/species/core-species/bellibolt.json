@@ -542,7 +542,9 @@
     "source": {
       "value": "PTR Core Dex"
     },
-    "keywords": [],
+    "keywords": [
+      "Paldea"
+    ],
     "contentSet": "",
     "replacesSlug": ""
   },

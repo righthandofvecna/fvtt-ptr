@@ -510,11 +510,12 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Hoenn",
-      "Unova",
       "Galar",
+      "Hoenn",
+      "Johto",
       "Kanto",
-      "Johto"
+      "Paldea",
+      "Unova"
     ],
     "type": {
       "0": "Poison",

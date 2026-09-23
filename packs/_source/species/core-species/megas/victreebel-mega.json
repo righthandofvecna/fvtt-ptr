@@ -479,10 +479,11 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Kanto",
       "Johto",
       "Kalos",
-      "Mega"
+      "Kanto",
+      "Mega",
+      "Paldea"
     ],
     "type": {
       "0": "Grass",

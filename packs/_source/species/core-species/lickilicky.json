@@ -570,11 +570,13 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Unova",
-      "Kalos",
       "Alola",
+      "Galar",
+      "Hisui",
+      "Johto",
+      "Kalos",
       "Sinnoh",
-      "Johto"
+      "Unova"
     ],
     "contentSet": "",
     "replacesSlug": ""

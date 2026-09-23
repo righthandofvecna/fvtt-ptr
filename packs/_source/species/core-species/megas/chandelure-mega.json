@@ -509,10 +509,11 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Unova",
       "Galar",
       "Kalos",
-      "Mega"
+      "Mega",
+      "Paldea",
+      "Unova"
     ],
     "type": {
       "0": "Ghost",

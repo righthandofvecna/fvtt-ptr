@@ -540,13 +540,14 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Hoenn",
-      "Unova",
-      "Kalos",
       "Alola",
-      "Kanto",
+      "Galar",
+      "Hoenn",
       "Johto",
-      "Mega"
+      "Kalos",
+      "Kanto",
+      "Mega",
+      "Unova"
     ],
     "type": {
       "0": "Water",
