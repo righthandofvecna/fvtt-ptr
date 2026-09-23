@@ -2,7 +2,6 @@
   "name": "Detect",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the user is hit by a Move, the user may use Detect. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effect",
@@ -73,7 +72,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "Hn8ikOihbzcReurJ",
   "effects": [],
@@ -83,7 +83,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

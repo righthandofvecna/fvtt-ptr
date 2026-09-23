@@ -10,7 +10,6 @@
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "auraguardian",
         "choices": [
           {
@@ -29,7 +28,8 @@
         "mode": "add",
         "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.auraguardian}.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -86,7 +86,8 @@
     "free": false,
     "class": "Aura Guardian",
     "contentSet": "class-rework",
-    "replacesSlug": "aura-of-life"
+    "replacesSlug": "aura-of-life",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
@@ -95,7 +96,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

@@ -2,7 +2,7 @@
   "name": "Sword of Body and Soul",
   "system": {
     "origin": "",
-    "effect": "Trigger - You use a damaging Aura Guardian Move against an adjacent foe\nEffect: You may have the triggering Move deal damage as if it was your choice of Physical or Special Classes. Regardless, add both your Attack and Special Attack Stats to the Damage Roll, and this attack ignores Damage Reduction. This does not stack with Twisted Power.",
+    "effect": "Trigger - You use a damaging Aura Guardian Move against an adjacent foe\nEffect: You may have the triggering Move deal damage as if it was your choice of Physical or Special Classes. Regardless, add both your Attack and Special Attack Stats to the Damage Roll, and this attack ignores Damage Reduction. This does not stack with @UUID[Compendium.ptu.abilities.Item.ICqgLnQVOe8bPIqT]{Twisted Power}.",
     "snippet": "",
     "rules": [
       {
@@ -87,7 +87,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -98,7 +99,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Aura Guardian, Adept Intuition"
+      "prereqBackup": "Aura Guardian, Adept Intuition",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -111,7 +114,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 50300000,
   "_id": "iv80NFbAMqJGGlCX"
 }

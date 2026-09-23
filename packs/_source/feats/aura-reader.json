@@ -2,7 +2,7 @@
   "name": "Aura Reader",
   "system": {
     "origin": "",
-    "effect": "You gain the Aura Reader Capability for the rest of the scene. If your Intuition is Adept Rank or higher, you also gain the Aura Pulse Capability.",
+    "effect": "You gain the @UUID[Compendium.ptu.capabilities.Item.TtY94KGl4bDY1e0b]{Aura Reader} Capability for the rest of the scene. If your Intuition is Adept Rank or higher, you also gain the @UUID[Compendium.ptu.capabilities.Item.XTXkBsGDf4t4gKoa]{Aura Pulse} Capability.",
     "snippet": "",
     "rules": [
       {
@@ -86,7 +86,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -97,7 +98,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Aura Guardian",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -110,7 +113,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 3200000,
   "_id": "316u2Gol10VW4lMI"
 }
