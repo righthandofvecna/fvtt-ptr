@@ -286,10 +286,17 @@ class PTUActor extends Actor {
 
         // Call post-derived-preparation `RuleElement` hooks
         for (const rule of this.rules) {
+            if (rule.priority > 100) continue;
             rule.afterPrepareData?.();
         }
 
         this.prepareDerivedData();
+
+        // Call post-derived-preparation `RuleElement` hooks with a high priority
+        for (const rule of this.rules) {
+            if (rule.priority <= 100) continue;
+            rule.afterPrepareData?.();
+        }
 
         // combat stage roll options
         for (const statName of Object.keys(this.system.stats)) {

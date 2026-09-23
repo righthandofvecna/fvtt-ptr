@@ -14,34 +14,28 @@
         "value": 0
       },
       {
-        "key": "ChoiceSet",
-        "flag": "levitate",
-        "adjustName": false,
-        "label": "{actor|name}'s Levitate",
-        "prompt": "Does {actor|name} already have a Levitate Speed?",
-        "choices": [
-          {
-            "label": "Yes",
-            "value": "2"
-          },
-          {
-            "label": "No",
-            "value": "4"
-          }
-        ]
-      },
-      {
         "key": "ActiveEffectLike",
         "predicate": [],
         "mode": "add",
         "path": "system.modifiers.capabilities.levitate",
         "phase": "applyAEs",
-        "value": "{item|flags.ptu.rulesSelections.levitate}",
+        "value": 2,
         "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "upgrade",
+        "path": "system.capabilities.levitate",
+        "phase": "afterDerived",
+        "value": 4,
+        "priority": 150
       }
     ],
     "enabled": true,
     "slug": "levitate",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -82,11 +76,9 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "automation": []
   },
   "_id": "WsNZitOqUrhu9k78",
   "effects": [],
@@ -103,12 +95,13 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.40",
+    "coreVersion": "14.367",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816595,
+    "modifiedTime": 1790184812225,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "folder": null
 }
