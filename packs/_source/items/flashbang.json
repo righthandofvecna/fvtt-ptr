@@ -2,7 +2,7 @@
   "name": "Flashbang",
   "system": {
     "origin": "",
-    "effect": "Throwing a Flashbang uses the Move Flash originating from the point where you threw the Flashbang, up to your maximum Poké Ball throwing range. When used in this way, Flash flinches all legal targets on 19-20 on Accuracy Check.",
+    "effect": "Throwing a Flashbang uses the Move @UUID[Compendium.ptu.moves.Item.joekwsOGEcyJt9BB]{Flash} originating from the point where you threw the Flashbang, up to your maximum Poké Ball throwing range. When used in this way, Flash @UUID[Compendium.ptu.effects.Item.xE6uIFWZoYXAZQxA]{Flinches} all legal targets on 19-20 on Accuracy Check.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Ordnance"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -37,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -57,7 +59,8 @@
     "name": "Flashbang",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 34000000,
   "_id": "St8E5Y2ElfZFFgWU"
 }
