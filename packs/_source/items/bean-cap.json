@@ -2,7 +2,7 @@
   "name": "Bean Cap",
   "system": {
     "origin": "",
-    "effect": "AC: (6 minus Tech Edu Rank, Min 2)\nRange: 10 meters\nEffect: The target takes 20 Physical, Normal-Type Damage. On 18+, the target is Tripped and loses a Tick of Hit Points.\nBean Caps shoot as a small cloth projectile filed with beads, which explodes upon contact.",
+    "effect": "AC: (6 minus Tech Edu Rank, Min 2)\nRange: 10 meters\nEffect: The target takes 20 Physical, Normal-Type Damage. On 18+, the target is @UUID[Compendium.ptu.effects.Item.4lqKV4CxikZxxNWJ]{Tripped} and loses a Tick of Hit Points.\nBean Caps shoot as a small cloth projectile filed with beads, which explodes upon contact.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Gadgeteer"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -37,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -57,7 +59,8 @@
     "name": "Bean Cap",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 4600000,
   "_id": "2mtEpY0hgNfVgzd3"
 }

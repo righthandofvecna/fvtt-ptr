@@ -2,7 +2,7 @@
   "name": "Glue Cap",
   "system": {
     "origin": "",
-    "effect": "AC: (8 minus Tech Edu Rank, Min 2)\nRange: 8 meters\nEffect: Cause the target to become Slowed, and their Initiative is lowered by 5. On 18+, the target is also Stuck and Trapped.",
+    "effect": "AC: (8 minus Tech Edu Rank, Min 2)\nRange: 8 meters\nEffect: Cause the target to become @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed}, and their Initiative is lowered by 5. On 18+, the target is also @UUID[Compendium.ptu.effects.Item.OzGm9ZwyLd8yEhCK]{Stuck} and @UUID[Compendium.ptu.effects.Item.uqo5H1DwUuAiaYRA]{Trapped}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Gadgeteer"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -37,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -57,7 +59,8 @@
     "name": "Glue Cap",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 6100000,
   "_id": "3qtWGQbViSwE7yuC"
 }

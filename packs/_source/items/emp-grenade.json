@@ -2,7 +2,7 @@
   "name": "EMP Grenade",
   "system": {
     "origin": "",
-    "effect": "Throwing an EMP Grenade is an AC 5 Ranged Blast 3 attack that can be made at a target within your Poké Ball throwing range. All legal targets with Augmentations immediately suffer the effects of Augmentation Shock. EMP Grenades flinch targets with Augmentations on a roll of 18+ on Accuracy Check. EMP Grenades disable Pokébots for 1d2 turns.",
+    "effect": "Throwing an EMP Grenade is an AC 5 Ranged Blast 3 attack that can be made at a target within your Poké Ball throwing range. All legal targets with Augmentations immediately suffer the effects of Augmentation Shock. EMP Grenades @UUID[Compendium.ptu.effects.Item.xE6uIFWZoYXAZQxA]{Flinch} targets with Augmentations on a roll of 18+ on Accuracy Check. EMP Grenades disable Pokébots for 1d2 turns.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -25,7 +25,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Ordnance"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -39,7 +41,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -57,7 +59,8 @@
     "container": false,
     "automation": [],
     "name": "EMP Grenade",
-    "useCount": 0
+    "useCount": 0,
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -82,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 47300000,
   "_id": "ePhLjEogpsuahHoU"
 }
