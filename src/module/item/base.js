@@ -115,7 +115,7 @@ class PTUItem extends Item {
     async toggleEnableState(newState = !this.enabled) {
         await this.update({ "system.enabled": newState })
         for (const rule of this.rules) {
-            if (rule.ignored || !(rule instanceof GrantItemRuleElement)) continue;
+            if (rule.ignored || !(rule instanceof RuleElements.builtin.GrantItem)) continue;
             return this.actor.update({ "system.timestamp": Date.now() })
         }
     }
