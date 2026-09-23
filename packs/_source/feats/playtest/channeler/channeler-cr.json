@@ -59,7 +59,8 @@
     "class": "Channeler",
     "name": "Channeler [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "channeler"
+    "replacesSlug": "channeler",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -72,7 +73,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {
