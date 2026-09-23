@@ -2,7 +2,7 @@
   "name": "Cap Cannon",
   "system": {
     "origin": "",
-    "effect": "Capsule Cannons - or Cap Cannons for short - are two-handed pieces of Equipment which can be loaded with different types of Capsules (Caps) and fired. They can be fired as a Standard Action, and the range and effect of the Cannon depends on the Cap used. A Cap Cannon may have up to five Caps loaded in it at once, and they do not have to be fired in any particular order. You may load up to two Caps into a Cannon as a Standard Action. There are three types of Caps: Bean Caps, Glue Caps, and Net Caps. In addition to Caps, Capsule Cannons can also be loaded with Smoke Bombs, Pester Balls, and Poke Balls. When fired this way, these items behave normally but have a Range of 10 meters.",
+    "effect": "Capsule Cannons - or Cap Cannons for short - are two-handed pieces of Equipment which can be loaded with different types of Capsules (Caps) and fired. They can be fired as a Standard Action, and the range and effect of the Cannon depends on the Cap used. A Cap Cannon may have up to five Caps loaded in it at once, and they do not have to be fired in any particular order. You may load up to two Caps into a Cannon as a Standard Action. There are three types of Caps: @UUID[Compendium.ptu.items.Item.2mtEpY0hgNfVgzd3]{Bean Caps}, @UUID[Compendium.ptu.items.Item.3qtWGQbViSwE7yuC]{Glue Caps}, and @UUID[Compendium.ptu.items.Item.B7OUx9nLzd2EfmdJ]{Net Caps}. In addition to Caps, Capsule Cannons can also be loaded with @UUID[Compendium.ptu.items.Item.eLpDB3IBw8rB0IFM]{Smoke Balls}, @UUID[Compendium.ptu.items.Item.1e63A4th1XwoZ3Xf]{Pester Balls}, and Poke Balls. When fired this way, these items behave normally but have a Range of 10 meters.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,11 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Gadgeteer",
+      "Equipment",
+      "Both Hands"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -37,7 +41,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -57,7 +61,8 @@
     "name": "Cap Cannon",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +70,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 47700000,
   "_id": "er8OngHyAM0VUO4K"
 }

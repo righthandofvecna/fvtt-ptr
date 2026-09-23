@@ -23,7 +23,10 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Apothecary",
+      "Crafting"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -84,6 +87,5 @@
     "exportSource": null
   },
   "sort": 27200000,
-  "_id": "MVgde5bSqt7dgxDk",
-  "folder": null
+  "_id": "MVgde5bSqt7dgxDk"
 }

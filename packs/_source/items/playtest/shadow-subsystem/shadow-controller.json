@@ -27,7 +27,11 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Shadow",
+      "Equipment",
+      "Accessory"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -58,7 +62,8 @@
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
@@ -67,7 +72,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

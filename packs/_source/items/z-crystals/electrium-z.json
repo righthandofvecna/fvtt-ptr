@@ -34,7 +34,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Z-Crystal"
+    ],
     "frequency": {
       "type": "scene",
       "max": 1,
@@ -49,7 +51,7 @@
     },
     "actionCost": {
       "standard": true,
-      "rapid": true,
+      "rapid": false,
       "shift": false,
       "free": false,
       "extended": false
