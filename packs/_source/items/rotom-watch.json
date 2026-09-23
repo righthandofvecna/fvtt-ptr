@@ -4,7 +4,7 @@
   "img": "https://assets.forge-vtt.com/6464e7dd7cb6da75187d728c/worlds/Pokemon%20The%20Chosen/Rotom%20Watch.png",
   "system": {
     "origin": "",
-    "effect": "This handy smartwatch incorporates support for Z Crystals, a Mega Keystone, and a Dynamax Band.",
+    "effect": "This handy smartwatch incorporates support for Z-Crystals, a Mega Keystone, and a Dynamax Band.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -25,7 +25,10 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Equipment",
+      "Accessory"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
