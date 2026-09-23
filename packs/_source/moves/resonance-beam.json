@@ -84,7 +84,7 @@
     "ptu": {
       "automationStatus": "needs-automation",
       "devNote": "",
-      "showInTokenPanel": false
+      "showInTokenPanel": true
     }
   }
 }

@@ -85,7 +85,7 @@
       "automationStatus": "requires-system-changes",
       "devNote": "",
       "used": null,
-      "showInTokenPanel": false
+      "showInTokenPanel": true
     }
   },
   "_stats": {

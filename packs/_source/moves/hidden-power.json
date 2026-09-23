@@ -81,7 +81,7 @@
     "ptu": {
       "automationStatus": "requires-system-changes",
       "devNote": "Requires Dice roll to determine type, plus move type change automation",
-      "showInTokenPanel": false
+      "showInTokenPanel": true
     }
   },
   "_stats": {
