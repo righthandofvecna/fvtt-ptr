@@ -278,6 +278,26 @@ class PTUCombat extends Combat {
 
             if (game.user.isGM) {
                 new CombatXPDialog(this).render(true);
+
+                foundry.applications.api.DialogV2.confirm({
+                    window: { title: "Reset Scene Uses" },
+                    content: "<p>Reset scene-frequency uses for all actors?</p>",
+                    rejectClose: false,
+                }).then(async (confirmed) => {
+                    if (!confirmed) return;
+                    const updates = [];
+                    for (const actor of game.actors.values()) {
+                        for (const item of actor.items.values()) {
+                            if (item.system.frequency?.type !== "scene") continue;
+                            const max = item.system.frequency?.max ?? 0;
+                            if (!max) continue;
+                            updates.push(item.setFlag("ptu", "used", 0));
+                        }
+                    }
+                    await Promise.all(updates);
+                    game.ptu.tokenPanel?.refresh?.();
+                    ui.notifications.info("Scene uses reset for all actors.");
+                });
             }
         }
 
