@@ -2,7 +2,6 @@
   "name": "Assist",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Randomly select another Pokémon on the user's roster and then randomly select a Move that Pokémon knows. Assist's user uses that Move immediately.",
@@ -69,7 +68,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "OGcEIK4DjhajZg4s",
   "effects": [],
