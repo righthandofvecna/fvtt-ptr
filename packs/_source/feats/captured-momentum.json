@@ -11,7 +11,8 @@
         "path": "system.modifiers.baseStats.spd.mod",
         "value": 1,
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -33,7 +34,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "+Speed"
+      "+Speed",
+      "Legacy"
     ],
     "frequency": {
       "type": "at-will",
@@ -68,7 +70,8 @@
     "name": "Captured Momentum",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -79,7 +82,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Advanced Capture Techniques Rank 2",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -92,7 +97,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 5900000,
   "_id": "59YR4zQr6EDY1s6B"
 }
