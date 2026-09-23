@@ -2,6 +2,7 @@ import { sluggify, sortStringRecord } from "../../../util/misc.js";
 import { RuleElements } from "../../rules/index.js";
 import { RULE_ELEMENT_FORMS, RuleElementForm } from "./rule-elements/index.js";
 import { GithubSyncManager } from "../../apps/github-sync/manager.js";
+import { processConditionalsHTML } from "../../../scripts/hooks/conditional-enricher.js";
 
 class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
     /** @override */
@@ -38,7 +39,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
 
         data.referenceEffect = this.item.referenceEffect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(`@UUID[${foundry.utils.duplicate(this.item.referenceEffect)}]`, {async: true}) : null;
         const fullEffect = this.item.fullEffectText;
-        data.itemEffect = fullEffect ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(fullEffect), {async: true, relativeTo: this.item}) : fullEffect;
+        data.itemEffect = fullEffect ? processConditionalsHTML(await foundry.applications.ux.TextEditor.implementation.enrichHTML(foundry.utils.duplicate(fullEffect), {async: true, relativeTo: this.item})) : fullEffect;
         data.itemCost = await (async () => {
             const cost = parseInt(this.item.system.cost);
             if(!cost) return this.item.system.cost || "-";
