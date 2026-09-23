@@ -27,7 +27,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Held Item"
+      "Held Item",
+      "F&S"
     ],
     "frequency": {
       "type": "static",

@@ -5,7 +5,7 @@
   "img": "systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Held Item: After each Extended Rest, if this Pokemons Friendship level is 4 or higher, it gains 1 Temporary Spirit that is lost if not used by the next Extended Rest. This effect is lost if this held item is removed in anyway.",
+    "effect": "After each Extended Rest, if this Pokemons Friendship level is 4 or higher, it gains 1 Temporary Spirit that is lost if not used by the next Extended Rest. This effect is lost if this held item is removed in anyway.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -27,7 +27,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Held Item"
+      "Held Item",
+      "F&S"
     ],
     "frequency": {
       "type": "at-will",

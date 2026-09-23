@@ -5,7 +5,7 @@
   "img": "systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "As an extended action, you can massage your Pokemon. Roll a d20, on a 12+, your Pokemons Friendship raises by 1 to a max of 3.",
+    "effect": "As an Extended Action, you can massage your Pokemon. Roll a d20, on a 12+, your Pokemons Friendship raises by 1 to a max of 3.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -44,7 +44,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -57,12 +57,15 @@
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
