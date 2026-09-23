@@ -54,6 +54,14 @@ export class PTUSpeciesDragOptionsPrompt extends FormApplication {
     async _updateObject(event, formData) {
         event.preventDefault();
 
+        await Promise.all([
+            game.settings.set("ptu", "generation.defaultDexDragInLevelMin", formData["level.min"]),
+            game.settings.set("ptu", "generation.defaultDexDragInLevelMax", formData["level.max"]),
+            game.settings.set("ptu", "generation.defaultDexDragInShinyChance", formData["shiny-chance"]),
+            game.settings.set("ptu", "generation.defaultDexDragInStatRandomness", formData["stat-randomness"]),
+            game.settings.set("ptu", "generation.defaultDexDragInPreventEvolution", formData["prevent-evolution"]),
+        ]);
+
         const generator = new PokemonGenerator(this.species, { x: this.x, y: this.y })
         await generator.prepare({
             minLevel: formData["level.min"],

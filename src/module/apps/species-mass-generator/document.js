@@ -2,27 +2,36 @@ import { findItemInCompendium, querySpeciesCompendium } from "../../../util/misc
 
 export class SpeciesGeneratorData {
     constructor() {
-        this.speciesTab = "species";
-        this.amount = 20;
+        this.speciesTab = game.settings.get("ptu", "generation.defaultMassGeneratorSpeciesTab") || "species";
+        this.amount = game.settings.get("ptu", "generation.defaultMassGeneratorAmount") ?? 20;
         this.species = undefined;
+
+        const savedSpeciesUuid = game.settings.get("ptu", "generation.defaultMassGeneratorSpeciesUuid") || "";
         this.speciesField = {
-            value: "",
-            updated: false
+            value: savedSpeciesUuid,
+            updated: !!savedSpeciesUuid
         };
+
         this.table = undefined;
         this.tableSelect = {
             value: undefined,
             updated: false,
             options: game.tables.map(t => ({ label: t.name, uuid: t.uuid }))
         }
-        if (this.tableSelect.options?.length > 0) {
+
+        const savedTableUuid = game.settings.get("ptu", "generation.defaultMassGeneratorTableUuid") || "";
+        if (savedTableUuid) {
+            this.tableSelect.value = savedTableUuid;
+            this.tableSelect.updated = true;
+        } else if (this.tableSelect.options?.length > 0) {
             this.tableSelect.value = this.tableSelect.options[0].uuid;
             this.tableSelect.updated = true;
         }
         this.folder = undefined;
+        const savedFolderField = game.settings.get("ptu", "generation.defaultMassGeneratorFolderField") || "";
         this.folderField = {
-            value: "",
-            updated: false,
+            value: savedFolderField,
+            updated: !!savedFolderField,
         }
         this.level = {
             min: game.settings.get("ptu", "generation.defaultDexDragInLevelMin") ?? 0,
