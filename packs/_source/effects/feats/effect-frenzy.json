@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "+2 Bonus to Critical Hit Range, +2 Bonus to Movement Speed, and +2 Bonus to Acrobatics, Athletics, Combat, and Intimidate Checks.",
     "snippet": "",
     "rules": [
       {
@@ -67,9 +67,9 @@
       "value": 1
     },
     "duration": {
-      "value": -1,
-      "unit": "unlimited",
-      "expiry": null
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-end"
     },
     "start": {
       "value": 0,
@@ -86,7 +86,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

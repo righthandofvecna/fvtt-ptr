@@ -2,7 +2,7 @@
   "name": "Targeted Profiling",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon\nEffect: Until the end of your next turn, the target acts as if they had the Mold Breaker Ability against all Pokémon and Trainers in your Profile Archive and gains a +2 bonus to Accuracy Rolls against these targets.",
+    "effect": "Target: Your Pokémon\nEffect: Until the end of your next turn, the target acts as if they had the @UUID[Compendium.ptu.abilities.Item.XUKqSH4Bt2Ofps47]{Mold Breaker} Ability against all Pokémon and Trainers in your Profile Archive and gains a +2 bonus to Accuracy Rolls against these targets.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -60,7 +60,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -70,7 +71,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Profile Album, Expert Perception"
+      "prereqBackup": "Profile Album, Expert Perception",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -83,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 37800000,
   "_id": "YedSY6pZidtAYTUl"
 }

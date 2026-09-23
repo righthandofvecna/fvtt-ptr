@@ -2,7 +2,7 @@
   "name": "Aura Mastery",
   "system": {
     "origin": "",
-    "effect": "Choose two of Aura Sphere, Focus Blast, Drain Punch, or Focus Punch. You learn the chosen Moves.",
+    "effect": "Choose two of @UUID[Compendium.ptu.moves.Item.gYkmoTL90zOWT5lv]{Aura Sphere}, @UUID[Compendium.ptu.moves.Item.HU7NSy5rYDet6DbI]{Focus Blast}, @UUID[Compendium.ptu.moves.Item.Dr7Eh1TGQHwQcreV]{Drain Punch}, or @UUID[Compendium.ptu.moves.Item.JwDy34HQ8GT4v6Jv]{Focus Punch}. You learn the chosen Moves.",
     "snippet": "",
     "rules": [
       {
@@ -184,7 +184,8 @@
     "name": "Aura Mastery",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -195,7 +196,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Aura Guardian, Expert Intuition",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -208,7 +211,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 44300000,
   "_id": "e4j36zX5NrHVmEmV"
 }

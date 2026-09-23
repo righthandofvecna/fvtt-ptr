@@ -6,12 +6,11 @@
   "img": "systems/ptu/static/css/images/icons/class_feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose one of Detect, Vacuum Wave, or Force Palm. You learn the chosen Moves. You gain the Aura Reader Capability. If your Intuition Rank is Adept or higher, you also gain the Aura Pulse Capability.",
+    "effect": "Effect: Choose one of @UUID[Compendium.ptu.moves.Item.Hn8ikOihbzcReurJ]{Detect}, @UUID[Compendium.ptu.moves.Item.f6wiL5OLPxVtLVWi]{Vacuum Wave}, or @UUID[Compendium.ptu.moves.Item.WRDNnocUmynpRpWb]{Force Palm}. You learn the chosen Moves. You gain the @UUID[Compendium.ptu.capabilities.Item.TtY94KGl4bDY1e0b]{Aura Reader} Capability. If your Intuition Rank is Adept or higher, you also gain the @UUID[Compendium.ptu.capabilities.Item.XTXkBsGDf4t4gKoa]{Aura Pulse} Capability.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "auraguardian",
         "choices": [
           {
@@ -30,13 +29,14 @@
         "mode": "add",
         "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.auraguardian}.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       },
       {
         "key": "GrantItem",
         "predicate": {
           "gte": [
-            "@actor.system.skills.guile.value.total",
+            "@actor.system.skills.intuition.value.total",
             4
           ]
         },
@@ -50,18 +50,21 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.Hn8ikOihbzcReurJ",
+            "label": "Detect",
             "predicate": {
               "not": "move:detect"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.f6wiL5OLPxVtLVWi",
+            "label": "Vacuum Wave",
             "predicate": {
               "not": "move:vacuum-wave"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.WRDNnocUmynpRpWb",
+            "label": "Force Palm",
             "predicate": {
               "not": "move:force-palm"
             }
@@ -73,6 +76,12 @@
         "predicate": [],
         "allowDuplicate": false,
         "uuid": "{item|flags.ptu.rulesSelections.move1}"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.TtY94KGl4bDY1e0b"
       }
     ],
     "enabled": true,
@@ -129,7 +138,8 @@
     "free": false,
     "class": "Aura Guardian",
     "contentSet": "class-rework",
-    "replacesSlug": "aura-guardian"
+    "replacesSlug": "aura-guardian",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
@@ -138,7 +148,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "Check to grant Aura Pulse was previously pointed to Guile. After correction to Intuition, still does not appear to grant the Capability on qualifying Trainers"
     }
   },
   "_stats": {

@@ -9,7 +9,7 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.moves.Item.WiO4NUbCuv16irNl"
+        "uuid": "Compendium.ptu.moves.Item.aS33KlxhRCP0s5Zd"
       }
     ],
     "enabled": true,
@@ -92,5 +92,6 @@
     "exportSource": null
   },
   "sort": 0,
-  "_id": "V6ktbuyfSNmKupfK"
+  "_id": "V6ktbuyfSNmKupfK",
+  "folder": null
 }

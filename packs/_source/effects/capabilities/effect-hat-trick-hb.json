@@ -73,7 +73,7 @@
     "ptu": {
       "showInTokenPanel": true,
       "automationStatus": "needs-automation",
-      "devNote": ""
+      "devNote": "Effect applies universal DR, does not check for incoming critical hits"
     }
   }
 }

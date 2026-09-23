@@ -2,7 +2,7 @@
   "name": "Fight On and On",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You become Enraged.\nEffect: You gain the Hardened condition. @Embed[Compendium.ptu.effects.Item.ed6GkfPq9AmYTTnf]",
+    "effect": "Trigger: You become @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Enraged}.\nEffect: You gain the Hardened condition.\n@Embed[Compendium.ptu.references.Item.kKTs3eOXh8g9NAUY]",
     "snippet": "",
     "rules": [
       {
@@ -70,7 +70,8 @@
     "class": "Berserker",
     "name": "Fight On and On [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "fight-on-and-on"
+    "replacesSlug": "fight-on-and-on",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -83,7 +84,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

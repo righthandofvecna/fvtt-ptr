@@ -2,7 +2,7 @@
   "name": "Zap Blaster",
   "system": {
     "origin": "",
-    "effect": "Uses the Move Zap Cannon once.",
+    "effect": "Uses the Move @UUID[Compendium.ptu.moves.Item.xkb0LIHiVO23Vo1a]{Zap Cannon} once.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Ordnance"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -37,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -57,7 +59,8 @@
     "name": "Zap Blaster",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 26400000,
   "_id": "M26u2BszGx591BcB"
 }

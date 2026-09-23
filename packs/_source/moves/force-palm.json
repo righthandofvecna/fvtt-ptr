@@ -2,7 +2,6 @@
   "name": "Force Palm",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Force Palm Paralyzes the target on 18+.",
@@ -15,7 +14,8 @@
         "uuid": "Compendium.ptu.effects.Item.bzZaLfYxVyKbJOCo",
         "range": "18",
         "value": "",
-        "affects": "target"
+        "affects": "target",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -79,7 +79,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "WRDNnocUmynpRpWb",
   "effects": [],
@@ -89,7 +90,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

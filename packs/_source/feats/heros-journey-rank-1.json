@@ -1,12 +1,11 @@
 {
-  "folder": null,
   "name": "Hero's Journey Rank 1",
   "type": "feat",
   "_id": "z67w0rpqgXxB4PUU",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Each Rank, you may gain two Backpacker Talents for which you qualify.\nTalents: Call to Adventure, Hat Trick, Frisk, Handyman, Movement Mastery, Sole Power, Wayfarer, Wear It Better",
+    "effect": "Each Rank, you may gain two Backpacker Talents for which you qualify.\nTalents: @UUID[Compendium.ptu.capabilities.Item.rgZARySYBFTnoMNZ]{Call to Adventure}, @UUID[Compendium.ptu.capabilities.Item.FnEb80T4dtIfCTJT]{Hat Trick}, @UUID[Compendium.ptu.capabilities.Item.JNf8suPf2nzG4rmo]{Frisk}, @UUID[Compendium.ptu.capabilities.Item.cYmfaYp6eN94F9CF]{Handyman}, @UUID[Compendium.ptu.capabilities.Item.eh4cGM2DpLFprazD]{Movement Mastery}, @UUID[Compendium.ptu.capabilities.Item.l35R0FpQysFZ072H]{Sole Power}, @UUID[Compendium.ptu.capabilities.Item.1GG6KVr3GmMUexIP]{Wayfarer}, @UUID[Compendium.ptu.capabilities.Item.XwnymStQhTW5Xu9k]{Wear It Better}",
     "snippet": "",
     "rules": [
       {
@@ -258,7 +257,7 @@
     "ptu": {
       "showInTokenPanel": true,
       "prereqBackup": "Backpacker",
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

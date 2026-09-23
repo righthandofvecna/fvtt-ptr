@@ -2,7 +2,6 @@
   "name": "Focus Blast",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Focus Blast lowers the target's Special Defense by 1 Combat Stage on 18+.",
@@ -79,7 +78,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "HU7NSy5rYDet6DbI",
   "effects": [],

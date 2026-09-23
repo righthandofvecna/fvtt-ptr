@@ -4,7 +4,48 @@
     "origin": "",
     "effect": "You have made a contract with a deity or other supernatural being and have been Branded for it. This Brand may or may not be of your choosing. The other party will uphold their side of the deal and expects you to do the same. Other Legendaries may be wary to grant you Gifts in the future based on the contents of this contract. Your Patron Stat for this feature is that of the being you made your contract with. If this being was not a typical Legendary, its Patron Stat is its highest base stat.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "hp",
+            "label": "HP"
+          },
+          {
+            "value": "atk",
+            "label": "Attack"
+          },
+          {
+            "value": "def",
+            "label": "Defense"
+          },
+          {
+            "value": "spatk",
+            "label": "Sp. Attack"
+          },
+          {
+            "value": "spdef",
+            "label": "Sp. Defense"
+          },
+          {
+            "value": "spd",
+            "label": "Speed"
+          }
+        ],
+        "prompt": "Patron Stat?",
+        "flag": "branded"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.branded}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "branded",
     "contentSet": "",
@@ -59,7 +100,8 @@
     "name": "Branded",
     "useCount": 0,
     "automation": [],
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -70,7 +112,7 @@
   "flags": {
     "ptu": {
       "prereqBackup": "GM Permission",
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -85,7 +127,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 7100000,
   "_id": "6DYDUGOCvhy09xs5"
 }

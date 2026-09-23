@@ -1,5 +1,4 @@
 {
-  "folder": null,
   "name": "Handyman",
   "type": "capability",
   "_id": "cYmfaYp6eN94F9CF",
@@ -33,7 +32,7 @@
       "Backpacker Talent"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -61,7 +60,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

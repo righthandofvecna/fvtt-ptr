@@ -2,7 +2,7 @@
   "name": "Item Mastery",
   "system": {
     "origin": "",
-    "effect": "You learn the Moves Fling and Recycle.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.fDc6STMtfRenewU6]{Fling} and @UUID[Compendium.ptu.moves.Item.yUba2OWKoxAE3txP]{Recycle}.",
     "snippet": "",
     "rules": [
       {
@@ -21,7 +21,10 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -78,7 +81,8 @@
     "name": "Item Mastery",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -88,7 +92,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Backpacker"
+      "prereqBackup": "Backpacker",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -101,7 +108,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 2100000,
   "_id": "1UgrreawgCPO4L1g"
 }

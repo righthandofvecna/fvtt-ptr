@@ -2,7 +2,7 @@
   "name": "Archival Training Rank 1",
   "system": {
     "origin": "",
-    "effect": "You gain an Archive you have not previously obtained.",
+    "effect": "You gain an @UUID[Compendium.ptu.references.Item.7O0Wb2WhD7dwEZJb]{Archive} you have not previously obtained.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -59,7 +59,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +70,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Chronicler"
+      "prereqBackup": "Chronicler",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -82,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 45500000,
   "_id": "etkDopBVSecxDE1i"
 }

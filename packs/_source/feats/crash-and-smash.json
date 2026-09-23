@@ -2,7 +2,7 @@
   "name": "Crash and Smash",
   "system": {
     "origin": "",
-    "effect": "You learn the Moves Double Edge and Thrash. You may use these moves as a Weapon Attack when wielding Melee Weapons.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.7Gi57ZcOWjyjhU0A]{Double Edge} and @UUID[Compendium.ptu.moves.Item.czDZWjn9TbP9ON4q]{Thrash}. You may use these moves as a Weapon Attack when wielding Melee Weapons.",
     "snippet": "",
     "rules": [
       {
@@ -21,7 +21,10 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.hp.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -81,7 +84,8 @@
     "name": "Crash and Smash",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -91,7 +95,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Frenzy, Expert Combat"
+      "prereqBackup": "Frenzy, Expert Combat",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -104,7 +111,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 24200000,
   "_id": "MWtJoxO87Y8MFvZ9"
 }

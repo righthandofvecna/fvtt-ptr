@@ -2,7 +2,6 @@
   "name": "Vacuum Wave",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "",
@@ -64,8 +63,8 @@
     },
     "type": "Fighting",
     "category": "Special",
-    "damageBase": 4,
-    "ac": 2,
+    "damageBase": "4",
+    "ac": "2",
     "range": "Range 4",
     "contestType": "Smart - Saving Grace",
     "stab": false,
@@ -73,7 +72,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "f6wiL5OLPxVtLVWi",
   "effects": [],
@@ -83,7 +83,9 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "no-automation-needed"
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "_stats": {

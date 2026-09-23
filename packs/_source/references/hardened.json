@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Taskmaster",
-    "effect": "Mechanic – Hardened Hardened Pokemon receive the following benefits: » They do not lose Hit Points from acting while Heavily Injured » Injuries beyond the 5th do not lower their Maximum Hit Points » If they have 1 or more injuries, they gain +1 to Critical Hit and Effect Range. » If they have 3 or more injuries, they gain +1 Evasion and +5 to Initiative. » If they have 5 or more injuries, they gain +5 Damage Reduction. » If they have 7 or more injuries, they are immune to Loss of Hit Points (but not damage) from all effects. » If they have 9 or more injuries, they resist all damage one step further.",
+    "effect": "Hardened Pokemon receive the following benefits: \n» They do not lose Hit Points from acting while Heavily Injured \n» Injuries beyond the 5th do not lower their Maximum Hit Points \n» If they have 1 or more injuries, they gain +1 to Critical Hit and Effect Range. \n» If they have 3 or more injuries, they gain +1 Evasion and +5 to Initiative. \n» If they have 5 or more injuries, they gain +5 Damage Reduction. \n» If they have 7 or more injuries, they are immune to Loss of Hit Points (but not damage) from all effects. \n» If they have 9 or more injuries, they resist all damage one step further.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -20,7 +20,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.ed6GkfPq9AmYTTnf",
     "source": {
       "value": "Homebrew"
     },
@@ -31,12 +31,10 @@
   },
   "_id": "kKTs3eOXh8g9NAUY",
   "effects": [],
-  "folder": null,
   "sort": 24500000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

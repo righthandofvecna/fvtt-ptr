@@ -12,7 +12,9 @@
         "path": "system.modifiers.baseStats.hp.mod",
         "predicate": [
           "capability:underdog"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -21,7 +23,9 @@
         "path": "system.modifiers.baseStats.atk.mod",
         "predicate": [
           "capability:underdog"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -30,7 +34,9 @@
         "path": "system.modifiers.baseStats.def.mod",
         "predicate": [
           "capability:underdog"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -39,7 +45,9 @@
         "path": "system.modifiers.baseStats.spatk.mod",
         "predicate": [
           "capability:underdog"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -48,7 +56,9 @@
         "path": "system.modifiers.baseStats.spdef.mod",
         "predicate": [
           "capability:underdog"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -57,7 +67,9 @@
         "path": "system.modifiers.baseStats.spd.mod",
         "predicate": [
           "capability:underdog"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -80,7 +92,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -110,7 +122,8 @@
     "name": "Underdog's Strength",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -120,7 +133,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Level 15, User is an Underdog Pokémon"
+      "prereqBackup": "Level 15, User is an Underdog Pokémon",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -133,7 +149,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 1400000,
   "_id": "Mye0UTdJzbF2D4Nn"
 }
