@@ -39,7 +39,7 @@
     ],
     "enabled": true,
     "slug": "steel-wind-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

@@ -21,7 +21,7 @@
     ],
     "enabled": true,
     "slug": "fury-cutter-combo",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": null,

@@ -19,7 +19,7 @@
     ],
     "enabled": true,
     "slug": "effect-overwhelming",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

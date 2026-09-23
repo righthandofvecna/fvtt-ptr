@@ -16,7 +16,7 @@
     ],
     "enabled": true,
     "slug": "effect-overwhelming-eph",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

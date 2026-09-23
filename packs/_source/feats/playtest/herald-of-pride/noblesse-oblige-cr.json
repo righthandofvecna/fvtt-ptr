@@ -26,7 +26,7 @@
     ],
     "enabled": true,
     "slug": "noblesse-oblige-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": null,

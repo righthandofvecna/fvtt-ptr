@@ -38,7 +38,7 @@
     ],
     "enabled": true,
     "slug": "miasmas-call-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

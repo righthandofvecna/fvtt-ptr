@@ -38,7 +38,7 @@
     ],
     "enabled": true,
     "slug": "bare-the-dragons-claws-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": null,

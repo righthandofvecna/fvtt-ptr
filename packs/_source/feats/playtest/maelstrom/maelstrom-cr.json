@@ -36,7 +36,7 @@
     ],
     "enabled": true,
     "slug": "maelstrom-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

@@ -49,7 +49,7 @@
     ],
     "enabled": true,
     "slug": "lessons-in-rage-pain-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

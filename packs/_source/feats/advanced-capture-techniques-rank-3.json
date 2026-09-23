@@ -204,7 +204,7 @@
     ],
     "enabled": true,
     "slug": "advanced-capture-techniques-rank-3",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

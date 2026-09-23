@@ -206,7 +206,7 @@
     ],
     "enabled": true,
     "slug": "athletic-moves-rank-2-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

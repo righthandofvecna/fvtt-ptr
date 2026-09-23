@@ -20,7 +20,7 @@
     ],
     "enabled": true,
     "slug": "effect-highlander-resist-less",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": null,

@@ -10,7 +10,7 @@
     "rules": [],
     "enabled": true,
     "slug": "wayfarer",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

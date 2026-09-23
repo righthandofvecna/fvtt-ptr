@@ -48,7 +48,7 @@
     ],
     "enabled": true,
     "slug": "miasmic-spray-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

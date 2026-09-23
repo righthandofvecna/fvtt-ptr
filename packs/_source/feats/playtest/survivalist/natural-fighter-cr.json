@@ -17,7 +17,7 @@
     ],
     "enabled": true,
     "slug": "natural-fighter-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

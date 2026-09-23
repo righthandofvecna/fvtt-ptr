@@ -1,27 +1,39 @@
 {
   "name": "Aqua Ring",
   "type": "move",
-  "img": "/systems/ptu/static/css/images/types2/WaterIC_Icon.png",
+  "img": "/systems/ptu/css/images/types2/WaterIC_Icon.png",
   "folder": null,
   "system": {
     "origin": "",
     "effect": "Aqua Ring covers the user in a Coat that heals the user at the beginning of their turn. The user is healed a Tick of Hit Points each turn.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.JeNFraeC1trGyFBm",
+        "range": "",
+        "value": "",
+        "affects": "origin"
+      }
+    ],
     "enabled": true,
     "slug": "aqua-ring",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:26.257Z",
+        "datetime": "2026-07-06T12:14:57.154Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.JeNFraeC1trGyFBm",
+    "referenceEffect": "",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -60,6 +72,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Water",
     "category": "Status",
     "damageBase": "--",
@@ -69,41 +82,16 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
+  "_id": "ywYeIhxlrHb9gOP1",
   "effects": [],
   "flags": {
     "ptu": {
+      "used": null,
       "showInTokenPanel": true,
-      "automationStatus": "completed",
-      "devNote": "",
-      "used": null
-    },
-    "LocknKey": {
-      "IDKeysFlag": "",
-      "RemoveKeyonUseFlag": false,
-      "LPFormulaFlag": "",
-      "LPFormulaOverrideFlag": false,
-      "LBFormulaFlag": "",
-      "LBFormulaOverrideFlag": false,
-      "ReplacementItemFlag": ""
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
-  },
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.21",
-    "coreVersion": "13.351",
-    "createdTime": 1692963260348,
-    "modifiedTime": 1778567787420,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  },
-  "_id": "ywYeIhxlrHb9gOP1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
   }
 }

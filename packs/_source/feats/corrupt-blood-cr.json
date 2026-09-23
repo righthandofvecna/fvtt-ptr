@@ -28,7 +28,7 @@
     ],
     "enabled": true,
     "slug": "corrupt-blood-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

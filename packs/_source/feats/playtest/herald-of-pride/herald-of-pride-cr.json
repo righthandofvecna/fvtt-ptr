@@ -27,7 +27,7 @@
     ],
     "enabled": true,
     "slug": "herald-of-pride-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": null,

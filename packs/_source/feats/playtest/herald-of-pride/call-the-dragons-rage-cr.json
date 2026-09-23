@@ -38,7 +38,7 @@
     ],
     "enabled": true,
     "slug": "call-the-dragons-rage-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": null,

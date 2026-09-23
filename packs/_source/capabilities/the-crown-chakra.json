@@ -14,12 +14,12 @@
         "predicate": [],
         "affects": "target",
         "selectors": "psychic-damage-received",
-        "uuid": "Compendium.world.updated-classes-not-in-system-yet.Item.SfaUAdwU628l0iUp"
+        "uuid": "Compendium.ptu.effects.Item.SfaUAdwU628l0iUp"
       }
     ],
     "enabled": true,
     "slug": "the-crown-chakra",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

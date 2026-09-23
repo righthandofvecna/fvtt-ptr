@@ -1,22 +1,39 @@
 {
   "name": "Fluffy",
   "type": "ability",
-  "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
+  "img": "/systems/ptu/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
     "effect": "The user resists damaging Melee attacks one step further, but resists Fire-Type attacks one step less. Defensive.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "EphemeralEffect",
+        "predicate": [],
+        "selectors": "melee-damage",
+        "affects": "origin",
+        "uuid": "Compendium.ptu.effects.Item.DQbQb7SHdnMGoHuu"
+      },
+      {
+        "key": "EphemeralEffect",
+        "predicate": [],
+        "selectors": "fire-damage",
+        "affects": "origin",
+        "uuid": "Compendium.ptu.effects.Item.YirEcq7HUwGSPBBO"
+      }
+    ],
     "enabled": true,
     "slug": "fluffy",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
-      "version": 0.116,
+      "version": 0.119,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:16.813Z",
+        "datetime": "2026-07-06T12:14:57.159Z",
         "version": {
           "schema": 0.11,
-          "foundry": "13.351",
-          "system": "4.4.3.16"
+          "foundry": "14.361",
+          "system": "4.4.3.37"
         }
       }
     },
@@ -49,27 +66,19 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "lH9tO883bqPwIbSP",
   "effects": [],
   "folder": null,
-  "sort": 40800000,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
-    "createdTime": 1692968394056,
-    "modifiedTime": 1778200816827,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
+  "flags": {
+    "ptu": {
+      "abilityChosen": "basic",
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
   }
 }
