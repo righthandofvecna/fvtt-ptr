@@ -2,7 +2,7 @@
   "name": "Cinematic Analysis",
   "system": {
     "origin": "",
-    "effect": "You analyze a Record in one of your Archives. Cinematic Analysis’s effect depends on the Archive the Record is in. Each of these effects may only be used once per Scene.\nCharacter Study - Profile Archive: You may trigger Character Study when you or an ally makes a Charm, Command, Guile, Intimidate, or Intuition Check targeting the subject of your Record. Make a Perception Check and substitute the triggering Skill Check with the result.\nRecreation - Technique Archive: Recreation may be triggered as your Pokémon gains Initiative. Select a Record of a Move in your Technique Archive that your Pokémon can learn by Level Up, TM, or Move Tutor. Your Pokémon may perform that Move as if it was on its Move List. You may select a specific Move only once per day.\nSituational Awareness - Travel Archive: You may only use Situational Awareness if you analyze a Record of your current Location. When used this way, you may activate it as an Interrupt. Choose an ally; that ally may take their next action as an Interrupt.",
+    "effect": "You analyze a Record in one of your Archives. Cinematic Analysis’s effect depends on the Archive the Record is in. Each of these effects may only be used once per Scene.\n<b>Character Study - Profile Archive:</b> You may trigger Character Study when you or an ally makes a Charm, Command, Guile, Intimidate, or Intuition Check targeting the subject of your Record. Make a Perception Check and substitute the triggering Skill Check with the result.\n<b>Recreation - Technique Archive:</b> Recreation may be triggered as your Pokémon gains Initiative. Select a Record of a Move in your Technique Archive that your Pokémon can learn by Level Up, TM, or Move Tutor. Your Pokémon may perform that Move as if it was on its Move List. You may select a specific Move only once per day.\n<b>Situational Awareness - Travel Archive:</b> You may only use Situational Awareness if you analyze a Record of your current Location. When used this way, you may activate it as an Interrupt. Choose an ally; that ally may take their next action as an Priority (Advanced).",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -58,7 +58,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +69,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "4 Chronicler Features, Master Perception"
+      "prereqBackup": "4 Chronicler Features, Master Perception",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -81,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 62800000,
   "_id": "ue6Oh3jJSGYmf0Ui"
 }
