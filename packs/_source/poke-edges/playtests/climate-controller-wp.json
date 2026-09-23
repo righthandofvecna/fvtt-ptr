@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/pokeedge_icon.png",
   "system": {
     "origin": "",
-    "effect": "Choose a Weather Move the target knows. That Move no longer counts takes up a Move Slot for the user. Once a day, when the user uses the selected Weather Move, the Move instead sets the Tier 2 variant of its associated Weather. This Edge may be taken multiple times, each time selecting a different Weather Move.",
+    "effect": "Choose a Weather Move the target knows. That Move no longer counts takes up a Move Slot for the user. Once a day, when the user uses the selected Weather Move, the Move instead sets the Tier 2 variant of its associated Weather. This Edge may be taken multiple times, each time selecting a different Weather Move.\n\n<strong>Your Weather Moves:</strong> @ItemSearch[keyword=Weather]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,8 +31,8 @@
       "Playtest"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "daily",
+      "max": 1,
       "custom": "",
       "modifiers": {
         "priorityLimited": false,
@@ -59,13 +59,21 @@
     ],
     "cost": 0,
     "contentSet": "weather-playtest",
-    "replacesSlug": "climate-controller"
+    "replacesSlug": "climate-controller",
+    "leagueLegal": false
   },
   "effects": [],
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Checks for the user's Moves with the Weather keyword. System doesn't currently check or enforce Move Slots.",
+      "showInTokenPanel": false,
+      "used": null
+    }
+  },
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",

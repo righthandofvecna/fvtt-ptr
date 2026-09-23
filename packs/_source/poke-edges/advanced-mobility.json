@@ -8,31 +8,30 @@
       {
         "key": "ChoiceSet",
         "flag": "mobility",
-        "adjustName": true,
         "choices": [
           {
-            "label": "Burrow",
-            "value": "burrow"
+            "value": "burrow",
+            "label": "Burrow"
           },
           {
-            "label": "Levitate",
-            "value": "levitate"
+            "value": "levitate",
+            "label": "Levitate"
           },
           {
-            "label": "Overland",
-            "value": "overland"
+            "value": "overland",
+            "label": "Overland"
           },
           {
-            "label": "Sky",
-            "value": "sky"
+            "value": "sky",
+            "label": "Sky"
           },
           {
-            "label": "Swim",
-            "value": "swim"
+            "value": "swim",
+            "label": "Swim"
           },
           {
-            "label": "Teleporter",
-            "value": "teleporter"
+            "value": "teleporter",
+            "label": "Teleporter"
           }
         ]
       },
@@ -66,7 +65,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -95,14 +94,18 @@
     "name": "Advanced Mobility",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
   "effects": [],
   "flags": {
     "ptu": {
-      "prereqBackup": "Level 20"
+      "prereqBackup": "Level 20",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -121,7 +124,6 @@
       "systemVersion": "4.2.5"
     }
   },
-  "folder": null,
   "ownership": {
     "default": 0
   },

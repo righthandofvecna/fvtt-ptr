@@ -6,7 +6,7 @@
   "system": {
     "origin": "",
     "effect": "Effect: When the user hits with a Damaging Move, they gain 1 Acuity or 1 Vigor based on the class of Move used (Vigor for Special and Acuity for Physical).\n\nFor every Acuity the user possesses, they deal +5 bonus damage on the next Special Damaging Move used, after which they lose all their accrued Acuity. Similarly, for every Vigor the user possesses, they deal +5 bonus damage on the next Physical Damaging Move used, after which they lose all their accrued Vigor.\n\nAt Rank 1, the user may only have up to 2 Acuity or 2 Vigor at one time. At Rank 2, these caps increase to 4. Additionally, if the user reduces their Acuity from 4 to 0, the receive +2 Vigor, similarly, if the user reduces their Vigor from 4 to 0, they receive +2 Acuity (instead of starting from 0 plus the one received from the triggering Move).\n\n@UUID[Compendium.ptu.effects.Item.3IYiSrYDWlUDCq8t]\n@UUID[Compendium.ptu.effects.Item.dmO40gFAbDtV0qXh]",
-    "snippet": "@UUID[Compendium.ptu.effects.Item.3IYiSrYDWlUDCq8t]\n@UUID[Compendium.ptu.effects.Item.dmO40gFAbDtV0qXh]",
+    "snippet": "",
     "rules": [],
     "enabled": true,
     "slug": "combination-attacker-rank-2",
@@ -28,7 +28,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -56,13 +56,20 @@
     "cost": 0,
     "category": "",
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Acuity and Vigor Effect stacks function as intended, but don't have a check to expire upon usage",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",

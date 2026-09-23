@@ -2,81 +2,80 @@
   "name": "Basic Ranged Attacks",
   "system": {
     "origin": "",
-    "effect": "Choose one of Firestarter, Fountain, Freezer, Guster, Materializer, or Zapper. Struggle Attacks modified by that Capability may now be made at a range of up to 6 meters. This Poké Edge may be taken multiple times, selecting a different Capability each time.",
+    "effect": "Choose one of @UUID[Compendium.ptu.capabilities.Item.nAIkONF3gtaYfEyX]{Firestarter}, @UUID[Compendium.ptu.capabilities.Item.ut911FJQTWb21u98]{Fountain}, @UUID[Compendium.ptu.capabilities.Item.O0LMo4PRnTk008ds]{Freezer}, @UUID[Compendium.ptu.capabilities.Item.St6x6ofobU8ztcts]{Guster}, @UUID[Compendium.ptu.capabilities.Item.M4cCdF20AGXHoFm7]{Materializer}, or @UUID[Compendium.ptu.capabilities.Item.v3QyNdZYDVwlG2tY]{Zapper}. Struggle Attacks modified by that Capability may now be made at a range of up to 6 meters. This Poké Edge may be taken multiple times, selecting a different Capability each time.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "bra",
         "choices": [
           {
-            "label": "Bug",
-            "value": "bug"
+            "value": "bug",
+            "label": "Bug"
           },
           {
-            "label": "Dark",
-            "value": "dark"
+            "value": "dark",
+            "label": "Dark"
           },
           {
-            "label": "Dragon",
-            "value": "dragon"
+            "value": "dragon",
+            "label": "Dragon"
           },
           {
-            "label": "Electric",
-            "value": "electric"
+            "value": "electric",
+            "label": "Electric"
           },
           {
-            "label": "Fairy",
-            "value": "fairy"
+            "value": "fairy",
+            "label": "Fairy"
           },
           {
-            "label": "Fighting",
-            "value": "fighting"
+            "value": "fighting",
+            "label": "Fighting"
           },
           {
-            "label": "Fire",
-            "value": "fire"
+            "value": "fire",
+            "label": "Fire"
           },
           {
-            "label": "Flying",
-            "value": "flying"
+            "value": "flying",
+            "label": "Flying"
           },
           {
-            "label": "Ghost",
-            "value": "ghost"
+            "value": "ghost",
+            "label": "Ghost"
           },
           {
-            "label": "Grass",
-            "value": "grass"
+            "value": "grass",
+            "label": "Grass"
           },
           {
-            "label": "Ground",
-            "value": "ground"
+            "value": "ground",
+            "label": "Ground"
           },
           {
-            "label": "Ice",
-            "value": "ice"
+            "value": "ice",
+            "label": "Ice"
           },
           {
-            "label": "Poison",
-            "value": "poison"
+            "value": "poison",
+            "label": "Poison"
           },
           {
-            "label": "Psychic",
-            "value": "psychic"
+            "value": "psychic",
+            "label": "Psychic"
           },
           {
-            "label": "Rock",
-            "value": "rock"
+            "value": "rock",
+            "label": "Rock"
           },
           {
-            "label": "Steel",
-            "value": "steel"
+            "value": "steel",
+            "label": "Steel"
           },
           {
-            "label": "Water",
-            "value": "water"
+            "value": "water",
+            "label": "Water"
           }
         ]
       },
@@ -106,7 +105,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -135,7 +134,8 @@
     "name": "Basic Ranged Attacks",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -145,7 +145,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Firestarter, Fountain, Freezer, Guster, Materializer, or Zapper"
+      "prereqBackup": "Firestarter, Fountain, Freezer, Guster, Materializer, or Zapper",
+      "automationStatus": "needs-automation",
+      "devNote": "Has a type selection Choice Set, but currently doesn't do anything to add or alter existing Struggle Moves",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -158,7 +161,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 2100000,
   "_id": "WkzCUjTOCTI60Uwg"
 }
