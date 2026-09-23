@@ -808,6 +808,11 @@ class CompendiumBrowser extends Application {
             }
         }
 
+        // Export to Rolltable button
+        controlArea.querySelector("button.export-to-rolltable")?.addEventListener("click", () => {
+            this.#exportToRolltable();
+        });
+
         const list = html.querySelector(".tab.active ul.item-list");
         if (!list) return;
         list.addEventListener("scroll", async () => {
@@ -995,6 +1000,140 @@ class CompendiumBrowser extends Application {
 
         return {
             user: game.user
+        }
+    }
+
+    async #exportToRolltable() {
+        const activeTab = this.activeTab;
+        if (activeTab === "settings" || !this.dataTabsList.includes(activeTab)) return;
+
+        const currentTab = this.tabs[activeTab];
+        if (!currentTab?.isInitialized) {
+            ui.notifications.warn("Tab not yet initialized.");
+            return;
+        }
+
+        const allData = currentTab.getAllFilteredData();
+        if (allData.length === 0) {
+            ui.notifications.warn("No items to export.");
+            return;
+        }
+
+        const tableOptions = game.tables.map(t => `<option value="${t.id}">${t.name}</option>`).join("");
+        const defaultName = `${activeTab.titleCase()} Results`;
+
+        const result = await foundry.applications.api.DialogV2.prompt({
+            window: { title: `Export ${allData.length} items to Rolltable` },
+            content: `
+                <form class="export-rolltable-dialog">
+                    <div class="form-group">
+                        <label>Mode</label>
+                        <div class="form-fields" style="flex-direction: column; gap: 0.5rem;">
+                            <label style="font-weight: normal;"><input type="radio" name="mode" value="create" checked> Create New Rolltable</label>
+                            <label style="font-weight: normal;"><input type="radio" name="mode" value="append"> Append to Existing</label>
+                            <label style="font-weight: normal;"><input type="radio" name="mode" value="overwrite"> Overwrite Existing</label>
+                        </div>
+                    </div>
+                    <div class="form-group create-section">
+                        <label>Table Name</label>
+                        <div class="form-fields">
+                            <input type="text" name="tableName" value="${defaultName}">
+                        </div>
+                    </div>
+                    <div class="form-group existing-section" style="display: none;">
+                        <label>Select Table</label>
+                        <div class="form-fields">
+                            <select name="tableId">
+                                ${tableOptions || '<option value="">No rolltables found</option>'}
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            `,
+            ok: {
+                label: "Export",
+                callback: (_event, button) => {
+                    const form = button.closest("form");
+                    const formData = new FormData(form);
+                    return {
+                        mode: formData.get("mode"),
+                        tableName: formData.get("tableName"),
+                        tableId: formData.get("tableId"),
+                    };
+                }
+            },
+            render: (_event, app) => {
+                const html = app.element;
+                const createSection = html.querySelector(".create-section");
+                const existingSection = html.querySelector(".existing-section");
+
+                html.querySelectorAll('input[name="mode"]').forEach(radio => {
+                    radio.addEventListener("change", () => {
+                        const mode = html.querySelector('input[name="mode"]:checked')?.value;
+                        createSection.style.display = mode === "create" ? "" : "none";
+                        existingSection.style.display = mode !== "create" ? "" : "none";
+                    });
+                });
+            }
+        });
+
+        if (!result) return;
+
+        // Build rolltable results from filtered data
+        const results = [];
+        for (const entry of allData) {
+            const { uuid } = entry;
+            const parts = uuid.split(".");
+            if (parts[0] !== "Compendium" || parts.length < 4) continue;
+
+            const documentCollection = `${parts[1]}.${parts[2]}`;
+            const documentId = parts[parts.length - 1];
+
+            results.push({
+                type: CONST.TABLE_RESULT_TYPES.COMPENDIUM,
+                documentCollection,
+                documentId,
+                weight: 1,
+                drawn: false,
+                range: [results.length + 1, results.length + 1],
+            });
+        }
+
+        if (results.length === 0) {
+            ui.notifications.warn("Could not build rolltable results from the current data.");
+            return;
+        }
+
+        if (result.mode === "create") {
+            const name = result.tableName?.trim() || defaultName;
+            await RollTable.create({
+                name,
+                formula: `1d${results.length}`,
+                results,
+            });
+            ui.notifications.info(`Created rolltable "${name}" with ${results.length} entries.`);
+        } else {
+            const table = game.tables.get(result.tableId);
+            if (!table) {
+                ui.notifications.error("Selected table not found.");
+                return;
+            }
+
+            if (result.mode === "overwrite") {
+                const existingIds = table.results.contents.map(r => r.id);
+                if (existingIds.length) await table.deleteEmbeddedDocuments("TableResult", existingIds);
+                await table.createEmbeddedDocuments("TableResult", results);
+                await table.update({ formula: `1d${results.length}` });
+                ui.notifications.info(`Overwrote "${table.name}" with ${results.length} entries.`);
+            } else {
+                const existingCount = table.results.size;
+                for (let i = 0; i < results.length; i++) {
+                    results[i].range = [existingCount + i + 1, existingCount + i + 1];
+                }
+                await table.createEmbeddedDocuments("TableResult", results);
+                await table.update({ formula: `1d${existingCount + results.length}` });
+                ui.notifications.info(`Appended ${results.length} entries to "${table.name}".`);
+            }
         }
     }
 
