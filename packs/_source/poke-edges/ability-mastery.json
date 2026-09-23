@@ -10,7 +10,7 @@
         "choices": [
           {
             "value": "{actor|species.system.abilities.basic.0.uuid}",
-            "label": "",
+            "label": "{actor|species.system.abilities.basic.0.slug}",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.basic.0.slug}"
@@ -19,7 +19,7 @@
           },
           {
             "value": "{actor|species.system.abilities.basic.1.uuid}",
-            "label": "",
+            "label": "{actor|species.system.abilities.basic.1.slug}",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.basic.1.slug}"
@@ -28,7 +28,7 @@
           },
           {
             "value": "{actor|species.system.abilities.advanced.0.uuid}",
-            "label": "",
+            "label": "{actor|species.system.abilities.advanced.0.slug}",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.advanced.0.slug}"
@@ -37,7 +37,7 @@
           },
           {
             "value": "{actor|species.system.abilities.advanced.1.uuid}",
-            "label": "",
+            "label": "{actor|species.system.abilities.advanced.1.slug}",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.advanced.1.slug}"
@@ -46,7 +46,7 @@
           },
           {
             "value": "{actor|species.system.abilities.advanced.2.uuid}",
-            "label": "",
+            "label": "{actor|species.system.abilities.advanced.2.slug}",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.advanced.2.slug}"
@@ -55,7 +55,7 @@
           },
           {
             "value": "{actor|species.system.abilities.high.0.uuid}",
-            "label": "",
+            "label": "{actor|species.system.abilities.high.0.slug}",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.high.0.slug}"
@@ -73,6 +73,8 @@
     ],
     "enabled": true,
     "slug": "ability-mastery",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -100,7 +102,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -113,15 +116,13 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Level 60"
     ],
     "cost": "3 TP",
     "name": "Ability Mastery",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "useCount": 0
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -139,14 +140,15 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.40",
+    "coreVersion": "14.367",
     "createdTime": 1683369202690,
-    "modifiedTime": 1778200861487,
+    "modifiedTime": 1790201796874,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
   },
   "sort": 2400000,
-  "_id": "ecZWvsBldvQABdsJ"
+  "_id": "ecZWvsBldvQABdsJ",
+  "folder": null
 }
