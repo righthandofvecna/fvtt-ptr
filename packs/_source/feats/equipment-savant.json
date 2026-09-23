@@ -2,14 +2,17 @@
   "name": "Equipment Savant",
   "system": {
     "origin": "",
-    "effect": "Use or Equip an Item or piece of Equipment which would normally require a Standard Action to use or equip. You may not make an Attack with a Weapon this way - using other Items or Equipment that requires “Attacks” (such as Cap Cannons or Poké Balls) is acceptable.",
+    "effect": "Use or Equip an Item or piece of Equipment which would normally require a Standard Action to use or equip. You may not make an Attack with a Weapon this way - using other Items or Equipment that requires “Attacks” (such as @UUID[Compendium.ptu.items.Item.er8OngHyAM0VUO4K]{Cap Cannons} or Poké Balls) is acceptable.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -67,7 +70,8 @@
     "name": "Equipment Savant",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -77,7 +81,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Backpacker, Expert Survival"
+      "prereqBackup": "Backpacker, Expert Survival",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -90,7 +97,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 30000000,
   "_id": "RfEwcrsyGL1Zat0s"
 }

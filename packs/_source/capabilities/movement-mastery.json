@@ -1,12 +1,11 @@
 {
-  "folder": null,
   "name": "Movement Mastery",
   "type": "capability",
   "_id": "eh4cGM2DpLFprazD",
   "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
   "system": {
     "origin": "",
-    "effect": "Choose one of Art of Stealth, Athletic Initiative, Mounted Prowess, Nimble Movement, Slippery, Stamina, Swimmer, or Wallrunner. You gain the chosen Edge, even if you do not meet the prerequisites. Additionally, you may take any of these Edges in the future as if you did meet the prerequisites.",
+    "effect": "Choose one of @UUID[Compendium.ptu.edges.Item.sPvuHJVG5cMuoInm]{Art of Stealth}, @UUID[Compendium.ptu.edges.Item.V6ktbuyfSNmKupfK]{Athletic Initiative}, @UUID[Compendium.ptu.edges.Item.e5w4Szs2uY8PdgNa]{Mounted Prowess}, @UUID[Compendium.ptu.edges.Item.aczRot8F2nvBPjDG]{Nimble Movement}, @UUID[Compendium.ptu.edges.Item.JSOBQlTlh8jXDq1Q]{Slippery}, @UUID[Compendium.ptu.edges.Item.K3mNoXPvVEDTqYOl]{Stamina}, @UUID[Compendium.ptu.edges.Item.BEKoMxGkYLzJyMsG]{Swimmer}, or @UUID[Compendium.ptu.edges.Item.X52pGfIrPF7kr11m]{Wallrunner}. You gain the chosen Edge, even if you do not meet the prerequisites. Additionally, you may take any of these Edges in the future as if you did meet the prerequisites.",
     "snippet": "",
     "rules": [
       {
@@ -81,7 +80,7 @@
       "Backpacker Talent"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -109,7 +108,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

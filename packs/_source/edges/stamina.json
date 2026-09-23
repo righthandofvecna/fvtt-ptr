@@ -66,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert Athletics or Combat"
+      "prereqBackup": "Expert Athletics or Combat",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -80,5 +83,6 @@
     "exportSource": null
   },
   "sort": 0,
-  "_id": "K3mNoXPvVEDTqYOl"
+  "_id": "K3mNoXPvVEDTqYOl",
+  "folder": null
 }

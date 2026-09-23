@@ -1,5 +1,4 @@
 {
-  "folder": null,
   "name": "Wear it Better",
   "type": "capability",
   "_id": "XwnymStQhTW5Xu9k",
@@ -33,7 +32,7 @@
       "Backpacker Talent"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -61,7 +60,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

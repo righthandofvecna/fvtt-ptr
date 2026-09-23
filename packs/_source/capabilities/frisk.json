@@ -1,12 +1,11 @@
 {
-  "folder": null,
   "name": "Frisk",
   "type": "capability",
   "_id": "JNf8suPf2nzG4rmo",
   "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
   "system": {
     "origin": "",
-    "effect": "You gain the Frisk Ability.",
+    "effect": "You gain the @UUID[Compendium.ptu.abilities.Item.W64GEtQ6ZO7uxZCa]{Frisk} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -40,7 +39,7 @@
       "Backpacker Talent"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -68,7 +67,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }
