@@ -28,7 +28,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Toolkit"
+      "Toolkit",
+      "Shadow"
     ],
     "frequency": {
       "type": "at-will",
@@ -47,7 +48,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
