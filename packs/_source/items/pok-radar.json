@@ -23,7 +23,11 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Equipment",
+      "Main Hand",
+      "Off-Hand"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -48,7 +52,7 @@
       "bind": false
     },
     "quantity": "1",
-    "category": "",
+    "category": "Equipment",
     "cost": "5000",
     "consumable": "0",
     "subtype": "",
@@ -57,7 +61,8 @@
     "name": "Pokéradar",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/pokeradar.webp",
@@ -65,7 +70,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 32200000,
   "_id": "R18UJbdBAA5GwVEz"
 }

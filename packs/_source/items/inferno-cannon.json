@@ -2,7 +2,7 @@
   "name": "Inferno Cannon",
   "system": {
     "origin": "",
-    "effect": "Uses the Move Inferno once.",
+    "effect": "Uses the Move @UUID[Compendium.ptu.moves.Item.f25cGYvLApdYt14w]{Inferno} once.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Ordnance"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -37,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -57,7 +59,8 @@
     "name": "Inferno Cannon",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 54800000,
   "_id": "m6NcqKMQEQclO7lh"
 }

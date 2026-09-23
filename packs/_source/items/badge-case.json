@@ -55,11 +55,11 @@
     "subtype": "",
     "container": true,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "img": "https://assets.forge-vtt.com/64f9da1fa1bff97542b9dc2f/item512.png",
   "effects": [],
-  "folder": null,
   "ownership": {
     "default": 0
   },
@@ -71,7 +71,9 @@
           "id": "vo8ePTPkunOud3IB",
           "onDelete": "detach"
         }
-      }
+      },
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {
