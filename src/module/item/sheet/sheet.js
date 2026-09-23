@@ -85,6 +85,8 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
 
         data.eotCooldown = Boolean(this.item.flags.ptu?.eot);
         data.freqConst = CONFIG.PTU.data.frequencies[this.item.system.frequency?.type] ?? {};
+        data.ppVariant = game.settings.get("ptu", "variant.usePP");
+        data.effectivePpCost = this.item.effectivePpCost;
 
         data.automationStatus = this.item.getFlag("ptu", "automationStatus") ?? "needs-automation";
         data.devNote = this.item.getFlag("ptu", "devNote") ?? "";

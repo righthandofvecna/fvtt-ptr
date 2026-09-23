@@ -341,6 +341,13 @@ class PTUActor extends Actor {
             : this.hasPlayerOwner
                 ? "party"
                 : "opposition";
+
+        // PP pool (PP Variant rule)
+        this.system.pp ??= {};
+        this.system.pp.max = 64;
+        if (this.system.pp.value === null || this.system.pp.value === undefined) {
+            this.system.pp.value = this.system.pp.max;
+        }
     }
 
     prepareDerivedData() {

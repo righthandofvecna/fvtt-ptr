@@ -15,6 +15,12 @@
   <input class="ml-1 custom-frequency" name="system.frequency.custom" type="text" value="{{item.system.frequency.custom}}" placeholder="Custom Frequency" {{#if editLocked}}disabled{{/if}}/>
 </div>
 {{/if}}
+{{#if ppVariant}}
+<div class="item-row">
+    <label for="system.frequency.ppCost">PP Cost</label>
+    <input class="ml-1" name="system.frequency.ppCost" type="number" value="{{effectivePpCost}}" placeholder="{{effectivePpCost}}" min="0" style="flex: 0.3;" {{#if editLocked}}disabled{{/if}}/>
+</div>
+{{/if}}
 <div class="item-row">
     <label>{{localize "ITEM.ActionCost"}}</label>
     <div class="d-flex ml-1" style="gap: 0.5rem; flex-wrap: wrap;">

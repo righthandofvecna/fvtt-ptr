@@ -40,14 +40,28 @@
                     <div class="move-info-row">
                         <div class="move-info-col">
                             <div class="move-other-info mt-2">
-                                <span>
-                                    FREQ 
-                                    <input
-                                        class="ml-1 mr-1"
-                                        type="text"
-                                        value="{{combinedFrequency item}}"
-                                        disabled
-                                    />
+                                <span style="flex: 0 0 100%;">
+                                    {{#if ppVariant}}
+                                        PP COST 
+                                        <input
+                                            class="ml-2"
+                                            name=""
+                                            type="text"
+                                            value="{{effectivePpCost}}"
+                                            placeholder="{{effectivePpCost}}"
+                                            disabled
+                                        />
+                                    {{else}}
+                                        FREQ 
+                                        <input
+                                            class="ml-2"
+                                            name=""
+                                            type="text"
+                                            value="{{combinedFrequency item}}"
+                                            placeholder=""
+                                            disabled
+                                        />
+                                    {{/if}}
                                     {{#if eotCooldown}}
                                     <button type="button" data-action="resetEOT" class="ml-1" data-tooltip="ITEM.ResetEOT"><i class="fas fa-undo"></i></button>
                                     {{/if}}

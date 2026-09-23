@@ -29,15 +29,18 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
                     const maxHp = this.actor.system.health.max;
                     const totalHp = this.actor.system.health.total;
                     const injuries = this.actor.system.health.injuries;
-                    if(injuries === 0 && hp === maxHp) return ui.notifications.info(`${this.actor.name} is already at full health!`);
+                    const pp = this.actor.system.pp.value;
+                    const maxPp = this.actor.system.pp.max;
+                    if(injuries === 0 && hp === maxHp && pp === maxPp) return ui.notifications.info(`${this.actor.name} is already at full health!`);
                     if(injuries <= 3) {
                         await this.actor.update({
                             "system.health.value": totalHp,
-                            "system.health.injuries": 0
+                            "system.health.injuries": 0,
+                            "system.pp.value": maxPp
                         });
                         await ChatMessage.create({
                             speaker: {alias: this.actor.name},
-                            content: `${this.actor.name} was healed to full health! (${hp} -> ${totalHp}) and healed ${injuries} injuries! (${injuries} -> 0)`
+                            content: `${this.actor.name} was healed to full health! (${hp} -> ${totalHp}) and healed ${injuries} injuries! (${injuries} -> 0) and restored PP! (${pp} -> ${maxPp})`
                         })
                     } 
                     else {
@@ -47,11 +50,12 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
 
                         const newMax = this.actor.system.health.max;
                         await this.actor.update({
-                            "system.health.value": newMax
+                            "system.health.value": newMax,
+                            "system.pp.value": maxPp
                         });
                         await ChatMessage.create({
                             speaker: {alias: this.actor.name},
-                            content: `${this.actor.name} was healed to full health! (${hp} -> ${newMax}) and healed 3 injuries! (${injuries} -> ${Math.max(0, injuries - 3)})`
+                            content: `${this.actor.name} was healed to full health! (${hp} -> ${newMax}) and healed 3 injuries! (${injuries} -> ${Math.max(0, injuries - 3)}) and restored PP! (${pp} -> ${maxPp})`
                         })
                     }
                 }
@@ -78,6 +82,7 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
 	async getData() {
 		const data = await super.getData();
 		data.config = CONFIG.PTU.data;
+		data.ppVariant = game.settings.get("ptu", "variant.usePP");
         return data;
     }
 

@@ -60,8 +60,24 @@ class PTUItem extends Item {
         if (!this.system.frequency?.type) return false;
         const freq = CONFIG.PTU.data.frequencies[this.system.frequency.type];
         if (freq.eot && (this.flags.ptu.eot ?? 0) > 0) return true;
-        if (freq.limited && this.flags.ptu.used >= (this.system.frequency.max ?? 1)) return true;
+        if (!game.settings.get("ptu", "variant.usePP") && freq.limited && this.flags.ptu.used >= (this.system.frequency.max ?? 1)) return true;
+        if (game.settings.get("ptu", "variant.usePP") && this.effectivePpCost > (this.actor.system.pp?.value ?? 0)) return true;
         return false;
+    }
+
+    /** Effective PP cost for this item under the PP Variant rule. */
+    get effectivePpCost() {
+        if (this.system.frequency.ppCost !== null && this.system.frequency.ppCost !== undefined) return Number(this.system.frequency.ppCost);
+        // Auto-calculate from frequency
+        const freqType = this.system.frequency?.type;
+        const maxUses = Math.max(1, this.system.frequency?.max || 1);
+        if (this.system.isStruggle) return 0;
+        switch (freqType) {
+            case "daily": return Math.floor(24 / maxUses);
+            case "scene": return Math.floor(12 / maxUses);
+            case "at-will": return this.type === "move" ? 1 : 0;
+            default: return 0;
+        }
     }
 
     get usable() {
@@ -537,6 +553,16 @@ class PTUItem extends Item {
         if (freq.limited) {
             updates["flags.ptu.used"] = (this.flags.ptu.used ?? 0) + 1;
         }
+
+        // PP deduction (PP Variant rule)
+        if (game.settings.get("ptu", "variant.usePP") && this.actor) {
+            const ppCost = this.effectivePpCost;
+            if (ppCost > 0) {
+                const currentPP = this.actor.system.pp?.value ?? this.actor.system.pp?.max ?? 0;
+                await this.actor.update({ "system.pp.value": Math.max(0, currentPP - ppCost) });
+            }
+        }
+        
         if (Object.keys(updates).length > 0) await this.update(updates);
     }
 
