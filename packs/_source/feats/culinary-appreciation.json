@@ -2,7 +2,7 @@
   "name": "Culinary Appreciation",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 2 Tutor Points remaining\nEffect: The target loses 2 Tutor Points and gains the @UUID[Compendium.ptu.abilities.Item.r5RAP7wiKkOLZ81U] Ability.\nRecipe - @UUID[Compendium.ptu.references.Item.dyeL0hpSXSe1djBw]",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot remaining\nEffect: The target loses 1 Tutor Slot and gains the @UUID[Compendium.ptu.abilities.Item.r5RAP7wiKkOLZ81U] Ability.\nRecipe - @UUID[Compendium.ptu.references.Item.dyeL0hpSXSe1djBw]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -57,7 +57,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +69,7 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Chef",
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -83,7 +84,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 39600000,
   "_id": "aJbhGzlOBQa8Mcm6"
 }
