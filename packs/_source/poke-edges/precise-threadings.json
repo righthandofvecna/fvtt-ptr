@@ -2,7 +2,7 @@
   "name": "Precise Threadings",
   "system": {
     "origin": "",
-    "effect": "The user may use their Threaded Capability at a range of 6 meters and with an AC of 3 rather than 6.",
+    "effect": "The user may use their @UUID[Compendium.ptu.capabilities.Item.FgI0NCLyoQbTmVvh]{Threaded} Capability at a range of 6 meters and with an AC of 3 rather than 6.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -25,7 +25,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -55,7 +55,8 @@
     "name": "Precise Threadings",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Level 20, Threaded Capability"
+      "prereqBackup": "Level 20, Threaded Capability",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -78,7 +82,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 900000,
   "_id": "CnGM8br6blYjvk1x"
 }

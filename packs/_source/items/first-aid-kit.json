@@ -24,7 +24,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Travel"
+      "Travel",
+      "Toolkit"
     ],
     "frequency": {
       "type": "at-will",
@@ -86,5 +87,6 @@
     "exportSource": null
   },
   "sort": 28000000,
-  "_id": "NJAgpzbxLuwzaRdx"
+  "_id": "NJAgpzbxLuwzaRdx",
+  "folder": null
 }

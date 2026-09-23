@@ -10,6 +10,7 @@
         "choices": [
           {
             "value": "{actor|species.system.abilities.basic.0.uuid}",
+            "label": "",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.basic.0.slug}"
@@ -18,6 +19,7 @@
           },
           {
             "value": "{actor|species.system.abilities.basic.1.uuid}",
+            "label": "",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.basic.1.slug}"
@@ -26,6 +28,7 @@
           },
           {
             "value": "{actor|species.system.abilities.advanced.0.uuid}",
+            "label": "",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.advanced.0.slug}"
@@ -34,6 +37,7 @@
           },
           {
             "value": "{actor|species.system.abilities.advanced.1.uuid}",
+            "label": "",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.advanced.1.slug}"
@@ -42,6 +46,7 @@
           },
           {
             "value": "{actor|species.system.abilities.advanced.2.uuid}",
+            "label": "",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.advanced.2.slug}"
@@ -50,6 +55,7 @@
           },
           {
             "value": "{actor|species.system.abilities.high.0.uuid}",
+            "label": "",
             "predicate": [
               {
                 "not": "ability:{actor|species.system.abilities.high.0.slug}"
@@ -85,7 +91,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -114,7 +120,8 @@
     "name": "Ability Mastery",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -124,7 +131,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Level 60"
+      "prereqBackup": "Level 60",
+      "automationStatus": "needs-automation",
+      "devNote": "Functional, but the selection interface does not cause the names of the options to appear, making the selection process unclear",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -137,7 +147,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 2400000,
   "_id": "ecZWvsBldvQABdsJ"
 }

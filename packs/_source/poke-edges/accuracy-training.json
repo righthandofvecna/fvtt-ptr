@@ -9,7 +9,6 @@
         "key": "ChoiceSet",
         "choices": "flags.ptu.disabledOptions",
         "prompt": "Choose which move to Reduce AC",
-        "adjustName": true,
         "flag": "accuracyTraining"
       },
       {
@@ -40,7 +39,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -69,7 +68,8 @@
     "name": "Accuracy Training",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -79,7 +79,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Level 20"
+      "prereqBackup": "Level 20",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -92,7 +95,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 400000,
   "_id": "0ErdEammXLOX0UpC"
 }

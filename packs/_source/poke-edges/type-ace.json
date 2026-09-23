@@ -1,25 +1,23 @@
 {
-  "folder": null,
   "name": "Type Ace",
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/pokeedge_icon.png",
   "system": {
     "origin": "Type Ace",
-    "effect": "Target: Your Pokémon with at least 1 Tutor Slot remaining.\nEffect: The target loses 1 Tutor Slot and learns the @UUID[Compendium.ptu.abilities.Item.jhOa5RNWvY7t958b] or @UUID[Compendium.ptu.abilities.Item.Rp2iYtEMxDsbRm0g] Ability for your Chosen Type. You may target a Pokémon only once with Type Ace.\n<blockquote>This is automation for the Type Ace Class and not a generally available Poke Edge</blockquote>",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot remaining.\nEffect: The target loses 1 Tutor Slot and learns the @UUID[Compendium.ptu.abilities.Item.jhOa5RNWvY7t958b] or @UUID[Compendium.ptu.abilities.Item.Rp2iYtEMxDsbRm0g] Ability for your Chosen Type. You may target a Pokémon only once with Type Ace.\n<blockquote>This is automation for the Type Ace Class and not a generally available Poke Edge.</blockquote>",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
         "flag": "typeaceability",
-        "adjustName": true,
         "choices": [
           {
-            "label": "Last Chance",
-            "value": "Compendium.ptu.abilities.Item.jhOa5RNWvY7t958b"
+            "value": "Compendium.ptu.abilities.Item.jhOa5RNWvY7t958b",
+            "label": "Last Chance"
           },
           {
-            "label": "Type Strategist",
-            "value": "Compendium.ptu.abilities.Item.Rp2iYtEMxDsbRm0g"
+            "value": "Compendium.ptu.abilities.Item.Rp2iYtEMxDsbRm0g",
+            "label": "Type Strategist"
           }
         ]
       },
@@ -50,7 +48,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -77,13 +75,20 @@
     ],
     "cost": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_id": "bN0Xus6P47NEP1ME",
   "sort": 200000,
   "_stats": {

@@ -10,79 +10,78 @@
       {
         "key": "ChoiceSet",
         "flag": "lastchance",
-        "adjustName": true,
         "choices": [
           {
-            "label": "Bug",
-            "value": "bug"
+            "value": "bug",
+            "label": "Bug"
           },
           {
-            "label": "Dark",
-            "value": "dark"
+            "value": "dark",
+            "label": "Dark"
           },
           {
-            "label": "Dragon",
-            "value": "dragon"
+            "value": "dragon",
+            "label": "Dragon"
           },
           {
-            "label": "Electric",
-            "value": "electric"
+            "value": "electric",
+            "label": "Electric"
           },
           {
-            "label": "Fairy",
-            "value": "fairy"
+            "value": "fairy",
+            "label": "Fairy"
           },
           {
-            "label": "Fighting",
-            "value": "fighting"
+            "value": "fighting",
+            "label": "Fighting"
           },
           {
-            "label": "Fire",
-            "value": "fire"
+            "value": "fire",
+            "label": "Fire"
           },
           {
-            "label": "Flying",
-            "value": "flying"
+            "value": "flying",
+            "label": "Flying"
           },
           {
-            "label": "Ghost",
-            "value": "ghost"
+            "value": "ghost",
+            "label": "Ghost"
           },
           {
-            "label": "Grass",
-            "value": "grass"
+            "value": "grass",
+            "label": "Grass"
           },
           {
-            "label": "Ground",
-            "value": "ground"
+            "value": "ground",
+            "label": "Ground"
           },
           {
-            "label": "Ice",
-            "value": "ice"
+            "value": "ice",
+            "label": "Ice"
           },
           {
-            "label": "Normal",
-            "value": "normal"
+            "value": "normal",
+            "label": "Normal"
           },
           {
-            "label": "Poison",
-            "value": "poison"
+            "value": "poison",
+            "label": "Poison"
           },
           {
-            "label": "Psychic",
-            "value": "psychic"
+            "value": "psychic",
+            "label": "Psychic"
           },
           {
-            "label": "Rock",
-            "value": "rock"
+            "value": "rock",
+            "label": "Rock"
           },
           {
-            "label": "Steel",
-            "value": "steel"
+            "value": "steel",
+            "label": "Steel"
           },
           {
-            "label": "Water",
-            "value": "water"
+            "value": "water",
+            "label": "Water"
           }
         ]
       },
@@ -153,18 +152,20 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "jhOa5RNWvY7t958b",
   "effects": [],
-  "folder": null,
   "sort": 39400000,
   "ownership": {
     "default": 0
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

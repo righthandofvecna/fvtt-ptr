@@ -2,7 +2,7 @@
   "name": "Dive",
   "system": {
     "origin": "",
-    "effect": "Trigger - You are targeted by a Ranged 1-Target Attack, or are in a Cone, Burst, Blast, or Line.\nEffect: You may immediately Shift 1 Meter, and then become Tripped. This Feature cannot be used if you are Stuck, Grappled, or otherwise impaired from Shifting. This Feature causes you to dodge Ranged attacks aimed at you, and may let you avoid Cones, Bursts, Blasts, or Lines if the shift removes you from the area of effect.",
+    "effect": "Trigger - You are targeted by a Ranged 1-Target Attack, or are in a Cone, Burst, Blast, or Line.\nEffect: You may immediately Shift 1 Meter, and then become @UUID[Compendium.ptu.effects.Item.4lqKV4CxikZxxNWJ]{Tripped}. This Feature cannot be used if you are @UUID[Compendium.ptu.effects.Item.OzGm9ZwyLd8yEhCK]{Stuck}, @UUID[Compendium.ptu.moves.Item.gBjnwPNmaFiIeqIs]{Grappled}, or otherwise impaired from Shifting. This Feature causes you to dodge Ranged attacks aimed at you, and may let you avoid Cones, Bursts, Blasts, or Lines if the shift removes you from the area of effect.",
     "snippet": "",
     "rules": [
       {
@@ -70,7 +70,8 @@
     "name": "Dive",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -81,7 +82,10 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Adept Acrobatics",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
@@ -94,7 +98,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 20600000,
   "_id": "JiO7eCRryFoYiBSe"
 }

@@ -2,7 +2,7 @@
   "name": "Basic Ranged Attacks (Materializer)",
   "system": {
     "origin": "",
-    "effect": "Struggle Attacks modified by Materializer may now be made at a range of up to 6 meters.",
+    "effect": "Struggle Attacks modified by @UUID[Compendium.ptu.capabilities.Item.M4cCdF20AGXHoFm7]{Materializer} may now be made at a range of up to 6 meters.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -25,7 +25,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -54,7 +54,8 @@
     "name": "Basic Ranged Attacks (Materializer)",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -64,7 +65,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Materializer"
+      "prereqBackup": "Materializer",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -77,7 +81,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 2500000,
   "_id": "kkYUmPp7yyHBVlk2"
 }

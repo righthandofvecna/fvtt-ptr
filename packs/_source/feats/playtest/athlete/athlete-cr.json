@@ -70,7 +70,8 @@
     "class": "Athlete",
     "name": "Athlete [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "athlete"
+    "replacesSlug": "athlete",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -83,7 +84,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

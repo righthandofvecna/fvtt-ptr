@@ -2,7 +2,7 @@
   "name": "Digital Avatar",
   "system": {
     "origin": "",
-    "effect": "The Pokémon may dive into computer systems and networks and gains a 3d6 in Technology Education if it did not previously have a Technology Education Skill.",
+    "effect": "The Pokémon may dive into computer systems and networks and gains a Novice rank in Technology Education if it did not previously have a Technology Education Skill.",
     "snippet": "",
     "rules": [
       {
@@ -10,7 +10,9 @@
         "mode": "add",
         "value": "max(0, (@actor.system.skills.techEd.value.value - @actor.system.skills.techEd.value.mod))",
         "path": "system.skills.techEd.value.mod",
-        "priority": 99
+        "priority": 99,
+        "predicate": [],
+        "phase": "applyAEs"
       }
     ],
     "enabled": true,
@@ -33,7 +35,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -62,7 +64,8 @@
     "name": "Digital Avatar",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -72,7 +75,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Datajack Augmentation"
+      "prereqBackup": "Datajack Augmentation",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -85,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 2600000,
   "_id": "mJ7vDWbSbc0jN751"
 }

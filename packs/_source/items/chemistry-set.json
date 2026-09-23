@@ -24,7 +24,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Crafting"
+      "Crafting",
+      "Toolkit"
     ],
     "frequency": {
       "type": "at-will",
@@ -86,5 +87,6 @@
     "exportSource": null
   },
   "sort": 34700000,
-  "_id": "TKvIfu9P1hJDodK5"
+  "_id": "TKvIfu9P1hJDodK5",
+  "folder": null
 }

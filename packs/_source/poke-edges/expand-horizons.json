@@ -2,14 +2,17 @@
   "name": "Expand Horizons",
   "system": {
     "origin": "",
-    "effect": "The Pokémon gains 3 Tutor Points. A Pokémon may be targeted by Expand Horizons only once.  Must be the Pokémon of a Mentor with the Expand Horizons feature.",
+    "effect": "The Pokémon gains 3 Tutor Slots. A Pokémon may be targeted by Expand Horizons only once.  Must be the Pokémon of a Mentor with the Expand Horizons feature.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "value": 3,
-        "path": "system.modifiers.tp"
+        "path": "system.modifiers.tp",
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -59,7 +62,8 @@
     "name": "Expand Horizons",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -69,7 +73,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": ""
+      "prereqBackup": "",
+      "automationStatus": "completed",
+      "devNote": "# of Tutor Slots/Points automatically updates when applied. Changes of Tutor Points to Tutor Slots per the Rework still underway as of v4.4.3.40",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -82,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 1200000,
   "_id": "F6F8l717rLFJtLkO"
 }

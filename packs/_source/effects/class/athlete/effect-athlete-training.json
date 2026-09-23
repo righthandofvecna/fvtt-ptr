@@ -4,34 +4,33 @@
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "From @UUID[Compendium.ptu.feats.Item.tYquQcmzCrPPrrRb]",
+    "effect": "From @UUID[Compendium.ptu.feats.Item.6Km4nWeRm717hdjS]",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "rollOption": "athlete-training:selection1",
         "flag": "athleteTraining1",
         "choices": [
           {
-            "label": "Attack",
-            "value": "atk"
+            "value": "atk",
+            "label": "Attack"
           },
           {
-            "label": "Defense",
-            "value": "def"
+            "value": "def",
+            "label": "Defense"
           },
           {
-            "label": "Special Attack",
-            "value": "spatk"
+            "value": "spatk",
+            "label": "Special Attack"
           },
           {
-            "label": "Special Defense",
-            "value": "spdef"
+            "value": "spdef",
+            "label": "Special Defense"
           },
           {
-            "label": "Speed",
-            "value": "spd"
+            "value": "spd",
+            "label": "Speed"
           }
         ]
       },
@@ -46,13 +45,12 @@
       },
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "rollOption": "athlete-training:selection2",
         "flag": "athleteTraining2",
         "choices": [
           {
-            "label": "Attack",
             "value": "atk",
+            "label": "Attack",
             "predicate": [
               {
                 "not": {
@@ -65,8 +63,8 @@
             ]
           },
           {
-            "label": "Defense",
             "value": "def",
+            "label": "Defense",
             "predicate": [
               {
                 "not": {
@@ -79,8 +77,8 @@
             ]
           },
           {
-            "label": "Special Attack",
             "value": "spatk",
+            "label": "Special Attack",
             "predicate": [
               {
                 "not": {
@@ -93,8 +91,8 @@
             ]
           },
           {
-            "label": "Special Defense",
             "value": "spdef",
+            "label": "Special Defense",
             "predicate": [
               {
                 "not": {
@@ -107,8 +105,8 @@
             ]
           },
           {
-            "label": "Speed",
             "value": "spd",
+            "label": "Speed",
             "predicate": [
               {
                 "not": {
@@ -128,7 +126,8 @@
         "mode": "add",
         "path": "system.stats.{item|flags.ptu.rulesSelections.athleteTraining2}.stage.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -156,7 +155,7 @@
     "duration": {
       "value": -1,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -178,7 +177,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

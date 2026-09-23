@@ -27,7 +27,9 @@
       "value": "Homebrew"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Toolkit"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -45,7 +47,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -58,7 +60,8 @@
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 300000,
@@ -67,7 +70,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

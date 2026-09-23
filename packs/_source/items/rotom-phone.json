@@ -3,7 +3,7 @@
   "type": "item",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "A smartphone that is enhanced after being possessed by a Rotom. It can host a multitude of functions and applications, including a @UUID[Compendium.ptu.items.Item.JjYWWEsb3aAOZ6wh]{Pokédex}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -24,7 +24,11 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Equipment",
+      "Main Hand",
+      "Off-Hand"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -55,17 +59,19 @@
     "subtype": "",
     "container": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "img": "https://assets.forge-vtt.com/6464f0aaac7d7a5be34e4ad2/icon_rotom_phone_peach.jpg",
   "effects": [],
-  "folder": null,
   "ownership": {
     "default": 0
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

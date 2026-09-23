@@ -2,7 +2,7 @@
   "name": "Net Cap",
   "system": {
     "origin": "",
-    "effect": "AC: (10 minus Tech Edu Rank)\nRange: 6 Meters\nEffect: Targets hit by a Net Cap gain all the effects below while the net remains on them. Targets may attempt to remove the Net as a Standard Action; if they do, they make a Save Check with a DC of 15, adding their Power Capability as a bonus to their Roll. Targets may automatically remove the Net as an Extended Action.\n\n» If the target is a Wild Pokémon, Capture Rate is increased by +20\n» If the target is Large Size or smaller, they take a -3 penalty to Accuracy Rolls\n» If the target is Medium Size or smaller, they are Slowed and Vulnerable\n» Sky and Levitate Speeds cannot be used; the target is forced to lower themselves to the ground (without taking fall damage).",
+    "effect": "AC: (10 minus Tech Edu Rank)\nRange: 6 Meters\nEffect: Targets hit by a Net Cap gain all the effects below while the net remains on them. Targets may attempt to remove the Net as a Standard Action; if they do, they make a Save Check with a DC of 15, adding their Power Capability as a bonus to their Roll. Targets may automatically remove the Net as an Extended Action.\n\n» If the target is a Wild Pokémon, Capture Rate is increased by +20.\n» If the target is Large Size or smaller, they take a -3 penalty to Accuracy Rolls.\n» If the target is Medium Size or smaller, they are @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed} and @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI]{Vulnerable}.\n» Sky and Levitate Speeds cannot be used; the target is forced to lower themselves to the ground (without taking fall damage).",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Gadgeteer"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -37,7 +39,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -57,7 +59,8 @@
     "name": "Net Cap",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "item",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
@@ -65,7 +68,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
@@ -76,7 +85,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 14300000,
   "_id": "B7OUx9nLzd2EfmdJ"
 }
