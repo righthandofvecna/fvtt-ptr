@@ -67,6 +67,7 @@ class PTUItem extends Item {
 
     /** Effective PP cost for this item under the PP Variant rule. */
     get effectivePpCost() {
+        if (!this.system.frequency) return 0;
         if (this.system.frequency.ppCost !== null && this.system.frequency.ppCost !== undefined) return Number(this.system.frequency.ppCost);
         // Auto-calculate from frequency
         const freqType = this.system.frequency?.type;
