@@ -138,10 +138,6 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
             delete itemData.flags.ptu.sourceUuid;
             delete itemData.flags.ptu.phantomData;
         }
-        // Struggle variants should become regular owned moves once materialized
-        if (itemData.system?.isStruggle) {
-            itemData.system.isStruggle = false;
-        }
 
         const [created] = await this.actor.createEmbeddedDocuments('Item', [itemData]);
         return created ?? null;

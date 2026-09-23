@@ -1152,8 +1152,6 @@ class PTUActor extends Actor {
         const moves = [];
         this.flags.ptu.disabledOptions = [];
         for (const move of this.itemTypes.move) {
-            if (move.system.isStruggle) continue;
-
             this.flags.ptu.disabledOptions.push({
                 "label": move.name,
                 "value": move.slug,
