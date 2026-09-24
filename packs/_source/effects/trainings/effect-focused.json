@@ -43,7 +43,7 @@
     "source": {
       "value": "PTR Compendiums"
     },
-    "stackSlugs": true,
+    "stackSlugs": false,
     "keywords": [],
     "level": {
       "value": 1
