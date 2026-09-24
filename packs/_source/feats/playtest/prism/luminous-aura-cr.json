@@ -13,6 +13,26 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.0TPJJRk1g6pa08Ey",
+            "label": "Sunglow"
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.2XQJ9ZKyx9faBLuy",
+            "label": "Starlight"
+          }
+        ],
+        "flag": "luminous-aura"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.luminous-aura}"
       }
     ],
     "enabled": true,
@@ -48,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +91,8 @@
     "class": "Prism",
     "name": "Luminous Aura [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "luminous-aura"
+    "replacesSlug": "luminous-aura",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +103,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
