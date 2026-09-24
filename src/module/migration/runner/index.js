@@ -285,7 +285,7 @@ class MigrationRunner extends MigrationRunnerBase {
      * @param {CompendiumCollection} compendium 
      */
     async runCompendiumMigration(compendium) {
-        ui.notifications.info(game.i18n.format("PTU.Migrations.Starting", { version: game.system.version }), {
+        const startingNotify = ui.notifications.info(game.i18n.format("PTU.Migrations.Starting", { version: game.system.version }), {
             permanent: true,
         });
 
@@ -298,9 +298,8 @@ class MigrationRunner extends MigrationRunnerBase {
         const migrations = this.migrations.filter((migration) => migration.version > lowestSchemaVersion);
         await this.#migrateDocuments(compendium, migrations);
 
-        ui.notifications.info(game.i18n.format("PTU.Migrations.Finished", { version: game.system.version }), {
-            permanent: true,
-        });
+        ui.notifications.remove(startingNotify);
+        ui.notifications.info(game.i18n.format("PTU.Migrations.Finished", { version: game.system.version }));
     }
 
     /**
@@ -382,7 +381,7 @@ class MigrationRunner extends MigrationRunnerBase {
         };
         const systemVersion = game.system.version;
 
-        ui.notifications.info(game.i18n.format("PTU.Migrations.Starting", { version: systemVersion }), {
+        const startingNotify = ui.notifications.info(game.i18n.format("PTU.Migrations.Starting", { version: systemVersion }), {
             permanent: true,
         });
 
@@ -414,6 +413,8 @@ class MigrationRunner extends MigrationRunnerBase {
             }
         }
         progress.close(game.i18n.localize("PTU.Migrations.Progress.Completed"));
+
+        ui.notifications.remove(startingNotify);
 
         await game.settings.set("ptu", "worldSchemaVersion", schemaVersion.latest);
     }
