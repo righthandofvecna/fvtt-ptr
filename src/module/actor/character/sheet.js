@@ -323,7 +323,10 @@ export class PTUCharacterSheet extends PTUActorSheet {
 
 		html.find('.item-to-chat').click((ev) => {
 			const li = $(ev.currentTarget).parents('.item');
-			const item = this.actor.items.get(li.data('itemId'));
+			const itemId = li.data('itemId');
+			const item = this.actor.items.get(itemId)
+				?? this.actor.phantomItems?.get(itemId)
+				?? this.actor.attacks?.get(itemId);
 			return item?.sendToChat?.();
 		});
 
