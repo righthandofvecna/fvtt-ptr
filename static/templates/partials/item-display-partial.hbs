@@ -156,11 +156,6 @@
                             <i class="fa-solid fa-lock"></i>
                         </div>
                     {{/if}}
-                    {{#if item.isGranted}}
-                        <div class="tag shadowless tooltip" title="Granted by {{item.grantedBy.name}}">
-                            <img src="/systems/ptu/static/css/images/icons/granted_icon.png"/>
-                        </div>
-                    {{/if}}
                     {{#if item.isWeatherEffect}}
                         <div class="tag shadowless tooltip" title="Applied by Weather">
                             <i class="fas fa-cloud-sun-rain"></i>
@@ -259,11 +254,6 @@
                     </div>
                     <div class="item-tags">
                         {{> actionCosts item=item}}
-                        {{#if item.isGranted}}
-                            <div class="tag shadowless tooltip" title="Granted by {{item.grantedBy.name}}">
-                                <img src="/systems/ptu/static/css/images/icons/granted_icon.png"/>
-                            </div>
-                        {{/if}}
                         {{#if item.system.rules}}
                             {{#if item.enabled}}
                                 <div class="tag shadowless tooltip" title="This item has automation!">
