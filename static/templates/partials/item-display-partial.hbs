@@ -93,13 +93,15 @@
                             {{/unless}}
                         {{/if}}
                         {{#if item.system.frequency.type}}
-                            <div class="tag gradient">
-                                <span>{{item.frequency}}</span>
-                            </div>
-                            {{!-- {{#if item.system.frequency.max}}
-                                <div class="tag gradient usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
-                                    <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
-                                </div> --}}
+                            {{#if (getGameSetting "variant.usePP")}}
+                                <div class="tag gradient">
+                                    <span>{{item.effectivePpCost}} PP</span>
+                                </div>
+                            {{else}}
+                                <div class="tag gradient">
+                                    <span>{{item.frequency}}</span>
+                                </div>
+                            {{/if}}
                             {{#if item.onCooldown}}
                                 <div class="tag gradient usage-tag exhausted" title="On Cooldown (EOT)">
                                     <span>EOT</span>
@@ -204,6 +206,23 @@
                         <a class="item-control item-edit" title="Edit {{item.type}}"><i class="fas fa-edit"></i></a>
                     {{/unless}}
                     <a class="item-control item-delete" title="Delete {{item.type}}"><i class="fas fa-trash"></i></a>
+                </div>
+                <div class="move-tags">
+                    {{#if item.spiritCost}}
+                        <div class="tag gradient">
+                            <span>{{item.spiritCost}} SP</span>
+                        </div>
+                    {{else if item.system.frequency.type}}
+                        {{#if (getGameSetting "variant.usePP")}}
+                            <div class="tag gradient">
+                                <span>{{item.effectivePpCost}} PP</span>
+                            </div>
+                        {{else}}
+                            <div class="tag gradient">
+                                <span>{{item.frequency}}</span>
+                            </div>
+                        {{/if}}
+                    {{/if}}
                 </div>
             </div>
             {{> grantedFeats parent=item}}

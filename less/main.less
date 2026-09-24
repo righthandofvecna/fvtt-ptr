@@ -6323,3 +6323,43 @@ a.content-link {
 		flex: 1 1 0;
 	}
 }
+
+// Move-style tag row for non-move item lists (spirit actions, etc.)
+.item-list .item .item-info {
+	.move-tags {
+		flex: 0 0 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 5px;
+		padding-left: 5px;
+		padding-top: 2px;
+		.tag {
+			height: 20px;
+			margin: 0;
+			white-space: nowrap;
+			flex: 0 0 auto;
+			border: none;
+			box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 4px;
+			img {
+				height: 18px;
+				width: 19px;
+				object-fit: scale-down;
+				border: unset;
+				padding-left: 1px;
+				border-radius: unset;
+			}
+			span {
+				padding-left: 3px;
+				padding-right: 3px;
+			}
+		}
+		.tag.gradient {
+			background: linear-gradient(45deg, #ecdbeb, #dffffe);
+		}
+	}
+}
