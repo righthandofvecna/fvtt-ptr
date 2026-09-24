@@ -163,7 +163,6 @@ export class PTUPokemonSheet extends PTUActorSheet {
 
 		// Augment spirit actions with phantom entries from the compendium cache
 		// (those not yet owned by this actor).
-		this._phantomSpiritActions = new Map();
 		if (game.settings.get("ptu", "variant.spiritPlaytest")) {
 			const cache = game.ptu?.spiritActionCache;
 			if (cache?.length) {
@@ -173,8 +172,9 @@ export class PTUPokemonSheet extends PTUActorSheet {
 					const data = sa.toObject();
 					foundry.utils.setProperty(data, 'flags.ptu.phantom', true);
 					foundry.utils.setProperty(data, 'flags.ptu.sourceUuid', sa.uuid);
-					spiritactions.push(data);
-					this._phantomSpiritActions.set(data._id, data);
+					const phantomItem = new Item.implementation(data, { parent: this.actor, temporary: true });
+					spiritactions.push(phantomItem);
+					this.actor._phantomItems.set(data._id, phantomItem);
 				}
 			}
 		}
@@ -342,19 +342,27 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		// Convert jQuery object to HTMLElement for v13 compatibility
 		const htmlElement = html instanceof jQuery ? html[0] : html;
 		
-		foundry.applications.ux.ContextMenu.implementation.create(this, htmlElement, ".move-item", [
+		foundry.applications.ux.ContextMenu.implementation.create(this, htmlElement, ".item", [
 			{
 				name: "Roll",
 				icon: '<i class="fas fa-dice"></i>',
+				condition: (el) => {
+					const item = this._getOwnedItemByRealId(el.dataset.itemId) ?? this.actor.attacks?.get(el.dataset.itemId);
+					return !!item?.rollable;
+				},
 				callback: this.#onMoveRoll.bind(this),
 			},
 			{
 				name: "Send to Chat",
 				icon: '<i class="fas fa-comment"></i>',
+				condition: (el) => {
+					const itemId = el.dataset.itemId;
+					return !!this._getOwnedItemByRealId(itemId) || !!this.actor.phantomItems?.get(itemId);
+				},
 				callback: (ev) => {
 					const li = ev.closest('.item');
 					const itemId = li.dataset.itemId;
-					const item = this.actor.items.get(itemId);
+					const item = this._getOwnedItemByRealId(itemId) ?? this.actor.phantomItems?.get(itemId);
 					return item?.sendToChat?.();
 				}
 			},
