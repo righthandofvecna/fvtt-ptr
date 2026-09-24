@@ -944,6 +944,7 @@
           "OnCombatStart": "On Combat Start",
           "OnCombatEnd": "On Combat End",
           "OnRoundStart": "On Round Start",
+          "OnRoundEnd": "On Round End",
           "OnRoll": "On Roll"
         }
       }
