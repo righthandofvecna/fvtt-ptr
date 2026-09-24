@@ -1,0 +1,101 @@
+{
+  "folder": "Ap1mA67WqjtEMlAF",
+  "name": "Effect: Momentum (eph)",
+  "type": "effect",
+  "_id": "6nzE3FOYdfMT78Lc",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "effect:focused"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.evasion.speed.mod",
+        "phase": "applyAEs",
+        "value": "min(ceil({actor|flags.ptu.momentum}/2),3)",
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "effect:focused"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.physical.speed.mod",
+        "phase": "applyAEs",
+        "value": "min(ceil({actor|flags.ptu.momentum}/2),3)",
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "effect:focused"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.special.speed.mod",
+        "phase": "applyAEs",
+        "value": "min(ceil({actor|flags.ptu.momentum}/2),3)",
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-momentum-eph-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.40",
+    "createdTime": 1790211399494,
+    "modifiedTime": 1790214898580,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

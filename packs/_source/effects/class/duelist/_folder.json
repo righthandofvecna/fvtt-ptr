@@ -1,0 +1,22 @@
+{
+  "type": "Item",
+  "folder": "EocPVDSzmfxadVPq",
+  "name": "Duelist",
+  "color": null,
+  "sorting": "a",
+  "_id": "Ap1mA67WqjtEMlAF",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.40",
+    "createdTime": 1790209777317,
+    "modifiedTime": 1790209777317,
+    "lastModifiedBy": "GFCVv4EMgQDa5fGR",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

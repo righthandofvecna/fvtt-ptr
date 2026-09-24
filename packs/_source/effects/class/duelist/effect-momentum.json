@@ -1,0 +1,144 @@
+{
+  "folder": "Ap1mA67WqjtEMlAF",
+  "name": "Effect: Momentum",
+  "type": "effect",
+  "_id": "9JrpUitiiprUQe3X",
+  "img": "systems/ptu/static/css/images/icons/permanent_effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "- Your Pokémon begins each Scene with 0 Momentum.\n- At the end of each Combat round, your Pokémon gains +1 Momentum.\n- Whenever your Pokémon hits a Tagged foe, they gain +1 Momentum.\n- Your Pokémon has a maximum of 6 Momentum.\n- All Momentum is lost when your Pokémon Faints, your Pokémon is recalled, or combat ends.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "InstantChange",
+        "predicate": [],
+        "trigger": "onCombatStart",
+        "mode": "override",
+        "path": "flags.ptu.momentum",
+        "value": 0,
+        "priority": null
+      },
+      {
+        "key": "InstantChange",
+        "predicate": [],
+        "trigger": "onRoundEnd",
+        "mode": "add",
+        "path": "flags.ptu.momentum",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "InstantChange",
+        "predicate": [
+          "target:condition:tagged"
+        ],
+        "trigger": "onRoll",
+        "mode": "add",
+        "path": "flags.ptu.momentum",
+        "value": 1,
+        "priority": null,
+        "selectors": [
+          "attack"
+        ]
+      },
+      {
+        "key": "InstantChange",
+        "predicate": [],
+        "trigger": "onCombatEnd",
+        "mode": "override",
+        "path": "flags.ptu.momentum",
+        "value": 0,
+        "priority": null
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": {
+          "and": [
+            {
+              "not": "target:condition:tagged"
+            },
+            "effect:focused"
+          ]
+        },
+        "label": "Another Foe Tagged",
+        "hideIfDisabled": true,
+        "selectors": "attack-roll",
+        "value": -1
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "target:condition:tagged",
+          "effect:focused"
+        ],
+        "hideIfDisabled": false,
+        "selectors": "attack-roll",
+        "value": "min(ceil({actor|flags.ptu.momentum}/2),3)",
+        "label": "Momentum Bonus"
+      },
+      {
+        "key": "EphemeralEffect",
+        "predicate": [
+          "condition:tagged"
+        ],
+        "affects": "origin",
+        "selectors": "attack-roll-received",
+        "uuid": "Compendium.ptu.effects.Item.6nzE3FOYdfMT78Lc"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-momentum",
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "Homebrew"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.40",
+    "createdTime": 1790209785996,
+    "modifiedTime": 1790214826965,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}
