@@ -230,7 +230,10 @@ class LevelUpData {
                 const lastStage = this.evolutions.available[this.evolutions.available.length - 1]
                 const otherStages = this.evolutions.available.filter(e => e.level === lastStage.level);
                 if (otherStages.length > 1) {
-                    this.evolutions.current = otherStages[Math.floor(Math.random() * otherStages.length)];
+                    // Multiple evolutions at this level — default to "stay as you are" so the
+                    // player makes an explicit choice rather than being pre-selected into a random form.
+                    this.evolutions.current = this.evolutions.available.find(e => e.slug === this.pokemon.species.slug)
+                        ?? this.evolutions.available[0];
                 }
                 else {
                     this.evolutions.current = lastStage;
