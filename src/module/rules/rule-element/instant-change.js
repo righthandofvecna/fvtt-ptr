@@ -31,6 +31,7 @@ class InstantChangeRuleElement extends RuleElementPTU {
                     "onCombatStart",
                     "onCombatEnd",
                     "onRoundStart",
+                    "onRoundEnd",
                     "onRoll",
                 ],
                 initial: "onTurnStart",
@@ -94,6 +95,11 @@ class InstantChangeRuleElement extends RuleElementPTU {
     /** @override */
     onRoundStart(actorUpdates) {
         if (this.trigger === "onRoundStart") this.#applyInstantChange(actorUpdates);
+    }
+
+    /** @override */
+    onRoundEnd(actorUpdates) {
+        if (this.trigger === "onRoundEnd") this.#applyInstantChange(actorUpdates);
     }
 
     /** @override */

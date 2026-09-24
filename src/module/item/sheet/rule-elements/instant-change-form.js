@@ -28,6 +28,7 @@ class InstantChangeForm extends RuleElementForm {
             "onCombatStart":  "PTU.RuleEditor.InstantChange.Triggers.OnCombatStart",
             "onCombatEnd":    "PTU.RuleEditor.InstantChange.Triggers.OnCombatEnd",
             "onRoundStart":   "PTU.RuleEditor.InstantChange.Triggers.OnRoundStart",
+            "onRoundEnd":     "PTU.RuleEditor.InstantChange.Triggers.OnRoundEnd",
             "onRoll":         "PTU.RuleEditor.InstantChange.Triggers.OnRoll",
         };
 

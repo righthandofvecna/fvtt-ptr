@@ -251,6 +251,10 @@ class PTUCombat extends Combat {
                         for (const rule of actor.rules) {
                             await rule.onCombatStart?.(actorUpdates);
                         }
+                    } else {
+                        for (const rule of actor.rules) {
+                            await rule.onRoundEnd?.(actorUpdates);
+                        }
                     }
                     for (const rule of actor.rules) {
                         await rule.onRoundStart?.(actorUpdates);
