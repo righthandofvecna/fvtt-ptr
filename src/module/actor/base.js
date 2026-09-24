@@ -284,6 +284,11 @@ class PTUActor extends Actor {
             this.flags.ptu.rollOptions.all["self:types:" + type.toLowerCase()] = true;
         }
 
+        // Mark the currently-active combatant so predicates can gate on it
+        if (game.combat?.combatant?.actor?.uuid === this.uuid) {
+            this.flags.ptu.rollOptions.all["turn:active"] = true;
+        }
+
         // Call post-derived-preparation `RuleElement` hooks
         for (const rule of this.rules) {
             if (rule.priority > 100) continue;
