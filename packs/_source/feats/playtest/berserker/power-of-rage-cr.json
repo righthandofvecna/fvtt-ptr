@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Moves: Choose Enduring Rage, or White Flame. You gain the chosen Ability.",
+    "effect": "Choose @UUID[Compendium.ptu.abilities.Item.SPD8UhzfdpeeTrCS]{Enduring Rage} or @UUID[Compendium.ptu.abilities.Item.VhXF2GEX2WWHmkqF]{White Flame}. You gain the chosen Ability.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,7 @@
     ],
     "enabled": true,
     "slug": "power-of-rage-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -63,7 +63,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -106,7 +106,9 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   }
 }

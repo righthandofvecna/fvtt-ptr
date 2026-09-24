@@ -52,14 +52,16 @@ async function extractHealOnDamageDealt({ origin, item, domains, options, damage
 async function extractEphemeralEffects({ affects, origin, target, item, domains, options }) {
     if (!(origin && target)) return [];
 
+    const affectsInverse = affects === "target" ? "origin" : "target";
     const [effectsFrom, effectsTo] = affects === "target" ? [origin, target] : [target, origin];
     const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(target, domains) ?? [])];
     const resolvables = item?.type == "move" ? { move: item } : {};
+    const ee = [];
+    ee.push(...domains.flatMap(s => effectsFrom.synthetics.ephemeralEffects[s]?.[affects] ?? []));
+    ee.push(...domains.flatMap(s => effectsTo.synthetics.ephemeralEffects[`${s}-received`]?.[affectsInverse] ?? []));
     return (
         await Promise.all(
-            domains
-                .flatMap(s => effectsFrom.synthetics.ephemeralEffects[s]?.[affects] ?? [])
-                .map(d => d({ test: fullOptions, resolvables }))
+            ee.map(d => d({ test: fullOptions, resolvables }))
         )
     ).flatMap(e => e ?? [])
 }

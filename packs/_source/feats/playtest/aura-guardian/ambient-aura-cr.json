@@ -5,12 +5,11 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain an Aura Blessing that can be spent any time as a Free Action Interrupt. When you spend an Aura Blessing, you choose one of the effects below. You may only have one Aura Blessing at a time, and you must have the Aura Pulse Capability to use Ambient Aura.\n» You create an energy barrier around you or an ally within 5 meters granting Damage Reduction equal to your Intuition Rank tripled until the end of your next turn.\n» You cure yourself of a Volatile Status Affliction.\n» Gain the Blindsense Capability until the end of the Scene.",
+    "effect": "Effect: You gain an Aura Blessing that can be spent any time as a Free Action Interrupt. When you spend an Aura Blessing, you choose one of the effects below. You may only have one Aura Blessing at a time, and you must have the @UUID[Compendium.ptu.capabilities.Item.XTXkBsGDf4t4gKoa]{Aura Pulse} Capability to use Ambient Aura.\n» You create an energy barrier around you or an ally within 5 meters granting Damage Reduction equal to your Intuition Rank tripled until the end of your next turn.\n» You cure yourself of a Volatile Status Affliction.\n» Gain the @UUID[Compendium.ptu.capabilities.Item.vA7vGdfceeDzi5sc]{Blindsense} Capability until the end of the Scene.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "auraguardian",
         "choices": [
           {
@@ -29,7 +28,8 @@
         "mode": "add",
         "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.auraguardian}.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -47,7 +47,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -86,7 +86,8 @@
     "free": false,
     "class": "Aura Guardian",
     "contentSet": "class-rework",
-    "replacesSlug": "ambient-aura"
+    "replacesSlug": "ambient-aura",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
@@ -95,7 +96,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

@@ -280,7 +280,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		html.find('.item .item-icon').click((event) => {
 			event.preventDefault();
 			const itemId = $(event.currentTarget).closest("li.item").data("item-id");
-			const item = this.actor.items.get(itemId);
+			const item = this.actor.items.get(itemId) ?? this.actor.attacks?.get(itemId);
 			if (!item) return;
 
 			return item.use?.({ event });
@@ -364,6 +364,54 @@ export class PTUCharacterSheet extends PTUActorSheet {
 				"system.contests.voltage.value": value
 			});
 		});
+
+		this._contextMenu(html);
+	}
+
+	_contextMenu(html) {
+		const htmlElement = html instanceof jQuery ? html[0] : html;
+
+		foundry.applications.ux.ContextMenu.implementation.create(this, htmlElement, ".move-item", [
+			{
+				name: "Roll",
+				icon: '<i class="fas fa-dice"></i>',
+				condition: (el) => {
+					const item = this.actor.items.get(el.dataset.itemId) ?? this.actor.attacks?.get(el.dataset.itemId);
+					return !!item?.rollable;
+				},
+				callback: (el) => {
+					const item = this.actor.items.get(el.dataset.itemId) ?? this.actor.attacks?.get(el.dataset.itemId);
+					return item?.use?.({});
+				},
+			},
+			{
+				name: "Send to Chat",
+				icon: '<i class="fas fa-comment"></i>',
+				callback: (el) => {
+					const item = this.actor.items.get(el.dataset.itemId) ?? this.actor.attacks?.get(el.dataset.itemId);
+					return item?.sendToChat?.();
+				}
+			},
+			{
+				name: "Edit",
+				icon: '<i class="fas fa-edit"></i>',
+				callback: async (el) => {
+					const item = this.actor.items.get(el.dataset.itemId) ?? await this._materializePhantomItem(el.dataset.itemId);
+					if (!item) return;
+					item.sheet.render(true);
+				}
+			},
+			{
+				name: "Delete",
+				icon: '<i class="fas fa-trash"></i>',
+				condition: (el) => !!this.actor.items.get(el.dataset.itemId),
+				callback: (el) => {
+					const item = this.actor.items.get(el.dataset.itemId);
+					if (!item) return;
+					return item.delete();
+				},
+			},
+		], { jQuery: false });
 	}
 
 	_updateItemField(e) {

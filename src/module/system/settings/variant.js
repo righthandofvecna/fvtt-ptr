@@ -57,6 +57,12 @@ const VariantSettingsConfig = {
         default: true,
         requiresReload: true
     },
+    "usePP": {
+        name: "PP Variant",
+        hint: "Enable the PP (Power Points) variant rule. Items gain a PP cost and actors have a PP pool of 64.",
+        type: Boolean,
+        default: false,
+    }
 }
 
 export class VariantSettings extends PTUSettingsMenu {

@@ -86,7 +86,7 @@
       "automationStatus": "completed",
       "devNote": "",
       "used": null,
-      "showInTokenPanel": false
+      "showInTokenPanel": true
     }
   },
   "_stats": {

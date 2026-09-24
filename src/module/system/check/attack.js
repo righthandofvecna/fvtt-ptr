@@ -59,6 +59,31 @@ class PTUAttackCheck extends PTUDiceCheck {
             }));
         }
 
+        // Out of range check — only applies for square grids; hex and gridless are skipped
+        if (
+            !this.isSelfAttack &&
+            game.settings.get("ptu", "automation.failAttackIfOutOfRange") &&
+            canvas.grid.type === CONST.GRID_TYPES.SQUARE
+        ) {
+            for (const context of this.contexts) {
+                if (typeof context.distance !== "number" || isNaN(context.distance)) continue;
+
+                const range = this.isRangedAttack
+                    ? Number(this.item.system.range.match(/\d+/)?.[0] ?? 1)
+                    : 1;
+
+                if (context.distance > range) {
+                    ui.notifications.warn("PTU.Action.AttackOutOfRange", { localize: true });
+                    this.modifiers.push(new PTUModifier({
+                        slug: "out-of-range",
+                        label: "Out Of Range",
+                        modifier: -Infinity
+                    }));
+                    break;
+                }
+            }
+        }
+
         const critRangeModifiers = [
             new PTUModifier({
                 slug: "crit-range",
@@ -291,7 +316,6 @@ class PTUAttackCheck extends PTUDiceCheck {
     async executeAttack(callback = null, attackStatistic = null) {
         await this.prepareContexts(attackStatistic);
         if (!this.attackNoTargets()) return null;
-        if (!this.attackOutOfRange()) return null;
         if (!this.attackDisabled()) return null;
 
         this.prepareModifiers();
@@ -307,29 +331,6 @@ class PTUAttackCheck extends PTUDiceCheck {
     /* -------------------------------------------- */
     /* Fail Checks                                  */
     /* -------------------------------------------- */
-
-    /**
-     * Checks whether evaluation should be halted due to the attack lacking the required range.
-     * @returns {boolean}
-     */
-    attackOutOfRange() {
-        if (!this.isSelfAttack && game.settings.get("ptu", "automation.failAttackIfOutOfRange")) {
-            for (const context of this.contexts) {
-                if (typeof context.distance !== "number") continue;
-
-                const range = (() => {
-                    if (this.isRangedAttack) return this.item.system.range.match(/\d+/)?.[0] ?? 1;
-                    return 1;
-                })();
-
-                if (context.distance > range) {
-                    ui.notifications.warn("PTU.Action.AttackOutOfRange", { localize: true });
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
 
     /**
      * Checks whether evaluation should be halted due to the attack lacking the required targets.

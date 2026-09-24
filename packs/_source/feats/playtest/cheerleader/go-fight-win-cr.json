@@ -20,7 +20,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -76,7 +76,7 @@
     "ptu": {
       "showInTokenPanel": true,
       "used": null,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   },

@@ -1,5 +1,4 @@
 {
-  "folder": null,
   "name": "Hat Trick",
   "type": "capability",
   "_id": "FnEb80T4dtIfCTJT",
@@ -11,7 +10,7 @@
     "rules": [],
     "enabled": true,
     "slug": "hat-trick",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -26,14 +25,14 @@
     },
     "referenceEffect": "Compendium.ptu.effects.Item.Qi8IfjYK5fo6bw9Z",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
       "Backpack Talent"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -62,7 +61,7 @@
     "ptu": {
       "showInTokenPanel": false,
       "automationStatus": "needs-automation",
-      "devNote": ""
+      "devNote": "Effect applies universal DR, does not check for incoming critical hits, maybe a Reminder?"
     }
   }
 }

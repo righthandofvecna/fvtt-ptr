@@ -502,7 +502,10 @@
     "source": {
       "value": "PTR Exclusive Dex Megas"
     },
-    "keywords": [],
+    "keywords": [
+      "Johto",
+      "Legendary"
+    ],
     "contentSet": "",
     "replacesSlug": ""
   },

@@ -489,7 +489,9 @@
       "1": "Dragon",
       "2": ""
     },
-    "keywords": [],
+    "keywords": [
+      "Paldea"
+    ],
     "stackSlugs": false,
     "enabled": false,
     "contentSet": "",

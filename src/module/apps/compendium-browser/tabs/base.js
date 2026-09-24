@@ -99,6 +99,18 @@ export class CompendiumBrowserTab {
         return currentIndex.slice(start, this.scrollLimit);
     }
 
+    /** Returns all filtered+sorted index data without slicing. Used for bulk exports. */
+    getAllFilteredData() {
+        if (!this.isInitialized) throw new Error("Cannot get index data before initializing");
+
+        const searchText = this.filterData.search.text;
+        if (searchText) {
+            const searchResult = this.searchEngine.search(searchText);
+            return this.sortResult(searchResult.filter(this.filterIndexData.bind(this)));
+        }
+        return this.sortResult(this.indexData.filter(this.filterIndexData.bind(this)));
+    }
+
     /** Returns a clean copy of the filterData for this tab. Initializes the tab if necessary. */
     async getFilterData() {
         if (!this.isInitialized) await this.init();

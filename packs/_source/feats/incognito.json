@@ -1,11 +1,10 @@
 {
-  "folder": null,
   "name": "Incognito",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Trigger: You attempt to capture a Pokémon while in stealth.\n\nEffect: You gain a +X bonus to the accuracy check to hit the Pokémon on top of any bonuses from stealth, where X equals (your stealth rank/2)+1. The Pokémon counts as having the Blinded and Vulnerable condition for the sake of calculating the capture DC, if the target was already Blinded, instead they are now also Totally Blinded. As this only applies to the capture roll, this cannot be negated by Blindsense.",
+    "effect": "Trigger: You attempt to capture a Pokémon while in stealth.\n\nEffect: You gain a +X bonus to the accuracy check to hit the Pokémon on top of any bonuses from stealth, where X equals (your Stealth rank/2)+1. The Pokémon counts as having the @UUID[Compendium.ptu.effects.Item.g2QutQJutABxFIw6]{Blinded} and @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI]{Vulnerable} condition for the sake of calculating the capture DC, if the target was already Blinded, instead they are now also @UUID[Compendium.ptu.effects.Item.bgmIrNI1jJHTVwVN]{Totally Blinded}. As this only applies to the capture roll, this cannot be negated by @UUID[Compendium.ptu.capabilities.Item.vA7vGdfceeDzi5sc]{Blindsense}.",
     "snippet": "",
     "rules": [
       {
@@ -14,7 +13,8 @@
         "path": "system.modifiers.baseStats.spd.mod",
         "value": 1,
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -69,13 +69,16 @@
     "class": "Capture Specialist",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "prereqBackup": "Advanced Capture Techniques Rank 2",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

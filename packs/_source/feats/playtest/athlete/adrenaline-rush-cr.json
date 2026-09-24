@@ -30,7 +30,7 @@
     },
     "referenceEffect": "Compendium.ptu.effects.Item.gsePGwVgjU3VgjIK",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -70,7 +70,8 @@
     "class": "Athlete",
     "name": "Adrenaline Rush [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "adrenaline-rush"
+    "replacesSlug": "adrenaline-rush",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -83,7 +84,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

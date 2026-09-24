@@ -204,6 +204,12 @@ class RuleElementPTU extends foundry.abstract.DataModel {
     onRoundStart(actorUpdates) {};
 
     /**
+     * Run at the end of each round.
+     * @param actorUpdates A record containing update data for the actor
+     */
+    onRoundEnd(actorUpdates) {};
+
+    /**
      * Runs after an item holding this rule is removed from an actor. This method is used for cleaning up any values
      * on the actorData or token objects (e.g., removing temp HP).
      *
@@ -265,7 +271,7 @@ class RuleElementPTU extends foundry.abstract.DataModel {
 
         // If the source is a string, parse it for injected properties
         if(typeof source === "string") {
-            const regex = /{(actor|item|trainer|rule)\|([^\}]*)}/g;
+            const regex = /{(actor|item|trainer|rule)\|([^\{\}]*)}/g;
             function replaceFunc(_match, key, prop) {
                 const data = (()=>{
                     if (key === "rule") return this.data;
@@ -284,7 +290,14 @@ class RuleElementPTU extends foundry.abstract.DataModel {
                 return String(value);
             }
 
-            return source.replace(regex, replaceFunc.bind(this));
+            // keep replacing until no more changes occur
+            let oldSource = "";
+            while (oldSource != source) {
+                oldSource = source;
+                source = source.replace(regex, replaceFunc.bind(this));
+            }
+
+            return source;
         }
 
         return source;

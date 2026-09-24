@@ -482,6 +482,10 @@
         "value": 5
       },
 
+      "pp": {
+        "value": null
+      },
+
       "item_categories": {},
 
       "biography": {
@@ -521,6 +525,10 @@
       "tp": {
         "value": 0,
         "pep": {}
+      },
+
+      "pp": {
+        "value": null
       },
 
       "heldItem": "None",
@@ -638,7 +646,8 @@
             "priority": false,
             "reaction": false,
             "interrupt": false
-          }
+          },
+          "ppCost": null
         },
         "actionCost": {
           "standard": true,

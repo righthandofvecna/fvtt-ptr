@@ -610,11 +610,13 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Kanto",
+      "Alola",
+      "Galar",
       "Johto",
       "Kalos",
-      "Alola",
-      "Mega"
+      "Kanto",
+      "Mega",
+      "Paldea"
     ],
     "type": {
       "0": "Dragon",

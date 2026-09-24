@@ -29,7 +29,7 @@
     ],
     "enabled": true,
     "slug": "effect-herald-of-pride",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": null,
@@ -37,7 +37,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [],

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Chef Recipes",
-    "effect": "Prerequisites: Chef Cost: $100 Effect: You create a Salty Surprise, Spicy Wrap, Sour Candy, Dry Wafer, Bitter Treat, or Sweet Confection",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.YhVGlEUkq6BLORNM]{Chef}\nCost: $100\nEffect: You create a @UUID[Compendium.ptu.references.Item.l7AHefBzQJp3M5hL]{Salty Surprise}, @UUID[Compendium.ptu.references.Item.JaC2CGqH3qpoJiwp]{Spicy Wrap}, @UUID[Compendium.ptu.references.Item.aBrvpJfpy6A3cFGt]{Sour Candy}, @UUID[Compendium.ptu.references.Item.bajfkZcAu5T2Pqt7]{Dry Wafer}, @UUID[Compendium.ptu.references.Item.YEuKDIALD23rzEZa]{Bitter Treat}, or @UUID[Compendium.ptu.references.Item.Au0ZNfWlMPtdYEJC]{Sweet Confection}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -22,7 +22,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [],
@@ -31,12 +31,10 @@
   },
   "_id": "l2V3D7HeGsmlbN1G",
   "effects": [],
-  "folder": null,
   "sort": 24900000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

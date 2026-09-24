@@ -5,12 +5,11 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Learn three moves from the following list: Aura Sphere, Focus Blast, Drain Punch, Focus Punch, Dragon Pulse, Dark Pulse, Water Pulse.",
+    "effect": "Learn three moves from the following list: @UUID[Compendium.ptu.moves.Item.gYkmoTL90zOWT5lv]{Aura Sphere}, @UUID[Compendium.ptu.moves.Item.HU7NSy5rYDet6DbI]{Focus Blast}, @UUID[Compendium.ptu.moves.Item.Dr7Eh1TGQHwQcreV]{Drain Punch}, @UUID[Compendium.ptu.moves.Item.JwDy34HQ8GT4v6Jv]{Focus Punch}, @UUID[Compendium.ptu.moves.Item.qOem2TUbrvmdG1Fu]{Dragon Pulse}, @UUID[Compendium.ptu.moves.Item.M9VSBteeyEya9Qcf]{Dark Pulse}, @UUID[Compendium.ptu.moves.Item.9TnRLGZ6WIGqIeQ4]{Water Pulse}.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "auraguardian",
         "choices": [
           {
@@ -29,7 +28,8 @@
         "mode": "add",
         "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.auraguardian}.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       },
       {
         "key": "ChoiceSet",
@@ -38,42 +38,49 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.gYkmoTL90zOWT5lv",
+            "label": "Aura Sphere",
             "predicate": {
               "not": "move:aura-sphere"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.HU7NSy5rYDet6DbI",
+            "label": "Focus Blast",
             "predicate": {
               "not": "move:focus-blast"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.Dr7Eh1TGQHwQcreV",
+            "label": "Drain Punch",
             "predicate": {
               "not": "move:drain-punch"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.JwDy34HQ8GT4v6Jv",
+            "label": "Focus Punch",
             "predicate": {
               "not": "move:focus-punch"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.qOem2TUbrvmdG1Fu",
+            "label": "Dragon Pulse",
             "predicate": {
               "not": "move:dragon-pulse"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.M9VSBteeyEya9Qcf",
+            "label": "Dark Pulse",
             "predicate": {
               "not": "move:dark-pulse"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.9TnRLGZ6WIGqIeQ4",
+            "label": "Water Pulse",
             "predicate": {
               "not": "move:water-pulse"
             }
@@ -93,42 +100,49 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.gYkmoTL90zOWT5lv",
+            "label": "Aura Sphere",
             "predicate": {
               "not": "move:aura-sphere"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.HU7NSy5rYDet6DbI",
+            "label": "Focus Blast",
             "predicate": {
               "not": "move:focus-blast"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.Dr7Eh1TGQHwQcreV",
+            "label": "Drain Punch",
             "predicate": {
               "not": "move:drain-punch"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.JwDy34HQ8GT4v6Jv",
+            "label": "Focus Punch",
             "predicate": {
               "not": "move:focus-punch"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.qOem2TUbrvmdG1Fu",
+            "label": "Dragon Pulse",
             "predicate": {
               "not": "move:dragon-pulse"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.M9VSBteeyEya9Qcf",
+            "label": "Dark Pulse",
             "predicate": {
               "not": "move:dark-pulse"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.9TnRLGZ6WIGqIeQ4",
+            "label": "Water Pulse",
             "predicate": {
               "not": "move:water-pulse"
             }
@@ -148,42 +162,49 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.gYkmoTL90zOWT5lv",
+            "label": "Aura Sphere",
             "predicate": {
               "not": "move:aura-sphere"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.HU7NSy5rYDet6DbI",
+            "label": "Focus Blast",
             "predicate": {
               "not": "move:focus-blast"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.Dr7Eh1TGQHwQcreV",
+            "label": "Drain Punch",
             "predicate": {
               "not": "move:drain-punch"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.JwDy34HQ8GT4v6Jv",
+            "label": "Focus Punch",
             "predicate": {
               "not": "move:focus-punch"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.qOem2TUbrvmdG1Fu",
+            "label": "Dragon Pulse",
             "predicate": {
               "not": "move:dragon-pulse"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.M9VSBteeyEya9Qcf",
+            "label": "Dark Pulse",
             "predicate": {
               "not": "move:dark-pulse"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.9TnRLGZ6WIGqIeQ4",
+            "label": "Water Pulse",
             "predicate": {
               "not": "move:water-pulse"
             }
@@ -212,7 +233,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -252,7 +273,8 @@
     "free": false,
     "class": "Aura Guardian",
     "contentSet": "class-rework",
-    "replacesSlug": "aura-mastery-rank-2"
+    "replacesSlug": "aura-mastery-rank-2",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
@@ -261,7 +283,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

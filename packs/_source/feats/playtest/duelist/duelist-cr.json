@@ -7,6 +7,8 @@
     "rules": [],
     "enabled": true,
     "slug": "duelist-cr",
+    "contentSet": "class-rework",
+    "replacesSlug": "duelist",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -18,9 +20,9 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.9JrpUitiiprUQe3X",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -33,12 +35,13 @@
       "max": 0,
       "custom": "At-Will – Rapid Action",
       "modifiers": {
-        "priorityLimited": false,
+        "priorityLimited": true,
         "priorityAdvanced": false,
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -51,6 +54,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Focused Training",
       "Novice Focus"
@@ -58,9 +62,7 @@
     "notes": "",
     "free": false,
     "class": "Duelist",
-    "name": "Duelist [CR]",
-    "contentSet": "class-rework",
-    "replacesSlug": "duelist"
+    "name": "Duelist [CR]"
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -71,13 +73,19 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "automated",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.40",
+    "coreVersion": "14.367",
     "createdTime": 1699736627730,
-    "modifiedTime": 1778200831544,
+    "modifiedTime": 1790209914174,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

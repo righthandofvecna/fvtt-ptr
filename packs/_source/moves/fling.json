@@ -2,7 +2,6 @@
   "name": "Fling",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user throws a held item, determining the effect of Fling.",
@@ -72,7 +71,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "fDc6STMtfRenewU6",
   "effects": [],
@@ -80,7 +80,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

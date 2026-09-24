@@ -564,11 +564,12 @@
       "value": "PTR Core Dex Megas"
     },
     "keywords": [
-      "Hoenn",
-      "Unova",
-      "Kalos",
       "Alola",
-      "Mega"
+      "Hoenn",
+      "Kalos",
+      "Mega",
+      "Paldea",
+      "Unova"
     ],
     "contentSet": "",
     "replacesSlug": "",

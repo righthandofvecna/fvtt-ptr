@@ -154,6 +154,24 @@
                                 </div>
                             </div>
                         </div>
+                        {{#if ppVariant}}
+                        <div class="swsh-box w-100 mt-1">
+                            <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-1 pb-1">
+                                <h3 class="m-auto">PP</h3>
+                            </div>
+                            <div class="swsh-body justify-content-center">
+                                <div class="resource-content hp-info flexrow flex-group-right hp-info pt-1 pb-1">
+                                    <div class="fb-30">
+                                        <input type="number" name="system.pp.value" value="{{actor.system.pp.value}}" min="0"/>
+                                    </div>
+                                    <span>/</span>
+                                    <div class="fb-30">
+                                        <input type="number" value="{{actor.system.pp.max}}" disabled/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{/if}}
                         <div class="mt-auto mb-auto">
                             <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
                         </div>

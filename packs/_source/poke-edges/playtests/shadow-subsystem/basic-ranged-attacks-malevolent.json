@@ -6,7 +6,7 @@
   "img": "systems/ptu/static/css/images/icons/poke_edge_icon.png",
   "system": {
     "origin": "",
-    "effect": "Struggle Attacks modified by Malevolent may now be made at a range of up to 6 meters.",
+    "effect": "Struggle Attacks modified by @UUID[Item.dZL6XTvYS0QxzgZm]{Malevolent} may now be made at a range of up to 6 meters.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -24,12 +24,12 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -56,14 +56,21 @@
     ],
     "cost": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

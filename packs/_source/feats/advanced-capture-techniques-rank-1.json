@@ -1,11 +1,10 @@
 {
-  "folder": null,
   "name": "Advanced Capture Techniques Rank 1",
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "You gain two Capture Techniques of your choice. You must meet any prerequisites of the Technique. You may qualify for Advanced Capture Techniques’ prerequisites with the Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills only.",
+    "effect": "You gain two Capture Techniques of your choice. You must meet any prerequisites of the Technique. You may qualify for Advanced Capture Techniques’ prerequisites with the Acrobatics, Athletics, Stealth, Survival, Guile, or Perception Skills only.\nCapture Techniques: @UUID[Compendium.ptu.capabilities.Item.tdhGpjXjYnFGsg5r]{Capture Skills}, @UUID[Compendium.ptu.moves.Item.oCbNYdXL9EM5YyXo]{Curve Ball}, @UUID[Compendium.ptu.capabilities.Item.95Z0ep7uSZb4GYce]{Devitalizing Throw}, @UUID[Compendium.ptu.capabilities.Item.pJLz9aGZzPMhMMZd]{Fast Pitch}, @UUID[Compendium.ptu.capabilities.Item.K24Mww4alZrOwtv2]{Snare}, @UUID[Compendium.ptu.capabilities.Item.bdkhDY1yYn4MPP2d]{Tools of the Trade}, @UUID[Compendium.ptu.capabilities.Item.6OR2Bt76V2jmS9qG]{Catch Combo}, @UUID[Compendium.ptu.capabilities.Item.dQ3pQXZtBVg9vEwd]{False Strike}, @UUID[Compendium.ptu.capabilities.Item.h0xrKDLhLNwESAh7]{Relentless Pursuit}",
     "snippet": "",
     "rules": [
       {
@@ -26,11 +25,11 @@
         "rollOption": "capture",
         "choices": [
           {
-            "value": "Compendium.ptu.references.Item.tdhGpjXjYnFGsg5r",
+            "value": "Compendium.ptu.capabilities.Item.tdhGpjXjYnFGsg5r",
             "label": "Capture Skills"
           },
           {
-            "value": "Compendium.ptu.references.Item.6OR2Bt76V2jmS9qG",
+            "value": "Compendium.ptu.capabilities.Item.6OR2Bt76V2jmS9qG",
             "label": "Catch Combo",
             "predicate": [
               {
@@ -39,7 +38,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.oCbNYdXL9EM5YyXo",
+            "value": "Compendium.ptu.moves.Item.oCbNYdXL9EM5YyXo",
             "label": "Curve Ball",
             "predicate": [
               {
@@ -48,7 +47,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.95Z0ep7uSZb4GYce",
+            "value": "Compendium.ptu.capabilities.Item.95Z0ep7uSZb4GYce",
             "label": "Devitalizing Throw",
             "predicate": [
               {
@@ -57,7 +56,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.dQ3pQXZtBVg9vEwd",
+            "value": "Compendium.ptu.capabilities.Item.dQ3pQXZtBVg9vEwd",
             "label": "False Strike",
             "predicate": [
               {
@@ -66,7 +65,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.pJLz9aGZzPMhMMZd",
+            "value": "Compendium.ptu.capabilities.Item.pJLz9aGZzPMhMMZd",
             "label": "Fast Pitch",
             "predicate": [
               {
@@ -75,7 +74,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.h0xrKDLhLNwESAh7",
+            "value": "Compendium.ptu.capabilities.Item.h0xrKDLhLNwESAh7",
             "label": "Relentless Pursuit",
             "predicate": [
               {
@@ -84,7 +83,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.K24Mww4alZrOwtv2",
+            "value": "Compendium.ptu.capabilities.Item.K24Mww4alZrOwtv2",
             "label": "Snare",
             "predicate": [
               {
@@ -93,7 +92,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.bdkhDY1yYn4MPP2d",
+            "value": "Compendium.ptu.capabilities.Item.bdkhDY1yYn4MPP2d",
             "label": "Tools of the Trade",
             "predicate": [
               {
@@ -118,11 +117,11 @@
         "rollOption": "capture",
         "choices": [
           {
-            "value": "Compendium.ptu.references.Item.tdhGpjXjYnFGsg5r",
+            "value": "Compendium.ptu.capabilities.Item.tdhGpjXjYnFGsg5r",
             "label": "Capture Skills"
           },
           {
-            "value": "Compendium.ptu.references.Item.6OR2Bt76V2jmS9qG",
+            "value": "Compendium.ptu.capabilities.Item.6OR2Bt76V2jmS9qG",
             "label": "Catch Combo",
             "predicate": [
               {
@@ -131,7 +130,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.oCbNYdXL9EM5YyXo",
+            "value": "Compendium.ptu.moves.Item.oCbNYdXL9EM5YyXo",
             "label": "Curve Ball",
             "predicate": [
               {
@@ -140,7 +139,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.95Z0ep7uSZb4GYce",
+            "value": "Compendium.ptu.capabilities.Item.95Z0ep7uSZb4GYce",
             "label": "Devitalizing Throw",
             "predicate": [
               {
@@ -149,7 +148,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.dQ3pQXZtBVg9vEwd",
+            "value": "Compendium.ptu.capabilities.Item.dQ3pQXZtBVg9vEwd",
             "label": "False Strike",
             "predicate": [
               {
@@ -158,7 +157,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.pJLz9aGZzPMhMMZd",
+            "value": "Compendium.ptu.capabilities.Item.pJLz9aGZzPMhMMZd",
             "label": "Fast Pitch",
             "predicate": [
               {
@@ -167,7 +166,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.h0xrKDLhLNwESAh7",
+            "value": "Compendium.ptu.capabilities.Item.h0xrKDLhLNwESAh7",
             "label": "Relentless Pursuit",
             "predicate": [
               {
@@ -176,7 +175,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.K24Mww4alZrOwtv2",
+            "value": "Compendium.ptu.capabilities.Item.K24Mww4alZrOwtv2",
             "label": "Snare",
             "predicate": [
               {
@@ -185,7 +184,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.references.Item.bdkhDY1yYn4MPP2d",
+            "value": "Compendium.ptu.capabilities.Item.bdkhDY1yYn4MPP2d",
             "label": "Tools of the Trade",
             "predicate": [
               {
@@ -204,7 +203,7 @@
     ],
     "enabled": true,
     "slug": "advanced-capture-techniques-rank-1",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -265,7 +264,7 @@
     "ptu": {
       "showInTokenPanel": true,
       "prereqBackup": "Capture Specialist",
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     },
     "LocknKey": {

@@ -6,7 +6,7 @@
   "img": "systems/ptu/static/images/item_icons/generic item.webp",
   "system": {
     "origin": "Class Rework",
-    "effect": "This item allows the user to use the Move \"Slick\" as a Standard Action. The item is then consumed. Oil Slick vials are not usually sold in stores, but may be found from specialty shops for $500.",
+    "effect": "This item allows the user to use the Move @UUID[Compendium.ptu.moves.Item.7D18MkrgyJnsuaTZ]{Slick} as a Standard Action. The item is then consumed. Oil Slick vials are not usually sold in stores, but may be found from specialty shops for $500.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -24,10 +24,12 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Ninja"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -41,7 +43,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -58,7 +60,8 @@
     "subtype": "",
     "container": false,
     "contentSet": "class-rework",
-    "replacesSlug": "oil-slick"
+    "replacesSlug": "oil-slick",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
@@ -67,7 +70,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

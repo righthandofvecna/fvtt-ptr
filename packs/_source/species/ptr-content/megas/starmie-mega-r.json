@@ -544,7 +544,15 @@
       "1": "Psychic",
       "2": ""
     },
-    "keywords": [],
+    "keywords": [
+      "Alola",
+      "Galar",
+      "Hoenn",
+      "Johto",
+      "Kalos",
+      "Kanto",
+      "Unova"
+    ],
     "stackSlugs": false,
     "enabled": false,
     "contentSet": "",

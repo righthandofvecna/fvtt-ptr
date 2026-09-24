@@ -1,17 +1,16 @@
 {
-  "folder": null,
   "name": "Sole Power",
   "type": "capability",
   "_id": "l35R0FpQysFZ072H",
   "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
   "system": {
     "origin": "",
-    "effect": "While wearing Feet Equipment worth at least ₽1000, you do not trigger Hazards while Shifting. However, you still trigger any Hazards that you are standing on at the start or end of your turn. Reactive Hazards such as Stealth Rock cannot be triggered against you.",
+    "effect": "While wearing Feet Equipment worth at least ₽1000, you do not trigger Hazards while Shifting. However, you still trigger any Hazards that you are standing on at the start or end of your turn. Reactive Hazards such as @UUID[Compendium.ptu.moves.Item.XklsarNBfkknbU8O]{Stealth Rock} cannot be triggered against you.",
     "snippet": "",
     "rules": [],
     "enabled": true,
     "slug": "sole-power",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -26,14 +25,14 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
       "Backpacker Talent"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -61,7 +60,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": ""
     }
   }

@@ -631,7 +631,12 @@
       "1": "Dragon",
       "2": ""
     },
-    "keywords": [],
+    "keywords": [
+      "Galar",
+      "Johto",
+      "Kalos",
+      "Kanto"
+    ],
     "contentSet": "",
     "replacesSlug": ""
   },

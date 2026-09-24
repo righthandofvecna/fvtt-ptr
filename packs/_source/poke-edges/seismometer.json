@@ -2,7 +2,7 @@
   "name": "Seismometer",
   "system": {
     "origin": "",
-    "effect": "The user's Tremorsense range is increased by a number of meters equal to their Perception Rank.",
+    "effect": "The user's @UUID[Compendium.ptu.capabilities.Item.3dWZglNbT0uCCQmQ]{Tremorsense} range is increased by a number of meters equal to their Perception Rank.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -25,7 +25,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -55,7 +55,8 @@
     "name": "Seismometer",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Level 20, Tremorsense Capability"
+      "prereqBackup": "Level 20, Tremorsense Capability",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -78,7 +82,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 2800000,
   "_id": "pmAlIedygO6Z5ZSR"
 }

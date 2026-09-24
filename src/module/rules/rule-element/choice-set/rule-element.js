@@ -137,7 +137,7 @@ class ChoiceSetRuleElement extends RuleElementPTU {
 
     async inflateChoices() {
         const choices = Array.isArray(this.choices)
-            ? this.choices.map(c => ({...c, value: this.resolveInjectedProperties(c.value)})).filter(c => c.value !== 'undefined')
+            ? this.choices.map(c => ({...c, value: this.resolveInjectedProperties(c.value), label: this.resolveInjectedProperties(c.label)})).filter(c => c.value !== 'undefined')
             : typeof this.choices === "string"
             ? this.#choicesFromPath(this.choices)
             : [];
@@ -186,7 +186,7 @@ class ChoiceSetRuleElement extends RuleElementPTU {
         return (source.flag =
             typeof source.flag === "string" && source.flag.length > 0
                 ? source.flag.replace(/[^-a-z0-9]/gi, "")
-                : sluggify(this.item.slag ?? this.item.name, { camel: "dromedary"}))
+                : sluggify(this.item.slug ?? this.item.name, { camel: "dromedary"}))
     }
 
     #setRollOption(selection) {

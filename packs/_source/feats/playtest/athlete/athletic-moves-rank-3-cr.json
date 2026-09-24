@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower.\nRank 1: Blind, Block, Slam, Strenght\nRank 2: Body Slam, Take Down, Extreme Speed\nRank 3: Mega Kick, Facade, Retaliate",
+    "effect": "Effect: You learn two Athlete Moves marked with the Rank of this Feature you are taking or lower.\nRank 1: @UUID[Compendium.ptu.moves.Item.nzd3auiq1JwJFmCb]{Bind}, @UUID[Compendium.ptu.moves.Item.PvmLk3AU04nOjH4x]{Block}, @UUID[Compendium.ptu.moves.Item.B6mHk3zIO3QaXnIQ]{Slam}, @UUID[Compendium.ptu.moves.Item.v7BArKd17sdkD59s]{Strength}\nRank 2: @UUID[Compendium.ptu.moves.Item.DzD1pun72sIQFQle]{Body Slam}, @UUID[Compendium.ptu.moves.Item.rmDcfFfrdq5PgwF9]{Take Down}, @UUID[Compendium.ptu.moves.Item.d4ZmIYX6ghY0hw7p]{Extreme Speed}\nRank 3: @UUID[Compendium.ptu.moves.Item.P6WwfKrGPuSohaOH]{Mega Kick}, @UUID[Compendium.ptu.moves.Item.QhQ2vUo3KMKo4Xou]{Facade}, @UUID[Compendium.ptu.moves.Item.P0VBbEO76A1KyQIM]{Retaliate}",
     "snippet": "",
     "rules": [
       {
@@ -278,7 +278,7 @@
     ],
     "enabled": true,
     "slug": "athletic-moves-rank-3-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -293,7 +293,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -341,7 +341,9 @@
       "grantedBy": {
         "id": "3PYlHqFLDzN5K4fU",
         "onDelete": "detach"
-      }
+      },
+      "automationStatus": "completed",
+      "devNote": ""
     }
   }
 }

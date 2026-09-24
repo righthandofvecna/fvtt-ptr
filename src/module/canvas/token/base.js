@@ -327,6 +327,8 @@ class PTUToken extends foundry.canvas.placeables.Token {
         if (this === target) return 0;
 
         if (canvas.grid.type !== CONST.GRID_TYPES.SQUARE) {
+            // Hex and gridless grids may not have measureDistance — return NaN to skip range checks
+            if (typeof canvas.grid.measureDistance !== "function") return NaN;
             return canvas.grid.measureDistance(this.position, target.position);
         }
 

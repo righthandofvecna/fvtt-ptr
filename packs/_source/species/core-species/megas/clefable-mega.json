@@ -678,13 +678,15 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Kanto",
-      "Johto",
-      "Sinnoh",
-      "Unova",
       "Alola",
       "Galar",
-      "Mega"
+      "Hisui",
+      "Johto",
+      "Kanto",
+      "Mega",
+      "Paldea",
+      "Sinnoh",
+      "Unova"
     ],
     "type": {
       "0": "Fairy",

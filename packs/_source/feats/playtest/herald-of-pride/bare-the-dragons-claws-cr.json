@@ -38,7 +38,7 @@
     ],
     "enabled": true,
     "slug": "bare-the-dragons-claws-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": null,
@@ -46,7 +46,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [

@@ -50,6 +50,8 @@ export class GMControlPanel extends HandlebarsApplicationMixin(ApplicationV2) {
   static async #resetDailyUses() {
     const updates = [];
     for (const actor of game.actors.values()) {
+      // reset PP
+      if (actor.system.pp?.max > actor.system.pp?.value) updates.push(actor.update({ "system.pp.value": actor.system.pp.max ?? 0 }));
       for (const item of actor.items.values()) {
         if (!["daily", "scene"].includes(item.system.frequency?.type)) continue;
         const max = item.system.frequency?.max ?? 0;
@@ -97,6 +99,7 @@ export class GMControlPanel extends HandlebarsApplicationMixin(ApplicationV2) {
         _id: actor.id,
         "system.health.value": actor.system.health.total,
         "system.health.injuries": Math.max(0, (actor.system.health.injuries ?? 0) - 3),
+        "system.pp.value": actor.system.pp.max ?? 0,
       });
     }
     if (actorUpdates.length > 0) {
@@ -134,7 +137,9 @@ export class GMControlPanel extends HandlebarsApplicationMixin(ApplicationV2) {
         const warnings = actors
             .map(actor => {
                 const injuries = Math.max(actor.system.health.injuries ?? 0, 0);
-                const requiredHours = injuries < 5 ? (2 + injuries) / 2 : 1 + injuries;
+                const injuryRequiredHours = injuries < 5 ? (2 + injuries) / 2 : 1 + injuries;
+                const ppRequiredHours = Math.ceil((actor.system.pp?.max - actor.system.pp?.value) / 4) * 2;
+                const requiredHours = Math.max(injuryRequiredHours, ppRequiredHours);
                 return { actor, requiredHours };
             })
             .filter(({ requiredHours }) => requiredHours > hours);

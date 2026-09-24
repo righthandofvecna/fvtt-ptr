@@ -2,7 +2,6 @@
   "name": "Recycle",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The effect of a consumable item used earlier in the encounter is used again as if it had not been destroyed. The item is still gone.",
@@ -69,7 +68,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "yUba2OWKoxAE3txP",
   "effects": [],
@@ -77,7 +77,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

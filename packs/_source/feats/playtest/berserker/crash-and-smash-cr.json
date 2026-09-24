@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Double Edge and Thrash. You may use these moves as a Weapon Attack when wielding Melee Weapons.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.7Gi57ZcOWjyjhU0A]{Double Edge} and @UUID[Compendium.ptu.moves.Item.czDZWjn9TbP9ON4q]{Thrash}. You may use these moves as a Weapon Attack when wielding Melee Weapons.",
     "snippet": "",
     "rules": [
       {
@@ -33,7 +33,7 @@
     ],
     "enabled": true,
     "slug": "crash-and-smash-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -48,7 +48,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -94,7 +94,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

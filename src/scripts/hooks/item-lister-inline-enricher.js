@@ -1,5 +1,9 @@
 
 
+const FIELD_MAPPING = {
+  "keyword": "system.keywords",
+  "itemtype": "type"
+};
 
 export const ItemListerInlineEnricher = {
   listen() {
@@ -28,26 +32,30 @@ export const ItemListerInlineEnricher = {
             return span;
           }
 
-          const pValues = {}
+          const pValues = {};
           // Tokenize param string, supporting key="quoted value with spaces"
-          const tokenRe = /([A-Za-z0-9\-]+)(?:(=)(?:"([^"]*)"|([A-Za-z0-9\-]*)))?/g
+          const tokenRe = /([A-Za-z0-9\-]+)(?:(=)(?:"([^"]*)"|([A-Za-z0-9\-]*)))?/g;
           for (const token of paramString.matchAll(tokenRe)) {
-              const [, name, eq, quotedVal, unquotedVal] = token
-              const value = quotedVal !== undefined ? quotedVal : (unquotedVal ?? "")
-              if (!pValues[name]) pValues[name] = new Set()
+              const [, name, eq, quotedVal, unquotedVal] = token;
+              const value = quotedVal !== undefined ? quotedVal : (unquotedVal ?? "");
+              if (!pValues[name]) pValues[name] = new Set();
               pValues[name].add(value)
           }
 
           // find all matching items
           const matching = actor.items.contents.filter(item => {
-            if (pValues.keyword) {
-              const kwi = pValues.keyword.intersection(new Set(item.system.keywords));
-              if (kwi.size !== pValues.keyword.size) return false;
+            for (const [key, restriction] of Object.entries(pValues)) {
+              const realValue = foundry.utils.getProperty(item, FIELD_MAPPING[key] ?? `system.${key}`);
+              const [onlyOne, realValueSet] = (()=>{
+                if (Array.isArray(realValue)) return [false, new Set(realValue)];
+                return [true, new Set([realValue])];
+              })();
+              const kwi = restriction.intersection(realValueSet);
+              if (!onlyOne && kwi.size !== restriction.size) return false;
+              if (onlyOne && kwi.size === 0) return false;
             }
             return true;
           });
-
-          console.log("PTU | ItemListenerInlineEnricher", { pValues, enrichmentOptions, matching });
 
           for (const item of matching) {
             if (span.childNodes.length > 0) {

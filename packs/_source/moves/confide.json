@@ -21,7 +21,7 @@
     ],
     "enabled": true,
     "slug": "confide",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

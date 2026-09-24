@@ -2,7 +2,7 @@
   "name": "Lessons In Rage & Pain",
   "system": {
     "origin": "",
-    "effect": "While you have at least 1 Injury, add +X to your Damage Rolls with Rage, Flail, Fury Swipes, Thrash, and Weapon Attacks. X is equal to your Intimidate Rank plus the number of Injuries you have. You do not lose Hit Points from being Heavily Injured, and Injuries beyond the 5th do not lower your Maximum Hit Points.",
+    "effect": "While you have at least 1 Injury, add +X to your Damage Rolls with @UUID[Compendium.ptu.moves.Item.K3PXmG9E0s7QEUQ2]{Rage}, @UUID[Compendium.ptu.moves.Item.IWQXKwgnyM2CvDLV]{Flail}, @UUID[Compendium.ptu.moves.Item.7Gi57ZcOWjyjhU0A]{Double Edge}, @UUID[Compendium.ptu.moves.Item.czDZWjn9TbP9ON4q]{Thrash}, and Weapon Attacks. X is equal to your Intimidate Rank plus the number of Injuries you have. You do not lose Hit Points from being Heavily Injured, and Injuries beyond the 5th do not lower your Maximum Hit Points.",
     "snippet": "",
     "rules": [
       {
@@ -11,7 +11,8 @@
         "path": "system.modifiers.baseStats.hp.mod",
         "value": 1,
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -70,7 +71,8 @@
     "name": "Lessons In Rage & Pain",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -81,7 +83,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Berserker, Adept Intimidate",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -94,7 +98,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 63500000,
   "_id": "vDVf2rJUJqtZhDl9"
 }

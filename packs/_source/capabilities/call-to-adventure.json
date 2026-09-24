@@ -1,12 +1,11 @@
 {
-  "folder": null,
   "name": "Call to Adventure",
   "type": "capability",
   "_id": "rgZARySYBFTnoMNZ",
   "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
   "system": {
     "origin": "",
-    "effect": "You gain the Instinctive Aptitude Edge, even if you do not meet its prerequisites. If you already have this Edge, gain another Edge for which you qualify. During Combat or tense situations (never Extended Actions), if you spend AP to add a bonus to a Skill Check, you may add +1d6 instead of +2.",
+    "effect": "You gain the @UUID[Compendium.ptu.edges.Item.sTO4hjOM4tcQIqPh]{Instinctive Aptitude} Edge, even if you do not meet its prerequisites. If you already have this Edge, gain another Edge for which you qualify. During Combat or tense situations (never Extended Actions), if you spend AP to add a bonus to a Skill Check, you may add +1d6 instead of +2.",
     "snippet": "",
     "rules": [
       {
@@ -18,7 +17,7 @@
     ],
     "enabled": true,
     "slug": "call-to-adventure",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -33,14 +32,14 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
       "Backpacker Talent"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -77,7 +76,7 @@
     },
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

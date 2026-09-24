@@ -20,7 +20,7 @@
     ],
     "enabled": true,
     "slug": "defend-order",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,

@@ -13,7 +13,7 @@ export const PokeDollarEnricher = {
                         if (!isNaN(cost)) return [cost, null];
 
                         const item = await fromUuid(input);
-                        if (!item || item.type != "item") return [null, null];
+                        if (!item || !["item", "pokeball"].includes(item.type)) return [null, null];
 
                         return [item.system.cost, item];
                     })();

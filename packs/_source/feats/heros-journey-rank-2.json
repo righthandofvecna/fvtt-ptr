@@ -1,12 +1,11 @@
 {
-  "folder": null,
   "name": "Hero's Journey Rank 2",
   "type": "feat",
   "_id": "hi6Oab74AnU7v6Du",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Each Rank, you may gain two Backpacker Talents for which you qualify.",
+    "effect": "Each Rank, you may gain two Backpacker Talents for which you qualify.\nTalents: @UUID[Compendium.ptu.capabilities.Item.rgZARySYBFTnoMNZ]{Call to Adventure}, @UUID[Compendium.ptu.capabilities.Item.FnEb80T4dtIfCTJT]{Hat Trick}, @UUID[Compendium.ptu.capabilities.Item.JNf8suPf2nzG4rmo]{Frisk}, @UUID[Compendium.ptu.capabilities.Item.cYmfaYp6eN94F9CF]{Handyman}, @UUID[Compendium.ptu.capabilities.Item.eh4cGM2DpLFprazD]{Movement Mastery}, @UUID[Compendium.ptu.capabilities.Item.l35R0FpQysFZ072H]{Sole Power}, @UUID[Compendium.ptu.capabilities.Item.1GG6KVr3GmMUexIP]{Wayfarer}, @UUID[Compendium.ptu.capabilities.Item.XwnymStQhTW5Xu9k]{Wear It Better}",
     "snippet": "",
     "rules": [
       {
@@ -197,7 +196,7 @@
     ],
     "enabled": true,
     "slug": "heros-journey-rank-2",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -259,7 +258,7 @@
     "ptu": {
       "showInTokenPanel": true,
       "prereqBackup": "Backpacker, Adept Survival",
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

@@ -27,7 +27,7 @@
     ],
     "enabled": true,
     "slug": "herald-of-pride-cr",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": null,
@@ -35,7 +35,7 @@
     },
     "referenceEffect": "Compendium.ptu.effects.Item.xxnFUnD1nGthmJj3",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [

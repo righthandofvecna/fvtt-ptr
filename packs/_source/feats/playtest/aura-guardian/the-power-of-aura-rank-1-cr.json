@@ -5,12 +5,11 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Each rank, chose one of Scrappy, Aura Storm, and Mega Launcher. You gain the chosen Ability.",
+    "effect": "Effect: Each rank, chose one of @UUID[Compendium.ptu.abilities.Item.LVKN9UuObrFnBbxc]{Scrappy}, @UUID[Compendium.ptu.abilities.Item.Id9Q9nTyuepCBG8Y]{Aura Storm}, and @UUID[Compendium.ptu.abilities.Item.XHtToEMKCJmeQzYR]{Mega Launcher}. You gain the chosen Ability.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "auraguardian",
         "choices": [
           {
@@ -29,27 +28,31 @@
         "mode": "add",
         "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.auraguardian}.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       },
       {
         "key": "ChoiceSet",
-        "flag": "move1",
+        "flag": "ability1",
         "adjustName": false,
         "choices": [
           {
             "value": "Compendium.ptu.abilities.Item.LVKN9UuObrFnBbxc",
+            "label": "Scrappy",
             "predicate": {
               "not": "ability:scrappy"
             }
           },
           {
             "value": "Compendium.ptu.abilities.Item.Id9Q9nTyuepCBG8Y",
+            "label": "Aura Storm",
             "predicate": {
               "not": "ability:aura-storm"
             }
           },
           {
             "value": "Compendium.ptu.abilities.Item.XHtToEMKCJmeQzYR",
+            "label": "Mega Launcher",
             "predicate": {
               "not": "ability:mega-launcher"
             }
@@ -60,7 +63,7 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "{item|flags.ptu.rulesSelections.move1}"
+        "uuid": "{item|flags.ptu.rulesSelections.ability1}"
       }
     ],
     "enabled": true,
@@ -78,7 +81,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -118,7 +121,8 @@
     "free": false,
     "class": "Aura Guardian",
     "contentSet": "class-rework",
-    "replacesSlug": "the-power-of-aura-rank-1"
+    "replacesSlug": "the-power-of-aura-rank-1",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
@@ -127,7 +131,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

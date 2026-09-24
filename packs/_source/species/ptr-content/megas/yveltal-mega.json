@@ -507,7 +507,10 @@
     "source": {
       "value": "PTR Exclusive Dex Megas"
     },
-    "keywords": [],
+    "keywords": [
+      "Kalos",
+      "Legendary"
+    ],
     "contentSet": "",
     "replacesSlug": ""
   },

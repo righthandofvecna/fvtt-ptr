@@ -2,7 +2,7 @@
   "name": "Far Reading",
   "system": {
     "origin": "",
-    "effect": "The user treats their Focus Rank as 2 higher for the purposes of determining the range of Telepath.",
+    "effect": "The user treats their Focus Rank as 2 higher for the purposes of determining the range of @UUID[Compendium.ptu.capabilities.Item.Qy7Cft4o4FAbHQ8G]{Telepath}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -25,7 +25,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -55,7 +55,8 @@
     "name": "Far Reading",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -65,7 +66,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Level 20, Telepath Capability"
+      "prereqBackup": "Level 20, Telepath Capability",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -78,7 +82,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 1100000,
   "_id": "ETu0f0LwOGOG57H5"
 }

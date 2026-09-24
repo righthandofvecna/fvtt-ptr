@@ -428,7 +428,11 @@
     "source": {
       "value": "PTR Core Dex"
     },
-    "keywords": [],
+    "keywords": [
+      "Alola",
+      "Kalos",
+      "Paldea"
+    ],
     "type": {
       "0": "Fairy",
       "1": ""

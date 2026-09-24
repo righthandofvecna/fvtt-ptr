@@ -195,7 +195,25 @@ class LevelUpData {
                 }
 
                 if (evolution.other?.restrictions) {
-                    if (PokemonGenerator.isEvolutionRestricted(evolution, this.pokemon.gender)) continue;
+                    if (PokemonGenerator.isEvolutionRestricted(evolution, { gender: this.pokemon.system.gender })) continue;
+                }
+
+                // Check held-item requirement: if this evolution requires a specific item,
+                // the Pokémon must actually have it (with quantity > 0).
+                if (evolution.other?.evolutionItem) {
+                    const required = evolution.other.evolutionItem;
+                    const reqKey = String(required.slug ?? required.name ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+                    if (reqKey) {
+                        const itemType = required.type ?? "item";
+                        const matchesItem = (doc) => [doc.system?.slug, doc.slug, doc.name]
+                            .some(c => String(c ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "") === reqKey);
+                        const hasRequired = this.pokemon.items.some(doc => {
+                            if (doc.type !== itemType && itemType !== "item") return false;
+                            if (doc.type === "item" && Number(doc.system?.quantity ?? 1) <= 0) return false;
+                            return matchesItem(doc);
+                        });
+                        if (!hasRequired) continue;
+                    }
                 }
 
                 if (evolution.level <= this.level.new && this.pokemon.species.system.evolutions.findIndex(e => e.slug === (this.evolution?.slug ?? this.pokemon.species.slug)) < i) {

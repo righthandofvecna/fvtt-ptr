@@ -50,6 +50,9 @@ export async function applyRest(hours, pokemonCenter) {
       }
     }
 
+    // PP restoration
+    actorUpdate["system.pp.value"] = Math.min(actor.system.pp.value + (hours * 8), actor.system.pp.max ?? 0);
+
     if (isExtendedRest) {
       // Persistent Conditions
       const persistentConditions = actor.items.filter(i => i.type === "condition" && !i.isGranted && i.persistent).map(i => i.id);

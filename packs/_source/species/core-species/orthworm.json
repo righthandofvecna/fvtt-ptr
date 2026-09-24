@@ -616,7 +616,9 @@
       "0": "Steel",
       "1": ""
     },
-    "keywords": [],
+    "keywords": [
+      "Paldea"
+    ],
     "contentSet": "",
     "replacesSlug": ""
   },

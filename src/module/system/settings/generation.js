@@ -30,31 +30,71 @@ const GenerationSettingsConfig = {
         name: "PTU.Settings.Generation.DefaultDexDragInLevelMin.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInLevelMin.Hint",
         type: Number,
+        scope: "user",
         default: 10
     },
     "defaultDexDragInLevelMax": {
         name: "PTU.Settings.Generation.DefaultDexDragInLevelMax.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInLevelMax.Hint",
         type: Number,
+        scope: "user",
         default: 10,
     },
     "defaultDexDragInShinyChance": {
         name: "PTU.Settings.Generation.DefaultDexDragInShinyChance.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInShinyChance.Hint",
         type: Number,
+        scope: "user",
         default: 2
     },
     "defaultDexDragInStatRandomness": {
         name: "PTU.Settings.Generation.DefaultDexDragInStatRandomness.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInStatRandomness.Hint",
         type: Number,
+        scope: "user",
         default: 20
     },
     "defaultDexDragInPreventEvolution": {
         name: "PTU.Settings.Generation.DefaultDexDragInPreventEvolution.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInPreventEvolution.Hint",
         type: Boolean,
+        scope: "user",
         default: false
+    },
+    "defaultMassGeneratorAmount": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorAmount.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorAmount.Hint",
+        type: Number,
+        scope: "user",
+        default: 20
+    },
+    "defaultMassGeneratorSpeciesTab": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorSpeciesTab.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorSpeciesTab.Hint",
+        type: String,
+        scope: "user",
+        default: "species"
+    },
+    "defaultMassGeneratorSpeciesUuid": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorSpeciesUuid.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorSpeciesUuid.Hint",
+        type: String,
+        scope: "user",
+        default: ""
+    },
+    "defaultMassGeneratorTableUuid": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorTableUuid.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorTableUuid.Hint",
+        type: String,
+        scope: "user",
+        default: ""
+    },
+    "defaultMassGeneratorFolderField": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorFolderField.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorFolderField.Hint",
+        type: String,
+        scope: "user",
+        default: ""
     }
 }
 

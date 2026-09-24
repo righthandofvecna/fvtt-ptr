@@ -38,6 +38,21 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Allow ephemeral effects to be applied via a `*-received` selector
+- [Fix Region Tagging on Species](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/972)
+- Allow labels in choice sets to have injected properties
+- [Added a Basic PP Variant Rule](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/961)
+- Allow applying ActiveEffect-Like REs *after* final actor preparation by specifying a priority > 100
+- Fixed Pokeball item costs not displaying correctly
+- Show preexisting Struggles
+- Fixed Struggles not being rollable from the Trainer sheet
+- Added an "Export to Rolltable" button on the Compendium Browser
+- Prompt the GM to reset scene uses when combat ends
+- Made the Mass Pokemon Generator and Drag-In Generator remember your last settings
+- Fixed content sets that accidentally got set as homebrew
+- Improved ItemSearch enricher
+- Fixed recursive injected properties no longer working
+- Fixed type editor in v13
 - [Automatically Apply Legendary Catch Penalty](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/984)
 - [Split Pokeballs Into Their Own Item Type So Custom Balls Can Be Made](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/974)
 - [Fix Token Panel Not Minimizing When No Tokens Selected](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/981)

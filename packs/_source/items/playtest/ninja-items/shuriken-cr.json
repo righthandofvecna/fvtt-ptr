@@ -23,10 +23,12 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Ninja"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -40,7 +42,7 @@
       }
     },
     "actionCost": {
-      "standard": false,
+      "standard": true,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -57,7 +59,8 @@
     "subtype": "",
     "container": false,
     "contentSet": "class-rework",
-    "replacesSlug": "shuriken"
+    "replacesSlug": "shuriken",
+    "leagueLegal": false
   },
   "effects": [],
   "sort": 0,
@@ -66,7 +69,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

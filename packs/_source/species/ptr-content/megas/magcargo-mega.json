@@ -505,7 +505,12 @@
     "source": {
       "value": "PTR Core Dex"
     },
-    "keywords": [],
+    "keywords": [
+      "Hoenn",
+      "Johto",
+      "Kalos",
+      "Paldea"
+    ],
     "type": {
       "0": "Fire",
       "1": "",

@@ -548,11 +548,12 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Unova",
+      "Alola",
       "Galar",
       "Kalos",
-      "Alola",
-      "Mega"
+      "Mega",
+      "Paldea",
+      "Unova"
     ],
     "type": {
       "0": "Ground",

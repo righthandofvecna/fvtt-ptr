@@ -513,10 +513,11 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Unova",
-      "Kanto",
       "Alola",
-      "Johto"
+      "Johto",
+      "Kanto",
+      "Paldea",
+      "Unova"
     ],
     "contentSet": "",
     "replacesSlug": ""

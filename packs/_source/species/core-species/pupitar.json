@@ -466,11 +466,12 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Unova",
-      "Galar",
-      "Kalos",
       "Alola",
-      "Johto"
+      "Galar",
+      "Johto",
+      "Kalos",
+      "Paldea",
+      "Unova"
     ],
     "contentSet": "",
     "replacesSlug": ""

@@ -2,7 +2,6 @@
   "name": "Agility",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Raise the user's Speed by 2 Combat Stages.",
@@ -15,7 +14,8 @@
         "uuid": "Compendium.ptu.effects.Item.Wt0bzGOtDVlfzZeb",
         "range": "",
         "value": "",
-        "affects": "origin"
+        "affects": "origin",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -35,7 +35,7 @@
     },
     "referenceEffect": "Compendium.ptu.effects.Item.Wt0bzGOtDVlfzZeb",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [],
@@ -85,7 +85,7 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": false,
+      "showInTokenPanel": true,
       "grantedBy": {
         "id": "TcXs4fuYSSGp3ggh",
         "onDelete": "cascade"

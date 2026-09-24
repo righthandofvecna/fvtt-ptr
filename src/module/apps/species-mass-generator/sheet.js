@@ -129,6 +129,15 @@ export class PTUSpeciesMassGenerator extends FormApplication {
     /** @override */
     async close(options) {
         if (options?.properClose) {
+            await Promise.all([
+                game.settings.set("ptu", "generation.defaultDexDragInLevelMin", this.data.level.min),
+                game.settings.set("ptu", "generation.defaultDexDragInLevelMax", this.data.level.max),
+                game.settings.set("ptu", "generation.defaultMassGeneratorAmount", this.data.amount),
+                game.settings.set("ptu", "generation.defaultMassGeneratorSpeciesTab", this.data.speciesTab),
+                game.settings.set("ptu", "generation.defaultMassGeneratorSpeciesUuid", this.data.speciesField.value ?? ""),
+                game.settings.set("ptu", "generation.defaultMassGeneratorTableUuid", this.data.tableSelect.value ?? ""),
+                game.settings.set("ptu", "generation.defaultMassGeneratorFolderField", this.data.folderField.value ?? ""),
+            ]);
             await this.generate(await this.data.finalize());
         }
 

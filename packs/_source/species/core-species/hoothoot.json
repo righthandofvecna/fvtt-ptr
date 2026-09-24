@@ -542,11 +542,12 @@
       "value": "PTR Core Dex"
     },
     "keywords": [
-      "Galar",
-      "Kalos",
       "Alola",
-      "Sinnoh",
-      "Johto"
+      "Galar",
+      "Johto",
+      "Kalos",
+      "Paldea",
+      "Sinnoh"
     ],
     "contentSet": "",
     "replacesSlug": ""

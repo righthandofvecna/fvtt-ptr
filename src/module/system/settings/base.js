@@ -49,7 +49,7 @@ class PTUSettingsMenu extends FormApplication {
         for (const setting of this.SETTINGS) {
             game.settings.register("ptu", `${this.prefix}${setting}`, {
                 ...settings[setting],
-                scope: "world",
+                scope: settings[setting].scope ?? "world",
                 config: false
             })
         }

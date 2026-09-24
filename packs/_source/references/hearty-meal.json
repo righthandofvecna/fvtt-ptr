@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Chef Recipes",
-    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.ZuOf65nHbPWh20z3]\nIngredients: x2 @UUID[Compendium.ptu.items.Item.w5F8OjCc7rGRSlXz]; or x1 @UUID[Compendium.ptu.items.Item.qjXGxkVxalQcIpuD]; or x1 @UUID[Compendium.ptu.items.Item.zwuNF6cJs843IqJj], or x2 @UUID[Compendium.ptu.items.Item.5IJIFPkP9KOMGQvx], @UUID[Compendium.ptu.items.Item.nk3lnYxEsX1KqeAU], or @UUID[Compendium.ptu.items.Item.cV0b4kZaHh5OuGC8]\nEffect: You create up to five Hearty Meals, which may be consumed by Trainers as an Extended Action. When consumed, that Trainer gains +2 to their Max AP until the end of their next extended rest. A Trainer may only be under the effect of one Hearty Meal at a time. Hearty Meals not consumed within 20 minutes of being created lose all flavor and all effect.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.ZuOf65nHbPWh20z3]\nIngredients: x2 @UUID[Compendium.ptu.items.Item.w5F8OjCc7rGRSlXz]; or x1 @UUID[Compendium.ptu.items.Item.qjXGxkVxalQcIpuD]; or x1 @UUID[Compendium.ptu.items.Item.zwuNF6cJs843IqJj], or x2 @UUID[Compendium.ptu.items.Item.5IJIFPkP9KOMGQvx], @UUID[Compendium.ptu.items.Item.nk3lnYxEsX1KqeAU], or @UUID[Compendium.ptu.items.Item.cV0b4kZaHh5OuGC8]\nEffect: You create up to five @UUID[Compendium.ptu.items.Item.0s6tb7UT2xZ0YT9q]{Hearty Meals}, which may be consumed by Trainers as an Extended Action. When consumed, that Trainer gains +2 to their Max AP until the end of their next extended rest. A Trainer may only be under the effect of one Hearty Meal at a time. Hearty Meals not consumed within 20 minutes of being created lose all flavor and all effect.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -22,7 +22,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [],
@@ -31,7 +31,6 @@
   },
   "_id": "Qtp2UOCWXPfNN5MX",
   "effects": [],
-  "folder": null,
   "sort": 14100000,
   "ownership": {
     "default": 0
@@ -45,6 +44,5 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  },
-  "flags": {}
+  }
 }

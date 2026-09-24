@@ -2,7 +2,7 @@
   "name": "Gravity Training",
   "system": {
     "origin": "",
-    "effect": "The Pokémon gains two steps to allocate in any direction to expand its Gravitic Tolerance capability. If it has none, it may acquire one by allocating steps starting from its Home Gravity.",
+    "effect": "The Pokémon gains two steps to allocate in any direction to expand its @UUID[Compendium.ptu.capabilities.Item.cL7UR4BpG3TIMpV0]{Gravitic Tolerance} Capability. If it has none, it may acquire one by allocating steps starting from its Home Gravity.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -25,7 +25,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -52,7 +52,8 @@
     "name": "Gravity Training",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -62,7 +63,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": ""
+      "prereqBackup": "",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -75,7 +79,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 3100000,
   "_id": "xs1Spe04OMhOSARp"
 }

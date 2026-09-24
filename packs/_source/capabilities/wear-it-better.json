@@ -1,5 +1,4 @@
 {
-  "folder": null,
   "name": "Wear it Better",
   "type": "capability",
   "_id": "XwnymStQhTW5Xu9k",
@@ -11,7 +10,7 @@
     "rules": [],
     "enabled": true,
     "slug": "wear-it-better",
-    "contentSet": "homebrew",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -26,14 +25,14 @@
     },
     "referenceEffect": "Compendium.ptu.effects.Item.OtIHDc2xeAAHt1iK",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
       "Backpacker Talent"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -61,7 +60,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

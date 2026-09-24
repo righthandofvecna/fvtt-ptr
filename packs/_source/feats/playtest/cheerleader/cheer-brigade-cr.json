@@ -2,7 +2,7 @@
   "name": "Cheer Brigade",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Move Helping Hand and gain the Helper Ability.",
+    "effect": "Effect: You learn the Move @UUID[Compendium.ptu.moves.Item.xhZNseKRJl3pPnTZ]{Helping Hand} and gain the @UUID[Compendium.ptu.abilities.Item.wxQ2OjTbX4tdeTkV]{Helper} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -33,7 +33,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -71,7 +71,8 @@
     "class": "Cheerleader",
     "name": "Cheer Brigade [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "cheer-brigade"
+    "replacesSlug": "cheer-brigade",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -84,7 +85,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

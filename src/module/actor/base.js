@@ -286,10 +286,17 @@ class PTUActor extends Actor {
 
         // Call post-derived-preparation `RuleElement` hooks
         for (const rule of this.rules) {
+            if (rule.priority > 100) continue;
             rule.afterPrepareData?.();
         }
 
         this.prepareDerivedData();
+
+        // Call post-derived-preparation `RuleElement` hooks with a high priority
+        for (const rule of this.rules) {
+            if (rule.priority <= 100) continue;
+            rule.afterPrepareData?.();
+        }
 
         // combat stage roll options
         for (const statName of Object.keys(this.system.stats)) {
@@ -334,6 +341,13 @@ class PTUActor extends Actor {
             : this.hasPlayerOwner
                 ? "party"
                 : "opposition";
+
+        // PP pool (PP Variant rule)
+        this.system.pp ??= {};
+        this.system.pp.max = 64;
+        if (this.system.pp.value === null || this.system.pp.value === undefined) {
+            this.system.pp.value = this.system.pp.max;
+        }
     }
 
     prepareDerivedData() {
@@ -1152,8 +1166,6 @@ class PTUActor extends Actor {
         const moves = [];
         this.flags.ptu.disabledOptions = [];
         for (const move of this.itemTypes.move) {
-            if (move.system.isStruggle) continue;
-
             this.flags.ptu.disabledOptions.push({
                 "label": move.name,
                 "value": move.slug,

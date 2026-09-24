@@ -2,7 +2,7 @@
   "name": "Berserker",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Rage and Flail. You may use these moves as a Weapon Attack when wielding Melee Weapons.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.K3PXmG9E0s7QEUQ2]{Rage} and @UUID[Compendium.ptu.moves.Item.IWQXKwgnyM2CvDLV]{Flail}. You may use these moves as a Weapon Attack when wielding Melee Weapons.",
     "snippet": "",
     "rules": [
       {
@@ -18,7 +18,14 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.moves.Item.K3PXmG9E0s7QEUQ2"
+        "uuid": "Compendium.ptu.moves.Item.K3PXmG9E0s7QEUQ2",
+        "modifications": [
+          {
+            "key": "",
+            "operation": "override",
+            "value": ""
+          }
+        ]
       },
       {
         "key": "GrantItem",
@@ -42,7 +49,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [
@@ -83,7 +90,8 @@
     "class": "Berserker",
     "name": "Berserker [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "berserker"
+    "replacesSlug": "berserker",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -96,7 +104,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

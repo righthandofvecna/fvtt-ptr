@@ -34,6 +34,7 @@
             </dl>
         {{/each}}
         <button type="button" class="clear-filters">{{localize "PTU.CompendiumBrowser.Filter.ClearFilters"}}</button>
+        <button type="button" class="export-to-rolltable"><i class="fas fa-dice-d6"></i> Export to Rolltable</button>
     </div>
     {{#each filterData.checkboxes as |checkbox name|}}
         <div class="filtercontainer" data-filter-type="checkboxes" data-filter-name="{{name}}">

@@ -547,11 +547,12 @@
       "value": "PTR Core Dex Megas"
     },
     "keywords": [
-      "Unova",
-      "Kalos",
       "Alola",
       "Johto",
-      "Mega"
+      "Kalos",
+      "Mega",
+      "Paldea",
+      "Unova"
     ],
     "contentSet": "",
     "replacesSlug": "",

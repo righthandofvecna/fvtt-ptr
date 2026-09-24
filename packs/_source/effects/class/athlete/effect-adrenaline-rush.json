@@ -46,7 +46,8 @@
         "mode": "add",
         "path": "system.stats.spatk.stage.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -59,7 +60,8 @@
         "mode": "add",
         "path": "system.stats.spdef.stage.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -72,11 +74,11 @@
         "mode": "add",
         "path": "system.stats.spd.stage.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       },
       {
-        "key": "TempHP",
-        "value": "@actor.system.health.tick"
+        "key": "TempHP"
       }
     ],
     "enabled": true,
@@ -94,7 +96,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [],
@@ -104,7 +106,7 @@
     "duration": {
       "value": -1,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -126,7 +128,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

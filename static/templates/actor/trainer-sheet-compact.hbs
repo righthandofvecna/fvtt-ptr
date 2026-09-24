@@ -151,6 +151,28 @@
                             </div>
                         </div>
 
+                        {{#if ppVariant}}
+                        <!-- PP Pool -->
+                        <div class="w-100 mt-1">
+                            <div class="swsh-box">
+                                <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 pb-2">
+                                    <h3 class="m-auto">PP</h3>
+                                </div>
+                                <div class="swsh-body justify-content-center">
+                                    <div class="resource-content hp-info flexrow flex-group-right hp-info pt-1 pb-1">
+                                        <div class="fb-30">
+                                            <input type="number" name="system.pp.value" value="{{actor.system.pp.value}}" min="0"/>
+                                        </div>
+                                        <span>/</span>
+                                        <div class="fb-30">
+                                            <input type="number" value="{{actor.system.pp.max}}" disabled/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{/if}}
+
                         <!-- Experience + Level -->
                         <div class="w-100 level-box mt-1 mb-1">
                             <div class="swsh-box" style="text-align: center; word-break: keep-all;">
