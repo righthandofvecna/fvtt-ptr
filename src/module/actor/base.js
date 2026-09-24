@@ -1164,6 +1164,7 @@ class PTUActor extends Actor {
         }
 
         const moves = [];
+        const ownedStruggleRealIds = new Set();
         this.flags.ptu.disabledOptions = [];
         for (const move of this.itemTypes.move) {
             this.flags.ptu.disabledOptions.push({
@@ -1184,13 +1185,17 @@ class PTUActor extends Actor {
             }
 
             moves.push(clone);
+            if (move.system.isStruggle) ownedStruggleRealIds.add(move.realId);
         }
         this.flags.ptu.disabledOptions.sort((a, b) => b.sort - a.sort);
+
+        // Exclude phantom struggles that have already been materialized as owned items.
+        const filteredStruggles = struggles.filter(s => !ownedStruggleRealIds.has(s.realId));
 
         // Return a Collection of PTUMove items keyed by their real ID.
         // The items themselves now carry roll(), damage(), consume(), and onCooldown.
         return new Collection(
-            [...moves, ...struggles]
+            [...moves, ...filteredStruggles]
                 .map(move => [move.id ?? move.realId, move])
         );
     }

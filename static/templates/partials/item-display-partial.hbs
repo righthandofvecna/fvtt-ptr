@@ -58,6 +58,11 @@
                             <a class="item-control item-to-chat" title="Send {{item.type}} to chat"><i class="fas fa-external-link-alt"></i></a>
                             <a class="item-control item-edit" title="Edit {{item.type}}"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete {{item.type}}"><i class="fas fa-trash"></i></a>
+                        {{else}}
+                            {{#unless item.flags.ptu.phantom}}
+                                <a class="item-control item-edit" title="Edit {{item.type}}"><i class="fas fa-edit"></i></a>
+                                <a class="item-control item-delete" title="Delete {{item.type}}"><i class="fas fa-trash"></i></a>
+                            {{/unless}}
                         {{/unless}}
                     </div>
                     <div class="move-tags">

@@ -92,6 +92,17 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
     }
 
     /**
+     * Find a real owned item by its _id or, for struggle items, by its synthetic realId.
+     * @param {string} itemId  The data-item-id (may be an _id or a struggle realId like "struggle-normal-physical")
+     * @returns {Item|null}
+     */
+    _getOwnedItemByRealId(itemId) {
+        return this.actor.items.get(itemId)
+            ?? this.actor.items.find(i => i.realId === itemId)
+            ?? null;
+    }
+
+    /**
      * Materialize a phantom item: create it as a real owned item on the actor and return it.
      * Phantom items are synthetic items shown on the sheet but not persisted to the database.
      * @param {string} itemId  The data-item-id of the phantom item (struggle realId or spirit action compendium _id)
