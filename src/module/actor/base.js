@@ -1164,7 +1164,6 @@ class PTUActor extends Actor {
         }
 
         const moves = [];
-        const ownedStruggleRealIds = new Set();
         this.flags.ptu.disabledOptions = [];
         for (const move of this.itemTypes.move) {
             this.flags.ptu.disabledOptions.push({
@@ -1185,12 +1184,18 @@ class PTUActor extends Actor {
             }
 
             moves.push(clone);
-            if (move.system.isStruggle) ownedStruggleRealIds.add(move.realId);
         }
         this.flags.ptu.disabledOptions.sort((a, b) => b.sort - a.sort);
 
-        // Exclude phantom struggles that have already been materialized as owned items.
-        const filteredStruggles = struggles.filter(s => !ownedStruggleRealIds.has(s.realId));
+        // Suppress phantom struggles that have already been explicitly materialized by the user.
+        // Items created via the phantom Edit flow carry flags.ptu.materializedFrom = phantom.realId.
+        // Struggles dragged directly from the compendium do NOT have this flag and show alongside the phantom.
+        const materializedPhantomRealIds = new Set(
+            this.itemTypes.move
+                .map(m => m.flags?.ptu?.materializedFrom)
+                .filter(Boolean)
+        );
+        const filteredStruggles = struggles.filter(s => !materializedPhantomRealIds.has(s.realId));
 
         // Return a Collection of PTUMove items keyed by their real ID.
         // The items themselves now carry roll(), damage(), consume(), and onCooldown.

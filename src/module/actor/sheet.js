@@ -92,14 +92,14 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
     }
 
     /**
-     * Find a real owned item by its _id or, for struggle items, by its synthetic realId.
-     * @param {string} itemId  The data-item-id (may be an _id or a struggle realId like "struggle-normal-physical")
+     * Find a real owned item by its _id from the actor's items collection.
+     * With the item template using item.id (not realId) for data-item-id on real items,
+     * a direct lookup is always sufficient.
+     * @param {string} itemId  The data-item-id value (an _id for real items)
      * @returns {Item|null}
      */
     _getOwnedItemByRealId(itemId) {
-        return this.actor.items.get(itemId)
-            ?? this.actor.items.find(i => i.realId === itemId)
-            ?? null;
+        return this.actor.items.get(itemId) ?? null;
     }
 
     /**
@@ -141,13 +141,15 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
             itemData = actorPhantom.toObject();
         }
 
-        // Strip phantom metadata so the created item is a normal owned item
+        // Strip phantom metadata so the created item is a normal owned item.
+        // Set materializedFrom so prepareMoves can suppress the phantom for this actor.
         delete itemData._id;
         if (itemData.flags?.ptu) {
             delete itemData.flags.ptu.phantom;
             delete itemData.flags.ptu.sourceUuid;
             delete itemData.flags.ptu.phantomData;
         }
+        foundry.utils.setProperty(itemData, 'flags.ptu.materializedFrom', itemId);
 
         const [created] = await this.actor.createEmbeddedDocuments('Item', [itemData]);
         return created ?? null;

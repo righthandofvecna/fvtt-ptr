@@ -27,7 +27,7 @@
 {{#if (is type "move")}}
     <ol class="item-list move-list pl-1">
         {{#each items as | item |}}
-            <li class="item {{item.type}}-item {{#if item.onCooldown}}on-cooldown{{/if}} {{#if item.flags.ptu.phantom}}phantom-item{{/if}}" data-item-id="{{item.realId}}">
+            <li class="item {{item.type}}-item {{#if item.onCooldown}}on-cooldown{{/if}} {{#if item.flags.ptu.phantom}}phantom-item{{/if}}" data-item-id="{{#if item.flags.ptu.phantom}}{{item.realId}}{{else}}{{item.id}}{{/if}}">
                 <div class="item-icon {{#if item.rollable}}rollable{{/if}} move">
                     <img class="icon" src="{{item.img}}" title="{{item.name}}"/>
                     <img class="dice" src="/icons/svg/d20.svg" title="Roll {{item.name}}">

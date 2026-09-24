@@ -38,7 +38,7 @@
     {{/if}}
     {{#if (gt struggles.length 0)}}
     {{#each struggles as |struggle|}}
-    <div class="action struggle {{struggle.typeClass}} {{#if struggle.rollable}}rollable{{else}}sendtochat{{/if}} {{#if struggle.onCooldown}}on-cooldown{{/if}}" data-id="{{struggle.id}}" {{#if struggle.hasAllyKeyword}}data-ally="true"{{/if}}>
+    <div class="action struggle {{struggle.typeClass}} {{#if struggle.rollable}}rollable{{else}}sendtochat{{/if}} {{#if struggle.onCooldown}}on-cooldown{{/if}}" data-id="{{#if struggle.flags.ptu.phantom}}{{struggle.realId}}{{else}}{{struggle.id}}{{/if}}" {{#if struggle.hasAllyKeyword}}data-ally="true"{{/if}}>
         <div class="row-main">
             <div class="icon-wrap">
                 <img class="move-img" src="{{struggle.img}}" alt="{{struggle.name}}">
