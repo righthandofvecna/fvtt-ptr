@@ -131,10 +131,7 @@ class PTUItem extends Item {
      */
     async toggleEnableState(newState = !this.enabled) {
         await this.update({ "system.enabled": newState })
-        for (const rule of this.rules) {
-            if (rule.ignored || !(rule instanceof RuleElements.builtin.GrantItem)) continue;
-            return this.actor.update({ "system.timestamp": Date.now() })
-        }
+        // Reevaluation of GrantItem rules is handled in _onUpdate.
     }
 
     /** @override */
@@ -420,6 +417,23 @@ class PTUItem extends Item {
         }
 
         await super._preUpdate(changed, options, user);
+    }
+
+    /** @override */
+    _onUpdate(changed, options, userId) {
+        super._onUpdate(changed, options, userId);
+        if (!(this.actor && game.user.id === userId)) return;
+
+        // When system.enabled changes on an item that has reevaluateOnUpdate GrantItem rules,
+        // trigger an actor update so processPreUpdateActorHooks can retract or re-grant.
+        if (foundry.utils.hasProperty(changed, "system.enabled")) {
+            const hasReevaluatingGrant = this.rules.some(
+                (r) => r instanceof RuleElements.builtin.GrantItem && r.reevaluateOnUpdate
+            );
+            if (hasReevaluatingGrant) {
+                this.actor.update({ "system.timestamp": Date.now() });
+            }
+        }
     }
 
     /** @override */
