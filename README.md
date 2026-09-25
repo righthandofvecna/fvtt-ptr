@@ -38,6 +38,13 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Fixed materialized Struggles editing issue
+- Spirit Actions can now be "used", automatically spending Spirit
+- Fixed the migration for Pokeballs on Foundry v13
+- Small improvements to evolution requirements (copied from HeadMaidTypeX2)
+- Allow "re-evaluate on update" to be set for GrantItem Rule Elements even when their predicates are empty
+- Added "turn-start" and "turn-end" selectors for Reminder and GrantItem Rule Elements (copied from HeadMaidTypeX2)
+- Added "turn:active" roll option to the active combatant
 - Allow ephemeral effects to be applied via a `*-received` selector
 - [Fix Region Tagging on Species](https://github.com/pokemon-tabletop-reunited/ptr1e/issues/972)
 - Allow labels in choice sets to have injected properties
