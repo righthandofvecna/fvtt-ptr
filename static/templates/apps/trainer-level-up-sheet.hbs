@@ -64,7 +64,7 @@
             <div class="tlu-item-list">
                 {{#if availableFeatures.length}}
                 {{#each availableFeatures as |feat|}}
-                <div class="tlu-item feature-item" data-name="{{feat.name}}">
+                <div class="tlu-item feature-item" data-name="{{feat.name}}" data-tooltip="<section class='loading' data-uuid='{{feat.uuid}}'><i class='fas fa-spinner fa-spin-pulse'></i></section>" data-uuid="{{feat.uuid}}">
                     <img class="tlu-item-img" src="{{feat.img}}" alt="{{feat.name}}">
                     <span class="tlu-item-name">{{feat.name}}</span>
                     {{#if feat.prerequisites.length}}
@@ -125,7 +125,7 @@
             <div class="tlu-item-list">
                 {{#if availableEdges.length}}
                 {{#each availableEdges as |edge|}}
-                <div class="tlu-item edge-item" data-name="{{edge.name}}">
+                <div class="tlu-item edge-item" data-name="{{edge.name}}" data-tooltip="<section class='loading' data-uuid='{{edge.uuid}}'><i class='fas fa-spinner fa-spin-pulse'></i></section>" data-uuid="{{edge.uuid}}">
                     <img class="tlu-item-img" src="{{edge.img}}" alt="{{edge.name}}">
                     <span class="tlu-item-name">{{edge.name}}</span>
                     {{#if edge.prerequisites.length}}
@@ -203,7 +203,7 @@
                     {{#each entry.items as |item|}}
                     <div class="tlu-item bonus-item-list-item"
                         data-name="{{item.name}}"
-                        data-bonus-index="{{entry.index}}">
+                        data-bonus-index="{{entry.index}}" data-tooltip="<section class='loading' data-uuid='{{item.uuid}}'><i class='fas fa-spinner fa-spin-pulse'></i></section>" data-uuid="{{item.uuid}}">
                         <img class="tlu-item-img" src="{{item.img}}" alt="{{item.name}}">
                         <span class="tlu-item-name">{{item.name}}</span>
                         {{#if item.prerequisites.length}}
