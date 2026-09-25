@@ -1,6 +1,6 @@
 import { automation } from './automation.js';
 import { PTUActor, PTUTrainerActor, PTUPokemonActor, PTUCharacterSheet, PTUPokemonSheet } from '../../module/actor/index.js';
-import { PTUItemProxy, PTUItem, PTUEffect, PTUEdge, PTUFeat, PTUMove, PTUSpecies, PTUSpeciesSheet, PTUItemItem, PTUCondition } from '../../module/item/index.js';
+import { PTUItemProxy, PTUItem, PTUEffect, PTUEdge, PTUFeat, PTUMove, PTUSpecies, PTUSpeciesSheet, PTUItemItem, PTUCondition, PTUSpiritAction } from '../../module/item/index.js';
 import { PTUItemSheet, PTUEffectSheet, PTUEdgeSheet, PTUFeatSheet, PTUMoveSheet } from '../../module/item/index.js';
 import { PTUSkills } from '../../module/actor/index.js';
 import { PTUCombat } from '../../module/combat/document.js';
@@ -369,7 +369,7 @@ export const PTUCONFIG = {
       species: PTUSpecies,
       condition: PTUCondition,
       reference: PTUItem,
-      spiritaction: PTUItem,
+      spiritaction: PTUSpiritAction,
     },
     sheetClasses: {
       item: PTUItemSheet,

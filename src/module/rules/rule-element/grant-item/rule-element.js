@@ -12,6 +12,14 @@ class GrantItemRuleElement extends RuleElementPTU {
             this.allowduplicate = false;
         }
 
+        // Keep reevaluateOnUpdate grants alive in actor.rules even when their item is
+        // disabled/unequipped, so that preUpdateActor can fire and retract the previously-
+        // granted item. test() still returns false while the item is disabled, so the grant
+        // will not re-apply during data preparation.
+        if (this.reevaluateOnUpdate && !this.invalid && this.item?.enabled === false) {
+            this.ignored = false;
+        }
+
         this.onDeleteActions = this.#getOnDeleteActions(source);
     }
 
@@ -50,11 +58,6 @@ class GrantItemRuleElement extends RuleElementPTU {
     /** @override */
     async preCreate(args) {
         const { itemSource, pendingItems, context, ruleSource } = args;
-
-        if (this.reevaluateOnUpdate && this.predicate.length === 0) {
-            ruleSource.ignored = true;
-            return this.failValidation("`reevaluateOnUpdate` may only be used with a predicate.");
-        }
 
         const uuid = this.resolveInjectedProperties(this.uuid);
 

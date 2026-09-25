@@ -36,7 +36,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -52,16 +53,15 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "2XQJ9ZKyx9faBLuy",
   "effects": [],
-  "folder": null,
   "sort": 4500000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -163,7 +163,6 @@ export class PTUPokemonSheet extends PTUActorSheet {
 
 		// Augment spirit actions with phantom entries from the compendium cache
 		// (those not yet owned by this actor).
-		this._phantomSpiritActions = new Map();
 		if (game.settings.get("ptu", "variant.spiritPlaytest")) {
 			const cache = game.ptu?.spiritActionCache;
 			if (cache?.length) {
@@ -173,8 +172,9 @@ export class PTUPokemonSheet extends PTUActorSheet {
 					const data = sa.toObject();
 					foundry.utils.setProperty(data, 'flags.ptu.phantom', true);
 					foundry.utils.setProperty(data, 'flags.ptu.sourceUuid', sa.uuid);
-					spiritactions.push(data);
-					this._phantomSpiritActions.set(data._id, data);
+					const phantomItem = new Item.implementation(data, { parent: this.actor, temporary: true });
+					spiritactions.push(phantomItem);
+					this.actor._phantomItems.set(data._id, phantomItem);
 				}
 			}
 		}
@@ -297,6 +297,15 @@ export class PTUPokemonSheet extends PTUActorSheet {
 			if (!move) return;
 			await move.use({ event });
 		});
+		// Generic use handler for non-move rollable items (spirit actions, and future item types).
+		// Covers the .item-icon.rollable elements rendered by item-display-partial for non-move items.
+		// Phantom items are used directly (without materializing), matching phantom struggle behaviour.
+		html.find('.item-icon.rollable:not(.move)').click(async (event) => {
+			const itemId = $(event.currentTarget).closest("li.item").data("item-id");
+			const item = this._getOwnedItemByRealId(itemId) ?? this.actor.phantomItems?.get(itemId);
+			if (!item?.use) return;
+			await item.use({ event });
+		});
 		html.find('.rollable.save').click(this._onSaveRoll.bind(this));
 
 		// Add Inventory Item
@@ -311,7 +320,10 @@ export class PTUPokemonSheet extends PTUActorSheet {
 
 		html.find('.item-to-chat').click((ev) => {
 			const li = $(ev.currentTarget).parents('.item');
-			const item = this.actor.items.get(li.data('itemId'));
+			const itemId = li.data('itemId');
+			const item = this.actor.items.get(itemId)
+				?? this.actor.phantomItems?.get(itemId)
+				?? this.actor.attacks?.get(itemId);
 			return item?.sendToChat?.();
 		});
 
@@ -319,7 +331,7 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		html.find('.item-edit').click(async (ev) => {
 			const li = $(ev.currentTarget).parents('.item');
 			const itemId = li.data('itemId');
-			const item = this.actor.items.get(itemId) ?? await this._materializePhantomItem(itemId);
+			const item = this._getOwnedItemByRealId(itemId) ?? await this._materializePhantomItem(itemId);
 			if (!item) return;
 			item.sheet.render(true);
 		});
@@ -342,19 +354,27 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		// Convert jQuery object to HTMLElement for v13 compatibility
 		const htmlElement = html instanceof jQuery ? html[0] : html;
 		
-		foundry.applications.ux.ContextMenu.implementation.create(this, htmlElement, ".move-item", [
+		foundry.applications.ux.ContextMenu.implementation.create(this, htmlElement, ".item", [
 			{
 				name: "Roll",
 				icon: '<i class="fas fa-dice"></i>',
+				condition: (el) => {
+					const item = this._getOwnedItemByRealId(el.dataset.itemId) ?? this.actor.attacks?.get(el.dataset.itemId);
+					return !!item?.rollable;
+				},
 				callback: this.#onMoveRoll.bind(this),
 			},
 			{
 				name: "Send to Chat",
 				icon: '<i class="fas fa-comment"></i>',
+				condition: (el) => {
+					const itemId = el.dataset.itemId;
+					return !!this._getOwnedItemByRealId(itemId) || !!this.actor.phantomItems?.get(itemId);
+				},
 				callback: (ev) => {
 					const li = ev.closest('.item');
 					const itemId = li.dataset.itemId;
-					const item = this.actor.items.get(itemId);
+					const item = this._getOwnedItemByRealId(itemId) ?? this.actor.phantomItems?.get(itemId);
 					return item?.sendToChat?.();
 				}
 			},
@@ -364,7 +384,7 @@ export class PTUPokemonSheet extends PTUActorSheet {
 				callback: async (ev) => {
 					const li = ev.closest('.item');
 					const itemId = li.dataset.itemId;
-					const item = this.actor.items.get(itemId) ?? await this._materializePhantomItem(itemId);
+					const item = this._getOwnedItemByRealId(itemId) ?? await this._materializePhantomItem(itemId);
 					if (!item) return;
 					item.sheet.render(true);
 				}
@@ -372,7 +392,12 @@ export class PTUPokemonSheet extends PTUActorSheet {
 			{
 				name: "Delete",
 				icon: '<i class="fas fa-trash"></i>',
-				callback: this._onItemDelete.bind(this),
+				condition: (el) => !!this._getOwnedItemByRealId(el.dataset.itemId),
+				callback: (el) => {
+					const item = this._getOwnedItemByRealId(el.dataset.itemId);
+					if (!item) return;
+					return item.delete();
+				},
 			},
 		], { jQuery: false })
 	}
@@ -417,7 +442,7 @@ export class PTUPokemonSheet extends PTUActorSheet {
 	_onItemDelete(event) {
 		const li = $(event.currentTarget).parents('.item');
 		const itemId = li.data('itemId');
-		const item = this.actor.items.get(itemId);
+		const item = this._getOwnedItemByRealId(itemId);
 		if (!item) throw new Error(`Item ${itemId} not found`);
 
 		const deleteItem = async () => {

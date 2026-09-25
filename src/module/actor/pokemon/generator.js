@@ -370,12 +370,18 @@ export class PokemonGenerator {
 
     static isEvolutionRestricted(stage, { gender } = {}) {
         for (const restriction of stage.other.restrictions) {
-            if (["male", "female"].includes(restriction.toLowerCase())) {
-                if (gender && gender != game.i18n.localize(`PTU.${Handlebars.helpers.capitalizeFirst(restriction)}`)) {
+            const lower = String(restriction ?? "").trim().toLowerCase();
+            if (!lower) continue;
+            if (["male", "female"].includes(lower)) {
+                if (gender && gender != game.i18n.localize(`PTU.${Handlebars.helpers.capitalizeFirst(lower)}`)) {
                     return true;
                 }
+            } else {
+                // Unknown restriction — fail closed so unrecognised conditions block the evolution.
+                return true;
             }
         }
+        return false;
     }
 
     static async getTokenImage(species, { gender = game.i18n.localize("PTU.Male"), shiny = false } = {}) {

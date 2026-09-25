@@ -323,7 +323,10 @@ export class PTUCharacterSheet extends PTUActorSheet {
 
 		html.find('.item-to-chat').click((ev) => {
 			const li = $(ev.currentTarget).parents('.item');
-			const item = this.actor.items.get(li.data('itemId'));
+			const itemId = li.data('itemId');
+			const item = this.actor.items.get(itemId)
+				?? this.actor.phantomItems?.get(itemId)
+				?? this.actor.attacks?.get(itemId);
 			return item?.sendToChat?.();
 		});
 
@@ -340,7 +343,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		html.find('.item-edit').click(async (ev) => {
 			const li = $(ev.currentTarget).parents('.item');
 			const itemId = li.data('itemId');
-			const item = this.actor.items.get(itemId) ?? await this._materializePhantomItem(itemId);
+			const item = this._getOwnedItemByRealId(itemId) ?? await this._materializePhantomItem(itemId);
 			if (!item) return;
 			item.sheet.render(true);
 		});
@@ -396,7 +399,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 				name: "Edit",
 				icon: '<i class="fas fa-edit"></i>',
 				callback: async (el) => {
-					const item = this.actor.items.get(el.dataset.itemId) ?? await this._materializePhantomItem(el.dataset.itemId);
+					const item = this._getOwnedItemByRealId(el.dataset.itemId) ?? await this._materializePhantomItem(el.dataset.itemId);
 					if (!item) return;
 					item.sheet.render(true);
 				}
@@ -404,9 +407,9 @@ export class PTUCharacterSheet extends PTUActorSheet {
 			{
 				name: "Delete",
 				icon: '<i class="fas fa-trash"></i>',
-				condition: (el) => !!this.actor.items.get(el.dataset.itemId),
+				condition: (el) => !!this._getOwnedItemByRealId(el.dataset.itemId),
 				callback: (el) => {
-					const item = this.actor.items.get(el.dataset.itemId);
+					const item = this._getOwnedItemByRealId(el.dataset.itemId);
 					if (!item) return;
 					return item.delete();
 				},
@@ -542,7 +545,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 	_onItemDelete(event) {
 		const li = $(event.currentTarget).parents('.item');
 		const itemId = li.data('itemId');
-		const item = this.actor.items.get(itemId);
+		const item = this._getOwnedItemByRealId(itemId);
 		if (!item) throw new Error(`Item ${itemId} not found`);
 
 		const deleteItem = async () => {

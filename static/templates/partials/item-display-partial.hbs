@@ -27,7 +27,7 @@
 {{#if (is type "move")}}
     <ol class="item-list move-list pl-1">
         {{#each items as | item |}}
-            <li class="item {{item.type}}-item {{#if item.onCooldown}}on-cooldown{{/if}} {{#if item.flags.ptu.phantom}}phantom-item{{/if}}" data-item-id="{{item.realId}}">
+            <li class="item {{item.type}}-item {{#if item.onCooldown}}on-cooldown{{/if}} {{#if item.flags.ptu.phantom}}phantom-item{{/if}}" data-item-id="{{#if item.flags.ptu.phantom}}{{item.realId}}{{else}}{{item.id}}{{/if}}">
                 <div class="item-icon {{#if item.rollable}}rollable{{/if}} move">
                     <img class="icon" src="{{item.img}}" title="{{item.name}}"/>
                     <img class="dice" src="/icons/svg/d20.svg" title="Roll {{item.name}}">
@@ -58,6 +58,13 @@
                             <a class="item-control item-to-chat" title="Send {{item.type}} to chat"><i class="fas fa-external-link-alt"></i></a>
                             <a class="item-control item-edit" title="Edit {{item.type}}"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete {{item.type}}"><i class="fas fa-trash"></i></a>
+                        {{else}}
+                            {{!-- Struggle section (no-add=true): show send-to-chat and edit for all; delete only for real items --}}
+                            <a class="item-control item-to-chat" title="Send {{item.type}} to chat"><i class="fas fa-external-link-alt"></i></a>
+                            <a class="item-control item-edit" title="Edit {{item.type}}"><i class="fas fa-edit"></i></a>
+                            {{#unless item.flags.ptu.phantom}}
+                                <a class="item-control item-delete" title="Delete {{item.type}}"><i class="fas fa-trash"></i></a>
+                            {{/unless}}
                         {{/unless}}
                     </div>
                     <div class="move-tags">
@@ -88,13 +95,15 @@
                             {{/unless}}
                         {{/if}}
                         {{#if item.system.frequency.type}}
-                            <div class="tag gradient">
-                                <span>{{item.frequency}}</span>
-                            </div>
-                            {{!-- {{#if item.system.frequency.max}}
-                                <div class="tag gradient usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
-                                    <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
-                                </div> --}}
+                            {{#if (getGameSetting "variant.usePP")}}
+                                <div class="tag gradient">
+                                    <span>{{item.effectivePpCost}} PP</span>
+                                </div>
+                            {{else}}
+                                <div class="tag gradient">
+                                    <span>{{item.frequency}}</span>
+                                </div>
+                            {{/if}}
                             {{#if item.onCooldown}}
                                 <div class="tag gradient usage-tag exhausted" title="On Cooldown (EOT)">
                                     <span>EOT</span>
@@ -147,11 +156,6 @@
                             <i class="fa-solid fa-lock"></i>
                         </div>
                     {{/if}}
-                    {{#if item.isGranted}}
-                        <div class="tag shadowless tooltip" title="Granted by {{item.grantedBy.name}}">
-                            <img src="/systems/ptu/static/css/images/icons/granted_icon.png"/>
-                        </div>
-                    {{/if}}
                     {{#if item.isWeatherEffect}}
                         <div class="tag shadowless tooltip" title="Applied by Weather">
                             <i class="fas fa-cloud-sun-rain"></i>
@@ -189,16 +193,37 @@
                     {{#if item.grants}}
                         <a class="item-control collapse-sub-items" title="Collapse sub-items"><i class="fas fa-minus-square"></i></a>
                     {{/if}}
-                    {{#if (is item.type "item")}}
-                        <a class="item-control item-enable" title="{{#if item.enabled}}Unequip Item{{else}}Equip Item{{/if}}">{{#if item.enabled}}<i class="fas fa-shirt"></i>{{else}}<i class="fas fa-grip-lines"></i>{{/if}}</a>
-                    {{else}}
-                        <a class="item-control item-enable" title="{{#if item.enabled}}Disable Automation{{else}}Enable Automation{{/if}}">{{#if item.enabled}}<i class="fas fa-toggle-on"></i>{{else}}<i class="fas fa-toggle-off"></i>{{/if}}</a>
-                    {{/if}}
+                    {{#unless item.flags.ptu.phantom}}
+                        {{#if (is item.type "item")}}
+                            <a class="item-control item-enable" title="{{#if item.enabled}}Unequip Item{{else}}Equip Item{{/if}}">{{#if item.enabled}}<i class="fas fa-shirt"></i>{{else}}<i class="fas fa-grip-lines"></i>{{/if}}</a>
+                        {{else}}
+                            <a class="item-control item-enable" title="{{#if item.enabled}}Disable Automation{{else}}Enable Automation{{/if}}">{{#if item.enabled}}<i class="fas fa-toggle-on"></i>{{else}}<i class="fas fa-toggle-off"></i>{{/if}}</a>
+                        {{/if}}
+                    {{/unless}}
                     <a class="item-control item-to-chat" title="Send {{item.type}} to chat"><i class="fas fa-external-link-alt"></i></a>
                     {{#unless (is item.type "condition")}}
                         <a class="item-control item-edit" title="Edit {{item.type}}"><i class="fas fa-edit"></i></a>
                     {{/unless}}
-                    <a class="item-control item-delete" title="Delete {{item.type}}"><i class="fas fa-trash"></i></a>
+                    {{#unless item.flags.ptu.phantom}}
+                        <a class="item-control item-delete" title="Delete {{item.type}}"><i class="fas fa-trash"></i></a>
+                    {{/unless}}
+                </div>
+                <div class="move-tags">
+                    {{#if item.spiritCost}}
+                        <div class="tag gradient">
+                            <span>{{item.spiritCost}} SP</span>
+                        </div>
+                    {{else if item.system.frequency.type}}
+                        {{#if (getGameSetting "variant.usePP")}}
+                            <div class="tag gradient">
+                                <span>{{item.effectivePpCost}} PP</span>
+                            </div>
+                        {{else}}
+                            <div class="tag gradient">
+                                <span>{{item.frequency}}</span>
+                            </div>
+                        {{/if}}
+                    {{/if}}
                 </div>
             </div>
             {{> grantedFeats parent=item}}
@@ -229,11 +254,6 @@
                     </div>
                     <div class="item-tags">
                         {{> actionCosts item=item}}
-                        {{#if item.isGranted}}
-                            <div class="tag shadowless tooltip" title="Granted by {{item.grantedBy.name}}">
-                                <img src="/systems/ptu/static/css/images/icons/granted_icon.png"/>
-                            </div>
-                        {{/if}}
                         {{#if item.system.rules}}
                             {{#if item.enabled}}
                                 <div class="tag shadowless tooltip" title="This item has automation!">

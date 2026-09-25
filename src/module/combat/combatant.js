@@ -1,4 +1,5 @@
 import { PTUCondition } from "../item/index.js";
+import { extractApplyEffects, extractReminders } from "../rules/helpers.js";
 
 class PTUCombatant extends Combatant {
     get encounter() {
@@ -121,6 +122,32 @@ class PTUCombatant extends Combatant {
             await actor.update(actorUpdates);
         }
 
+        // Dispatch turn-start domain for Reminder and ApplyEffect rule elements.
+        const startOptions = actor.getRollOptions();
+        for (const reminder of await extractReminders({
+            affects: "origin", origin: actor, target: actor, item: null,
+            domains: ["turn-start"], options: startOptions, roll: null,
+        })) {
+            await ChatMessage.create(reminder);
+        }
+
+        const startEffects = await extractApplyEffects({
+            affects: "origin", origin: actor, target: actor, item: null,
+            domains: ["turn-start"], options: startOptions, roll: 0,
+        });
+        const dedupedStart = Object.values(
+            startEffects.reduce((acc, e) => {
+                if (!e) return acc;
+                const key = e?.system?.slug ?? e?.flags?.core?.sourceId ?? e?.name;
+                if (key && !acc[key]) acc[key] = e;
+                return acc;
+            }, {})
+        );
+        if (dedupedStart.length) {
+            await actor.createEmbeddedDocuments("Item", dedupedStart, { render: false });
+            actor.sheet?.render?.();
+        }
+
         Hooks.callAll("ptu.startTurn", this, encounter, game.user.id);
     }
 
@@ -148,6 +175,32 @@ class PTUCombatant extends Combatant {
         }
         if (Object.keys(actorUpdates).length) {
             await actor.update(actorUpdates);
+        }
+
+        // Dispatch turn-end domain for Reminder and ApplyEffect rule elements.
+        const endOptions = actor.getRollOptions();
+        for (const reminder of await extractReminders({
+            affects: "origin", origin: actor, target: actor, item: null,
+            domains: ["turn-end"], options: endOptions, roll: null,
+        })) {
+            await ChatMessage.create(reminder);
+        }
+
+        const endEffects = await extractApplyEffects({
+            affects: "origin", origin: actor, target: actor, item: null,
+            domains: ["turn-end"], options: endOptions, roll: 0,
+        });
+        const dedupedEnd = Object.values(
+            endEffects.reduce((acc, e) => {
+                if (!e) return acc;
+                const key = e?.system?.slug ?? e?.flags?.core?.sourceId ?? e?.name;
+                if (key && !acc[key]) acc[key] = e;
+                return acc;
+            }, {})
+        );
+        if (dedupedEnd.length) {
+            await actor.createEmbeddedDocuments("Item", dedupedEnd, { render: false });
+            actor.sheet?.render?.();
         }
 
         await this.update({ "flags.ptu.roundOfLastTurnEnd": round });

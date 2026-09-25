@@ -1,0 +1,71 @@
+{
+  "name": "Effect: Sunglow - Radiant",
+  "type": "effect",
+  "_id": "hjiT0J9yPLvglBx1",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "As a Rapid Action, the user may expend the Radiant condition to gain +2 Special Attack CS and +2 Accuracy for the rest of the Scene.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.spatk.stage.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "label": "Radiant",
+        "hideIfDisabled": false,
+        "selectors": "attack-roll",
+        "value": 2
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-radiant",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "encounter",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "HTNFGIxy9zsCONjI",
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  }
+}

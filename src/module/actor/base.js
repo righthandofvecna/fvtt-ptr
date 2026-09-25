@@ -284,6 +284,11 @@ class PTUActor extends Actor {
             this.flags.ptu.rollOptions.all["self:types:" + type.toLowerCase()] = true;
         }
 
+        // Mark the currently-active combatant so predicates can gate on it
+        if (game.combat?.combatant?.actor?.uuid === this.uuid) {
+            this.flags.ptu.rollOptions.all["turn:active"] = true;
+        }
+
         // Call post-derived-preparation `RuleElement` hooks
         for (const rule of this.rules) {
             if (rule.priority > 100) continue;
@@ -1187,10 +1192,20 @@ class PTUActor extends Actor {
         }
         this.flags.ptu.disabledOptions.sort((a, b) => b.sort - a.sort);
 
+        // Suppress phantom struggles that have already been explicitly materialized by the user.
+        // Items created via the phantom Edit flow carry flags.ptu.materializedFrom = phantom.realId.
+        // Struggles dragged directly from the compendium do NOT have this flag and show alongside the phantom.
+        const materializedPhantomRealIds = new Set(
+            this.itemTypes.move
+                .map(m => m.flags?.ptu?.materializedFrom)
+                .filter(Boolean)
+        );
+        const filteredStruggles = struggles.filter(s => !materializedPhantomRealIds.has(s.realId));
+
         // Return a Collection of PTUMove items keyed by their real ID.
         // The items themselves now carry roll(), damage(), consume(), and onCooldown.
         return new Collection(
-            [...moves, ...struggles]
+            [...moves, ...filteredStruggles]
                 .map(move => [move.id ?? move.realId, move])
         );
     }

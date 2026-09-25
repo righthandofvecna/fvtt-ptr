@@ -92,30 +92,36 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
     }
 
     /**
+     * Find a real owned item by its _id from the actor's items collection.
+     * With the item template using item.id (not realId) for data-item-id on real items,
+     * a direct lookup is always sufficient.
+     * @param {string} itemId  The data-item-id value (an _id for real items)
+     * @returns {Item|null}
+     */
+    _getOwnedItemByRealId(itemId) {
+        return this.actor.items.get(itemId) ?? null;
+    }
+
+    /**
      * Materialize a phantom item: create it as a real owned item on the actor and return it.
      * Phantom items are synthetic items shown on the sheet but not persisted to the database.
      * @param {string} itemId  The data-item-id of the phantom item (struggle realId or spirit action compendium _id)
      * @returns {Promise<Item|null>}
      */
     async _materializePhantomItem(itemId) {
-        // Actor-level phantoms: struggle variants registered in prepareMoves
+        // All phantoms (struggles and spirit actions) are registered in actor.phantomItems
         const actorPhantom = this.actor.phantomItems?.get(itemId);
-        // Sheet-level phantoms: spirit actions added in getData
-        const sheetPhantom = this._phantomSpiritActions?.get(itemId);
+        if (!actorPhantom) return null;
 
-        const phantom = actorPhantom ?? sheetPhantom;
-        if (!phantom) return null;
+        const ptuFlags = actorPhantom.flags?.ptu ?? {};
+        const sourceUuid = ptuFlags.sourceUuid;
+        const variantData = ptuFlags.phantomData;
 
         let itemData;
-
-        if (actorPhantom) {
-            // For struggle phantoms, build a typed copy from the compendium base entry
-            const ptuFlags = actorPhantom.flags?.ptu ?? {};
-            const sourceUuid = ptuFlags.sourceUuid;
-            const variantData = ptuFlags.phantomData;
-
-            const baseItem = sourceUuid ? await fromUuid(sourceUuid) : null;
-            if (baseItem && variantData) {
+        if (sourceUuid && variantData) {
+            // Struggle phantom: build a typed copy from the compendium base entry
+            const baseItem = await fromUuid(sourceUuid);
+            if (baseItem) {
                 itemData = baseItem.toObject();
                 // Apply variant-specific overrides
                 itemData.name = variantData.name;
@@ -128,21 +134,22 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
                 itemData.system.isStruggle = true;
                 itemData.system.isRangedStruggle = variantData.isRangedStruggle ?? false;
             } else {
-                // Fallback: use the phantom's own data directly
                 itemData = actorPhantom.toObject();
             }
         } else {
-            // Spirit action phantoms are plain data objects stored in _phantomSpiritActions
-            itemData = foundry.utils.duplicate(sheetPhantom);
+            // Spirit action phantom (or generic): use the item data directly
+            itemData = actorPhantom.toObject();
         }
 
-        // Strip phantom metadata so the created item is a normal owned item
+        // Strip phantom metadata so the created item is a normal owned item.
+        // Set materializedFrom so prepareMoves can suppress the phantom for this actor.
         delete itemData._id;
         if (itemData.flags?.ptu) {
             delete itemData.flags.ptu.phantom;
             delete itemData.flags.ptu.sourceUuid;
             delete itemData.flags.ptu.phantomData;
         }
+        foundry.utils.setProperty(itemData, 'flags.ptu.materializedFrom', itemId);
 
         const [created] = await this.actor.createEmbeddedDocuments('Item', [itemData]);
         return created ?? null;

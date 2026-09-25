@@ -39,8 +39,7 @@ class ItemSummaryRenderer {
 
         // Fall back to phantom items (struggles, spirit actions) when not a real owned item
         const item = actor.items.get(itemId)
-            ?? actor.phantomItems?.get(itemId)
-            ?? this.sheet._phantomSpiritActions?.get(itemId);
+            ?? actor.phantomItems?.get(itemId);
         if(!item) return;
         const isPhantom = !!(item.flags?.ptu?.phantom);
 

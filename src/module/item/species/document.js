@@ -61,7 +61,7 @@ class PTUSpecies extends PTUItem {
                 level: isNaN(Number(evolution[2])) ? 1 : Number(evolution[2]),
                 other: {
                     restrictions: evolution[3] == "Null" ? [] : [evolution[3]],
-                    evolutionItem: undefined
+                    evolutionItem: null
                 }
             });
         }
