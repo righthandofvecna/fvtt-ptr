@@ -2,12 +2,36 @@ import { meetsPrereqsWithContext, buildActorPrereqContext } from "../../../util/
 
 const ITEM_DISPLAY_LIMIT = 150;
 
+// Edge names that correspond to skill rank-up edges, in rank order
+const SKILL_EDGE_NAMES = ["Basic Skills", "Adept Skills", "Expert Skills", "Master Skills", "Virtuoso"];
+
+// Maps a skill's current total value to the edge name that would rank it up
+function skillEdgeForRank(total) {
+    if (total <= 2) return "Basic Skills";
+    if (total === 3) return "Adept Skills";
+    if (total === 4) return "Expert Skills";
+    if (total === 5) return "Master Skills";
+    if (total === 6) return "Virtuoso";
+    return null; // maxed (rank 8 = Virtuoso) or unknown
+}
+
+const RANK_LABELS = {
+    1: "Pathetic",
+    2: "Untrained",
+    3: "Novice",
+    4: "Adept",
+    5: "Expert",
+    6: "Master",
+    8: "Virtuoso",
+};
+
 export class TrainerLevelUpData {
     constructor(actor) {
         this.actor = actor;
         this._allFeatures = [];
         this._allEdges = [];
         this._resolvedUuids = {}; // cache: uuid -> item name
+        this._skillEdgeUuids = {}; // { "Basic Skills": uuid, ... }
         this.isLoaded = false;
 
         // Per-list filter text
@@ -149,6 +173,14 @@ export class TrainerLevelUpData {
         this._allEdges = (cb.tabs.edges.indexData ?? [])
             .filter(e => !ownedEdgeNames.has(e.name?.toLowerCase()));
 
+        // Index skill rank-up edge UUIDs by name for fast lookup
+        this._skillEdgeUuids = {};
+        for (const edge of (cb.tabs.edges.indexData ?? [])) {
+            if (SKILL_EDGE_NAMES.includes(edge.name)) {
+                this._skillEdgeUuids[edge.name] = edge.uuid;
+            }
+        }
+
         // Resolve UUIDs for bonus items that reference specific items
         const uuidsToResolve = [];
         for (const entry of (this.progression.bonusItems ?? [])) {
@@ -261,6 +293,34 @@ export class TrainerLevelUpData {
             .slice(0, ITEM_DISPLAY_LIMIT);
     }
 
+    /**
+     * Returns all skills with their current ranks and what edge would rank them up.
+     */
+    getSkillRankUpData() {
+        const skillKeys = CONFIG.PTU.data.skills.keys;
+        return skillKeys.map(key => {
+            const skill = this.actor.system.skills[key];
+            const total = skill?.value?.total ?? skill?.value?.value ?? 1;
+            const edgeName = skillEdgeForRank(total);
+            const nextRankLabel = RANK_LABELS[total >= 8 ? 8 : total + 1] ?? "—";
+            return {
+                key,
+                labelKey: `SKILL.${key}`,
+                total,
+                rankLabel: RANK_LABELS[total] ?? `Rank ${total}`,
+                edgeName,
+                edgeUuid: edgeName ? (this._skillEdgeUuids[edgeName] ?? null) : null,
+                maxed: total >= 8,
+                unavailable: !edgeName || !this._skillEdgeUuids[edgeName],
+                nextRankLabel,
+            };
+        });
+    }
+
+    get hasSkillEdges() {
+        return Object.keys(this._skillEdgeUuids).length > 0;
+    }
+
     // ─── Mutations ────────────────────────────────────────────────────────────
 
     async incrementStat(statKey) {
@@ -279,6 +339,24 @@ export class TrainerLevelUpData {
         const item = await fromUuid(uuid);
         if (!item) return;
         await this.actor.createEmbeddedDocuments("Item", [item.toObject()]);
+    }
+
+    /**
+     * Add a skill rank-up edge to the actor with the ChoiceSet pre-filled,
+     * bypassing the interactive prompt.
+     */
+    async rankUpSkill(skillKey, edgeUuid) {
+        const item = await fromUuid(edgeUuid);
+        if (!item) return;
+        const itemData = item.toObject();
+
+        // Pre-fill the ChoiceSet selection so the prompt is skipped
+        const choiceSetRule = itemData.system.rules?.find(r => r.key === "ChoiceSet");
+        if (choiceSetRule) {
+            choiceSetRule.selection = `system.skills.${skillKey}.value.mod`;
+        }
+
+        await this.actor.createEmbeddedDocuments("Item", [itemData]);
     }
 
     async claimBonusItem(uuid, bonusIndex, optionIndex) {

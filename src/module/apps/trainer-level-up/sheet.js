@@ -110,6 +110,8 @@ export class PTUTrainerLevelUpSheet extends HandlebarsApplicationMixin(Applicati
             availableEdges: data.isLoaded ? data.getAvailableEdges(data.edgeFilter) : [],
             featureFilter: data.featureFilter,
             edgeFilter: data.edgeFilter,
+            skills: data.isLoaded ? data.getSkillRankUpData() : [],
+            showSkillSection: data.isLoaded && data.hasSkillEdges && data.unspentEdgeSlots > 0,
             pendingBonusItems,
             hasAnything: data.unspentStatPoints > 0
                 || data.unspentFeatureSlots > 0
@@ -185,6 +187,16 @@ export class PTUTrainerLevelUpSheet extends HandlebarsApplicationMixin(Applicati
                 ev.preventDefault();
                 btn.disabled = true;
                 await this.#data.addRegularItem(btn.dataset.uuid);
+                this.render(true);
+            });
+        });
+
+        // Rank up a skill
+        html.querySelectorAll('.rank-up-skill').forEach(btn => {
+            btn.addEventListener('click', async ev => {
+                ev.preventDefault();
+                btn.disabled = true;
+                await this.#data.rankUpSkill(btn.dataset.skill, btn.dataset.uuid);
                 this.render(true);
             });
         });

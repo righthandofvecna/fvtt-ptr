@@ -2040,6 +2040,57 @@ a.content-link {
         }
     }
 
+    // ── Skills grid ────────────────────────────────────────────────────────────
+    .tlu-skill-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+        padding: 8px;
+    }
+
+    .tlu-skill-row {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 6px;
+        background: var(--color-bg-option, #22223a);
+        border-radius: 4px;
+        font-size: 0.85em;
+
+        .tlu-skill-label {
+            flex: 1;
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .tlu-skill-rank {
+            font-size: 0.8em;
+            color: var(--color-text-light-7, #aaa);
+            white-space: nowrap;
+        }
+        .tlu-skill-maxed {
+            color: #f0a000;
+            font-size: 0.8em;
+        }
+        .tlu-skill-na {
+            color: var(--color-text-light-7, #666);
+            font-size: 0.85em;
+            cursor: help;
+        }
+
+        button {
+            padding: 1px 6px;
+            font-size: 0.8em;
+            cursor: pointer;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        &.maxed { opacity: 0.5; }
+        &.unavailable { opacity: 0.5; }
+    }
+
     // ── Stat grid ──────────────────────────────────────────────────────────────
     .tlu-stat-grid {
         display: grid;

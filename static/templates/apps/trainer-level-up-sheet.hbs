@@ -80,6 +80,38 @@
         </details>
         {{/if}}
 
+        {{!-- SKILLS --}}
+        {{#if showSkillSection}}
+        <details class="tlu-section tlu-skills" open>
+            <summary class="tlu-section-title">
+                <i class="fas fa-chevron-right tlu-toggle-icon"></i>
+                <i class="fas fa-dumbbell"></i>
+                Skills
+                <span class="tlu-remaining">rank up using edge slots</span>
+            </summary>
+            <div class="tlu-skill-grid">
+                {{#each skills as |skill|}}
+                <div class="tlu-skill-row {{#if skill.maxed}}maxed{{/if}} {{#if skill.unavailable}}unavailable{{/if}}">
+                    <span class="tlu-skill-label">{{localize skill.labelKey}}</span>
+                    <span class="tlu-skill-rank">{{skill.rankLabel}}</span>
+                    {{#if skill.maxed}}
+                    <span class="tlu-skill-maxed"><i class="fas fa-star"></i></span>
+                    {{else if skill.unavailable}}
+                    <span class="tlu-skill-na" title="{{skill.edgeName}} not found in compendium">—</span>
+                    {{else}}
+                    <button class="rank-up-skill"
+                        data-skill="{{skill.key}}"
+                        data-uuid="{{skill.edgeUuid}}"
+                        title="Rank up to {{skill.nextRankLabel}} (costs 1 edge slot)">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                    {{/if}}
+                </div>
+                {{/each}}
+            </div>
+        </details>
+        {{/if}}
+
         {{!-- EDGES --}}
         {{#if (bigger unspentEdgeSlots 0)}}
         <details class="tlu-section tlu-edges" open>
