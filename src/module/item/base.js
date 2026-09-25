@@ -124,6 +124,18 @@ class PTUItem extends Item {
         return this.toAnchor({ name: this.name })?.outerHTML ?? "";
     }
 
+    /**
+     * Render a rich tooltip for this item.
+     * @param {EnrichmentOptions} [enrichmentOptions={}]  Options for text enrichment.
+     * @returns {Promise<{content: string, classes: string[]}>|null}
+     */
+    async richTooltip(enrichmentOptions={}) {
+        return {
+            content: (await this._buildEmbedHTML(this, enrichmentOptions))?.outerHTML ?? "",
+            classes: ["ptu-tooltip"]
+        };
+    }
+
     /** Change state of whether items automation should be enabled or disabled. If called
      *  without argument, toggles between on and off.
      * @param newState

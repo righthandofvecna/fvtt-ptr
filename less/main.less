@@ -1930,6 +1930,369 @@ a.content-link {
 		}
 	}
 }
+.ptu.trainer-level-up {
+    .window-content {
+        padding: 0;
+        overflow-y: auto;
+    }
+
+    .trainer-level-up-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tlu-summary-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        background: var(--color-bg-option, #1a1a2e);
+        border-bottom: 1px solid var(--color-border-light-primary, #aaa);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+        .tlu-level {
+            font-weight: bold;
+            font-size: 1em;
+        }
+        .tlu-tier {
+            color: var(--color-text-light-7, #888);
+            font-size: 0.9em;
+        }
+        .tlu-slots {
+            margin-left: auto;
+            display: flex;
+            gap: 4px;
+        }
+        .tlu-badge {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #fff;
+            &.stat { background: #1565c0; }
+            &.feat { background: #D5B896; }
+            &.edge { background: #E58800; }
+            &.bonus { background: #8e3b96; }
+        }
+    }
+
+    .tlu-loading, .tlu-all-done {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        gap: 10px;
+        color: var(--color-text-light-7, #888);
+
+        i { font-size: 2em; }
+    }
+    .tlu-all-done i { color: #2e7d32; }
+
+    .trainer-level-up-scroll {
+        padding: 8px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    // ── Collapsible sections ───────────────────────────────────────────────────
+    .tlu-section {
+        background: var(--color-bg-btn, #2a2a3e);
+        border: 1px solid var(--color-border-light-primary, #555);
+        border-radius: 6px;
+        overflow: hidden;
+
+        // <details> resets
+        &[open] > summary .tlu-toggle-icon { transform: rotate(90deg); }
+
+        summary.tlu-section-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            margin: 0;
+            font-size: 0.95em;
+            font-weight: bold;
+            background: var(--color-bg-option, #1a1a2e);
+            border-bottom: 1px solid var(--color-border-light-primary, #444);
+            cursor: pointer;
+            list-style: none;
+            user-select: none;
+
+            &::-webkit-details-marker { display: none; }
+
+            .tlu-toggle-icon {
+                transition: transform 0.15s ease;
+                margin-left: -2px;
+                font-size: 0.85em;
+                color: var(--color-text-light-7, #aaa);
+            }
+
+            .tlu-remaining {
+                margin-left: auto;
+                font-size: 0.85em;
+                font-weight: normal;
+                color: var(--color-text-light-7, #aaa);
+            }
+        }
+    }
+
+    // ── Skills grid ────────────────────────────────────────────────────────────
+    .tlu-skill-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+        padding: 8px;
+    }
+
+    .tlu-skill-row {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 6px;
+        background: var(--color-bg-option, #22223a);
+        border-radius: 4px;
+        font-size: 0.85em;
+
+        .tlu-skill-label {
+            flex: 1;
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .tlu-skill-rank {
+            font-size: 0.8em;
+            color: var(--color-text-light-7, #aaa);
+            white-space: nowrap;
+        }
+        .tlu-skill-maxed {
+            color: #f0a000;
+            font-size: 0.8em;
+        }
+        .tlu-skill-na {
+            color: var(--color-text-light-7, #666);
+            font-size: 0.85em;
+            cursor: help;
+        }
+
+        button {
+            padding: 1px 6px;
+            font-size: 0.8em;
+            cursor: pointer;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        &.maxed { opacity: 0.5; }
+        &.unavailable { opacity: 0.5; }
+    }
+
+    // ── Stat grid ──────────────────────────────────────────────────────────────
+    .tlu-stat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
+        padding: 8px;
+    }
+
+    .tlu-stat-row {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 6px;
+        background: var(--color-bg-option, #22223a);
+        border-radius: 4px;
+        font-size: 0.85em;
+
+        .tlu-stat-label {
+            flex: 1;
+            font-weight: bold;
+        }
+        .tlu-stat-value {
+            min-width: 24px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .tlu-stat-total {
+            font-size: 0.8em;
+            color: var(--color-text-light-7, #aaa);
+            margin-left: 2px;
+        }
+
+        button {
+            width: 22px;
+            height: 22px;
+            padding: 0;
+            font-size: 1em;
+            line-height: 1;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    }
+
+    // ── Item lists (features / edges / bonus items) ────────────────────────────
+    .tlu-search {
+        display: block;
+        width: calc(100% - 16px);
+        margin: 6px 8px 4px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        border: 1px solid var(--color-border-light-primary, #666);
+        background: var(--color-bg-option, #1a1a2e);
+        color: inherit;
+    }
+
+    .tlu-item-list {
+        max-height: 200px;
+        overflow-y: auto;
+        padding: 4px 8px 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .tlu-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 3px 6px;
+        border-radius: 4px;
+        background: var(--color-bg-btn, #2a2a3e);
+        font-size: 0.85em;
+
+        .tlu-item-img {
+            width: 24px;
+            height: 24px;
+            border: none;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+        .tlu-item-name {
+            flex: 1;
+            font-weight: 500;
+        }
+        .tlu-item-prereqs {
+            font-size: 0.8em;
+            color: var(--color-text-light-7, #aaa);
+            max-width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        button {
+            flex-shrink: 0;
+            padding: 2px 8px;
+            font-size: 0.8em;
+            cursor: pointer;
+        }
+    }
+
+    .tlu-empty {
+        color: var(--color-text-light-7, #888);
+        font-style: italic;
+        font-size: 0.85em;
+        padding: 6px;
+        text-align: center;
+    }
+
+    // ── Bonus items ────────────────────────────────────────────────────────────
+    .tlu-bonus-entry {
+        border-bottom: 1px solid var(--color-border-light-primary, #444);
+        padding: 8px 10px;
+
+        &:last-child { border-bottom: none; }
+    }
+
+    .tlu-bonus-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 6px;
+
+        .tlu-bonus-level {
+            font-weight: bold;
+            font-size: 0.85em;
+            color: #e65100;
+            white-space: nowrap;
+        }
+        .tlu-bonus-desc { font-size: 0.9em; }
+        .tlu-bonus-needed-inline {
+            font-size: 0.8em;
+            color: var(--color-text-light-7, #aaa);
+        }
+        .tlu-bonus-choice-label {
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+    }
+
+    .tlu-bonus-option-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.85em;
+        cursor: pointer;
+        padding: 2px 6px;
+        border-radius: 4px;
+        border: 1px solid var(--color-border-light-primary, #666);
+        background: var(--color-bg-btn, #2a2a3e);
+
+        input[type="radio"] { cursor: pointer; }
+
+        &.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            input[type="radio"] { cursor: not-allowed; }
+        }
+    }
+
+    .tlu-locked-note {
+        font-size: 0.75em;
+        color: var(--color-text-light-7, #aaa);
+        font-style: italic;
+        white-space: nowrap;
+    }
+
+    .tlu-bonus-uuid-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 4px;
+
+        button { padding: 3px 10px; cursor: pointer; }
+    }
+
+    .tlu-bonus-done {
+        color: #2e7d32;
+        font-size: 0.85em;
+        i { margin-right: 4px; }
+    }
+
+    .tlu-bonus-needed {
+        font-size: 0.85em;
+        color: var(--color-text-light-7, #aaa);
+        margin: 2px 0 4px;
+    }
+}
+
+// Trainer progression enricher table
+.trainer-progression-enricher {
+    overflow-x: auto;
+    margin: 8px 0;
+
+    .trainer-progression-note {
+        font-size: 0.8em;
+        color: var(--color-text-light-7, #888);
+        margin-top: 4px;
+    }
+}
+
 .ptu.pokemon.npc-quick-build {
 	.window-content {
 		// Ensure stat/skill inputs inherit their parent's text color so they remain
