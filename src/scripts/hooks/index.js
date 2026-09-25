@@ -27,6 +27,7 @@ import { LinkedEffects } from "./linked-effects.js";
 import { ConditionalContentEnricher } from "./conditional-enricher.js";
 import { TrainerProgressionEnricher } from "./trainer-progression-enricher.js";
 import { Tooltips } from "./tooltips.js";
+import { MathEnricher } from "./math-enricher.js";
 
 export const PtuHooks = {
     listen() {
@@ -61,6 +62,7 @@ export const PtuHooks = {
             ConditionalContentEnricher,
             TrainerProgressionEnricher,
             Tooltips,
+            MathEnricher,
         ]
         for(const listener of listeners) listener.listen();
     }
