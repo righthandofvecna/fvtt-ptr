@@ -245,8 +245,21 @@ class PTUTrainerActor extends PTUActor {
 
         system.feats = {
             total: this.items.filter(x => x.type == "feat" && !x.system.free).length,
-            max: ((level) => {
-                switch (game.settings.get("ptu", "variant.trainerAdvancement")) {
+            max: (() => {
+                const advancement = game.settings.get("ptu", "variant.trainerAdvancement");
+                const progression = CONFIG.PTU.data.trainerProgressions[advancement]
+                    ?? CONFIG.PTU.data.trainerProgressions["ptr-update"];
+                const level = Number(system.level.current);
+
+                // If the progression has per-level feature data, use it
+                if (progression.features) {
+                    let total = 0;
+                    for (let lv = 1; lv <= level; lv++) total += progression.features[lv] ?? 0;
+                    return total;
+                }
+
+                // Fallback to legacy hardcoded logic for progressions without per-level data
+                switch (advancement) {
                     case "original": return 4 + Math.ceil(level / 2);
                     case "data-revamp": return 4 + level;
                     case "short-track": {
@@ -258,24 +271,29 @@ class PTUTrainerActor extends PTUActor {
                         if (level == 25) feats += 3;
                         return feats;
                     }
-                    case "ptr-update": {
-                        let feats = 4 + Math.ceil(level / 2);
-                        if (level >= 5) feats += 1;
-                        if (level >= 15) feats += 1;
-                        if (level >= 25) feats += 1;
-                        if (level >= 45) feats += 1;
-                        if (level == 50) feats += 2;
-                        return feats;
-                    };
                     case "long-track": return 4 + Math.ceil(level / 2);
+                    default: return 4 + Math.ceil(level / 2);
                 }
-            })(Number(system.level.current)) + (system.modifiers.featPoints?.total ?? 0)
+            })() + (system.modifiers.featPoints?.total ?? 0)
         }
 
         system.edges = {
             total: this.items.filter(x => x.type == "edge" && !x.system.free).length,
-            max: ((level) => {
-                switch (game.settings.get("ptu", "variant.trainerAdvancement")) {
+            max: (() => {
+                const advancement = game.settings.get("ptu", "variant.trainerAdvancement");
+                const progression = CONFIG.PTU.data.trainerProgressions[advancement]
+                    ?? CONFIG.PTU.data.trainerProgressions["ptr-update"];
+                const level = Number(system.level.current);
+
+                // If the progression has per-level edge data, use it
+                if (progression.edges) {
+                    let total = 0;
+                    for (let lv = 1; lv <= level; lv++) total += progression.edges[lv] ?? 0;
+                    return total;
+                }
+
+                // Fallback to legacy hardcoded logic for progressions without per-level data
+                switch (advancement) {
                     case "original": {
                         let edges = 4 + Math.floor(level / 2);
                         if (level >= 2) edges += 1;
@@ -301,25 +319,19 @@ class PTUTrainerActor extends PTUActor {
                         if (level == 25) edges += 3;
                         return edges;
                     }
-                    case "ptr-update": {
-                        let edges = 4 + Math.floor(level / 2);
-                        if (level >= 2) edges += 1;
-                        if (level >= 8) edges += 1;
-                        if (level >= 10) edges += 1;
-                        if (level >= 16) edges += 1;
-                        if (level >= 20) edges += 1;
-                        if (level >= 35) edges += 2;
-                        if (level == 50) edges += 3;
-                        return edges;
-                    };
                     case "long-track": {
                         let edges = 4 + Math.floor(level / 2);
                         if (level >= 10) edges += 1;
                         if (level >= 20) edges += 1;
                         return edges;
                     }
+                    default: {
+                        let edges = 4 + Math.floor(level / 2);
+                        if (level >= 2) edges += 1;
+                        return edges;
+                    }
                 }
-            })(Number(system.level.current)) + (system.modifiers.edgePoints?.total ?? 0)
+            })() + (system.modifiers.edgePoints?.total ?? 0)
         }
 
         system.ap.bound = Number(this.synthetics.apAdjustments.bound.map(b => b.value).reduce((a, b) => a + b, 0)) || 0

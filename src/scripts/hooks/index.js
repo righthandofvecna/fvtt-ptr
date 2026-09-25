@@ -25,6 +25,7 @@ import { WeatherHooks } from "./weather-hooks.js";
 import { MacroLinkContext } from "./macro-link-context.js";
 import { LinkedEffects } from "./linked-effects.js";
 import { ConditionalContentEnricher } from "./conditional-enricher.js";
+import { TrainerProgressionEnricher } from "./trainer-progression-enricher.js";
 
 export const PtuHooks = {
     listen() {
@@ -57,6 +58,7 @@ export const PtuHooks = {
             MacroLinkContext,
             LinkedEffects,
             ConditionalContentEnricher,
+            TrainerProgressionEnricher,
         ]
         for(const listener of listeners) listener.listen();
     }

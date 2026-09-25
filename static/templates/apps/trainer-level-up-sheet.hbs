@@ -1,0 +1,198 @@
+<div class="trainer-level-up-wrapper">
+
+    {{!-- Summary bar --}}
+    <div class="tlu-summary-bar">
+        <span class="tlu-level">Level {{level}}</span>
+        <span class="tlu-tier">{{tier}}</span>
+        <span class="tlu-slots">
+            {{#if (bigger unspentStatPoints 0)}}<span class="tlu-badge stat">{{unspentStatPoints}} stat pts</span>{{/if}}
+            {{#if (bigger unspentFeatureSlots 0)}}<span class="tlu-badge feat">{{unspentFeatureSlots}} feat{{#if (bigger unspentFeatureSlots 1)}}s{{/if}}</span>{{/if}}
+            {{#if (bigger unspentEdgeSlots 0)}}<span class="tlu-badge edge">{{unspentEdgeSlots}} edge{{#if (bigger unspentEdgeSlots 1)}}s{{/if}}</span>{{/if}}
+            {{#if pendingBonusItems.length}}<span class="tlu-badge bonus">{{pendingBonusItems.length}} bonus</span>{{/if}}
+        </span>
+    </div>
+
+    {{#if isLoading}}
+    <div class="tlu-loading">
+        <i class="fas fa-spinner fa-spin"></i>
+        Loading compendium data&hellip;
+    </div>
+    {{else}}
+
+    {{#unless hasAnything}}
+    <div class="tlu-all-done">
+        <i class="fas fa-check-circle"></i>
+        <p>All caught up! Nothing outstanding at level {{level}}.</p>
+    </div>
+    {{/unless}}
+
+    <div class="trainer-level-up-scroll">
+
+        {{!-- STAT POINTS --}}
+        {{#if (bigger unspentStatPoints 0)}}
+        <details class="tlu-section tlu-stats" open>
+            <summary class="tlu-section-title">
+                <i class="fas fa-chevron-right tlu-toggle-icon"></i>
+                <i class="fas fa-chart-line"></i>
+                Stat Points
+                <span class="tlu-remaining">{{unspentStatPoints}} remaining</span>
+            </summary>
+            <div class="tlu-stat-grid">
+                {{#each stats as |stat|}}
+                <div class="tlu-stat-row">
+                    <span class="tlu-stat-label">{{localize stat.labelKey}}</span>
+                    <button class="stat-decrement" data-stat="{{stat.key}}" {{#unless (bigger stat.levelUp 0)}}disabled{{/unless}}>&#x2212;</button>
+                    <span class="tlu-stat-value">{{stat.levelUp}}</span>
+                    <button class="stat-increment" data-stat="{{stat.key}}" {{#unless (bigger ../unspentStatPoints 0)}}disabled{{/unless}}>+</button>
+                    <span class="tlu-stat-total">({{stat.total}})</span>
+                </div>
+                {{/each}}
+            </div>
+        </details>
+        {{/if}}
+
+        {{!-- FEATURES --}}
+        {{#if (bigger unspentFeatureSlots 0)}}
+        <details class="tlu-section tlu-features" open>
+            <summary class="tlu-section-title">
+                <i class="fas fa-chevron-right tlu-toggle-icon"></i>
+                <i class="fas fa-crown"></i>
+                Features
+                <span class="tlu-remaining">{{unspentFeatureSlots}} slot{{#if (bigger unspentFeatureSlots 1)}}s{{/if}} remaining</span>
+            </summary>
+            <input class="tlu-search feature-search" type="text" placeholder="Search features&hellip;" value="{{featureFilter}}">
+            <div class="tlu-item-list">
+                {{#if availableFeatures.length}}
+                {{#each availableFeatures as |feat|}}
+                <div class="tlu-item feature-item" data-name="{{feat.name}}">
+                    <img class="tlu-item-img" src="{{feat.img}}" alt="{{feat.name}}">
+                    <span class="tlu-item-name">{{feat.name}}</span>
+                    {{#if feat.prerequisites.length}}
+                    <span class="tlu-item-prereqs">{{#each feat.prerequisites as |p|}}{{p.label}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+                    {{/if}}
+                    <button class="add-regular-item" data-uuid="{{feat.uuid}}">Add</button>
+                </div>
+                {{/each}}
+                {{else}}
+                <p class="tlu-empty">No available features meet your prerequisites.</p>
+                {{/if}}
+            </div>
+        </details>
+        {{/if}}
+
+        {{!-- EDGES --}}
+        {{#if (bigger unspentEdgeSlots 0)}}
+        <details class="tlu-section tlu-edges" open>
+            <summary class="tlu-section-title">
+                <i class="fas fa-chevron-right tlu-toggle-icon"></i>
+                <i class="fas fa-bolt"></i>
+                Edges
+                <span class="tlu-remaining">{{unspentEdgeSlots}} slot{{#if (bigger unspentEdgeSlots 1)}}s{{/if}} remaining</span>
+            </summary>
+            <input class="tlu-search edge-search" type="text" placeholder="Search edges&hellip;" value="{{edgeFilter}}">
+            <div class="tlu-item-list">
+                {{#if availableEdges.length}}
+                {{#each availableEdges as |edge|}}
+                <div class="tlu-item edge-item" data-name="{{edge.name}}">
+                    <img class="tlu-item-img" src="{{edge.img}}" alt="{{edge.name}}">
+                    <span class="tlu-item-name">{{edge.name}}</span>
+                    {{#if edge.prerequisites.length}}
+                    <span class="tlu-item-prereqs">{{#each edge.prerequisites as |p|}}{{p.label}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+                    {{/if}}
+                    <button class="add-regular-item" data-uuid="{{edge.uuid}}">Add</button>
+                </div>
+                {{/each}}
+                {{else}}
+                <p class="tlu-empty">No available edges meet your prerequisites.</p>
+                {{/if}}
+            </div>
+        </details>
+        {{/if}}
+
+        {{!-- BONUS ITEMS --}}
+        {{#if pendingBonusItems.length}}
+        <details class="tlu-section tlu-bonus" open>
+            <summary class="tlu-section-title">
+                <i class="fas fa-chevron-right tlu-toggle-icon"></i>
+                <i class="fas fa-gift"></i>
+                Bonus Items
+                <span class="tlu-remaining">{{pendingBonusItems.length}} unclaimed</span>
+            </summary>
+            {{#each pendingBonusItems as |entry|}}
+            <div class="tlu-bonus-entry">
+
+                <div class="tlu-bonus-header">
+                    <span class="tlu-bonus-level">Lv.{{entry.level}}</span>
+                    {{#if entry.isMultiOption}}
+                    <span class="tlu-bonus-choice-label">Choose:</span>
+                    {{#each entry.optionDescriptions as |opt|}}
+                    <label class="tlu-bonus-option-label">
+                        <input class="bonus-option-radio" type="radio"
+                            name="bonus-option-{{entry.index}}"
+                            value="{{opt.idx}}"
+                            data-bonus-index="{{entry.index}}"
+                            {{#if opt.isSelected}}checked{{/if}}>
+                        {{opt.label}}{{#if (bigger opt.count 1)}} ({{opt.needed}} left){{/if}}
+                    </label>
+                    {{/each}}
+                    {{else}}
+                    <span class="tlu-bonus-desc">{{entry.selectedOptionData.label}}</span>
+                    {{#if (bigger entry.selectedOptionData.count 1)}}
+                    <span class="tlu-bonus-needed-inline">&nbsp;({{entry.selectedOptionData.needed}} of {{entry.selectedOptionData.count}} remaining)</span>
+                    {{/if}}
+                    {{/if}}
+                </div>
+
+                {{#if entry.selectedOptionData.isUuidOnly}}
+                <div class="tlu-bonus-uuid-list">
+                    {{#each entry.selectedOptionData.uuids as |u|}}
+                    {{#if (bigger entry.selectedOptionData.needed 0)}}
+                    <button class="claim-bonus-uuid"
+                        data-uuid="{{u.uuid}}"
+                        data-bonus-index="{{entry.index}}"
+                        data-option-index="{{entry.selectedOptionData.idx}}">
+                        <i class="fas fa-plus"></i> {{u.name}}
+                    </button>
+                    {{else}}
+                    <span class="tlu-bonus-done"><i class="fas fa-check"></i> {{u.name}}</span>
+                    {{/if}}
+                    {{/each}}
+                </div>
+                {{else}}
+                {{#if (bigger entry.selectedOptionData.count 1)}}
+                <p class="tlu-bonus-needed">{{entry.selectedOptionData.needed}} of {{entry.selectedOptionData.count}} still needed.</p>
+                {{/if}}
+                <input class="tlu-search bonus-item-search" type="text"
+                    placeholder="Search&hellip;" data-bonus-index="{{entry.index}}">
+                <div class="tlu-item-list tlu-bonus-item-list">
+                    {{#if entry.items.length}}
+                    {{#each entry.items as |item|}}
+                    <div class="tlu-item bonus-item-list-item"
+                        data-name="{{item.name}}"
+                        data-bonus-index="{{entry.index}}">
+                        <img class="tlu-item-img" src="{{item.img}}" alt="{{item.name}}">
+                        <span class="tlu-item-name">{{item.name}}</span>
+                        {{#if item.prerequisites.length}}
+                        <span class="tlu-item-prereqs">{{#each item.prerequisites as |p|}}{{p.label}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+                        {{/if}}
+                        <button class="claim-bonus-item"
+                            data-uuid="{{item.uuid}}"
+                            data-bonus-index="{{entry.index}}"
+                            data-option-index="{{entry.selectedOptionIdx}}">Claim</button>
+                    </div>
+                    {{/each}}
+                    {{else}}
+                    <p class="tlu-empty">No matching items found.</p>
+                    {{/if}}
+                </div>
+                {{/if}}
+
+            </div>
+            {{/each}}
+        </details>
+        {{/if}}
+
+    </div>{{!-- .trainer-level-up-scroll --}}
+    {{/if}}{{!-- isLoading --}}
+
+</div>
