@@ -49,6 +49,11 @@
                                 </div>
                             {{/if}}
                         {{/if}}
+                        {{#if item.notAutomated}}
+                            <div class="tag shadowless tooltip" title="This item is not fully automated">
+                                <i class="fa-solid fa-ban"></i>
+                            </div>
+                        {{/if}}
                     </div>
                     <div class="item-controls">
                         {{#unless ../no-add}}
@@ -173,6 +178,11 @@
                                 </div>
                             {{/if}}
                         {{/if}}
+                        {{#if item.notAutomated}}
+                            <div class="tag shadowless tooltip" title="This item is not fully automated">
+                                <i class="fa-solid fa-ban"></i>
+                            </div>
+                        {{/if}}
                         {{!-- {{#if item.system.frequency.max}}
                             <div class="tag usage-tag {{#if item.onCooldown}}exhausted{{/if}}" title="Uses: {{item.flags.ptu.used}} / {{item.system.frequency.max}}">
                                 <span>{{item.flags.ptu.used}}/{{item.system.frequency.max}}</span>
@@ -264,6 +274,11 @@
                                     <img src="/systems/ptu/static/css/images/icons/automated_disabled_icon.png" style="opacity: 0.5"/>
                                 </div>
                             {{/if}}
+                        {{/if}}
+                        {{#if item.notAutomated}}
+                            <div class="tag shadowless tooltip" title="This item is not fully automated">
+                                <i class="fa-solid fa-ban"></i>
+                            </div>
                         {{/if}}
                     </div>
                     {{#if item.system.quantity}}

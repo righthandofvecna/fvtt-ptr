@@ -44,6 +44,10 @@ class PTUItem extends Item {
         return this.rules.length > 0 && this.rules.some((rule) => !rule.ignored);
     }
 
+    get notAutomated() {
+        return !["completed", "no-automation-needed"].includes(this.flags?.ptu?.automationStatus);
+    }
+
     get realId() {
         return this.id;
     }
