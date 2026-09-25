@@ -42,8 +42,21 @@ export class PTUTrainerLevelUpSheet extends HandlebarsApplicationMixin(Applicati
 
         // Build bonus item context with option lists resolved
         const pendingBonusItems = data.pendingBonusItems.map(entry => {
-            const selectedOptionIdx = data.bonusOptionSelections[entry.index] ?? 0;
+            let selectedOptionIdx = data.bonusOptionSelections[entry.index] ?? 0;
             const filterText = data.bonusFilters[entry.index] ?? '';
+
+            // For multi-option entries: if the actor already has items claimed for one
+            // option, lock to that option (can't switch without removing those items)
+            let isLocked = false;
+            if (entry.options.length > 1) {
+                for (let optIdx = 0; optIdx < entry.options.length; optIdx++) {
+                    if (data._claimedCountForOption(entry.index, optIdx) > 0) {
+                        isLocked = true;
+                        selectedOptionIdx = optIdx; // force selection to claimed option
+                        break;
+                    }
+                }
+            }
 
             const optionDescriptions = entry.options.map((opt, i) => {
                 const claimedCount = entry.options.length === 1
@@ -54,6 +67,7 @@ export class PTUTrainerLevelUpSheet extends HandlebarsApplicationMixin(Applicati
                     idx: i,
                     label: data.describeBonusOption(opt),
                     isSelected: i === selectedOptionIdx,
+                    isDisabled: isLocked && i !== selectedOptionIdx,
                     isUuidOnly: !!(opt.uuids?.length),
                     uuids: (opt.uuids ?? []).map(uuid => ({
                         uuid,
@@ -72,6 +86,7 @@ export class PTUTrainerLevelUpSheet extends HandlebarsApplicationMixin(Applicati
                 index: entry.index,
                 level: entry.level,
                 isMultiOption: entry.options.length > 1,
+                isLocked,
                 selectedOptionIdx,
                 optionDescriptions,
                 selectedOptionData: selectedOpt,

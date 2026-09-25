@@ -124,17 +124,19 @@
                 <div class="tlu-bonus-header">
                     <span class="tlu-bonus-level">Lv.{{entry.level}}</span>
                     {{#if entry.isMultiOption}}
-                    <span class="tlu-bonus-choice-label">Choose:</span>
+                    <span class="tlu-bonus-choice-label">{{#if entry.isLocked}}Locked to:{{else}}Choose:{{/if}}</span>
                     {{#each entry.optionDescriptions as |opt|}}
-                    <label class="tlu-bonus-option-label">
+                    <label class="tlu-bonus-option-label{{#if opt.isDisabled}} disabled{{/if}}">
                         <input class="bonus-option-radio" type="radio"
                             name="bonus-option-{{entry.index}}"
                             value="{{opt.idx}}"
                             data-bonus-index="{{entry.index}}"
-                            {{#if opt.isSelected}}checked{{/if}}>
+                            {{#if opt.isSelected}}checked{{/if}}
+                            {{#if opt.isDisabled}}disabled{{/if}}>
                         {{opt.label}}{{#if (bigger opt.count 1)}} ({{opt.needed}} left){{/if}}
                     </label>
                     {{/each}}
+                    {{#if entry.isLocked}}<span class="tlu-locked-note">Remove claimed items to change selection.</span>{{/if}}
                     {{else}}
                     <span class="tlu-bonus-desc">{{entry.selectedOptionData.label}}</span>
                     {{#if (bigger entry.selectedOptionData.count 1)}}

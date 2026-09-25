@@ -2193,6 +2193,19 @@ a.content-link {
         background: var(--color-bg-btn, #2a2a3e);
 
         input[type="radio"] { cursor: pointer; }
+
+        &.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            input[type="radio"] { cursor: not-allowed; }
+        }
+    }
+
+    .tlu-locked-note {
+        font-size: 0.75em;
+        color: var(--color-text-light-7, #aaa);
+        font-style: italic;
+        white-space: nowrap;
     }
 
     .tlu-bonus-uuid-list {
