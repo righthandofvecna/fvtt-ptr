@@ -21,6 +21,7 @@ import { PTUToken } from '../../module/canvas/token/index.js';
 import { PTUSpeciesDragOptionsPrompt } from '../../module/apps/species-drag-in/sheet.js';
 import { PTUSpeciesMassGenerator } from '../../module/apps/species-mass-generator/sheet.js';
 import { PTUNpcQuickBuild } from '../../module/apps/npc-quick-build/sheet.js';
+import { PTUTrainerLevelUpSheet } from '../../module/apps/trainer-level-up/sheet.js';
 import { LevelUpForm } from '../../module/apps/level-up-form/sheet.js';
 import { LevelUpData } from '../../module/apps/level-up-form/document.js';
 import { AttackRoll } from '../../module/system/check/rolls/attack-roll.js';
@@ -123,6 +124,14 @@ const data = {
       "Status": "PTU.Move.Category.Status",
       "Physical": "PTU.Move.Category.Physical",
       "Special": "PTU.Move.Category.Special",
+    },
+    learnedFrom: {
+      "level": "PTU.Move.LearnedFrom.Level",
+      "tm": "PTU.Move.LearnedFrom.TM",
+      "egg": "PTU.Move.LearnedFrom.Egg",
+      "tutor": "PTU.Move.LearnedFrom.Tutor",
+      "grant": "PTU.Move.LearnedFrom.Grant",
+      "unknown": "PTU.Move.LearnedFrom.Unknown"
     }
   },
   frequencies: {
@@ -259,6 +268,9 @@ const ui = {
   },
   npcQuickBuild: {
     sheetClass: PTUNpcQuickBuild
+  },
+  trainerLevelUp: {
+    sheetClass: PTUTrainerLevelUpSheet
   },
   levelUpForm: {
     sheetClass: LevelUpForm,

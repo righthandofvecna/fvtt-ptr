@@ -1,0 +1,105 @@
+{
+  "name": "Old Rod Table (Defaults)",
+  "formula": "1d3",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.Vhe0fBLNUTU4poSO",
+      "description": "",
+      "_id": "llYlQrgMVFvG288h",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306145442,
+        "modifiedTime": 1790306184518,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        2,
+        2
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.NiTq7iwq0LeStuHv",
+      "description": "",
+      "_id": "TAZW32Ff67FZrPjv",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306145442,
+        "modifiedTime": 1790306184519,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        3,
+        3
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.Vw4iNftgL4GGdDyA",
+      "description": "",
+      "_id": "igApd2I0lVQVrJq8",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306145442,
+        "modifiedTime": 1790306184519,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    }
+  ],
+  "_id": "zjTrDSr3fyDXBxW4",
+  "img": "icons/tools/fishing/rod-wood-blue-tan.webp",
+  "description": "",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "YEaOEHeB6qwLzrQp",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.41",
+    "createdTime": 1790306145442,
+    "modifiedTime": 1790306184518,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 100000
+}

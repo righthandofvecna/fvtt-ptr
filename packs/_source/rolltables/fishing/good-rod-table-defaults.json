@@ -1,0 +1,2159 @@
+{
+  "name": "Good Rod Table (Defaults)",
+  "formula": "1d82",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.k2hIIfS6Exwrcrts",
+      "description": "",
+      "_id": "8MnClVIdigWFvBt4",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168055,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        2,
+        2
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.yxgMCSyJLQ3xijCF",
+      "description": "",
+      "_id": "8UKBMqbzaaYvBygB",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168055,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        3,
+        3
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.T1GsQv1dPxZXqTIJ",
+      "description": "",
+      "_id": "sYrBvsMCu1you5bt",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168055,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        4,
+        4
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.nsDhLiq9wMeD4tZ5",
+      "description": "",
+      "_id": "orXDgmHwql9yF0OO",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168055,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        5,
+        5
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.mjMQHsAk1okVfwTp",
+      "description": "",
+      "_id": "4hIPJGmNwSkDyeHN",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168055,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        6,
+        6
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.lRu9VtE89K7G2ATZ",
+      "description": "",
+      "_id": "QpYivYLHZLrMHqVp",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168055,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        7,
+        7
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.ldl4hqwki903T0o2",
+      "description": "",
+      "_id": "xaq1Nb38K7NOFGmD",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168055,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        8,
+        8
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.aTmT7uNPXLRdQ2SH",
+      "description": "",
+      "_id": "kSP0gWDLae1xe1gg",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168056,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        9,
+        9
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.aoc4sceLBGES53zI",
+      "description": "",
+      "_id": "avug9BKMdVcK1PuL",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168056,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        10,
+        10
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.E9qgOLqr2UbJ3Y1z",
+      "description": "",
+      "_id": "Qw7Jf2bBwjMllg8R",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168056,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        11,
+        11
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.ZvUnfbbCP9qG6SDi",
+      "description": "",
+      "_id": "84BPhffuiauLHePn",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168056,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.nXU5UKHrExQ1iQPW",
+      "description": "",
+      "_id": "6t2016IFepslzzQ6",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168056,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        13,
+        13
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.qNKW6sKbfOU2rsu2",
+      "description": "",
+      "_id": "ZldGuUPng4HppmrP",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168056,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        14,
+        14
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.mJ3MCOTTOlPPgYsG",
+      "description": "",
+      "_id": "S5I3zFFDvXNhqusb",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168056,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        15,
+        15
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.bh4rPN3ctDfoLocY",
+      "description": "",
+      "_id": "9D46UFHY6yWGT7ox",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168056,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        16,
+        16
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.IWugHMiIEmXn8HAA",
+      "description": "",
+      "_id": "fSgMcokKUburYlUo",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168056,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        17,
+        17
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.UdjENyUStDkSuab5",
+      "description": "",
+      "_id": "PkfruhIdUHRP1vId",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168056,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        18,
+        18
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.41wkrpC4qmi0z6fR",
+      "description": "",
+      "_id": "sudszp1XPwmOAvZ6",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168056,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        19,
+        19
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.LIUqOZWyrPPY6rya",
+      "description": "",
+      "_id": "qHa0xWZBdEdXkTls",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168057,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        20,
+        20
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.aEM0aICjk2T8rUwF",
+      "description": "",
+      "_id": "56EyZ8xSF5OVmbMV",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168057,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        21,
+        21
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.b9K7E1FAtWKNtmsU",
+      "description": "",
+      "_id": "CP4FhS3NiSBPqQK9",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168057,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        22,
+        22
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.oIhoFLwnNKQtx4Tu",
+      "description": "",
+      "_id": "Q4YyvXqSLnumyNOv",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168057,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        23,
+        23
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.7VdtN3lZeVzarHOa",
+      "description": "",
+      "_id": "EdQR8ehXuPkgsdLO",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168057,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        24,
+        24
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.I7Mx0eR5OqyrK60c",
+      "description": "",
+      "_id": "EyqQupe5flRVowKR",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168057,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        25,
+        25
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.P3oLJ5IRHw3Prm02",
+      "description": "",
+      "_id": "VYcGSb0H00TvxvZw",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168057,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        26,
+        26
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.DCIxuBO7aeTZqAPH",
+      "description": "",
+      "_id": "JXIlyVqQ7Iw084Wp",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168057,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        27,
+        27
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.Peqiuvg7ofP2AZbR",
+      "description": "",
+      "_id": "BlBhwUjM39tEbu3v",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168057,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        28,
+        28
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.1ZfWZpQkKq3JI2sE",
+      "description": "",
+      "_id": "pHSPIvmVcEiA2atN",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168058,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        29,
+        29
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.fB2vvrdTEFtbwBXX",
+      "description": "",
+      "_id": "uFuGvK5JNpwVnNgA",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168058,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        30,
+        30
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.a1r2y5TjuRJunPoZ",
+      "description": "",
+      "_id": "1rVMNiCeMuBiLqfx",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168058,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        31,
+        31
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.07nGkHcoDnTI6Xbo",
+      "description": "",
+      "_id": "AxaTSkhLjmRl63DB",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168058,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        32,
+        32
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.ucivLUVoS3r1CwA4",
+      "description": "",
+      "_id": "ucIbNRpQihaa8FqY",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168058,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        33,
+        33
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.yAOTDKNStF3oqvp2",
+      "description": "",
+      "_id": "HHIpZjC9UDJ1qyGS",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168058,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        34,
+        34
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.1iHhYL3lsdGq4MpQ",
+      "description": "",
+      "_id": "UWUCgCRxpOIkjQ04",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168058,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        35,
+        35
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.bK8ZZDJ5fZZITC44",
+      "description": "",
+      "_id": "8ngs4lWd38KQzTvf",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168058,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        36,
+        36
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.m3a3URStWW898hp7",
+      "description": "",
+      "_id": "Jm9qnv39iMW7aSkH",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168058,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        37,
+        37
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.eHxb0AeRceZ9npRK",
+      "description": "",
+      "_id": "6A4CNnduwyz6fuP6",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168059,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        38,
+        38
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.b6UzQzaQBUoxiEmW",
+      "description": "",
+      "_id": "j3NJngbVNefmzbp2",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168059,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        39,
+        39
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.JiYg37gBQPSQcbJ3",
+      "description": "",
+      "_id": "cAvwCTgLq5nIIjnb",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168059,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        40,
+        40
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.EhX4hsj86RGPUJdP",
+      "description": "",
+      "_id": "xTAY1qCkzAu5h0wD",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168059,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        41,
+        41
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.DpBMvMT2EsQ5yHwo",
+      "description": "",
+      "_id": "vSBxo1QVUx466Scw",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168059,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        42,
+        42
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.UgTVuXUWW108f7cs",
+      "description": "",
+      "_id": "utJLvHoz6F9lrKyn",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168059,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        43,
+        43
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.04HUofEWMHdMr0Ya",
+      "description": "",
+      "_id": "AzWbbehpI9oI9CNQ",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168059,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        44,
+        44
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.7TtLcoZhu9yWiP5Q",
+      "description": "",
+      "_id": "7axpflnPNKiiVZX8",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168059,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        45,
+        45
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.4VJGrxWzlgbOPlBD",
+      "description": "",
+      "_id": "zhknbRMtHYZkJPqY",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168059,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        46,
+        46
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.3JmvGkYk2TtkGqUj",
+      "description": "",
+      "_id": "sSfOnMYWGVprTSPs",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168059,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        47,
+        47
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.H3Ttrv8RcdHTOeuO",
+      "description": "",
+      "_id": "LgzJALtPiSxK4ERh",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168060,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        48,
+        48
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.SDC4tyMN9t0C2ULR",
+      "description": "",
+      "_id": "7FuOYtWJleA7y9Zs",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168060,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        49,
+        49
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.1RuHtzaJmjhC5Zcl",
+      "description": "",
+      "_id": "wFhk5v3dBbNXPGAr",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168060,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        50,
+        50
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.19EhBsa4vAvm9sv3",
+      "description": "",
+      "_id": "VA33wHfBDWP7mTS8",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168060,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        51,
+        51
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.rkYERcVivCKp9B45",
+      "description": "",
+      "_id": "6iR3Fgy2fk4RXyJf",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168060,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        52,
+        52
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.tEbUTZR8OIDLOVvH",
+      "description": "",
+      "_id": "bA8CMEHweMhyfj1a",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168060,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        53,
+        53
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.LA4n2NuATXXDewrc",
+      "description": "",
+      "_id": "g6xmgn0wcvbbnSXf",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168060,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        54,
+        54
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.FWranlRGJOe7x6aw",
+      "description": "",
+      "_id": "TKpNxVbgCMMPTjbS",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168060,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        55,
+        55
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.C7gpGPIczGtWXJlH",
+      "description": "",
+      "_id": "Fx3z2BAZk4zADgSl",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168060,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        56,
+        56
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.d4r4UpBB60la97OW",
+      "description": "",
+      "_id": "BJkThJ6TrAnI0YJA",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168061,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        57,
+        57
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.EGonrCILMcmiAeSr",
+      "description": "",
+      "_id": "prlv5zML8Zv190Il",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168061,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        58,
+        58
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.MTtokyp3jIlaj6b1",
+      "description": "",
+      "_id": "PGLJeR8oyv3k6Vwk",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168061,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        59,
+        59
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.X2kt21ojJnSBCSFZ",
+      "description": "",
+      "_id": "StoMuvJVqIENtpRn",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168061,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        60,
+        60
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.UTl1jGyEfJ33ronS",
+      "description": "",
+      "_id": "LKJRRVoARsidoAoB",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168061,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        61,
+        61
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.idETn2uwVWVuFgwh",
+      "description": "",
+      "_id": "i8ElcchbISwzZcz5",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168061,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        62,
+        62
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.Bbu9oDERiWKOo8Tf",
+      "description": "",
+      "_id": "DR95c508TJtrjVYa",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168062,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        63,
+        63
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.HbhPQReEOfDYq1rI",
+      "description": "",
+      "_id": "IHzSAtnCrETJzj02",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168062,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        64,
+        64
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.KPSNJUJ7RmSXDRCp",
+      "description": "",
+      "_id": "pun7FJXXTeD4sONL",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168062,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        65,
+        65
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.6m8tViV45oS4p8Io",
+      "description": "",
+      "_id": "7UIOyJzzOQCSCnk5",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168062,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        66,
+        66
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.GtqdzGUUqSRdQSH2",
+      "description": "",
+      "_id": "NG2yX6yleJ2RulzZ",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168062,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        67,
+        67
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.akNO6p4xc5Xpihca",
+      "description": "",
+      "_id": "x95E8LjVjv9dDYlX",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168062,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        68,
+        68
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.X38aCh4hyYFVLjfq",
+      "description": "",
+      "_id": "KVyO4qLCI9yCU4Bp",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168062,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        69,
+        69
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.58pJiQJFM2rGXTlc",
+      "description": "",
+      "_id": "uJaa2Lipwm9icd82",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168062,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        70,
+        70
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.QSdcJpKWXXCOeo1O",
+      "description": "",
+      "_id": "RFIiAuTBjb7gWfe4",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168062,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        71,
+        71
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.Igb78gNMkNl9n4YW",
+      "description": "",
+      "_id": "hcIo3jKMfVGJTsFV",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168062,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        72,
+        72
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.cOX7owMMngoUwMuc",
+      "description": "",
+      "_id": "kh7Z8xqgoWpLXDnQ",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168062,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        73,
+        73
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.AQ9qifYrieLVBOPi",
+      "description": "",
+      "_id": "JHrAfnwOCuzB3UJY",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168063,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        74,
+        74
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.NxuuVfoktLTY7u5s",
+      "description": "",
+      "_id": "hSXh3ginGsBCmZt2",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168063,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        75,
+        75
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.a3EntQYiPJedHdXV",
+      "description": "",
+      "_id": "y5g11jGd6RPyaF3P",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168063,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        76,
+        76
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.mrz7a3b4Mc8sRp2a",
+      "description": "",
+      "_id": "l2isZGluceEjPpz5",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168063,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        77,
+        77
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.PdPfUBsJU6BrD3UJ",
+      "description": "",
+      "_id": "S5bxH8vzD1ZSHgYW",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168063,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        78,
+        78
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.KaOfD81E4De8LZEU",
+      "description": "",
+      "_id": "N552fhLRTyOU6C4r",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168063,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        79,
+        79
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.mH6roPWWC3uv4Cc1",
+      "description": "",
+      "_id": "Xpb8rlEM9VXRYxk6",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168063,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        80,
+        80
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.P9nP3xDM0tqeqiSD",
+      "description": "",
+      "_id": "Uojls5FHg7DLFK5u",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168063,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        81,
+        81
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.8H7JVkcCwHkYc3MV",
+      "description": "",
+      "_id": "v1sUZ8nbVinUIfJ8",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168063,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "drawn": false,
+      "range": [
+        82,
+        82
+      ],
+      "name": "",
+      "documentUuid": "Compendium.ptu.species.Item.B6cfm5dj9njaLogN",
+      "description": "",
+      "_id": "lPlLuUBCNjuvWi42",
+      "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.41",
+        "createdTime": 1790306148316,
+        "modifiedTime": 1790306168063,
+        "lastModifiedBy": "ptubuilder000000",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    }
+  ],
+  "_id": "TfCBUSHPSRZilbip",
+  "img": "icons/tools/fishing/rod-wood-blue-tan.webp",
+  "description": "",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "YEaOEHeB6qwLzrQp",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.41",
+    "createdTime": 1790306148316,
+    "modifiedTime": 1790306168054,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 300000
+}

@@ -314,7 +314,11 @@ class LevelUpData {
         }
         for (const move of this.moves.known) {
             if (!move.uuid.startsWith("Actor")) {
-                movesToAdd.push((await fromUuid(move.uuid)).toObject());
+                movesToAdd.push(foundry.utils.mergeObject(
+                    (await fromUuid(move.uuid)).toObject(),
+                    {flags:{ptu:{learnedFrom:"level"}}},
+                    { inplace: false }
+                ));
             }
         }
 

@@ -86,7 +86,7 @@
                     {{#each data.moves.available as | move |}}
                         {{#if move.uuid}}
                             <div class="d-flex flex-row justify-content-center move">
-                                <span class="linked-item">@UUID[{{move.uuid}}]</span>
+                                <span class="linked-item">@UUID[{{move.uuid}} data-tooltip-direction="RIGHT"]</span>
                             </div>
                         {{/if}}
                     {{/each}}

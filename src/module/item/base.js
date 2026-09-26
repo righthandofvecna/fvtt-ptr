@@ -44,6 +44,10 @@ class PTUItem extends Item {
         return this.rules.length > 0 && this.rules.some((rule) => !rule.ignored);
     }
 
+    get notAutomated() {
+        return !["completed", "no-automation-needed"].includes(this.flags?.ptu?.automationStatus);
+    }
+
     get realId() {
         return this.id;
     }
@@ -122,6 +126,18 @@ class PTUItem extends Item {
 
     get linkHtml() {
         return this.toAnchor({ name: this.name })?.outerHTML ?? "";
+    }
+
+    /**
+     * Render a rich tooltip for this item.
+     * @param {EnrichmentOptions} [enrichmentOptions={}]  Options for text enrichment.
+     * @returns {Promise<{content: string, classes: string[]}>|null}
+     */
+    async richTooltip(enrichmentOptions={}) {
+        return {
+            content: (await this._buildEmbedHTML(this, enrichmentOptions))?.outerHTML ?? "",
+            classes: ["ptu-tooltip"]
+        };
     }
 
     /** Change state of whether items automation should be enabled or disabled. If called

@@ -45,6 +45,9 @@ export function transform(data) {
   if (data.system && !data?.system?.slug) {
     data.system.slug = GithubSyncManager.config.slugify(data.name, { separator: "-", lowercase: true, strict: true });
   }
+  // remove data that shouldn't get synced
+  if (data?.flags?.ptu?.learnedFrom) delete data.flags.ptu.learnedFrom;
+  if (data?.flags?.ptu?.bonusItemSource) delete data.flags.ptu.bonusItemSource;
   return data;
 }
 

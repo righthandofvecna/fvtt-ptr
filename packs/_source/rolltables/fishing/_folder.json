@@ -1,0 +1,22 @@
+{
+  "type": "RollTable",
+  "folder": null,
+  "name": "Fishing",
+  "color": null,
+  "sorting": "a",
+  "_id": "YEaOEHeB6qwLzrQp",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.41",
+    "createdTime": 1790304556430,
+    "modifiedTime": 1790304556430,
+    "lastModifiedBy": "GFCVv4EMgQDa5fGR",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

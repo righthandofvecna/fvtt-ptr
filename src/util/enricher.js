@@ -12,7 +12,37 @@ class Enricher {
     static enrichContentLinks(text, { async, relativeTo } = {async: true}) {
         const documentTypes = CONST.DOCUMENT_LINK_TYPES.concat(["Compendium", "UUID"]);
         const rgx = new RegExp(`@(${documentTypes.join("|")})\\[([^#\\]]+)(?:#([^\\]]+))?](?:{([^}]+)})?`, "g");
-        return this.#replaceTextContent(Array.isArray(text) ? text : [text], rgx, match => this.#createContentLink(match, { async, relativeTo }));
+        return this.#replaceTextContent(Array.isArray(text) ? text : [text], rgx, match => {
+            // const [type, target, hash, name] = match.slice(1, 5);
+            // const uuid = target.indexOf(" ") === -1 ? target : target.substring(0, target.indexOf(" "));
+            // const contentLink = await original.call(foundry.applications.ux.TextEditor, [null, type, uuid, hash, name], enrichmentOptions);
+            // // target may contain additional attributes in the form of `data-key-in-kebab="value"` we need to add as additional attributes
+            // const RE = /([^\s=]+)=["']?((?:.(?!["']?\s+(?:\S+)=|["']))+.)["']?/g;
+            // let submatch;
+            // while ((submatch = RE.exec(target)) !== null) {
+            //     const key = submatch[1];
+            //     const value = submatch[2];
+            //     if (key && value && key.startsWith("data-")) contentLink.dataset[key.substring(5).replace(/-([a-z])/g, g => g[1].toUpperCase())] = value;
+            //     else if (key && value) contentLink.setAttribute(key, value);`
+            // }
+            const [type, target, hash, name] = match.slice(1, 5);
+            const uuid = target.indexOf(" ") === -1 ? target : target.substring(0, target.indexOf(" "));
+            const contentLink = this.#createContentLink([null, type, uuid, hash, name], { async, relativeTo });
+            const addAttributes = (el) => {
+                const RE = /([^\s=]+)=["']?((?:.(?!["']?\s+(?:\S+)=|["']))+.)["']?/g;
+                let submatch;
+                while ((submatch = RE.exec(target)) !== null) {
+                    const key = submatch[1];
+                    const value = submatch[2];
+                    if (key && value && key.startsWith("data-")) el.dataset[key.substring(5).replace(/-([a-z])/g, g => g[1].toUpperCase())] = value;
+                    else if (key && value) el.setAttribute(key, value);
+                }
+                return el;
+            };
+            if (async) return contentLink.then(addAttributes);
+            addAttributes(contentLink);
+            return contentLink;
+        });
     }
 
     /**

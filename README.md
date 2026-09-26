@@ -38,6 +38,10 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Added a "Learned From" field to moves, so you can see which moves were learned via TM/HM, Egg moves, Tutor, etc
+- Added an @Math enricher so items can display calculated values in their descriptions
+- Added a "not fully automated" indicator for items
+- Added basic trainer level-up wizard (if you are using the standard PTR track, you may notice the feature and edge calculation is different; that's intentional! It should be accurate to the progression table, and does *not* include the "bonus" items you get for reaching certain Trainer Tiers)
 - Fixed materialized Struggles editing issue
 - Spirit Actions can now be "used", automatically spending Spirit
 - Fixed the migration for Pokeballs on Foundry v13

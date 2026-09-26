@@ -202,6 +202,14 @@
                 <label for="system.contestType">{{localize "ITEM.ContestType"}}</label>
                 <input class="ml-1 mr-1" name="system.contestType" type="text" value="{{item.system.contestType}}" placeholder="{{localize "ITEM.Range"}}"/>
             </div>
+            {{#if item.isOwned}}
+            <div class="item-row">
+                <label for="flags.ptu.learnedFrom">{{localize "ITEM.LearnedFrom"}}</label>
+                <select name="flags.ptu.learnedFrom" {{#if editLocked}}disabled{{/if}}>
+                    {{selectOptions config.moves.learnedFrom selected=item.learnedFrom localize=true}}
+                </select>
+            </div>
+            {{/if}}
             <div class="item-row">
                 <label for="system.referenceEffect">{{localize "ITEM.ReferenceEffect"}}</label>
                 <span class="ml-1 mr-1 effect">{{#if referenceEffect}}{{{referenceEffect}}}{{else}}None{{/if}}</span>

@@ -269,6 +269,11 @@ export class PTUCharacterSheet extends PTUActorSheet {
 			new PTUXpPoolSheet({ actor: this.actor }).render(true);
 		});
 
+		html.find('.open-trainer-level-up').click((event) => {
+			event.preventDefault();
+			new CONFIG.PTU.ui.trainerLevelUp.sheetClass(this.actor).render(true);
+		});
+
 		// Open Inventory Config
 		html.find('.item-control.item-settings').click((ev) => {
 			const config = new InventoryConfigSheet(this);
