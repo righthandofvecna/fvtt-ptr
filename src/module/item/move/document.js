@@ -100,6 +100,25 @@ class PTUMove extends PTUItem {
         return result;
     }
 
+    get learnedFrom() {
+        if (this.flags?.ptu?.learnedFrom) return this.flags.ptu.learnedFrom;
+        if (this.system.isStruggle) return null;
+        if (this.actor === null) return null;
+        const species = this.actor?.species;
+        if (!species) return null;
+        // check if this move is granted by something
+        if (this.grantedBy !== null) return "grant";
+        // check if this move is a level-up move
+        if (species.system.moves.level.some(move => move.slug == this.slug)) return "level";
+        // check if this move is an egg move
+        if (species.system.moves.egg.some(move => move.slug == this.slug)) return "egg";
+        // check if this move is on the TM list
+        if (species.system.moves.machine.some(move => move.slug == this.slug)) return "tm";
+        // check if this move is a tutor move
+        if (species.system.moves.tutor.some(move => move.slug == this.slug)) return "tutor";
+        return "unknown";
+    }
+
     /**
      * The selector array used by the check system to locate modifiers for this move.
      * Mirrors the logic formerly in PTUActor#prepareAttack().

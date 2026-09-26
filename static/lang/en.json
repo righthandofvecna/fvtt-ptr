@@ -72,6 +72,7 @@
     "Dice": "Base Dice",
     "Snippet": "Effect Snippet",
     "Keywords": "Keywords",
+    "LearnedFrom": "Learned From",
     "Duration": {
       "Value": "Duration",
       "Unit": {
@@ -243,6 +244,32 @@
         "Status":"Status",
         "Physical":"Physical",
         "Special":"Special"
+      },
+      "LearnedFrom": {
+        "Level": {
+          "Label": "Level",
+          "Hint": "This move was learned normally during the course of leveling up"
+        },
+        "TM": {
+          "Label": "TM/HM",
+          "Hint": "This move was learned from a TM or HM"
+        },
+        "Egg": {
+          "Label": "Egg",
+          "Hint": "This move was learned from an Egg"
+        },
+        "Tutor": {
+          "Label": "Tutor",
+          "Hint": "This move was learned from a Tutor"
+        },
+        "Grant": {
+          "Label": "Grant",
+          "Hint": "This move was granted by an external source"
+        },
+        "Unknown": {
+          "Label": "Unknown",
+          "Hint": "This move is of mysterious origin"
+        }
       }
     },
 

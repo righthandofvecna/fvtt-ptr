@@ -180,6 +180,25 @@ export const Tooltips = {
     Hooks.once("setup", ()=>{
       TooltipsPTU.activateListeners();
       CONFIG.PTU.tooltips.observe();
+
+      // override foundry.applications.ux.TextEditor.implementation._createContentLink in a closure
+      foundry.applications.ux.TextEditor.implementation._createContentLink = ((original)=>{
+        return async (match, enrichmentOptions) => {
+          const [type, target, hash, name] = match.slice(1, 5);
+          const uuid = target.indexOf(" ") === -1 ? target : target.substring(0, target.indexOf(" "));
+          const contentLink = await original.call(foundry.applications.ux.TextEditor, [null, type, uuid, hash, name], enrichmentOptions);
+          // target may contain additional attributes in the form of `data-key-in-kebab="value"` we need to add as additional attributes
+          const RE = /([^\s=]+)=["']?((?:.(?!["']?\s+(?:\S+)=|["']))+.)["']?/g;
+          let submatch;
+          while ((submatch = RE.exec(target)) !== null) {
+            const key = submatch[1];
+            const value = submatch[2];
+            if (key && value && key.startsWith("data-")) contentLink.dataset[key.substring(5).replace(/-([a-z])/g, g => g[1].toUpperCase())] = value;
+            else if (key && value) contentLink.setAttribute(key, value);
+          }
+          return contentLink;
+        };
+      })(foundry.applications.ux.TextEditor.implementation._createContentLink);
     })
   }
 }

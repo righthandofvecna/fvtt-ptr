@@ -38,6 +38,26 @@
                     </div>
                     <div class="item-tags">
                         {{> actionCosts item=item}}
+                        {{#if (eq item.learnedFrom "egg")}}
+                            <div class="tag shadowless tooltip" title="{{localize "PTU.Move.LearnedFrom.Egg.Hint"}}" style="color:blueviolet">
+                                <i class="fa-solid fa-egg"></i>
+                            </div>
+                        {{/if}}
+                        {{#if (eq item.learnedFrom "tm")}}
+                            <div class="tag shadowless tooltip" title="{{localize "PTU.Move.LearnedFrom.TM.Hint"}}" style="color:blueviolet">
+                                <i class="fa-solid fa-book"></i>
+                            </div>
+                        {{/if}}
+                        {{#if (eq item.learnedFrom "tutor")}}
+                            <div class="tag shadowless tooltip" title="{{localize "PTU.Move.LearnedFrom.Tutor.Hint"}}" style="color:blueviolet">
+                                <i class="fa-solid fa-chalkboard-teacher"></i>
+                            </div>
+                        {{/if}}
+                        {{#if (eq item.learnedFrom "unknown")}}
+                            <div class="tag shadowless tooltip" title="{{localize "PTU.Move.LearnedFrom.Unknown.Hint"}}" style="color:blueviolet">
+                                <i class="fa-solid fa-question"></i>
+                            </div>
+                        {{/if}}
                         {{#if item.hasAutomation}}
                             {{#if item.enabled}}
                                 <div class="tag shadowless tooltip" title="This item has automation!">

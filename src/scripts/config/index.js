@@ -124,6 +124,14 @@ const data = {
       "Status": "PTU.Move.Category.Status",
       "Physical": "PTU.Move.Category.Physical",
       "Special": "PTU.Move.Category.Special",
+    },
+    learnedFrom: {
+      "level": "PTU.Move.LearnedFrom.Level",
+      "tm": "PTU.Move.LearnedFrom.TM",
+      "egg": "PTU.Move.LearnedFrom.Egg",
+      "tutor": "PTU.Move.LearnedFrom.Tutor",
+      "grant": "PTU.Move.LearnedFrom.Grant",
+      "unknown": "PTU.Move.LearnedFrom.Unknown"
     }
   },
   frequencies: {
