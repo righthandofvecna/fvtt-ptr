@@ -102,7 +102,6 @@ class TooltipsPTU {
    * @protected
    */
   async _onHoverContentLink(doc, { extras }={}) {
-    console.log("PTU | Tooltip PTU OnHoverContentLink", { doc, extras });
     // TODO: Need a way to ask the chat message how to resolve the UUID via a destroyed Item, but don't want to put chat
     //  message-specific logic here.
     if ( !doc ) return game.tooltip.deactivate();
@@ -111,6 +110,7 @@ class TooltipsPTU {
     if ( !content ) return;
     this.tooltip.innerHTML = content;
     if ( classes?.length ) this.tooltip.classList.add(...classes);
+    if (!game.tooltip.element) return;
     const { tooltipDirection } = game.tooltip.element.dataset;
     requestAnimationFrame(() => this._positionItemTooltip(tooltipDirection));
   }
