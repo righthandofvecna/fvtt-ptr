@@ -101,8 +101,8 @@ class ItemSummaryRenderer {
 
     async renderItemSummary(element, item) {
         const textContent = this._newLineToBreak(item.system.snippet ? item.system.snippet : item.system.effect).trim();
-        const slice = textContent.indexOf('Effect:');
-        const content = "<p>" + (slice > 0 ? textContent.slice(0, slice) + "</p><hr><p>" + textContent.slice(slice) : textContent) + "</p>"
+        const slice = textContent.indexOf('<br>Effect:');
+        const content = "<p>" + (slice > 0 ? textContent.slice(0, slice) + "</p><hr><p>" + textContent.slice(slice+4) : textContent) + "</p>"
             + (item.referenceEffect ? `<hr><p>@UUID[${item.referenceEffect}]</p>` : "");
 
         element.innerHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(content, {async: true, relativeTo: item})

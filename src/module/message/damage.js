@@ -259,7 +259,7 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
                 roll: Number(message.flags.ptu.context.accuracyRollResult ?? 0)
             }),
         ].reduce((a, b) => {
-            if (!a[b.slug]) a[b.slug] = b;
+            if (!a[b.slug ?? b.system?.slug]) a[b.slug ?? b.system?.slug] = b;
             return a;
         }, {}));
 
@@ -304,7 +304,7 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
             roll: Number(message.flags.ptu.context.accuracyRollResult ?? 0)
         }),
     ].reduce((a, b) => {
-        if (!a[b.slug]) a[b.slug] = b;
+        if (!a[b.slug ?? b.system?.slug]) a[b.slug ?? b.system?.slug] = b;
         return a;
     }, {}));
 

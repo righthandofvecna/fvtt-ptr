@@ -145,7 +145,7 @@ async function applyEffectsFromAttack({ message, targets }) {
                 options: messageOptions,
                 roll: rollResult,
             })).reduce((acc, e) => {
-                if (!acc[e.slug]) acc[e.slug] = e;
+                if (!acc[e.slug ?? e.system?.slug]) acc[e.slug ?? e.system?.slug] = e;
                 return acc;
             }, {})
         );
@@ -178,7 +178,7 @@ async function applyEffectsFromAttack({ message, targets }) {
             options: messageOptions,
             roll: rollResult,
         })).reduce((acc, e) => {
-            if (!acc[e.slug]) acc[e.slug] = e;
+            if (!acc[e.slug ?? e.system?.slug]) acc[e.slug ?? e.system?.slug] = e;
             return acc;
         }, {})
     );

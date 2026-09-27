@@ -284,43 +284,18 @@ export class TokenPanel extends Application {
             });
         }
 
-        for (const action of $html.find(".action.attack, .action.struggle")) {
+        for (const action of $html.find(".action")) {
             action.addEventListener("click", (event) => {
-                const id = event.currentTarget.dataset.id;
-                const move = this.actor.attacks.get(id);
-                if (!move) return;
-
-                if (move.rollable) {
-                    move.use({ event });
-                } else {
-                    move.consume?.();
-                    move.sendToChat?.();
-                }
+                const itemId = event.currentTarget.dataset.id;
+                const item = this.actor.items.get(itemId) ?? this.actor.phantomItems?.get(itemId);
+                if (!item) return;
+                item.use({ event });
             });
             action.addEventListener("contextmenu", (event) => {
-                const id = event.currentTarget.dataset.id;
-                const move = this.actor.attacks.get(id);
-                return move?.sendToChat?.();
+                const itemId = event.currentTarget.dataset.id;
+                const item = this.actor.items.get(itemId) ?? this.actor.phantomItems?.get(itemId);
+                return item?.sheet?.render?.({force: true});
             });
-            // TODO: hover to highlight valid targets on the canvas
-            // This isn't quite working how I wanted, but it's a start
-            // leaving this commented here for future use
-            // action.addEventListener("mouseover", (event) => {
-            //     if (!canvas.ready) return;
-            //     const isAlly = event.currentTarget.dataset.ally === "true";
-            //     const tokens = canvas.tokens.placeables.filter(t => {
-            //         if (!t.isVisible || !t.actor) return false;
-            //         return isAlly ? this.actor.isFriendOf(t.actor) : this.actor.isEnemyOf(t.actor);
-            //     });
-            //     tokens.forEach(t => t._onHoverIn(event));
-            //     this.moveHighlights = tokens;
-            // });
-            // action.addEventListener("mouseout", (event) => {
-            //     if (this.moveHighlights?.length > 0) {
-            //         this.moveHighlights.forEach(t => t._onHoverOut(event));
-            //         this.moveHighlights = [];
-            //     }
-            // });
         }
 
         const dexBtn = $html.find(".tab-strip-dex")[0];
@@ -334,41 +309,6 @@ export class TokenPanel extends Application {
                 game.user.setFlag("ptu", "settings.tokenPanelUndocked", true);
             });
         }
-
-        for (const action of $html.find(".action.item.pokeball")) {
-            action.addEventListener("click", (event) => {
-                const id = event.currentTarget.dataset.id;
-                const ball = this.actor.items.get(id);
-                if (!ball) return;
-
-                if (ball.roll) ball.roll({event});
-                else ball.sendToChat?.();
-            });
-        }
-
-        for (const action of $html.find(".action.item:not(.pokeball), .action.ability, .action.feat, .action.edge, .action.pokeedge, .action.capability")) {
-            action.addEventListener("click", (event) => {
-                const id = event.currentTarget.dataset.id;
-                const item = this.actor.items.get(id);
-                if (!item) return;
-
-                if (item.roll) {
-                    item.roll({event}).then(() => item?.consume?.());
-                } else {
-                    item?.use?.();
-                }
-            });
-            action.addEventListener("dblclick", (event) => {
-                const id = event.currentTarget.dataset.id;
-                const item = this.actor.items.get(id);
-                return item?.sheet?.render?.({force: true});
-            });
-            action.addEventListener("contextmenu", (event) => {
-                const id = event.currentTarget.dataset.id;
-                const item = this.actor.items.get(id);
-                return item?.sendToChat?.();
-            });
-        };
 
         for (const actor of $html.find(".trainer, .pokemon")) {
             actor.addEventListener("click", (event) => {

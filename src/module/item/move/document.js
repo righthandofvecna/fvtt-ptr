@@ -4,6 +4,7 @@ import { PTUAttackCheck } from '../../system/check/attack.js';
 import { PTUDamageCheck } from '../../system/check/damage.js';
 import { resolveDbFormula } from '../../../util/value-resolver.js';
 import { sendUsageMessage } from '../../message/usage.js';
+import { RuleElements } from "../../rules/index.js";
 class PTUMove extends PTUItem {
     get rollable() {
         return !(isNaN(Number(this.system.ac ?? undefined)) && !this.isDamaging);
@@ -300,6 +301,35 @@ class PTUMove extends PTUItem {
     }
 
     /** @override */
+    prepareRuleElements(options={}) {
+        if (!this.actor) throw new Error("PTU | Item must have an actor to prepare rule elements");
+        if (!this.actor.canHostRuleElements) return (this.rules = []);
+        super.prepareRuleElements(options);
+        
+        // add an Apply Effect for this move if it has a reference effect and isn't rollable
+        // This is to support legacy items that don't have the apply effects set up for them
+        // and instead relied on the use() auto-applying the reference effect
+        // TODO: replace this with a migration script and remove the referenceEffect field
+        if (!this.rollable && this.system.frequency?.type !== "static" && this.referenceEffect) {
+            try {
+                const { ApplyEffect } = RuleElements.builtin;
+                const affects = this.range.includes("Self") ? "origin" : "target";
+                this.rules.push(new ApplyEffect({
+                    key: "ApplyEffect",
+                    ignored: false,
+                    predicate: "",
+                    uuid: this.referenceEffect,
+                    affects,
+                    selectors: [`${this.id}-apply-effects`],
+                }, this, { ...options, sourceIndex: -1 }));
+            } catch (error) {
+                console.error("Failed to prepare ApplyEffect rule element:", error);
+            }
+        }
+        return this.rules;
+    }
+
+    /** @override */
     async use(options = {}) {
         // Rollable moves: run the attack check, then optionally chain damage.
         if (this.rollable) {
@@ -342,34 +372,34 @@ class PTUMove extends PTUItem {
             await PTUCondition.HandleConfusion(this, this.actor);
         }
 
-        if (this.referenceEffect) {
-            const results = [];
-            const effect = await fromUuid(this.referenceEffect);
-            if (this.range.includes("Self")) {
-                const result = await effect.apply([this.actor], this.actor);
-                if (result) results.push(...result);
-            }
-            else {
-                const targets = options.targets || [...game.user.targets] || canvas.tokens.controlled;
-                const result = await effect.apply(targets, this.actor);
-                if (result) results.push(...result);
-            }
+        // if (this.referenceEffect) {
+        //     const results = [];
+        //     const effect = await fromUuid(this.referenceEffect);
+        //     if (this.range.includes("Self")) {
+        //         const result = await effect.apply([this.actor], this.actor);
+        //         if (result) results.push(...result);
+        //     }
+        //     else {
+        //         const targets = options.targets || [...game.user.targets] || canvas.tokens.controlled;
+        //         const result = await effect.apply(targets, this.actor);
+        //         if (result) results.push(...result);
+        //     }
 
-            if (results.length > 0) {
-                const statements = results.map((effect) =>
-                    game.i18n.format("PTU.Broadcast.ApplyEffect", { actor: effect.actor.link, effect: effect.link, source: this.actor.link })
-                ).filter(s => s).join("<br/>")
-                const enrichedHtml = await foundry.applications.ux.TextEditor.implementation.enrichHTML(statements, { async: true, relativeTo: this })
-                const chatData = {
-                    user: game.user.id,
-                    speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-                    content: await foundry.applications.handlebars.renderTemplate("systems/ptu/static/templates/chat/effect-applied.hbs", { statements: enrichedHtml }),
-                    style: CONST.CHAT_MESSAGE_STYLES.OTHER,
-                    whisper: this.actor.hasPlayerOwner ? [game.user.id] : game.users.filter(u => u.isGM).map(u => u.id),
-                };
-                await ChatMessage.create(chatData);
-            }
-        }
+        //     if (results.length > 0) {
+        //         const statements = results.map((effect) =>
+        //             game.i18n.format("PTU.Broadcast.ApplyEffect", { actor: effect.actor.link, effect: effect.link, source: this.actor.link })
+        //         ).filter(s => s).join("<br/>")
+        //         const enrichedHtml = await foundry.applications.ux.TextEditor.implementation.enrichHTML(statements, { async: true, relativeTo: this })
+        //         const chatData = {
+        //             user: game.user.id,
+        //             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        //             content: await foundry.applications.handlebars.renderTemplate("systems/ptu/static/templates/chat/effect-applied.hbs", { statements: enrichedHtml }),
+        //             style: CONST.CHAT_MESSAGE_STYLES.OTHER,
+        //             whisper: this.actor.hasPlayerOwner ? [game.user.id] : game.users.filter(u => u.isGM).map(u => u.id),
+        //         };
+        //         await ChatMessage.create(chatData);
+        //     }
+        // }
 
         // Send a usage message so that ApplyEffect Rule Elements with the
         // "apply-effects" selector have an entry point for this move.
