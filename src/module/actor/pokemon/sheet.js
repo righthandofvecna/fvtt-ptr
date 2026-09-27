@@ -300,7 +300,7 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		// Generic use handler for non-move rollable items (spirit actions, and future item types).
 		// Covers the .item-icon.rollable elements rendered by item-display-partial for non-move items.
 		// Phantom items are used directly (without materializing), matching phantom struggle behaviour.
-		html.find('.item-icon.rollable:not(.move)').click(async (event) => {
+		html.find('.item .item-icon').click(async (event) => {
 			const itemId = $(event.currentTarget).closest("li.item").data("item-id");
 			const item = this._getOwnedItemByRealId(itemId) ?? this.actor.phantomItems?.get(itemId);
 			if (!item?.use) return;
