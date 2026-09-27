@@ -117,6 +117,7 @@ const data = {
       "unlimited": "ITEM.Duration.Unit.Unlimited",
       "encounter": "ITEM.Duration.Unit.Encounter",
       "rounds": "ITEM.Duration.Unit.Rounds",
+      "turns": "ITEM.Duration.Unit.Turns",
     }
   },
   moves: {

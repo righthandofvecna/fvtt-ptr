@@ -78,6 +78,7 @@
       "Unit": {
         "Label": "Duration Unit",
         "Rounds": "Rounds",
+        "Turns": "Turns",
         "Encounter": "End of Encounter",
         "Unlimited": "Unlimited (never expires)"
       },
