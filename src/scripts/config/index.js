@@ -126,12 +126,12 @@ const data = {
       "Special": "PTU.Move.Category.Special",
     },
     learnedFrom: {
-      "level": "PTU.Move.LearnedFrom.Level",
-      "tm": "PTU.Move.LearnedFrom.TM",
-      "egg": "PTU.Move.LearnedFrom.Egg",
-      "tutor": "PTU.Move.LearnedFrom.Tutor",
-      "grant": "PTU.Move.LearnedFrom.Grant",
-      "unknown": "PTU.Move.LearnedFrom.Unknown"
+      "level": "PTU.Move.LearnedFrom.Level.Label",
+      "tm": "PTU.Move.LearnedFrom.TM.Label",
+      "egg": "PTU.Move.LearnedFrom.Egg.Label",
+      "tutor": "PTU.Move.LearnedFrom.Tutor.Label",
+      "grant": "PTU.Move.LearnedFrom.Grant.Label",
+      "unknown": "PTU.Move.LearnedFrom.Unknown.Label"
     }
   },
   frequencies: {
