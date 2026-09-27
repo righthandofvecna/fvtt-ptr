@@ -163,6 +163,10 @@ class PTUPokemonActor extends PTUActor {
             health: { current: system.health.value, temp: system.tempHp, injuries: system.health.injuries },
             skills: {},
         }
+
+        // set spirit roll options
+        Object.keys(this.flags.ptu.rollOptions.all ?? {}).filter(k=>k.startsWith("self:spirit:")).forEach(key => delete this.flags.ptu.rollOptions.all[key]);
+        this.flags.ptu.rollOptions.all[`self:spirit:${system.spirit.value}`] = true
     }
 
     /** @override */

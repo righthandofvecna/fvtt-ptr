@@ -38,6 +38,10 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Added `self:spirit:*` roll option, and parsing for predicates like `self:spirit:1+`, `attack:stage:0+` or `move:ac:3-`
+- Fixed a bug that prevented clicking on status-only moves directly from a Pokemon's sheet
+- Fixed an issue that prevented multiple ApplyEffect rule elements from triggering during an "apply-effects" event
+- Fixed an issue where the height of editable description fields on the character sheet was zero
 - Added a "Learned From" field to moves, so you can see which moves were learned via TM/HM, Egg moves, Tutor, etc
 - Added an @Math enricher so items can display calculated values in their descriptions
 - Added a "not fully automated" indicator for items

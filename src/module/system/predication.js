@@ -45,9 +45,21 @@ class PTUPredicate extends Array {
     _isTrue(statement, domain) {
         return (
             (typeof statement === "string" && domain.has(statement)) ||
+            (StatementValidator.isOffsetOp(statement) && this._testOffsetOp(statement, domain)) ||
             (StatementValidator.isBinaryOp(statement) && this._testBinaryOp(statement, domain)) ||
             (StatementValidator.isCompound(statement) && this._testCompound(statement, domain)) 
         )
+    }
+
+    _testOffsetOp(statement, domain) {
+        const base = statement.split(":").at(-1);
+        if (base.length < 2) return false;
+        const num = parseInt(base.slice(0, -1));
+        const offset = base.at(-1);
+        if (!Number.isInteger(num)) return false;
+        if (offset !== "+" && offset !== "-") return false;
+        const sameDomain = Array.from(domain).filter((s) => s.startsWith(statement.substring(0, statement.lastIndexOf(":") + 1)));
+        return offset === "+" ? sameDomain.some((s) => parseInt(s.split(":").at(-1)) >= num) : sameDomain.some((s) => parseInt(s.split(":").at(-1)) <= num);
     }
 
     _testBinaryOp(statement, domain) {
@@ -133,6 +145,17 @@ class StatementValidator {
                 this.isIf(statement)
             )
         );
+    }
+
+    static isOffsetOp(statement) {
+        if (typeof statement !== "string") return false;
+        let base = statement.split(":").at(-1);
+        if (base.length < 2) return false;
+        let num = parseInt(base.slice(0, -1));
+        let offset = base.at(-1);
+        if (!Number.isInteger(num)) return false
+        if (offset !== "+" && offset !== "-") return false;
+        return true;
     }
 
     static isAnd(statement) {
