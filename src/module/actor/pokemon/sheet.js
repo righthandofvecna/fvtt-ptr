@@ -291,13 +291,7 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		});
 
 		html.find('.rollable.skill').click(this._onSkillRoll.bind(this));
-		html.find('.rollable.move').click(async (event) => {
-			const attackId = $(event.currentTarget).closest("li.item").data("item-id");
-			const move = this.actor.attacks.get(attackId);
-			if (!move) return;
-			await move.use({ event });
-		});
-		// Generic use handler for non-move rollable items (spirit actions, and future item types).
+		// Generic use handler for all items (spirit actions, and future item types).
 		// Covers the .item-icon.rollable elements rendered by item-display-partial for non-move items.
 		// Phantom items are used directly (without materializing), matching phantom struggle behaviour.
 		html.find('.item .item-icon').click(async (event) => {
