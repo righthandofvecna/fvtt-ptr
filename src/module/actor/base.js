@@ -1023,7 +1023,7 @@ class PTUActor extends Actor {
     _onEmbeddedDocumentChange(embeddedName) {
         if (this.isToken) {
             return super._onEmbeddedDocumentChange(embeddedName);
-        } else if (game.combat?.getCombatantByActor(this.id)) {
+        } else if (game.combat?.getCombatantsByActor(this.id)?.length) {
             // Needs to be done since `super._onEmbeddedDocumentChange` isn't called
             ui.combat.render();
         }
