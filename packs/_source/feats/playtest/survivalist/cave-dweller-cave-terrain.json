@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Your eyes are used to very low levels of light. You do not suffer Blindness for being in Low-Light conditions. If you would be Totally Blinded by complete darkness, you instead suffer the penalties of Blindness, and may make Survival Checks instead of Acrobatics to avoid becoming Tripped. You are immune to Stealth Rock Hazards. ",
+    "effect": "Your eyes are used to very low levels of light. You do not suffer @UUID[Compendium.ptu.effects.Item.g2QutQJutABxFIw6]{Blindness} for being in Low-Light conditions. If you would be @UUID[Compendium.ptu.effects.Item.bgmIrNI1jJHTVwVN]{Totally Blinded} by complete darkness, you instead suffer the penalties of Blindness, and may make Survival Checks instead of Acrobatics to avoid becoming Tripped. You are immune to @UUID[Compendium.ptu.moves.Item.XklsarNBfkknbU8O]{Stealth Rock} Hazards. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -24,7 +24,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -33,7 +33,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -47,7 +48,10 @@
       "bind": false
     },
     "leagueLegal": false,
-    "prerequisites": [],
+    "prerequisites": [
+      "Survivalist",
+      "Terrain Talent"
+    ],
     "notes": "",
     "free": false,
     "class": ""
