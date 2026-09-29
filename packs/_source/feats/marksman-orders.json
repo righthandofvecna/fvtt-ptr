@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -98,5 +99,6 @@
     "exportSource": null
   },
   "sort": 54600000,
-  "_id": "m0mQ75HwcMpOL7YS"
+  "_id": "m0mQ75HwcMpOL7YS",
+  "folder": null
 }

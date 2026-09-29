@@ -43,7 +43,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -76,7 +77,7 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Adept Command",
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -92,5 +93,6 @@
     "exportSource": null
   },
   "sort": 0,
-  "_id": "heioWMGV1L57da0d"
+  "_id": "heioWMGV1L57da0d",
+  "folder": null
 }

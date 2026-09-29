@@ -36,7 +36,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -88,5 +89,6 @@
     "exportSource": null
   },
   "sort": 31100000,
-  "_id": "SlLaxSkmeRNWnslg"
+  "_id": "SlLaxSkmeRNWnslg",
+  "folder": null
 }

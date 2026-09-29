@@ -2,9 +2,16 @@
   "name": "Scheme Twist",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Rally Ability. When you give [Orders], you may pay 1 AP to activate Rally, ignoring Frequency, targeting only the targets of the [Orders]. A target may only be affected by Rally in this way once per Scene.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.abilities.Item.tLxxCaULW1E6NdPJ]{Rally} Ability. When you give [Orders], you may pay 1 AP to activate Rally, ignoring Frequency, targeting only the targets of the [Orders]. A target may only be affected by Rally in this way once per Scene.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.tLxxCaULW1E6NdPJ"
+      }
+    ],
     "enabled": true,
     "slug": "scheme-twist-cr",
     "schema": {
@@ -37,7 +44,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,7 +67,8 @@
     "class": "Commander",
     "name": "Scheme Twist [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "scheme-twist"
+    "replacesSlug": "scheme-twist",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -70,7 +79,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
