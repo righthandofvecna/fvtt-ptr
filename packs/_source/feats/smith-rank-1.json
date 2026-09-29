@@ -35,7 +35,8 @@
     "stackSlugs": false,
     "keywords": [
       "Ranked 2",
-      "+Attack"
+      "+Attack",
+      "General"
     ],
     "frequency": {
       "type": "static",
@@ -47,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -99,5 +101,6 @@
     "exportSource": null
   },
   "sort": 13700000,
-  "_id": "Cp2aIRdqOYq2fIqQ"
+  "_id": "Cp2aIRdqOYq2fIqQ",
+  "folder": null
 }

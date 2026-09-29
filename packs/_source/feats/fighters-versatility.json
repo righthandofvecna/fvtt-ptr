@@ -66,7 +66,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "+Any"
+      "+Any",
+      "General"
     ],
     "frequency": {
       "type": "scene",
@@ -78,7 +79,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -130,5 +132,6 @@
     "exportSource": null
   },
   "sort": 54400000,
-  "_id": "lsyn69Zu42KmdTta"
+  "_id": "lsyn69Zu42KmdTta",
+  "folder": null
 }

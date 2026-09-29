@@ -28,7 +28,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Ranked 4"
+      "Ranked 4",
+      "General"
     ],
     "frequency": {
       "type": "static",
@@ -40,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
