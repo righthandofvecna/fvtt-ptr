@@ -1,57 +1,57 @@
 {
   "folder": "TuFJ2nmx9i2k6KYk",
-  "name": "Mega Evolve: Lucario Z",
+  "name": "Mega Evolve: Golisopod",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "This effect will mega-evolve your Lucario into its Z-Forme.",
+    "effect": "This effect will mega-evolve your Golisopod.",
     "snippet": "",
     "rules": [
       {
         "key": "TokenImage",
         "predicate": [
           {
-            "value": "species:lucario"
+            "value": "species:golisopod"
           },
           {
             "value": "self:pokemon:shiny"
           }
         ],
-        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/448s_MEGA_Z.webp"
+        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/768s_MEGA.webp"
       },
       {
         "key": "TokenImage",
         "predicate": {
           "and": [
-            "species:lucario",
+            "species:golisopod",
             {
               "not": "self:pokemon:shiny"
             }
           ]
         },
-        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/448_MEGA_Z.webp"
+        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/768_MEGA.webp"
       },
       {
         "key": "TemporarySpecies",
         "predicate": [
           {
-            "value": "species:lucario"
+            "value": "species:golisopod"
           }
         ],
-        "uuid": "Compendium.ptu.species.Item.TXZ01P3etfUfJU8c"
+        "uuid": "Compendium.ptu.species.Item.TEzIsqoewO5XkJ5R"
       },
       {
         "key": "GrantItem",
         "predicate": [
-          "species:lucario"
+          "species:golisopod"
         ],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.abilities.Item.tNmZxk6rHR7oMyOb"
+        "uuid": "Compendium.ptu.abilities.Item.iWuCTYkVJZ0cqVjl"
       }
     ],
     "enabled": true,
-    "slug": "mega-evolve-lucario",
+    "slug": "mega-evolve-golisopod",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -91,5 +91,5 @@
       "showInTokenPanel": false
     }
   },
-  "_id": "aTZf2QPvVMP8UOOQ"
+  "_id": "ekZLQdbG2VcWU5cN"
 }

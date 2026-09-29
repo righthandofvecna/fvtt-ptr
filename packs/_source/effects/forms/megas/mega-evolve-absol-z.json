@@ -1,57 +1,56 @@
 {
-  "folder": "TuFJ2nmx9i2k6KYk",
-  "name": "Mega Evolve: Lucario Z",
+  "name": "Mega Evolve: Absol Z",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "This effect will mega-evolve your Lucario into its Z-Forme.",
+    "effect": "This effect will mega-evolve your Absol into its Z-Forme.",
     "snippet": "",
     "rules": [
       {
         "key": "TokenImage",
         "predicate": [
           {
-            "value": "species:lucario"
+            "value": "species:absol"
           },
           {
             "value": "self:pokemon:shiny"
           }
         ],
-        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/448s_MEGA_Z.webp"
+        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/359s_MEGA_Z.webp"
       },
       {
         "key": "TokenImage",
         "predicate": {
           "and": [
-            "species:lucario",
+            "species:absol",
             {
               "not": "self:pokemon:shiny"
             }
           ]
         },
-        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/448_MEGA_Z.webp"
+        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/359_MEGA_Z.webp"
       },
       {
         "key": "TemporarySpecies",
         "predicate": [
           {
-            "value": "species:lucario"
+            "value": "species:absol"
           }
         ],
-        "uuid": "Compendium.ptu.species.Item.TXZ01P3etfUfJU8c"
+        "uuid": "Compendium.ptu.species.Item.MIXOBveAZW4mQusU"
       },
       {
         "key": "GrantItem",
         "predicate": [
-          "species:lucario"
+          "species:absol"
         ],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.abilities.Item.tNmZxk6rHR7oMyOb"
+        "uuid": "Compendium.ptu.abilities.Item.w6V93SHSUDI2I348"
       }
     ],
     "enabled": true,
-    "slug": "mega-evolve-lucario",
+    "slug": "mega-evolve-absol-z",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -84,12 +83,13 @@
     "context": null
   },
   "effects": [],
+  "folder": "TuFJ2nmx9i2k6KYk",
   "flags": {
     "ptu": {
-      "automationStatus": "completed",
+      "automationStatus": "needs-automation",
       "devNote": "",
       "showInTokenPanel": false
     }
   },
-  "_id": "aTZf2QPvVMP8UOOQ"
+  "_id": "tl3dOBJVOYZE8cep"
 }
