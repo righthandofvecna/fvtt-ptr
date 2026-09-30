@@ -71,7 +71,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Trickster Orders"
+      "prereqBackup": "Trickster Orders",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
     }
   },
   "_stats": {

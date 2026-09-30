@@ -36,7 +36,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "General"
+    ],
     "frequency": {
       "type": "static",
       "max": null,

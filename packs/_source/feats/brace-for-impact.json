@@ -72,7 +72,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Guardian Orders"
+      "prereqBackup": "Guardian Orders",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {

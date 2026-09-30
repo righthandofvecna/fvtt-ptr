@@ -27,7 +27,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "+Def or Special Def"
+      "+Def or Special Def",
+      "General"
     ],
     "frequency": {
       "type": "static",
@@ -39,7 +40,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,

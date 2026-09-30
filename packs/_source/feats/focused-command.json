@@ -24,7 +24,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Orders"
+      "Orders",
+      "General"
     ],
     "frequency": {
       "type": "at-will",
@@ -36,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -60,7 +62,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -71,7 +74,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Master Command, one of Focus, Guile, Intimidate, or Pokémon Education at Expert",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -84,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 41900000,
   "_id": "bokpJe67zY99O0Jd"
 }
