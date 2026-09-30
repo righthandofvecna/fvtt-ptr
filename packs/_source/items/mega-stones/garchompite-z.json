@@ -1,0 +1,79 @@
+{
+  "name": "Garchompite Z",
+  "system": {
+    "origin": "",
+    "effect": "Mega Evolves Garchomp into its Z Mega when used in conjunction with a Mega Ring.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "garchompite-z",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:42.044Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "Compendium.ptu.effects.Item.kEgkya08zlFx7rvC",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Mega Stone"
+    ],
+    "frequency": {
+      "type": "scene",
+      "max": 1,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Garchompite",
+    "useCount": 0
+  },
+  "type": "item",
+  "img": "/systems/ptu/static/images/item_icons/garchompite.webp",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false,
+      "used": null
+    }
+  },
+  "folder": "3aYHO5npuCcYqxoX",
+  "_id": "lXIiB3kYwlm5NaWr"
+}
