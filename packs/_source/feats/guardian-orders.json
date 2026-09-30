@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -98,5 +99,6 @@
     "exportSource": null
   },
   "sort": 69000000,
-  "_id": "zy3F5IZmiosjU2HJ"
+  "_id": "zy3F5IZmiosjU2HJ",
+  "folder": null
 }

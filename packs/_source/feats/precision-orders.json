@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -98,5 +99,6 @@
     "exportSource": null
   },
   "sort": 27800000,
-  "_id": "Phenl8QYGXnXaWm5"
+  "_id": "Phenl8QYGXnXaWm5",
+  "folder": null
 }
