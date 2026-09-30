@@ -24,7 +24,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Patron Stat"
+      "Patron Stat",
+      "General"
     ],
     "frequency": {
       "type": "static",
@@ -36,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,8 +61,9 @@
     "name": "Pact Gift",
     "useCount": 0,
     "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "blessed-and-damned",
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -70,7 +73,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "All of your Patrons Major Gifts, GM Permission"
+      "prereqBackup": "All of your Patrons Major Gifts, GM Permission",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -83,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 49100000,
   "_id": "iCR1VwEWonLsBlVD"
 }
