@@ -1,20 +1,24 @@
 {
   "folder": "TuFJ2nmx9i2k6KYk",
-  "name": "Mega Evolve: Lucario",
+  "name": "Mega Evolve: Lucario Z",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "This effect will mega-evolve your Lucario.",
+    "effect": "This effect will mega-evolve your Lucario into its Z-Forme.",
     "snippet": "",
     "rules": [
       {
         "key": "TokenImage",
         "predicate": [
-          "species:lucario",
-          "self:pokemon:shiny"
+          {
+            "value": "species:lucario"
+          },
+          {
+            "value": "self:pokemon:shiny"
+          }
         ],
-        "value": "/systems/ptu/static/images/sprites/448s_MEGA.webp"
+        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/448s_MEGA_Z.webp"
       },
       {
         "key": "TokenImage",
@@ -26,14 +30,16 @@
             }
           ]
         },
-        "value": "/systems/ptu/static/images/sprites/448_MEGA.webp"
+        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/448_MEGA_Z.webp"
       },
       {
         "key": "TemporarySpecies",
         "predicate": [
-          "species:lucario"
+          {
+            "value": "species:lucario"
+          }
         ],
-        "uuid": "Compendium.ptu.species.Item.5plofMruWNtAdsRZ"
+        "uuid": "Compendium.ptu.species.Item.TXZ01P3etfUfJU8c"
       },
       {
         "key": "GrantItem",
@@ -41,11 +47,13 @@
           "species:lucario"
         ],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.abilities.Item.MBgvgf5LwdH5UGib"
+        "uuid": "Compendium.ptu.abilities.Item.tNmZxk6rHR7oMyOb"
       }
     ],
     "enabled": true,
-    "slug": "mega-evolve-lucario",
+    "slug": "mega-evolve-lucario-z",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -62,7 +70,7 @@
     "duration": {
       "value": -1,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -73,25 +81,15 @@
       "show": true
     },
     "badge": null,
-    "context": null,
-    "contentSet": "",
-    "replacesSlug": ""
+    "context": null
   },
   "effects": [],
-  "ownership": {
-    "default": 0
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
   },
-  "flags": {},
-  "_stats": {
-    "systemId": "ptu",
-    "systemVersion": "4.0.0.beta.11",
-    "coreVersion": "13.350",
-    "createdTime": 1696095991946,
-    "modifiedTime": 1696772778689,
-    "lastModifiedBy": "ptubuilder000000",
-    "duplicateSource": null,
-    "exportSource": null
-  },
-  "_id": "CozDdxtW3vb05sju",
-  "sort": 100000
+  "_id": "aTZf2QPvVMP8UOOQ"
 }
