@@ -1,4 +1,4 @@
-import { extractApplyEffects } from "../rules/helpers.js";
+import { applyPostAttackEffects, buildItemDomains } from "../rules/pipeline.js";
 import { ChatMessagePTU } from "./base.js";
 
 class AttackMessagePTU extends ChatMessagePTU {
@@ -95,9 +95,12 @@ class AttackMessagePTU extends ChatMessagePTU {
 }
 
 /**
- * Apply ApplyEffect rule elements after an attack-only (no damage) move hits.
+ * Apply ApplyEffect rule elements after an attack-only (no damage) move is used.
  * Called from the "Apply Effects" button on attack messages for status moves.
- * Only processes targets that were not missed.
+ *
+ * All targets (including misses) are passed through the pipeline. ApplyEffect
+ * rule elements should use attack:outcome:hit / attack:outcome:miss predicates
+ * to gate on the attack result.
  *
  * @param {object} params
  * @param {AttackMessagePTU} params.message
@@ -112,110 +115,21 @@ async function applyEffectsFromAttack({ message, targets }) {
     const originAttackOptions = message.flags.ptu.attack ?? {};
     const originItem = (await fromUuid(originAttackOptions.actor))?.items.get(originAttackOptions.id) ?? null;
 
-    // Build item-specific domain variants so rules can target a specific move.
-    const itemDomains = originItem ? [
-        `${originItem.id}-apply-effects`,
-        `${originItem.slug}-apply-effects`,
-    ] : [];
-    if (originItem?.type === "move") {
-        itemDomains.push(
-            `${originItem.system.category.toLocaleLowerCase(game.i18n.lang)}-apply-effects`,
-            `${originItem.system.type.toLocaleLowerCase(game.i18n.lang)}-apply-effects`,
-            `${originItem.system.frequency?.type ?? "at-will"}-apply-effects`,
-        );
-    }
-
+    const itemDomains = buildItemDomains(originItem, "apply-effects");
     const domains = ["apply-effects", ...itemDomains];
 
-    // One shared group ID for all linked effects from this single use.
-    const linkedGroupId = foundry.utils.randomID();
-
-    // Apply effects to each hit target.
-    for (const target of targets) {
-        if (!target.actor) continue;
-        if (target.outcome === "miss" || target.outcome === "crit-miss") continue;
-
-        const effects = Object.values(
-            (await extractApplyEffects({
-                affects: "target",
-                origin: message.actor,
-                target: target.actor,
-                item: message.item,
-                domains,
-                options: messageOptions,
-                roll: rollResult,
-            })).reduce((acc, e) => {
-                if (!acc[e.slug ?? e.system?.slug]) acc[e.slug ?? e.system?.slug] = e;
-                return acc;
-            }, {})
-        );
-
-        stampLinkedGroup(effects, linkedGroupId);
-
-        if (effects.length > 0) {
-            const newItems = await target.actor.createEmbeddedDocuments("Item", effects);
-            if (newItems.length > 0) {
-                await ChatMessage.create({
-                    content: await foundry.applications.handlebars.renderTemplate(
-                        "systems/ptu/static/templates/chat/damage/effects-applied.hbs",
-                        { target: target.actor, effects: newItems }
-                    ),
-                    speaker: ChatMessage.getSpeaker({ actor: target.actor }),
-                    whisper: ChatMessage.getWhisperRecipients("GM"),
-                });
-            }
-        }
-    }
-
-    // Apply origin-side effects (affects: "origin").
-    const originEffects = Object.values(
-        (await extractApplyEffects({
-            affects: "origin",
-            origin: message.actor,
-            target: message.actor,
-            item: message.item,
-            domains,
-            options: messageOptions,
-            roll: rollResult,
-        })).reduce((acc, e) => {
-            if (!acc[e.slug ?? e.system?.slug]) acc[e.slug ?? e.system?.slug] = e;
-            return acc;
-        }, {})
-    );
-
-    stampLinkedGroup(originEffects, linkedGroupId);
-
-    if (originEffects.length > 0) {
-        const newItems = await message.actor.createEmbeddedDocuments("Item", originEffects);
-        if (newItems.length > 0) {
-            await ChatMessage.create({
-                content: await foundry.applications.handlebars.renderTemplate(
-                    "systems/ptu/static/templates/chat/damage/effects-applied.hbs",
-                    { target: message.actor, effects: newItems }
-                ),
-                speaker: ChatMessage.getSpeaker({ actor: message.actor }),
-                whisper: ChatMessage.getWhisperRecipients("GM"),
-            });
-        }
-    }
+    await applyPostAttackEffects({
+        origin: message.actor,
+        item: message.item,
+        targets: targets.filter(t => t.actor),
+        targetDomains: domains,
+        originDomains: domains,
+        messageOptions,
+        roll: rollResult,
+    });
 
     // Do NOT mark the message resolved — keep the Apply Effects button available
     // for repeated use, consistent with the no-roll usage message behaviour.
-}
-
-/**
- * Stamps a shared linkedGroup ID onto any effects marked as linked by their
- * ApplyEffect rule element (`flags.ptu.linked = true`).
- *
- * @param {object[]} effects  Array of item data objects to stamp.
- * @param {string}   groupId  The shared group identifier for this use.
- */
-function stampLinkedGroup(effects, groupId) {
-    for (const e of effects) {
-        if (foundry.utils.getProperty(e, "flags.ptu.linked")) {
-            foundry.utils.setProperty(e, "flags.ptu.linkedGroup", groupId);
-        }
-    }
 }
 
 export { AttackMessagePTU, applyEffectsFromAttack }

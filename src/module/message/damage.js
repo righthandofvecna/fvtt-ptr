@@ -1,5 +1,5 @@
-import { sluggify } from "../../util/misc.js";
-import { extractApplyEffects, extractEphemeralEffects, extractReminders, extractHealOnDamageDealt } from "../rules/helpers.js";
+import { extractEphemeralEffects, extractHealOnDamageDealt } from "../rules/helpers.js";
+import { applyPostAttackEffects, buildItemDomains } from "../rules/pipeline.js";
 import { DamageRoll } from "../system/damage/roll.js";
 import { ChatMessagePTU } from "./base.js";
 
@@ -187,20 +187,6 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
 
     const originAttackOptions = message.flags.ptu.attack ?? {};
     const originItem = (await fromUuid(originAttackOptions.actor))?.items.get(originAttackOptions.id) ?? null;
-    const itemDomains = [];
-    if (originItem) {
-        itemDomains.push(
-            `${originItem.id}-damage-received`,
-            `${originItem.slug}-damage-received`,
-        )
-        if(originItem.type === "move") {
-            itemDomains.push(
-                `${originItem.system.category.toLocaleLowerCase(game.i18n.lang)}-damage-received`,
-                `${originItem.system.type.toLocaleLowerCase(game.i18n.lang)}-damage-received`,
-                `${(originItem.system.frequency?.type ?? "at-will")}-damage-received`,
-            )
-        }
-    }
 
     const messageRollOptions = message.flags.ptu.context?.options ?? [];
     const originRollOptions = messageRollOptions
@@ -211,6 +197,18 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
     const linkedGroupId = foundry.utils.randomID();
 
     let totalActualDamageDealt = 0;
+    const processedTargets = [];
+
+    // Build domains that cover both -damage-received AND -apply-effects selectors, so ApplyEffect
+    // rule elements registered under either suffix suffix are found during damage application.
+    const itemDomainsReceived = buildItemDomains(originItem, "damage-received");
+    const itemDomainsApplyEffects = buildItemDomains(originItem, "apply-effects");
+    const targetDomains = [
+        "damage-received",
+        "apply-effects",
+        ...itemDomainsReceived,
+        ...itemDomainsApplyEffects,
+    ];
 
     for (const token of targets) {
         if (!token.actor) continue;
@@ -225,15 +223,13 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
             totalCritImmune: (multiplier * roll.critImmuneTotal) + addend,
         }
 
-        const domains = ["damage-received", "apply-effects", ...itemDomains];
-
         const ephemeralEffects = [
             ...await extractEphemeralEffects({
                 affects: "target",
                 origin: message.actor,
                 target: token.actor,
                 item: message.item,
-                domains,
+                domains: targetDomains,
                 options: messageRollOptions
             }),
             // Ephemeral Effects on the target that it wishes to apply to itself
@@ -243,25 +239,10 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
                 origin: message.actor,
                 target: token.actor,
                 item: message.item,
-                domains,
+                domains: targetDomains,
                 options: messageRollOptions
             })
         ];
-
-        const applyEffectsTarget = Object.values([
-            ...await extractApplyEffects({
-                affects: "target",
-                origin: message.actor,
-                target: token.actor,
-                item: message.item,
-                domains,
-                options: messageRollOptions,
-                roll: Number(message.flags.ptu.context.accuracyRollResult ?? 0)
-            }),
-        ].reduce((a, b) => {
-            if (!a[b.slug ?? b.system?.slug]) a[b.slug ?? b.system?.slug] = b;
-            return a;
-        }, {}));
 
         const contextClone = token.actor.getContextualClone(originRollOptions, ephemeralEffects);
         const applicationRollOptions = new Set([
@@ -280,79 +261,28 @@ async function applyDamageFromMessage({ message, targets, mode = "full", addend 
         });
         totalActualDamageDealt += Math.max(0, hpDamage ?? 0);
 
-        stampLinkedGroup(applyEffectsTarget, linkedGroupId);
-
-        if (applyEffectsTarget.length > 0) {
-            const newItems = await contextClone.createEmbeddedDocuments("Item", applyEffectsTarget);
-            if (newItems.length > 0)
-                await ChatMessage.create({
-                    content: await foundry.applications.handlebars.renderTemplate("systems/ptu/static/templates/chat/damage/effects-applied.hbs", { target: contextClone, effects: newItems }),
-                    speaker: ChatMessage.getSpeaker({ actor: contextClone }),
-                    whisper: ChatMessage.getWhisperRecipients("GM")
-                })
-        }
+        processedTargets.push({ actor: token.actor, createOn: contextClone, outcome: token.outcome });
     }
 
-    const applyEffectsOrigin = Object.values([
-        ...await extractApplyEffects({
-            affects: "origin",
-            origin: message.actor,
-            target: message.actor,
-            item: message.item,
-            domains: ["damage-dealt", "apply-effects", ...itemDomains.map(d => d.replace(/-received$/, "-dealt"))],
-            options: messageRollOptions,
-            roll: Number(message.flags.ptu.context.accuracyRollResult ?? 0)
-        }),
-    ].reduce((a, b) => {
-        if (!a[b.slug ?? b.system?.slug]) a[b.slug ?? b.system?.slug] = b;
-        return a;
-    }, {}));
-
-    stampLinkedGroup(applyEffectsOrigin, linkedGroupId);
-
-    if (applyEffectsOrigin.length > 0) {
-        const newItems = await message.actor.createEmbeddedDocuments("Item", applyEffectsOrigin);
-        if (newItems.length > 0)
-            await ChatMessage.create({
-                content: await foundry.applications.handlebars.renderTemplate("systems/ptu/static/templates/chat/damage/effects-applied.hbs", { target: message.actor, effects: newItems }),
-                speaker: ChatMessage.getSpeaker({ actor: message.actor }),
-                whisper: ChatMessage.getWhisperRecipients("GM")
-            })
-    }
-
-    // Reminders triggered for the origin (damage-dealt)
-    try {
-        const remindersOrigin = await extractReminders({
-            affects: "origin",
-            origin: message.actor,
-            target: targets[0]?.actor ?? message.actor,
-            item: message.item,
-            domains: ["damage-dealt", ...itemDomains.map(d => d.replace(/-received$/, "-dealt"))],
-            options: messageRollOptions,
-            roll: Number(message.flags.ptu.context.accuracyRollResult ?? 0)
-        });
-
-        for (const reminder of remindersOrigin) {
-            await ChatMessage.create({
-                content: reminder.content,
-                speaker: reminder.speaker,
-                whisper: reminder.whisper,
-                flags: reminder.flags,
-            });
-        }
-    }
-    catch (err) {
-        console.error("PTU | Failed to create origin reminder messages:", err);
-    }
+    // Apply effects and fire reminders via shared pipeline.
+    await applyPostAttackEffects({
+        origin: message.actor,
+        item: message.item,
+        targets: processedTargets,
+        targetDomains,
+        originDomains: ["damage-dealt", "apply-effects", ...buildItemDomains(originItem, "damage-dealt"), ...itemDomainsApplyEffects],
+        messageOptions: messageRollOptions,
+        roll: Number(message.flags.ptu.context.accuracyRollResult ?? 0),
+        linkedGroupId,
+    });
 
     // Drain / recoil: heal or damage the origin based on total damage dealt
     if (totalActualDamageDealt > 0 && message.actor) {
         try {
-            const drainDealtDomains = ["damage-dealt", ...itemDomains.map(d => d.replace(/-received$/, "-dealt"))];
             const healEntries = await extractHealOnDamageDealt({
                 origin: message.actor,
                 item: message.item,
-                domains: drainDealtDomains,
+                domains: ["damage-dealt", ...buildItemDomains(originItem, "damage-dealt")],
                 options: messageRollOptions,
                 damageTotal: totalActualDamageDealt,
             });
@@ -428,21 +358,6 @@ async function shiftAdjustDamage(message, targets, mode) {
         close: () => {
         },
     }).render(true);
-}
-
-/**
- * Stamps a shared linkedGroup ID onto any effects marked as linked by their
- * ApplyEffect rule element (`flags.ptu.linked = true`).
- *
- * @param {object[]} effects  Array of item data objects to stamp.
- * @param {string}   groupId  The shared group identifier for this use.
- */
-function stampLinkedGroup(effects, groupId) {
-    for (const e of effects) {
-        if (foundry.utils.getProperty(e, "flags.ptu.linked")) {
-            foundry.utils.setProperty(e, "flags.ptu.linkedGroup", groupId);
-        }
-    }
 }
 
 export { DamageMessagePTU, applyDamageFromMessage }
