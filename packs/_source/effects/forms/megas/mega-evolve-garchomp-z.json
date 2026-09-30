@@ -18,7 +18,7 @@
             "value": "self:pokemon:shiny"
           }
         ],
-        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/445s_MEGA_Z.webp"
+        "value": "/systems/ptu/static/images/sprites/445s_MEGA_Z.webp"
       },
       {
         "key": "TokenImage",
@@ -30,7 +30,7 @@
             }
           ]
         },
-        "value": "https://assets.forge-vtt.com/65d3d1160b52f975a6956587/systems/ptu/static/images/sprites/445_MEGA_Z.webp"
+        "value": "/systems/ptu/static/images/sprites/445_MEGA_Z.webp"
       },
       {
         "key": "TemporarySpecies",
