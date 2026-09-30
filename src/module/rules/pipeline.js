@@ -53,23 +53,6 @@ function buildItemDomains(item, suffix) {
 }
 
 /**
- * Deduplicate an array of item data objects by slug, keeping the first occurrence.
- *
- * @param {object[]} effects
- * @returns {object[]}
- */
-function deduplicateEffects(effects) {
-    return Object.values(
-        effects.reduce((acc, e) => {
-            const key = e.slug ?? e.system?.slug;
-            if (key !== undefined && key !== null && !acc[key]) acc[key] = e;
-            else acc[foundry.utils.randomID()] = e;
-            return acc;
-        }, {})
-    );
-}
-
-/**
  * Stamp a shared linkedGroup ID onto any effects flagged as linked by their
  * ApplyEffect rule element (flags.ptu.linked = true).
  *
@@ -115,7 +98,7 @@ async function createEffectsAndNotify(actor, effects) {
  *
  * What this function does per call:
  *   1. Injects attack:outcome:* roll options for each target.
- *   2. Extracts ApplyEffect synthetics for each target, deduplicates, stamps linked-group IDs,
+ *   2. Extracts ApplyEffect synthetics for each target, stamps linked-group IDs,
  *      creates embedded documents, and posts "effects applied" whispers to GMs.
  *   3. Fires Reminder rule elements for each target (target side).
  *   4. Repeats steps 2-3 for the origin (using combined outcome options from all targets).
@@ -159,8 +142,7 @@ async function applyPostAttackEffects({
         const targetOptions = [...messageOptions, ...outcomeOptions];
 
         // ApplyEffect (target side)
-        const effects = deduplicateEffects(
-            await extractApplyEffects({
+        const effects = await extractApplyEffects({
                 affects: "target",
                 origin,
                 target: actor,
@@ -168,8 +150,7 @@ async function applyPostAttackEffects({
                 domains: targetDomains,
                 options: targetOptions,
                 roll,
-            })
-        );
+            });
         stampLinkedGroup(effects, linkedGroupId);
         if (effects.length > 0) await createEffectsAndNotify(createOn ?? actor, effects);
 
@@ -194,8 +175,7 @@ async function applyPostAttackEffects({
     // Merge all outcome options seen across targets so the origin can react to any of them.
     const originOptions = [...messageOptions, ...Object.keys(optionsAddedByTargets)];
 
-    const originEffects = deduplicateEffects(
-        await extractApplyEffects({
+    const originEffects = await extractApplyEffects({
             affects: "origin",
             origin,
             target: origin,
@@ -203,8 +183,7 @@ async function applyPostAttackEffects({
             domains: originDomains,
             options: originOptions,
             roll,
-        })
-    );
+        });
     stampLinkedGroup(originEffects, linkedGroupId);
     if (originEffects.length > 0) await createEffectsAndNotify(origin, originEffects);
 
@@ -228,7 +207,6 @@ async function applyPostAttackEffects({
 export {
     buildOutcomeOptions,
     buildItemDomains,
-    deduplicateEffects,
     stampLinkedGroup,
     createEffectsAndNotify,
     applyPostAttackEffects,
