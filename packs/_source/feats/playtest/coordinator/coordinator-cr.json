@@ -38,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,7 +61,8 @@
     "class": "Coordinator",
     "name": "Coordinator [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "coordinator"
+    "replacesSlug": "coordinator",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -73,7 +75,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {
