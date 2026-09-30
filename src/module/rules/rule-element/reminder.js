@@ -13,10 +13,8 @@ class ReminderRuleElement extends RuleElementPTU {
         if(!(messagePredicate instanceof PTUPredicate)) {
             if(messagePredicate === undefined || messagePredicate.length === 0) {
                 source.messagePredicate = new PTUPredicate();
-                console.log("PTU | No message predicate provided for reminder, defaulting to always-true predicate", { source });
             } 
             else {
-                console.log("PTU | Constructing message predicate for reminder", { source, messagePredicate });
                 if(Array.isArray(messagePredicate)) {
                     source.messagePredicate = new PTUPredicate(...messagePredicate);
                 }
