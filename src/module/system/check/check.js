@@ -9,6 +9,7 @@ import { CheckDialog } from "./dialogs/dialog.js";
 import { PTUTokenDocument } from "../../canvas/token/document.js";
 import { CheckModifier } from "../../actor/modifiers.js";
 import { extractReminders } from "../../rules/helpers.js";
+import { buildOutcomeOptions } from "../../rules/pipeline.js";
 import { sluggify } from "../../../util/misc.js";
 
 class PTUDiceCheck {
@@ -363,6 +364,7 @@ class PTUDiceCheck {
             const messageDomains = msgCtx.domains ?? [];
             const messageTargets = msgCtx.targets ?? [];
             const messageOptions = msgCtx.options ?? [];
+            const messageOutcomes = msgCtx.outcomes ?? {};
             const rollValue = msgCtx.rollResult ?? null;
 
             // Build damage-received domain variants so reminders fire after the damage roll
@@ -396,13 +398,18 @@ class PTUDiceCheck {
                     const targetActor = await fromUuid(t.actor ?? "");
                     if (!targetActor) continue;
 
+                    // Include attack:outcome:* options so reminder predicates can gate on hit/miss.
+                    // Outcomes are stored in msgCtx.outcomes keyed by actor ID, not in the targets array.
+                    const targetOutcome = t.outcome ?? messageOutcomes[targetActor.id] ?? null;
+                    const targetOptions = [...messageOptions, ...buildOutcomeOptions(targetOutcome)];
+
                     const reminders = await extractReminders({
                         affects: "target",
                         origin: this.actor,
                         target: targetActor,
                         item: this.item,
                         domains: targetReminderDomains,
-                        options: messageOptions,
+                        options: targetOptions,
                         roll: rollValue,
                     });
 
@@ -426,13 +433,19 @@ class PTUDiceCheck {
                 const seenIds = new Set();
                 const seenTemplates = new Set();
                 const originTarget = messageTargets.length > 0 ? await fromUuid(messageTargets[0].actor ?? "") : null;
+                // Merge all per-target outcome options so origin predicates can gate on any outcome.
+                const allOutcomeOptions = [...new Set(messageTargets.flatMap(t => {
+                    const actorId = t.actor?.split(".")?.at(-1) ?? "";
+                    const outcome = t.outcome ?? messageOutcomes[actorId] ?? null;
+                    return buildOutcomeOptions(outcome);
+                }))];
                 const originReminders = await extractReminders({
                     affects: "origin",
                     origin: this.actor,
                     target: originTarget ?? this.actor,
                     item: this.item,
                     domains: messageDomains,
-                    options: messageOptions,
+                    options: [...messageOptions, ...allOutcomeOptions],
                     roll: rollValue,
                 });
 
