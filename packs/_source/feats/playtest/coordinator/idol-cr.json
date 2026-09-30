@@ -2,9 +2,16 @@
   "name": "Idol",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: A Pokémon with at least 1 Tutor Point.\nEffect: You gain the Cute Charm ability. You may also teach this ability to a Pokemon at the cost of 2 Tutor Points.",
+    "effect": "Target: A Pokémon with at least 1 Tutor Slot.\nEffect: You gain the @UUID[Compendium.ptu.abilities.Item.AgnYj2VubiCsPwJh]{Cute Charm} ability. You may also teach this ability to a Pokemon at the cost of 1 Tutor Slot.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.AgnYj2VubiCsPwJh"
+      }
+    ],
     "enabled": true,
     "slug": "idol-cr",
     "schema": {
@@ -37,7 +44,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +66,8 @@
     "class": "Coordinator",
     "name": "Idol [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "idol"
+    "replacesSlug": "idol",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -71,7 +80,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
