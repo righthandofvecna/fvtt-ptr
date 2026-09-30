@@ -100,19 +100,12 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
         const entries = [];
         for (const prereq of prerequisites) {
             if(prereq === 'Rune Master') continue;
-            let tierFound = false;
-            const entry = prereq.split(" ").map(p => p.trim()).reduce((acc, curr) => {
-                if (!tierFound && tiers.has(curr.toLowerCase())) {
-                    acc.tier = curr;
-                    acc.label = acc.label ? `${curr} ${acc.label}` : curr;
-                    tierFound = true;
-                } else {
-                    acc.label = acc.label ? `${acc.label} ${curr}` : curr;
-                }
-                return acc;
-            }, { label: "", tier: "" });
-
-            if (entry.label) entries.push(entry);
+            if (!prereq) continue;
+            // Extract the tier word if present, but preserve the original label text.
+            // The old approach of moving the tier to the front garbled labels like
+            // "An Education Skill at Novice Rank" into "Novice An Education Skill at Rank".
+            const tierWord = prereq.split(" ").find(w => tiers.has(w.toLowerCase())) ?? "";
+            entries.push({ label: prereq, tier: tierWord });
         }
 
         return entries;
