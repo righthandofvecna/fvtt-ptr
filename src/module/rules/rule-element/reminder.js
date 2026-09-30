@@ -57,7 +57,6 @@ class ReminderRuleElement extends RuleElementPTU {
 
         for (const selector of selectors) {
             const construct = async (options = {}) => {
-                console.log("PTU | Constructing reminder with options", { self: this, options, predicate: this.messagePredicate, test: this.resolveInjectedProperties(this.messagePredicate).test(options.test) }); // Debug log
                 if (!this.test()) return null;
                 if (!this.resolveInjectedProperties(this.messagePredicate).test(options.test ?? this.actor.getRollOptions())) return null;
 
@@ -79,6 +78,7 @@ class ReminderRuleElement extends RuleElementPTU {
 
                 return {
                     content,
+                    template: this.message,
                     speaker,
                     whisper: recipients,
                     flags: { ptu: { reminder: { actor: this.actor?.uuid, item: this.item?.uuid, ruleKey: this.key, sourceIndex: this.sourceIndex, id: reminderId } } },

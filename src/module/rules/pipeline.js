@@ -165,7 +165,16 @@ async function applyPostAttackEffects({
                 options: targetOptions,
                 roll,
             })).filter(Boolean);
-            for (const r of reminders) await ChatMessage.create(r);
+            const seenIds = new Set();
+            const seenTemplates = new Set();
+            for (const { template, content, speaker, whisper, flags } of reminders) {
+                const reminderId = flags?.ptu?.reminder?.id;
+                if (reminderId && seenIds.has(reminderId)) continue;
+                if (template && seenTemplates.has(template)) continue;
+                if (reminderId) seenIds.add(reminderId);
+                if (template) seenTemplates.add(template);
+                await ChatMessage.create({ content, speaker, whisper, flags });
+            }
         } catch (err) {
             console.error("PTU | Failed to create target reminder messages:", err);
         }
@@ -198,7 +207,16 @@ async function applyPostAttackEffects({
             options: originOptions,
             roll,
         })).filter(Boolean);
-        for (const r of reminders) await ChatMessage.create(r);
+        const seenIds = new Set();
+        const seenTemplates = new Set();
+        for (const { template, content, speaker, whisper, flags } of reminders) {
+            const reminderId = flags?.ptu?.reminder?.id;
+            if (reminderId && seenIds.has(reminderId)) continue;
+            if (template && seenTemplates.has(template)) continue;
+            if (reminderId) seenIds.add(reminderId);
+            if (template) seenTemplates.add(template);
+            await ChatMessage.create({ content, speaker, whisper, flags });
+        }
     } catch (err) {
         console.error("PTU | Failed to create origin reminder messages:", err);
     }

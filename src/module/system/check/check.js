@@ -389,6 +389,9 @@ class PTUDiceCheck {
 
             // For each target, ask synthetics for reminders
             for (const t of messageTargets) {
+                // Deduplicate within this target's results by reminderId (same RE) and template (same text).
+                const seenIds = new Set();
+                const seenTemplates = new Set();
                 try {
                     const targetActor = await fromUuid(t.actor ?? "");
                     if (!targetActor) continue;
@@ -403,13 +406,13 @@ class PTUDiceCheck {
                         roll: rollValue,
                     });
 
-                    for (const reminder of reminders) {
-                        await ChatMessage.create({
-                            content: reminder.content,
-                            speaker: reminder.speaker,
-                            whisper: reminder.whisper,
-                            flags: reminder.flags,
-                        });
+                    for (const { template, content, speaker, whisper, flags } of reminders) {
+                        const reminderId = flags?.ptu?.reminder?.id;
+                        if (reminderId && seenIds.has(reminderId)) continue;
+                        if (template && seenTemplates.has(template)) continue;
+                        if (reminderId) seenIds.add(reminderId);
+                        if (template) seenTemplates.add(template);
+                        await ChatMessage.create({ content, speaker, whisper, flags });
                     }
                 }
                 catch (err) {
@@ -419,6 +422,9 @@ class PTUDiceCheck {
 
             // Origin reminders
             try {
+                // Deduplicate within origin results by reminderId and template.
+                const seenIds = new Set();
+                const seenTemplates = new Set();
                 const originTarget = messageTargets.length > 0 ? await fromUuid(messageTargets[0].actor ?? "") : null;
                 const originReminders = await extractReminders({
                     affects: "origin",
@@ -430,13 +436,13 @@ class PTUDiceCheck {
                     roll: rollValue,
                 });
 
-                for (const reminder of originReminders) {
-                    await ChatMessage.create({
-                        content: reminder.content,
-                        speaker: reminder.speaker,
-                        whisper: reminder.whisper,
-                        flags: reminder.flags,
-                    });
+                for (const { template, content, speaker, whisper, flags } of originReminders) {
+                    const reminderId = flags?.ptu?.reminder?.id;
+                    if (reminderId && seenIds.has(reminderId)) continue;
+                    if (template && seenTemplates.has(template)) continue;
+                    if (reminderId) seenIds.add(reminderId);
+                    if (template) seenTemplates.add(template);
+                    await ChatMessage.create({ content, speaker, whisper, flags });
                 }
             }
             catch (err) {

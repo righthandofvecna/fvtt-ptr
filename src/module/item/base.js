@@ -482,13 +482,15 @@ class PTUItem extends Item {
                         roll: null,
                     });
 
-                    for (const reminder of reminders) {
-                        await ChatMessage.create({
-                            content: reminder.content,
-                            speaker: reminder.speaker,
-                            whisper: reminder.whisper,
-                            flags: reminder.flags,
-                        });
+                    const seenIds = new Set();
+                    const seenTemplates = new Set();
+                    for (const { template, content, speaker, whisper, flags } of reminders) {
+                        const reminderId = flags?.ptu?.reminder?.id;
+                        if (reminderId && seenIds.has(reminderId)) continue;
+                        if (template && seenTemplates.has(template)) continue;
+                        if (reminderId) seenIds.add(reminderId);
+                        if (template) seenTemplates.add(template);
+                        await ChatMessage.create({ content, speaker, whisper, flags });
                     }
                 }
             }

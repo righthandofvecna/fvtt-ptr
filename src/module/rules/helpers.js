@@ -88,10 +88,16 @@ async function extractReminders({ affects, origin, target, item, domains, option
     const fullOptions = [...options, ...effectsTo.getSelfRollOptions(affects), ...(item?.getRollOptionsWithTarget?.(target, domains) ?? [])];
     const resolvables = item?.type == "move" ? { move: item } : {};
 
+    // Deduplicate constructs by reminderId before calling them so a Reminder RE
+    // registered under multiple selectors only fires once.
+    const seen = new Set();
+    const uniqueConstructs = domains
+        .flatMap(s => Object.entries(effectsTo.synthetics.reminders?.[s]?.[affects] ?? {}))
+        .filter(([id]) => !seen.has(id) && seen.add(id))
+        .map(([, fn]) => fn);
+
     return (
-        await Promise.all(domains
-            .flatMap(s => Object.values(effectsTo.synthetics.reminders?.[s]?.[affects] ?? {}))
-            .map(d => d({ test: fullOptions, resolvables, roll })))
+        await Promise.all(uniqueConstructs.map(d => d({ test: fullOptions, resolvables, roll })))
     ).flatMap(e => e ?? [])
 }
 

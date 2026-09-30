@@ -124,11 +124,19 @@ class PTUCombatant extends Combatant {
 
         // Dispatch turn-start domain for Reminder and ApplyEffect rule elements.
         const startOptions = actor.getRollOptions();
-        for (const reminder of await extractReminders({
+        const startReminders = (await extractReminders({
             affects: "origin", origin: actor, target: actor, item: null,
             domains: ["turn-start"], options: startOptions, roll: null,
-        })) {
-            await ChatMessage.create(reminder);
+        })).filter(Boolean);
+        const seenStartIds = new Set();
+        const seenStartTemplates = new Set();
+        for (const { template, content, speaker, whisper, flags } of startReminders) {
+            const reminderId = flags?.ptu?.reminder?.id;
+            if (reminderId && seenStartIds.has(reminderId)) continue;
+            if (template && seenStartTemplates.has(template)) continue;
+            if (reminderId) seenStartIds.add(reminderId);
+            if (template) seenStartTemplates.add(template);
+            await ChatMessage.create({ content, speaker, whisper, flags });
         }
 
         const startEffects = await extractApplyEffects({
@@ -179,11 +187,19 @@ class PTUCombatant extends Combatant {
 
         // Dispatch turn-end domain for Reminder and ApplyEffect rule elements.
         const endOptions = actor.getRollOptions();
-        for (const reminder of await extractReminders({
+        const endReminders = (await extractReminders({
             affects: "origin", origin: actor, target: actor, item: null,
             domains: ["turn-end"], options: endOptions, roll: null,
-        })) {
-            await ChatMessage.create(reminder);
+        })).filter(Boolean);
+        const seenEndIds = new Set();
+        const seenEndTemplates = new Set();
+        for (const { template, content, speaker, whisper, flags } of endReminders) {
+            const reminderId = flags?.ptu?.reminder?.id;
+            if (reminderId && seenEndIds.has(reminderId)) continue;
+            if (template && seenEndTemplates.has(template)) continue;
+            if (reminderId) seenEndIds.add(reminderId);
+            if (template) seenEndTemplates.add(template);
+            await ChatMessage.create({ content, speaker, whisper, flags });
         }
 
         const endEffects = await extractApplyEffects({
