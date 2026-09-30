@@ -43,7 +43,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -52,7 +52,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -66,7 +67,10 @@
       "bind": false
     },
     "leagueLegal": false,
-    "prerequisites": [],
+    "prerequisites": [
+      "Survivalist",
+      "Terrain Talent"
+    ],
     "notes": "",
     "free": false,
     "class": ""

@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "The city is your jungle. You gain a +1 Bonus to your Jump Capabilities. Add half your Survival Rank to your Evasion against Push, Trip, and Attack of Opportunity Maneuvers.",
+    "effect": "The city is your jungle. You gain a +1 Bonus to your Jump Capabilities. Add half your Survival Rank to your Evasion against @UUID[Compendium.ptu.moves.Item.79nCOdXheYY2AXTB]{Push}, @UUID[Compendium.ptu.moves.Item.wF3ORK20xylO1ZGs]{Trip}, and @UUID[Compendium.ptu.moves.Item.lhaZXnE2PfttWp41]{Attack of Opportunity} Maneuvers.",
     "snippet": "",
     "rules": [
       {
@@ -43,7 +43,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -52,7 +52,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -66,7 +67,10 @@
       "bind": false
     },
     "leagueLegal": false,
-    "prerequisites": [],
+    "prerequisites": [
+      "Survivalist",
+      "Terrain Talent"
+    ],
     "notes": "",
     "free": false,
     "class": ""
