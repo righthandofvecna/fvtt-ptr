@@ -116,7 +116,8 @@
     "stackSlugs": false,
     "keywords": [
       "Playtest",
-      "Class Rework"
+      "Class Rework",
+      "General"
     ],
     "frequency": {
       "type": "static",
@@ -128,7 +129,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -157,7 +159,9 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   }
 }

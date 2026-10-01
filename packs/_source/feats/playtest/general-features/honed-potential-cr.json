@@ -25,7 +25,8 @@
     "stackSlugs": false,
     "keywords": [
       "Playtest",
-      "Class Rework"
+      "Class Rework",
+      "General"
     ],
     "frequency": {
       "type": "static",
@@ -37,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +60,8 @@
     "class": "",
     "name": "Surge of Spirit [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "honed-potential"
+    "replacesSlug": "honed-potential",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -70,7 +73,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
