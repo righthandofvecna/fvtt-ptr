@@ -2,7 +2,7 @@
   "name": "Fancy Footwork Rank 1",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn two Dance Moves marked with the Rank of this Feature you are taking or lower.\nRank 1 : Feather Dance, Fiery Dance, Swords Dance, Teeter Dance\nRank 2: Dragon Dance, Petal Dance, Aqua Step",
+    "effect": "Effect: You learn two Dance Moves marked with the Rank of this Feature you are taking or lower.\nRank 1: @UUID[Compendium.ptu.moves.Item.etQ46pkobBuyW3Xx]{Feather Dance}, @UUID[Compendium.ptu.moves.Item.TjyskB7OEbBoJ819]{Fiery Dance}, @UUID[Compendium.ptu.moves.Item.z5hgetbLhLvsd800]{Swords Dance}, @UUID[Compendium.ptu.moves.Item.bcsQuXZz2B9Jnpmt]{Teeter Dance}\nRank 2: @UUID[Compendium.ptu.moves.Item.dJm387VzcoJlHf8I]{Dragon Dance}, @UUID[Compendium.ptu.moves.Item.JEquTUzbVYPNvhNp]{Petal Dance}, @UUID[Compendium.ptu.moves.Item.8zsezmtkgLoLe6XJ]{Aqua Step}",
     "snippet": "",
     "rules": [
       {
@@ -147,7 +147,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -182,7 +183,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
