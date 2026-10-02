@@ -6,7 +6,7 @@
   "author": "GFCVv4EMgQDa5fGR",
   "img": "systems/ptu/static/css/images/icons/effect_icon.png",
   "scope": "global",
-  "command": "// Compendium.ptu.effects.Item.DJF77iklb3nnGp2v\nconst itemUuid = context.message?.flags?.ptu?.reminder?.item;\nconst item = await fromUuid(itemUuid);\nconst actor = item?.actor;\n\nif (!item || !actor) {\n  ui.notifications.error(\"Could not find source effect or actor\");\n  return;\n}\n\nconst newEffect = await fromUuid(\"Compendium.ptu.effects.Item.DJF77iklb3nnGp2v\");\n\nif (!newEffect) {\n  ui.notifications.error(\"Could not find new effect to apply\");\n  return;\n}\n\nawait actor.createEmbeddedDocuments(\"Item\", [{...newEffect}]);\nawait item.delete();\n\nconsole.log(\"Applied!\", { arguments })",
+  "command": "// Compendium.ptu.effects.Item.DJF77iklb3nnGp2v\nconst itemUuid = context.message?.flags?.ptu?.reminder?.item;\nconst item = await fromUuid(itemUuid);\nconst actor = item?.actor;\n\nif (!item || !actor) {\n  ui.notifications.error(\"Could not find source effect or actor\");\n  return;\n}\n\nconst newEffect = await fromUuid(\"Compendium.ptu.effects.Item.DJF77iklb3nnGp2v\");\n\nif (!newEffect) {\n  ui.notifications.error(\"Could not find new effect to apply\");\n  return;\n}\n\nawait actor.createEmbeddedDocuments(\"Item\", [{...newEffect}]);\nawait item.delete();\nif (game.user.isGM || context.message.isAuthor) await context.message.update({content:`${actor.name} has applied and consumed the Excited effect!`})",
   "sort": 0,
   "ownership": {
     "default": 0
@@ -17,7 +17,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.39",
     "createdTime": 1789294055208,
-    "modifiedTime": 1789294851502,
+    "modifiedTime": 1790803429655,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
