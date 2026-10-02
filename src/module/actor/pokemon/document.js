@@ -204,6 +204,9 @@ class PTUPokemonActor extends PTUActor {
         Object.keys(this.flags.ptu.rollOptions.all ?? {}).filter(k=>k.startsWith("self:spirit:")).forEach(key => delete this.flags.ptu.rollOptions.all[key]);
         this.flags.ptu.rollOptions.all[`self:spirit:${system.spirit.value}`] = true
 
+        // set gender roll option
+        this.flags.ptu.rollOptions.all[`self:gender:${sluggify(system.gender || "genderless")}`] = true;
+
         // add evolution-based roll options from party members
         this._prepareEvolutionRollOptions();
     }
