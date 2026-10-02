@@ -2,7 +2,6 @@
   "name": "Aromatherapy",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GrassIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "All allies in the burst are cured of one status condition of their choice.",
@@ -47,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -89,6 +89,5 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  },
-  "flags": {}
+  }
 }

@@ -2,9 +2,43 @@
   "name": "Druid's Call",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: 6 small saplings, flowery bushes, or mushroom patches (depending on your oath) suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter, and acts as Rough Terrain that blocks line of sight for creatures without the Naturewalk (Forest) Capability. Whenever you use a Move learned through Nature's Embrace, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)",
+    "effect": "Effect: 6 small saplings, flowery bushes, or mushroom patches (depending on your oath) suddenly grow within 6 meters of you, occupying 1 square each. This vegetation lasts until the end of the encounter, and acts as Rough Terrain that blocks line of sight for creatures without the @UUID[Compendium.ptu.capabilities.Item.pWX1jPzShRjT2w5n]{Naturewalk (Forest)} Capability. Whenever you use a Move learned through @UUID[Compendium.ptu.feats.Item.VZrBhX2bbsaUu6PF]{Nature's Embrace}, you may have it originate from these Plants as if they were the user. This Feature must be used on soil, or terrain under which soil is hidden by only a few inches (such as most sidewalks, parking lots, gravel or woodchip lots, etc.)",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:tree-oath"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.atk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:fungal-oath"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spdef.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:flower-oath"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spatk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "druids-call-cr",
     "schema": {
@@ -37,7 +71,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -58,7 +93,8 @@
     "class": "Druid",
     "name": "Druid's Call [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "druids-call"
+    "replacesSlug": "druids-call",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -69,7 +105,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -2,35 +2,9 @@
   "name": "Nature's Embrace Rank 1",
   "system": {
     "origin": "",
-    "effect": "You learn 2 Moves chosen from the list below.  Moves marked with an Oath require that Oath to be chosen.\nRank 1 Moves: Cotton Spore, Ingrain(Wood), Mega Drain, Razor Leaf, Stun Spore(Fungal), Sweet Scent(Flower)",
+    "effect": "Effect: You learn 3 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\n<b>Rank 1:</b> @UUID[Compendium.ptu.moves.Item.08DZcCU0jqyEQ3jv]{Cotton Spore} (None), @UUID[Compendium.ptu.moves.Item.tx9xc6m8Z6bTqBcv]{Forest's Curse} (None), @UUID[Compendium.ptu.moves.Item.2ky0KrGcz81tQ5X3]{Ingrain} (Tree Oath), @UUID[Compendium.ptu.moves.Item.9PVNtUbbwbRhZimy]{Mega Drain} (None), @UUID[Compendium.ptu.moves.Item.JOu7BVqN29cQ2lj6]{Needle Arm} (None), @UUID[Compendium.ptu.moves.Item.wYz4RubDs84tDVul]{Razor Leaf} (None), @UUID[Compendium.ptu.moves.Item.XssTGMznjX8N33L7]{Stun Spore} (Fungal Oath), @UUID[Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS]{Sweet Scent} (Flower Oath)\n\n<b>Rank 2:</b> @UUID[Compendium.ptu.moves.Item.QzP3iamQFsN5S4FS]{Aromatherapy} (Flower Oath), @UUID[Compendium.ptu.moves.Item.GPc4UqyAsng4fPup]{Energy Ball} (None), @UUID[Compendium.ptu.moves.Item.mGvVlposKAYCa15m]{Giga Drain} (Fungal Oath), @UUID[Compendium.ptu.moves.Item.XKnzCG5ZGzGWMl5n]{Leaf Tornado} (Flower Oath), @UUID[Compendium.ptu.moves.Item.qFkD5vP06XSTPXlE]{Magical Leaf} (None), @UUID[Compendium.ptu.moves.Item.b18uGrjFdKGy0rBU]{Seed Bomb} (None), @UUID[Compendium.ptu.moves.Item.FvTnYPJPje5PF7sJ]{Spiky Shield} (Tree Oath), @UUID[Compendium.ptu.moves.Item.SXOzsTxC6DllLznC]{Strength Sap} (Fungal Oath)\n\n<b>Rank 3:</b> @UUID[Compendium.ptu.moves.Item.Jx4TeOVUk1DX8R45]{Leech Seed} (None), @UUID[Compendium.ptu.moves.Item.rlwUWKRTSzWzLfuk]{Petal Blizzard} (Tree Oath), @UUID[Compendium.ptu.moves.Item.JEquTUzbVYPNvhNp]{Petal Dance} (Flower Oath), @UUID[Compendium.ptu.moves.Item.6tEUiL2W8EBFwkEU]{Power Whip} (None), @UUID[Compendium.ptu.moves.Item.Oa9NuYFi7yvPQTIO]{Solar Beam} (None), @UUID[Compendium.ptu.moves.Item.YyHGCfDVQQkCkOc4]{Solar Blade} (None), @UUID[Compendium.ptu.moves.Item.soZ40VFFxCDiniJu]{Spore} (Fungal Oath), @UUID[Compendium.ptu.moves.Item.EOjVWwZLa33n8M7P]{Wood Hammer} (Tree Oath)",
     "snippet": "",
     "rules": [
-      {
-        "key": "ChoiceSet",
-        "flag": "feat",
-        "adjustName": false,
-        "prompt": "Choose which stat to increase.",
-        "choices": [
-          {
-            "label": "ATK (Wood Oath)",
-            "value": "system.modifiers.baseStats.atk.mod"
-          },
-          {
-            "label": "SPDEF (Fungal Oath)",
-            "value": "system.modifiers.baseStats.spdef.mod"
-          },
-          {
-            "label": "SPATK (Flower Oath)",
-            "value": "system.modifiers.baseStats.spatk.mod"
-          }
-        ]
-      },
-      {
-        "key": "ActiveEffectLike",
-        "path": "{item|flags.ptu.rulesSelections.feat}",
-        "mode": "add",
-        "value": 1
-      },
       {
         "key": "ChoiceSet",
         "flag": "move1",
@@ -38,39 +12,42 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.08DZcCU0jqyEQ3jv",
+            "label": "Cotton Spore",
             "predicate": {
               "not": "move:cotton-spore"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.9PVNtUbbwbRhZimy",
+            "label": "Mega Drain",
             "predicate": {
               "not": "move:mega-drain"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.wYz4RubDs84tDVul",
+            "label": "Razor Leaf",
             "predicate": {
               "not": "move:razor-leaf"
             }
           },
           {
-            "label": "Ingrain (Wood)",
             "value": "Compendium.ptu.moves.Item.2ky0KrGcz81tQ5X3",
+            "label": "Ingrain (Wood)",
             "predicate": {
               "not": "move:ingrain"
             }
           },
           {
-            "label": "Sweet Scent (Flower)",
             "value": "Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS",
+            "label": "Sweet Scent (Flower)",
             "predicate": {
               "not": "move:sweet-scent"
             }
           },
           {
-            "label": "Stun Spore (Fungal)",
             "value": "Compendium.ptu.moves.Item.XssTGMznjX8N33L7",
+            "label": "Stun Spore (Fungal)",
             "predicate": {
               "not": "move:stun-spore"
             }
@@ -90,6 +67,7 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.08DZcCU0jqyEQ3jv",
+            "label": "Cotton Spore",
             "predicate": [
               {
                 "not": {
@@ -106,6 +84,7 @@
           },
           {
             "value": "Compendium.ptu.moves.Item.9PVNtUbbwbRhZimy",
+            "label": "Mega Drain",
             "predicate": [
               {
                 "not": {
@@ -122,6 +101,7 @@
           },
           {
             "value": "Compendium.ptu.moves.Item.wYz4RubDs84tDVul",
+            "label": "Razor Leaf",
             "predicate": [
               {
                 "not": {
@@ -137,8 +117,8 @@
             ]
           },
           {
-            "label": "Ingrain (Wood)",
             "value": "Compendium.ptu.moves.Item.2ky0KrGcz81tQ5X3",
+            "label": "Ingrain (Wood)",
             "predicate": [
               {
                 "not": {
@@ -154,8 +134,8 @@
             ]
           },
           {
-            "label": "Sweet Scent (Flower)",
             "value": "Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS",
+            "label": "Sweet Scent (Flower)",
             "predicate": [
               {
                 "not": {
@@ -171,8 +151,8 @@
             ]
           },
           {
-            "label": "Stun Spore (Fungal)",
             "value": "Compendium.ptu.moves.Item.XssTGMznjX8N33L7",
+            "label": "Stun Spore (Fungal)",
             "predicate": [
               {
                 "not": {
@@ -194,6 +174,39 @@
         "predicate": [],
         "allowDuplicate": false,
         "uuid": "{item|flags.ptu.rulesSelections.move2}"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:tree-oath"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.atk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:fungal-oath"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spdef.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:flower-oath"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spatk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -228,7 +241,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -250,8 +264,9 @@
     "name": "Nature's Embrace Rank 1",
     "useCount": 0,
     "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -261,7 +276,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Druid"
+      "prereqBackup": "Druid",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -274,7 +292,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 15900000,
   "_id": "FgK1CtFVfyaahIDF"
 }

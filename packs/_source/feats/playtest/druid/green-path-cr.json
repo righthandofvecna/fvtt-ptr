@@ -2,7 +2,7 @@
   "name": "Green Path",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Naturewalk (Grassland) and Naturewalk (Forest) capabilities, and you are immune to Moves with the Powder keyword.\nBonus: You gain the Sap Sipper Ability.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.capabilities.Item.axjUCAkFILlwlIhN]{Naturewalk (Grassland)} and @UUID[Compendium.ptu.capabilities.Item.pWX1jPzShRjT2w5n]{Naturewalk (Forest)} capabilities, and you are immune to Moves with the @CompSearch[Moves keywords=Powder]{Powder} keyword.\nBonus: You gain the @UUID[Compendium.ptu.abilities.Item.vKXX0T04RnD0Olx5]{Sap Sipper} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -15,8 +15,7 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.capabilities.Item.pWX1jPzShRjT2w5n",
-        "replaceSelf": true
+        "uuid": "Compendium.ptu.capabilities.Item.pWX1jPzShRjT2w5n"
       },
       {
         "key": "GrantItem",
@@ -27,7 +26,7 @@
       {
         "key": "ActiveEffectLike",
         "predicate": [
-          "capability:tree-hb"
+          "capability:tree-oath"
         ],
         "mode": "add",
         "path": "system.modifiers.baseStats.atk.mod",
@@ -38,7 +37,7 @@
       {
         "key": "ActiveEffectLike",
         "predicate": [
-          "capability:fungal-hb"
+          "capability:fungal-oath"
         ],
         "mode": "add",
         "path": "system.modifiers.baseStats.spdef.mod",
@@ -49,10 +48,10 @@
       {
         "key": "ActiveEffectLike",
         "predicate": [
-          "capability:flower-hb"
+          "capability:flower-oath"
         ],
         "mode": "add",
-        "path": "system.modifiers.baseStats.atk.mod",
+        "path": "system.modifiers.baseStats.spatk.mod",
         "phase": "applyAEs",
         "value": 1,
         "priority": null
@@ -90,7 +89,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -127,7 +127,7 @@
     "ptu": {
       "showInTokenPanel": true,
       "automationStatus": "needs-automation",
-      "devNote": ""
+      "devNote": "All automated except the Powder immunity"
     }
   },
   "_stats": {
