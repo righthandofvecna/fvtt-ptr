@@ -602,9 +602,6 @@ class PTUItem extends Item {
         if (game.combat?.active && freq.eot) {
             updates["flags.ptu.eot"] = 2;
         }
-        if (freq.limited) {
-            updates["flags.ptu.used"] = (this.flags.ptu.used ?? 0) + 1;
-        }
 
         // PP deduction (PP Variant rule)
         if (game.settings.get("ptu", "variant.usePP") && this.actor) {
@@ -613,6 +610,8 @@ class PTUItem extends Item {
                 const currentPP = this.actor.system.pp?.value ?? this.actor.system.pp?.max ?? 0;
                 await this.actor.update({ "system.pp.value": Math.max(0, currentPP - ppCost) });
             }
+        } else if (freq.limited) {
+            updates["flags.ptu.used"] = (this.flags.ptu.used ?? 0) + 1;
         }
         
         if (Object.keys(updates).length > 0) await this.update(updates);
