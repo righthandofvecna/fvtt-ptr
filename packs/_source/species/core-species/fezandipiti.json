@@ -5,8 +5,15 @@
   "img": "systems/ptu/static/css/images/icons/dex_icon.png",
   "system": {
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.121,
+      "lastMigration": {
+        "datetime": "2026-10-02T23:42:38.593Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
+        }
+      }
     },
     "dexentry": "",
     "number": 1016,
@@ -53,13 +60,10 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.l3NhNPbU8729CtAD",
         "slug": "fezandipity",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       }
     ],
@@ -580,10 +584,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.5",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1695085163388,
-    "modifiedTime": 1712491477311,
+    "modifiedTime": 1790984559111,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

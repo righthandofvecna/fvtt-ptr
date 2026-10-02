@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.112,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2024-01-15T01:45:48.452Z",
+        "datetime": "2026-10-02T23:42:25.224Z",
         "version": {
-          "schema": 0.11,
-          "foundry": "11.315",
-          "system": "4.0.9"
+          "schema": 0.112,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -57,13 +57,10 @@
     },
     "evolutions": [
       {
-        "level": 0,
         "uuid": "Compendium.ptu.species.Item.OToKN4Fo0iCDIwGI",
         "slug": "iron-boulder",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       }
     ],
@@ -483,10 +480,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.11",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1776475650578,
+    "modifiedTime": 1790984545702,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -5,13 +5,13 @@
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "system": {
     "schema": {
-      "version": 0.112,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2024-01-15T01:45:48.452Z",
+        "datetime": "2026-10-02T23:42:38.589Z",
         "version": {
-          "schema": 0.11,
-          "foundry": "11.315",
-          "system": "4.0.9"
+          "schema": 0.112,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -60,32 +60,27 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.A0sBewaxj0epSaUU",
         "slug": "applin",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 20,
         "uuid": "Compendium.ptu.species.Item.dkQPNz0RLbgzWMLq",
         "slug": "dipplin",
         "other": {
-          "restrictions": [
-            "Syrupy"
+          "predicate": [
+            "self:level:20+"
           ]
         }
       },
       {
-        "level": 40,
         "uuid": "Compendium.ptu.species.Item.jAIJeRtRc1sUekjO",
         "slug": "hydrapple",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:40+"
           ]
         }
       }
@@ -557,10 +552,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1708096087258,
+    "modifiedTime": 1790984559100,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

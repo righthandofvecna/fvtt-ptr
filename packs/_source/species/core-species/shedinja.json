@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:10.913Z",
+        "datetime": "2026-10-02T23:42:47.959Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -57,22 +57,18 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.20WHvGxOpQopNoWX",
         "slug": "nincada",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 20,
         "uuid": "Compendium.ptu.species.Item.zKCWRZngsDioEs2C",
         "slug": "shedinja",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:20+"
           ]
         }
       }
@@ -480,10 +476,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.5",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1712492130781,
+    "modifiedTime": 1790984568457,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

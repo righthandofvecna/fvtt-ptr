@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:04.259Z",
+        "datetime": "2026-10-02T23:42:15.042Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -59,25 +59,26 @@
       {
         "uuid": "Compendium.ptu.species.Item.JUsWe5lprQiofyRo",
         "slug": "colarva",
-        "level": 1,
         "other": {
-          "restrictions": []
+          "predicate": []
         }
       },
       {
         "uuid": "Compendium.ptu.species.Item.6zBctz2AW7pTT7Yb",
         "slug": "frosulo",
-        "level": 20,
         "other": {
-          "restrictions": []
+          "predicate": [
+            "self:level:20+"
+          ]
         }
       },
       {
         "uuid": "Compendium.ptu.species.Item.PnMaLE7aPyTeCCXu",
         "slug": "frosthra",
-        "level": 40,
         "other": {
-          "restrictions": []
+          "predicate": [
+            "self:level:40+"
+          ]
         }
       }
     ],
@@ -480,10 +481,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1707761842946,
+    "modifiedTime": 1790984535548,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:04.481Z",
+        "datetime": "2026-10-02T23:42:16.067Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -59,25 +59,26 @@
       {
         "uuid": "Compendium.ptu.species.Item.A4bMptliJGp9oEVI",
         "slug": "delta-geodude",
-        "level": 1,
         "other": {
-          "restrictions": []
+          "predicate": []
         }
       },
       {
         "uuid": "Compendium.ptu.species.Item.irxPqRwoNjEmXCVp",
         "slug": "delta-graveler",
-        "level": 25,
         "other": {
-          "restrictions": []
+          "predicate": [
+            "self:level:25+"
+          ]
         }
       },
       {
         "uuid": "Compendium.ptu.species.Item.BVpgTBiH028Wt9CB",
         "slug": "delta-golem",
-        "level": 35,
         "other": {
-          "restrictions": []
+          "predicate": [
+            "self:level:35+"
+          ]
         }
       }
     ],
@@ -616,10 +617,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1707761842946,
+    "modifiedTime": 1790984536578,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

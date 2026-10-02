@@ -4,8 +4,15 @@
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "system": {
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.121,
+      "lastMigration": {
+        "datetime": "2026-10-02T23:42:11.974Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
+        }
+      }
     },
     "dexentry": "",
     "number": 1017,
@@ -52,13 +59,10 @@
     },
     "evolutions": [
       {
-        "level": 0,
         "uuid": "Compendium.ptu.species.Item.1yTaotJt05NdUgGO",
         "slug": "ogerpon-hearthflame",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       }
     ],
@@ -677,11 +681,11 @@
   },
   "flags": {},
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.2.6",
+    "systemVersion": "4.4.3.45",
     "createdTime": 1706125909504,
-    "modifiedTime": 1712493981476,
+    "modifiedTime": 1790984532520,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

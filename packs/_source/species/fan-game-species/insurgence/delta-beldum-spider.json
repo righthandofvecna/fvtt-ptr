@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:06.122Z",
+        "datetime": "2026-10-02T23:42:24.267Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -57,27 +57,28 @@
     },
     "evolutions": [
       {
-        "slug": "delta-beldum-spider",
         "uuid": "Compendium.ptu.species.Item.M4wEAWfcM9za3i3K",
-        "level": 1,
+        "slug": "delta-beldum-spider",
         "other": {
-          "restrictions": []
+          "predicate": []
         }
       },
       {
-        "slug": "delta-metang-spider",
         "uuid": "Compendium.ptu.species.Item.YD3984fvC1mq8o2O",
-        "level": 20,
+        "slug": "delta-metang-spider",
         "other": {
-          "restrictions": []
+          "predicate": [
+            "self:level:20+"
+          ]
         }
       },
       {
-        "slug": "delta-metagross-spider",
         "uuid": "Compendium.ptu.species.Item.dZq2OEDbw4urJqp2",
-        "level": 40,
+        "slug": "delta-metagross-spider",
         "other": {
-          "restrictions": []
+          "predicate": [
+            "self:level:40+"
+          ]
         }
       }
     ],
@@ -281,10 +282,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1707761842946,
+    "modifiedTime": 1790984544750,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -4,13 +4,13 @@
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:09.747Z",
+        "datetime": "2026-10-02T23:42:32.374Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -63,32 +63,28 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.hrwooVLlYNqpSrV5",
         "slug": "ralts",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 20,
         "uuid": "Compendium.ptu.species.Item.crY12dYznPKvMZl9",
         "slug": "kirlia",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:20+"
           ]
         }
       },
       {
-        "level": 30,
         "uuid": "Compendium.ptu.species.Item.oKHg7c26tS2MFSNa",
         "slug": "gallade",
         "other": {
-          "restrictions": [
-            "Male"
+          "predicate": [
+            "self:level:30+",
+            "self:gender:male"
           ]
         }
       }
@@ -743,10 +739,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1707761842946,
+    "modifiedTime": 1790984552871,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

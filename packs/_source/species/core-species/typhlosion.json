@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:07.143Z",
+        "datetime": "2026-10-02T23:42:29.303Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -56,42 +56,36 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.oXK3ghZxul4TT7sz",
         "slug": "cyndaquil",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 15,
         "uuid": "Compendium.ptu.species.Item.SpSbQeRKYomj9jbD",
         "slug": "quilava",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:15+"
           ]
         }
       },
       {
-        "level": 30,
         "uuid": "Compendium.ptu.species.Item.Ud30bFd1oUZ1vUf3",
         "slug": "typhlosion",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:30+"
           ]
         }
       },
       {
-        "level": 30,
         "uuid": "Compendium.ptu.species.Item.bPALsGF8jgeoXvwe",
         "slug": "typhlosion-hisuian",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:30+"
           ]
         }
       }
@@ -570,10 +564,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1708094889604,
+    "modifiedTime": 1790984549800,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

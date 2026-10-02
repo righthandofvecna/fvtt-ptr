@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:10.202Z",
+        "datetime": "2026-10-02T23:42:44.836Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -56,202 +56,180 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.u0vJNmW9NyFphsjE",
         "slug": "eevee",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.dP5dYX8eN9Vusqst",
         "slug": "vaporeon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.2ptxpLvWD50XgCRA",
         "slug": "jolteon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.gvSzZGYiOxwNPZGu",
         "slug": "flareon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.HNRFraywvIajBBLm",
         "slug": "espeon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.kYOZj5mN0qNPOX2F",
         "slug": "umbreon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.A1sQSb9nJJkFs1WE",
         "slug": "leafeon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.z9v5cehf7CtpQNvc",
         "slug": "glaceon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.1hqhrZ0VrBcKPVh5",
         "slug": "sylveon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
-        "slug": "automateon",
         "uuid": "Compendium.ptu.species.Item.d9gsP76zvr9FFNZd",
+        "slug": "automateon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
-        "slug": "aviateon",
         "uuid": "Compendium.ptu.species.Item.JxB1Vnb86TIQP98w",
+        "slug": "aviateon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
-        "slug": "champeon",
         "uuid": "Compendium.ptu.species.Item.W9dkK0J6cnGCxZiU",
+        "slug": "champeon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
-        "slug": "companeon",
         "uuid": "Compendium.ptu.species.Item.KYPZNftCsXuXg60o",
+        "slug": "companeon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
-        "slug": "corroseon",
         "uuid": "Compendium.ptu.species.Item.6p9Aq8JeY7236EW6",
+        "slug": "corroseon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
-        "slug": "draconeon",
         "uuid": "Compendium.ptu.species.Item.KOU12ElVzKQV3C74",
+        "slug": "draconeon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
-        "slug": "dungeon",
         "uuid": "Compendium.ptu.species.Item.U3wajsyQAAgVpTw4",
+        "slug": "dungeon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
-        "slug": "illuseon",
         "uuid": "Compendium.ptu.species.Item.IiUh6UK79Apv1DIM",
+        "slug": "illuseon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
-        "slug": "obsideon",
         "uuid": "Compendium.ptu.species.Item.QZeXl01nbodoExGa",
+        "slug": "obsideon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
-        "slug": "scorpeon",
         "uuid": "Compendium.ptu.species.Item.d0eCJAUwsxf0Pcjm",
+        "slug": "scorpeon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 25,
-        "slug": "maliceon",
         "uuid": "Compendium.ptu.species.Item.bLdQhnLaxECDEpYl",
+        "slug": "maliceon",
         "other": {
-          "restrictions": [
-            "GM Permission"
+          "predicate": [
+            "self:level:25+"
           ]
         }
       }
@@ -696,10 +674,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.1",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1708558081341,
+    "modifiedTime": 1790984565355,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

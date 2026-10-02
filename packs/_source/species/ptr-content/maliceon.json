@@ -5,13 +5,13 @@
   "img": "/systems/ptu/static/css/images/icons/species_icon.png",
   "system": {
     "schema": {
-      "version": 0.112,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2024-01-15T14:33:35.246Z",
+        "datetime": "2026-10-02T23:42:33.376Z",
         "version": {
-          "schema": null,
-          "foundry": "11.315",
-          "system": "4.0.9"
+          "schema": 0.112,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -60,22 +60,18 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.u0vJNmW9NyFphsjE",
         "slug": "eevee",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.bLdQhnLaxECDEpYl",
         "slug": "maliceon",
         "other": {
-          "restrictions": [
-            "GM Permission"
+          "predicate": [
+            "self:level:25+"
           ]
         }
       }
@@ -503,10 +499,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.1",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1702347549824,
-    "modifiedTime": 1708788760260,
+    "modifiedTime": 1790984553919,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

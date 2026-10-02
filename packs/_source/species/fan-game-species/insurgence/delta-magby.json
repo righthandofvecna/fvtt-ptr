@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:07.141Z",
+        "datetime": "2026-10-02T23:42:29.302Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -56,32 +56,27 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.UYwEw0k3Gf8yK3Mi",
         "slug": "delta-magby",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 30,
         "uuid": "Compendium.ptu.species.Item.P5gN8Gwm1zey99k1",
         "slug": "delta-magmar",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:30+"
           ]
         }
       },
       {
-        "level": 40,
         "uuid": "Compendium.ptu.species.Item.bUAZl6Ox02dqe6Ab",
         "slug": "delta-magmortar",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:40+"
           ]
         }
       }
@@ -494,10 +489,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1707761842946,
+    "modifiedTime": 1790984549799,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

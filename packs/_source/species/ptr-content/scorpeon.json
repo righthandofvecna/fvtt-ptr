@@ -5,8 +5,15 @@
   "img": "systems/ptu/static/css/images/icons/dex_icon.png",
   "system": {
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.121,
+      "lastMigration": {
+        "datetime": "2026-10-02T23:42:34.450Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
+        }
+      }
     },
     "dexentry": "",
     "number": 1998,
@@ -52,22 +59,18 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.u0vJNmW9NyFphsjE",
         "slug": "eevee",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.d0eCJAUwsxf0Pcjm",
         "slug": "scorpeon",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       }
@@ -505,10 +508,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1694015478526,
-    "modifiedTime": 1707761842946,
+    "modifiedTime": 1790984554980,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

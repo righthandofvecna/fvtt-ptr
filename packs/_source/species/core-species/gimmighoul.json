@@ -2,8 +2,15 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.121,
+      "lastMigration": {
+        "datetime": "2026-10-02T23:42:24.266Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
+        }
+      }
     },
     "dexentry": "",
     "number": 999,
@@ -49,22 +56,18 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.LXCIqn5Knha0yT5f",
         "slug": "gimmighoul",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 30,
         "uuid": "Compendium.ptu.species.Item.royvDsOxjrSNb75E",
         "slug": "gholdengo",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:30+"
           ]
         }
       }
@@ -440,10 +443,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1693120305329,
-    "modifiedTime": 1708094889604,
+    "modifiedTime": 1790984544746,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

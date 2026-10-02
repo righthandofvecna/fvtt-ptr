@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-09-15T22:09:57.989Z",
+        "datetime": "2026-10-02T23:42:29.303Z",
         "version": {
-          "schema": 0.102,
-          "foundry": "11.308",
-          "system": "4.0.0.beta.3"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -61,13 +61,10 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.Xk5BX9u0U0ClbqJa",
         "slug": "yveltal",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       }
     ],
@@ -524,10 +521,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1707761842946,
+    "modifiedTime": 1790984549800,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -4,8 +4,15 @@
   "img": "/systems/ptu/static/css/images/icons/species_icon.png",
   "system": {
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.121,
+      "lastMigration": {
+        "datetime": "2026-10-02T23:42:35.495Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
+        }
+      }
     },
     "dexentry": "",
     "number": 1024,
@@ -51,13 +58,10 @@
     },
     "evolutions": [
       {
-        "level": 0,
         "uuid": "Compendium.ptu.species.Item.eSkv7LB0cQ4zYLpM",
         "slug": "terapagos-stellar",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       }
     ],
@@ -487,11 +491,11 @@
   },
   "flags": {},
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
+    "systemVersion": "4.4.3.45",
     "createdTime": 1706125912576,
-    "modifiedTime": 1708096087258,
+    "modifiedTime": 1790984556017,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

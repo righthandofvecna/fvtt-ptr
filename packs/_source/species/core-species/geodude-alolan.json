@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:07.328Z",
+        "datetime": "2026-10-02T23:42:29.305Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -57,32 +57,27 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.V6aNoH4FTIwC3Ncj",
         "slug": "geodude-alolan",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.uAZLcWGnUOcNbij3",
         "slug": "graveler-alolan",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       },
       {
-        "level": 35,
         "uuid": "Compendium.ptu.species.Item.Eo6BO8DeVV62u3Ph",
         "slug": "golem-alolan",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:35+"
           ]
         }
       }
@@ -588,10 +583,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1708094889604,
+    "modifiedTime": 1790984549805,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

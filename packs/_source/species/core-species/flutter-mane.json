@@ -2,8 +2,15 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.121,
+      "lastMigration": {
+        "datetime": "2026-10-02T23:42:28.259Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
+        }
+      }
     },
     "dexentry": "",
     "number": 987,
@@ -50,13 +57,10 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.TlOhjCYS7mYvKYqK",
         "slug": "flutter-mane",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       }
     ],
@@ -645,10 +649,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.11",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1693120305329,
-    "modifiedTime": 1776475386413,
+    "modifiedTime": 1790984548775,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

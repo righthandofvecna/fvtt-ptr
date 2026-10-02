@@ -2,8 +2,15 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.121,
+      "lastMigration": {
+        "datetime": "2026-10-02T23:42:29.304Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
+        }
+      }
     },
     "dexentry": "",
     "number": 952,
@@ -54,22 +61,18 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.GMdiZREWze4zEmBu",
         "slug": "capsakid",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.sp9ZzJWI0kfS1Jgx",
         "slug": "scovillain",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       }
@@ -551,11 +554,11 @@
   "_stats": {
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.351",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.15",
+    "systemVersion": "4.4.3.45",
     "createdTime": 1776981204460,
-    "modifiedTime": 1776981204460,
+    "modifiedTime": 1790984549802,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "UpS5pUsweP194VRL",

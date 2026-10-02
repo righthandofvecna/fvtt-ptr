@@ -4,13 +4,13 @@
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:03.801Z",
+        "datetime": "2026-10-02T23:42:20.165Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -63,32 +63,27 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.lOsj81c2zlTF3LLE",
         "slug": "weedle",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 5,
         "uuid": "Compendium.ptu.species.Item.KOZovoxDCjPY1MWa",
         "slug": "kakuna",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:5+"
           ]
         }
       },
       {
-        "level": 10,
         "uuid": "Compendium.ptu.species.Item.1uabFwfSOqCgeeUg",
         "slug": "beedrill",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:10+"
           ]
         }
       }
@@ -540,10 +535,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1707761842946,
+    "modifiedTime": 1790984540692,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

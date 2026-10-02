@@ -5,13 +5,13 @@
   "img": "systems/ptu/static/css/images/icons/dex_icon.png",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-09-15T22:10:10.159Z",
+        "datetime": "2026-10-02T23:42:26.197Z",
         "version": {
-          "schema": null,
-          "foundry": "11.308",
-          "system": "4.0.0.beta.3"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -60,22 +60,18 @@
     },
     "evolutions": [
       {
-        "level": 0,
         "uuid": "Compendium.ptu.species.Item.PWdUdUeF0t5FPno7",
         "slug": "poltchageist",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 25,
         "uuid": "Compendium.ptu.species.Item.NDOxzMmxf3AlZYUU",
         "slug": "sinistcha",
         "other": {
-          "restrictions": [
-            ""
+          "predicate": [
+            "self:level:25+"
           ]
         }
       }
@@ -604,10 +600,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1694712904509,
-    "modifiedTime": 1708096087258,
+    "modifiedTime": 1790984546718,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

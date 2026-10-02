@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:08.112Z",
+        "datetime": "2026-10-02T23:42:21.190Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -61,22 +61,19 @@
     },
     "evolutions": [
       {
-        "level": 1,
         "uuid": "Compendium.ptu.species.Item.3YOF5FQPSUpsPaYm",
         "slug": "snorunt",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       },
       {
-        "level": 30,
         "uuid": "Compendium.ptu.species.Item.ahRkajGh59G4yQW5",
         "slug": "froslass",
         "other": {
-          "restrictions": [
-            "Female"
+          "predicate": [
+            "self:level:30+",
+            "self:gender:female"
           ]
         }
       }
@@ -568,11 +565,11 @@
   "_stats": {
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.351",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.12",
+    "systemVersion": "4.4.3.45",
     "createdTime": 1776551071809,
-    "modifiedTime": 1776551244800,
+    "modifiedTime": 1790984541697,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "HHpgvIVWaKl9HHxE",

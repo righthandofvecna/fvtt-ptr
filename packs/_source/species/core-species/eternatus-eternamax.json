@@ -5,13 +5,13 @@
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:05.307Z",
+        "datetime": "2026-10-02T23:42:34.450Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -60,13 +60,10 @@
     },
     "evolutions": [
       {
-        "level": 0,
         "uuid": "Compendium.ptu.species.Item.d4bozHKgocOiJibK",
         "slug": "eternatus-eternamax",
         "other": {
-          "restrictions": [
-            ""
-          ]
+          "predicate": []
         }
       }
     ],
@@ -454,11 +451,11 @@
   },
   "flags": {},
   "_stats": {
-    "coreVersion": "13.350",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.2.0",
+    "systemVersion": "4.4.3.45",
     "createdTime": 1708346661160,
-    "modifiedTime": 1708346680669,
+    "modifiedTime": 1790984554981,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {
