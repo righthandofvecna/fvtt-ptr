@@ -29,6 +29,30 @@ class PTUPokemonActor extends PTUActor {
         return this.system.nature.value;
     }
 
+    get natureLikes() {
+        switch (CONFIG.PTU.data.natureData[this.nature]?.at(0)) {
+            case "Attack": return "Spicy";
+            case "Defense": return "Sour";
+            case "Special Attack": return "Dry";
+            case "Special Defense": return "Bitter";
+            case "Speed": return "Sweet";
+            case "HP": return "Salty";
+            default: return "Unknown";
+        }
+    }
+
+    get natureDislikes() {
+        switch (CONFIG.PTU.data.natureData[this.nature].at(1)) {
+            case "Attack": return "Spicy";
+            case "Defense": return "Sour";
+            case "Special Attack": return "Dry";
+            case "Special Defense": return "Bitter";
+            case "Speed": return "Sweet";
+            case "HP": return "Salty";
+            default: return "Unknown";
+        }
+    }
+
     get moves() {
         return this.itemTypes.move.filter(m => !m.system.isStruggle);
     }

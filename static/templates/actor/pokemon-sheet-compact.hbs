@@ -245,6 +245,18 @@
                                                 {{selectOptions natures selected=actor.system.nature.value labelAttr="value"}}
                                             </select>
                                         </div>
+                                        {{#unless (eq actor.natureLikes actor.natureDislikes)}}
+                                        <div class="fb-25">
+                                            <div>Likes:</div><div><strong>{{actor.natureLikes}}</strong></div>
+                                        </div>
+                                        <div class="fb-25">
+                                            <div>Dislikes:</div><div><strong>{{actor.natureDislikes}}</strong></div>
+                                        </div>
+                                        {{else}}
+                                        <div class="fb-50">
+                                            <div>No Flavor Preference</div>
+                                        </div>
+                                        {{/unless}}
                                     </div>
                                 </div>
                             </div>
