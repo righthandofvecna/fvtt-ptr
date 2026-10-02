@@ -493,8 +493,8 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		}
 
 		// If duplicate item gets added instead increase the quantity
-		const existingItem = this.actor.items.getName(item.name);
-		if (existingItem && existingItem.id != item.id && existingItem.system.quantity) {
+		const existingItem = this.actor.getStackableItem(itemData)
+		if (existingItem) {
 			const quantity = foundry.utils.duplicate(existingItem.system.quantity);
 			await existingItem.update({ "system.quantity": Number(quantity) + (item.system.quantity > 0 ? Number(item.system.quantity) : 1) });
 			return false;

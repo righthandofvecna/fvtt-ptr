@@ -1806,6 +1806,11 @@ class PTUActor extends Actor {
         return super.modifyTokenAttribute(attribute, value, isDelta, isBar);
     }
 
+    getStackableItem(itemData) {
+        const stackableItem = this.items.getName(itemData.name);
+        return stackableItem?.canStack ? stackableItem : null;
+    }
+
     _setDefaultChanges() {
         this.system.changes = foundry.utils.mergeObject(
             {

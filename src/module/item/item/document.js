@@ -9,6 +9,10 @@ class PTUItemItem extends PTUItem {
         return this.system.container;
     }
 
+    get canStack() {
+        return this.system.quantity !== undefined && (this.system?.frequency?.type ?? "at-will") == "at-will";
+    }
+
     prepareBaseData() {
         super.prepareBaseData();
         

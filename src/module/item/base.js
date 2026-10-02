@@ -89,6 +89,10 @@ class PTUItem extends Item {
         return false;
     }
 
+    get canStack() {
+        return false;
+    }
+
     get showInTokenPanel() {
         return this.flags.ptu?.showInTokenPanel ?? false;
     }
@@ -126,6 +130,21 @@ class PTUItem extends Item {
 
     get linkHtml() {
         return this.toAnchor({ name: this.name })?.outerHTML ?? "";
+    }
+
+    canStackWith(otherItem) {
+        if (!otherItem) return false;
+        if (this.type !== otherItem.type) return false;
+        if (this.slug !== otherItem.slug) return false;
+        if (!this.canStack || !otherItem.canStack) return false;
+        const thisCopy = foundry.utils.flattenObject(foundry.utils.deepClone(this.toObject()));
+        const otherCopy = foundry.utils.flattenObject(foundry.utils.deepClone(otherItem.toObject()));
+        // remove fields not in consideration
+        if (thisCopy["_id"] !== undefined) delete thisCopy["_id"];
+        if (otherCopy["_id"] !== undefined) delete otherCopy["_id"];
+        if (thisCopy["system.quantity"] !== undefined) delete thisCopy["system.quantity"];
+        if (otherCopy["system.quantity"] !== undefined) delete otherCopy["system.quantity"];
+        return foundry.utils.equals(thisCopy, otherCopy);
     }
 
     /**
