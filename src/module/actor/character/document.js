@@ -19,16 +19,7 @@ class PTUTrainerActor extends PTUActor {
     }
 
     get trainerTierNum() {
-        // based on the trainer's level and variant.trainerAdvancement
-        const level = this.system.level.current;
-        const advancement = game.settings.get("ptu", "variant.trainerAdvancement");
-        const progression = CONFIG.PTU.data.trainerProgressions[advancement] ?? CONFIG.PTU.data.trainerProgressions["ptr-update"];
-        // count how many tiers are below or at the level
-        let tier = 0;
-        for (const t of Object.keys(progression.tier)) {
-            if (level >= t) tier++;
-        }
-        return tier;
+        return this._calculateTrainerTier();
     }
 
     get trainerTier() {
@@ -47,42 +38,64 @@ class PTUTrainerActor extends PTUActor {
     /**
      * Get EXP Training data without side effects and duplicating other data effects
      * Calculates trainer level and milestone data for Pokemon EXP Training Level Cap
+     * 
+     * This method should function even if the actor has not yet been prepared.
+     * 
      * @returns {Object} Object with level, milestones, milestoneMultiplier, and expTrainingLevelCap
      */
     getExpTrainingData() {
-        // Calculate trainer level using the same logic as prepareBaseData
-        const levelUpRequirement = game.settings.get("ptu", "variant.trainerAdvancement") === "short-track" ? 20 : 10;
+        const level = this._calculateLevel();
+        const trainerTier = this._calculateTrainerTier();
+        const trainerTierMultiplier = 2 * trainerTier;
+
+        return {
+            level,
+            trainerTier,
+            trainerTierMultiplier,
+            expTrainingLevelCap: level * trainerTierMultiplier
+        };
+    }
+
+    _calculateTrainerTier() {
+        // based on the trainer's level and variant.trainerAdvancement
+        const level = this._calculateLevel();
+        const advancement = game.settings.get("ptu", "variant.trainerAdvancement");
+        const progression = CONFIG.PTU.data.trainerProgressions[advancement] ?? CONFIG.PTU.data.trainerProgressions["ptr-update"];
+        // count how many tiers are below or at the level
+        let tier = 0;
+        for (const t of Object.keys(progression.tier)) {
+            if (level >= t) tier++;
+        }
+        return tier;
+    }
+
+    _calculateDexExp() {
+        return game.settings.get("ptu", "variant.useDexExp") == true
+            ? (this.system.dex?.owned?.length || 0)
+            : 0;
+    }
+
+    _calculateLevel() {
+        const trainerAdvancement = game.settings.get("ptu", "variant.trainerAdvancement");
+        const dexexp = this._calculateDexExp();
+
+        const levelUpRequirement = trainerAdvancement === "short-track" ? 20 : 10;
+
         const maxLevel = {
             "original": 50,
             "data-revamp": 25,
             "short-track": 25,
             "ptr-update": 50,
             "long-track": 100,
-        };
-        
-        const dexexp = game.settings.get("ptu", "variant.useDexExp") == true
-            ? (this.system.dex?.owned?.length || 0)
-            : 0;
-        
-        const level = Math.clamp(
+        }
+
+        return Math.clamp(
             1
             + Number(this.system.level.milestones)
             + Math.trunc((Number(this.system.level.miscexp) / levelUpRequirement) + (Number(dexexp) / levelUpRequirement)),
             1,
-            maxLevel[game.settings.get("ptu", "variant.trainerAdvancement")] ?? 50
+            maxLevel[trainerAdvancement] ?? 50
         );
-        
-        // Training milestones are based on trainer level (every 5 levels = 1 milestone)
-        // Training milestones =/= milestones exp
-        const trainingMilestones = Math.floor(level / 5);
-        const milestoneMultiplier = 2 + (2 * trainingMilestones);
-        
-        return {
-            level,
-            milestones: trainingMilestones,
-            milestoneMultiplier,
-            expTrainingLevelCap: level * milestoneMultiplier
-        };
     }
 
     /** @override */
@@ -105,28 +118,8 @@ class PTUTrainerActor extends PTUActor {
             system.skills[novice].value.mod += 1;
         }
 
-        system.level.dexexp = game.settings.get("ptu", "variant.useDexExp") == true
-            ? (this.system.dex?.owned?.length || 0)
-            : 0
-
-        const levelUpRequirement = game.settings.get("ptu", "variant.trainerAdvancement") === "short-track" ? 20 : 10;
-
-        const maxLevel = {
-            "original": 50,
-            "data-revamp": 25,
-            "short-track": 25,
-            "ptr-update": 50,
-            "long-track": 100,
-        }
-
-        system.level.current =
-            Math.clamp(
-                1
-                + Number(system.level.milestones)
-                + Math.trunc((Number(system.level.miscexp) / levelUpRequirement) + (Number(system.level.dexexp) / levelUpRequirement)),
-                1,
-                maxLevel[game.settings.get("ptu", "variant.trainerAdvancement")] ?? 50
-            );
+        system.level.dexexp = this._calculateDexExp();
+        system.level.current = this._calculateLevel();
 
         // Set attributes which are underrived data
         this.attributes = {
