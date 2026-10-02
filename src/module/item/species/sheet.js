@@ -1,4 +1,5 @@
 import { PTUItemSheet } from "../index.js";
+import { getMinLevelFromPredicate } from "../../../util/misc.js";
 
 class PTUSpeciesSheet extends PTUItemSheet {
     /** @override */
@@ -9,7 +10,6 @@ class PTUSpeciesSheet extends PTUItemSheet {
         options.dragDrop = [
             {dragSelector: ".item-list .item.ability-item.draggable", dropSelector: ".item-list .item.ability-item"},
             {dragSelector: ".item-list .item.move-item.draggable", dropSelector: ".item-list .item.move-item"},
-            {dragSelector: undefined, dropSelector: '.evolution-item'},
             {dragSelector: undefined, dropSelector: undefined}
         ]
         return options;
@@ -111,19 +111,6 @@ class PTUSpeciesSheet extends PTUItemSheet {
 
             const evolutions = this.item.system.evolutions;
             evolutions.splice(evolutions.findIndex(e => e.uuid == uuid), 1);
-            return this.item.update({"system.evolutions": evolutions});
-        });
-
-        html.find('.evolution-item .item-control.sub-item-delete').on('click', (event) => {
-            event.preventDefault();
-
-            const {uuid, itemIndex} = event.currentTarget.parentElement.parentElement.dataset;
-            if(!uuid || !itemIndex) return;
-
-            const evolutions = this.item.system.evolutions;
-            if(!evolutions[itemIndex].other?.evolutionItem) return;
-
-            evolutions[itemIndex].other.evolutionItem = undefined;
             return this.item.update({"system.evolutions": evolutions});
         });
 
@@ -323,20 +310,9 @@ class PTUSpeciesSheet extends PTUItemSheet {
                 case "species": {
                     const evolutions = this.item.system.evolutions;
                     if (evolutions.find(e => e.slug == item.slug)) return;
-                    const level = item.system?.evolutions?.find(e => e.slug == item.slug)?.level ?? 0;
-                    const evolutionItem = item.system?.evolutions?.find(e => e.slug == item.slug)?.other?.evolutionItem ?? undefined;
-                    const restrictions = item.system?.evolutions?.find(e => e.slug == item.slug)?.other?.restrictions ?? [];
-                    evolutions.push({level, slug: item.slug, uuid: item.uuid, other: {evolutionItem, restrictions}});
-                    return this.item.update({"system.evolutions": evolutions});
-                }
-                case "item": {
-                    // Evolution item drop — must land on a specific evolution-item drop zone
-                    const evolutionEl = event.target.closest('[data-index]');
-                    const index = evolutionEl?.dataset.index ?? event.currentTarget?.dataset.index;
-                    if (index === undefined) return;
-                    const evolutions = this.item.system.evolutions;
-                    if (evolutions[index]?.other?.evolutionItem?.slug == item.slug) return;
-                    evolutions[index].other.evolutionItem = {slug: item.slug, uuid: item.uuid};
+                    const existingEvo = item.system?.evolutions?.find(e => e.slug == item.slug);
+                    const predicate = existingEvo?.other?.predicate ?? [`self:level:${getMinLevelFromPredicate(existingEvo?.other?.predicate)}+`];
+                    evolutions.push({ slug: item.slug, uuid: item.uuid, other: { predicate } });
                     return this.item.update({"system.evolutions": evolutions});
                 }
             }
@@ -393,22 +369,23 @@ class PTUSpeciesSheet extends PTUItemSheet {
         }
 
         if(expanded.system.evolutions) {
-            const evolutions = Object.values(expanded.system.evolutions)
-                .map(evolution => {
-                    if(evolution.level && !isNaN(Number(evolution.level))) {
-                        evolution.level = Number(evolution.level);
-                    }
-                    else {
-                        evolution.level = 1;
-                    }
-                    return evolution;
-                });
+            const evolutions = Object.values(expanded.system.evolutions);
             for(let i = 0; i < evolutions.length; i++) {
-                evolutions[i].other.restrictions = Array.isArray(expanded.system.evolutions[i].other.restrictions) ? expanded.system.evolutions[i].other.restrictions : expanded.system.evolutions[i].other.restrictions.split(",").map(restriction => restriction.trim());
-                evolutions[i].other.evolutionItem = this.item.system.evolutions[i].other.evolutionItem;
+                const rawPredicate = evolutions[i].other?.predicate;
+                if (Array.isArray(rawPredicate)) {
+                    // Normalize from tagify format [{value: "..."}] to plain string array
+                    evolutions[i].other.predicate = rawPredicate.every(p => p && typeof p === "object" && "value" in p)
+                        ? rawPredicate.map(p => p.value).filter(Boolean)
+                        : rawPredicate.filter(p => typeof p === "string" && p);
+                } else {
+                    if (!evolutions[i].other) evolutions[i].other = {};
+                    evolutions[i].other.predicate = [];
+                }
             }
 
-            expanded.system.evolutions = evolutions.sort((a, b) => a.level - b.level);
+            expanded.system.evolutions = evolutions.sort((a, b) =>
+                getMinLevelFromPredicate(a.other?.predicate) - getMinLevelFromPredicate(b.other?.predicate)
+            );
         }
 
         return super._updateObject(event, foundry.utils.flattenObject(expanded));

@@ -2,6 +2,7 @@ import { CheckModifier, PTUModifier, StatisticModifier } from "../../actor/modif
 import { extractModifiers, extractRollSubstitutions } from "../../rules/helpers.js";
 import { PTUCheck } from "../../system/check/check.js";
 import { PTUItemItem } from "./document.js";
+import { getMinLevelFromPredicate } from "../../../util/misc.js";
 
 class PokeballItem extends PTUItemItem {
     get rollable() {
@@ -195,9 +196,10 @@ class PokeballItem extends PTUItemItem {
                 const evolutions = target.actor.species?.system?.evolutions ?? [];
                 if (evolutions.length > 1) {
                     const currentEvolution = evolutions.find(e => e.slug == target.actor.species.slug);
-                    const remaining = new Set(evolutions.filter(e => e.level > currentEvolution.level).map(x => x.level)).size;
+                    const currentMinLevel = getMinLevelFromPredicate(currentEvolution?.other?.predicate);
+                    const remaining = new Set(evolutions.filter(e => getMinLevelFromPredicate(e.other?.predicate) > currentMinLevel).map(x => getMinLevelFromPredicate(x.other?.predicate))).size;
                     const stage = (() => {
-                        const stage = new Set(evolutions.map(x => x.level)).size - remaining;
+                        const stage = new Set(evolutions.map(x => getMinLevelFromPredicate(x.other?.predicate))).size - remaining;
                         switch (stage) {
                             case 1: return "1st Stage";
                             case 2: return "2nd Stage";

@@ -4,9 +4,7 @@
         <div class="move-level"><b>Level</b></div>
     {{/if}}
     {{#if (is type "evolution")}}
-        <div class="evolution-level"><b>Level</b></div>
-        <div class="evolution-restriction center-text"><b>Restriction</b></div>
-        <div class="evolution-item center-text"><b>Item</b></div>
+        <div class="evolution-predicate"><b>Predicate</b></div>
     {{/if}}
     <div class="item-controls">
         <!-- possibly replace / add a 'browse' button here -->
@@ -31,26 +29,16 @@
                 </div>
             {{/if}}
             {{#if (is ../type "evolution")}}
-                <div class="evolution-level"> 
-                    <input type="text" name="system.evolutions.{{@index}}.level" value="{{item.level}}"/>
+                <div class="evolution-predicate">
                     <input type="hidden" name="system.evolutions.{{@index}}.uuid" value="{{item.uuid}}"/>
                     <input type="hidden" name="system.evolutions.{{@index}}.slug" value="{{item.slug}}"/>
-                </div>
-                <div class="evolution-restriction">
-                    <input type="text" name="system.evolutions.{{@index}}.other.restrictions" value="{{item.other.restrictions}}"/>
-                </div>
-                <div class="evolution-item" data-index="{{@index}}">
-                    {{#if item.other.evolutionItem}}
-                        <span class="evolution-item-item linked-item">@UUID[{{item.other.evolutionItem.uuid}}]</span>
-                    {{else}}
-                        <span class="empty"><small><i>Drop item here</i></small></span>
-                    {{/if}}
+                    <input type="text" class="ptu-tagify predicate-list"
+                           name="system.evolutions.{{@index}}.other.predicate"
+                           value="{{json item.other.predicate}}"
+                           data-dtype="JSON"/>
                 </div>
             {{/if}}
             <div class="item-controls">
-                {{#if (is ../type "evolution")}}
-                    <a class="item-control sub-item-delete" title="Delete Evolution Item"><i class="far fa-trash"></i></a>
-                {{/if}}
                 <a class="item-control item-delete" title="Delete {{../type}}"><i class="fas fa-trash"></i></a>
             </div>
         </li>

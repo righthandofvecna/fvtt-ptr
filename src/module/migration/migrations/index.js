@@ -17,3 +17,4 @@ export { Migration116FrequencyActionCost } from './116-frequency-action-cost.js'
 export { Migration117ContentSet } from './117-content-set.js';
 export { Migration119XpPoolFlatten } from './119-xpPool-flatten.js';
 export { Migration120PokeballType } from './120-pokeball-type.js';
+export { Migration121EvolutionPredicate } from './121-evolution-predicate.js';

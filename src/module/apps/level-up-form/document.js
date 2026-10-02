@@ -1,7 +1,8 @@
-import { getItemFromCompendium, formatSlug } from "../../../util/misc.js";
+import { getItemFromCompendium, formatSlug, getMinLevelFromPredicate } from "../../../util/misc.js";
 import { calculateStatTotal } from "../../actor/helpers.js";
 import { PTUPokemonActor } from "../../actor/index.js"
 import { PokemonGenerator } from "../../actor/pokemon/generator.js";
+import { PTUPredicate } from "../../system/predication.js";
 
 class LevelUpData {
     constructor(pokemon, { newExp, newLevel }) {
@@ -171,6 +172,14 @@ class LevelUpData {
     }
 
     async refresh() {
+        // Build roll options from the actor's own prepared options, but with
+        // self:level:* updated to reflect the *new* level so that evolution
+        // gates are evaluated correctly before the actor data is committed.
+        const rollOptions = new Set([
+            ...this.pokemon.getRollOptions(["evolution"]).filter(o => !o.startsWith("self:level:")),
+            `self:level:${this.level.new}`,
+        ]);
+
         if (!this.evolutions) {
             this.evolutions = {
                 available: [],
@@ -188,39 +197,22 @@ class LevelUpData {
                     this.evolutions.available.push({
                         uuid: evolution.uuid,
                         slug: evolution.slug,
-                        level: evolution.level,
+                        level: getMinLevelFromPredicate(evolution.other?.predicate),
                         label: formatSlug(evolution.slug)
                     });
                     continue;
                 }
+                // skip non-self evolutions if evolution is forbidden
+                if (rollOptions.has("self:evolution-forbidden")) continue;
 
-                if (evolution.other?.restrictions) {
-                    if (PokemonGenerator.isEvolutionRestricted(evolution, { gender: this.pokemon.system.gender })) continue;
-                }
+                // Skip evolutions whose predicate does not pass at the new level.
+                if (!(evolution.other.predicate ?? []).length || !PTUPredicate.test(evolution.other.predicate, rollOptions instanceof Set ? rollOptions : new Set(rollOptions))) continue;
 
-                // Check held-item requirement: if this evolution requires a specific item,
-                // the Pokémon must actually have it (with quantity > 0).
-                if (evolution.other?.evolutionItem) {
-                    const required = evolution.other.evolutionItem;
-                    const reqKey = String(required.slug ?? required.name ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "");
-                    if (reqKey) {
-                        const itemType = required.type ?? "item";
-                        const matchesItem = (doc) => [doc.system?.slug, doc.slug, doc.name]
-                            .some(c => String(c ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "") === reqKey);
-                        const hasRequired = this.pokemon.items.some(doc => {
-                            if (doc.type !== itemType && itemType !== "item") return false;
-                            if (doc.type === "item" && Number(doc.system?.quantity ?? 1) <= 0) return false;
-                            return matchesItem(doc);
-                        });
-                        if (!hasRequired) continue;
-                    }
-                }
-
-                if (evolution.level <= this.level.new && this.pokemon.species.system.evolutions.findIndex(e => e.slug === (this.evolution?.slug ?? this.pokemon.species.slug)) < i) {
+                if (this.pokemon.species.system.evolutions.findIndex(e => e.slug === (this.evolution?.slug ?? this.pokemon.species.slug)) < i) {
                     this.evolutions.available.push({
                         uuid: evolution.uuid,
                         slug: evolution.slug,
-                        level: evolution.level,
+                        level: getMinLevelFromPredicate(evolution.other?.predicate),
                         label: formatSlug(evolution.slug)
                     });
                 }

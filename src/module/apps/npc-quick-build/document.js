@@ -1,6 +1,7 @@
 import { PokemonGenerator } from "../../actor/pokemon/generator.js";
 import { PTUSkills } from '../../actor/index.js';
 import { Mutex } from '../../../util/mutex.js';
+import { getMinLevelFromPredicate } from '../../../util/misc.js';
 
 const SINGLE_MIN_SKILL_RANK_RE = /(?<rank>(Pathetic)|(Untrained)|(Novice)|(Adept)|(Expert)|(Master)|(Virtuoso)) (?<skill>.+)/i;
 const ANY_N_SKILLS_AT_RE = /(any )?(?<n>([0-9]+)|(A)|(One)|(Two)|(Three)|(Four)|(Five)|(Six)|(Seven)|(Eight)|(Nine)) Skills? at (?<rank>(Untrained)|(Novice)|(Adept)|(Expert)|(Master)|(Virtuoso))( Rank)?/i;
@@ -782,10 +783,13 @@ export class NpcQuickBuildData {
         }
         
         // make sure we're at the right evolution level
-        speciesOption = [...(evolutionChain.filter(ev=>ev.level <= pkmnLevel).sort(ev=>-ev.level).map(ev=>({
-            label: ev.slug[0].toUpperCase() + ev.slug.slice(1),
-            uuid: ev.uuid,
-        })) ?? []), speciesOption][0];
+        speciesOption = [...(evolutionChain
+            .filter(ev => getMinLevelFromPredicate(ev.other?.predicate ?? []) <= pkmnLevel)
+            .sort((a, b) => getMinLevelFromPredicate(b.other?.predicate ?? []) - getMinLevelFromPredicate(a.other?.predicate ?? []))
+            .map(ev => ({
+                label: ev.slug[0].toUpperCase() + ev.slug.slice(1),
+                uuid: ev.uuid,
+            })) ?? []), speciesOption][0];
         species = (await fromUuid(speciesOption.uuid)) ?? species;
 
         this.party[slot].level.value = pkmnLevel;
@@ -849,7 +853,8 @@ export class NpcQuickBuildData {
         pkmn.species.gender.choosable = genders.length > 1;
 
         // get minimum level for this evolution
-        pkmn.level.min = species.system?.evolutions?.find(e => e.slug == species.system?.slug)?.level ?? 1;
+        const currentEvo = species.system?.evolutions?.find(e => e.slug == species.system?.slug);
+        pkmn.level.min = currentEvo ? getMinLevelFromPredicate(currentEvo.other?.predicate) : 1;
         if (pkmn.level.value < pkmn.level.min) {
             pkmn.level.value = pkmn.level.min;
         }

@@ -1,6 +1,7 @@
 import { natureData } from "../../../scripts/config/data/nature.js";
 import { levelProgression } from "../../../scripts/config/data/level-progression.js";
 import { PTUSpecies } from "../../item/index.js";
+import { sluggify, getMinLevelFromPredicate } from "../../../util/misc.js";
 
 export class PokemonGenerator {
     constructor(species, { x, y } = {}) {
@@ -233,37 +234,50 @@ export class PokemonGenerator {
         this.evolution = null;
 
         const stages = this.species.system.evolutions;
-        for (let i = stages.length - 1; i >= 0; i--) {
-            if (stages[i].other?.restrictions) {
-                if (PokemonGenerator.isEvolutionRestricted(stages[i], { gender: this.gender })) continue;
-            }
 
-            if (stages[i].level <= this.level) {
-                const sameLevelStages = stages.filter(s => s.level == stages[i].level);
-                if (sameLevelStages.length > 1) {
-                    const options = [];
-                    for (const stage of sameLevelStages) {
-                        if (stage.slug === stages[i].slug) {
-                            options.push(stage);
-                            continue;
-                        }
-                        if (stage.other?.restrictions) {
-                            if (PokemonGenerator.isEvolutionRestricted(stage, { gender: this.gender })) continue;
-                        }
-                        options.push(stage);
-                    }
+        // For generation purposes only level and gender predicates are evaluated;
+        // item requirements and other conditions are ignored.
+        const eligible = stages.filter(stage => {
+            if (stage.slug === this.species.slug) return false;
+            return PokemonGenerator.#checkGeneratorPredicate(stage, this.level, this.gender);
+        });
 
-                    this.evolution = options[Math.floor(Math.random() * options.length)];
-                    break;
-                }
-                this.evolution = stages[i];
-                break;
-            }
+        if (eligible.length > 0) {
+            // Among eligible stages, prefer those with the highest minimum-level requirement.
+            const maxMinLevel = Math.max(...eligible.map(s => getMinLevelFromPredicate(s.other?.predicate)));
+            const topStages = eligible.filter(s => getMinLevelFromPredicate(s.other?.predicate) === maxMinLevel);
+            this.evolution = topStages[Math.floor(Math.random() * topStages.length)];
         }
 
         if (this.evolution) {
             return this.species = await fromUuid(this.evolution.uuid);
         }
+    }
+
+    /**
+     * Generator-specific predicate check: only honours `self:level:N+` and
+     * `self:gender:<slug>` predicates; all other predicates are ignored.
+     * @param {object} stage
+     * @param {number} level
+     * @param {string} gender  Localized gender string (e.g. "Male").
+     * @returns {boolean}
+     */
+    static #checkGeneratorPredicate(stage, level, gender) {
+        const predicate = stage.other?.predicate ?? [];
+        if (predicate.length === 0) return true;
+
+        // Filter to only the predicates this context can evaluate.
+        const relevant = predicate.filter(p => {
+            if (typeof p !== "string") return false;
+            return p.startsWith("self:level:") || p.startsWith("self:gender:");
+        });
+        if (relevant.length === 0) return true;
+
+        const rollOptions = new Set([
+            `self:level:${level}`,
+            `self:gender:${sluggify(gender)}`,
+        ]);
+        return PTUPredicate.test(relevant, rollOptions);
     }
 
     prepareNature() {
@@ -367,22 +381,6 @@ export class PokemonGenerator {
         if (this.species.system.number === 849 && lowKeyNatures.includes(this.nature.toLowerCase())) return this.form = this.species.system.form = "LowKey";
 
         return this.form = this.species?.system?.form;
-    }
-
-    static isEvolutionRestricted(stage, { gender } = {}) {
-        for (const restriction of stage.other.restrictions) {
-            const lower = String(restriction ?? "").trim().toLowerCase();
-            if (!lower) continue;
-            if (["male", "female"].includes(lower)) {
-                if (gender && gender != game.i18n.localize(`PTU.${Handlebars.helpers.capitalizeFirst(lower)}`)) {
-                    return true;
-                }
-            } else {
-                // Unknown restriction — fail closed so unrecognised conditions block the evolution.
-                return true;
-            }
-        }
-        return false;
     }
 
     static async getTokenImage(species, { gender = game.i18n.localize("PTU.Male"), shiny = false } = {}) {
