@@ -95,6 +95,18 @@ class PTUPokemonActor extends PTUActor {
         return super.createEmbeddedDocuments(embeddedName, data, options);
     }
 
+    _prepareEvolutionRollOptions() {
+        this.flags.ptu.rollOptions.evolution = {};
+        const trainerId = this.flags?.ptu?.party?.trainer;
+        if (!trainerId) return;
+        for (const member of game.actors.filter(a => a !== this && a.flags?.ptu?.party?.trainer === trainerId && !a.flags?.ptu?.party?.boxed)) {
+            const species = member._source?.items?.find(i => i.type === "species")?.system?.slug;
+            if (species) {
+                this.flags.ptu.rollOptions.evolution[`party:species:${species}`] = true;
+            }
+        }
+    }
+
     /** @override */
     prepareBaseData() {
         super.prepareBaseData();
@@ -191,6 +203,9 @@ class PTUPokemonActor extends PTUActor {
         // set spirit roll options
         Object.keys(this.flags.ptu.rollOptions.all ?? {}).filter(k=>k.startsWith("self:spirit:")).forEach(key => delete this.flags.ptu.rollOptions.all[key]);
         this.flags.ptu.rollOptions.all[`self:spirit:${system.spirit.value}`] = true
+
+        // add evolution-based roll options from party members
+        this._prepareEvolutionRollOptions();
     }
 
     /** @override */
