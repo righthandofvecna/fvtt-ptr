@@ -2,7 +2,6 @@
   "name": "Forest's Curse",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GrassIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target gains the Grass Type in addition to its other Types for 5 turns.",
@@ -47,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -89,6 +89,5 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  },
-  "flags": {}
+  }
 }

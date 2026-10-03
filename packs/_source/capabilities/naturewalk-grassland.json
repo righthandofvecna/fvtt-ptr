@@ -38,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -54,7 +55,6 @@
     "leagueLegal": false
   },
   "effects": [],
-  "folder": null,
   "flags": {
     "ptu": {
       "showInTokenPanel": false,

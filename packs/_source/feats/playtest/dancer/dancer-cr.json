@@ -2,7 +2,7 @@
   "name": "Dancer",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose Spinning Dance or Own Tempo. You gain the chosen Ability.",
+    "effect": "Effect: Choose @UUID[Compendium.ptu.abilities.Item.DcNfimWHEweMv9YS]{Spinning Dance} or @UUID[Compendium.ptu.abilities.Item.Fp7nWb0csK9MHRsZ]{Own Tempo}. You gain the chosen Ability.\n<blockquote>Note: All moves with Dance in the name, Clangorous Soul and those obtained through Dancer Features count as Dancer Moves.</blockquote>",
     "snippet": "",
     "rules": [
       {
@@ -83,7 +83,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -123,7 +124,7 @@
         "id": "vd0AWlLvEhLLTpgE",
         "onDelete": "detach"
       },
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

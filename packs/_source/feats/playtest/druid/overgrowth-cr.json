@@ -8,7 +8,7 @@
       {
         "key": "ActiveEffectLike",
         "predicate": [
-          "capability:tree-hb"
+          "capability:tree-oath"
         ],
         "mode": "add",
         "path": "system.modifiers.baseStats.atk.mod",
@@ -19,7 +19,7 @@
       {
         "key": "ActiveEffectLike",
         "predicate": [
-          "capability:fungal-hb"
+          "capability:fungal-oath"
         ],
         "mode": "add",
         "path": "system.modifiers.baseStats.spdef.mod",
@@ -30,7 +30,7 @@
       {
         "key": "ActiveEffectLike",
         "predicate": [
-          "capability:flower-hb"
+          "capability:flower-oath"
         ],
         "mode": "add",
         "path": "system.modifiers.baseStats.spatk.mod",
@@ -71,7 +71,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -106,7 +107,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

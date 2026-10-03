@@ -2,7 +2,6 @@
   "name": "Feather Dance",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FlyingIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "All legal targets have their Attack lowered 2 Combat Stages.",
@@ -48,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
