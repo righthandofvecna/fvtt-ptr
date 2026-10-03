@@ -106,6 +106,7 @@
       }
     ],
     "enabled": true,
+    "repeatable": true,
     "slug": "elemental-connection",
     "schema": {
       "version": 0.116,

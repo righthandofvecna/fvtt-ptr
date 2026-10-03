@@ -6,6 +6,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
+    "repeatable": true,
     "slug": "soulbound",
     "schema": {
       "version": 0.116,

@@ -225,6 +225,7 @@
       }
     ],
     "enabled": true,
+    "repeatable": true,
     "slug": "basic-skills",
     "schema": {
       "version": 0.116,
