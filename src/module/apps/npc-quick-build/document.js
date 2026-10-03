@@ -784,8 +784,8 @@ export class NpcQuickBuildData {
         
         // make sure we're at the right evolution level
         speciesOption = [...(evolutionChain
-            .filter(ev => getMinLevelFromPredicate(ev.other?.predicate ?? []) <= pkmnLevel)
-            .sort((a, b) => getMinLevelFromPredicate(b.other?.predicate ?? []) - getMinLevelFromPredicate(a.other?.predicate ?? []))
+            .filter(ev => getMinLevelFromPredicate(ev.predicate ?? []) <= pkmnLevel)
+            .sort((a, b) => getMinLevelFromPredicate(b.predicate ?? []) - getMinLevelFromPredicate(a.predicate ?? []))
             .map(ev => ({
                 label: ev.slug[0].toUpperCase() + ev.slug.slice(1),
                 uuid: ev.uuid,
@@ -854,7 +854,7 @@ export class NpcQuickBuildData {
 
         // get minimum level for this evolution
         const currentEvo = species.system?.evolutions?.find(e => e.slug == species.system?.slug);
-        pkmn.level.min = currentEvo ? getMinLevelFromPredicate(currentEvo.other?.predicate) : 1;
+        pkmn.level.min = currentEvo ? getMinLevelFromPredicate(currentEvo.predicate) : 1;
         if (pkmn.level.value < pkmn.level.min) {
             pkmn.level.value = pkmn.level.min;
         }

@@ -196,10 +196,10 @@ class PokeballItem extends PTUItemItem {
                 const evolutions = target.actor.species?.system?.evolutions ?? [];
                 if (evolutions.length > 1) {
                     const currentEvolution = evolutions.find(e => e.slug == target.actor.species.slug);
-                    const currentMinLevel = getMinLevelFromPredicate(currentEvolution?.other?.predicate);
-                    const remaining = new Set(evolutions.filter(e => getMinLevelFromPredicate(e.other?.predicate) > currentMinLevel).map(x => getMinLevelFromPredicate(x.other?.predicate))).size;
+                    const currentMinLevel = getMinLevelFromPredicate(currentEvolution?.predicate);
+                    const remaining = new Set(evolutions.filter(e => getMinLevelFromPredicate(e.predicate) > currentMinLevel).map(x => getMinLevelFromPredicate(x.predicate))).size;
                     const stage = (() => {
-                        const stage = new Set(evolutions.map(x => getMinLevelFromPredicate(x.other?.predicate))).size - remaining;
+                        const stage = new Set(evolutions.map(x => getMinLevelFromPredicate(x.predicate))).size - remaining;
                         switch (stage) {
                             case 1: return "1st Stage";
                             case 2: return "2nd Stage";

@@ -197,7 +197,7 @@ class LevelUpData {
                     this.evolutions.available.push({
                         uuid: evolution.uuid,
                         slug: evolution.slug,
-                        level: getMinLevelFromPredicate(evolution.other?.predicate),
+                        level: getMinLevelFromPredicate(evolution.predicate),
                         label: formatSlug(evolution.slug)
                     });
                     continue;
@@ -206,13 +206,13 @@ class LevelUpData {
                 if (rollOptions.has("self:evolution-forbidden")) continue;
 
                 // Skip evolutions whose predicate does not pass at the new level.
-                if (!(evolution.other.predicate ?? []).length || !PTUPredicate.test(evolution.other.predicate, rollOptions instanceof Set ? rollOptions : new Set(rollOptions))) continue;
+                if (!(evolution.predicate ?? []).length || !PTUPredicate.test(evolution.predicate, rollOptions instanceof Set ? rollOptions : new Set(rollOptions))) continue;
 
                 if (this.pokemon.species.system.evolutions.findIndex(e => e.slug === (this.evolution?.slug ?? this.pokemon.species.slug)) < i) {
                     this.evolutions.available.push({
                         uuid: evolution.uuid,
                         slug: evolution.slug,
-                        level: getMinLevelFromPredicate(evolution.other?.predicate),
+                        level: getMinLevelFromPredicate(evolution.predicate),
                         label: formatSlug(evolution.slug)
                     });
                 }

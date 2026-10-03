@@ -311,7 +311,7 @@ class PTUSpeciesSheet extends PTUItemSheet {
                     const evolutions = this.item.system.evolutions;
                     if (evolutions.find(e => e.slug == item.slug)) return;
                     const existingEvo = item.system?.evolutions?.find(e => e.slug == item.slug);
-                    const predicate = existingEvo?.other?.predicate ?? [`self:level:${getMinLevelFromPredicate(existingEvo?.other?.predicate)}+`];
+                    const predicate = existingEvo?.predicate ?? [`self:level:${getMinLevelFromPredicate(existingEvo?.predicate)}+`];
                     evolutions.push({ slug: item.slug, uuid: item.uuid, other: { predicate } });
                     return this.item.update({"system.evolutions": evolutions});
                 }
@@ -371,20 +371,19 @@ class PTUSpeciesSheet extends PTUItemSheet {
         if(expanded.system.evolutions) {
             const evolutions = Object.values(expanded.system.evolutions);
             for(let i = 0; i < evolutions.length; i++) {
-                const rawPredicate = evolutions[i].other?.predicate;
+                const rawPredicate = evolutions[i].predicate;
                 if (Array.isArray(rawPredicate)) {
                     // Normalize from tagify format [{value: "..."}] to plain string array
-                    evolutions[i].other.predicate = rawPredicate.every(p => p && typeof p === "object" && "value" in p)
+                    evolutions[i].predicate = rawPredicate.every(p => p && typeof p === "object" && "value" in p)
                         ? rawPredicate.map(p => p.value).filter(Boolean)
                         : rawPredicate.filter(p => typeof p === "string" && p);
                 } else {
-                    if (!evolutions[i].other) evolutions[i].other = {};
-                    evolutions[i].other.predicate = [];
+                    evolutions[i].predicate = [];
                 }
             }
 
             expanded.system.evolutions = evolutions.sort((a, b) =>
-                getMinLevelFromPredicate(a.other?.predicate) - getMinLevelFromPredicate(b.other?.predicate)
+                getMinLevelFromPredicate(a.predicate) - getMinLevelFromPredicate(b.predicate)
             );
         }
 

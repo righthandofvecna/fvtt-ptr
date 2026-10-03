@@ -244,8 +244,8 @@ export class PokemonGenerator {
 
         if (eligible.length > 0) {
             // Among eligible stages, prefer those with the highest minimum-level requirement.
-            const maxMinLevel = Math.max(...eligible.map(s => getMinLevelFromPredicate(s.other?.predicate)));
-            const topStages = eligible.filter(s => getMinLevelFromPredicate(s.other?.predicate) === maxMinLevel);
+            const maxMinLevel = Math.max(...eligible.map(s => getMinLevelFromPredicate(s.predicate)));
+            const topStages = eligible.filter(s => getMinLevelFromPredicate(s.predicate) === maxMinLevel);
             this.evolution = topStages[Math.floor(Math.random() * topStages.length)];
         }
 
@@ -263,7 +263,7 @@ export class PokemonGenerator {
      * @returns {boolean}
      */
     static #checkGeneratorPredicate(stage, level, gender) {
-        const predicate = stage.other?.predicate ?? [];
+        const predicate = stage.predicate ?? [];
         if (predicate.length === 0) return true;
 
         // Filter to only the predicates this context can evaluate.

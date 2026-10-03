@@ -8,16 +8,24 @@ import { sluggify } from "../../../util/misc.js";
  *   { level: 10, slug: "...", uuid: "...", other: { restrictions: ["Female"], evolutionItem: { slug: "...", uuid: "..." } } }
  *
  * After:
- *   { slug: "...", uuid: "...", other: { predicate: ["self:level:10+", "self:gender:female", "item:..."] } }
+ *   { slug: "...", uuid: "...", predicate: ["self:level:10+", "self:gender:female", "item:..."], ...otherProperties }
  */
 function migrateEvolution(evolution) {
   // Already migrated: has predicate, no top-level level field, no restrictions
   if (
-    Array.isArray(evolution.other?.predicate) &&
+    Array.isArray(evolution.predicate) &&
     !("level" in evolution) &&
     !("restrictions" in (evolution.other ?? {}))
   ) {
     return evolution;
+  }
+  // temporary
+  if (Array.isArray(evolution.other?.predicate)) {
+    return {
+      uuid: evolution.uuid,
+      slug: evolution.slug,
+      predicate: evolution.other.predicate,
+    };
   }
 
   const predicate = [];
@@ -46,9 +54,8 @@ function migrateEvolution(evolution) {
   }
 
   return {
-    uuid: evolution.uuid,
-    slug: evolution.slug,
-    other: { predicate },
+    ...evolution,
+    predicate,
   };
 }
 
