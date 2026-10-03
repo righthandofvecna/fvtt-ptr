@@ -2,7 +2,6 @@
   "name": "Needle Arm",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GrassIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Needle Arm Flinches the target on 15+.",
@@ -57,7 +56,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,

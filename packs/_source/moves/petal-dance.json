@@ -14,7 +14,8 @@
         "uuid": "Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh",
         "range": "1",
         "value": "",
-        "affects": "origin"
+        "affects": "origin",
+        "linked": false
       },
       {
         "key": "ApplyEffect",
@@ -23,7 +24,8 @@
         "uuid": "Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH",
         "range": "1",
         "value": "",
-        "affects": "origin"
+        "affects": "origin",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -104,7 +106,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "devNote": "Dylan - Make this friendly and burst so this is consistent?"
+      "devNote": "Dylan - Make this friendly and burst so this is consistent?",
+      "automationStatus": "needs-automation",
+      "used": null
     }
   },
   "_stats": {
