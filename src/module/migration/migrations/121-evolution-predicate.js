@@ -19,15 +19,6 @@ function migrateEvolution(evolution) {
   ) {
     return evolution;
   }
-  // temporary
-  if (Array.isArray(evolution.other?.predicate)) {
-    return {
-      uuid: evolution.uuid,
-      slug: evolution.slug,
-      predicate: evolution.other.predicate,
-    };
-  }
-
   const predicate = [];
 
   // Level → self:level:N+

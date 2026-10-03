@@ -33,8 +33,8 @@
                     <input type="hidden" name="system.evolutions.{{@index}}.uuid" value="{{item.uuid}}"/>
                     <input type="hidden" name="system.evolutions.{{@index}}.slug" value="{{item.slug}}"/>
                     <input type="text" class="ptu-tagify predicate-list"
-                           name="system.evolutions.{{@index}}.other.predicate"
-                           value="{{json item.other.predicate}}"
+                           name="system.evolutions.{{@index}}.predicate"
+                           value="{{json item.predicate}}"
                            data-dtype="JSON"/>
                 </div>
             {{/if}}
