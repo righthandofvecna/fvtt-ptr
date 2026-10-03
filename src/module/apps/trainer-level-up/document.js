@@ -143,6 +143,35 @@ export class TrainerLevelUpData {
         return `${count > 1 ? count + " " : ""}Any ${typeName}${suffix}`;
     }
 
+    // ─── Skill background ─────────────────────────────────────────────────────
+
+    get backgroundStatus() {
+        const bg = this.actor.system.background ?? {};
+        const adept = bg.adept ?? "blank";
+        const novice = bg.novice ?? "blank";
+        const pathetic = {
+            one: bg.pathetic?.one ?? "blank",
+            two: bg.pathetic?.two ?? "blank",
+            three: bg.pathetic?.three ?? "blank",
+        };
+        const isComplete = !!(adept !== "blank" && novice !== "blank" && pathetic.one !== "blank" && pathetic.two !== "blank" && pathetic.three !== "blank");
+        const skillOptions = (CONFIG.PTU.data.skills.keys ?? []).map(key => ({
+            key,
+            label: game.i18n.localize(`SKILL.${key}`),
+        }));
+        return { adept, novice, pathetic, isComplete, skillOptions };
+    }
+
+    async saveBackground({ adept, novice, pathetic } = {}) {
+        await this.actor.update({
+            "system.background.adept": adept ?? "blank",
+            "system.background.novice": novice ?? "blank",
+            "system.background.pathetic.one": pathetic?.one ?? "blank",
+            "system.background.pathetic.two": pathetic?.two ?? "blank",
+            "system.background.pathetic.three": pathetic?.three ?? "blank",
+        });
+    }
+
     // ─── Data loading ─────────────────────────────────────────────────────────
 
     async load() {
