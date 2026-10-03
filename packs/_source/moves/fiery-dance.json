@@ -2,7 +2,6 @@
   "name": "Fiery Dance",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "If Fiery Dance successfully hits a foe, it raises the user's Special Attack by 1 Combat Stage on Even-Numbered Rolls.",
@@ -56,7 +55,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,

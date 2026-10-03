@@ -2,7 +2,7 @@
   "name": "Passing Waltz",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You or one of your Pokémon with Own Tempo or Spinning Dance uses a Dance Move\nEffect: Choose an ally within 3 meters of the triggering target. That ally gains Combat Stages from the triggering Move instead of the user.",
+    "effect": "Trigger: You or one of your Pokémon with @UUID[Compendium.ptu.abilities.Item.Fp7nWb0csK9MHRsZ]{Own Tempo} or @UUID[Compendium.ptu.abilities.Item.DcNfimWHEweMv9YS]{Spinning Dance} uses a @UUID[Compendium.ptu.feats.Item.4cvt6gLXQyBm8WLw]{Dance} Move\nEffect: Choose an ally within 3 meters of the triggering target. That ally gains Combat Stages from the triggering Move instead of the user.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,8 @@
     "class": "Dancer",
     "name": "Passing Waltz [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "passing-waltz"
+    "replacesSlug": "passing-waltz",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +83,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
