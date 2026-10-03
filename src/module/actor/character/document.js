@@ -81,20 +81,14 @@ class PTUTrainerActor extends PTUActor {
 
         const levelUpRequirement = trainerAdvancement === "short-track" ? 20 : 10;
 
-        const maxLevel = {
-            "original": 50,
-            "data-revamp": 25,
-            "short-track": 25,
-            "ptr-update": 50,
-            "long-track": 100,
-        }
+        const maxLevel = CONFIG.PTU.data.trainerProgressions[trainerAdvancement]?.cap ?? 50; 
 
         return Math.clamp(
             1
             + Number(this.system.level.milestones)
             + Math.trunc((Number(this.system.level.miscexp) / levelUpRequirement) + (Number(dexexp) / levelUpRequirement)),
             1,
-            maxLevel[trainerAdvancement] ?? 50
+            maxLevel
         );
     }
 
