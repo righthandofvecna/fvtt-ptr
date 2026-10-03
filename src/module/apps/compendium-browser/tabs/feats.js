@@ -6,9 +6,11 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
         super(browser);
 
         this.searchFields = ["name", "prerequisites.label", "prerequisites.tier", "class"]
-        this.storeFields = ["name", "uuid", "type", "source", "img", "prerequisites", "class", "classPretty", "keywords", "automationStatus"];
+        this.storeFields = ["name", "uuid", "type", "source", "img", "prerequisites", "class", "classPretty", "keywords", "automationStatus", "repeatable"];
 
         this.index = ["img", "system.source.value", "system.prerequisites", "system.class", "system.keywords", "system.slug", "system.contentSet", "system.replacesSlug", "flags.ptu.automationStatus"];
+        // Optional fields: fetched when present but not required for hasAllIndexFields
+        this.optionalIndex = ["system.repeatable"];
 
         this.filterData = this.prepareFilterData();
     }
@@ -24,6 +26,7 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
     async loadData() {
         const feats = [];
         const indexFields = foundry.utils.duplicate(this.index);
+        const fetchFields = [...indexFields, ...(this.optionalIndex ?? [])];
         const sources = new Set();
 
         const classes = new Set();
@@ -33,7 +36,7 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
         for await (const { pack, index } of this.browser.packLoader.loadPacks(
             "Item",
             this.browser.loadedPacks(this.tabName),
-            indexFields
+            fetchFields
         )) {
             for (const featData of index) {
                 if (featData.type !== "feat") continue;
@@ -64,6 +67,7 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
                     slug: featData.system.slug ?? "",
                     contentSet: featData.system.contentSet ?? "",
                     replacesSlug: featData.system.replacesSlug ?? "",
+                    repeatable: featData.system.repeatable ?? false,
                     automationStatus: featData.flags?.ptu?.automationStatus ?? "needs-automation"
                 })
                 if (_class) classes.add(_class);

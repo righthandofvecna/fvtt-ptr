@@ -673,13 +673,15 @@
       "prerequisites": [],
       "notes": "",
       "free": false,
+      "repeatable": false,
       "class": ""
     },
     "edge": {
       "templates": ["base", "frequencyTracked"],
       "prerequisites": [],
       "notes": "",
-      "free": false
+      "free": false,
+      "repeatable": false
     },
     "effect": {
       "templates": ["base"],
@@ -1032,13 +1034,15 @@
       "prerequisites": [],
       "notes": "",
       "free": false,
+      "repeatable": false,
       "class": ""
     },
     "edge": {
       "templates": ["base", "frequencyTracked"],
       "prerequisites": [],
       "notes": "",
-      "free": false
+      "free": false,
+      "repeatable": false
     },
     "effect": {
       "templates": ["base"],
