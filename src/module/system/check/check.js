@@ -9,6 +9,7 @@ import { CheckDialog } from "./dialogs/dialog.js";
 import { PTUTokenDocument } from "../../canvas/token/document.js";
 import { CheckModifier } from "../../actor/modifiers.js";
 import { extractReminders } from "../../rules/helpers.js";
+import { buildOutcomeOptions } from "../../rules/pipeline.js";
 import { sluggify } from "../../../util/misc.js";
 
 class PTUDiceCheck {
@@ -363,6 +364,7 @@ class PTUDiceCheck {
             const messageDomains = msgCtx.domains ?? [];
             const messageTargets = msgCtx.targets ?? [];
             const messageOptions = msgCtx.options ?? [];
+            const messageOutcomes = msgCtx.outcomes ?? {};
             const rollValue = msgCtx.rollResult ?? null;
 
             // Build damage-received domain variants so reminders fire after the damage roll
@@ -389,9 +391,17 @@ class PTUDiceCheck {
 
             // For each target, ask synthetics for reminders
             for (const t of messageTargets) {
+                // Deduplicate within this target's results by reminderId (same RE) and template (same text).
+                const seenIds = new Set();
+                const seenTemplates = new Set();
                 try {
                     const targetActor = await fromUuid(t.actor ?? "");
                     if (!targetActor) continue;
+
+                    // Include attack:outcome:* options so reminder predicates can gate on hit/miss.
+                    // Outcomes are stored in msgCtx.outcomes keyed by actor ID, not in the targets array.
+                    const targetOutcome = t.outcome ?? messageOutcomes[targetActor.id] ?? null;
+                    const targetOptions = [...messageOptions, ...buildOutcomeOptions(targetOutcome)];
 
                     const reminders = await extractReminders({
                         affects: "target",
@@ -399,17 +409,17 @@ class PTUDiceCheck {
                         target: targetActor,
                         item: this.item,
                         domains: targetReminderDomains,
-                        options: messageOptions,
+                        options: targetOptions,
                         roll: rollValue,
                     });
 
-                    for (const reminder of reminders) {
-                        await ChatMessage.create({
-                            content: reminder.content,
-                            speaker: reminder.speaker,
-                            whisper: reminder.whisper,
-                            flags: reminder.flags,
-                        });
+                    for (const { template, content, speaker, whisper, flags } of reminders) {
+                        const reminderId = flags?.ptu?.reminder?.id;
+                        if (reminderId && seenIds.has(reminderId)) continue;
+                        if (template && seenTemplates.has(template)) continue;
+                        if (reminderId) seenIds.add(reminderId);
+                        if (template) seenTemplates.add(template);
+                        await ChatMessage.create({ content, speaker, whisper, flags });
                     }
                 }
                 catch (err) {
@@ -419,24 +429,33 @@ class PTUDiceCheck {
 
             // Origin reminders
             try {
+                // Deduplicate within origin results by reminderId and template.
+                const seenIds = new Set();
+                const seenTemplates = new Set();
                 const originTarget = messageTargets.length > 0 ? await fromUuid(messageTargets[0].actor ?? "") : null;
+                // Merge all per-target outcome options so origin predicates can gate on any outcome.
+                const allOutcomeOptions = [...new Set(messageTargets.flatMap(t => {
+                    const actorId = t.actor?.split(".")?.at(-1) ?? "";
+                    const outcome = t.outcome ?? messageOutcomes[actorId] ?? null;
+                    return buildOutcomeOptions(outcome);
+                }))];
                 const originReminders = await extractReminders({
                     affects: "origin",
                     origin: this.actor,
                     target: originTarget ?? this.actor,
                     item: this.item,
                     domains: messageDomains,
-                    options: messageOptions,
+                    options: [...messageOptions, ...allOutcomeOptions],
                     roll: rollValue,
                 });
 
-                for (const reminder of originReminders) {
-                    await ChatMessage.create({
-                        content: reminder.content,
-                        speaker: reminder.speaker,
-                        whisper: reminder.whisper,
-                        flags: reminder.flags,
-                    });
+                for (const { template, content, speaker, whisper, flags } of originReminders) {
+                    const reminderId = flags?.ptu?.reminder?.id;
+                    if (reminderId && seenIds.has(reminderId)) continue;
+                    if (template && seenTemplates.has(template)) continue;
+                    if (reminderId) seenIds.add(reminderId);
+                    if (template) seenTemplates.add(template);
+                    await ChatMessage.create({ content, speaker, whisper, flags });
                 }
             }
             catch (err) {

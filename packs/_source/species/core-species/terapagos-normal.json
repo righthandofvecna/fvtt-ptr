@@ -5,8 +5,15 @@
   "img": "/systems/ptu/static/css/images/icons/species_icon.png",
   "system": {
     "schema": {
-      "version": null,
-      "lastMigration": null
+      "version": 0.121,
+      "lastMigration": {
+        "datetime": "2026-10-03T04:49:20.503Z",
+        "version": {
+          "schema": null,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
+        }
+      }
     },
     "dexentry": "",
     "number": 1204,
@@ -59,7 +66,8 @@
           "restrictions": [
             ""
           ]
-        }
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -485,10 +493,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1705606236926,
-    "modifiedTime": 1708094889604,
+    "modifiedTime": 1791002961053,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

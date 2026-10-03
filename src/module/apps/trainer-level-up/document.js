@@ -28,8 +28,8 @@ const RANK_LABELS = {
 export class TrainerLevelUpData {
     constructor(actor) {
         this.actor = actor;
-        this._allFeatures = [];
-        this._allEdges = [];
+        this._compendiumFeatures = [];
+        this._compendiumEdges = [];
         this._resolvedUuids = {}; // cache: uuid -> item name
         this._skillEdgeUuids = {}; // { "Basic Skills": uuid, ... }
         this.isLoaded = false;
@@ -143,6 +143,35 @@ export class TrainerLevelUpData {
         return `${count > 1 ? count + " " : ""}Any ${typeName}${suffix}`;
     }
 
+    // ─── Skill background ─────────────────────────────────────────────────────
+
+    get backgroundStatus() {
+        const bg = this.actor.system.background ?? {};
+        const adept = bg.adept || "blank";
+        const novice = bg.novice || "blank";
+        const pathetic = {
+            one: bg.pathetic?.one || "blank",
+            two: bg.pathetic?.two || "blank",
+            three: bg.pathetic?.three || "blank",
+        };
+        const isComplete = !!(adept !== "blank" && novice !== "blank" && pathetic.one !== "blank" && pathetic.two !== "blank" && pathetic.three !== "blank");
+        const skillOptions = (CONFIG.PTU.data.skills.keys ?? []).map(key => ({
+            key,
+            label: game.i18n.localize(`SKILL.${key}`),
+        }));
+        return { adept, novice, pathetic, isComplete, skillOptions };
+    }
+
+    async saveBackground({ adept, novice, pathetic } = {}) {
+        await this.actor.update({
+            "system.background.adept": adept ?? "blank",
+            "system.background.novice": novice ?? "blank",
+            "system.background.pathetic.one": pathetic?.one ?? "blank",
+            "system.background.pathetic.two": pathetic?.two ?? "blank",
+            "system.background.pathetic.three": pathetic?.three ?? "blank",
+        });
+    }
+
     // ─── Data loading ─────────────────────────────────────────────────────────
 
     async load() {
@@ -150,28 +179,11 @@ export class TrainerLevelUpData {
         if (!cb.tabs.feats.isInitialized) await cb.tabs.feats.init();
         if (!cb.tabs.edges.isInitialized) await cb.tabs.edges.init();
 
-        const ownedFeatSlugs = new Set(
-            this.actor.items.contents
-                .filter(i => i.type === 'feat')
-                .map(i => i.system?.slug?.toLowerCase())
-                .filter(Boolean)
-        );
-        const ownedFeatNames = new Set(
-            this.actor.items.contents
-                .filter(i => i.type === 'feat')
-                .map(i => i.name.toLowerCase())
-        );
-        const ownedEdgeNames = new Set(
-            this.actor.items.contents
-                .filter(i => i.type === 'edge')
-                .map(i => i.name.toLowerCase())
-        );
-
-        this._allFeatures = (cb.tabs.feats.indexData ?? [])
-            .filter(f => !ownedFeatSlugs.has(f.slug?.toLowerCase()) && !ownedFeatNames.has(f.name?.toLowerCase()));
-
-        this._allEdges = (cb.tabs.edges.indexData ?? [])
-            .filter(e => !ownedEdgeNames.has(e.name?.toLowerCase()));
+        // Store raw compendium data — ownership filtering is applied dynamically in
+        // getAvailableFeatures/getAvailableEdges so that the list updates correctly
+        // after feats/edges are added during the same session.
+        this._compendiumFeatures = cb.tabs.feats.indexData ?? [];
+        this._compendiumEdges = cb.tabs.edges.indexData ?? [];
 
         // Index skill rank-up edge UUIDs by name for fast lookup
         this._skillEdgeUuids = {};
@@ -247,10 +259,41 @@ export class TrainerLevelUpData {
         return score;
     }
 
+    /** Returns the set of feat slugs the actor currently owns (lower-cased). */
+    _ownedFeatSlugs() {
+        return new Set(
+            this.actor.items.contents
+                .filter(i => i.type === 'feat')
+                .map(i => i.system?.slug?.toLowerCase())
+                .filter(Boolean)
+        );
+    }
+
+    /** Returns the set of feat names the actor currently owns (lower-cased). */
+    _ownedFeatNames() {
+        return new Set(
+            this.actor.items.contents
+                .filter(i => i.type === 'feat')
+                .map(i => i.name.toLowerCase())
+        );
+    }
+
+    /** Returns the set of edge names the actor currently owns (lower-cased). */
+    _ownedEdgeNames() {
+        return new Set(
+            this.actor.items.contents
+                .filter(i => i.type === 'edge')
+                .map(i => i.name.toLowerCase())
+        );
+    }
+
     getAvailableFeatures(filterText = '') {
         const text = filterText.toLowerCase().trim();
         const ctx = this._getActorScoreContext();
-        return this._allFeatures
+        const ownedSlugs = this._ownedFeatSlugs();
+        const ownedNames = this._ownedFeatNames();
+        return (this._compendiumFeatures ?? [])
+            .filter(f => f.repeatable === true || (!ownedSlugs.has(f.slug?.toLowerCase()) && !ownedNames.has(f.name?.toLowerCase())))
             .filter(f => meetsPrereqsWithContext(f, ctx.prereqCtx))
             .filter(f => !text || f.name.toLowerCase().includes(text))
             .map(f => ({ ...f, _score: this._scoreItem(f, ctx.actorClassCounts, ctx.actorKeywords) }))
@@ -261,7 +304,9 @@ export class TrainerLevelUpData {
     getAvailableEdges(filterText = '') {
         const text = filterText.toLowerCase().trim();
         const ctx = this._getActorScoreContext();
-        return this._allEdges
+        const ownedNames = this._ownedEdgeNames();
+        return (this._compendiumEdges ?? [])
+            .filter(e => e.repeatable === true || !ownedNames.has(e.name?.toLowerCase()))
             .filter(e => meetsPrereqsWithContext(e, ctx.prereqCtx))
             .filter(e => !text || e.name.toLowerCase().includes(text))
             .map(e => ({ ...e, _score: this._scoreItem(e, ctx.actorClassCounts, ctx.actorKeywords) }))
@@ -271,7 +316,7 @@ export class TrainerLevelUpData {
 
     getBonusOptionItems(option, filterText = '') {
         const text = filterText.toLowerCase().trim();
-        const source = option.itemType === "feature" ? this._allFeatures : this._allEdges;
+        const source = option.itemType === "feature" ? (this._compendiumFeatures ?? []) : (this._compendiumEdges ?? []);
         const ctx = this._getActorScoreContext();
 
         // UUID-restricted options don't use a list

@@ -13,6 +13,7 @@
 const SINGLE_MIN_SKILL_RANK_RE = /(?<rank>(Pathetic)|(Untrained)|(Novice)|(Adept)|(Expert)|(Master)|(Virtuoso)) (?<skill>.+)/i;
 const ANY_N_SKILLS_AT_RE = /(any )?(?<n>([0-9]+)|(A)|(One)|(Two)|(Three)|(Four)|(Five)|(Six)|(Seven)|(Eight)|(Nine)) Skills? at (?<rank>(Untrained)|(Novice)|(Adept)|(Expert)|(Master)|(Virtuoso))( Rank)?/i;
 const N_SKILLS_AT_FROM_LIST_RE = /(?<n>([0-9]+)|(A)|(One)|(Two)|(Three)|(Four)|(Five)|(Six)|(Seven)|(Eight)|(Nine))( Skills?)? of (?<skills>.+) at (?<rank>(Untrained)|(Novice)|(Adept)|(Expert)|(Master)|(Virtuoso))( Rank)?( or higher)?/i;
+const CATEGORY_SKILL_RE = /An? (?<category>[A-Za-z][A-Za-z-]*) Skills? at (?<rank>(Untrained)|(Novice)|(Adept)|(Expert)|(Master)|(Virtuoso))( Rank)?\.?$/i;
 const FEAT_WITH_SUB_RE = /(?<main>[^\(\)]+) (\((?<sub>.+)\)) ?(?<cr>\[CR\])?/i;
 const N_FEATS_FROM_LIST_RE = /(?<n>([0-9]+)|(A)|(One)|(Two)|(Three)|(Four)|(Five)|(Six)|(Seven)|(Eight)|(Nine)) of (?<features>.+)?/i;
 const LEVEL_RE = /Level (?<lv>[0-9]+)/i;
@@ -86,9 +87,19 @@ function rankNameToNum(rankName) {
  */
 export function buildActorPrereqContext(actor) {
     const items = actor.items.contents;
+    const itemNames = new Set(items.map(i => simplifyString(i.name)));
+    // Build a set that also includes base names with parentheticals stripped.
+    // This lets a prereq like "Elemental Connection" match an actor's
+    // "Elemental Connection (Fairy)" item.
+    const itemBaseNames = new Set(itemNames);
+    for (const name of itemNames) {
+        const base = name?.replace(/\s*\([^)]*\)\s*$/, '').trim();
+        if (base && base !== name) itemBaseNames.add(base);
+    }
     return {
         level: actor.system.level.current ?? 1,
-        itemNames: new Set(items.map(i => simplifyString(i.name))),
+        itemNames,
+        itemBaseNames,
         itemSlugs: new Set(items.map(i => i.system?.slug?.toLowerCase()).filter(Boolean)),
         skills: Object.fromEntries(
             Object.entries(actor.system.skills ?? {}).map(
@@ -159,6 +170,24 @@ function checkSinglePrereq(text, ctx) {
         }
     }
 
+    // "An X Skill at Rank" / "a X Skill at Rank" – a named category of skills
+    const categorySkillMatch = mainText.match(CATEGORY_SKILL_RE);
+    if (categorySkillMatch) {
+        const rankNeeded = rankNameToNum(categorySkillMatch.groups.rank);
+        const category = categorySkillMatch.groups.category.toLowerCase();
+        if (rankNeeded) {
+            // Find skills whose i18n label contains the category keyword
+            const categoryKeys = CONFIG.PTU.data.skills.keys.filter(k =>
+                game.i18n.format(`SKILL.${k}`).toLowerCase().includes(category)
+            );
+            if (categoryKeys.length) {
+                return categoryKeys.some(k => (ctx.skills[k] ?? 1) >= rankNeeded);
+            }
+            // Unknown category – assume met (cannot verify)
+            return true;
+        }
+    }
+
     // "N of FEAT1 or FEAT2 or ..." – need at least N of these items
     const nFeatsOfMatch = mainText.match(N_FEATS_FROM_LIST_RE);
     if (nFeatsOfMatch) {
@@ -179,7 +208,17 @@ function checkSinglePrereq(text, ctx) {
 
     // Item name / slug check
     const simplified = simplifyString(mainText);
-    if (ctx.itemNames.has(simplified) || ctx.itemSlugs.has(simplified)) return true;
+    if (withSub?.groups?.sub) {
+        // Prereq specifies a particular variant (e.g., "Elemental Connection (Fairy)").
+        // Check the full text with the parenthetical, since that is the actual item name.
+        const fullSimplified = simplifyString(text);
+        if (ctx.itemNames.has(fullSimplified) || ctx.itemSlugs.has(simplified)) return true;
+    } else {
+        // No specific variant – also accept items whose base name matches
+        // (e.g., "Elemental Connection" matches "Elemental Connection (Fairy)").
+        const baseNames = ctx.itemBaseNames ?? ctx.itemNames;
+        if (baseNames.has(simplified) || ctx.itemSlugs.has(simplified)) return true;
+    }
 
     // Unrecognised prerequisite – assume NOT met (conservative)
     return false;

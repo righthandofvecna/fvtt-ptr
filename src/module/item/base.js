@@ -89,6 +89,10 @@ class PTUItem extends Item {
         return false;
     }
 
+    get canStack() {
+        return false;
+    }
+
     get showInTokenPanel() {
         return this.flags.ptu?.showInTokenPanel ?? false;
     }
@@ -126,6 +130,21 @@ class PTUItem extends Item {
 
     get linkHtml() {
         return this.toAnchor({ name: this.name })?.outerHTML ?? "";
+    }
+
+    canStackWith(otherItem) {
+        if (!otherItem) return false;
+        if (this.type !== otherItem.type) return false;
+        if (this.slug !== otherItem.slug) return false;
+        if (!this.canStack || !otherItem.canStack) return false;
+        const thisCopy = foundry.utils.flattenObject(foundry.utils.deepClone(this.toObject()));
+        const otherCopy = foundry.utils.flattenObject(foundry.utils.deepClone(otherItem.toObject()));
+        // remove fields not in consideration
+        if (thisCopy["_id"] !== undefined) delete thisCopy["_id"];
+        if (otherCopy["_id"] !== undefined) delete otherCopy["_id"];
+        if (thisCopy["system.quantity"] !== undefined) delete thisCopy["system.quantity"];
+        if (otherCopy["system.quantity"] !== undefined) delete otherCopy["system.quantity"];
+        return foundry.utils.equals(thisCopy, otherCopy);
     }
 
     /**
@@ -482,13 +501,15 @@ class PTUItem extends Item {
                         roll: null,
                     });
 
-                    for (const reminder of reminders) {
-                        await ChatMessage.create({
-                            content: reminder.content,
-                            speaker: reminder.speaker,
-                            whisper: reminder.whisper,
-                            flags: reminder.flags,
-                        });
+                    const seenIds = new Set();
+                    const seenTemplates = new Set();
+                    for (const { template, content, speaker, whisper, flags } of reminders) {
+                        const reminderId = flags?.ptu?.reminder?.id;
+                        if (reminderId && seenIds.has(reminderId)) continue;
+                        if (template && seenTemplates.has(template)) continue;
+                        if (reminderId) seenIds.add(reminderId);
+                        if (template) seenTemplates.add(template);
+                        await ChatMessage.create({ content, speaker, whisper, flags });
                     }
                 }
             }
@@ -581,9 +602,6 @@ class PTUItem extends Item {
         if (game.combat?.active && freq.eot) {
             updates["flags.ptu.eot"] = 2;
         }
-        if (freq.limited) {
-            updates["flags.ptu.used"] = (this.flags.ptu.used ?? 0) + 1;
-        }
 
         // PP deduction (PP Variant rule)
         if (game.settings.get("ptu", "variant.usePP") && this.actor) {
@@ -592,6 +610,8 @@ class PTUItem extends Item {
                 const currentPP = this.actor.system.pp?.value ?? this.actor.system.pp?.max ?? 0;
                 await this.actor.update({ "system.pp.value": Math.max(0, currentPP - ppCost) });
             }
+        } else if (freq.limited) {
+            updates["flags.ptu.used"] = (this.flags.ptu.used ?? 0) + 1;
         }
         
         if (Object.keys(updates).length > 0) await this.update(updates);

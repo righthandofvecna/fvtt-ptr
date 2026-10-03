@@ -29,6 +29,30 @@ class PTUPokemonActor extends PTUActor {
         return this.system.nature.value;
     }
 
+    get natureLikes() {
+        switch (CONFIG.PTU.data.natureData[this.nature]?.at(0)) {
+            case "Attack": return "Spicy";
+            case "Defense": return "Sour";
+            case "Special Attack": return "Dry";
+            case "Special Defense": return "Bitter";
+            case "Speed": return "Sweet";
+            case "HP": return "Salty";
+            default: return "Unknown";
+        }
+    }
+
+    get natureDislikes() {
+        switch (CONFIG.PTU.data.natureData[this.nature].at(1)) {
+            case "Attack": return "Spicy";
+            case "Defense": return "Sour";
+            case "Special Attack": return "Dry";
+            case "Special Defense": return "Bitter";
+            case "Speed": return "Sweet";
+            case "HP": return "Salty";
+            default: return "Unknown";
+        }
+    }
+
     get moves() {
         return this.itemTypes.move.filter(m => !m.system.isStruggle);
     }
@@ -69,6 +93,18 @@ class PTUPokemonActor extends PTUActor {
             }
         }
         return super.createEmbeddedDocuments(embeddedName, data, options);
+    }
+
+    _prepareEvolutionRollOptions() {
+        this.flags.ptu.rollOptions.evolution = {};
+        const trainerId = this.flags?.ptu?.party?.trainer;
+        if (!trainerId) return;
+        for (const member of game.actors.filter(a => a !== this && a.flags?.ptu?.party?.trainer === trainerId && !a.flags?.ptu?.party?.boxed)) {
+            const species = member._source?.items?.find(i => i.type === "species")?.system?.slug;
+            if (species) {
+                this.flags.ptu.rollOptions.evolution[`party:species:${species}`] = true;
+            }
+        }
     }
 
     /** @override */
@@ -167,6 +203,15 @@ class PTUPokemonActor extends PTUActor {
         // set spirit roll options
         Object.keys(this.flags.ptu.rollOptions.all ?? {}).filter(k=>k.startsWith("self:spirit:")).forEach(key => delete this.flags.ptu.rollOptions.all[key]);
         this.flags.ptu.rollOptions.all[`self:spirit:${system.spirit.value}`] = true
+
+        // set level roll option
+        this.flags.ptu.rollOptions.all[`self:level:${system.level.current}`] = true;
+        
+        // set gender roll option
+        this.flags.ptu.rollOptions.all[`self:gender:${sluggify(system.gender || "genderless")}`] = true;
+
+        // add evolution-based roll options from party members
+        this._prepareEvolutionRollOptions();
     }
 
     /** @override */

@@ -8,10 +8,11 @@ export const trainerProgressions = {
       20: "Veteran Trainer",
       30: "Elite Trainer",
       40: "Champion Trainer"
-    }
+    },
   },
   "short-track": {
     cap: 25,
+    tlModifier: 2,
     tier: {
       1: "Unranked Trainer",
       5: "Journeyman Trainer",
@@ -19,7 +20,51 @@ export const trainerProgressions = {
       15: "Elite Trainer",
       20: "Champion Trainer",
       25: "Legendary Trainer"
-    }
+    },
+    edges: {
+      1: 5,
+      2: 1,
+      6: 1,
+      10: 1,
+      12: 1,
+      15: 1,
+      20: 2,
+      25: 3,
+    },
+    features: {
+      1: 4,
+      10: 1,
+      15: 1,
+      20: 1,
+      25: 3,
+    },
+    stats: {
+      1: 11,
+      10: 5,
+      15: 5,
+      20: 5,
+      25: 5,
+    },
+    bonusItems: [
+      {
+        level: 1,
+        options: [{
+          itemType: "feature",
+          uuids: [],
+          keywords: ["Training"],
+          skipPrereqs: true,
+        }]
+      },
+      {
+        level: 5,
+        options: [{
+          itemType: "feature",
+          uuids: [],
+          keywords: ["General"],
+          skipPrereqs: true,
+        }]
+      },
+    ],
   },
   "ptr-update": {
     cap: 50,
@@ -137,6 +182,7 @@ export const trainerProgressions = {
   },
   "long-track": {
     cap: 100,
+    tlModifier: 0.5,
     tier: {
       1: "Unranked Trainer",
       10: "Amateur Trainer",
@@ -149,11 +195,43 @@ export const trainerProgressions = {
       80: "Champion Trainer",
       90: "Superstar Trainer",
       100: "Legendary Trainer"
-    }
+    },
+    edges: {
+      1: 4,
+      10: 1,
+      20: 1,
+    },
+    features: {
+      1: 4,
+    },
+    stats: {
+      1: 10,
+    },
+    bonusItems: [
+      {
+        level: 1,
+        options: [{
+          itemType: "feature",
+          uuids: [],
+          keywords: ["Training"],
+          skipPrereqs: true,
+        }]
+      },
+      {
+        level: 5,
+        options: [{
+          itemType: "feature",
+          uuids: [],
+          keywords: ["General"],
+          skipPrereqs: true,
+        }]
+      },
+    ],
   }
 }
 
 // Apply basic formulaic progression
+// every level, gain +1 stat, and alternately gain +1 feature or +1 edge
 for (let i = 2; i <= 50; i++) {
   trainerProgressions["ptr-update"].stats[i] ??= 0;
   trainerProgressions["ptr-update"].stats[i] += 1;
@@ -165,5 +243,31 @@ for (let i = 2; i <= 50; i++) {
     trainerProgressions["ptr-update"].edges[i] += 1;
   }
 }
+
+// Apply basic formulaic progression for short-track
+// Every level, gain +2 stats, +1 feature, +1 edge
+for (let i = 2; i <= 25; i++) {
+  trainerProgressions["short-track"].stats[i] ??= 0;
+  trainerProgressions["short-track"].stats[i] += 2;
+  trainerProgressions["short-track"].features[i] ??= 0;
+  trainerProgressions["short-track"].features[i] += 1;
+  trainerProgressions["short-track"].edges[i] ??= 0;
+  trainerProgressions["short-track"].edges[i] += 1;
+}
+
+// Apply basic formulaic progression for long-track
+// Every level, gain +1 stat, and alternately gain +1 feature or +1 edge
+for (let i = 2; i <= 100; i++) {
+  trainerProgressions["long-track"].stats[i] ??= 0;
+  trainerProgressions["long-track"].stats[i] += 1;
+  if (i % 2 == 1) {
+    trainerProgressions["long-track"].features[i] ??= 0;
+    trainerProgressions["long-track"].features[i] += 1;
+  } else {
+    trainerProgressions["long-track"].edges[i] ??= 0;
+    trainerProgressions["long-track"].edges[i] += 1;
+  }
+}
+
 
 trainerProgressions["data-revamp"] = foundry.utils.deepClone(trainerProgressions["original"]);

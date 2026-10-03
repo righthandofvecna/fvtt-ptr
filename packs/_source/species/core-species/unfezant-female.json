@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:08.354Z",
+        "datetime": "2026-10-03T04:49:41.335Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -62,7 +62,8 @@
         "level": 1,
         "other": {
           "restrictions": []
-        }
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.1GLfiepJEnwOCDAz",
@@ -70,7 +71,10 @@
         "level": 15,
         "other": {
           "restrictions": []
-        }
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.LOh4h9ZiwIBF9mHN",
@@ -80,7 +84,11 @@
           "restrictions": [
             "Male"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+",
+          "self:gender:male"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.cnVdBvXHugD1Ex8o",
@@ -90,7 +98,11 @@
           "restrictions": [
             "Female"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+",
+          "self:gender:female"
+        ]
       }
     ],
     "size": {
@@ -456,10 +468,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1708094889604,
+    "modifiedTime": 1791002981861,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

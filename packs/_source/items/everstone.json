@@ -4,9 +4,17 @@
     "origin": "",
     "effect": "Evolution is prevented for the holder. Cannot be used by Trainers.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "evolution",
+        "option": "self:evolution-forbidden"
+      }
+    ],
     "enabled": true,
     "slug": "everstone",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -36,7 +44,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": 0
     },
     "actionCost": {
       "standard": false,
@@ -49,6 +58,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "quantity": "1",
     "category": "",
     "cost": "1500",
@@ -57,10 +67,7 @@
     "container": false,
     "automation": [],
     "name": "Everstone",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "useCount": 0
   },
   "type": "item",
   "img": "systems/ptu/static/images/item_icons/everstone.webp",
@@ -77,14 +84,15 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1683368815178,
-    "modifiedTime": 1778200842266,
+    "modifiedTime": 1791005678987,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
   },
   "sort": 55900000,
-  "_id": "n5ArIkJgbJbFIslt"
+  "_id": "n5ArIkJgbJbFIslt",
+  "folder": null
 }

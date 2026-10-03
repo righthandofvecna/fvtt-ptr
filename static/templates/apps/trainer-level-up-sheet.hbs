@@ -5,6 +5,7 @@
         <span class="tlu-level">Level {{level}}</span>
         <span class="tlu-tier">{{tier}}</span>
         <span class="tlu-slots">
+            {{#unless backgroundStatus.isComplete}}<span class="tlu-badge background">background</span>{{/unless}}
             {{#if (bigger unspentStatPoints 0)}}<span class="tlu-badge stat">{{unspentStatPoints}} stat pts</span>{{/if}}
             {{#if (bigger unspentFeatureSlots 0)}}<span class="tlu-badge feat">{{unspentFeatureSlots}} feat{{#if (bigger unspentFeatureSlots 1)}}s{{/if}}</span>{{/if}}
             {{#if (bigger unspentEdgeSlots 0)}}<span class="tlu-badge edge">{{unspentEdgeSlots}} edge{{#if (bigger unspentEdgeSlots 1)}}s{{/if}}</span>{{/if}}
@@ -27,6 +28,64 @@
     {{/unless}}
 
     <div class="trainer-level-up-scroll">
+
+        {{!-- SKILL BACKGROUND (shown if not yet configured) --}}
+        {{#unless backgroundStatus.isComplete}}
+        <details class="tlu-section tlu-background" open>
+            <summary class="tlu-section-title">
+                <i class="fas fa-chevron-right tlu-toggle-icon"></i>
+                <i class="fas fa-book"></i>
+                Skill Background
+                <span class="tlu-remaining">not yet configured</span>
+            </summary>
+            <div class="tlu-background-grid">
+                <div class="tlu-background-row">
+                    <label class="tlu-bg-label">Adept <span class="tlu-bg-mod">(+2)</span></label>
+                    <select class="bg-adept-select tlu-bg-select">
+                        <option value="">— choose skill —</option>
+                        {{#each backgroundStatus.skillOptions as |skill|}}
+                        <option value="{{skill.key}}" {{#if (is skill.key ../backgroundStatus.adept)}}selected{{/if}}>{{skill.label}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="tlu-background-row">
+                    <label class="tlu-bg-label">Novice <span class="tlu-bg-mod">(+1)</span></label>
+                    <select class="bg-novice-select tlu-bg-select">
+                        <option value="">— choose skill —</option>
+                        {{#each backgroundStatus.skillOptions as |skill|}}
+                        <option value="{{skill.key}}" {{#if (is skill.key ../backgroundStatus.novice)}}selected{{/if}}>{{skill.label}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="tlu-background-row tlu-pathetic-row">
+                    <label class="tlu-bg-label">Pathetic <span class="tlu-bg-mod">(−1 each, choose 3)</span></label>
+                    <div class="tlu-pathetic-selects">
+                        <select class="bg-pathetic-select tlu-bg-select" data-pathetic-slot="one">
+                            <option value="">— choose —</option>
+                            {{#each backgroundStatus.skillOptions as |skill|}}
+                            <option value="{{skill.key}}" {{#if (is skill.key ../backgroundStatus.pathetic.one)}}selected{{/if}}>{{skill.label}}</option>
+                            {{/each}}
+                        </select>
+                        <select class="bg-pathetic-select tlu-bg-select" data-pathetic-slot="two">
+                            <option value="">— choose —</option>
+                            {{#each backgroundStatus.skillOptions as |skill|}}
+                            <option value="{{skill.key}}" {{#if (is skill.key ../backgroundStatus.pathetic.two)}}selected{{/if}}>{{skill.label}}</option>
+                            {{/each}}
+                        </select>
+                        <select class="bg-pathetic-select tlu-bg-select" data-pathetic-slot="three">
+                            <option value="">— choose —</option>
+                            {{#each backgroundStatus.skillOptions as |skill|}}
+                            <option value="{{skill.key}}" {{#if (is skill.key ../backgroundStatus.pathetic.three)}}selected{{/if}}>{{skill.label}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <div class="tlu-background-save-row">
+                    <button class="save-background">Save Background</button>
+                </div>
+            </div>
+        </details>
+        {{/unless}}
 
         {{!-- STAT POINTS --}}
         {{#if (bigger unspentStatPoints 0)}}

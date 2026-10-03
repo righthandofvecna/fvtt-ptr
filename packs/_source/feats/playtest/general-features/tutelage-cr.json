@@ -2,7 +2,7 @@
   "name": "Tutelage",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: A Pokémon\nEffect: The target gains any three of the following Poké Edges: Skill Improvement, Advanced Mobility, or Capability Training. The target may gain Poké Edges this way even if they do not meet the prerequisites, however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example. A Pokémon may be targeted only once ever by Tutelage.",
+    "effect": "Target: A Pokémon\nEffect: The target gains any three of the following Poké Edges: @UUID[Compendium.ptu.poke-edges.Item.DnYmGXzYAu5ErvbS]{Skill Improvement}, @UUID[Compendium.ptu.poke-edges.Item.Igr1mD6tDszkZc18]{Advanced Mobility}, or @UUID[Compendium.ptu.poke-edges.Item.HNK35xsz32VOWf4Z]{Capability Training}. The target may gain Poké Edges this way even if they do not meet the prerequisites, however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example. A Pokémon may be targeted only once ever by Tutelage.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -25,7 +25,8 @@
     "stackSlugs": false,
     "keywords": [
       "Playtest",
-      "Class Rework"
+      "Class Rework",
+      "General"
     ],
     "frequency": {
       "type": "daily",
@@ -37,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +60,8 @@
     "class": "",
     "name": "Surge of Spirit [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "tutelage"
+    "replacesSlug": "tutelage",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -70,7 +73,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

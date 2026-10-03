@@ -401,6 +401,25 @@ class PTUActor extends Actor {
     }
 
     prepareSynthetics() {
+        // Reset all rule-element-populated synthetics before calling beforePrepareData hooks.
+        // This is necessary because prepareDerivedData() (which calls this method) runs twice
+        // per actor preparation cycle: once via super.prepareData() and once explicitly after
+        // roll options are added. Resetting here keeps the function idempotent.
+        this.synthetics.ephemeralEffects = {};
+        this.synthetics.modifierAdjustments = { all: [], damage: [] };
+        this.synthetics.statisticsModifiers = { all: [], damage: [] };
+        this.synthetics.rollSubstitutions = {};
+        this.synthetics.rollNotes = {};
+        this.synthetics.damageDice = {};
+        this.synthetics.tokenOverrides = {};
+        this.synthetics.speciesOverride = {};
+        this.synthetics.typeOverride = {};
+        this.synthetics.effectiveness = [];
+        this.synthetics.apAdjustments = { drained: [], bound: [] };
+        this.synthetics.applyEffects = {};
+        this.synthetics.reminders = {};
+        this.synthetics.healOnDamageDealt = {};
+
         // Call pre-derived-preparation `RuleElement` hooks
         for (const rule of this.rules.filter((r) => !r.ignored)) {
             try {
@@ -486,19 +505,6 @@ class PTUActor extends Actor {
         }
 
         return super.updateDocuments(updates, context);
-    }
-
-    _onCreate(data, options, user) {
-        super._onCreate(data, options, user);
-        if(user !== game.user.id) return;
-        if(data.type === 'character') {
-            if(!data.items.some(i => i.name.endsWith("Training"))) {
-                // Grant lvl 1 training
-                fromUuid('Compendium.ptu.effects.Item.fm0TZUuQK0uRhkJA').then((effect) => {
-                    this.createEmbeddedDocuments('Item', [effect.toObject()]);
-                });
-            }
-        }
     }
 
     /** @override */
@@ -1785,6 +1791,11 @@ class PTUActor extends Actor {
             return this.applyDamage({ damage, token, skipIWR: true });
         }
         return super.modifyTokenAttribute(attribute, value, isDelta, isBar);
+    }
+
+    getStackableItem(itemData) {
+        const stackableItem = this.items.getName(itemData.name);
+        return stackableItem?.canStack ? stackableItem : null;
     }
 
     _setDefaultChanges() {

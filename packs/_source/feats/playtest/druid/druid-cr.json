@@ -2,7 +2,7 @@
   "name": "Druid",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Your powers begin to take after either Flowers, Fungi, or Trees. Depending on your oath, you gain an Ability and Stat Tags. Whenever you gain a Druid Feature, you gain the same Stat Tags.\nFlower Oath -> Aroma Veil -> [+Special Attack]\nFungal Oath -> Effect Spore -> [+Special Defense]\nTree Oath -> Effect Spore -> [+Attack]",
+    "effect": "Effect: Your powers begin to take after either Flowers, Fungi, or Trees. Depending on your oath, you gain an Ability and Stat Tags. Whenever you gain a Druid Feature, you gain the same Stat Tags.\nFlower Oath -> @UUID[Compendium.ptu.abilities.Item.1YDLQooqs76EMNt1]{Aroma Veil} -> <b>[+Special Attack]</b>\nFungal Oath -> @UUID[Compendium.ptu.abilities.Item.UiXw0PSczAe8X9BF]{Effect Spore} -> <b>[+Special Defense]</b>\nTree Oath -> @UUID[Compendium.ptu.abilities.Item.UiXw0PSczAe8X9BF]{Effect Spore} -> <b>[+Attack]</b>",
     "snippet": "",
     "rules": [
       {
@@ -65,7 +65,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -102,7 +103,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   },

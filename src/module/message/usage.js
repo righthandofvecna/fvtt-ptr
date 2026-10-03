@@ -1,4 +1,4 @@
-import { extractApplyEffects } from "../rules/helpers.js";
+import { applyPostAttackEffects, buildItemDomains } from "../rules/pipeline.js";
 
 /**
  * Send a "Usage" chat message for items and moves that don't roll dice.
@@ -99,110 +99,28 @@ async function applyEffectsFromUsage({ message }) {
 
     const messageOptions = message.flags.ptu.context?.options ?? [];
 
-    // Build item-specific domain variants.
-    const itemDomains = item ? [
-        `${item.id}-apply-effects`,
-        `${item.slug}-apply-effects`,
-    ] : [];
-    if (item?.type === "move") {
-        itemDomains.push(
-            `${item.system.category.toLocaleLowerCase(game.i18n.lang)}-apply-effects`,
-            `${item.system.type.toLocaleLowerCase(game.i18n.lang)}-apply-effects`,
-            `${item.system.frequency?.type ?? "at-will"}-apply-effects`,
-        );
-    }
-
+    const itemDomains = buildItemDomains(item, "apply-effects");
     const domains = ["apply-effects", ...itemDomains];
 
-    // One shared group ID for all linked effects from this single use.
-    const linkedGroupId = foundry.utils.randomID();
-
     // Targets: prefer user targets, fall back to controlled tokens.
+    // Usage messages have no attack roll, so there is no hit/miss outcome.
     const rawTargets = game.user.targets.size > 0
         ? [...game.user.targets]
         : (canvas.tokens?.controlled ?? []);
 
-    for (const token of rawTargets) {
-        const targetActor = token.actor ?? token;
-        if (!targetActor) continue;
+    const targets = rawTargets
+        .map(token => ({ actor: token.actor ?? token }))
+        .filter(t => t.actor);
 
-        const effects = Object.values(
-            (await extractApplyEffects({
-                affects: "target",
-                origin: originActor,
-                target: targetActor,
-                item,
-                domains,
-                options: messageOptions,
-                roll: 0,
-            })).reduce((acc, e) => {
-                if (!acc[e.slug ?? e.system?.slug]) acc[e.slug ?? e.system?.slug] = e;
-                return acc;
-            }, {})
-        );
-
-        stampLinkedGroup(effects, linkedGroupId);
-
-        if (effects.length > 0) {
-            const newItems = await targetActor.createEmbeddedDocuments("Item", effects);
-            if (newItems.length > 0) {
-                await ChatMessage.create({
-                    content: await foundry.applications.handlebars.renderTemplate(
-                        "systems/ptu/static/templates/chat/damage/effects-applied.hbs",
-                        { target: targetActor, effects: newItems }
-                    ),
-                    speaker: ChatMessage.getSpeaker({ actor: targetActor }),
-                    whisper: ChatMessage.getWhisperRecipients("GM"),
-                });
-            }
-        }
-    }
-
-    // Origin-side effects.
-    const originEffects = Object.values(
-        (await extractApplyEffects({
-            affects: "origin",
-            origin: originActor,
-            target: originActor,
-            item,
-            domains,
-            options: messageOptions,
-            roll: 0,
-        })).reduce((acc, e) => {
-            if (!acc[e.slug ?? e.system?.slug]) acc[e.slug ?? e.system?.slug] = e;
-            return acc;
-        }, {})
-    );
-    stampLinkedGroup(originEffects, linkedGroupId);
-
-    if (originEffects.length > 0) {
-        const newItems = await originActor.createEmbeddedDocuments("Item", originEffects);
-        if (newItems.length > 0) {
-            await ChatMessage.create({
-                content: await foundry.applications.handlebars.renderTemplate(
-                    "systems/ptu/static/templates/chat/damage/effects-applied.hbs",
-                    { target: originActor, effects: newItems }
-                ),
-                speaker: ChatMessage.getSpeaker({ actor: originActor }),
-                whisper: ChatMessage.getWhisperRecipients("GM"),
-            });
-        }
-    }
-}
-
-/**
- * Stamps a shared linkedGroup ID onto any effects that were marked as linked
- * by their ApplyEffect rule element (`flags.ptu.linked = true`).
- *
- * @param {object[]} effects   Array of item data objects to stamp.
- * @param {string}   groupId   The shared group identifier for this use.
- */
-function stampLinkedGroup(effects, groupId) {
-    for (const e of effects) {
-        if (foundry.utils.getProperty(e, "flags.ptu.linked")) {
-            foundry.utils.setProperty(e, "flags.ptu.linkedGroup", groupId);
-        }
-    }
+    await applyPostAttackEffects({
+        origin: originActor,
+        item,
+        targets,
+        targetDomains: domains,
+        originDomains: domains,
+        messageOptions,
+        roll: 0,
+    });
 }
 
 export { sendUsageMessage, applyEffectsFromUsage };

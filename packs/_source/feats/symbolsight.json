@@ -24,7 +24,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Patron Stat"
+      "Patron Stat",
+      "General"
     ],
     "frequency": {
       "type": "at-will",
@@ -36,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -58,7 +60,7 @@
     "name": "Symbolsight",
     "useCount": 0,
     "automation": [],
-    "contentSet": "",
+    "contentSet": "blessed-and-damned",
     "replacesSlug": "",
     "leagueLegal": false
   },
@@ -87,5 +89,6 @@
     "exportSource": null
   },
   "sort": 35100000,
-  "_id": "W2si4Kga71cJG0N6"
+  "_id": "W2si4Kga71cJG0N6",
+  "folder": null
 }

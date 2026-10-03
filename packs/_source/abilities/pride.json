@@ -80,7 +80,7 @@
     "ptu": {
       "abilityChosen": "basic",
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

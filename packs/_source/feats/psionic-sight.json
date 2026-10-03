@@ -34,7 +34,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "+Special Defense"
+      "+Special Defense",
+      "General"
     ],
     "frequency": {
       "type": "static",
@@ -46,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -97,5 +99,6 @@
     "exportSource": null
   },
   "sort": 3400000,
-  "_id": "34QE0WQHwnTNGgIa"
+  "_id": "34QE0WQHwnTNGgIa",
+  "folder": null
 }

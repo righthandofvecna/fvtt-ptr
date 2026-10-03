@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You’re immune to the effects of Sandstorm, Sand-Attack, and Sand Tomb, and you gain 5 Damage Reduction against Fire-Type attacks. ",
+    "effect": "Your long hours in the unforgiving desert have made you inured to sand and heat. You’re immune to the effects of Sandstorm, @UUID[Compendium.ptu.moves.Item.IU5XxUVfxPggP6Rx]{Sand Attack}, and @UUID[Compendium.ptu.moves.Item.gL2f9k8qYJ1OwiZO]{Sand Tomb}, and you gain 5 Damage Reduction against Fire-Type attacks. ",
     "snippet": "",
     "rules": [
       {
@@ -32,7 +32,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -55,7 +56,10 @@
       "bind": false
     },
     "leagueLegal": false,
-    "prerequisites": [],
+    "prerequisites": [
+      "Survivalist",
+      "Terrain Talent"
+    ],
     "notes": "",
     "free": false,
     "class": ""

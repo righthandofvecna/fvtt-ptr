@@ -5,8 +5,15 @@
   "img": "systems/ptu/static/css/images/icons/dex_icon.png",
   "system": {
     "schema": {
-      "version": 0.11,
-      "lastMigration": null
+      "version": 0.121,
+      "lastMigration": {
+        "datetime": "2026-10-03T04:49:28.889Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
+        }
+      }
     },
     "dexentry": "",
     "number": 1996,
@@ -59,7 +66,8 @@
           "restrictions": [
             ""
           ]
-        }
+        },
+        "predicate": []
       },
       {
         "level": 25,
@@ -69,7 +77,10 @@
           "restrictions": [
             ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -513,10 +524,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.1",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1694013808180,
-    "modifiedTime": 1708460426490,
+    "modifiedTime": 1791002969425,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

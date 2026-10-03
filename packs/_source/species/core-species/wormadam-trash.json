@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:04.026Z",
+        "datetime": "2026-10-03T04:49:19.431Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -62,7 +62,8 @@
         "level": 1,
         "other": {
           "restrictions": []
-        }
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.f4x4MrVpWzb4mjNl",
@@ -72,7 +73,11 @@
           "restrictions": [
             "Female"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+",
+          "self:gender:female"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.4Mo5hTklcHxXU0dj",
@@ -82,7 +87,11 @@
           "restrictions": [
             "Female"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+",
+          "self:gender:female"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.TqG66EwWnI52l09Q",
@@ -92,7 +101,11 @@
           "restrictions": [
             "Female"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+",
+          "self:gender:female"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.R4ViKuUcOBDgyzBX",
@@ -102,7 +115,11 @@
           "restrictions": [
             "Male"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+",
+          "self:gender:male"
+        ]
       }
     ],
     "size": {
@@ -522,10 +539,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.1.4",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1708094889604,
+    "modifiedTime": 1791002959972,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

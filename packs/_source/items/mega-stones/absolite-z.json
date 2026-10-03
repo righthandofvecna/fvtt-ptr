@@ -1,0 +1,79 @@
+{
+  "name": "Absolite Z",
+  "system": {
+    "origin": "",
+    "effect": "Mega Evolves Absol into its Z Mega when used in conjunction with a Mega Ring.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "absolite-z",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:42.326Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "Compendium.ptu.effects.Item.tl3dOBJVOYZE8cep",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Mega Stone"
+    ],
+    "frequency": {
+      "type": "scene",
+      "max": 1,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Absolite",
+    "useCount": 0
+  },
+  "type": "item",
+  "img": "/systems/ptu/static/images/item_icons/absolite.webp",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
+    }
+  },
+  "folder": "3aYHO5npuCcYqxoX",
+  "_id": "nRLjXtGJOIa8Ib73"
+}

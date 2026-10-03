@@ -226,6 +226,7 @@
       }
     ],
     "enabled": true,
+    "repeatable": true,
     "slug": "master-skills",
     "schema": {
       "version": 0.116,

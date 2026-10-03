@@ -2,7 +2,7 @@
   "name": "Dance Practice",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: The target fills 1 Tutor Slot and gains your choice of Spinning Dance or Own Tempo. Dance Practice may target a Pokémon only once.",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: The target fills 1 Tutor Slot and gains your choice of @UUID[Compendium.ptu.abilities.Item.DcNfimWHEweMv9YS]{Spinning Dance} or @UUID[Compendium.ptu.abilities.Item.Fp7nWb0csK9MHRsZ]{Own Tempo}. Dance Practice may target a Pokémon only once.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +70,8 @@
     "class": "Dancer",
     "name": "Dance Practice [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "dance-practice"
+    "replacesSlug": "dance-practice",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +84,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {

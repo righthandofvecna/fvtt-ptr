@@ -2,7 +2,6 @@
   "name": "Solar Blade",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GrassIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Set-Up Effect: If the weather is not Sunny, the user's gains 1 Attack Combat Stage and 1 Special Defense Combat Stage. If it is Sunny, immediately Resolve. Resolution Effect: Attack with Solar Blade. Half damage in Sandstorm, Hail, or Rain.",
@@ -49,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -73,7 +73,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "YyHGCfDVQQkCkOc4",
   "effects": [],

@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "General"
+    ],
     "frequency": {
       "type": "daily",
       "max": 3,
@@ -34,7 +36,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -86,5 +89,6 @@
     "exportSource": null
   },
   "sort": 3000000,
-  "_id": "2WbLqVLtcQhLOUyi"
+  "_id": "2WbLqVLtcQhLOUyi",
+  "folder": null
 }

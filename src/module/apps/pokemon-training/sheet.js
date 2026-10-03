@@ -319,18 +319,9 @@ class PTUPokemonTrainingSheet extends FormApplication {
             // The expTrainingLevelCap is already calculated as: level * (2 + (2 * milestones))
             // This is exactly what we need for XP distribution per instance
             this.xpToDistribute = expTrainingData.expTrainingLevelCap;
-            
-            console.log('EXP Training Data:', expTrainingData);
-            console.log('XP to distribute per instance:', this.xpToDistribute);
         } catch (error) {
             console.error('Error calculating XP to distribute:', error);
-            
-            // Fallback to basic calculation if the method fails
-            const currentTrainerLevel = this.trainer.system.level.current || 1;
-            const milestones = this.trainer.system.level.milestones || 0;
-            this.xpToDistribute = currentTrainerLevel * (2 + (2 * milestones));
-            
-            console.log('Using fallback calculation - Level:', currentTrainerLevel, 'Milestones:', milestones, 'XP:', this.xpToDistribute);
+            this.xpToDistribute = 0;
         }
     }
 

@@ -40,6 +40,7 @@
     "FrequencyModifiers": "Frequency Modifiers",
     "FreeFeat": "Free Feat",
     "FreeEdge": "Free Edge",
+    "Repeatable": "Repeatable",
     "Effect": "Effect",
     "Type": "Type",
     "Category": "Category",
@@ -78,6 +79,7 @@
       "Unit": {
         "Label": "Duration Unit",
         "Rounds": "Rounds",
+        "Turns": "Turns",
         "Encounter": "End of Encounter",
         "Unlimited": "Unlimited (never expires)"
       },

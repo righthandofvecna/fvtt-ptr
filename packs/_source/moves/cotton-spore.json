@@ -2,7 +2,6 @@
   "name": "Cotton Spore",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GrassIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "All legal targets have their Speed lowered 2 Combat Stages.",
@@ -15,7 +14,8 @@
         "uuid": "Compendium.ptu.effects.Item.PK2dsGRBlBsD4yqV",
         "range": "",
         "value": "",
-        "affects": "target"
+        "affects": "target",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -57,7 +57,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,

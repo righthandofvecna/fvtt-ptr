@@ -55,13 +55,20 @@ class PTUSpecies extends PTUItem {
 
         data.system.evolutions = [];
         for (const evolution of speciesData.Evolution) {
+            const level = isNaN(Number(evolution[2])) ? 1 : Number(evolution[2]);
+            const restriction = evolution[3] == "Null" ? null : evolution[3];
+            const predicate = [`self:level:${level}+`];
+            if (restriction) {
+                const lower = restriction.trim().toLowerCase();
+                if (lower === "female" || lower === "male") {
+                    predicate.push(`self:gender:${lower}`);
+                }
+            }
             data.system.evolutions.push({
                 uuid: (await findItemInCompendium({ type: 'species', name: evolution[1] }))?.uuid,
                 slug: sluggify(evolution[1]),
-                level: isNaN(Number(evolution[2])) ? 1 : Number(evolution[2]),
                 other: {
-                    restrictions: evolution[3] == "Null" ? [] : [evolution[3]],
-                    evolutionItem: null
+                    predicate,
                 }
             });
         }

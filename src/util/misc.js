@@ -155,6 +155,23 @@ export function sortStringRecord(record) {
  * @param type The type of the item required for name search
  * @param item Original item to derrive search params from
  */
+/**
+ * Extract the minimum level requirement from an evolution predicate array.
+ * Looks for a predicate string of the form "self:level:N+" and returns N.
+ * Returns 1 if no level predicate is found.
+ * @param {Array} predicate
+ * @returns {number}
+ */
+export function getMinLevelFromPredicate(predicate = []) {
+    for (const p of predicate) {
+        if (typeof p === "string") {
+            const m = p.match(/^self:level:(\d+)\+$/);
+            if (m) return parseInt(m[1]);
+        }
+    }
+    return 1;
+}
+
 export async function getItemFromCompendium({ uuid, name, type, item }) {
     let found = null;
     if (uuid) {

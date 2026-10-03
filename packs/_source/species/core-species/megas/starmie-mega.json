@@ -2,13 +2,13 @@
   "type": "species",
   "system": {
     "schema": {
-      "version": 0.11,
+      "version": 0.121,
       "lastMigration": {
-        "datetime": "2023-08-15T11:56:05.728Z",
+        "datetime": "2026-10-03T04:49:38.299Z",
         "version": {
-          "schema": null,
-          "foundry": "11.307",
-          "system": "0.21"
+          "schema": 0.11,
+          "foundry": "14.367",
+          "system": "4.4.3.45"
         }
       }
     },
@@ -68,7 +68,8 @@
           "restrictions": [
             ""
           ]
-        }
+        },
+        "predicate": []
       },
       {
         "level": 25,
@@ -78,7 +79,10 @@
           "restrictions": [
             ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -569,11 +573,11 @@
   "_stats": {
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.351",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.11",
+    "systemVersion": "4.4.3.45",
     "createdTime": 1776486738215,
-    "modifiedTime": 1776486739420,
+    "modifiedTime": 1791002978831,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "WsxBBDZvKOk8QIqu",

@@ -2,7 +2,7 @@
   "name": "Choreographer",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: Your Pokémon\nEffect: The target learns a Dance Move you know. Choreographer may target a Pokémon multiple times.",
+    "effect": "Target: Your Pokémon\nEffect: The target learns a @UUID[Compendium.ptu.feats.Item.4cvt6gLXQyBm8WLw]{Dancer} Move you know. Choreographer may target a Pokémon multiple times.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,8 @@
     "class": "Dancer",
     "name": "Choreographer [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "choreographer"
+    "replacesSlug": "choreographer",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +83,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

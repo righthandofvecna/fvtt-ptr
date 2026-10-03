@@ -70,10 +70,17 @@
         ],
         "phase": "applyAEs",
         "priority": null
+      },
+      {
+        "key": "RollOption",
+        "domain": "evolution",
+        "option": "self:evolution-forbidden"
       }
     ],
     "enabled": true,
     "slug": "underdogs-strength",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -101,7 +108,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": 0
     },
     "actionCost": {
       "standard": false,
@@ -114,16 +122,14 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "prerequisites": [
       "Level 15",
       "User is an Underdog Pokémon"
     ],
     "cost": "1 TP",
     "name": "Underdog's Strength",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "useCount": 0
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -141,14 +147,15 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.45",
+    "coreVersion": "14.367",
     "createdTime": 1683369202715,
-    "modifiedTime": 1778200861487,
+    "modifiedTime": 1791005894788,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
   },
   "sort": 1400000,
-  "_id": "Mye0UTdJzbF2D4Nn"
+  "_id": "Mye0UTdJzbF2D4Nn",
+  "folder": null
 }

@@ -25,7 +25,8 @@
     "stackSlugs": false,
     "keywords": [
       "Training",
-      "Orders"
+      "Orders",
+      "General"
     ],
     "frequency": {
       "type": "at-will",
@@ -37,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -95,5 +97,6 @@
     "default": 0
   },
   "_id": "MolTHMn3UrNiIZ3h",
-  "sort": 300000
+  "sort": 300000,
+  "folder": null
 }

@@ -6,9 +6,11 @@ export class CompendiumBrowserEdgesTab extends CompendiumBrowserTab {
         super(browser);
 
         this.searchFields = ["name", "prerequisites.label", "prerequisites.tier"]
-        this.storeFields = ["name", "uuid", "type", "source", "img", "prerequisites", "keywords", "automationStatus"];
+        this.storeFields = ["name", "uuid", "type", "source", "img", "prerequisites", "keywords", "automationStatus", "repeatable"];
 
         this.index = ["img", "system.source.value", "system.prerequisites", "system.keywords", "system.slug", "system.contentSet", "system.replacesSlug", "flags.ptu.automationStatus"];
+        // Optional fields: fetched when present but not required for hasAllIndexFields
+        this.optionalIndex = ["system.repeatable"];
 
         this.filterData = this.prepareFilterData();
     }
@@ -24,6 +26,7 @@ export class CompendiumBrowserEdgesTab extends CompendiumBrowserTab {
     async loadData() {
         const abilities = [];
         const indexFields = foundry.utils.duplicate(this.index);
+        const fetchFields = [...indexFields, ...(this.optionalIndex ?? [])];
         const sources = new Set();
 
         const allKeywordsSeen = new Set();
@@ -31,7 +34,7 @@ export class CompendiumBrowserEdgesTab extends CompendiumBrowserTab {
         for await (const { pack, index } of this.browser.packLoader.loadPacks(
             "Item",
             this.browser.loadedPacks(this.tabName),
-            indexFields
+            fetchFields
         )) {
             for (const edgeData of index) {
                 if (edgeData.type !== "edge") continue;
@@ -55,6 +58,7 @@ export class CompendiumBrowserEdgesTab extends CompendiumBrowserTab {
                     source: sourceSlug,
                     prerequisites: this.#prerequisitesStringToEntries(prerequisites),
                     keywords: edgeData.system.keywords,
+                    repeatable: edgeData.system.repeatable ?? false,
                     automationStatus: edgeData.flags?.ptu?.automationStatus ?? "needs-automation"
                 })
             }

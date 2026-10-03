@@ -7,7 +7,7 @@
     "rules": [],
     "enabled": true,
     "slug": "signer",
-    "contentSet": "",
+    "contentSet": "blessed-and-damned",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +25,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Patron Stat"
+      "Patron Stat",
+      "General"
     ],
     "frequency": {
       "type": "static",
@@ -37,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,7 +62,8 @@
     "name": "Signer",
     "useCount": 0,
     "automation": [],
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -86,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 6000000,
   "_id": "5B2wuKKqsSaVOPG2"
 }

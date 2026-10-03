@@ -4,7 +4,7 @@ import { PTUItem } from "../base.js";
 /**
  * @typedef DurationData
  * @property {number} value
- * @property {"rounds" | "unlimited" | "encounter"} unit
+ * @property {"rounds" | "turns" | "unlimited" | "encounter"} unit
  * @property {"turn-start" | "turn-end" | "round-end" | null} expiry
  */
 
@@ -49,23 +49,30 @@ class BaseEffectPTU extends PTUItem {
             return { expired: true, remaining: 0 };
         }
 
-        const startRound = this.system.start?.round ?? 0;
-        const remaining = startRound + duration - (game.combat?.round ?? 0);
-        const result = {remaining, expired: remaining <= 0};
+        if (this.system.duration.unit === "rounds") {
+            const startRound = this.system.start?.round ?? 0;
+            const remaining = startRound + duration - (game.combat?.round ?? 0);
+            const result = {remaining, expired: remaining <= 0};
 
-        const { combatant } = game.combat ?? {};
-        if(combatant && result.expired) {
-            const startInitiative = this.system.start?.initiative ?? 0;
-            const currentInitiative = combatant.initiative ?? 0;
-            if(this.system.duration.expiry === "turn-start") {
-                result.expired = combatant.actor === (this.origin ?? this.actor);
+            const { combatant } = game.combat ?? {};
+            if(combatant && result.expired) {
+                const startInitiative = this.system.start?.initiative ?? 0;
+                const currentInitiative = combatant.initiative ?? 0;
+                if(this.system.duration.expiry === "turn-start") {
+                    result.expired = combatant.actor === (this.origin ?? this.actor);
+                }
+                else {
+                    result.expired = remaining < 0 || currentInitiative < startInitiative;
+                }
             }
-            else {
-                result.expired = remaining < 0 || currentInitiative < startInitiative;
-            }
+            
+            return result;
         }
-        
-        return result;
+        if (this.system.duration.unit === "turns") {
+            const startTurn = this.system.start?.turn ?? 0;
+            const remaining = startTurn + duration - ((game.combat?.round ?? 0) * (game.combat?.turns?.length ?? 1) + (game.combat?.turn ?? 0));
+            return { remaining, expired: remaining <= 0 };
+        }
     }
 
     /** @override */
@@ -131,10 +138,12 @@ class BaseEffectPTU extends PTUItem {
     async _preCreate(data, options, userId) {
         if(this.isOwned) {
             const round = game.combat?.round ?? null;
+            const turn = (game.combat?.round ?? 0) * (game.combat?.turns?.length ?? 1) + (game.combat?.turn ?? 0);
             const initiative = game.combat?.combatant?.initiative ?? null;
             this.updateSource({
                 "system.start": {
                     round,
+                    turn,
                     initiative
                 }
             })

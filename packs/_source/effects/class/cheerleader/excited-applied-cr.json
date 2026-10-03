@@ -47,7 +47,7 @@
     },
     "duration": {
       "value": 0,
-      "unit": "rounds",
+      "unit": "turns",
       "expiry": "turn-start"
     },
     "start": {
@@ -76,9 +76,9 @@
   "_stats": {
     "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.39",
+    "systemVersion": "4.4.3.45",
     "createdTime": 1789294433704,
-    "modifiedTime": 1789294782171,
+    "modifiedTime": 1791005963234,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

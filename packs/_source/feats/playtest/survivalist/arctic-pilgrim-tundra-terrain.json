@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Neither deep slow nor slippery ice can deter you. You are immune to the effects of Hail and to the Frozen condition, and gain 5 Damage Reduction against IceType attacks.",
+    "effect": "Neither deep slow nor slippery ice can deter you. You are immune to the effects of Hail and to the @UUID[Compendium.ptu.effects.Item.7F4dkJoDuD7wNcEK]{Frozen} condition, and gain 5 Damage Reduction against Ice-Type attacks.",
     "snippet": "",
     "rules": [
       {
@@ -32,7 +32,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
+      "type": "static",
       "max": 0,
       "custom": "",
       "modifiers": {
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -55,7 +56,10 @@
       "bind": false
     },
     "leagueLegal": false,
-    "prerequisites": [],
+    "prerequisites": [
+      "Survivalist",
+      "Terrain Talent"
+    ],
     "notes": "",
     "free": false,
     "class": ""

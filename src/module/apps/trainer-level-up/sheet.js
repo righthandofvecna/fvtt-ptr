@@ -113,10 +113,12 @@ export class PTUTrainerLevelUpSheet extends HandlebarsApplicationMixin(Applicati
             skills: data.isLoaded ? data.getSkillRankUpData() : [],
             showSkillSection: data.isLoaded && data.hasSkillEdges && data.unspentEdgeSlots > 0,
             pendingBonusItems,
+            backgroundStatus: data.backgroundStatus,
             hasAnything: data.unspentStatPoints > 0
                 || data.unspentFeatureSlots > 0
                 || data.unspentEdgeSlots > 0
-                || pendingBonusItems.length > 0,
+                || pendingBonusItems.length > 0
+                || !data.backgroundStatus.isComplete,
         };
     }
 
@@ -250,5 +252,22 @@ export class PTUTrainerLevelUpSheet extends HandlebarsApplicationMixin(Applicati
                 this.render(true);
             });
         });
+
+        // ── Skill background ──────────────────────────────────────────────────
+        const saveBgBtn = html.querySelector('.save-background');
+        if (saveBgBtn) {
+            saveBgBtn.addEventListener('click', async ev => {
+                ev.preventDefault();
+                saveBgBtn.disabled = true;
+                const adept = html.querySelector('.bg-adept-select')?.value ?? "";
+                const novice = html.querySelector('.bg-novice-select')?.value ?? "";
+                const pathetic = {};
+                html.querySelectorAll('.bg-pathetic-select').forEach(sel => {
+                    pathetic[sel.dataset.patheticSlot] = sel.value ?? "";
+                });
+                await this.#data.saveBackground({ adept, novice, pathetic });
+                this.render(true);
+            });
+        }
     }
 }

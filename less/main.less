@@ -1975,6 +1975,7 @@ a.content-link {
             &.feat { background: #D5B896; }
             &.edge { background: #E58800; }
             &.bonus { background: #8e3b96; }
+            &.background { background: #2e6b4f; }
         }
     }
 
@@ -2037,6 +2038,66 @@ a.content-link {
                 font-weight: normal;
                 color: var(--color-text-light-7, #aaa);
             }
+        }
+    }
+
+    // ── Skill background section ───────────────────────────────────────────────
+    .tlu-background-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .tlu-background-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .tlu-bg-label {
+            flex: 0 0 140px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        .tlu-bg-mod {
+            font-weight: normal;
+            color: var(--color-text-light-7, #aaa);
+            font-size: 0.85em;
+        }
+        .tlu-bg-select {
+            flex: 1;
+            background: var(--color-bg-option, #1a1a2e);
+            border: 1px solid var(--color-border-light-primary, #666);
+            border-radius: 4px;
+            padding: 3px 6px;
+            color: inherit;
+            font-size: 0.85em;
+        }
+
+        &.tlu-pathetic-row {
+            align-items: flex-start;
+        }
+    }
+
+    .tlu-pathetic-selects {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        flex: 1;
+
+        .tlu-bg-select { width: 100%; }
+    }
+
+    .tlu-background-save-row {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 4px;
+
+        button {
+            padding: 4px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
         }
     }
 
@@ -5839,21 +5900,11 @@ a.content-link {
 	.evolutions {
 		padding: 0.25rem 0.75rem;
 		flex-direction: column;
-		.evolution-level {
-			flex: 0 0 42px;
-			text-align: center;
-		}
-		.evolution-restriction {
-			flex: 0 0 90px;
+		.evolution-predicate {
+			flex: 1 1 auto;
 			margin-left: 0.25rem;
-		}
-		.evolution-item {
-			flex: 0 0 120px;
-			margin-left: 0.25rem;
-			.empty {
-				display: flex;
-				justify-content: center;
-				text-align: center;
+			tags.tagify {
+				width: 100%;
 			}
 		}
 	}
