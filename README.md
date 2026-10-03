@@ -38,6 +38,18 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Configured Condensed and Extended tracks to use the Trainer Level Up Wizard
+- Added "Repeatable" checkbox for Features and Edges
+- Improved Dowsing and Cheerleader macros
+- Level-up screen honors `self:evolution-forbidden` roll option
+- Evolution prerequisites now use the same Predicate system as Rule Elements
+- Added `self:level:*` and `self:gender:*` roll options, as well as `party:<species-slug>` roll options in the new `evolution` domain
+- Improvements to Daily Training wizard (correctly accounts for milestones in Extended and Condensed tracks)
+- Added Flavor Likes and Dislikes to Pokemon (based on Nature)
+- Improvements to the trainer level-up wizard (better prereq checking, added background section)
+- Added `attack:outcome:hit`, `attack:outcome:miss`, `attack:outcome:crit-hit`, and `attack:outcome:crit-miss` selectors (they're set per-target)
+- Added "Turn" duration expiry for Effects
+- Updated Pokemon Generator to read Core Foundry Prototype Token Overrides setting
 - Added `self:spirit:*` roll option, and parsing for predicates like `self:spirit:1+`, `attack:stage:0+` or `move:ac:3-`
 - Fixed a bug that prevented clicking on status-only moves directly from a Pokemon's sheet
 - Fixed an issue that prevented multiple ApplyEffect rule elements from triggering during an "apply-effects" event
