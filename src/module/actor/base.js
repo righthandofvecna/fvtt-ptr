@@ -507,19 +507,6 @@ class PTUActor extends Actor {
         return super.updateDocuments(updates, context);
     }
 
-    _onCreate(data, options, user) {
-        super._onCreate(data, options, user);
-        if(user !== game.user.id) return;
-        if(data.type === 'character') {
-            if(!data.items.some(i => i.name.endsWith("Training"))) {
-                // Grant lvl 1 training
-                fromUuid('Compendium.ptu.effects.Item.fm0TZUuQK0uRhkJA').then((effect) => {
-                    this.createEmbeddedDocuments('Item', [effect.toObject()]);
-                });
-            }
-        }
-    }
-
     /** @override */
     async _preUpdate(changed, options, user) {
         if (changed?.system?.spirit?.value !== undefined) {
