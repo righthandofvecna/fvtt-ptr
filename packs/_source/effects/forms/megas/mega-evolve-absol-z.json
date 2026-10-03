@@ -1,0 +1,95 @@
+{
+  "name": "Mega Evolve: Absol Z",
+  "type": "effect",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "This effect will mega-evolve your Absol into its Z-Forme.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "TokenImage",
+        "predicate": [
+          {
+            "value": "species:absol"
+          },
+          {
+            "value": "self:pokemon:shiny"
+          }
+        ],
+        "value": "/systems/ptu/static/images/sprites/359s_MEGA_Z.webp"
+      },
+      {
+        "key": "TokenImage",
+        "predicate": {
+          "and": [
+            "species:absol",
+            {
+              "not": "self:pokemon:shiny"
+            }
+          ]
+        },
+        "value": "/systems/ptu/static/images/sprites/359_MEGA_Z.webp"
+      },
+      {
+        "key": "TemporarySpecies",
+        "predicate": [
+          {
+            "value": "species:absol"
+          }
+        ],
+        "uuid": "Compendium.ptu.species.Item.MIXOBveAZW4mQusU"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [
+          "species:absol"
+        ],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.w6V93SHSUDI2I348"
+      }
+    ],
+    "enabled": true,
+    "slug": "mega-evolve-absol-z",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "TuFJ2nmx9i2k6KYk",
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_id": "tl3dOBJVOYZE8cep"
+}

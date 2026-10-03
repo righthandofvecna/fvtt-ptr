@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -88,5 +89,6 @@
     "exportSource": null
   },
   "sort": 21700000,
-  "_id": "L0viDAeWk0z7Neg8"
+  "_id": "L0viDAeWk0z7Neg8",
+  "folder": null
 }

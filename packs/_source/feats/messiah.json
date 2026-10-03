@@ -7,7 +7,7 @@
     "rules": [],
     "enabled": true,
     "slug": "messiah",
-    "contentSet": "",
+    "contentSet": "blessed-and-damned",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +25,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Patron Stat"
+      "Patron Stat",
+      "General"
     ],
     "frequency": {
       "type": "at-will",
@@ -37,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -60,7 +62,8 @@
     "name": "Messiah",
     "useCount": 0,
     "automation": [],
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -86,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 52700000,
   "_id": "kNFe3VaimLkzLQtj"
 }

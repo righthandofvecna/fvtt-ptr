@@ -55,7 +55,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -68,13 +69,18 @@
       "cost": 0,
       "bind": false
     },
-    "prerequisites": [],
+    "prerequisites": [
+      "Elemental Connection (Flying)",
+      "Novice Acrobatics",
+      "Novice Perception"
+    ],
     "notes": "",
     "free": false,
     "class": "Wind Runner",
     "name": "Wind Runner [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "wind-runner"
+    "replacesSlug": "wind-runner",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -87,7 +93,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

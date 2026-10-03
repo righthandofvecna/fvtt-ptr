@@ -2,7 +2,7 @@
   "name": "Ravager Orders",
   "system": {
     "origin": "",
-    "effect": "You gain the Reckless Advance and Alpha Strike Orders.",
+    "effect": "You gain the @UUID[Compendium.ptu.feats.Item.cAuiJ2UU45uelKEr]{Reckless Advance} and @UUID[Compendium.ptu.feats.Item.l1bMdIUsBsxeri0D]{Alpha Strike} Orders.",
     "snippet": "",
     "rules": [
       {
@@ -50,7 +50,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -73,7 +74,8 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
-    "replacesSlug": "ravager-orders"
+    "replacesSlug": "ravager-orders",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -81,7 +83,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Expert Command or Intimidate",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

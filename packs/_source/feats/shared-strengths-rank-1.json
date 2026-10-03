@@ -25,7 +25,8 @@
     "stackSlugs": false,
     "keywords": [
       "Ranked 3",
-      "Patron Stat"
+      "Patron Stat",
+      "General"
     ],
     "frequency": {
       "type": "static",
@@ -37,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,8 +61,9 @@
     "name": "Shared Strengths Rank 1",
     "useCount": 0,
     "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "blessed-and-damned",
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -70,7 +73,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Pokemon Form Level 20"
+      "prereqBackup": "Pokemon Form Level 20",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -83,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 43700000,
   "_id": "dCyNLCURRVelzaFn"
 }

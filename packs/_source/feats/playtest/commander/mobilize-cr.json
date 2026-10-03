@@ -2,7 +2,7 @@
   "name": "Mobilize",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: Any Ally\nEffect: The target cannot provoke Attacks of Opportunity on their next turn. Mobilize may target an Ally only once per encounter.",
+    "effect": "Target: Any Ally\nEffect: The target cannot provoke @UUID[Compendium.ptu.moves.Item.lhaZXnE2PfttWp41]{Attacks of Opportunity} on their next turn. Mobilize may target an Ally only once per encounter.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -38,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,7 +60,8 @@
     "class": "Commander",
     "name": "Mobilize [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "mobilize"
+    "replacesSlug": "mobilize",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -70,7 +72,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
