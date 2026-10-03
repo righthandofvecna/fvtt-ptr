@@ -147,12 +147,12 @@ export class TrainerLevelUpData {
 
     get backgroundStatus() {
         const bg = this.actor.system.background ?? {};
-        const adept = bg.adept ?? "blank";
-        const novice = bg.novice ?? "blank";
+        const adept = bg.adept || "blank";
+        const novice = bg.novice || "blank";
         const pathetic = {
-            one: bg.pathetic?.one ?? "blank",
-            two: bg.pathetic?.two ?? "blank",
-            three: bg.pathetic?.three ?? "blank",
+            one: bg.pathetic?.one || "blank",
+            two: bg.pathetic?.two || "blank",
+            three: bg.pathetic?.three || "blank",
         };
         const isComplete = !!(adept !== "blank" && novice !== "blank" && pathetic.one !== "blank" && pathetic.two !== "blank" && pathetic.three !== "blank");
         const skillOptions = (CONFIG.PTU.data.skills.keys ?? []).map(key => ({
