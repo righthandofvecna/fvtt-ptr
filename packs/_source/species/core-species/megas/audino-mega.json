@@ -6,7 +6,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:17.070Z",
+        "datetime": "2026-10-03T04:49:23.681Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,11 +59,15 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.1jOSX8iqFgccZN8C",
         "slug": "audino",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -674,7 +678,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984537595,
+    "modifiedTime": 1791002964216,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

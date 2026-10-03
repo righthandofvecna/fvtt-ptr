@@ -7,7 +7,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:33.376Z",
+        "datetime": "2026-10-03T04:49:40.281Z",
         "version": {
           "schema": 0.112,
           "foundry": "14.367",
@@ -60,20 +60,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.u0vJNmW9NyFphsjE",
         "slug": "eevee",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.bLdQhnLaxECDEpYl",
         "slug": "maliceon",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            "GM Permission"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -502,7 +510,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1702347549824,
-    "modifiedTime": 1790984553919,
+    "modifiedTime": 1791002980815,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

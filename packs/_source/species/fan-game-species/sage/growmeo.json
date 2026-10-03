@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:27.224Z",
+        "datetime": "2026-10-03T04:49:34.113Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,20 +56,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.RWwQ8HTzzyAzO4YP",
         "slug": "growmeo",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.My0FGtUdAJubeSvr",
         "slug": "montegrew",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -515,7 +523,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984547758,
+    "modifiedTime": 1791002974654,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

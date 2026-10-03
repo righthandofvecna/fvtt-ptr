@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:34.449Z",
+        "datetime": "2026-10-03T04:49:41.335Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,18 +59,22 @@
       {
         "uuid": "Compendium.ptu.species.Item.6UTWLNodPELIv8Yk",
         "slug": "linkite",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.cuGoqrxkBieDHTXp",
         "slug": "chainite",
+        "level": 25,
         "other": {
-          "predicate": [
-            "self:level:25+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -490,7 +494,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984554979,
+    "modifiedTime": 1791002981862,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

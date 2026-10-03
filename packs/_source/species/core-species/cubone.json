@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:23.201Z",
+        "datetime": "2026-10-03T04:49:29.944Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,29 +56,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.KlayP4VCdN4x25LO",
         "slug": "cubone",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.bCBxqDk2zJFgHspo",
         "slug": "marowak",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.L3Xn2ZrTY8LOt1mz",
         "slug": "marowak-alolan",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -613,7 +625,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984543751,
+    "modifiedTime": 1791002970479,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

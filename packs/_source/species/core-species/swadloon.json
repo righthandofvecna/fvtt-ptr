@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:41.688Z",
+        "datetime": "2026-10-03T04:49:48.633Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,27 +59,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.M82FWNN1qAptvytn",
         "slug": "sewaddle",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.p46ujKq7poRaEOfo",
         "slug": "swadloon",
+        "level": 15,
         "other": {
-          "predicate": [
-            "self:level:15+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.p2t30Oy2NWDtPshH",
         "slug": "leavanny",
+        "level": 30,
         "other": {
-          "predicate": [
-            "self:level:30+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -401,7 +407,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984562190,
+    "modifiedTime": 1791002989171,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

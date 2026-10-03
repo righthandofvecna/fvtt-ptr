@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:21.190Z",
+        "datetime": "2026-10-03T04:49:27.873Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,11 +57,15 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.HHAz2k09hT2pKLrn",
         "slug": "guzzlord",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -540,7 +544,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984541697,
+    "modifiedTime": 1791002968395,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

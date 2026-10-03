@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:42.727Z",
+        "datetime": "2026-10-03T04:49:49.677Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,18 +59,22 @@
       {
         "uuid": "Compendium.ptu.species.Item.qlNotMY6d9Xi3sDN",
         "slug": "snom",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.VCs59ct3HZtRageB",
         "slug": "frosmoth",
+        "level": 20,
         "other": {
-          "predicate": [
-            "self:level:20+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       }
     ],
     "size": {
@@ -342,7 +346,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984563269,
+    "modifiedTime": 1791002990225,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

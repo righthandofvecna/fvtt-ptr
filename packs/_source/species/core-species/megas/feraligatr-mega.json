@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:13.048Z",
+        "datetime": "2026-10-03T04:49:19.429Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -61,29 +61,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.EgoAdYYoNfG3YqvG",
         "slug": "totodile",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 15,
         "uuid": "Compendium.ptu.species.Item.t4vvb0FnHN58BVTv",
         "slug": "croconaw",
         "other": {
-          "predicate": [
-            "self:level:15+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.A2f2mw4x2sWpvF9V",
         "slug": "feraligatr",
         "other": {
-          "predicate": [
-            "self:level:30+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -595,7 +607,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1776549953687,
-    "modifiedTime": 1790984533567,
+    "modifiedTime": 1791002959967,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "3ZdVqbCD2iqslflQ",

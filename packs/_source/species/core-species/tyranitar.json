@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:34.446Z",
+        "datetime": "2026-10-03T04:49:41.332Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,27 +59,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.hLO1HpD8zHTjvkTb",
         "slug": "larvitar",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.HNvTxkHvICYiEsjk",
         "slug": "pupitar",
+        "level": 20,
         "other": {
-          "predicate": [
-            "self:level:20+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.cEt1fGBJld972G3b",
         "slug": "tyranitar",
+        "level": 40,
         "other": {
-          "predicate": [
-            "self:level:40+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:40+"
+        ]
       }
     ],
     "size": {
@@ -650,7 +656,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984554970,
+    "modifiedTime": 1791002981856,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

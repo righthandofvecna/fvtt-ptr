@@ -7,7 +7,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:26.197Z",
+        "datetime": "2026-10-03T04:49:33.093Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -60,20 +60,28 @@
     },
     "evolutions": [
       {
+        "level": 0,
         "uuid": "Compendium.ptu.species.Item.PWdUdUeF0t5FPno7",
         "slug": "poltchageist",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.NDOxzMmxf3AlZYUU",
         "slug": "sinistcha",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -603,7 +611,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1694712904509,
-    "modifiedTime": 1790984546718,
+    "modifiedTime": 1791002973597,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

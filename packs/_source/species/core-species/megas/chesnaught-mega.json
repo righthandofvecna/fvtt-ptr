@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:16.065Z",
+        "datetime": "2026-10-03T04:49:22.634Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,29 +57,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.0hnLztbSRYMCf4eQ",
         "slug": "chespin",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 15,
         "uuid": "Compendium.ptu.species.Item.C9weMo9le2sQiV5A",
         "slug": "quilladin",
         "other": {
-          "predicate": [
-            "self:level:15+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.0T76sb5df0RmBZIr",
         "slug": "chesnaught",
         "other": {
-          "predicate": [
-            "self:level:30+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -607,7 +619,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1776975889164,
-    "modifiedTime": 1790984536575,
+    "modifiedTime": 1791002963164,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "9SkMvQos4PuwVb3m",

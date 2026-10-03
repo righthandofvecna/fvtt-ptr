@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:45.892Z",
+        "datetime": "2026-10-03T04:49:52.853Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,27 +59,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.okYNWJgMsds9EBBB",
         "slug": "impidimp",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.wdTwL5OJEtf1rROj",
         "slug": "morgrem",
+        "level": 20,
         "other": {
-          "predicate": [
-            "self:level:20+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.UOHpvGB85niPBIFJ",
         "slug": "grimmsnarl",
+        "level": 40,
         "other": {
-          "predicate": [
-            "self:level:40+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:40+"
+        ]
       }
     ],
     "size": {
@@ -457,7 +463,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984566427,
+    "modifiedTime": 1791002993392,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

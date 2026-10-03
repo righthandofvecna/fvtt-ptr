@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:41.686Z",
+        "datetime": "2026-10-03T04:49:48.632Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,20 +56,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.oo2veRzVjkCKi81F",
         "slug": "pounther",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.waRU6cefCcAk0jQF",
         "slug": "jaguile",
         "other": {
-          "predicate": [
-            "self:level:30+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -538,7 +546,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984562188,
+    "modifiedTime": 1791002989169,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

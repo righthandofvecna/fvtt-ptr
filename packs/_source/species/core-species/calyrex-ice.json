@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:34.451Z",
+        "datetime": "2026-10-03T04:49:41.337Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,9 +59,11 @@
       {
         "uuid": "Compendium.ptu.species.Item.dO9F22ohpWFtFNhU",
         "slug": "calyrex-ice",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -502,7 +504,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984554985,
+    "modifiedTime": 1791002981866,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

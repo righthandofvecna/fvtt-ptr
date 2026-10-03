@@ -7,7 +7,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:38.589Z",
+        "datetime": "2026-10-03T04:49:45.460Z",
         "version": {
           "schema": 0.112,
           "foundry": "14.367",
@@ -60,29 +60,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.A0sBewaxj0epSaUU",
         "slug": "applin",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 20,
         "uuid": "Compendium.ptu.species.Item.dkQPNz0RLbgzWMLq",
         "slug": "dipplin",
         "other": {
-          "predicate": [
-            "self:level:20+"
+          "restrictions": [
+            "Syrupy"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
+        "level": 40,
         "uuid": "Compendium.ptu.species.Item.jAIJeRtRc1sUekjO",
         "slug": "hydrapple",
         "other": {
-          "predicate": [
-            "self:level:40+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:40+"
+        ]
       }
     ],
     "size": {
@@ -555,7 +567,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984559100,
+    "modifiedTime": 1791002985979,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

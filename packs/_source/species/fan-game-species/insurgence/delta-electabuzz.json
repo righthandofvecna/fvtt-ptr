@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:31.344Z",
+        "datetime": "2026-10-03T04:49:38.300Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,29 +56,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.loE49RWPHiqclkmh",
         "slug": "delta-elekid",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.XAEN00MRjgM4UMgW",
         "slug": "delta-electabuzz",
         "other": {
-          "predicate": [
-            "self:level:30+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       },
       {
+        "level": 40,
         "uuid": "Compendium.ptu.species.Item.hhlGePZNyi02KotY",
         "slug": "delta-electivire",
         "other": {
-          "predicate": [
-            "self:level:40+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:40+"
+        ]
       }
     ],
     "size": {
@@ -536,7 +548,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984551853,
+    "modifiedTime": 1791002978836,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

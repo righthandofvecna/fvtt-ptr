@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:34.449Z",
+        "datetime": "2026-10-03T04:49:41.334Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,20 +56,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.ckVNkNb5DEs75L5m",
         "slug": "delta-meditite",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 35,
         "uuid": "Compendium.ptu.species.Item.25oaW0ovsVKv96Ob",
         "slug": "delta-medicham",
         "other": {
-          "predicate": [
-            "self:level:35+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:35+"
+        ]
       }
     ],
     "size": {
@@ -546,7 +554,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984554976,
+    "modifiedTime": 1791002981861,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

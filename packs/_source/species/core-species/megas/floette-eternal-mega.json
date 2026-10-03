@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:39.620Z",
+        "datetime": "2026-10-03T04:49:46.508Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -60,20 +60,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.w2umpxPjqV99mnUR",
         "slug": "flabebe",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 15,
         "uuid": "Compendium.ptu.species.Item.5xrwSBudDKs1uiMj",
         "slug": "floette-eternal",
         "other": {
-          "predicate": [
-            "self:level:15+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       }
     ],
     "size": {
@@ -471,7 +479,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1776460769669,
-    "modifiedTime": 1790984560124,
+    "modifiedTime": 1791002987039,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "mSDq94xfrmKUFFr7",

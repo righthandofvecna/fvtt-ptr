@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:18.103Z",
+        "datetime": "2026-10-03T04:49:24.729Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,38 +56,54 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.DQRo3VaMIPQTJ8tA",
         "slug": "kertruffle",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.z4YMOVhe4cXz6FY1",
         "slug": "mosshroom",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.xGjSU3ZEqIK2Ebfm",
         "slug": "lumishroom",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.mrnaQtY3PlOWr6HQ",
         "slug": "perishroom",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -522,7 +538,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984538633,
+    "modifiedTime": 1791002965244,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

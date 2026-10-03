@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:16.066Z",
+        "datetime": "2026-10-03T04:49:22.635Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -61,29 +61,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.NVIqKDwzWFxmfDCA",
         "slug": "fennekin",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 15,
         "uuid": "Compendium.ptu.species.Item.whMDDxAP3W5o50Co",
         "slug": "braixen",
         "other": {
-          "predicate": [
-            "self:level:15+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.DpEsJsolObxYnYsC",
         "slug": "delphox",
         "other": {
-          "predicate": [
-            "self:level:30+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -613,7 +625,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1776976868278,
-    "modifiedTime": 1790984536577,
+    "modifiedTime": 1791002963167,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "A2BDTWwH1TEbvPLk",

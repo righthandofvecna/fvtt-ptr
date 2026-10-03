@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:35.494Z",
+        "datetime": "2026-10-03T04:49:42.353Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,20 +56,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.eHAyX2iJInytWtSs",
         "slug": "chyinmunk",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 15,
         "uuid": "Compendium.ptu.species.Item.mOQyUQXDc8OB3yhB",
         "slug": "kinetmunk",
         "other": {
-          "predicate": [
-            "self:level:15+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       }
     ],
     "size": {
@@ -486,7 +494,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984556016,
+    "modifiedTime": 1791002982879,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

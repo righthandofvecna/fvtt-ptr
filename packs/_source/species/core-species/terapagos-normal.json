@@ -7,7 +7,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:14.073Z",
+        "datetime": "2026-10-03T04:49:20.503Z",
         "version": {
           "schema": null,
           "foundry": "14.367",
@@ -59,11 +59,15 @@
     },
     "evolutions": [
       {
+        "level": 0,
         "uuid": "Compendium.ptu.species.Item.6N4UOMctgbee5k3j",
         "slug": "terapagos-normal",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -492,7 +496,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1705606236926,
-    "modifiedTime": 1790984534552,
+    "modifiedTime": 1791002961053,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

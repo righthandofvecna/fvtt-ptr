@@ -7,7 +7,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:34.450Z",
+        "datetime": "2026-10-03T04:49:41.336Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,20 +59,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.u0vJNmW9NyFphsjE",
         "slug": "eevee",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.d0eCJAUwsxf0Pcjm",
         "slug": "scorpeon",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -511,7 +519,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1694015478526,
-    "modifiedTime": 1790984554980,
+    "modifiedTime": 1791002981863,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

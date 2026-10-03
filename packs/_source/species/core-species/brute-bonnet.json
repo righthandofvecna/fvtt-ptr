@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:33.377Z",
+        "datetime": "2026-10-03T04:49:40.282Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,11 +57,15 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.bbgrSxiCGrO1B81l",
         "slug": "brute-bonnet",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -621,7 +625,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1693120305329,
-    "modifiedTime": 1790984553921,
+    "modifiedTime": 1791002980817,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

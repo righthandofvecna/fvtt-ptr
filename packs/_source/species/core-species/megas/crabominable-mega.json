@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:17.070Z",
+        "datetime": "2026-10-03T04:49:23.681Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,20 +57,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.NbIsxf9AKZPRrq44",
         "slug": "crabrawler",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.p2qyFZmWQ5AwOd03",
         "slug": "crabominable",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -498,7 +506,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1776979218604,
-    "modifiedTime": 1790984537596,
+    "modifiedTime": 1791002964217,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "BcpWEtC1DiOuAOdQ",

@@ -7,7 +7,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:34.450Z",
+        "datetime": "2026-10-03T04:49:41.336Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -60,11 +60,15 @@
     },
     "evolutions": [
       {
+        "level": 0,
         "uuid": "Compendium.ptu.species.Item.d4bozHKgocOiJibK",
         "slug": "eternatus-eternamax",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -455,7 +459,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1708346661160,
-    "modifiedTime": 1790984554981,
+    "modifiedTime": 1791002981864,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

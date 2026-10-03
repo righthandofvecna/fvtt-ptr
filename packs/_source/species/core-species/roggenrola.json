@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:11.977Z",
+        "datetime": "2026-10-03T04:49:18.351Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -58,27 +58,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.2kZczI7Tu4qYa9m4",
         "slug": "roggenrola",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.qSYuhyAQSF0K5tTN",
         "slug": "boldore",
+        "level": 25,
         "other": {
-          "predicate": [
-            "self:level:25+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.GHd2iLnSo4zSvH1V",
         "slug": "gigalith",
+        "level": 40,
         "other": {
-          "predicate": [
-            "self:level:40+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:40+"
+        ]
       }
     ],
     "size": {
@@ -468,7 +474,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984532527,
+    "modifiedTime": 1791002958895,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

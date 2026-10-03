@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:46.915Z",
+        "datetime": "2026-10-03T04:49:53.911Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,27 +59,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.Q4Bn0CP2jrH4cXog",
         "slug": "lotad",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.xufYOi3NGsKP9vC7",
         "slug": "lombre",
+        "level": 15,
         "other": {
-          "predicate": [
-            "self:level:15+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.vDpXKkJpFqD18gzw",
         "slug": "ludicolo",
+        "level": 25,
         "other": {
-          "predicate": [
-            "self:level:25+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -519,7 +525,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984567440,
+    "modifiedTime": 1791002994447,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

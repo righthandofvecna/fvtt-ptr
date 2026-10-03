@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:31.347Z",
+        "datetime": "2026-10-03T04:49:38.304Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,29 +57,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.zjnIRR4bkHZJX4j2",
         "slug": "seedot",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 15,
         "uuid": "Compendium.ptu.species.Item.YgjnPn6H6XHEmX4Y",
         "slug": "nuzleaf",
         "other": {
-          "predicate": [
-            "self:level:15+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.DZbCjKEtWfTjXwWH",
         "slug": "shiftry",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -524,7 +536,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984551861,
+    "modifiedTime": 1791002978849,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

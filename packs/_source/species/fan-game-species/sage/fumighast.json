@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:27.222Z",
+        "datetime": "2026-10-03T04:49:34.110Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,38 +57,54 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.Rle4bJGNlCpWd21G",
         "slug": "phlask",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 20,
         "uuid": "Compendium.ptu.species.Item.JJWZjPR1FFiHiZJs",
         "slug": "noxial",
         "other": {
-          "predicate": [
-            "self:level:20+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
+        "level": 20,
         "uuid": "Compendium.ptu.species.Item.JJWZjPR1FFiHiZJs",
         "slug": "noxial",
         "other": {
-          "predicate": [
-            "self:level:20+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
+        "level": 35,
         "uuid": "Compendium.ptu.species.Item.QoqAZLr5AyHApfV8",
         "slug": "fumighast",
         "other": {
-          "predicate": [
-            "self:level:35+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:35+"
+        ]
       }
     ],
     "size": {
@@ -594,7 +610,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984547751,
+    "modifiedTime": 1791002974649,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -6,7 +6,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:22.205Z",
+        "datetime": "2026-10-03T04:49:28.890Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -63,20 +63,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.5XUXGZT5pqTEj452",
         "slug": "onix",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.Z8t1GFUQl9SpZq66",
         "slug": "steelix",
         "other": {
-          "predicate": [
-            "self:level:30+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -603,7 +611,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984542708,
+    "modifiedTime": 1791002969426,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

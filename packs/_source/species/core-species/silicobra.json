@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:33.377Z",
+        "datetime": "2026-10-03T04:49:40.282Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -58,18 +58,22 @@
       {
         "uuid": "Compendium.ptu.species.Item.bWYtW02JhEhlfeyl",
         "slug": "silicobra",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.xiYkNYfaMVjRk5is",
         "slug": "sandaconda",
+        "level": 30,
         "other": {
-          "predicate": [
-            "self:level:30+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -411,7 +415,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984553921,
+    "modifiedTime": 1791002980817,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

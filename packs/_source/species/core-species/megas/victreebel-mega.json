@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:29.302Z",
+        "datetime": "2026-10-03T04:49:36.215Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -61,29 +61,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.PgWOZC8AtihSojgJ",
         "slug": "bellsprout",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 20,
         "uuid": "Compendium.ptu.species.Item.ED6cKm0fWi3AJcqg",
         "slug": "weepinbell",
         "other": {
-          "predicate": [
-            "self:level:20+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.QXw0r9ZytkcAdfdH",
         "slug": "victreebel",
         "other": {
-          "predicate": [
-            "self:level:30+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -504,7 +516,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1776463262504,
-    "modifiedTime": 1790984549797,
+    "modifiedTime": 1791002976753,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "USpEFFM1LaUEVdLj",

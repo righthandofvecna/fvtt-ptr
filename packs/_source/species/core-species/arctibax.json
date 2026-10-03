@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:26.198Z",
+        "datetime": "2026-10-03T04:49:33.093Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,29 +57,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.k0M1P8yzMsQZHvyr",
         "slug": "frigibax",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 35,
         "uuid": "Compendium.ptu.species.Item.PaUtPZnl7cYzBcld",
         "slug": "arctibax",
         "other": {
-          "predicate": [
-            "self:level:35+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:35+"
+        ]
       },
       {
+        "level": 50,
         "uuid": "Compendium.ptu.species.Item.gYUSA5DAXKW9LLqw",
         "slug": "baxcalibur",
         "other": {
-          "predicate": [
-            "self:level:50+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:50+"
+        ]
       }
     ],
     "size": {
@@ -610,7 +622,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1693120305329,
-    "modifiedTime": 1790984546718,
+    "modifiedTime": 1791002973597,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

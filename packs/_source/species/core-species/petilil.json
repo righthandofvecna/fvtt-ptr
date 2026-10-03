@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:35.495Z",
+        "datetime": "2026-10-03T04:49:42.353Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,29 +56,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.ePyE1KMeJiGABHHI",
         "slug": "petilil",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.jqLX2VXiF90UQthI",
         "slug": "lilligant",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.njlmdgFz0nJ4ycmw",
         "slug": "lilligant-hisuian",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -500,7 +512,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984556017,
+    "modifiedTime": 1791002982880,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

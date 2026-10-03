@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:44.834Z",
+        "datetime": "2026-10-03T04:49:51.812Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -52,20 +52,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.tHVM9407ZhO7XaOu",
         "slug": "finizen",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.2DQAPWNuTQaQHOMW",
         "slug": "palafin",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -532,7 +540,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1693120305329,
-    "modifiedTime": 1790984565351,
+    "modifiedTime": 1791002992354,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

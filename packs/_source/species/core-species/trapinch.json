@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:41.690Z",
+        "datetime": "2026-10-03T04:49:48.635Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -58,27 +58,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.pOdbiso2yDZ9bTE2",
         "slug": "trapinch",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.fhziHTKfX2W9fp6a",
         "slug": "vibrava",
+        "level": 20,
         "other": {
-          "predicate": [
-            "self:level:20+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.tTzOmeo13wBM8xGU",
         "slug": "flygon",
+        "level": 35,
         "other": {
-          "predicate": [
-            "self:level:35+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:35+"
+        ]
       }
     ],
     "size": {
@@ -500,7 +506,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984562193,
+    "modifiedTime": 1791002989175,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

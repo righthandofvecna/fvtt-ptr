@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:36.529Z",
+        "datetime": "2026-10-03T04:49:43.395Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,18 +59,22 @@
       {
         "uuid": "Compendium.ptu.species.Item.nowbmrjTMyepwJez",
         "slug": "croagunk",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.fbnjiLRfNarH0PWR",
         "slug": "toxicroak",
+        "level": 30,
         "other": {
-          "predicate": [
-            "self:level:30+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -573,7 +577,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984557069,
+    "modifiedTime": 1791002983918,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

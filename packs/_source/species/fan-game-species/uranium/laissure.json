@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:25.221Z",
+        "datetime": "2026-10-03T04:49:32.052Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,29 +56,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.bho7NlNlUrKglfXT",
         "slug": "sheebit",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 20,
         "uuid": "Compendium.ptu.species.Item.iWG2qEzskfDpGAof",
         "slug": "terrabbit",
         "other": {
-          "predicate": [
-            "self:level:20+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
+        "level": 40,
         "uuid": "Compendium.ptu.species.Item.NEObMF0ycDoFysiS",
         "slug": "laissure",
         "other": {
-          "predicate": [
-            "self:level:40+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:40+"
+        ]
       }
     ],
     "size": {
@@ -554,7 +566,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984545695,
+    "modifiedTime": 1791002972557,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

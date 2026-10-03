@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:23.201Z",
+        "datetime": "2026-10-03T04:49:29.944Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,20 +57,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.PmK8mFQ4T5MgmtLM",
         "slug": "chingling",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 15,
         "uuid": "Compendium.ptu.species.Item.SdevwvK3SDAggd2e",
         "slug": "chimecho",
         "other": {
-          "predicate": [
-            "self:level:15+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       }
     ],
     "size": {
@@ -565,7 +573,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1776550516251,
-    "modifiedTime": 1790984543751,
+    "modifiedTime": 1791002970478,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "KfGTG9jMkj8F7OCD",

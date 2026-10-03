@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:31.343Z",
+        "datetime": "2026-10-03T04:49:38.299Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -61,20 +61,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.aoc4sceLBGES53zI",
         "slug": "staryu",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.JCrX7OwxhFOJdRoy",
         "slug": "starmie",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       }
     ],
     "size": {
@@ -569,7 +577,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1776486738215,
-    "modifiedTime": 1790984551850,
+    "modifiedTime": 1791002978831,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "WsxBBDZvKOk8QIqu",

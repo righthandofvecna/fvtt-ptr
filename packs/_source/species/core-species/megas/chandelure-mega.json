@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:19.125Z",
+        "datetime": "2026-10-03T04:49:25.749Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,29 +57,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.9RbsMnZ5caNtQ6eF",
         "slug": "litwick",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 20,
         "uuid": "Compendium.ptu.species.Item.mVR70KWKiS3zhReP",
         "slug": "lampent",
         "other": {
-          "predicate": [
-            "self:level:20+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
+        "level": 35,
         "uuid": "Compendium.ptu.species.Item.spuYwZpd31UIjlSe",
         "slug": "chandelure",
         "other": {
-          "predicate": [
-            "self:level:35+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:35+"
+        ]
       }
     ],
     "size": {
@@ -534,7 +546,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1776554726491,
-    "modifiedTime": 1790984539633,
+    "modifiedTime": 1791002966267,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "EACMg8Ou6ulsC0wp",

@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:11.127Z",
+        "datetime": "2026-10-03T04:49:17.548Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,16 +59,20 @@
       {
         "uuid": "Compendium.ptu.species.Item.qJJviDs8WTrwKvRq",
         "slug": "delta-clamperl",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.00v5gqGAyZ8mW7LT",
         "slug": "delta-huntail",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -491,7 +495,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984531487,
+    "modifiedTime": 1791002957811,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

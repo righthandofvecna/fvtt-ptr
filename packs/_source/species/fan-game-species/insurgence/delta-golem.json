@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:17.070Z",
+        "datetime": "2026-10-03T04:49:23.680Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,27 +59,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.A4bMptliJGp9oEVI",
         "slug": "delta-geodude",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.irxPqRwoNjEmXCVp",
         "slug": "delta-graveler",
+        "level": 25,
         "other": {
-          "predicate": [
-            "self:level:25+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.BVpgTBiH028Wt9CB",
         "slug": "delta-golem",
+        "level": 35,
         "other": {
-          "predicate": [
-            "self:level:35+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:35+"
+        ]
       }
     ],
     "size": {
@@ -635,7 +641,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984537594,
+    "modifiedTime": 1791002964215,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

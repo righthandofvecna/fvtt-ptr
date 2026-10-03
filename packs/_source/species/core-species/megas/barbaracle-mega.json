@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:17.068Z",
+        "datetime": "2026-10-03T04:49:23.679Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,20 +57,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.MTtokyp3jIlaj6b1",
         "slug": "binacle",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.e5JJqxfo04L0Sf5d",
         "slug": "barbaracle",
         "other": {
-          "predicate": [
-            "self:level:30+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -592,8 +600,8 @@
     "coreVersion": "14.367",
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
-    "createdTime": 1790984537590,
-    "modifiedTime": 1790984537590,
+    "createdTime": 1791002964210,
+    "modifiedTime": 1791002964210,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

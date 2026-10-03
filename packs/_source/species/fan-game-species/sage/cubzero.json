@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:39.616Z",
+        "datetime": "2026-10-03T04:49:46.504Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,20 +56,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.lRQrWMk6CmD0aFmx",
         "slug": "cubzero",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.kjY4uYivqrtyJTNf",
         "slug": "avalynx",
         "other": {
-          "predicate": [
-            "self:level:30+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -498,7 +506,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984560117,
+    "modifiedTime": 1791002987032,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

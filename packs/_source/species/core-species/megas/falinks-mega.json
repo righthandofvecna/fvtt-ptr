@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:42.725Z",
+        "datetime": "2026-10-03T04:49:49.675Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,11 +56,15 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.V4Ji9fHnwGWlH3CI",
         "slug": "falinks",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -431,8 +435,8 @@
     "coreVersion": "14.367",
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
-    "createdTime": 1790984563261,
-    "modifiedTime": 1790984563261,
+    "createdTime": 1791002990219,
+    "modifiedTime": 1791002990219,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

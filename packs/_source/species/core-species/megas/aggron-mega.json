@@ -6,7 +6,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:28.257Z",
+        "datetime": "2026-10-03T04:49:35.166Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -62,29 +62,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.AbTSlx1JPuv5djq1",
         "slug": "aron",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.37n1KRuxzD2vUu6O",
         "slug": "lairon",
         "other": {
-          "predicate": [
-            "self:level:30+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       },
       {
+        "level": 40,
         "uuid": "Compendium.ptu.species.Item.HC0KB3PNA9qnBzVg",
         "slug": "aggron",
         "other": {
-          "predicate": [
-            "self:level:40+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:40+"
+        ]
       }
     ],
     "size": {
@@ -691,7 +703,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984548770,
+    "modifiedTime": 1791002975700,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

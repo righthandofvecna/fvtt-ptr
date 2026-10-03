@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:24.267Z",
+        "datetime": "2026-10-03T04:49:30.996Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -61,29 +61,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.LMKxCm0KAlPyFErc",
         "slug": "cleffa",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 10,
         "uuid": "Compendium.ptu.species.Item.0XBPBpq3V07s39dr",
         "slug": "clefairy",
         "other": {
-          "predicate": [
-            "self:level:10+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:10+"
+        ]
       },
       {
+        "level": 20,
         "uuid": "Compendium.ptu.species.Item.elwy8szKCBctgeoS",
         "slug": "clefable",
         "other": {
-          "predicate": [
-            "self:level:20+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       }
     ],
     "size": {
@@ -707,7 +719,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1776462940187,
-    "modifiedTime": 1790984544750,
+    "modifiedTime": 1791002971531,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "MCifsHbAN4O8ULv7",

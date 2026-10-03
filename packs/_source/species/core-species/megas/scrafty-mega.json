@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:20.165Z",
+        "datetime": "2026-10-03T04:49:26.784Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,20 +57,28 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.GeN5IzdJl3cE9pUN",
         "slug": "scraggy",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 35,
         "uuid": "Compendium.ptu.species.Item.t0Zujg7TN2b8212R",
         "slug": "scrafty",
         "other": {
-          "predicate": [
-            "self:level:35+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:35+"
+        ]
       }
     ],
     "size": {
@@ -570,8 +578,8 @@
     "coreVersion": "14.367",
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
-    "createdTime": 1790984540691,
-    "modifiedTime": 1790984540691,
+    "createdTime": 1791002967336,
+    "modifiedTime": 1791002967336,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

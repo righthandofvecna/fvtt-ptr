@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:39.615Z",
+        "datetime": "2026-10-03T04:49:46.503Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,29 +56,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.lGToXOieoFLDbQlq",
         "slug": "totter",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 20,
         "uuid": "Compendium.ptu.species.Item.iOzZvjr710T1S7Si",
         "slug": "cascotta",
         "other": {
-          "predicate": [
-            "self:level:20+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
+        "level": 40,
         "uuid": "Compendium.ptu.species.Item.ooz6G6J0a4jQ28d8",
         "slug": "lutrajet",
         "other": {
-          "predicate": [
-            "self:level:40+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:40+"
+        ]
       }
     ],
     "size": {
@@ -551,7 +563,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984560115,
+    "modifiedTime": 1791002987029,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

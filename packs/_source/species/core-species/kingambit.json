@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:13.048Z",
+        "datetime": "2026-10-03T04:49:19.429Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,29 +57,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.3J3T6um9bktiCYxB",
         "slug": "pawniard",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.C1lZLDOUU68fLhX9",
         "slug": "bisharp",
         "other": {
-          "predicate": [
-            "self:level:25+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+"
+        ]
       },
       {
+        "level": 40,
         "uuid": "Compendium.ptu.species.Item.3Z1v650coi2TaDMt",
         "slug": "kingambit",
         "other": {
-          "predicate": [
-            "self:level:40+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:40+"
+        ]
       }
     ],
     "size": {
@@ -619,7 +631,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1693120305329,
-    "modifiedTime": 1790984533567,
+    "modifiedTime": 1791002959967,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

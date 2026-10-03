@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:30.301Z",
+        "datetime": "2026-10-03T04:49:37.268Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -58,27 +58,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.Cu9MqzGmnSlgozbm",
         "slug": "timburr",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.b8B8bD1GgnpwBkGa",
         "slug": "gurdurr",
+        "level": 20,
         "other": {
-          "predicate": [
-            "self:level:20+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.VdX8cWP9TOGGW9CY",
         "slug": "conkeldurr",
+        "level": 35,
         "other": {
-          "predicate": [
-            "self:level:35+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:35+"
+        ]
       }
     ],
     "size": {
@@ -503,7 +509,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984550827,
+    "modifiedTime": 1791002977787,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:46.917Z",
+        "datetime": "2026-10-03T04:49:53.913Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -56,21 +56,29 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.Q5WPXAvhHZycnXQn",
         "slug": "chayan",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 25,
         "uuid": "Compendium.ptu.species.Item.yaS672IUdmcqjSQn",
         "slug": "ocerumi",
         "other": {
-          "predicate": [
-            "self:level:25+",
-            "self:gender:female"
+          "restrictions": [
+            "Female"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+",
+          "self:gender:female"
+        ]
       }
     ],
     "size": {
@@ -528,7 +536,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984567444,
+    "modifiedTime": 1791002994453,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

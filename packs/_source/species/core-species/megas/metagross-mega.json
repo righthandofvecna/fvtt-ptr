@@ -6,7 +6,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:30.301Z",
+        "datetime": "2026-10-03T04:49:37.267Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -63,29 +63,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.Ua5w8QlWtZnk6Y92",
         "slug": "beldum",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 20,
         "uuid": "Compendium.ptu.species.Item.Ti6qqEnQCsUBBLDV",
         "slug": "metang",
         "other": {
-          "predicate": [
-            "self:level:20+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
+        "level": 40,
         "uuid": "Compendium.ptu.species.Item.irfCDf9jqgLHC51o",
         "slug": "metagross",
         "other": {
-          "predicate": [
-            "self:level:40+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:40+"
+        ]
       }
     ],
     "size": {
@@ -579,7 +591,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984550825,
+    "modifiedTime": 1791002977786,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

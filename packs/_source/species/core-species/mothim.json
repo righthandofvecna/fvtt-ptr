@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:27.223Z",
+        "datetime": "2026-10-03T04:49:34.111Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,49 +59,67 @@
       {
         "uuid": "Compendium.ptu.species.Item.KbP1j9TqW7adXNiN",
         "slug": "burmy",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.f4x4MrVpWzb4mjNl",
         "slug": "wormadam-plant",
+        "level": 20,
         "other": {
-          "predicate": [
-            "self:level:20+",
-            "self:gender:female"
+          "restrictions": [
+            "Female"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+",
+          "self:gender:female"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.4Mo5hTklcHxXU0dj",
         "slug": "wormadam-trash",
+        "level": 20,
         "other": {
-          "predicate": [
-            "self:level:20+",
-            "self:gender:female"
+          "restrictions": [
+            "Female"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+",
+          "self:gender:female"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.TqG66EwWnI52l09Q",
         "slug": "wormadam-sandy",
+        "level": 20,
         "other": {
-          "predicate": [
-            "self:level:20+",
-            "self:gender:female"
+          "restrictions": [
+            "Female"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+",
+          "self:gender:female"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.R4ViKuUcOBDgyzBX",
         "slug": "mothim",
+        "level": 20,
         "other": {
-          "predicate": [
-            "self:level:20+",
-            "self:gender:male"
+          "restrictions": [
+            "Male"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:20+",
+          "self:gender:male"
+        ]
       }
     ],
     "size": {
@@ -533,7 +551,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984547753,
+    "modifiedTime": 1791002974651,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

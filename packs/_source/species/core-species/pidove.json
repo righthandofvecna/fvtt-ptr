@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:35.493Z",
+        "datetime": "2026-10-03T04:49:42.351Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,38 +59,50 @@
       {
         "uuid": "Compendium.ptu.species.Item.diBAC21V6gm5XfDr",
         "slug": "pidove",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.1GLfiepJEnwOCDAz",
         "slug": "tranquill",
+        "level": 15,
         "other": {
-          "predicate": [
-            "self:level:15+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.LOh4h9ZiwIBF9mHN",
         "slug": "unfezant-male",
+        "level": 30,
         "other": {
-          "predicate": [
-            "self:level:30+",
-            "self:gender:male"
+          "restrictions": [
+            "Male"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+",
+          "self:gender:male"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.cnVdBvXHugD1Ex8o",
         "slug": "unfezant-female",
+        "level": 30,
         "other": {
-          "predicate": [
-            "self:level:30+",
-            "self:gender:female"
+          "restrictions": [
+            "Female"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+",
+          "self:gender:female"
+        ]
       }
     ],
     "size": {
@@ -486,7 +498,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984556012,
+    "modifiedTime": 1791002982875,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

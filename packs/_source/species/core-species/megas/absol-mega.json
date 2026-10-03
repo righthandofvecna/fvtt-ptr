@@ -6,7 +6,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:38.589Z",
+        "datetime": "2026-10-03T04:49:45.461Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -62,11 +62,15 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.uTCkwrVtR2dVdA8U",
         "slug": "absol",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -708,7 +712,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984559101,
+    "modifiedTime": 1791002985980,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

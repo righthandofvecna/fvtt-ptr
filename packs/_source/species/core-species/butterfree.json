@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:14.074Z",
+        "datetime": "2026-10-03T04:49:20.504Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,27 +59,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.RriSr9AfZCwAmn1G",
         "slug": "caterpie",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.re4gFj8gasIb2Xn9",
         "slug": "metapod",
+        "level": 5,
         "other": {
-          "predicate": [
-            "self:level:5+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:5+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.6l0LA3HHFuefbvzu",
         "slug": "butterfree",
+        "level": 10,
         "other": {
-          "predicate": [
-            "self:level:10+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:10+"
+        ]
       }
     ],
     "size": {
@@ -523,7 +529,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984534555,
+    "modifiedTime": 1791002961058,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

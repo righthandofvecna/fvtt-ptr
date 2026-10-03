@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:46.915Z",
+        "datetime": "2026-10-03T04:49:53.911Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -61,29 +61,41 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.c3U4luLkAATRbMq7",
         "slug": "venipede",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       },
       {
+        "level": 15,
         "uuid": "Compendium.ptu.species.Item.d39wl1yOKWNTi4Ot",
         "slug": "whirlipede",
         "other": {
-          "predicate": [
-            "self:level:15+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       },
       {
+        "level": 30,
         "uuid": "Compendium.ptu.species.Item.9Io4NR0Va4Ey4UG6",
         "slug": "scolipede",
         "other": {
-          "predicate": [
-            "self:level:30+"
+          "restrictions": [
+            ""
           ]
-        }
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -503,8 +515,8 @@
     "coreVersion": "14.367",
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
-    "createdTime": 1790984567439,
-    "modifiedTime": 1790984567439,
+    "createdTime": 1791002994445,
+    "modifiedTime": 1791002994445,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

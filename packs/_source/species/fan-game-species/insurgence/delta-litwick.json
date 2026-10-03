@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:22.204Z",
+        "datetime": "2026-10-03T04:49:28.890Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -57,29 +57,35 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.IrLii48xLtziUMOx",
         "slug": "delta-litwick",
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
+        "level": 20,
         "uuid": "Compendium.ptu.species.Item.mZNpIqL7zLd8Cwjk",
         "slug": "delta-lampent",
         "other": {
-          "predicate": [
-            "self:level:20+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
+        "level": 35,
         "uuid": "Compendium.ptu.species.Item.hYhaPQa7jv97gfip",
         "slug": "delta-chandelure",
         "other": {
-          "predicate": [
-            "self:level:35+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:35+"
+        ]
       }
     ],
     "size": {
@@ -513,7 +519,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984542706,
+    "modifiedTime": 1791002969425,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

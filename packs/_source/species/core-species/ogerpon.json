@@ -7,7 +7,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:24.268Z",
+        "datetime": "2026-10-03T04:49:30.996Z",
         "version": {
           "schema": null,
           "foundry": "14.367",
@@ -59,11 +59,15 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.MIwtix5fe0r6OkRp",
         "slug": "ogerpon",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -683,7 +687,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1695125994144,
-    "modifiedTime": 1790984544751,
+    "modifiedTime": 1791002971532,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

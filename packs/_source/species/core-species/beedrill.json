@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:11.974Z",
+        "datetime": "2026-10-03T04:49:18.348Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,27 +59,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.lOsj81c2zlTF3LLE",
         "slug": "weedle",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.KOZovoxDCjPY1MWa",
         "slug": "kakuna",
+        "level": 5,
         "other": {
-          "predicate": [
-            "self:level:5+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:5+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.1uabFwfSOqCgeeUg",
         "slug": "beedrill",
+        "level": 10,
         "other": {
-          "predicate": [
-            "self:level:10+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:10+"
+        ]
       }
     ],
     "size": {
@@ -511,7 +517,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984532520,
+    "modifiedTime": 1791002958888,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

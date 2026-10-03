@@ -7,7 +7,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:15.045Z",
+        "datetime": "2026-10-03T04:49:21.561Z",
         "version": {
           "schema": null,
           "foundry": "14.367",
@@ -60,11 +60,15 @@
     },
     "evolutions": [
       {
+        "level": 1,
         "uuid": "Compendium.ptu.species.Item.8F9uhJ3ILAVgJExj",
         "slug": "okidogi",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -655,7 +659,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1695085163388,
-    "modifiedTime": 1790984535556,
+    "modifiedTime": 1791002962113,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

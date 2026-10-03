@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:20.166Z",
+        "datetime": "2026-10-03T04:49:26.784Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -58,27 +58,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.B7L5LSXtauPnBAZG",
         "slug": "chikorita",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.tI1RqSzRB3ArdHFC",
         "slug": "bayleef",
+        "level": 15,
         "other": {
-          "predicate": [
-            "self:level:15+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.Ft9tysq56b45FbJa",
         "slug": "meganium",
+        "level": 30,
         "other": {
-          "predicate": [
-            "self:level:30+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -520,7 +526,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984540693,
+    "modifiedTime": 1791002967337,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

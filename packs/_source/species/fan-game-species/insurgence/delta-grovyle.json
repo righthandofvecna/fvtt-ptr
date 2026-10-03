@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:41.688Z",
+        "datetime": "2026-10-03T04:49:48.633Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -59,27 +59,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.s3EpmZkrK7lT7NOW",
         "slug": "delta-treeko",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.p7wuxXMI8C61yUaV",
         "slug": "delta-grovyle",
+        "level": 15,
         "other": {
-          "predicate": [
-            "self:level:15+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:15+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.pUkyJigkoDh5Gg3N",
         "slug": "delta-sceptile",
+        "level": 30,
         "other": {
-          "predicate": [
-            "self:level:30+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -541,7 +547,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984562190,
+    "modifiedTime": 1791002989172,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

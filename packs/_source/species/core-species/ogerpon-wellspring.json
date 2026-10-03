@@ -6,7 +6,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:34.450Z",
+        "datetime": "2026-10-03T04:49:41.336Z",
         "version": {
           "schema": null,
           "foundry": "14.367",
@@ -59,11 +59,15 @@
     },
     "evolutions": [
       {
+        "level": 0,
         "uuid": "Compendium.ptu.species.Item.d8jwa8LKcjetRcaI",
         "slug": "ogerpon-wellspring",
         "other": {
-          "predicate": []
-        }
+          "restrictions": [
+            ""
+          ]
+        },
+        "predicate": []
       }
     ],
     "size": {
@@ -683,7 +687,7 @@
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",
     "createdTime": 1706125910412,
-    "modifiedTime": 1790984554982,
+    "modifiedTime": 1791002981865,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": {

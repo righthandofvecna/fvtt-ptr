@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:23.202Z",
+        "datetime": "2026-10-03T04:49:29.945Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -58,27 +58,33 @@
       {
         "uuid": "Compendium.ptu.species.Item.nMxaEv94kkI79bKs",
         "slug": "happiny",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.qNog75LT1xY8Ln3S",
         "slug": "chansey",
+        "level": 20,
         "other": {
-          "predicate": [
-            "self:level:20+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:20+"
+        ]
       },
       {
         "uuid": "Compendium.ptu.species.Item.L4FRV2B9QZDpTKL5",
         "slug": "blissey",
+        "level": 30,
         "other": {
-          "predicate": [
-            "self:level:30+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -661,7 +667,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984543754,
+    "modifiedTime": 1791002970482,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

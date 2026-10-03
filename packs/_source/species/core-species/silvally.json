@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:31.347Z",
+        "datetime": "2026-10-03T04:49:38.304Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -58,18 +58,22 @@
       {
         "uuid": "Compendium.ptu.species.Item.HEh00UgFi8Zh0Ao6",
         "slug": "type-null",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.YaF6PqBOsDQvszpg",
         "slug": "silvally",
+        "level": 30,
         "other": {
-          "predicate": [
-            "self:level:30+"
-          ]
-        }
+          "restrictions": []
+        },
+        "predicate": [
+          "self:level:30+"
+        ]
       }
     ],
     "size": {
@@ -590,7 +594,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984551861,
+    "modifiedTime": 1791002978848,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

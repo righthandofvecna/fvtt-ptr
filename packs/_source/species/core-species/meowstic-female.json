@@ -4,7 +4,7 @@
     "schema": {
       "version": 0.121,
       "lastMigration": {
-        "datetime": "2026-10-02T23:42:17.068Z",
+        "datetime": "2026-10-03T04:49:23.679Z",
         "version": {
           "schema": 0.11,
           "foundry": "14.367",
@@ -58,19 +58,25 @@
       {
         "uuid": "Compendium.ptu.species.Item.COcn86YZyNQvYEt6",
         "slug": "espurr",
+        "level": 1,
         "other": {
-          "predicate": []
-        }
+          "restrictions": []
+        },
+        "predicate": []
       },
       {
         "uuid": "Compendium.ptu.species.Item.B56tEVSEIVOBj6n0",
         "slug": "meowstic-female",
+        "level": 25,
         "other": {
-          "predicate": [
-            "self:level:25+",
-            "self:gender:female"
+          "restrictions": [
+            "Female"
           ]
-        }
+        },
+        "predicate": [
+          "self:level:25+",
+          "self:gender:female"
+        ]
       }
     ],
     "size": {
@@ -560,7 +566,7 @@
     "systemVersion": "4.4.3.45",
     "coreVersion": "14.367",
     "createdTime": 1689609527590,
-    "modifiedTime": 1790984537590,
+    "modifiedTime": 1791002964211,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
