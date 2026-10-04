@@ -1,6 +1,7 @@
 import { natureData } from "../../../scripts/config/data/nature.js";
 import { levelProgression } from "../../../scripts/config/data/level-progression.js";
 import { PTUSpecies } from "../../item/index.js";
+import { PTUPredicate } from "../../system/index.js";
 import { sluggify, getMinLevelFromPredicate } from "../../../util/misc.js";
 
 export class PokemonGenerator {
