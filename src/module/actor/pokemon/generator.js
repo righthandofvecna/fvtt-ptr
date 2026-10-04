@@ -239,7 +239,6 @@ export class PokemonGenerator {
         // For generation purposes only level and gender predicates are evaluated;
         // item requirements and other conditions are ignored.
         const eligible = stages.filter(stage => {
-            if (stage.slug === this.species.slug) return false;
             return PokemonGenerator.#checkGeneratorPredicate(stage, this.level, this.gender);
         });
 
