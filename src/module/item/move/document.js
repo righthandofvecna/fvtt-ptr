@@ -110,13 +110,13 @@ class PTUMove extends PTUItem {
         // check if this move is granted by something
         if (this.grantedBy !== null) return "grant";
         // check if this move is a level-up move
-        if (species.system.moves.level.some(move => move.slug == this.slug)) return "level";
+        if (species.system?.moves?.level?.some(move => move.slug == this.slug)) return "level";
         // check if this move is an egg move
-        if (species.system.moves.egg.some(move => move.slug == this.slug)) return "egg";
+        if (species.system?.moves?.egg?.some(move => move.slug == this.slug)) return "egg";
         // check if this move is on the TM list
-        if (species.system.moves.machine.some(move => move.slug == this.slug)) return "tm";
+        if (species.system?.moves?.machine?.some(move => move.slug == this.slug)) return "tm";
         // check if this move is a tutor move
-        if (species.system.moves.tutor.some(move => move.slug == this.slug)) return "tutor";
+        if (species.system?.moves?.tutor?.some(move => move.slug == this.slug)) return "tutor";
         return "unknown";
     }
 

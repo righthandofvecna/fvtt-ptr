@@ -1,6 +1,7 @@
 import { natureData } from "../../../scripts/config/data/nature.js";
 import { levelProgression } from "../../../scripts/config/data/level-progression.js";
 import { PTUSpecies } from "../../item/index.js";
+import { PTUPredicate } from "../../system/index.js";
 import { sluggify, getMinLevelFromPredicate } from "../../../util/misc.js";
 
 export class PokemonGenerator {
@@ -238,7 +239,6 @@ export class PokemonGenerator {
         // For generation purposes only level and gender predicates are evaluated;
         // item requirements and other conditions are ignored.
         const eligible = stages.filter(stage => {
-            if (stage.slug === this.species.slug) return false;
             return PokemonGenerator.#checkGeneratorPredicate(stage, this.level, this.gender);
         });
 
