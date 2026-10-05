@@ -9,6 +9,7 @@ import { measureDistances } from "../../module/canvas/helpers.js"
 import { registerGithubSync, ptr1eGH } from "../../module/apps/github-sync/index.js"
 import TokenRulerPTU from '../../module/canvas/ruler.js'
 import { ContentSetRedirects } from "./content-set-redirects.js"
+import { buildActorPrereqContext, checkSinglePrereq } from "../../util/prereq-checker.js"
 
 export const Init = {
     listen() {
@@ -69,6 +70,9 @@ export const Init = {
 
             // Define other custom UI classes
             CONFIG.ui.hotbar = PTUCONFIG.ui.hotbar.documentClass;
+
+            CONFIG.checkSinglePrereq = checkSinglePrereq;
+            CONFIG.buildActorPrereqContext = buildActorPrereqContext;
 
             // Insert templates into DOM tree so Applications can render into
             if (document.querySelector("body") !== null) {

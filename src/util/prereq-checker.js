@@ -27,13 +27,13 @@ const LEVEL_RE = /Level (?<lv>[0-9]+)/i;
 export function simplifyString(s) {
     const replacements = {
         "pokémon": "pokemon",
-        "general education": "general",
-        "tech education": "technology",
-        "technology education": "technology",
-        "medicine education": "medicine",
-        "medicine edu": "medicine",
-        "pokemon education": "pokemon",
-        "occult education": "occult",
+        "general education": "generalEd",
+        "tech education": "techEd",
+        "technology education": "techEd",
+        "medicine education": "medicineEd",
+        "medicine edu": "medicineEd",
+        "pokemon education": "pokemonEd",
+        "occult education": "occultEd",
         "intimidation": "intimidate",
     };
     return Object.keys(replacements).reduce(
@@ -119,7 +119,7 @@ export function buildActorPrereqContext(actor) {
  * @param {{ level, itemNames, itemSlugs, skills }} ctx
  * @returns {boolean}
  */
-function checkSinglePrereq(text, ctx) {
+export function checkSinglePrereq(text, ctx, testDict={}) {
     text = text?.trim() ?? '';
     if (!text) return true;
 
@@ -127,20 +127,28 @@ function checkSinglePrereq(text, ctx) {
     const withSub = text.match(FEAT_WITH_SUB_RE);
     const mainText = withSub?.groups?.sub ? withSub.groups.main.trim() : text;
 
-    // GM Permission is always considered met
-    if (text.toLowerCase() === 'gm permission') return true;
+    // GM Permission is always considered met *for the GM*
+    if (text.toLowerCase() === 'gm permission') return game.user.isGM;
 
     // Level X
     const levelMatch = mainText.match(LEVEL_RE);
     if (levelMatch) return ctx.level >= parseInt(levelMatch.groups.lv);
 
-    // Single minimum skill rank: "Expert Combat"
+    // Single minimum skill rank: "Expert Combat" or "Novice Survival or Stealth"
     const skillMatch = mainText.match(SINGLE_MIN_SKILL_RANK_RE);
     if (skillMatch) {
         const rankNeeded = rankNameToNum(skillMatch.groups.rank);
         const skillKey = getSkillKey(skillMatch.groups.skill);
         if (rankNeeded && skillKey) {
             return (ctx.skills[skillKey] ?? 1) >= rankNeeded;
+        }
+        if (rankNeeded && skillMatch.groups.skill.toLowerCase().includes(" or ")) {
+            const skillKeys = skillMatch.groups.skill.split(/( or )|(, (or)?)/gi).map(getSkillKey).filter(Boolean);
+            return skillKeys.some(k => (ctx.skills[k] ?? 1) >= rankNeeded);
+        }
+        if (rankNeeded && skillMatch.groups.skill.toLowerCase().includes(" and ")) {
+            const skillKeys = skillMatch.groups.skill.split(/( and )|(, (and)?)/gi).map(getSkillKey).filter(Boolean);
+            return skillKeys.every(k => (ctx.skills[k] ?? 1) >= rankNeeded);
         }
     }
 
@@ -219,6 +227,8 @@ function checkSinglePrereq(text, ctx) {
         const baseNames = ctx.itemBaseNames ?? ctx.itemNames;
         if (baseNames.has(simplified) || ctx.itemSlugs.has(simplified)) return true;
     }
+
+    testDict.fail = true;
 
     // Unrecognised prerequisite – assume NOT met (conservative)
     return false;
