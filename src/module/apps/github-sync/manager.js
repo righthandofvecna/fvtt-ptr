@@ -345,6 +345,16 @@ class GithubSyncManager {
             if (!proceed) return;
         }
 
+        if (contentSet == "homebrew") {
+            const proceed = await foundry.applications.api.DialogV2.confirm({
+                title: "Homebrew Content Set",
+                content: `This item is marked as being homebrew! That's not usually what is expected. Do you want to cancel, change the Content Set to one that's more appropriate, and regenerate the slug? Or do you want to proceed with the commit anyways?`,
+                ok: { label: "Proceed (Commit Anyway)" },
+                cancel: { label: "Cancel" },
+            });
+            if (!proceed) return;
+        }
+
         const _origButtonHTML = button?.innerHTML ?? null;
         if (button) button.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Committing…`;
         try {
