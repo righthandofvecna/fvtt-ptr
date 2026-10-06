@@ -128,9 +128,8 @@ class PTUTrainerActor extends PTUActor {
     }
 
     /** @override */
-    prepareDerivedData() {
-        super.prepareDerivedData()
-
+    onPrepareDerivedData() {
+        super.onPrepareDerivedData?.();
         const system = this.system;
         // Prepare data with Mods.
 
