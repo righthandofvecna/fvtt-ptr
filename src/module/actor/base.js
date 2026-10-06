@@ -278,41 +278,6 @@ class PTUActor extends Actor {
         super.prepareData();
         this.constructed = true;
 
-        // Extra Rolloptions before 'After Derived' hooks get called
-        if (!this.types.includes("Untyped")) delete this.flags.ptu.rollOptions.all["self:types:untyped"]
-        for (const type of this.types) {
-            this.flags.ptu.rollOptions.all["self:types:" + type.toLowerCase()] = true;
-        }
-
-        // Mark the currently-active combatant so predicates can gate on it
-        if (game.combat?.combatant?.actor?.uuid === this.uuid) {
-            this.flags.ptu.rollOptions.all["turn:active"] = true;
-        }
-
-        // Call post-derived-preparation `RuleElement` hooks
-        for (const rule of this.rules) {
-            if (rule.priority > 100) continue;
-            rule.afterPrepareData?.();
-        }
-
-        this.prepareDerivedData();
-
-        // Call post-derived-preparation `RuleElement` hooks with a high priority
-        for (const rule of this.rules) {
-            if (rule.priority <= 100) continue;
-            rule.afterPrepareData?.();
-        }
-
-        // combat stage roll options
-        for (const statName of Object.keys(this.system.stats)) {
-            this.flags.ptu.rollOptions.all[`self:${statName}:stage:${this.system.stats[statName]?.stage?.total ?? 0}`] = true;
-        }
-
-        this.initiative = this.prepareInitiative();//new ActorInitiative(this);
-
-        // Set origins
-        this._setDefaultChanges();
-
         // Refresh sidebar if needed
         if (this.constructed && canvas.ready && game.ptu) {
             const thisTokenIsControlled = canvas.tokens.controlled.some(
@@ -355,14 +320,73 @@ class PTUActor extends Actor {
         }
     }
 
-    prepareDerivedData() {
-        this.prepareSynthetics();
+    prePrepareDerivedData() {
+        // Call pre-derived-preparation `RuleElement` hooks
+        for (const rule of this.rules.filter((r) => !r.ignored)) {
+            try {
+                rule.beforePrepareData?.();
+            } catch (error) {
+                // Ensure that a failing rule element does not block actor initialization
+                console.error(`PTU | Failed to execute onBeforePrepareData on rule element ${rule}.`, error);
+            }
+        }
 
         if (this.allowedItemTypes.includes('move')) {
             this.system.attacks = this.prepareMoves();
         }
 
         this.system.spirit.weary = this.system.spirit.value >= 0 ? 0 : Math.abs(this.system.spirit.value);
+
+        // Extra Rolloptions before 'After Derived' hooks get called
+        if (!this.types.includes("Untyped")) delete this.flags.ptu.rollOptions.all["self:types:untyped"]
+        for (const type of this.types) {
+            this.flags.ptu.rollOptions.all["self:types:" + type.toLowerCase()] = true;
+        }
+
+        // Mark the currently-active combatant so predicates can gate on it
+        if (game.combat?.combatant?.actor?.uuid === this.uuid) {
+            this.flags.ptu.rollOptions.all["turn:active"] = true;
+        }
+
+        // Call post-derived-preparation `RuleElement` hooks
+        for (const rule of this.rules) {
+            if (rule.priority > 100) continue;
+            rule.afterPrepareData?.();
+        }
+    }
+
+    onPrepareDerivedData() {
+        super.onPrepareDerivedData?.();
+    }
+
+    postPrepareDerivedData() {
+        super.postPrepareDerivedData?.();
+
+        // Call post-derived-preparation `RuleElement` hooks with a high priority
+        for (const rule of this.rules) {
+            if (rule.priority <= 100) continue;
+            rule.afterPrepareData?.();
+        }
+
+        // combat stage roll options
+        for (const statName of Object.keys(this.system.stats)) {
+            this.flags.ptu.rollOptions.all[`self:${statName}:stage:${this.system.stats[statName]?.stage?.total ?? 0}`] = true;
+        }
+
+        this.initiative = this.prepareInitiative();//new ActorInitiative(this);
+
+        // Set origins
+        this._setDefaultChanges();
+    }
+
+    /**
+     * This splits the preparation of derived data into three distinct phases:
+     * prePrepareDerivedData, onPrepareDerivedData, and postPrepareDerivedData.
+     */
+    prepareDerivedData() {
+        this.prePrepareDerivedData();
+        this.onPrepareDerivedData();
+        this.postPrepareDerivedData();
     }
 
     /** @override */
@@ -405,30 +429,6 @@ class PTUActor extends Actor {
         // This is necessary because prepareDerivedData() (which calls this method) runs twice
         // per actor preparation cycle: once via super.prepareData() and once explicitly after
         // roll options are added. Resetting here keeps the function idempotent.
-        this.synthetics.ephemeralEffects = {};
-        this.synthetics.modifierAdjustments = { all: [], damage: [] };
-        this.synthetics.statisticsModifiers = { all: [], damage: [] };
-        this.synthetics.rollSubstitutions = {};
-        this.synthetics.rollNotes = {};
-        this.synthetics.damageDice = {};
-        this.synthetics.tokenOverrides = {};
-        this.synthetics.speciesOverride = {};
-        this.synthetics.typeOverride = {};
-        this.synthetics.effectiveness = [];
-        this.synthetics.apAdjustments = { drained: [], bound: [] };
-        this.synthetics.applyEffects = {};
-        this.synthetics.reminders = {};
-        this.synthetics.healOnDamageDealt = {};
-
-        // Call pre-derived-preparation `RuleElement` hooks
-        for (const rule of this.rules.filter((r) => !r.ignored)) {
-            try {
-                rule.beforePrepareData?.();
-            } catch (error) {
-                // Ensure that a failing rule element does not block actor initialization
-                console.error(`PTU | Failed to execute onBeforePrepareData on rule element ${rule}.`, error);
-            }
-        }
     }
 
     isAllyOf(actor) {

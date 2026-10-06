@@ -1,0 +1,90 @@
+/**
+ * Tests for the TypeOverwrite rule element.
+ *
+ * TypeOverwrite changes the actor's typing after data preparation.
+ * These tests require a full Pokemon actor WITH a species, since typing is
+ * derived from the species' type data in `onPrepareDerivedData`.
+ */
+import { TestRegistry } from "../registry.js";
+import { createTestPokemon, deleteTestActor } from "../helpers/actors.js";
+import { addEffectWithRules } from "../helpers/items.js";
+import { assertContains, assertNotContains, assertEqual } from "../helpers/assert.js";
+
+const CATEGORY = "rule-elements";
+
+// Rattata is Normal type — a reliable baseline for type tests.
+const SPECIES = "rattata";
+
+// -----------------------------------------------------------------
+// overwrite=true: replaces all typing
+// -----------------------------------------------------------------
+TestRegistry.register(CATEGORY, "TypeOverwrite | overwrite=true replaces actor typing", async () => {
+    let actor = await createTestPokemon(SPECIES);
+    try {
+        // Verify baseline
+        assertContains(actor.types, "Normal", "Rattata should start as Normal type");
+
+        await addEffectWithRules(actor, [{
+            key: "TypeOverwrite",
+            value: "Fire",
+            overwrite: true,
+        }]);
+
+        actor = game.actors.get(actor.id);
+        assertContains(actor.types, "Fire", "Actor types should include Fire after overwrite");
+        assertNotContains(actor.types, "Normal", "Normal type should be replaced");
+
+        await deleteTestActor(actor);
+    } catch (err) {
+        throw err;
+    }
+});
+
+// -----------------------------------------------------------------
+// overwrite=false: adds type without replacing
+// -----------------------------------------------------------------
+TestRegistry.register(CATEGORY, "TypeOverwrite | overwrite=false adds a type alongside existing", async () => {
+    let actor = await createTestPokemon(SPECIES);
+    try {
+        assertContains(actor.types, "Normal", "Rattata should start as Normal type");
+
+        await addEffectWithRules(actor, [{
+            key: "TypeOverwrite",
+            value: "Fire",
+            overwrite: false,
+        }]);
+
+        actor = game.actors.get(actor.id);
+        assertContains(actor.types, "Fire", "Fire type should be added");
+        assertContains(actor.types, "Normal", "Normal type should be retained with overwrite=false");
+
+        await deleteTestActor(actor);
+    } catch (err) {
+        throw err;
+    }
+});
+
+// -----------------------------------------------------------------
+// Dual-type overwrite
+// -----------------------------------------------------------------
+TestRegistry.register(CATEGORY, "TypeOverwrite | can set multiple types at once", async () => {
+    let actor = await createTestPokemon(SPECIES);
+    try {
+        await addEffectWithRules(actor, [{
+            key: "TypeOverwrite",
+            value: ["Water", "Ice"],
+            overwrite: true,
+        }]);
+
+        actor = game.actors.get(actor.id);
+        assertContains(actor.types, "Water", "Water type should be present");
+        assertContains(actor.types, "Ice", "Ice type should be present");
+        assertNotContains(actor.types, "Normal", "Normal type should be replaced");
+        assertEqual(actor.types.filter(t => t !== "Water" && t !== "Ice").length, 0,
+            "Only Water and Ice types should be present");
+
+        await deleteTestActor(actor);
+    } catch (err) {
+        throw err;
+    }
+});

@@ -73,7 +73,7 @@ class PTUPredicate extends Array {
         const getValues = (operand) => {
             const number = Number(operand);
             if(!isNaN(number)) return [number];
-            const pattern = new RegExp(String.raw`^${operand}:(^:]+)$`);
+            const pattern = new RegExp(String.raw`^${operand}:([^:]+)$`);
             return domainArray.map((s) => Number(pattern.exec(s)?.[1] || NaN)).filter((v) => !isNaN(v));
         }
         const leftValues = getValues(left);

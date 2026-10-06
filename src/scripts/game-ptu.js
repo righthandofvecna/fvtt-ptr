@@ -18,6 +18,7 @@ import { TypeMatrix } from "../module/apps/type-matrix.js";
 import { Weather } from "../module/apps/weather.js";
 import { PTUPokemonTrainingSheet } from "../module/apps/pokemon-training/index.js";
 import { PTUXpPoolSheet } from "../module/apps/xp-pool-sheet/sheet.js";
+import { PTUTests } from "../tests/index.js";
 
 const GamePTU = {
     onInit() {
@@ -128,6 +129,9 @@ const GamePTU = {
         // Reset pokemon that have reloadOnReady marked as true
         // This is due to having a temporary species override
         game.actors.filter(a => a.type === "pokemon" && a.reloadOnReady).forEach(a => a.reset())
+
+        // Expose integration test suite
+        game.ptu.tests = PTUTests;
     }
 }
 
