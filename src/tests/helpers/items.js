@@ -1,4 +1,16 @@
 import { sluggify } from "../../util/misc.js";
+import { currentTestContext } from "../runner.js";
+
+/**
+ * Returns a descriptive name for a test item, incorporating the current test
+ * name when available.
+ * @param {string} [fallback="Effect"]
+ */
+function testItemName(fallback = "Effect") {
+    if (!currentTestContext) return `[TEST] ${fallback}`;
+    const short = currentTestContext.name.slice(0, 35);
+    return `[TEST] ${short}`;
+}
 
 /**
  * Adds an embedded "effect" item with the given rule elements to the actor.
@@ -10,14 +22,15 @@ import { sluggify } from "../../util/misc.js";
  * @param {object} [options.extraSystem={}] - Additional system fields to merge.
  * @returns {Promise<PTUItem>} The created embedded item.
  */
-async function addEffectWithRules(actor, rules, { name = "[TEST] Effect", extraSystem = {} } = {}) {
+async function addEffectWithRules(actor, rules, { name, extraSystem = {} } = {}) {
+    const effectName = name ?? testItemName();
     const [created] = await actor.createEmbeddedDocuments("Item", [{
-        name,
+        name: effectName,
         type: "effect",
         system: foundry.utils.mergeObject({
             rules,
             duration: { unit: "unlimited" },
-            slug: sluggify(name),
+            slug: sluggify(effectName),
             enabled: true,
         }, extraSystem),
     }]);

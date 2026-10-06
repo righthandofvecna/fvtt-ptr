@@ -10,6 +10,13 @@ import { TestRegistry } from "./registry.js";
  */
 
 /**
+ * The currently-executing test context.  Helper utilities (actors, items, tokens)
+ * read this to generate descriptive names for test-created documents.
+ * @type {{ category: string, name: string } | null}
+ */
+export let currentTestContext = null;
+
+/**
  * Runs registered integration tests and yields results.
  * Tests that throw are marked as "fail"; any other completion is "pass".
  * On failure, the actor/token state is intentionally left for inspection.
@@ -22,6 +29,7 @@ class TestRunner {
      * @returns {Promise<TestResult>}
      */
     async runOne(entry) {
+        currentTestContext = { category: entry.category, name: entry.name };
         const start = performance.now();
         try {
             await entry.fn();
@@ -41,6 +49,8 @@ class TestRunner {
                 error: err?.message ?? String(err),
                 duration: Math.round(performance.now() - start),
             };
+        } finally {
+            currentTestContext = null;
         }
     }
 

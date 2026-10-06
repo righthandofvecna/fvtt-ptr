@@ -1,7 +1,20 @@
 import { findItemInCompendium } from "../../util/misc.js";
+import { currentTestContext } from "../runner.js";
 
 /** Prefix used on all test-created actors, for easy identification. */
 const TEST_ACTOR_PREFIX = "[TEST]";
+
+/**
+ * Returns a name for a test document. If a test is currently running, the name
+ * includes a short version of the test name for easy identification in Foundry.
+ * @param {string} fallback - Base name used when no test context is active.
+ */
+function testName(fallback) {
+    if (!currentTestContext) return `${TEST_ACTOR_PREFIX} ${fallback}`;
+    // Keep the name short but recognisable: use up to 40 chars of the test name.
+    const short = currentTestContext.name.slice(0, 40);
+    return `${TEST_ACTOR_PREFIX} ${short}`;
+}
 
 /**
  * Creates a minimal Pokemon actor and adds a species item from the compendium.
@@ -12,7 +25,7 @@ const TEST_ACTOR_PREFIX = "[TEST]";
  */
 async function createTestPokemon(speciesSlug = "rattata", actorData = {}) {
     const actor = await Actor.create(foundry.utils.mergeObject({
-        name: `${TEST_ACTOR_PREFIX} ${speciesSlug}`,
+        name: testName(speciesSlug),
         type: "pokemon",
     }, actorData));
     if (!actor) throw new Error(`Failed to create test pokemon actor for species "${speciesSlug}"`);
@@ -39,7 +52,7 @@ async function createTestPokemon(speciesSlug = "rattata", actorData = {}) {
  */
 async function createTestPokemonNoSpecies(actorData = {}) {
     const actor = await Actor.create(foundry.utils.mergeObject({
-        name: `${TEST_ACTOR_PREFIX} no-species`,
+        name: testName("no-species"),
         type: "pokemon",
     }, actorData));
     if (!actor) throw new Error("Failed to create test pokemon actor (no species)");
@@ -54,7 +67,7 @@ async function createTestPokemonNoSpecies(actorData = {}) {
  */
 async function createTestTrainer(actorData = {}) {
     const actor = await Actor.create(foundry.utils.mergeObject({
-        name: `${TEST_ACTOR_PREFIX} trainer`,
+        name: testName("trainer"),
         type: "character",
     }, actorData));
     if (!actor) throw new Error("Failed to create test trainer actor");
