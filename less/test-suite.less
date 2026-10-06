@@ -1,0 +1,176 @@
+// PTU Test Suite styles
+.ptu.test-suite {
+    .window-content {
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ptu-test-suite {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        font-size: 13px;
+    }
+
+    // ---- Toolbar ----
+    .suite-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 10px;
+        background: var(--color-bg-option, #2a2a2a);
+        border-bottom: 1px solid var(--color-border-light-tertiary, #555);
+        gap: 8px;
+        flex-shrink: 0;
+    }
+
+    .suite-summary {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+
+        .summary-counts {
+            font-weight: 600;
+            &.all-pass   { color: #4caf50; }
+            &.has-failures { color: #f44336; }
+        }
+        .summary-duration { color: #aaa; }
+    }
+
+    .suite-actions {
+        display: flex;
+        gap: 6px;
+
+        button {
+            padding: 3px 10px;
+            font-size: 12px;
+            height: 26px;
+            cursor: pointer;
+            border-radius: 3px;
+            border: 1px solid var(--color-border-light-tertiary, #555);
+            background: var(--color-bg-btn, #3a3a3a);
+            color: var(--color-text-light-primary, #ddd);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            &:hover:not(:disabled) {
+                background: var(--color-bg-btn-hover, #505050);
+            }
+            &:disabled { opacity: 0.5; cursor: not-allowed; }
+        }
+    }
+
+    // ---- Body ----
+    .suite-body {
+        flex: 1;
+        overflow-y: auto;
+        padding: 4px 0;
+    }
+
+    // ---- Category ----
+    .test-category {
+        border-bottom: 1px solid var(--color-border-light-tertiary, #333);
+
+        > summary {
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            cursor: pointer;
+            user-select: none;
+            background: var(--color-bg-option, #2e2e2e);
+            list-style: none;
+            gap: 6px;
+
+            &:hover { background: var(--color-bg-option-hover, #363636); }
+
+            .category-chevron {
+                font-size: 10px;
+                transition: transform 0.15s;
+                color: #888;
+            }
+            .category-name {
+                flex: 1;
+                font-weight: 600;
+                font-size: 13px;
+            }
+            .category-stats {
+                font-size: 11px;
+                font-weight: 600;
+                &.all-pass    { color: #4caf50; }
+                &.has-failures { color: #f44336; }
+                &.muted        { color: #888; }
+            }
+            .btn-run-category {
+                padding: 1px 6px;
+                font-size: 11px;
+                height: 20px;
+                cursor: pointer;
+                border-radius: 3px;
+                border: 1px solid #555;
+                background: #3a3a3a;
+                color: #ddd;
+                &:hover:not(:disabled) { background: #505050; }
+                &:disabled { opacity: 0.5; cursor: not-allowed; }
+            }
+        }
+
+        &[open] > summary .category-chevron { transform: rotate(90deg); }
+    }
+
+    // ---- Test list ----
+    .test-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .test-result {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        padding: 3px 12px 3px 28px;
+        gap: 6px;
+        font-size: 12px;
+        border-bottom: 1px solid var(--color-border-light-tertiary, #2a2a2a);
+
+        &:last-child { border-bottom: none; }
+
+        .test-icon {
+            flex-shrink: 0;
+            width: 14px;
+            margin-left: -14px;
+            font-size: 12px;
+        }
+        .test-name {
+          flex: 1;
+          user-select: text;
+        }
+        .test-duration { color: #888; font-size: 11px; }
+
+        &.status-pass   .test-icon { color: #4caf50; }
+        &.status-fail   .test-icon { color: #f44336; }
+        &.status-running .test-icon { color: #64b5f6; }
+        &.status-pending .test-icon { color: #666; }
+        &.status-fail   { background: rgba(244, 67, 54, 0.05); }
+        &.status-pass   { background: transparent; }
+
+        .test-error {
+            flex-basis: 100%;
+            margin: 2px 0 4px;
+            padding: 6px 8px;
+            background: rgba(244, 67, 54, 0.1);
+            border-left: 3px solid #f44336;
+            border-radius: 2px;
+            font-size: 11px;
+            color: #ff8a80;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-family: monospace;
+        }
+    }
+}

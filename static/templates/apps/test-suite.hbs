@@ -1,0 +1,68 @@
+<div class="ptu-test-suite">
+  <div class="suite-toolbar">
+    <div class="suite-summary">
+      {{#if summary}}
+        <span class="summary-counts {{summary.cssClass}}">
+          {{summary.passed}}/{{summary.total}} passed
+        </span>
+        <span class="summary-duration">{{summary.duration}}ms total</span>
+      {{else}}
+        <span class="summary-counts">{{totalTests}} tests registered</span>
+      {{/if}}
+    </div>
+    <div class="suite-actions">
+      <button type="button" data-action="runAll" {{#if isRunning}}disabled{{/if}}>
+        <i class="fas {{#if isRunning}}fa-spinner fa-spin{{else}}fa-play{{/if}}"></i>
+        Run All
+      </button>
+      <button type="button" data-action="copyFailures" {{#if isRunning}}disabled{{/if}}>
+        <i class="fas fa-clipboard"></i>
+        Copy Failures
+      </button>
+      <button type="button" data-action="clearResults" {{#if isRunning}}disabled{{/if}}>
+        <i class="fas fa-eraser"></i>
+        Clear
+      </button>
+    </div>
+  </div>
+
+  <div class="suite-body">
+    {{#each categories}}
+    <details class="test-category" {{#if hasResults}}open{{/if}}>
+      <summary class="category-header">
+        <i class="fas fa-chevron-right category-chevron"></i>
+        <span class="category-name">{{label}}</span>
+        {{#if hasResults}}
+          <span class="category-stats {{categoryCssClass}}">{{passed}}/{{total}}</span>
+        {{else}}
+          <span class="category-stats muted">{{total}} tests</span>
+        {{/if}}
+        <button type="button" data-action="runCategory" data-category="{{key}}"
+          {{#if ../isRunning}}disabled{{/if}} class="btn-run-category">
+          <i class="fas fa-play"></i>
+        </button>
+      </summary>
+
+      <ul class="test-list">
+        {{#each tests}}
+        <li class="test-result status-{{status}}">
+          <span class="test-icon">
+            {{#if (eq status "pass")}}<i class="fas fa-check-circle"></i>{{/if}}
+            {{#if (eq status "fail")}}<i class="fas fa-times-circle"></i>{{/if}}
+            {{#if (eq status "running")}}<i class="fas fa-spinner fa-spin"></i>{{/if}}
+            {{#if (eq status "pending")}}<i class="far fa-circle"></i>{{/if}}
+          </span>
+          <span class="test-name">{{name}}</span>
+          {{#if duration}}
+            <span class="test-duration">{{duration}}ms</span>
+          {{/if}}
+          {{#if error}}
+            <pre class="test-error">{{error}}</pre>
+          {{/if}}
+        </li>
+        {{/each}}
+      </ul>
+    </details>
+    {{/each}}
+  </div>
+</div>
