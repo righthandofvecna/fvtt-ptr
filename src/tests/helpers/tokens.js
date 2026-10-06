@@ -26,6 +26,29 @@ async function placeToken(actor, scene, tokenData = {}) {
 }
 
 /**
+ * Polls until the canvas Token object is available for a placed TokenDocument.
+ * Necessary because canvas rendering is async and the canvas object may not be
+ * ready immediately after `scene.createEmbeddedDocuments` resolves.
+ *
+ * @param {TokenDocument} tokenDoc
+ * @param {number} [timeout=3000] - Max wait in milliseconds.
+ * @returns {Promise<Token>} The live canvas Token object.
+ * @throws {Error} If the token doesn't appear within the timeout.
+ */
+async function waitForCanvasToken(tokenDoc, timeout = 3000) {
+    const start = Date.now();
+    while (Date.now() - start < timeout) {
+        const token = canvas?.tokens?.get(tokenDoc.id);
+        if (token) return token;
+        await new Promise(r => setTimeout(r, 50));
+    }
+    throw new Error(
+        `Canvas token for "${tokenDoc.name}" (id: ${tokenDoc.id}) did not appear within ${timeout}ms. ` +
+        `Is a scene loaded and active?`
+    );
+}
+
+/**
  * Removes a token from its scene. Silently ignores null/missing tokens.
  *
  * @param {TokenDocument|null|undefined} token
@@ -38,4 +61,4 @@ async function removeToken(token) {
     if (existing) await existing.delete();
 }
 
-export { placeToken, removeToken };
+export { placeToken, waitForCanvasToken, removeToken };

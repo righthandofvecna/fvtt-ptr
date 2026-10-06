@@ -30,6 +30,9 @@ import "./rule-elements/instant-change.test.js";
 import "./rule-elements/choice-set.test.js";
 import "./rule-elements/action-point.test.js";
 
+// ---- combat integration tests ----
+import "./combat/combat-integration.test.js";
+
 /** Singleton app instance reused across opens. */
 let _app = null;
 
