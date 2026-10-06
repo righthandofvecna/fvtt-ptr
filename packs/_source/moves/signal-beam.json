@@ -2,7 +2,6 @@
   "name": "Signal Beam",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Signal Beam Confuses the target on 19+.",
@@ -57,7 +56,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -81,7 +81,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "XkVx9ch1TmBWwuwP",
   "effects": [],
