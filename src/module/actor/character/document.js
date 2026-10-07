@@ -99,6 +99,50 @@ class PTUTrainerActor extends PTUActor {
         return super._calculateStatTotal({levelModifier: levelModifier * tlModifier, ...other});
     }
 
+    _calculateSkillRanks() {
+        const skills = foundry.utils.deepClone(this.system.skills)
+        for (let [key, skill] of Object.entries(skills)) {
+            skill.slug = key;
+            skill.value.total = skill.value.value + skill.value.mod;
+            skill.rank = PTUSkills.getRankSlug(skill.value.total);
+            skill.modifier.total = skill.modifier.value + skill.modifier.mod + (this.system.modifiers.skillBonus?.total ?? 0);
+        }
+        return skills;
+    }
+
+    _calculateContestStats() {
+        const contests = foundry.utils.deepClone(this.system.contests);
+        // This is to force the order of the stats to be the same as the order in the sheet
+        contests.stats = {
+            cool: contests.stats.cool,
+            tough: contests.stats.tough,
+            beauty: contests.stats.beauty,
+            smart: contests.stats.smart,
+            cute: contests.stats.cute
+        }
+        for (const stat of Object.keys(contests.stats)) {
+            const combatStat = (() => {
+                switch (stat) {
+                    case "cool": return "atk";
+                    case "tough": return "def";
+                    case "beauty": return "spatk";
+                    case "smart": return "spdef";
+                    case "cute": return "spd";
+                }
+            })();
+            contests.stats[stat].stats.value = Math.min(Math.floor(this.system.stats[combatStat].total / 10), 3);
+            contests.stats[stat].stats.mod ??= 0;
+            contests.stats[stat].stats.total = Math.min(contests.stats[stat].stats.value + contests.stats[stat].stats.mod, 3);
+
+            contests.stats[stat].dice = contests.stats[stat].stats.total + contests.voltage.value;
+        }
+
+        contests.appeal.mod ??= 0;
+        contests.appeal.total = contests.appeal.value + contests.appeal.mod;
+
+        return contests;
+    }
+ 
     /** @override */
     prepareBaseData() {
         super.prepareBaseData();
@@ -138,7 +182,6 @@ class PTUTrainerActor extends PTUActor {
     onPrepareDerivedData() {
         super.onPrepareDerivedData?.();
         const system = this.system;
-        // Prepare data with Mods.
 
         // Prepare data with Mods
         for (let [key, mod] of Object.entries(system.modifiers)) {
@@ -157,13 +200,7 @@ class PTUTrainerActor extends PTUActor {
             system.modifiers[key]["total"] = (mod["value"] ?? 0) + (mod["mod"] ?? 0);
         }
 
-        for (let [key, skill] of Object.entries(system.skills)) {
-            skill["slug"] = key;
-            skill["value"]["total"] = skill["value"]["value"] + skill["value"]["mod"];
-            skill["rank"] = PTUSkills.getRankSlug(skill["value"]["total"]);
-            skill["modifier"]["total"] = skill["modifier"]["value"] + skill["modifier"]["mod"] + (system.modifiers.skillBonus?.total ?? 0);
-            this.attributes.skills[key] = this.prepareSkill(key);//PTUSkills.calculate({ actor: this, context: { skill: key, options: [] } });
-        }
+        system.skills = this._calculateSkillRanks();
 
         // Prepare flat modifiers
         {
@@ -210,7 +247,7 @@ class PTUTrainerActor extends PTUActor {
         })() + system.modifiers.statPoints.total + 9;
 
         system.stats = this._calcBaseStats();
-        const result = this._calculateStatTotal()
+        const result = this._calculateStatTotal();
 
         system.stats = result.stats;
         system.levelUpPoints = system.levelUpPoints - result.pointsSpend;
@@ -323,33 +360,7 @@ class PTUTrainerActor extends PTUActor {
         system.initiative = { value: system.stats.spd.total + system.modifiers.initiative.total };
 
         // Contests
-        // This is to force the order of the stats to be the same as the order in the sheet
-        system.contests.stats = {
-            cool: system.contests.stats.cool,
-            tough: system.contests.stats.tough,
-            beauty: system.contests.stats.beauty,
-            smart: system.contests.stats.smart,
-            cute: system.contests.stats.cute
-        }
-        for (const stat of Object.keys(system.contests.stats)) {
-            const combatStat = (() => {
-                switch (stat) {
-                    case "cool": return "atk";
-                    case "tough": return "def";
-                    case "beauty": return "spatk";
-                    case "smart": return "spdef";
-                    case "cute": return "spd";
-                }
-            })();
-            system.contests.stats[stat].stats.value = Math.min(Math.floor(system.stats[combatStat].total / 10), 3);
-            system.contests.stats[stat].stats.mod ??= 0;
-            system.contests.stats[stat].stats.total = Math.min(system.contests.stats[stat].stats.value + system.contests.stats[stat].stats.mod, 3);
-
-            system.contests.stats[stat].dice = system.contests.stats[stat].stats.total + system.contests.voltage.value;
-        }
-
-        system.contests.appeal.mod ??= 0;
-        system.contests.appeal.total = system.contests.appeal.value + system.contests.appeal.mod;
+        this.contests = this._calculateContestStats();
 
         this.attributes.health.max = system.health.max;
 

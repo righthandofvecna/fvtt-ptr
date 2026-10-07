@@ -330,7 +330,7 @@ class PTUActor extends Actor {
         // This is the original PTU stat calculation logic.
         if (statCalculation === "original") {
             for (const [key, stat] of Object.entries(stats)) {
-                stat.total = stat.value + stat.levelUp + (stat?.mod?.value ?? 0) + (stat?.mod?.mod ?? 0);
+                stat.total = (stat?.value ?? 0) + (stat?.levelUp ?? 0) + (stat?.mod?.value ?? 0) + (stat?.mod?.mod ?? 0);
                 levelUpPointsSpend += stat.levelUp;
             }
 
@@ -338,11 +338,13 @@ class PTUActor extends Actor {
 
             // apply stages
             for (const [key, stat] of Object.entries(stats)) {
-                const stage = Math.clamp(Math.round(stat?.stage?.total), -6, 6);
-                if (stage > 0) {
-                    stat.total = Math.floor(stat.total * (1 + Math.clamp(stage / 5)));
-                } else if (stage < 0) {
-                    stat.total = Math.ceil(stat.total * (1 + (stage / 10)));
+                if (key === "hp") continue;
+                stat.stage ??= {};
+                stat.stage.total = Math.clamp(Math.round((stat.stage?.value ?? 0) + (stat.stage?.mod ?? 0)), -6, 6);
+                if (stat.stage.total > 0) {
+                    stat.total = Math.floor(stat.total * (1 + (stat.stage.total / 5)));
+                } else if (stat.stage.total < 0) {
+                    stat.total = Math.ceil(stat.total * (1 + (stat.stage.total / 10)));
                 }
             }
             return {
@@ -399,27 +401,27 @@ class PTUActor extends Actor {
 
             //apply mods and stages last
             for (const [key, value] of Object.entries(stats)) {
-                const sub = value["total"] + value["mod"].value + value["mod"].mod;
+                const sub = value.total + value.mod.value + value.mod.mod;
 
-                if (key != "hp") value["stage"].total = Math.clamp((value["stage"]?.value ?? 0) + (value["stage"]?.mod ?? 0), -6, 6);
-                if (value["stage"]?.total > 0) {
+                if (key != "hp") value.stage.total = Math.clamp((value.stage?.value ?? 0) + (value.stage?.mod ?? 0), -6, 6);
+                if (value.stage?.total > 0) {
                     if (statCalculation == "improved-rework") {
-                        value["total"] = Math.floor(sub * value["stage"].total * (0.275 * Math.log10(130 - (isTrainer ? effectiveStatLevel * 2 : effectiveStatLevel)) - 0.325) + sub)
+                        value.total = Math.floor(sub * value.stage.total * (0.275 * Math.log10(130 - (isTrainer ? effectiveStatLevel * 2 : effectiveStatLevel)) - 0.325) + sub)
                     }
                     else {
-                        value["total"] = Math.floor(sub * (value["stage"].total) * 0.1 + sub);
+                        value.total = Math.floor(sub * (value.stage.total) * 0.1 + sub);
                     }
                 }
-                else if (value["stage"]?.total < 0) {
+                else if (value.stage?.total < 0) {
                     if (statCalculation == "improved-rework") {
-                        value["total"] = Math.ceil(sub * (value["stage"].total) * 0.15 + sub);
+                        value.total = Math.ceil(sub * (value.stage.total) * 0.15 + sub);
                     }
                     else {
-                        value["total"] = Math.ceil(sub * (value["stage"].total) * 0.1 + sub);
+                        value.total = Math.ceil(sub * (value.stage.total) * 0.1 + sub);
                     }
                 }
                 else {
-                    value["total"] = sub;
+                    value.total = sub;
                 }
             }
 
@@ -434,6 +436,14 @@ class PTUActor extends Actor {
             pointsSpend: 0,
             stats,
         }
+    }
+
+    _calculateSkillRanks() {
+        return this.system?.skills; // Implement in subclasses
+    }
+
+    _calculateContestStats() {
+        return this.system?.contests; // Implement in subclasses
     }
 
     /** @override */
@@ -540,12 +550,6 @@ class PTUActor extends Actor {
         if (game.combat?.combatant?.actor?.uuid === this.uuid) {
             this.flags.ptu.rollOptions.all["turn:active"] = true;
         }
-
-        // Call post-derived-preparation `RuleElement` hooks
-        for (const rule of this.rules) {
-            if (rule.priority > 100) continue;
-            rule.afterPrepareData?.();
-        }
     }
 
     onPrepareDerivedData() {
@@ -555,9 +559,8 @@ class PTUActor extends Actor {
     postPrepareDerivedData() {
         super.postPrepareDerivedData?.();
 
-        // Call post-derived-preparation `RuleElement` hooks with a high priority
+        // Call post-derived-preparation `RuleElement` hooks
         for (const rule of this.rules) {
-            if (rule.priority <= 100) continue;
             rule.afterPrepareData?.();
         }
 
@@ -572,14 +575,59 @@ class PTUActor extends Actor {
         this._setDefaultChanges();
     }
 
+    cleanupPrepareDerivedData(derivedData) {
+        // figure out if any of our stats are different
+        const statDiff = foundry.utils.diffObject(derivedData.stats, this.system.stats);
+        const directStatChanges = {};
+        let hasIndirectStatChanges = false;
+        for (const [key, stat] of Object.entries(statDiff)) {
+            if (stat.total !== undefined) {
+                directStatChanges[key] = (this.system.stats?.[key]?.total ?? 0) - stat.total;
+            }
+            hasIndirectStatChanges ||= stat.mod !== undefined || stat.stage !== undefined;
+        }
+
+        // these need to be recomputed
+        if (hasIndirectStatChanges) {
+            const { stats } = this._calculateStatTotal();
+            for (const [key, diff] of Object.entries(stats)) {
+                if (directStatChanges[key] !== undefined) {
+                    diff.total += directStatChanges[key];
+                }
+            }
+            this.system.stats = stats;
+        }
+
+        // figure out if any of our skills are different
+        const skillDiff = foundry.utils.diffObject(derivedData.skills, this.system.skills);
+
+        // these need to be recomputed
+        if (Object.keys(skillDiff).length > 0) {
+            const skills = this._calculateSkillRanks();
+            this.system.skills = skills;
+        }
+
+        // prepare the skill attributes
+        for (let [key, skill] of Object.entries(this.system.skills)) {
+            this.attributes.skills[key] = this.prepareSkill(key);
+        }
+
+        // just recalculate contest stats, since they're based on combat stats
+        this.contests = this._calculateContestStats();
+    }
+
     /**
-     * This splits the preparation of derived data into three distinct phases:
-     * prePrepareDerivedData, onPrepareDerivedData, and postPrepareDerivedData.
+     * This splits the preparation of derived data into FOUR distinct phases:
+     * prePrepareDerivedData, onPrepareDerivedData, postPrepareDerivedData, and cleanupPrepareDerivedData.
+     * 
+     * cleanupPrepareDerivedData is intended to handle changing stages during the postPrepareDerivedData phase.
      */
     prepareDerivedData() {
         this.prePrepareDerivedData();
         this.onPrepareDerivedData();
+        const derivedData = foundry.utils.deepClone(this.system);
         this.postPrepareDerivedData();
+        this.cleanupPrepareDerivedData(derivedData);
     }
 
     /** @override */

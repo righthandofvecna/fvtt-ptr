@@ -1047,7 +1047,7 @@
           "Name": "Stat Calculation Method",
           "Hint": "Choose the method used for calculating Pokémon and Trainer stats.",
           "Original": "Original PTU Method",
-          "Rework": "PTR Rework I",
+          "StatRework": "PTR Rework I",
           "ImprovedStatRework": "PTR Rework II"
         }
       },
