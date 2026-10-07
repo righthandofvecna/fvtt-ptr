@@ -609,6 +609,7 @@ class PTUActor extends Actor {
 
         // prepare the skill attributes
         for (let [key, skill] of Object.entries(this.system.skills)) {
+            if (!skill?.rank) continue;
             this.attributes.skills[key] = this.prepareSkill(key);
         }
 
