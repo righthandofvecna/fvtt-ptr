@@ -338,7 +338,6 @@ class PTUPokemonActor extends PTUActor {
 
         system.typing = speciesSystem?.types ?? ['Untyped'];
         if (types.length > 0) system.typing = types;
-        if (this.synthetics.typeOverride.typing) system.typing = this.synthetics.typeOverride.typing;
 
         // for (const type of system.typing) {
         //     this.flags.ptu.rollOptions.all["self:types:" + type.toLowerCase()] = true;
@@ -419,6 +418,14 @@ class PTUPokemonActor extends PTUActor {
             system.health.max = 1;
             system.health.tick = 1;
         }
+    }
+
+    postPrepareDerivedData() {
+        super.postPrepareDerivedData();
+        const system = this.system;
+
+        // Apply type override if it exists in the synthetics data.
+        if (this.synthetics.typeOverride.typing) system.typing = this.synthetics.typeOverride.typing;
     }
 
     _calcBaseStats() {

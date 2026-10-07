@@ -32,7 +32,9 @@ TestRegistry.register(CATEGORY, "TypeOverwrite | overwrite=true replaces actor t
 
         actor = game.actors.get(actor.id);
         assertContains(actor.types, "Fire", "Actor types should include Fire after overwrite");
+        assertContains(actor.system.typing, "Fire", "Actor typing should include Fire after overwrite");
         assertNotContains(actor.types, "Normal", "Normal type should be replaced");
+        assertNotContains(actor.system.typing, "Normal", "Normal type should be replaced in system typing");
 
         await deleteTestActor(actor);
     } catch (err) {
@@ -56,7 +58,9 @@ TestRegistry.register(CATEGORY, "TypeOverwrite | overwrite=false adds a type alo
 
         actor = game.actors.get(actor.id);
         assertContains(actor.types, "Fire", "Fire type should be added");
+        assertContains(actor.system.typing, "Fire", "Actor typing should include Fire after adding");
         assertContains(actor.types, "Normal", "Normal type should be retained with overwrite=false");
+        assertContains(actor.system.typing, "Normal", "Actor typing should still include Normal after adding");
 
         await deleteTestActor(actor);
     } catch (err) {
@@ -78,10 +82,15 @@ TestRegistry.register(CATEGORY, "TypeOverwrite | can set multiple types at once"
 
         actor = game.actors.get(actor.id);
         assertContains(actor.types, "Water", "Water type should be present");
+        assertContains(actor.system.typing, "Water", "Actor typing should include Water");
         assertContains(actor.types, "Ice", "Ice type should be present");
+        assertContains(actor.system.typing, "Ice", "Actor typing should include Ice");
         assertNotContains(actor.types, "Normal", "Normal type should be replaced");
+        assertNotContains(actor.system.typing, "Normal", "Normal type should be replaced in system typing");
         assertEqual(actor.types.filter(t => t !== "Water" && t !== "Ice").length, 0,
             "Only Water and Ice types should be present");
+        assertEqual(actor.system.typing.filter(t => t !== "Water" && t !== "Ice").length, 0,
+            "Only Water and Ice types should be present in system typing");
 
         await deleteTestActor(actor);
     } catch (err) {
