@@ -28,6 +28,18 @@ const VariantSettingsConfig = {
         default: true,
         requiresReload: true
     },
+    "statCalculation": {
+        name: "PTU.Settings.Variant.StatCalculation.Name",
+        hint: "PTU.Settings.Variant.StatCalculation.Hint",
+        type: String,
+        choices: {
+            "original": "PTU.Settings.Variant.StatCalculation.Original",
+            "rework": "PTU.Settings.Variant.StatCalculation.StatRework",
+            "improved-rework": "PTU.Settings.Variant.StatCalculation.ImprovedStatRework",
+        },
+        default: "improved-rework",
+        requiresReload: true
+    },
     "advancementRework": {
         name: "PTU.Settings.Variant.AdvancementRework.Name",
         hint: "PTU.Settings.Variant.AdvancementRework.Hint",

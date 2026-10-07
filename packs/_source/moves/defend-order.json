@@ -2,7 +2,6 @@
   "name": "Defend Order",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Raise the user's Defense and Special Defense by 1 Combat Stage each.",
@@ -15,7 +14,8 @@
         "selectors": "{item|id}-apply-effects",
         "uuid": "Compendium.ptu.effects.Item.SwTrCa9QaIudkmyX",
         "range": "",
-        "value": ""
+        "value": "",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -57,7 +57,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -89,7 +90,9 @@
       "grantedBy": {
         "id": "SXARt3Pmsgu2yNEj",
         "onDelete": "cascade"
-      }
+      },
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "7hrNCJ06sxq0OB9q"

@@ -339,6 +339,12 @@ class MigrationRunner extends MigrationRunnerBase {
             if (migration.migrate) promises.push(migration.migrate());
         }
 
+        // migrate non-system compendiums
+        for (const compendium of game.packs) {
+            if (compendium.metadata.packageType === "system") continue;
+            promises.push(this.#migrateDocuments(compendium, migrations));
+        }
+
         // Then we should wait for the promises to complete before updating the tokens
         // because the unlinked tokens might not need to be updated anymore since they
         // base their data on global actors

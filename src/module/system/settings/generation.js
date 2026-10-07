@@ -61,6 +61,7 @@ const GenerationSettingsConfig = {
         scope: "user",
         default: false
     },
+    // TODO: remove these next ones and just make them hidden settings
     "defaultMassGeneratorAmount": {
         name: "PTU.Settings.Generation.DefaultMassGeneratorAmount.Name",
         hint: "PTU.Settings.Generation.DefaultMassGeneratorAmount.Hint",

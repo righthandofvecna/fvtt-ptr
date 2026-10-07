@@ -243,6 +243,209 @@ class PTUActor extends Actor {
         return firstUpdater ?? null;
     }
 
+    _calculateStatTotal({ level, levelModifier, actorStats, nature, twistedPower, hybridArmor, levelUpPoints, statPointModifier, statCalculation }={}) {
+        level ??= this.system.level.current;
+        levelModifier ??= 1;
+        actorStats ??= this.system.stats;
+        levelUpPoints ??= this.system.levelUpPoints ?? 0;
+        statPointModifier ??= this.system.modifiers.statPoints.total ?? 0;
+        nature ??= this.system.nature?.value;
+        twistedPower ??= this.rollOptions.all["self:ability:twisted-power"] ?? false;
+        hybridArmor ??= this.rollOptions.all["self:ability:hybrid-armor"] ?? false;
+        statCalculation ??= game.settings.get("ptu", "variant.statCalculation");
+        
+        const stats = foundry.utils.deepClone(actorStats);
+        const longShortStatDict = {
+            "HP": "hp",
+            "Attack": "atk",
+            "Defense": "def",
+            "Special Attack": "spatk",
+            "Special Defense": "spdef",
+            "Speed": "spd"
+        };
+        const isTrainer = this.type !== "pokemon";
+        let levelUpPointsSpend = 0;
+
+        const applyAbilities = () => {
+            // twisted power and hybrid armor adjustments
+            if (twistedPower) {
+                const atkTotal = foundry.utils.duplicate(stats.atk.total);
+                const spatkTotal = foundry.utils.duplicate(stats.spatk.total);
+
+                stats.atk.total += Math.floor(spatkTotal / 3);
+                stats.spatk.total += Math.floor(atkTotal / 3);
+            }
+            if (hybridArmor) {
+                const defTotal = foundry.utils.duplicate(stats.def.total);
+                const spdefTotal = foundry.utils.duplicate(stats.spdef.total);
+
+                stats.def.total += Math.floor(spdefTotal / 3);
+                stats.spdef.total += Math.floor(defTotal / 3);
+            }
+        }
+
+        // This is the new Simplified Rework stat calculation logic.
+        // Design Goals:
+        // - incentivise balanced stat distribution by providing bonuses for less spread-out stats
+        // - don't penalize uneven stat distribution
+        // - when allocating one point, that point should *always* have a positive impact on the stat it is added to
+        // - a stat distribution with one stat significantly higher than the next-highest should gain little-to-no benefit in that stat
+        // This is currently dark code
+        if (statCalculation === "simplified-rework") {
+            const statSpread = [];
+            for (const [key, stat] of Object.entries(stats)) {
+                stat.total = stat.value + stat.levelUp + (stat?.mod?.value ?? 0) + (stat?.mod?.mod ?? 0);
+                levelUpPointsSpend += stat.levelUp;
+                statSpread.push([key, stat.total]);
+            }
+
+            // add a bonus that improves based on how spread-out your stat points are
+            const sortedStatSpread = statSpread.sort((a, b) => b[1] - a[1]);
+            let bonusForAllStats = 0;
+            for (let i = 0; i < sortedStatSpread.length - 1; i++) {
+                const spread = sortedStatSpread[i][1] - sortedStatSpread[i + 1][1];
+                bonusForAllStats += Math.floor(spread / 10);
+            }
+            for (const [key, stat] of Object.entries(stats)) {
+                stat.total += bonusForAllStats;
+            }
+
+            applyAbilities();
+
+            // apply stages
+            for (const [key, stat] of Object.entries(stats)) {
+                const stage = Math.clamp(Math.round(stat?.stage?.total), -6, 6);
+                if (stage > 0) {
+                    stat.total = Math.floor(stat.total * (1 + Math.clamp(stage / 5)));
+                } else if (stage < 0) {
+                    stat.total = Math.ceil(stat.total * (1 + (stage / 10)));
+                }
+            }
+            return {
+                pointsSpend: levelUpPointsSpend,
+                stats,
+            }
+        }
+
+        // This is the original PTU stat calculation logic.
+        if (statCalculation === "original") {
+            for (const [key, stat] of Object.entries(stats)) {
+                stat.total = (stat?.value ?? 0) + (stat?.levelUp ?? 0) + (stat?.mod?.value ?? 0) + (stat?.mod?.mod ?? 0);
+                levelUpPointsSpend += stat.levelUp;
+            }
+
+            applyAbilities();
+
+            // apply stages
+            for (const [key, stat] of Object.entries(stats)) {
+                if (key === "hp") continue;
+                stat.stage ??= {};
+                stat.stage.total = Math.clamp(Math.round((stat.stage?.value ?? 0) + (stat.stage?.mod ?? 0)), -6, 6);
+                if (stat.stage.total > 0) {
+                    stat.total = Math.floor(stat.total * (1 + (stat.stage.total / 5)));
+                } else if (stat.stage.total < 0) {
+                    stat.total = Math.ceil(stat.total * (1 + (stat.stage.total / 10)));
+                }
+            }
+            return {
+                pointsSpend: levelUpPointsSpend,
+                stats,
+            }
+        }
+
+        // This is the original PTR stat rework logic
+        if (statCalculation === "rework" || statCalculation === "improved-rework") {
+            const leftoverLevelUpPoints = levelUpPoints - Object.values(stats).reduce((a, v) => v.levelUp + a, 0);
+            const effectiveStatLevel = Math.floor(Math.max(1, level - Math.max(0, Math.clamp(0, leftoverLevelUpPoints, leftoverLevelUpPoints - statPointModifier))) * levelModifier);
+
+            const levelDivisionConstant = isTrainer ? 25 : 50;
+            //find the gross stats = (Base Stat + (level * LevelUpPoints) * Level to the power of 1/2.2)/levelDivisionConstant + Base Stat + LevelUpPoints/5
+            for (const [key, value] of Object.entries(stats)) {
+                value["total"] = (value["value"] + (effectiveStatLevel + value["levelUp"]) * Math.pow(effectiveStatLevel, 1 / 2.2)) / levelDivisionConstant + value["value"] + (value["levelUp"] * CONST.STATS_FACTOR);
+                
+                levelUpPointsSpend += value["levelUp"];
+            }
+            //calculate sigma modifier = 1 + level/(100*sigma)
+            const sigmaMod = Math.max(dev(stats), CONST.STATS_SIGMA);
+            const sigma = 1 + Math.max(effectiveStatLevel, 35) / (100 * sigmaMod);
+
+            //apply sigma modifier
+            for (const [key, value] of Object.entries(stats)) {
+                value["total"] *= sigma;
+
+                //apply nature
+                if (nature && CONFIG.PTU.data.natureData[nature]) {
+                    if (CONFIG.PTU.data.natureData[nature][0] == CONFIG.PTU.data.natureData[nature][1]) {
+                        //neutral nature, do nothing
+                    } else if (longShortStatDict[CONFIG.PTU.data.natureData[nature][0]] == key) {
+                        //positive nature
+                        value["total"] *= 1.1;
+                    } else if (longShortStatDict[CONFIG.PTU.data.natureData[nature][1]] == key) {
+                        //negative nature
+                        value["total"] = Math.max(value["total"] * 0.9, 1);
+                    }
+                }
+
+                //round
+                value["total"] = Math.round(value["total"]);
+            }
+
+            applyAbilities();
+
+            if (statCalculation == "improved-rework") {
+                // The Fox Factor
+                for (const [key, value] of Object.entries(stats)) {
+                    value["total"] += Math.round(value["levelUp"] * 0.3);
+                }
+            }
+
+            //apply mods and stages last
+            for (const [key, value] of Object.entries(stats)) {
+                const sub = value.total + value.mod.value + value.mod.mod;
+
+                if (key != "hp") value.stage.total = Math.clamp((value.stage?.value ?? 0) + (value.stage?.mod ?? 0), -6, 6);
+                if (value.stage?.total > 0) {
+                    if (statCalculation == "improved-rework") {
+                        value.total = Math.floor(sub * value.stage.total * (0.275 * Math.log10(130 - (isTrainer ? effectiveStatLevel * 2 : effectiveStatLevel)) - 0.325) + sub)
+                    }
+                    else {
+                        value.total = Math.floor(sub * (value.stage.total) * 0.1 + sub);
+                    }
+                }
+                else if (value.stage?.total < 0) {
+                    if (statCalculation == "improved-rework") {
+                        value.total = Math.ceil(sub * (value.stage.total) * 0.15 + sub);
+                    }
+                    else {
+                        value.total = Math.ceil(sub * (value.stage.total) * 0.1 + sub);
+                    }
+                }
+                else {
+                    value.total = sub;
+                }
+            }
+
+            return {
+                pointsSpend: levelUpPointsSpend,
+                stats
+            }
+        }
+
+        // unknown calculation
+        return {
+            pointsSpend: 0,
+            stats,
+        }
+    }
+
+    _calculateSkillRanks() {
+        return this.system?.skills; // Implement in subclasses
+    }
+
+    _calculateContestStats() {
+        return this.system?.contests; // Implement in subclasses
+    }
+
     /** @override */
     _initialize() {
         this._itemTypes = null;
@@ -347,12 +550,6 @@ class PTUActor extends Actor {
         if (game.combat?.combatant?.actor?.uuid === this.uuid) {
             this.flags.ptu.rollOptions.all["turn:active"] = true;
         }
-
-        // Call post-derived-preparation `RuleElement` hooks
-        for (const rule of this.rules) {
-            if (rule.priority > 100) continue;
-            rule.afterPrepareData?.();
-        }
     }
 
     onPrepareDerivedData() {
@@ -362,9 +559,8 @@ class PTUActor extends Actor {
     postPrepareDerivedData() {
         super.postPrepareDerivedData?.();
 
-        // Call post-derived-preparation `RuleElement` hooks with a high priority
+        // Call post-derived-preparation `RuleElement` hooks
         for (const rule of this.rules) {
-            if (rule.priority <= 100) continue;
             rule.afterPrepareData?.();
         }
 
@@ -379,14 +575,60 @@ class PTUActor extends Actor {
         this._setDefaultChanges();
     }
 
+    cleanupPrepareDerivedData(derivedData) {
+        // figure out if any of our stats are different
+        const statDiff = foundry.utils.diffObject(derivedData.stats, this.system.stats);
+        const directStatChanges = {};
+        let hasIndirectStatChanges = false;
+        for (const [key, stat] of Object.entries(statDiff)) {
+            if (stat.total !== undefined) {
+                directStatChanges[key] = (this.system.stats?.[key]?.total ?? 0) - stat.total;
+            }
+            hasIndirectStatChanges ||= stat.mod !== undefined || stat.stage !== undefined;
+        }
+
+        // these need to be recomputed
+        if (hasIndirectStatChanges) {
+            const { stats } = this._calculateStatTotal();
+            for (const [key, diff] of Object.entries(stats)) {
+                if (directStatChanges[key] !== undefined) {
+                    diff.total += directStatChanges[key];
+                }
+            }
+            this.system.stats = stats;
+        }
+
+        // figure out if any of our skills are different
+        const skillDiff = foundry.utils.diffObject(derivedData.skills, this.system.skills);
+
+        // these need to be recomputed
+        if (Object.keys(skillDiff).length > 0) {
+            const skills = this._calculateSkillRanks();
+            this.system.skills = skills;
+        }
+
+        // prepare the skill attributes
+        for (let [key, skill] of Object.entries(this.system.skills)) {
+            if (!skill?.rank) continue;
+            this.attributes.skills[key] = this.prepareSkill(key);
+        }
+
+        // just recalculate contest stats, since they're based on combat stats
+        this.contests = this._calculateContestStats();
+    }
+
     /**
-     * This splits the preparation of derived data into three distinct phases:
-     * prePrepareDerivedData, onPrepareDerivedData, and postPrepareDerivedData.
+     * This splits the preparation of derived data into FOUR distinct phases:
+     * prePrepareDerivedData, onPrepareDerivedData, postPrepareDerivedData, and cleanupPrepareDerivedData.
+     * 
+     * cleanupPrepareDerivedData is intended to handle changing stages during the postPrepareDerivedData phase.
      */
     prepareDerivedData() {
         this.prePrepareDerivedData();
         this.onPrepareDerivedData();
+        const derivedData = foundry.utils.deepClone(this.system);
         this.postPrepareDerivedData();
+        this.cleanupPrepareDerivedData(derivedData);
     }
 
     /** @override */

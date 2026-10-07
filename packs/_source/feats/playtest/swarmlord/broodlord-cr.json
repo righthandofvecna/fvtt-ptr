@@ -1,10 +1,49 @@
 {
-  "name": "Broodlord",
+  "name": "Broodlord [CR]",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the following Ability based on your Embrace.\n- Arachnid’s Embrace: Tinted Lens\n- Monarch’s Embrace: Compound Eyes",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [
+          "capability:arachnids-embrace-hb"
+        ],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.cdumkKxEQ2R7sNiG"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [
+          "capability:monarchs-embrace-hb"
+        ],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.25NJNoqly3Vx4LiD"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:arachnids-embrace-hb"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.atk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:monarchs-embrace-hb"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spatk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "broodlord-cr",
     "schema": {
@@ -20,7 +59,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "PTR Compendiums"
+      "value": "Homebrew"
     },
     "stackSlugs": false,
     "keywords": [
@@ -37,7 +76,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -56,10 +96,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Swarmlord",
+    "class": "Swarmlord [CR]",
     "name": "Broodlord [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "broodlord"
+    "replacesSlug": "broodlord",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

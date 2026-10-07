@@ -4,7 +4,29 @@
     "origin": "Class Rework",
     "effect": "Effect: Your powers begin to take after either Arachnid's Embrace or Monarch's Embrace. Depending on your Embrace, you gain an Ability and Stat Tag. Whenever you gain a Swarmlord Feature, you gain the same Stat Tag\nArachnid's Embrace -> Unnerve -> [+Attack]\nMonarch’s Embrace -> Shield Dust -> [+Special Attack]",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.capabilities.Item.aVimQpTmCKfHR4Vm",
+            "label": "Arachnid's Embrace"
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.W8MokZvIKynfjDxw",
+            "label": "Monarch’s Embrace"
+          }
+        ],
+        "adjustName": false,
+        "flag": "swarmlord"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.swarmlord}"
+      }
+    ],
     "enabled": true,
     "slug": "swarmlord-cr",
     "schema": {
@@ -20,7 +42,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "PTR Compendiums"
+      "value": "Homebrew"
     },
     "stackSlugs": false,
     "keywords": [
@@ -38,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,9 +81,11 @@
     "notes": "",
     "free": false,
     "class": "Swarmlord",
-    "name": "Swarmlord [CR]",
+    "name": "Swarmlord",
     "contentSet": "class-rework",
-    "replacesSlug": "swarmlord"
+    "replacesSlug": "swarmlord",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",

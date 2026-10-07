@@ -7,9 +7,9 @@
  * the only phase that requires a species item).
  */
 import { TestRegistry } from "../registry.js";
-import { createTestPokemonNoSpecies, deleteTestActor } from "../helpers/actors.js";
+import { createTestPokemonNoSpecies, createTestPokemon, deleteTestActor } from "../helpers/actors.js";
 import { addEffectWithRules } from "../helpers/items.js";
-import { assertEqual, assertNotEqual } from "../helpers/assert.js";
+import { assertEqual, assertGreaterThan } from "../helpers/assert.js";
 
 const CATEGORY = "rule-elements";
 
@@ -99,6 +99,50 @@ TestRegistry.register(CATEGORY, "AELike | predicate prevents modification when c
 
         actor = game.actors.get(actor.id);
         assertEqual(actor.system.modifiers.acBonus.mod, 0, "AELike with failing predicate should not modify acBonus.mod");
+        await deleteTestActor(actor);
+    } catch (err) {
+        throw err;
+    }
+});
+
+
+// -----------------------------------------------------------------
+// preparation logic recomputes stats if stage, skill, or contest stat changes
+// -----------------------------------------------------------------
+TestRegistry.register(CATEGORY, "AELike | stat + skill + contest change during afterDerived phase should recompute", async () => {
+    let actor = await createTestPokemon();
+    try {
+        const beforeAtk = actor.system.stats?.atk?.total ?? 0;
+        const beforeCool = actor.system.contests?.stats?.cool?.total ?? 0;
+        const beforeBeauty = actor.system.contests?.stats?.beauty?.total ?? 0;
+        const beforeStealth = actor.system.stats?.stealth?.modifier?.total ?? 0;
+
+        await addEffectWithRules(actor, [{
+            key: "ActiveEffectLike",
+            mode: "add",
+            path: "system.stats.atk.stage.mod",
+            value: 5,
+            phase: "afterDerived",
+        },{
+            key: "ActiveEffectLike",
+            mode: "add",
+            path: "system.contests.stats.beauty.poffins.mod",
+            value: 3,
+            phase: "afterDerived",
+        },{
+            key: "ActiveEffectLike",
+            mode: "add",
+            path: "system.stats.stealth.modifier.mod",
+            value: 2,
+            phase: "afterDerived",
+        }]);
+
+        actor = game.actors.get(actor.id);
+        assertEqual(actor.system.stats.atk.stage.mod, 5, "AELike add should set atk.stage.mod to 5");
+        assertGreaterThan(actor.system.stats.atk.total, beforeAtk, "Preparation logic should recompute atk.total after stage.mod changes");
+        assertGreaterThan(actor.system.contests.stats.cool.total, beforeCool, "Preparation logic should recompute cool.total after the linked attack stat changes");
+        assertGreaterThan(actor.system.contests.stats.beauty.total, beforeBeauty, "Preparation logic should recompute beauty.total after poffins.mod changes");
+        assertGreaterThan(actor.system.stats.stealth.modifier.total, beforeStealth, "Preparation logic should recompute stealth.modifier.total after modifier.mod changes");
         await deleteTestActor(actor);
     } catch (err) {
         throw err;

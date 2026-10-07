@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -72,7 +73,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "weather-playtest",
-    "replacesSlug": "rolling-fog"
+    "replacesSlug": "rolling-fog",
+    "leagueLegal": false
   },
   "_id": "8LmPzewqrpdkMjcr",
   "effects": [],
