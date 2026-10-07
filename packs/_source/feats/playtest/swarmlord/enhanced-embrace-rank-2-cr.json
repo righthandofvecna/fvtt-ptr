@@ -1,10 +1,474 @@
 {
-  "name": "Enhanced Embrace Rank 2",
+  "name": "Enhanced Embrace Rank 2 [CR]",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Learn three Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen.\nRank 1: Defend Order (None), Fell Needle (Arachnid’s Embrace), Fury Cutter (None), Rage Powder (Monarch’s Embrace), Rolling Fog (None), Struggle Bug (Monarch’s Embrace), Sticky Web (Arachnid’s Embrace)\nRank 2: Attack Order (Arachnid’s Embrace), Heal Order (Monarch's Embrace), Infestation (None), Powder (Monarch’s Embrace), Signal Beam (None), Steamroller (None), Spider Web (Arachnid’s Embrace)\nRank 3: Bug Buzz (None), Leech Life (Arachnid’s Embrace), Lunge (None), Megahorn (None), Pollen Puff (Monarch’s Embrace), Quiver Dance (Monarch’s Embrace), Skitter Smack (Arachnid’s Embrace)",
+    "effect": "Effect: Learn three Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen.\nRank 1: Defend Order (None), Fell Stinger (Arachnid’s Embrace), Fury Cutter (None), Rage Powder (Monarch’s Embrace), Rolling Fog (None), Struggle Bug (Monarch’s Embrace), Sticky Web (Arachnid’s Embrace)\nRank 2: Attack Order (Arachnid’s Embrace), Heal Order (Monarch's Embrace), Infestation (None), Powder (Monarch’s Embrace), Signal Beam (None), Steamroller (None), Spider Web (Arachnid’s Embrace)\nRank 3: Bug Buzz (None), Leech Life (Arachnid’s Embrace), Lunge (None), Megahorn (None), Pollen Puff (Monarch’s Embrace), Quiver Dance (Monarch’s Embrace), Skitter Smack (Arachnid’s Embrace)",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:arachnids-embrace-hb"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.atk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:monarchs-embrace-hb"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spatk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.7hrNCJ06sxq0OB9q",
+            "label": "Defend Order",
+            "predicate": [
+              {
+                "not": "move:defend-order"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.RjTMjxxZSdIu2xZL",
+            "label": "Fell Stinger",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:fell-stinger"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.4W8tzNRKdmn0WRYd",
+            "label": "Fury Cutter",
+            "predicate": [
+              {
+                "not": "move:fury-cutter"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.fM5WQyilyABYub1f",
+            "label": "Rage Powder",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:rage-powder"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.8LmPzewqrpdkMjcr",
+            "label": "Rolling Fog",
+            "predicate": [
+              {
+                "not": "move:rolling-fog-wp"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Hm5nTF5Wh5UusvYM",
+            "label": "Struggle Bug",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:struggle-bug"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.vOj9bt7G9I4GixBZ",
+            "label": "Sticky Web",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:sticky-web"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Vw24aXumiUVNg0CF",
+            "label": "Attack Order",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:attack-order"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.KSxmShLI0Gh8slev",
+            "label": "Heal Order",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:heal-order"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.trOCAfV84TLLTKk0",
+            "label": "Infestation",
+            "predicate": [
+              {
+                "not": "move:infestation"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.oY92cZyfclUEtNVa",
+            "label": "Powder",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:powder"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.XkVx9ch1TmBWwuwP",
+            "label": "Signal Beam",
+            "predicate": [
+              {
+                "not": "move:signal-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.z3qJIXk0WLYv9NqA",
+            "label": "Steamroller",
+            "predicate": [
+              {
+                "not": "move:steamroller"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.cVvKcL3mPp6NRRPG",
+            "label": "Spider Web",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:spider-web"
+              }
+            ]
+          }
+        ],
+        "flag": "enhanced-embrace2-1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.enhanced-embrace2-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "enhanced-embrace2-2",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.7hrNCJ06sxq0OB9q",
+            "label": "Defend Order",
+            "predicate": [
+              {
+                "not": "move:defend-order"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.RjTMjxxZSdIu2xZL",
+            "label": "Fell Stinger",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:fell-stinger"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.4W8tzNRKdmn0WRYd",
+            "label": "Fury Cutter",
+            "predicate": [
+              {
+                "not": "move:fury-cutter"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.fM5WQyilyABYub1f",
+            "label": "Rage Powder",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:rage-powder"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.8LmPzewqrpdkMjcr",
+            "label": "Rolling Fog",
+            "predicate": [
+              {
+                "not": "move:rolling-fog-wp"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Hm5nTF5Wh5UusvYM",
+            "label": "Struggle Bug",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:struggle-bug"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.vOj9bt7G9I4GixBZ",
+            "label": "Sticky Web",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:sticky-web"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Vw24aXumiUVNg0CF",
+            "label": "Attack Order",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:attack-order"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.KSxmShLI0Gh8slev",
+            "label": "Heal Order",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:heal-order"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.trOCAfV84TLLTKk0",
+            "label": "Infestation",
+            "predicate": [
+              {
+                "not": "move:infestation"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.oY92cZyfclUEtNVa",
+            "label": "Powder",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:powder"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.XkVx9ch1TmBWwuwP",
+            "label": "Signal Beam",
+            "predicate": [
+              {
+                "not": "move:signal-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.z3qJIXk0WLYv9NqA",
+            "label": "Steamroller",
+            "predicate": [
+              {
+                "not": "move:steamroller"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.cVvKcL3mPp6NRRPG",
+            "label": "Spider Web",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:spider-web"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.enhanced-embrace2-2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "flag": "enhanced-embrace2-3",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.7hrNCJ06sxq0OB9q",
+            "label": "Defend Order",
+            "predicate": [
+              {
+                "not": "move:defend-order"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.RjTMjxxZSdIu2xZL",
+            "label": "Fell Stinger",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:fell-stinger"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.4W8tzNRKdmn0WRYd",
+            "label": "Fury Cutter",
+            "predicate": [
+              {
+                "not": "move:fury-cutter"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.fM5WQyilyABYub1f",
+            "label": "Rage Powder",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:rage-powder"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.8LmPzewqrpdkMjcr",
+            "label": "Rolling Fog",
+            "predicate": [
+              {
+                "not": "move:rolling-fog-wp"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Hm5nTF5Wh5UusvYM",
+            "label": "Struggle Bug",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:struggle-bug"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.vOj9bt7G9I4GixBZ",
+            "label": "Sticky Web",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:sticky-web"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Vw24aXumiUVNg0CF",
+            "label": "Attack Order",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:attack-order"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.KSxmShLI0Gh8slev",
+            "label": "Heal Order",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:heal-order"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.trOCAfV84TLLTKk0",
+            "label": "Infestation",
+            "predicate": [
+              {
+                "not": "move:infestation"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.oY92cZyfclUEtNVa",
+            "label": "Powder",
+            "predicate": [
+              "capability:monarchs-embrace-hb",
+              {
+                "not": "move:powder"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.XkVx9ch1TmBWwuwP",
+            "label": "Signal Beam",
+            "predicate": [
+              {
+                "not": "move:signal-beam"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.z3qJIXk0WLYv9NqA",
+            "label": "Steamroller",
+            "predicate": [
+              {
+                "not": "move:steamroller"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.cVvKcL3mPp6NRRPG",
+            "label": "Spider Web",
+            "predicate": [
+              "capability:arachnids-embrace-hb",
+              {
+                "not": "move:spider-web"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.enhanced-embrace2-3}"
+      }
+    ],
     "enabled": true,
     "slug": "enhanced-embrace-rank-2-cr",
     "schema": {
@@ -20,7 +484,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "PTR Compendiums"
+      "value": "Homebrew"
     },
     "stackSlugs": false,
     "keywords": [
@@ -37,7 +501,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -52,14 +517,16 @@
     },
     "prerequisites": [
       "Adept Command or Survival",
-      "Enhanced Embrace Rank 1"
+      "Enhanced Embrace Rank 1 [CR]"
     ],
     "notes": "",
     "free": false,
-    "class": "Swarmlord",
+    "class": "Swarmlord [CR]",
     "name": "Enhanced Embrace [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "enhanced-embrace-rank-2"
+    "replacesSlug": "enhanced-embrace-rank-2",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -71,7 +538,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

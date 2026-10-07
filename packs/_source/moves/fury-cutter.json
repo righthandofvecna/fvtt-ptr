@@ -1,6 +1,5 @@
 {
   "_id": "4W8tzNRKdmn0WRYd",
-  "folder": null,
   "name": "Fury Cutter",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/BugIC_Icon.png",
@@ -61,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,

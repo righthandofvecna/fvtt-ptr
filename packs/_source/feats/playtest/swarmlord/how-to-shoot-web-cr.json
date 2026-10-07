@@ -1,10 +1,45 @@
 {
-  "name": "How To Shoot Web",
+  "name": "How To Shoot Web [CR]",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: You gain the Threaded and Wallclimber Capabilities.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.FgI0NCLyoQbTmVvh"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.pvTnoGYp0kBhHmMD"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:arachnids-embrace-hb"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.atk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:monarchs-embrace-hb"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spatk.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "how-to-shoot-web-cr",
     "schema": {
@@ -20,7 +55,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "PTR Compendiums"
+      "value": "Homebrew"
     },
     "stackSlugs": false,
     "keywords": [
@@ -37,7 +72,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -51,14 +87,16 @@
       "bind": false
     },
     "prerequisites": [
-      "Swarmlord"
+      "Swarmlord [CR]"
     ],
     "notes": "",
     "free": false,
-    "class": "Swarmlord",
+    "class": "Swarmlord [CR]",
     "name": "How To Shoot Web [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "how-to-shoot-web"
+    "replacesSlug": "how-to-shoot-web",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
