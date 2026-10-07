@@ -26,8 +26,8 @@
       }
     ],
     "enabled": true,
-    "slug": "arachnids-embrace-hb",
-    "contentSet": "homebrew",
+    "slug": "arachnids-embrace-cr",
+    "contentSet": "class-rework",
     "replacesSlug": "",
     "schema": {
       "version": null,
@@ -39,7 +39,7 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Swarmlord [CR]"
+      "Swarmlord"
     ],
     "frequency": {
       "type": "at-will",
