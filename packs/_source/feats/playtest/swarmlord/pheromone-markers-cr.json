@@ -7,9 +7,11 @@
     "rules": [
       {
         "key": "ActiveEffectLike",
-        "predicate": [
-          "capability:arachnids-embrace-hb"
-        ],
+        "predicate": {
+          "and": [
+            "capability:arachnids-embrace-cr"
+          ]
+        },
         "mode": "add",
         "path": "system.modifiers.baseStats.atk.mod",
         "phase": "applyAEs",
@@ -18,9 +20,11 @@
       },
       {
         "key": "ActiveEffectLike",
-        "predicate": [
-          "capability:monarchs-embrace-hb"
-        ],
+        "predicate": {
+          "and": [
+            "capability:monarchs-embrace-cr"
+          ]
+        },
         "mode": "add",
         "path": "system.modifiers.baseStats.spatk.mod",
         "phase": "applyAEs",
@@ -97,7 +101,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

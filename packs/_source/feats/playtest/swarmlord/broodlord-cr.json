@@ -8,7 +8,7 @@
       {
         "key": "GrantItem",
         "predicate": [
-          "capability:arachnids-embrace-hb"
+          "capability:arachnids-embrace-cr"
         ],
         "allowDuplicate": false,
         "uuid": "Compendium.ptu.abilities.Item.cdumkKxEQ2R7sNiG"
@@ -16,7 +16,7 @@
       {
         "key": "GrantItem",
         "predicate": [
-          "capability:monarchs-embrace-hb"
+          "capability:monarchs-embrace-cr"
         ],
         "allowDuplicate": false,
         "uuid": "Compendium.ptu.abilities.Item.25NJNoqly3Vx4LiD"
@@ -114,7 +114,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
