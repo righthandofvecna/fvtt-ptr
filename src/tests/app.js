@@ -33,6 +33,15 @@ export class PTUTestApp extends HandlebarsApplicationMixin(ApplicationV2) {
                 if (!category) return;
                 await this._runTests(TestRegistry.forCategory(category));
             },
+            runTest: async function(event, target) {
+                const key = target.dataset.key;
+                if (!key) return;
+                const [category, ...nameParts] = key.split("::");
+                const name = nameParts.join("::");
+                const entry = TestRegistry.forCategory(category).find(e => e.name === name);
+                if (!entry) return;
+                await this._runTests([entry]);
+            },
             clearResults: function() {
                 this._results.clear();
                 this.render({ force: true });
@@ -130,7 +139,7 @@ export class PTUTestApp extends HandlebarsApplicationMixin(ApplicationV2) {
                     if (duration) totalDuration += duration;
                 }
 
-                return { name: entry.name, status, duration, error };
+                return { name: entry.name, status, duration, error, testKey: this._key(entry) };
             });
 
             const catTotal = entries.length;

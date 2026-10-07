@@ -152,12 +152,45 @@
         }
         .test-duration { color: #888; font-size: 11px; }
 
+        // Per-test run button — hidden until the row is hovered.
+        .btn-run-test {
+            flex-shrink: 0;
+            padding: 0 5px;
+            font-size: 10px;
+            height: 18px;
+            line-height: 18px;
+            cursor: pointer;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #888;
+            opacity: 0;
+            transition: opacity 0.1s, background 0.1s;
+            &:disabled { opacity: 0 !important; cursor: not-allowed; }
+        }
+
+        &:hover .btn-run-test:not(:disabled) {
+            opacity: 1;
+            border-color: #555;
+            background: #3a3a3a;
+            color: #ddd;
+            &:hover { background: #505050; }
+        }
+
         &.status-pass   .test-icon { color: #4caf50; }
         &.status-fail   .test-icon { color: #f44336; }
         &.status-running .test-icon { color: #64b5f6; }
         &.status-pending .test-icon { color: #666; }
         &.status-fail   { background: rgba(244, 67, 54, 0.05); }
         &.status-pass   { background: transparent; }
+
+        // Always show the run button on failed tests so they're easy to re-run.
+        &.status-fail .btn-run-test:not(:disabled) {
+            opacity: 0.6;
+            border-color: #555;
+            background: #3a3a3a;
+            &:hover { opacity: 1; background: #505050; }
+        }
 
         .test-error {
             flex-basis: 100%;
