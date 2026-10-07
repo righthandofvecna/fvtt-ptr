@@ -7,9 +7,11 @@
     "rules": [
       {
         "key": "ActiveEffectLike",
-        "predicate": [
-          "capability:arachnids-embrace-hb"
-        ],
+        "predicate": {
+          "and": [
+            "capability:arachnids-embrace-cr"
+          ]
+        },
         "mode": "add",
         "path": "system.modifiers.baseStats.atk.mod",
         "phase": "applyAEs",
@@ -18,9 +20,11 @@
       },
       {
         "key": "ActiveEffectLike",
-        "predicate": [
-          "capability:monarchs-embrace-hb"
-        ],
+        "predicate": {
+          "and": [
+            "capability:monarchs-embrace-cr"
+          ]
+        },
         "mode": "add",
         "path": "system.modifiers.baseStats.spatk.mod",
         "phase": "applyAEs",
@@ -43,7 +47,7 @@
             "value": "Compendium.ptu.moves.Item.RjTMjxxZSdIu2xZL",
             "label": "Fell Stinger",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:fell-stinger"
               }
@@ -62,7 +66,7 @@
             "value": "Compendium.ptu.moves.Item.fM5WQyilyABYub1f",
             "label": "Rage Powder",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:rage-powder"
               }
@@ -81,7 +85,7 @@
             "value": "Compendium.ptu.moves.Item.Hm5nTF5Wh5UusvYM",
             "label": "Struggle Bug",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:struggle-bug"
               }
@@ -91,7 +95,7 @@
             "value": "Compendium.ptu.moves.Item.vOj9bt7G9I4GixBZ",
             "label": "Sticky Web",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:sticky-web"
               }
@@ -101,7 +105,7 @@
             "value": "Compendium.ptu.moves.Item.Vw24aXumiUVNg0CF",
             "label": "Attack Order",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:attack-order"
               }
@@ -111,7 +115,7 @@
             "value": "Compendium.ptu.moves.Item.KSxmShLI0Gh8slev",
             "label": "Heal Order",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:heal-order"
               }
@@ -130,7 +134,7 @@
             "value": "Compendium.ptu.moves.Item.oY92cZyfclUEtNVa",
             "label": "Powder",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:powder"
               }
@@ -158,7 +162,7 @@
             "value": "Compendium.ptu.moves.Item.cVvKcL3mPp6NRRPG",
             "label": "Spider Web",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:spider-web"
               }
@@ -192,7 +196,7 @@
             "value": "Compendium.ptu.moves.Item.RjTMjxxZSdIu2xZL",
             "label": "Fell Stinger",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:fell-stinger"
               }
@@ -211,7 +215,7 @@
             "value": "Compendium.ptu.moves.Item.fM5WQyilyABYub1f",
             "label": "Rage Powder",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:rage-powder"
               }
@@ -230,7 +234,7 @@
             "value": "Compendium.ptu.moves.Item.Hm5nTF5Wh5UusvYM",
             "label": "Struggle Bug",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:struggle-bug"
               }
@@ -240,7 +244,7 @@
             "value": "Compendium.ptu.moves.Item.vOj9bt7G9I4GixBZ",
             "label": "Sticky Web",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:sticky-web"
               }
@@ -250,7 +254,7 @@
             "value": "Compendium.ptu.moves.Item.Vw24aXumiUVNg0CF",
             "label": "Attack Order",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:attack-order"
               }
@@ -260,7 +264,7 @@
             "value": "Compendium.ptu.moves.Item.KSxmShLI0Gh8slev",
             "label": "Heal Order",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:heal-order"
               }
@@ -279,7 +283,7 @@
             "value": "Compendium.ptu.moves.Item.oY92cZyfclUEtNVa",
             "label": "Powder",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:powder"
               }
@@ -307,7 +311,7 @@
             "value": "Compendium.ptu.moves.Item.cVvKcL3mPp6NRRPG",
             "label": "Spider Web",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:spider-web"
               }
@@ -339,7 +343,7 @@
             "value": "Compendium.ptu.moves.Item.RjTMjxxZSdIu2xZL",
             "label": "Fell Stinger",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:fell-stinger"
               }
@@ -358,7 +362,7 @@
             "value": "Compendium.ptu.moves.Item.fM5WQyilyABYub1f",
             "label": "Rage Powder",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:rage-powder"
               }
@@ -377,7 +381,7 @@
             "value": "Compendium.ptu.moves.Item.Hm5nTF5Wh5UusvYM",
             "label": "Struggle Bug",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:struggle-bug"
               }
@@ -387,7 +391,7 @@
             "value": "Compendium.ptu.moves.Item.vOj9bt7G9I4GixBZ",
             "label": "Sticky Web",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:sticky-web"
               }
@@ -397,7 +401,7 @@
             "value": "Compendium.ptu.moves.Item.Vw24aXumiUVNg0CF",
             "label": "Attack Order",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:attack-order"
               }
@@ -407,7 +411,7 @@
             "value": "Compendium.ptu.moves.Item.KSxmShLI0Gh8slev",
             "label": "Heal Order",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:heal-order"
               }
@@ -426,7 +430,7 @@
             "value": "Compendium.ptu.moves.Item.oY92cZyfclUEtNVa",
             "label": "Powder",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace-cr",
               {
                 "not": "move:powder"
               }
@@ -454,13 +458,17 @@
             "value": "Compendium.ptu.moves.Item.cVvKcL3mPp6NRRPG",
             "label": "Spider Web",
             "predicate": [
-              "capability:arachnids-embrace-hb",
+              "capability:arachnids-embrace-cr",
               {
                 "not": "move:spider-web"
               }
             ]
           }
-        ]
+        ],
+        "allowedDrops": {
+          "label": "",
+          "predicate": []
+        }
       },
       {
         "key": "GrantItem",

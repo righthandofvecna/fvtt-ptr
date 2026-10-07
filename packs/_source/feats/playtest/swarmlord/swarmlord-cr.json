@@ -1,5 +1,5 @@
 {
-  "name": "Swarmlord",
+  "name": "Swarmlord [CR]",
   "system": {
     "origin": "Class Rework",
     "effect": "Effect: Your powers begin to take after either Arachnid's Embrace or Monarch's Embrace. Depending on your Embrace, you gain an Ability and Stat Tag. Whenever you gain a Swarmlord Feature, you gain the same Stat Tag\nArachnid's Embrace -> Unnerve -> [+Attack]\nMonarch’s Embrace -> Shield Dust -> [+Special Attack]",
@@ -80,7 +80,7 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Swarmlord",
+    "class": "Swarmlord [CR]",
     "name": "Swarmlord",
     "contentSet": "class-rework",
     "replacesSlug": "swarmlord",
@@ -98,7 +98,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
