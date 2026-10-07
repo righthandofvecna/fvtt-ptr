@@ -655,7 +655,7 @@
     "contentSet": "",
     "replacesSlug": "",
     "stackSlugs": false,
-    "enabled": false
+    "enabled": true
   },
   "sort": 0,
   "ownership": {

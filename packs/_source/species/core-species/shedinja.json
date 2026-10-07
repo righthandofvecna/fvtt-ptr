@@ -453,7 +453,26 @@
       }
     },
     "slug": "shedinja",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "override",
+        "path": "system.health.max",
+        "phase": "afterDerived",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "override",
+        "path": "system.health.tick",
+        "phase": "afterDerived",
+        "value": 1,
+        "priority": null
+      }
+    ],
     "source": {
       "value": "PTR Core Dex"
     },
@@ -468,7 +487,7 @@
       "2": ""
     },
     "stackSlugs": false,
-    "enabled": false,
+    "enabled": true,
     "contentSet": "",
     "replacesSlug": ""
   },

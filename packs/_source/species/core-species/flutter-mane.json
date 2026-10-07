@@ -637,7 +637,7 @@
       "Paradox"
     ],
     "stackSlugs": false,
-    "enabled": false,
+    "enabled": true,
     "contentSet": "",
     "replacesSlug": ""
   },
