@@ -270,4 +270,4 @@ for (let i = 2; i <= 100; i++) {
 }
 
 
-trainerProgressions["data-revamp"] = foundry.utils.deepClone(trainerProgressions["original"]);
+trainerProgressions["data-revamp"] = foundry.utils.deepClone(trainerProgressions["short-track"]);

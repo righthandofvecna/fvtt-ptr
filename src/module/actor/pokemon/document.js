@@ -267,18 +267,7 @@ class PTUPokemonActor extends PTUActor {
         // Calculate Level related data
         system.levelUpPoints = system.level.current + system.modifiers.statPoints.total + 10;
         system.stats = this._calcBaseStats();
-
-        const leftoverLevelUpPoints = system.levelUpPoints - Object.values(system.stats).reduce((a, v) => v.levelUp + a, 0);
-        const actualLevel = Math.max(1, system.level.current - Math.max(0, Math.clamp(0, leftoverLevelUpPoints, leftoverLevelUpPoints - system.modifiers.statPoints.total ?? 0)));
-
-        const result = calculateStatTotal({
-            level: actualLevel,
-            actorStats: system.stats,
-            nature: system.nature.value,
-            isTrainer: false,
-            twistedPower: this.rollOptions.all["self:ability:twisted-power"],
-            hybridArmor: this.rollOptions.all["self:ability:hybrid-armor"],
-        })
+        const result = this._calculateStatTotal()
 
         system.stats = result.stats;
         system.levelUpPoints = system.levelUpPoints - result.pointsSpend;

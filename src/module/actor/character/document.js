@@ -92,6 +92,13 @@ class PTUTrainerActor extends PTUActor {
         );
     }
 
+    _calculateStatTotal({levelModifier, ...other}={}) {
+        levelModifier ??= 1;
+        const trainerAdvancement = game.settings.get("ptu", "variant.trainerAdvancement");
+        const tlModifier = CONFIG.PTU.data.trainerProgressions[trainerAdvancement]?.tlModifier ?? 1;
+        return super._calculateStatTotal({levelModifier: levelModifier * tlModifier, ...other});
+    }
+
     /** @override */
     prepareBaseData() {
         super.prepareBaseData();
@@ -203,18 +210,7 @@ class PTUTrainerActor extends PTUActor {
         })() + system.modifiers.statPoints.total + 9;
 
         system.stats = this._calcBaseStats();
-
-        const leftoverLevelUpPoints = system.levelUpPoints - Object.values(system.stats).reduce((a, v) => v.levelUp + a, 0);
-        const actualLevel = Math.max(1, system.level.current - Math.max(0, Math.clamp(0, leftoverLevelUpPoints, leftoverLevelUpPoints - system.modifiers.statPoints.total ?? 0)));
-
-        const result = calculateStatTotal({
-            level: ["data-revamp", "short-track"].includes(game.settings.get("ptu", "variant.trainerAdvancement")) ? actualLevel * 2 : (game.settings.get("ptu", "variant.trainerAdvancement") === "long-track" ? actualLevel * 0.5 : actualLevel),
-            actorStats: system.stats,
-            nature: null,
-            isTrainer: true,
-            twistedPower: this.rollOptions.all["self:ability:twisted-power"],
-            hybridArmor: this.rollOptions.all["self:ability:hybrid-armor"],
-        })
+        const result = this._calculateStatTotal()
 
         system.stats = result.stats;
         system.levelUpPoints = system.levelUpPoints - result.pointsSpend;
