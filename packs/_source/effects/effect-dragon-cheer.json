@@ -14,7 +14,7 @@
         ],
         "mode": "add",
         "path": "system.modifiers.critRange.mod",
-        "phase": "applyAEs",
+        "phase": "afterDerived",
         "value": 4,
         "priority": null
       },
