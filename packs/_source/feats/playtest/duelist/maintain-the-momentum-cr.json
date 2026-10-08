@@ -2,7 +2,7 @@
   "name": "Maintain the Momentum",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: Your Pokémon under the effects of Focused Training.\nEffect: The target immediately spends 2 Momentum. Then, it automatically rolls an 11 on one d20 Roll of your choice on their next turn.",
+    "effect": "Target: Your Pokémon under the effects of @UUID[Compendium.ptu.feats.Item.FLSt79Zix8j69T07]{Focused Training}.\nEffect: The target immediately spends 2 Momentum. Then, it automatically rolls an 11 on one d20 Roll of your choice on their next turn.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,7 +60,9 @@
     "class": "Duelist",
     "name": "Maintain the Momentum [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "maintain-the-momentum"
+    "replacesSlug": "maintain-the-momentum",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -70,7 +73,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

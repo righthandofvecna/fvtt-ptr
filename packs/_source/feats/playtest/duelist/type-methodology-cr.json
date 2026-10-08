@@ -2,7 +2,7 @@
   "name": "Type Methodology",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: See Effect\nEffect: Effects depend on whether your Pokémon has the Tolerance or Exploit ability.\n- Whenever your Pokémon with Tolerance takes Super-Effective damage from a Tagged foe, your Pokémon may spend 2 Momentum to Resist that attack one step.\n- Whenever your Pokémon with Exploit deals Resisted damage to a Tagged foe, your Pokémon may spend 2 Momentum to increase the effectiveness of the attack one step.",
+    "effect": "Trigger: See Effect\nEffect: Effects depend on whether your Pokémon has the @UUID[Compendium.ptu.abilities.Item.7yg8Y7g7p8Uil1YT]{Tolerance} or @UUID[Compendium.ptu.abilities.Item.v7Kuq1b1d7bPqLcU]{Exploit} ability.\n- Whenever your Pokémon with Tolerance takes Super-Effective damage from a Tagged foe, your Pokémon may spend 2 Momentum to Resist that attack one step.\n- Whenever your Pokémon with Exploit deals Resisted damage to a Tagged foe, your Pokémon may spend 2 Momentum to increase the effectiveness of the attack one step.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,7 +60,9 @@
     "class": "Duelist",
     "name": "Type Methodology [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "type-methodology"
+    "replacesSlug": "type-methodology",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -70,7 +73,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
