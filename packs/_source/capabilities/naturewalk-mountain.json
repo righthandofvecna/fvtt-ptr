@@ -1,5 +1,4 @@
 {
-  "folder": null,
   "name": "Naturewalk (Mountain)",
   "type": "capability",
   "_id": "pwbTZH9BjW9HUBZP",
@@ -33,7 +32,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,

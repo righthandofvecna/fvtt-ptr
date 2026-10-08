@@ -2,7 +2,7 @@
   "name": "Directed Focus",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Whenever your Pokémon with the Exploit or Tolerance Ability are targeted by an [Order], deal Super-Effective Damage, or take Super-Effective Damage, they gain +1 Momentum after all effects of the Move or Order are resolved.",
+    "effect": "Effect: Whenever your Pokémon with the @UUID[Compendium.ptu.abilities.Item.v7Kuq1b1d7bPqLcU]{Exploit} or @UUID[Compendium.ptu.abilities.Item.7yg8Y7g7p8Uil1YT]{Tolerance} Ability are targeted by an [Order], deal Super-Effective Damage, or take Super-Effective Damage, they gain +1 Momentum after all effects of the Move or Order are resolved.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +59,9 @@
     "class": "Duelist",
     "name": "Directed Focus [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "directed-focus"
+    "replacesSlug": "directed-focus",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -69,7 +72,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -2,7 +2,7 @@
   "name": "Expend Momentum",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: Your Pokémon under the effects of Focused Training\nEffect: Apply one of the following effects on the target by spending that much Momentum.\n- Spend 1 Momentum: Your Pokémon regains use of a EOT Frequency Move.\n- Spend 3 Momentum: Your Pokémon regains a use of Scene Frequency Move. May be chosen only once per Scene per Pokémon.\n- Spend 5 Momentum: Your Pokémon regains a use of Daily Frequency Move. May be chosen only once per Day per Pokémon.",
+    "effect": "Target: Your Pokémon under the effects of @UUID[Compendium.ptu.feats.Item.FLSt79Zix8j69T07]{Focused Training}\nEffect: Apply one of the following effects on the target by spending that much Momentum.\n- Spend 1 Momentum: Your Pokémon regains use of a EOT Frequency Move.\n- Spend 3 Momentum: Your Pokémon regains a use of Scene Frequency Move. May be chosen only once per Scene per Pokémon.\n- Spend 5 Momentum: Your Pokémon regains a use of Daily Frequency Move. May be chosen only once per Day per Pokémon.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -38,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -59,7 +60,9 @@
     "class": "Duelist",
     "name": "Expend Momentum [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "expend-momentum"
+    "replacesSlug": "expend-momentum",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -70,7 +73,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

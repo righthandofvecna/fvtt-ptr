@@ -2,7 +2,7 @@
   "name": "Earthen Bond",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Tremorsense and Groundshaper Capabilities, and you gain Naturewalk for Cave, Mountain and Desert.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.capabilities.Item.3dWZglNbT0uCCQmQ]{Tremorsense} and @UUID[Compendium.ptu.capabilities.Item.gneJRPErFFv5Kz3g]{Groundshaper} Capabilities, and you gain Naturewalk for @UUID[Compendium.ptu.capabilities.Item.FeGAWvrt4kYkmepl]{Cave}, @UUID[Compendium.ptu.capabilities.Item.pwbTZH9BjW9HUBZP]{Mountain} and @UUID[Compendium.ptu.capabilities.Item.B22OPPi9PctiZkws]{Desert}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,36 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.3dWZglNbT0uCCQmQ"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.gneJRPErFFv5Kz3g"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.FeGAWvrt4kYkmepl"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.pwbTZH9BjW9HUBZP"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.B22OPPi9PctiZkws"
       }
     ],
     "enabled": true,
@@ -48,7 +78,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +100,9 @@
     "class": "Earth Shaker",
     "name": "Earthen Bond [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "earthen-bond"
+    "replacesSlug": "earthen-bond",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +115,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

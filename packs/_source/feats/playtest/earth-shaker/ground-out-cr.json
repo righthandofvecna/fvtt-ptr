@@ -2,7 +2,7 @@
   "name": "Ground Out",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Pick three of Drill Run, Magnitude, Mud Bomb, Shore Up, or Stomping Tantrum. You learn the chosen Moves.",
+    "effect": "Effect: Pick three of @UUID[Compendium.ptu.moves.Item.CyMarrube3yoGcuy]{Drill Run}, @UUID[Compendium.ptu.moves.Item.Rgd3Ev4mWj8aldu1]{Magnitude}, @UUID[Compendium.ptu.moves.Item.BAmSs75wp3OsvF8d]{Mud Bomb}, @UUID[Compendium.ptu.moves.Item.GQ77dajKVTZN6OTQ]{Shore Up}, or @UUID[Compendium.ptu.moves.Item.2sgLgahHycXD5OuT]{Stomping Tantrum}. You learn the chosen Moves.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,180 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.CyMarrube3yoGcuy",
+            "label": "Drill Run",
+            "predicate": [
+              {
+                "not": "move:drill-run"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Rgd3Ev4mWj8aldu1",
+            "label": "Magnitude",
+            "predicate": [
+              {
+                "not": "move:magnitude"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.BAmSs75wp3OsvF8d",
+            "label": "Mud Bomb",
+            "predicate": [
+              {
+                "not": "move:mud-bomb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.GQ77dajKVTZN6OTQ",
+            "label": "Shore Up",
+            "predicate": [
+              {
+                "not": "move:shore-up"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2sgLgahHycXD5OuT",
+            "label": "Stomping Tantrum",
+            "predicate": [
+              {
+                "not": "move:stomping-tantrum"
+              }
+            ]
+          }
+        ],
+        "flag": "groundout1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.groundout1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.CyMarrube3yoGcuy",
+            "label": "Drill Run",
+            "predicate": [
+              {
+                "not": "move:drill-run"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Rgd3Ev4mWj8aldu1",
+            "label": "Magnitude",
+            "predicate": [
+              {
+                "not": "move:magnitude"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.BAmSs75wp3OsvF8d",
+            "label": "Mud Bomb",
+            "predicate": [
+              {
+                "not": "move:mud-bomb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.GQ77dajKVTZN6OTQ",
+            "label": "Shore Up",
+            "predicate": [
+              {
+                "not": "move:shore-up"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2sgLgahHycXD5OuT",
+            "label": "Stomping Tantrum",
+            "predicate": [
+              {
+                "not": "move:stomping-tantrum"
+              }
+            ]
+          }
+        ],
+        "flag": "groundout2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.groundout2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.CyMarrube3yoGcuy",
+            "label": "Drill Run",
+            "predicate": [
+              {
+                "not": "move:drill-run"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.Rgd3Ev4mWj8aldu1",
+            "label": "Magnitude",
+            "predicate": [
+              {
+                "not": "move:magnitude"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.BAmSs75wp3OsvF8d",
+            "label": "Mud Bomb",
+            "predicate": [
+              {
+                "not": "move:mud-bomb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.GQ77dajKVTZN6OTQ",
+            "label": "Shore Up",
+            "predicate": [
+              {
+                "not": "move:shore-up"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.2sgLgahHycXD5OuT",
+            "label": "Stomping Tantrum",
+            "predicate": [
+              {
+                "not": "move:stomping-tantrum"
+              }
+            ]
+          }
+        ],
+        "flag": "groundout3",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.groundout3}"
       }
     ],
     "enabled": true,
@@ -48,7 +222,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +245,9 @@
     "class": "Earth Shaker",
     "name": "Ground Out [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "ground-out"
+    "replacesSlug": "ground-out",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -83,7 +260,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

@@ -2,7 +2,7 @@
   "name": "Duelist's Manual",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: Your Pokémon under the effects of Focused Training\nEffect: Apply one of the following effects. To choose an effect, your Pokémon must have a certain amount of Momentum. (Duelist’s Manual does not spend Momentum).\n- 1 Momentum: Your Pokémon doubles their bonuses from Tolerance or Exploit until the end of their next turn and may change their Tolerance Ability into Exploit, or vice versa, until the end of their next turn.\n- 2 Momentum: Your Pokémon’s next Pass, Cone, Close Blast, or Burst attack becomes a single target Melee attack, or their next Line or Ranged Blast attack becomes a single target Ranged attack. If this attack hits, the target becomes Vulnerable for one full round and has their Initiative set to 0 until the end of their next turn.\n- 3 Momentum: Your Pokémon may act while ignoring the Confused, Rage, Infatuation, and Suppressed Volatile Status on their next turn as long as they attempt to attack a Tagged foe. May only be used once per Scene per Pokémon.",
+    "effect": "Target: Your Pokémon under the effects of @UUID[Compendium.ptu.feats.Item.FLSt79Zix8j69T07]{Focused Training}\nEffect: Apply one of the following effects. To choose an effect, your Pokémon must have a certain amount of Momentum. (Duelist’s Manual does not spend Momentum).\n- 1 Momentum: Your Pokémon doubles their bonuses from @UUID[Compendium.ptu.abilities.Item.7yg8Y7g7p8Uil1YT]{Tolerance} or @UUID[Compendium.ptu.abilities.Item.v7Kuq1b1d7bPqLcU]{Exploit} until the end of their next turn and may change their Tolerance Ability into Exploit, or vice versa, until the end of their next turn.\n- 2 Momentum: Your Pokémon’s next Pass, Cone, Close Blast, or Burst attack becomes a single target Melee attack, or their next Line or Ranged Blast attack becomes a single target Ranged attack. If this attack hits, the target becomes @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI]{Vulnerable} for one full round and has their Initiative set to 0 until the end of their next turn.\n- 3 Momentum: Your Pokémon may act while ignoring the @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confused}, @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Rage}, @UUID[Compendium.ptu.effects.Item.ABTHN2VM50VQabZq]{Infatuation}, and @UUID[Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY]{Suppressed} Volatile Status on their next turn as long as they attempt to attack a Tagged foe. May only be used once per Scene per Pokémon.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -38,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -61,7 +62,9 @@
     "class": "Duelist",
     "name": "Duelist’s Manual [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "duelists-manual"
+    "replacesSlug": "duelists-manual",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -72,7 +75,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

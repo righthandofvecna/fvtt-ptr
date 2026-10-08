@@ -1,5 +1,4 @@
 {
-  "folder": null,
   "name": "Naturewalk (Desert)",
   "type": "capability",
   "_id": "B22OPPi9PctiZkws",
@@ -33,7 +32,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
