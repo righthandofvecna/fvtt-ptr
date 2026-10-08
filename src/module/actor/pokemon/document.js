@@ -163,6 +163,10 @@ class PTUPokemonActor extends PTUActor {
         return contests;
     }
 
+    _calculateTyping() {
+        return this.species?.system?.types ?? this.system?.typing ?? ['Untyped'];
+    }
+
     /** @override */
     prepareBaseData() {
         super.prepareBaseData();
@@ -328,20 +332,6 @@ class PTUPokemonActor extends PTUActor {
         system.stats = result.stats;
         system.levelUpPoints = system.levelUpPoints - result.pointsSpend;
 
-        const types = [];
-        if (system.modifiers?.typeOverwrite) {
-            const splitTypes = system.modifiers?.typeOverwrite?.split('/');
-            for (const type of splitTypes) {
-                if (CONFIG.PTU.data.typeEffectiveness[Handlebars.helpers.capitalizeFirst(type.toLowerCase())]) types.push(type);
-            }
-        }
-
-        system.typing = speciesSystem?.types ?? ['Untyped'];
-        if (types.length > 0) system.typing = types;
-
-        // for (const type of system.typing) {
-        //     this.flags.ptu.rollOptions.all["self:types:" + type.toLowerCase()] = true;
-        // }
         if (system.shiny) this.flags.ptu.rollOptions.all["self:pokemon:shiny"] = true;
 
         system.health.total = 10 + system.level.current + (system.stats.hp.total * 3);

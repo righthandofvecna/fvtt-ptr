@@ -6,11 +6,11 @@ export class TypeOverwriteRuleElement extends RuleElementPTU {
     super(data, item, options);
 
     this.value = value;
-    this.overwrite = overwrite;
+    this.overwrite = overwrite ?? true;
   }
 
   /** @override */
-  afterPrepareData() {
+  beforePrepareData() {
     const type = this.resolveInjectedProperties(this.value);
     const isArray = Array.isArray(type);
     if (isArray && type.some(t => typeof t !== "string")) return this.failValidation("Invalid value field");
@@ -31,8 +31,11 @@ export class TypeOverwriteRuleElement extends RuleElementPTU {
       return this.actor.synthetics.typeOverride.typing = [...realTypes]
     }
 
+    console.log("TypeOverwriteRuleElement beforePrepareData executing", { type, isArray, realTypes, overwrite: this.overwrite, typeOverride: this.actor?.synthetics?.typeOverride?.typing });
+
     if (!this.actor.synthetics.typeOverride.typing) {
-      this.actor.synthetics.typeOverride.typing = [];
+      console.log("Initializing typeOverride.typing with actor's current types", this.actor._calculateTyping());
+      this.actor.synthetics.typeOverride.typing = [...(this.actor._calculateTyping() ?? [])];
     }
     this.actor.synthetics.typeOverride.typing.push(...realTypes);
     for(const type of realTypes) {
