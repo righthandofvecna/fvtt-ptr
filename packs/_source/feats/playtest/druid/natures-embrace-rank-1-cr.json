@@ -107,7 +107,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.CDMHE36OXtK49jO4",
+            "value": "Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS",
             "label": "Sweet Scent",
             "predicate": [
               "capability:flower-hb",
@@ -195,7 +195,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.CDMHE36OXtK49jO4",
+            "value": "Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS",
             "label": "Sweet Scent",
             "predicate": [
               "capability:flower-hb",
@@ -284,7 +284,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.CDMHE36OXtK49jO4",
+            "value": "Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS",
             "label": "Sweet Scent",
             "predicate": [
               "capability:flower-hb",
@@ -336,7 +336,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -358,7 +359,8 @@
     "name": "Nature's Embrace [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "natures-embrace-rank-1",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

@@ -14,7 +14,8 @@
         "uuid": "Compendium.ptu.effects.Item.ciADvbrPLkN1ZMKb",
         "range": "",
         "value": "",
-        "affects": "target"
+        "affects": "target",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -93,5 +94,6 @@
       "automationStatus": "needs-automation",
       "devNote": ""
     }
-  }
+  },
+  "folder": null
 }
