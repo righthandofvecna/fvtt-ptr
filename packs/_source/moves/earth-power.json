@@ -2,7 +2,6 @@
   "name": "Earth Power",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GroundIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Earth Power lowers the Special Defense of all Legal Targets 1 Combat Stage on 16+.",
@@ -58,7 +57,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -82,7 +82,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "VZYf1f6nsz9bp7vw",
   "effects": [],
