@@ -410,6 +410,12 @@ class PTUPokemonActor extends PTUActor {
             training: calcLevelCap(this.trainer?.system.level.current ?? 0, 0), // The EXP Training Level Cap is based on the Level Cap without Friendship, it's the max level a Pokémon can reach through EXP Training
             amount: calcExpTrainingCap(), // The amount a Pokémon can gain from Daily EXP Training
         }
+
+        // TODO: add a migration to copy Shedinja's rule elements to pre-existing Pokemon, then remove this
+        if (this.species.slug === "shedinja") {
+            system.health.max = 1;
+            system.health.tick = 1;
+        }
     }
 
     _calcBaseStats() {
