@@ -2,7 +2,7 @@
   "name": "Nature's Embrace Rank 1",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn 3 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\nRank 1: Cotton Spore (None), Forest's Curse (None), Ingrain (Tree Oath), Mega Drain (None), Needle Arm (None), Razor Leaf (None), Stun Spore (Fungal Oath), Sweet Scent (Flower Oath)\nRank 2: Aromatherapy, (Flower Oath), Energy Ball, (None), Giga Drain, (Fungal Oath), Leaf Tornado, (Flower Oath), Magical Leaf, (None), Seed Bomb, (None), Spiky Shield, (Tree Oath), Strength Sap, (Fungal Oath)\nRank 3: Leech Seed (None), Petal Blizzard (Tree Oath), Petal Dance (Flower Oath), Power Whip (None), Solar Beam (None), Solar Blade (None), Spore (Fungal Oath), Wood Hammer (Tree Oath)",
+    "effect": "Effect: You learn 3 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\n<b>Rank 1:</b> @UUID[Compendium.ptu.moves.Item.08DZcCU0jqyEQ3jv]{Cotton Spore} (None), @UUID[Compendium.ptu.moves.Item.tx9xc6m8Z6bTqBcv]{Forest's Curse} (None), @UUID[Compendium.ptu.moves.Item.2ky0KrGcz81tQ5X3]{Ingrain} (Tree Oath), @UUID[Compendium.ptu.moves.Item.9PVNtUbbwbRhZimy]{Mega Drain} (None), @UUID[Compendium.ptu.moves.Item.JOu7BVqN29cQ2lj6]{Needle Arm} (None), @UUID[Compendium.ptu.moves.Item.wYz4RubDs84tDVul]{Razor Leaf} (None), @UUID[Compendium.ptu.moves.Item.XssTGMznjX8N33L7]{Stun Spore} (Fungal Oath), @UUID[Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS]{Sweet Scent} (Flower Oath)\n\n<b>Rank 2:</b> @UUID[Compendium.ptu.moves.Item.QzP3iamQFsN5S4FS]{Aromatherapy} (Flower Oath), @UUID[Compendium.ptu.moves.Item.GPc4UqyAsng4fPup]{Energy Ball} (None), @UUID[Compendium.ptu.moves.Item.mGvVlposKAYCa15m]{Giga Drain} (Fungal Oath), @UUID[Compendium.ptu.moves.Item.XKnzCG5ZGzGWMl5n]{Leaf Tornado} (Flower Oath), @UUID[Compendium.ptu.moves.Item.qFkD5vP06XSTPXlE]{Magical Leaf} (None), @UUID[Compendium.ptu.moves.Item.b18uGrjFdKGy0rBU]{Seed Bomb} (None), @UUID[Compendium.ptu.moves.Item.FvTnYPJPje5PF7sJ]{Spiky Shield} (Tree Oath), @UUID[Compendium.ptu.moves.Item.SXOzsTxC6DllLznC]{Strength Sap} (Fungal Oath)\n\n<b>Rank 3:</b> @UUID[Compendium.ptu.moves.Item.Jx4TeOVUk1DX8R45]{Leech Seed} (None), @UUID[Compendium.ptu.moves.Item.rlwUWKRTSzWzLfuk]{Petal Blizzard} (Tree Oath), @UUID[Compendium.ptu.moves.Item.JEquTUzbVYPNvhNp]{Petal Dance} (Flower Oath), @UUID[Compendium.ptu.moves.Item.6tEUiL2W8EBFwkEU]{Power Whip} (None), @UUID[Compendium.ptu.moves.Item.Oa9NuYFi7yvPQTIO]{Solar Beam} (None), @UUID[Compendium.ptu.moves.Item.YyHGCfDVQQkCkOc4]{Solar Blade} (None), @UUID[Compendium.ptu.moves.Item.soZ40VFFxCDiniJu]{Spore} (Fungal Oath), @UUID[Compendium.ptu.moves.Item.EOjVWwZLa33n8M7P]{Wood Hammer} (Tree Oath)",
     "snippet": "",
     "rules": [
       {
@@ -107,7 +107,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.CDMHE36OXtK49jO4",
+            "value": "Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS",
             "label": "Sweet Scent",
             "predicate": [
               "capability:flower-hb",
@@ -195,7 +195,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.CDMHE36OXtK49jO4",
+            "value": "Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS",
             "label": "Sweet Scent",
             "predicate": [
               "capability:flower-hb",
@@ -284,7 +284,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.CDMHE36OXtK49jO4",
+            "value": "Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS",
             "label": "Sweet Scent",
             "predicate": [
               "capability:flower-hb",
@@ -336,7 +336,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -358,7 +359,8 @@
     "name": "Nature's Embrace [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "natures-embrace-rank-1",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -372,7 +374,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   },
