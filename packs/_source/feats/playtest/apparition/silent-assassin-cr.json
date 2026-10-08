@@ -13,6 +13,12 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.27U7ZioOgyZFzxDx"
       }
     ],
     "enabled": true,
@@ -49,7 +55,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -72,7 +79,8 @@
     "name": "Silent Assassin [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "silent-assassin",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
