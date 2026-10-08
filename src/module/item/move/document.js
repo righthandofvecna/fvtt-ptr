@@ -306,11 +306,11 @@ class PTUMove extends PTUItem {
         if (!this.actor.canHostRuleElements) return (this.rules = []);
         super.prepareRuleElements(options);
         
-        // add an Apply Effect for this move if it has a reference effect and isn't rollable
+        // add an Apply Effect for this move if it has a reference effect and no other rules
         // This is to support legacy items that don't have the apply effects set up for them
         // and instead relied on the use() auto-applying the reference effect
         // TODO: replace this with a migration script and remove the referenceEffect field
-        if (!this.rollable && this.system.frequency?.type !== "static" && this.referenceEffect) {
+        if (this.system.frequency?.type !== "static" && this.referenceEffect && (this.system.rules?.length ?? 0) === 0) {
             try {
                 const { ApplyEffect } = RuleElements.builtin;
                 const affects = this.range.includes("Self") ? "origin" : "target";
