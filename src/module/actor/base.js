@@ -446,6 +446,23 @@ class PTUActor extends Actor {
         return this.system?.contests; // Implement in subclasses
     }
 
+    _calculateTyping() {
+        const system = this.system;
+
+        if (this.synthetics.typeOverride.typing) return this.synthetics.typeOverride.typing;
+
+        const types = [];
+        if (system.modifiers?.typeOverwrite) {
+            const splitTypes = system.modifiers?.typeOverwrite?.split('/');
+            for (const type of splitTypes) {
+                if (CONFIG.PTU.data.typeEffectiveness[Handlebars.helpers.capitalizeFirst(type.toLowerCase())]) types.push(type);
+            }
+        }
+        if (types.length > 0) return types;
+
+        return system.typing;
+    }
+
     /** @override */
     _initialize() {
         this._itemTypes = null;
@@ -540,12 +557,6 @@ class PTUActor extends Actor {
 
         this.system.spirit.weary = this.system.spirit.value >= 0 ? 0 : Math.abs(this.system.spirit.value);
 
-        // Extra Rolloptions before 'After Derived' hooks get called
-        if (!this.types.includes("Untyped")) delete this.flags.ptu.rollOptions.all["self:types:untyped"]
-        for (const type of this.types) {
-            this.flags.ptu.rollOptions.all["self:types:" + type.toLowerCase()] = true;
-        }
-
         // Mark the currently-active combatant so predicates can gate on it
         if (game.combat?.combatant?.actor?.uuid === this.uuid) {
             this.flags.ptu.rollOptions.all["turn:active"] = true;
@@ -562,6 +573,14 @@ class PTUActor extends Actor {
         // Call post-derived-preparation `RuleElement` hooks
         for (const rule of this.rules) {
             rule.afterPrepareData?.();
+        }
+
+        this.system.typing = this._calculateTyping();
+
+        // Extra Rolloptions before 'After Derived' hooks get called
+        if (!this.types.includes("Untyped")) delete this.flags.ptu.rollOptions.all["self:types:untyped"]
+        for (const type of this.types) {
+            this.flags.ptu.rollOptions.all["self:types:" + type.toLowerCase()] = true;
         }
 
         // combat stage roll options

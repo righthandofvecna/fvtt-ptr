@@ -445,7 +445,7 @@
       "Legendary",
       "Galar"
     ],
-    "enabled": false,
+    "enabled": true,
     "contentSet": "",
     "replacesSlug": ""
   },

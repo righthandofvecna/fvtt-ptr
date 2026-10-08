@@ -43,25 +43,30 @@
         </button>
       </summary>
 
-      <ul class="test-list">
-        {{#each tests}}
-        <li class="test-result status-{{status}}">
-          <span class="test-icon">
-            {{#if (eq status "pass")}}<i class="fas fa-check-circle"></i>{{/if}}
-            {{#if (eq status "fail")}}<i class="fas fa-times-circle"></i>{{/if}}
-            {{#if (eq status "running")}}<i class="fas fa-spinner fa-spin"></i>{{/if}}
-            {{#if (eq status "pending")}}<i class="far fa-circle"></i>{{/if}}
-          </span>
-          <span class="test-name">{{name}}</span>
-          {{#if duration}}
-            <span class="test-duration">{{duration}}ms</span>
-          {{/if}}
-          {{#if error}}
-            <pre class="test-error">{{error}}</pre>
-          {{/if}}
-        </li>
-        {{/each}}
-      </ul>
+        <ul class="test-list">
+          {{#each tests}}
+          <li class="test-result status-{{status}}">
+            <span class="test-icon">
+              {{#if (eq status "pass")}}<i class="fas fa-check-circle"></i>{{/if}}
+              {{#if (eq status "fail")}}<i class="fas fa-times-circle"></i>{{/if}}
+              {{#if (eq status "running")}}<i class="fas fa-spinner fa-spin"></i>{{/if}}
+              {{#if (eq status "pending")}}<i class="far fa-circle"></i>{{/if}}
+            </span>
+            <span class="test-name">{{name}}</span>
+            {{#if duration}}
+              <span class="test-duration">{{duration}}ms</span>
+            {{/if}}
+            <button type="button" class="btn-run-test" title="Run this test"
+              data-action="runTest" data-key="{{testKey}}"
+              {{#if @root.isRunning}}disabled{{/if}}>
+              <i class="fas fa-play"></i>
+            </button>
+            {{#if error}}
+              <pre class="test-error">{{error}}</pre>
+            {{/if}}
+          </li>
+          {{/each}}
+        </ul>
     </details>
     {{/each}}
   </div>

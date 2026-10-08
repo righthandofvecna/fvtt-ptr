@@ -525,7 +525,7 @@
       "2": ""
     },
     "stackSlugs": false,
-    "enabled": false,
+    "enabled": true,
     "contentSet": "",
     "replacesSlug": ""
   },

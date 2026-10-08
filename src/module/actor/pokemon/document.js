@@ -338,7 +338,6 @@ class PTUPokemonActor extends PTUActor {
 
         system.typing = speciesSystem?.types ?? ['Untyped'];
         if (types.length > 0) system.typing = types;
-        if (this.synthetics.typeOverride.typing) system.typing = this.synthetics.typeOverride.typing;
 
         // for (const type of system.typing) {
         //     this.flags.ptu.rollOptions.all["self:types:" + type.toLowerCase()] = true;
@@ -412,9 +411,7 @@ class PTUPokemonActor extends PTUActor {
             amount: calcExpTrainingCap(), // The amount a Pokémon can gain from Daily EXP Training
         }
 
-        /* The Corner of Exceptions */
-
-        // Shedinja will always be a special case.
+        // TODO: add a migration to copy Shedinja's rule elements to pre-existing Pokemon, then remove this
         if (this.species.slug === "shedinja") {
             system.health.max = 1;
             system.health.tick = 1;

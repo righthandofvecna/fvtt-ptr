@@ -38,6 +38,7 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- You can now use the Original PTU Stat Calculations
 - Migrations are now applied to compendiums
 - Configured Condensed and Extended tracks to use the Trainer Level Up Wizard
 - Added "Repeatable" checkbox for Features and Edges

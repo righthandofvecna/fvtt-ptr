@@ -534,7 +534,7 @@
       "Sinnoh"
     ],
     "stackSlugs": false,
-    "enabled": false,
+    "enabled": true,
     "contentSet": "",
     "replacesSlug": ""
   },

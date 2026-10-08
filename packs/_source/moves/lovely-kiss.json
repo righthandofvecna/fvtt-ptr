@@ -2,12 +2,24 @@
   "name": "Lovely Kiss",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target fall Asleep.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [
+          "attack:outcome:hit"
+        ],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.RekZDOcIsADhrfH3",
+        "range": "",
+        "linked": false,
+        "value": "",
+        "affects": "target"
+      }
+    ],
     "enabled": true,
     "slug": "lovely-kiss",
     "schema": {
@@ -48,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -72,7 +85,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "FtteBhLvsPR6XCEk",
   "effects": [],
@@ -82,7 +96,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

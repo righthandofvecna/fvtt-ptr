@@ -342,7 +342,8 @@ class MigrationRunner extends MigrationRunnerBase {
         // migrate non-system compendiums
         for (const compendium of game.packs) {
             if (compendium.metadata.packageType === "system") continue;
-            promises.push(this.#migrateDocuments(compendium, migrations));
+            // get all the documents so they're loaded
+            promises.push(compendium.getDocuments().then(() => this.#migrateDocuments(compendium, migrations)));
         }
 
         // Then we should wait for the promises to complete before updating the tokens
