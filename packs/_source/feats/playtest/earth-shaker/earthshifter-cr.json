@@ -2,7 +2,7 @@
   "name": "Earthshifter",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You hit with a damaging Ground Type Move\nEffect: You initiate a Trip Maneuver against 1 target of the Move. The Maneuver automatically hits, and you may use your Focus or Intuition for the opposed check.",
+    "effect": "Trigger: You hit with a damaging Ground Type Move\nEffect: You initiate a @UUID[Compendium.ptu.moves.Item.wF3ORK20xylO1ZGs]{Trip Maneuver} against 1 target of the Move. The Maneuver automatically hits, and you may use your Focus or Intuition for the opposed check.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +70,9 @@
     "class": "Earth Shaker",
     "name": "Earthshifter [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "earthshifter"
+    "replacesSlug": "earthshifter",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -80,7 +83,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

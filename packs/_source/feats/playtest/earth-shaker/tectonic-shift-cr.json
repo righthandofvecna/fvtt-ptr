@@ -2,7 +2,7 @@
   "name": "Tectonic Shift",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Pick three of Dig, Earthquake, Earth Power, Sand Tomb, or Scorching Sands. You learn the chosen Moves.",
+    "effect": "Effect: Pick three of @UUID[Compendium.ptu.moves.Item.AVg7omn9VOzv0724]{Dig}, @UUID[Compendium.ptu.moves.Item.qQGrbuuO6EcG6b7c]{Earthquake}, @UUID[Compendium.ptu.moves.Item.VZYf1f6nsz9bp7vw]{Earth Power}, @UUID[Compendium.ptu.moves.Item.gL2f9k8qYJ1OwiZO]{Sand Tomb}, or @UUID[Compendium.ptu.moves.Item.GREJ4tNJ9P0BMBOx]{Scorching Sands}. You learn the chosen Moves.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,180 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.AVg7omn9VOzv0724",
+            "label": "Dig",
+            "predicate": [
+              {
+                "not": "move:dig"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.qQGrbuuO6EcG6b7c",
+            "label": "Earthquake",
+            "predicate": [
+              {
+                "not": "move:earthquake"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.VZYf1f6nsz9bp7vw",
+            "label": "Earth Power",
+            "predicate": [
+              {
+                "not": "move:earth-power"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.gL2f9k8qYJ1OwiZO",
+            "label": "Sand Tomb",
+            "predicate": [
+              {
+                "not": "move:sand-tomb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.GREJ4tNJ9P0BMBOx",
+            "label": "Scorching Sands",
+            "predicate": [
+              {
+                "not": "move:scorching-sands"
+              }
+            ]
+          }
+        ],
+        "flag": "tectonic1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.tectonic1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.AVg7omn9VOzv0724",
+            "label": "Dig",
+            "predicate": [
+              {
+                "not": "move:dig"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.qQGrbuuO6EcG6b7c",
+            "label": "Earthquake",
+            "predicate": [
+              {
+                "not": "move:earthquake"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.VZYf1f6nsz9bp7vw",
+            "label": "Earth Power",
+            "predicate": [
+              {
+                "not": "move:earth-power"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.gL2f9k8qYJ1OwiZO",
+            "label": "Sand Tomb",
+            "predicate": [
+              {
+                "not": "move:sand-tomb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.GREJ4tNJ9P0BMBOx",
+            "label": "Scorching Sands",
+            "predicate": [
+              {
+                "not": "move:scorching-sands"
+              }
+            ]
+          }
+        ],
+        "flag": "tectonic2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.tectonic2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.AVg7omn9VOzv0724",
+            "label": "Dig",
+            "predicate": [
+              {
+                "not": "move:dig"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.qQGrbuuO6EcG6b7c",
+            "label": "Earthquake",
+            "predicate": [
+              {
+                "not": "move:earthquake"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.VZYf1f6nsz9bp7vw",
+            "label": "Earth Power",
+            "predicate": [
+              {
+                "not": "move:earth-power"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.gL2f9k8qYJ1OwiZO",
+            "label": "Sand Tomb",
+            "predicate": [
+              {
+                "not": "move:sand-tomb"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.GREJ4tNJ9P0BMBOx",
+            "label": "Scorching Sands",
+            "predicate": [
+              {
+                "not": "move:scorching-sands"
+              }
+            ]
+          }
+        ],
+        "flag": "tectonic3",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.tectonic3}"
       }
     ],
     "enabled": true,
@@ -48,7 +222,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +245,9 @@
     "class": "Earth Shaker",
     "name": "Tectonic Shift [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "tectonic-shift"
+    "replacesSlug": "tectonic-shift",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -83,7 +260,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

@@ -2,7 +2,6 @@
   "name": "Magnitude",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GroundIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "When you use Magnitude, roll 1d6. Magnitude's Damage Base is equal to 5+X, where X is the value of the d6. Magnitude can hit targets that are underground, including those using the Move Dig. *Grants: Groundshaper",
@@ -47,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -63,7 +63,7 @@
     "type": "Ground",
     "category": "Physical",
     "damageBase": "X, See Effect",
-    "ac": 2,
+    "ac": "2",
     "range": "Burst 2",
     "contestType": "Tough - Desperation",
     "stab": false,
@@ -71,7 +71,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "Rgd3Ev4mWj8aldu1",
   "effects": [],
@@ -79,7 +80,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
