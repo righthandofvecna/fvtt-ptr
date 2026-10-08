@@ -28,7 +28,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.LFXTWLGgubZLuiBk",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +72,8 @@
     "name": "Shadow Form [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "shadow-form",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
