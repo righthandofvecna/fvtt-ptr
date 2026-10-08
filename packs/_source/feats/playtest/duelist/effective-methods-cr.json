@@ -2,7 +2,7 @@
   "name": "Effective Methods",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: Your Pokémon with at least 2 Tutor Points remaining\nEffect: Your Pokémon loses 2 Tutor Points and gains your choice of the Exploit or Tolerance Ability. You may only target a Pokémon once with Effective Methods.",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot remaining\nEffect: Your Pokémon loses 1 Tutor Slot and gains your choice of the @UUID[Compendium.ptu.abilities.Item.v7Kuq1b1d7bPqLcU]{Exploit} or @UUID[Compendium.ptu.abilities.Item.7yg8Y7g7p8Uil1YT]{Tolerance} Ability. You may only target a Pokémon once with Effective Methods.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +59,9 @@
     "class": "Duelist",
     "name": "Effective Methods [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "effective-methods"
+    "replacesSlug": "effective-methods",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -69,7 +72,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

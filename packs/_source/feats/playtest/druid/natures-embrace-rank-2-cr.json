@@ -64,7 +64,7 @@
             "value": "Compendium.ptu.moves.Item.2ky0KrGcz81tQ5X3",
             "label": "Ingrain",
             "predicate": [
-              "capability:tree-hb",
+              "capability:tree-oath",
               {
                 "not": "move:ingrain"
               }
@@ -101,7 +101,7 @@
             "value": "Compendium.ptu.moves.Item.XssTGMznjX8N33L7",
             "label": "Stun Spore",
             "predicate": [
-              "capability:fungal-hb",
+              "capability:fungal-oath",
               {
                 "not": "move:stun-spore"
               }
@@ -111,7 +111,7 @@
             "value": "Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS",
             "label": "Sweet Scent",
             "predicate": [
-              "capability:flower-hb",
+              "capability:flower-oath",
               {
                 "not": "move:sweet-scent"
               }
@@ -121,7 +121,7 @@
             "value": "Compendium.ptu.moves.Item.QzP3iamQFsN5S4FS",
             "label": "Aromatherapy",
             "predicate": [
-              "capability:flower-hb",
+              "capability:flower-oath",
               {
                 "not": "move:aromatherapy"
               }
@@ -140,7 +140,7 @@
             "value": "Compendium.ptu.moves.Item.mGvVlposKAYCa15m",
             "label": "Giga Drain",
             "predicate": [
-              "capability:fungal-hb",
+              "capability:fungal-oath",
               {
                 "not": "move:giga-drain"
               }
@@ -150,7 +150,7 @@
             "value": "Compendium.ptu.moves.Item.XKnzCG5ZGzGWMl5n",
             "label": "Leaf Tornado",
             "predicate": [
-              "capability:flower-hb",
+              "capability:flower-oath",
               {
                 "not": "move:leaf-tornado"
               }
@@ -178,7 +178,7 @@
             "value": "Compendium.ptu.moves.Item.FvTnYPJPje5PF7sJ",
             "label": "Spiky Shield",
             "predicate": [
-              "capability:tree-hb",
+              "capability:tree-oath",
               {
                 "not": "move:spiky-shield"
               }
@@ -188,7 +188,7 @@
             "value": "Compendium.ptu.moves.Item.SXOzsTxC6DllLznC",
             "label": "Strength Sap",
             "predicate": [
-              "capability:fungal-hb",
+              "capability:fungal-oath",
               {
                 "not": "move:strength-sap"
               }
@@ -229,7 +229,7 @@
             "value": "Compendium.ptu.moves.Item.2ky0KrGcz81tQ5X3",
             "label": "Ingrain",
             "predicate": [
-              "capability:tree-hb",
+              "capability:tree-oath",
               {
                 "not": "move:ingrain"
               }
@@ -266,7 +266,7 @@
             "value": "Compendium.ptu.moves.Item.XssTGMznjX8N33L7",
             "label": "Stun Spore",
             "predicate": [
-              "capability:fungal-hb",
+              "capability:fungal-oath",
               {
                 "not": "move:stun-spore"
               }
@@ -276,7 +276,7 @@
             "value": "Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS",
             "label": "Sweet Scent",
             "predicate": [
-              "capability:flower-hb",
+              "capability:flower-oath",
               {
                 "not": "move:sweet-scent"
               }
@@ -286,7 +286,7 @@
             "value": "Compendium.ptu.moves.Item.QzP3iamQFsN5S4FS",
             "label": "Aromatherapy",
             "predicate": [
-              "capability:flower-hb",
+              "capability:flower-oath",
               {
                 "not": "move:aromatherapy"
               }
@@ -305,7 +305,7 @@
             "value": "Compendium.ptu.moves.Item.mGvVlposKAYCa15m",
             "label": "Giga Drain",
             "predicate": [
-              "capability:fungal-hb",
+              "capability:fungal-oath",
               {
                 "not": "move:giga-drain"
               }
@@ -315,7 +315,7 @@
             "value": "Compendium.ptu.moves.Item.XKnzCG5ZGzGWMl5n",
             "label": "Leaf Tornado",
             "predicate": [
-              "capability:flower-hb",
+              "capability:flower-oath",
               {
                 "not": "move:leaf-tornado"
               }
@@ -343,7 +343,7 @@
             "value": "Compendium.ptu.moves.Item.FvTnYPJPje5PF7sJ",
             "label": "Spiky Shield",
             "predicate": [
-              "capability:tree-hb",
+              "capability:tree-oath",
               {
                 "not": "move:spiky-shield"
               }
@@ -353,7 +353,7 @@
             "value": "Compendium.ptu.moves.Item.SXOzsTxC6DllLznC",
             "label": "Strength Sap",
             "predicate": [
-              "capability:fungal-hb",
+              "capability:fungal-oath",
               {
                 "not": "move:strength-sap"
               }
@@ -394,7 +394,7 @@
             "value": "Compendium.ptu.moves.Item.2ky0KrGcz81tQ5X3",
             "label": "Ingrain",
             "predicate": [
-              "capability:tree-hb",
+              "capability:tree-oath",
               {
                 "not": "move:ingrain"
               }
@@ -431,7 +431,7 @@
             "value": "Compendium.ptu.moves.Item.XssTGMznjX8N33L7",
             "label": "Stun Spore",
             "predicate": [
-              "capability:fungal-hb",
+              "capability:fungal-oath",
               {
                 "not": "move:stun-spore"
               }
@@ -441,7 +441,7 @@
             "value": "Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS",
             "label": "Sweet Scent",
             "predicate": [
-              "capability:flower-hb",
+              "capability:flower-oath",
               {
                 "not": "move:sweet-scent"
               }
@@ -451,7 +451,7 @@
             "value": "Compendium.ptu.moves.Item.QzP3iamQFsN5S4FS",
             "label": "Aromatherapy",
             "predicate": [
-              "capability:flower-hb",
+              "capability:flower-oath",
               {
                 "not": "move:aromatherapy"
               }
@@ -470,7 +470,7 @@
             "value": "Compendium.ptu.moves.Item.mGvVlposKAYCa15m",
             "label": "Giga Drain",
             "predicate": [
-              "capability:fungal-hb",
+              "capability:fungal-oath",
               {
                 "not": "move:giga-drain"
               }
@@ -480,7 +480,7 @@
             "value": "Compendium.ptu.moves.Item.XKnzCG5ZGzGWMl5n",
             "label": "Leaf Tornado",
             "predicate": [
-              "capability:flower-hb",
+              "capability:flower-oath",
               {
                 "not": "move:leaf-tornado"
               }
@@ -508,7 +508,7 @@
             "value": "Compendium.ptu.moves.Item.FvTnYPJPje5PF7sJ",
             "label": "Spiky Shield",
             "predicate": [
-              "capability:tree-hb",
+              "capability:tree-oath",
               {
                 "not": "move:spiky-shield"
               }
@@ -518,7 +518,7 @@
             "value": "Compendium.ptu.moves.Item.SXOzsTxC6DllLznC",
             "label": "Strength Sap",
             "predicate": [
-              "capability:fungal-hb",
+              "capability:fungal-oath",
               {
                 "not": "move:strength-sap"
               }
@@ -590,7 +590,8 @@
     "name": "Nature's Embrace [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "natures-embrace-rank-2",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

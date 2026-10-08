@@ -12,6 +12,8 @@ class TypeOverwriteForm extends RuleElementForm {
         const valueIsArray = Array.isArray(this.rule.value);
         const types = Object.keys(CONFIG.PTU.data.typeEffectiveness ?? {});
 
+        data.rule.overwrite ??= true;
+
         return {
             ...data,
             valueIsArray,
@@ -40,9 +42,6 @@ class TypeOverwriteForm extends RuleElementForm {
         if (!formData.value || (Array.isArray(formData.value) && !formData.value.length)) {
             delete formData.value;
         }
-
-        // overwrite defaults to false; delete it when false to keep data lean
-        if (!formData.overwrite) delete formData.overwrite;
     }
 }
 

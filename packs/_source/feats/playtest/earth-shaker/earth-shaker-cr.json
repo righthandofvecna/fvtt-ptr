@@ -2,7 +2,7 @@
   "name": "Earth Shaker",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Pick three of Bulldoze, Mud Shot, Mud-Slap, Mud Sport, or Sand-Attack. You learn the chosen Moves.",
+    "effect": "Effect: Pick three of @UUID[Compendium.ptu.moves.Item.J2l5Cmp9LEW7Jvgu]{Bulldoze}, @UUID[Compendium.ptu.moves.Item.qBTkrmyYzB0z6MVB]{Mud Shot}, @UUID[Compendium.ptu.moves.Item.rDlHKWGG9k3AxIlP]{Mud-Slap}, @UUID[Compendium.ptu.moves.Item.GorxsfqD0s09olBW]{Mud Sport}, or @UUID[Compendium.ptu.moves.Item.IU5XxUVfxPggP6Rx]{Sand Attack}. You learn the chosen Moves.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,180 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.J2l5Cmp9LEW7Jvgu",
+            "label": "Bulldoze",
+            "predicate": [
+              {
+                "not": "move:bulldoze"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.qBTkrmyYzB0z6MVB",
+            "label": "Mud Shot",
+            "predicate": [
+              {
+                "not": "move:mud-shot"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.rDlHKWGG9k3AxIlP",
+            "label": "Mud-Slap",
+            "predicate": [
+              {
+                "not": "move:mud-slap"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.GorxsfqD0s09olBW",
+            "label": "Mud Sport",
+            "predicate": [
+              {
+                "not": "move:mud-sport"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.IU5XxUVfxPggP6Rx",
+            "label": "Sand Attack",
+            "predicate": [
+              {
+                "not": "move:sand-attack"
+              }
+            ]
+          }
+        ],
+        "flag": "shaker1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.shaker1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.J2l5Cmp9LEW7Jvgu",
+            "label": "Bulldoze",
+            "predicate": [
+              {
+                "not": "move:bulldoze"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.qBTkrmyYzB0z6MVB",
+            "label": "Mud Shot",
+            "predicate": [
+              {
+                "not": "move:mud-shot"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.rDlHKWGG9k3AxIlP",
+            "label": "Mud-Slap",
+            "predicate": [
+              {
+                "not": "move:mud-slap"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.GorxsfqD0s09olBW",
+            "label": "Mud Sport",
+            "predicate": [
+              {
+                "not": "move:mud-sport"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.IU5XxUVfxPggP6Rx",
+            "label": "Sand Attack",
+            "predicate": [
+              {
+                "not": "move:sand-attack"
+              }
+            ]
+          }
+        ],
+        "flag": "shaker2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.shaker2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.J2l5Cmp9LEW7Jvgu",
+            "label": "Bulldoze",
+            "predicate": [
+              {
+                "not": "move:bulldoze"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.qBTkrmyYzB0z6MVB",
+            "label": "Mud Shot",
+            "predicate": [
+              {
+                "not": "move:mud-shot"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.rDlHKWGG9k3AxIlP",
+            "label": "Mud-Slap",
+            "predicate": [
+              {
+                "not": "move:mud-slap"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.GorxsfqD0s09olBW",
+            "label": "Mud Sport",
+            "predicate": [
+              {
+                "not": "move:mud-sport"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.IU5XxUVfxPggP6Rx",
+            "label": "Sand Attack",
+            "predicate": [
+              {
+                "not": "move:sand-attack"
+              }
+            ]
+          }
+        ],
+        "flag": "shaker3",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.shaker3}"
       }
     ],
     "enabled": true,
@@ -49,7 +223,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +246,9 @@
     "class": "Earth Shaker",
     "name": "Earth Shaker [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "earth-shaker"
+    "replacesSlug": "earth-shaker",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -84,7 +261,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
