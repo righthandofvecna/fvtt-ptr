@@ -1,0 +1,66 @@
+{
+  "name": "Effect: Shadow Form",
+  "type": "effect",
+  "_id": "LFXTWLGgubZLuiBk",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Your natural Weaknesses, Resistances, and Immunities change to match that of the Ghost Type. Additionally, while in Shadow Form, you are immune to the @UUID[Compendium.ptu.effects.Item.Su7r4LU2xSVK9WY6]{Cursed} Status (if you were previously Cursed, you are instantly cured upon going into Shadow Form) and gain the @UUID[Compendium.ptu.capabilities.Item.rJqBxh0Nwwqwu6ev]{Phasing} Capability. You may unbind this Feature as a Rapid Action, returning to your normal appearance.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.effects.Item.2AGJE1Rc3gfloE93"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.rJqBxh0Nwwqwu6ev"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-shadow-form",
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "Uv4mgOt4xtb28hzB",
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Lacks Cursed status immunity",
+      "showInTokenPanel": false
+    }
+  }
+}
