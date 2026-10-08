@@ -412,14 +412,6 @@ class PTUPokemonActor extends PTUActor {
         }
     }
 
-    postPrepareDerivedData() {
-        super.postPrepareDerivedData();
-        const system = this.system;
-
-        // Apply type override if it exists in the synthetics data.
-        if (this.synthetics.typeOverride.typing) system.typing = this.synthetics.typeOverride.typing;
-    }
-
     _calcBaseStats() {
         const stats = foundry.utils.duplicate(this.system.stats);
 
