@@ -54,7 +54,9 @@
   "folder": "A1BMh0oUl6hmIRqv",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "scene-packer": {
       "hash": "a2f0ad8c1ab1e41c39236fb7b1d971846375a267",
