@@ -7,9 +7,22 @@
     "origin": "",
     "effect": "The user and allies within range become Pumped. While Pumped, the user's Critical Range is extended by 2, or 18+ if the Critical Range is not otherwise extended. Being switched will cause this effect to end. @UUID[Compendium.ptu.effects.Item.GGzbwfYV5wqMIF9u]{Dragon Cheer}\n\n\nDragon-Types instead gain the Dragon Cheer effect, extending their Critical Range by 4, or 16+ if the Critical Range is not otherwise extended. Being switched will cause this effect to end. @UUID[Compendium.ptu.effects.Item.n9OtXvRaxOgx1dQc]{Dragon Cheer: Dragon Type}",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "affects": "target",
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.n9OtXvRaxOgx1dQc",
+        "range": "",
+        "linked": false,
+        "value": ""
+      }
+    ],
     "enabled": true,
     "slug": "dragon-cheer",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -45,7 +58,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": 0
     },
     "actionCost": {
       "standard": true,
@@ -58,6 +72,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Dragon",
     "category": "Status",
     "damageBase": "",
@@ -66,14 +81,14 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false,
-    "contentSet": "",
-    "replacesSlug": ""
+    "isStruggle": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     },
     "LocknKey": {
       "IDKeysFlag": "",
@@ -86,11 +101,11 @@
     }
   },
   "_stats": {
-    "coreVersion": "13.351",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.50",
     "createdTime": 1721747226102,
-    "modifiedTime": 1778200825703,
+    "modifiedTime": 1791493991209,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

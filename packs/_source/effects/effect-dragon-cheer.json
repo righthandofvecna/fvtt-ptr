@@ -1,5 +1,5 @@
 {
-  "name": "Effect: Dragon Cheer: Dragon Type",
+  "name": "Effect: Dragon Cheer",
   "type": "effect",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
@@ -9,16 +9,29 @@
     "rules": [
       {
         "key": "ActiveEffectLike",
-        "predicate": [],
+        "predicate": [
+          "self:types:dragon"
+        ],
         "mode": "add",
         "path": "system.modifiers.critRange.mod",
         "phase": "applyAEs",
         "value": 4,
         "priority": null
+      },
+      {
+        "key": "GrantItem",
+        "predicate": {
+          "not": "self:types:dragon"
+        },
+        "allowDuplicate": false,
+        "replaceSelf": true,
+        "uuid": "Compendium.ptu.effects.Item.GGzbwfYV5wqMIF9u"
       }
     ],
     "enabled": true,
-    "slug": "effect-dragon-cheer-dragon-type",
+    "slug": "effect-dragon-cheer",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.115,
       "lastMigration": {
@@ -41,7 +54,7 @@
     },
     "duration": {
       "value": -1,
-      "unit": "unlimited",
+      "unit": "encounter",
       "expiry": null
     },
     "start": {
@@ -53,15 +66,15 @@
       "show": true
     },
     "badge": null,
-    "context": null,
-    "contentSet": "",
-    "replacesSlug": ""
+    "context": null
   },
   "effects": [],
   "folder": null,
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     },
     "LocknKey": {
       "IDKeysFlag": "",
@@ -75,10 +88,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.3.v12-beta.1",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.50",
+    "coreVersion": "14.367",
     "createdTime": 1710126979111,
-    "modifiedTime": 1739707512616,
+    "modifiedTime": 1791494059286,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
