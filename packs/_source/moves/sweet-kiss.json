@@ -2,12 +2,36 @@
   "name": "Sweet Kiss",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FairyIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target is Confused. On miss, the target suffers a -2 penalty to Accuracy Rolls for one full round.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [
+          "attack:outcome:hit"
+        ],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH",
+        "range": "",
+        "linked": false,
+        "value": "",
+        "affects": "target"
+      },
+      {
+        "key": "ApplyEffect",
+        "predicate": [
+          "attack:outcome:miss"
+        ],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.Kf9C7xC6S6ubiUzx",
+        "range": "",
+        "linked": false,
+        "value": "",
+        "affects": "target"
+      }
+    ],
     "enabled": true,
     "slug": "sweet-kiss",
     "schema": {
@@ -48,7 +72,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
