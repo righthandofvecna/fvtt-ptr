@@ -7,7 +7,18 @@
     "origin": "",
     "effect": "The user and allies within range become Pumped. While Pumped, the user's Critical Range is extended by 2, or 18+ if the Critical Range is not otherwise extended. Being switched will cause this effect to end. @UUID[Compendium.ptu.effects.Item.GGzbwfYV5wqMIF9u]{Dragon Cheer}\n\n\nDragon-Types instead gain the Dragon Cheer effect, extending their Critical Range by 4, or 16+ if the Critical Range is not otherwise extended. Being switched will cause this effect to end. @UUID[Compendium.ptu.effects.Item.n9OtXvRaxOgx1dQc]{Dragon Cheer: Dragon Type}",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "affects": "target",
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.n9OtXvRaxOgx1dQc",
+        "range": "",
+        "linked": false,
+        "value": ""
+      }
+    ],
     "enabled": true,
     "slug": "dragon-cheer",
     "schema": {
@@ -45,7 +56,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": 0
     },
     "actionCost": {
       "standard": true,
@@ -68,12 +80,15 @@
     "damageBonus": 0,
     "isStruggle": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     },
     "LocknKey": {
       "IDKeysFlag": "",
