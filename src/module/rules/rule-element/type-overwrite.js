@@ -31,10 +31,7 @@ export class TypeOverwriteRuleElement extends RuleElementPTU {
       return this.actor.synthetics.typeOverride.typing = [...realTypes]
     }
 
-    console.log("TypeOverwriteRuleElement beforePrepareData executing", { type, isArray, realTypes, overwrite: this.overwrite, typeOverride: this.actor?.synthetics?.typeOverride?.typing });
-
     if (!this.actor.synthetics.typeOverride.typing) {
-      console.log("Initializing typeOverride.typing with actor's current types", this.actor._calculateTyping());
       this.actor.synthetics.typeOverride.typing = [...(this.actor._calculateTyping() ?? [])];
     }
     this.actor.synthetics.typeOverride.typing.push(...realTypes);
