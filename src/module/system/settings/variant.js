@@ -74,6 +74,12 @@ const VariantSettingsConfig = {
         hint: "Enable the PP (Power Points) variant rule. Items gain a PP cost and actors have a PP pool of 64.",
         type: Boolean,
         default: false,
+    },
+    "pokemonLevelTied": {
+        name: "PTU.Settings.Variant.PokemonLevelTied.Name",
+        hint: "PTU.Settings.Variant.PokemonLevelTied.Hint",
+        type: Boolean,
+        default: false,
     }
 }
 

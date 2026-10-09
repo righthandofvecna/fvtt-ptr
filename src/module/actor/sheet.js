@@ -83,6 +83,7 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
 		const data = await super.getData();
 		data.config = CONFIG.PTU.data;
 		data.ppVariant = game.settings.get("ptu", "variant.usePP");
+        data.isGM = game.user.isGM;
         return data;
     }
 

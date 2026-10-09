@@ -211,7 +211,7 @@
                             </div>
                         </div>
 
-                        {{#if (and (getGameSetting "automation.xpToTrainerPool") actor.system.level.xpPool.length)}}
+                        {{#if (and (not (getGameSetting "variant.pokemonLevelTied")) (getGameSetting "automation.xpToTrainerPool") actor.system.level.xpPool.length )}}
                         <div class="w-100 level-box mt-1 mb-1">
                             <div class="swsh-box" style="text-align: center; word-break: keep-all;">
                                 <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight p-1">

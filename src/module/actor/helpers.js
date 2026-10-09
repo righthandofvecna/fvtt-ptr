@@ -365,16 +365,16 @@ function calculateEvasions(data, ptuFlags, actor_items) {
     return evasion;
 }
 
-function calcLevelCap(trainerLevel, friendship) {
-    const POKEMON_LEVEL_CAP = 100; // TODO: replace this with a game setting so people can do higher-level Pokemon
+function calcLevelCap({ trainerLevel, friendship }={}) {
+    const POKEMON_LEVEL_CAP = Math.max(...Object.keys(CONFIG.PTU.data.levelProgression)); // TODO: replace this with a game setting so people can do higher-level Pokemon
     const trainerAdvancement = game.settings.get("ptu", "variant.trainerAdvancement");
     const tlModifier = CONFIG.PTU.data.trainerProgressions[trainerAdvancement]?.tlModifier ?? 1;
     trainerLevel ??= 1;
-    const basePokemonLevelCap = Math.clamp(Math.floor(trainerLevel * tlModifier * POKEMON_LEVEL_CAP / 100), 1, POKEMON_LEVEL_CAP);
+    const basePokemonLevelCap = Math.clamp(Math.floor(trainerLevel * tlModifier * 2 * POKEMON_LEVEL_CAP / 100), 1, POKEMON_LEVEL_CAP);
     if (friendship === undefined) {
         return basePokemonLevelCap;
     }
-    const friendshipModifier = (friendship * 3) - 5;
+    const friendshipModifier = (Math.clamp(friendship, 0, 5) * 2) - 2;
     return Math.clamp(basePokemonLevelCap + friendshipModifier, 1, POKEMON_LEVEL_CAP);
 
     // the old method, which seemed to be undocumented, arbitrary, gives a *huge* range at high levels, and unused by pretty much anything

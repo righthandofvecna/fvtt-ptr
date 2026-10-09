@@ -386,6 +386,9 @@
     "LevelCapTraining": "EXP Training Level Cap",
     "LevelMaxControl": "Max Ctrl Lv",
 
+    "LevelUp": "Level Up!",
+    "LevelAtCap": "At cap — level up your trainer to raise the cap.",
+
     "Money": "Money",
     "ItemCategories": "Item Categories",
     "HeldItem": "Held Item",
@@ -1042,6 +1045,10 @@
         "UseContestRules": {
           "Name": "Use Contest Rules",
           "Hint": "Enable the Pokémon Contest tab and items."
+        },
+        "PokemonLevelTied": {
+          "Name": "Pokémon Level Tied to Trainer",
+          "Hint": "When enabled, Pokémon level up manually up to the cap set by trainer level and friendship. XP is not awarded post-combat — items and money still are."
         },
         "StatCalculation": {
           "Name": "Stat Calculation Method",

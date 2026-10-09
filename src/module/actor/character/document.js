@@ -365,9 +365,9 @@ class PTUTrainerActor extends PTUActor {
         this.attributes.health.max = system.health.max;
 
         // Max level the trainer can control at minimum friendship (friendship = 0)
-        system.level.minControlLevel = calcLevelCap(this.system.level.current ?? 0, 0);
+        system.level.minControlLevel = calcLevelCap({ trainerLevel: this.system.level.current ?? 0, friendship: 0 });
         // Max level the trainer can control at maximum friendship (friendship = 5)
-        system.level.maxControlLevel = calcLevelCap(this.system.level.current ?? 0, 5);
+        system.level.maxControlLevel = calcLevelCap({ trainerLevel: this.system.level.current ?? 0, friendship: 5 });
     }
 
     get baseMaxAp() {

@@ -4,6 +4,7 @@
             <h3 class="m-auto">{{localize "PTU.CombatXP.Title"}}</h3>
         </div>
         <div class="swsh-body">
+            {{#unless useTiedLevels}}
             <div class="d-flex align-items-center justify-content-between pt-1 pb-1">
                 <span>{{localize "PTU.CombatXP.BudgetLabel"}}: <strong>{{budget}}</strong></span>
                 <span>{{localize "PTU.CombatXP.PlayersLabel"}}: <strong>{{trainerCount}}</strong></span>
@@ -15,6 +16,7 @@
                     <small class="hint">— {{localize "PTU.CombatXP.TrainerPoolNote"}}</small>
                 {{/if}}
             </div>
+            {{/unless}}
 
             {{#if trainers}}
                 {{#each trainers as |trainer|}}
@@ -41,7 +43,9 @@
                                 <tr>
                                     <th></th>
                                     <th>{{localize "PTU.CombatXP.PokemonLabel"}}</th>
+                                    {{#unless ../useTiedLevels}}
                                     <th>{{localize "PTU.CombatXP.XPLabel"}}</th>
+                                    {{/unless}}
                                     <th>{{localize "PTU.CombatXP.ExcludeLabel"}}</th>
                                 </tr>
                             </thead>
@@ -53,9 +57,11 @@
                                         {{p.name}}
                                         {{#unless p.participated}}<small class="hint">({{localize "PTU.CombatXP.Reserve"}})</small>{{/unless}}
                                     </td>
+                                    {{#unless ../../useTiedLevels}}
                                     <td>
                                         <input type="number" name="xp-{{p.actorId}}" value="{{p.xpGrant}}" min="0" class="combat-xp-amount" data-trainer-id="{{../trainer.trainerId}}" style="width:60px;" />
                                     </td>
+                                    {{/unless}}
                                     <td class="center-text">
                                         <input type="checkbox" name="exclude-{{p.actorId}}" />
                                     </td>

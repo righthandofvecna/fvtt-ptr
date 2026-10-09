@@ -291,6 +291,20 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		});
 
 		html.find('.rollable.skill').click(this._onSkillRoll.bind(this));
+
+		// Level Up button (pokemonLevelTied variant)
+		html.find('.ptu-level-up').click(async (event) => {
+			event.preventDefault();
+			if (!game.settings.get("ptu", "variant.pokemonLevelTied")) return;
+			const { softCap, current, exp } = this.actor.system.level;
+			if (current >= softCap) return;
+			const newExp = CONFIG.PTU.data.levelProgression[softCap] ?? exp;
+			if (newExp <= exp) return;
+			await this.actor.update({
+				"system.level.exp": newExp,
+				"system.level.pendingExp": 0,
+			});
+		});
 		// Generic use handler for all items (spirit actions, and future item types).
 		// Covers the .item-icon.rollable elements rendered by item-display-partial for non-move items.
 		// Phantom items are used directly (without materializing), matching phantom struggle behaviour.

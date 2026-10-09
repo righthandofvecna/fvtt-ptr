@@ -230,9 +230,12 @@ class PTUPokemonActor extends PTUActor {
             }
         }
 
+        const trainerLevel = this.trainer?.system?.level?.current ?? 0;
+        const hardLevelCap = Math.max(...Object.keys(CONFIG.PTU.data.levelProgression));
+        const softLevelCap = calcLevelCap({ trainerLevel, friendship: system.friendship });
+        system.level.softCap = softLevelCap;
         system.level.current = calculateLevel(system.level.exp);
-        const maxLevel = Math.max(...Object.keys(CONFIG.PTU.data.levelProgression));
-        system.level.expTillNextLevel = CONFIG.PTU.data.levelProgression[Math.min(system.level.current + 1, maxLevel)];
+        system.level.expTillNextLevel = CONFIG.PTU.data.levelProgression[Math.min(system.level.current + 1, hardLevelCap)];
         system.level.percent = Math.round(
             (
                 (system.level.exp - CONFIG.PTU.data.levelProgression[system.level.current])
@@ -396,8 +399,8 @@ class PTUPokemonActor extends PTUActor {
         };
 
         this.attributes.level.cap = {
-            current: calcLevelCap(this.trainer?.system.level.current ?? 0, system.friendship ?? 0),
-            training: calcLevelCap(this.trainer?.system.level.current ?? 0, 0), // The EXP Training Level Cap is based on the Level Cap without Friendship, it's the max level a Pokémon can reach through EXP Training
+            current: calcLevelCap({ trainerLevel:this.trainer?.system.level.current ?? 0, friendship: system.friendship ?? 0 }),
+            training: calcLevelCap({ trainerLevel:this.trainer?.system.level.current ?? 0 }), // The EXP Training Level Cap is based on the Level Cap without Friendship, it's the max level a Pokémon can reach through EXP Training
             amount: calcExpTrainingCap(), // The amount a Pokémon can gain from Daily EXP Training
         }
 
