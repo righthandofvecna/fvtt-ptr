@@ -66,6 +66,21 @@ class PTUPokemonActor extends PTUActor {
         return game.actors.get(this.flags.ptu.party?.trainer) ?? null;
     }
 
+    get commandDC() {
+        const friendshipSetting = game.settings.get("ptu", "variant.spiritPlaytest");
+        const levelCapAffectsLoafing = game.settings.get("ptu", "variant.levelCapAffectsLoafing");
+        const penalty = levelCapAffectsLoafing ? Math.max(0, this.system.level.current - this.system.level.softCap) : 0;
+        const relevantValue = Math.clamp(Math.floor(friendshipSetting ? this.system.friendship : this.system.loyalty), 0, 6);
+        const result = (()=>{
+            switch (relevantValue) {
+                case 0: return 20 + penalty;
+                case 1: return 8 + penalty;
+                default: return 0 + penalty;
+            }
+        })();
+        return Math.clamp(result, 0, 30);
+    }
+
     /**
      * Force refresh of level caps when trainer data changes
      */

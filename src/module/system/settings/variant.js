@@ -92,6 +92,13 @@ const VariantSettingsConfig = {
         hint: "PTU.Settings.Variant.PokemonLevelTied.Hint",
         type: Boolean,
         default: false,
+    },
+    "levelCapAffectsLoafing": {
+        name: "PTU.Settings.Variant.LevelCapAffectsLoafing.Name",
+        hint: "PTU.Settings.Variant.LevelCapAffectsLoafing.Hint",
+        type: Boolean,
+        default: false,
+        requiresReload: false,
     }
 }
 
