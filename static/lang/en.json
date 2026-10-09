@@ -1048,7 +1048,7 @@
         },
         "PokemonLevelTied": {
           "Name": "Pokémon Level Tied to Trainer",
-          "Hint": "When enabled, Pokémon level up manually up to the cap set by trainer level and friendship through the Daily Training wizard. XP is not awarded post-combat — items and money still are. <strong>Experimental.</strong>"
+          "Hint": "When enabled, Pokémon level up manually up to the cap set by trainer level and friendship. XP is not awarded post-combat — items and money still are. Experimental."
         },
         "StatCalculation": {
           "Name": "Stat Calculation Method",
@@ -1062,7 +1062,7 @@
           "Hint": "Choose the formula used to determine the level cap for Pokémon based on the trainer's level and friendship.",
           "DirectTrainerLevel": "Direct Trainer Level",
           "FriendshipSpirit": "Friendship & Spirit",
-          "SimplifiedFriendship": "Simplified Friendship (experimental)"
+          "SimplifiedFriendship": "Simplified Friendship (Experimental)"
         }
       },
       "Automation": {

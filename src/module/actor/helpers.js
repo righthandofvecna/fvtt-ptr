@@ -384,7 +384,7 @@ function calcLevelCap({ trainerLevel, friendship }={}) {
         if (friendship === undefined) {
             return basePokemonLevelCap;
         }
-        const friendshipModifier = (Math.clamp(friendship, 0, 5) * 2) - 2;
+        const friendshipModifier = (Math.clamp(friendship - 2, -2, 3) * 4);
         return Math.clamp(basePokemonLevelCap + friendshipModifier, 1, POKEMON_LEVEL_CAP);
     }
 
