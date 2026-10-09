@@ -75,6 +75,18 @@ const VariantSettingsConfig = {
         type: Boolean,
         default: false,
     },
+    "controllabelLevelCapFormula": {
+        name: "PTU.Settings.Variant.ControllabelLevelCapFormula.Name",
+        hint: "PTU.Settings.Variant.ControllabelLevelCapFormula.Hint",
+        type: String,
+        choices: {
+            "directTrainerLevel": "PTU.Settings.Variant.ControllabelLevelCapFormula.DirectTrainerLevel",
+            "friendshipSpirit": "PTU.Settings.Variant.ControllabelLevelCapFormula.FriendshipSpirit",
+            "simplifiedFriendship": "PTU.Settings.Variant.ControllabelLevelCapFormula.SimplifiedFriendship"
+        },
+        default: "friendshipSpirit",
+        requiresReload: true
+    },
     "pokemonLevelTied": {
         name: "PTU.Settings.Variant.PokemonLevelTied.Name",
         hint: "PTU.Settings.Variant.PokemonLevelTied.Hint",

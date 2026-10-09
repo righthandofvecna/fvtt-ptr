@@ -366,23 +366,30 @@ function calculateEvasions(data, ptuFlags, actor_items) {
 }
 
 function calcLevelCap({ trainerLevel, friendship }={}) {
+    const formula = game.settings.get("ptu", "variant.controllabelLevelCapFormula");
     const POKEMON_LEVEL_CAP = Math.max(...Object.keys(CONFIG.PTU.data.levelProgression)); // TODO: replace this with a game setting so people can do higher-level Pokemon
     const trainerAdvancement = game.settings.get("ptu", "variant.trainerAdvancement");
     const tlModifier = CONFIG.PTU.data.trainerProgressions[trainerAdvancement]?.tlModifier ?? 1;
     trainerLevel ??= 1;
-    const basePokemonLevelCap = Math.clamp(Math.floor(trainerLevel * tlModifier * 2 * POKEMON_LEVEL_CAP / 100), 1, POKEMON_LEVEL_CAP);
-    if (friendship === undefined) {
-        return basePokemonLevelCap;
-    }
-    const friendshipModifier = (Math.clamp(friendship, 0, 5) * 2) - 2;
-    return Math.clamp(basePokemonLevelCap + friendshipModifier, 1, POKEMON_LEVEL_CAP);
 
-    // the old method, which seemed to be undocumented, arbitrary, gives a *huge* range at high levels, and unused by pretty much anything
-    // return Math.ceil(
-    //     5 + 
-    //     (79/50) * trainerLevel + 
-    //     (4/3) * friendship * Math.pow(1 + (trainerLevel/34), 2)
-    // );
+    if (formula === "friendshipSpirit") {
+        return Math.ceil(
+            5 + 
+            (79/50) * trainerLevel + 
+            (4/3) * friendship * Math.pow(1 + (trainerLevel/34), 2)
+        );
+    }
+    if (formula === "simplifiedFriendship") {
+        const basePokemonLevelCap = Math.clamp(Math.floor(trainerLevel * tlModifier * 2 * POKEMON_LEVEL_CAP / 100), 1, POKEMON_LEVEL_CAP);
+        if (friendship === undefined) {
+            return basePokemonLevelCap;
+        }
+        const friendshipModifier = (Math.clamp(friendship, 0, 5) * 2) - 2;
+        return Math.clamp(basePokemonLevelCap + friendshipModifier, 1, POKEMON_LEVEL_CAP);
+    }
+
+    // direct trainer level fallback
+    return Math.clamp(Math.floor(trainerLevel * tlModifier * 2 * POKEMON_LEVEL_CAP / 100), 1, POKEMON_LEVEL_CAP);
 };
 
 export { calcBaseStats, calculateStatTotal, calculateOldStatTotal, calculatePTStatTotal, calculateEvasions, calcLevelCap }
