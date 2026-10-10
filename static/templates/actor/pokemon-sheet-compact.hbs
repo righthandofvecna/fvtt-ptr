@@ -189,7 +189,7 @@
                                             <input class="p-0" type="text" name="system.level.current"
                                                 value="{{actor.system.level.current}}" data-dtype="Number" disabled />
                                         </div>
-                                        {{#if (and (getGameSetting "variant.pokemonLevelTied") actor.trainer)}}
+                                        {{#if (and (eq (getGameSetting "variant.pokemonAdvancement") "level-tied") actor.trainer)}}
                                         <div class="fb-5" style="color:#888;">/</div>
                                         <div class="fb-15" title="Level cap from trainer level + friendship" style="color:#aaa;">
                                             <input class="p-0" type="text" value="{{actor.system.level.softCap}}" data-dtype="Number" disabled />
@@ -206,7 +206,7 @@
                                     </div>
                                 </div>
                                 {{/if}}
-                                {{#if (and (getGameSetting "variant.pokemonLevelTied") actor.trainer)}}
+                                {{#if (and (eq (getGameSetting "variant.pokemonAdvancement") "level-tied") actor.trainer)}}
                                 {{!-- Tied-level mode: hide XP, show level cap info and Level Up button --}}
                                 <div class="swsh-body">
                                     <div class="d-flex flexrow pt-1 pb-1 align-items-center justify-content-center center-text" style="gap:8px;">
@@ -230,6 +230,23 @@
                                             </div>
                                         </div>
                                         {{/if}}
+                                    </div>
+                                </div>
+                                {{else}}
+                                {{#if (eq (getGameSetting "variant.pokemonAdvancement") "milestones")}}
+                                {{!-- Milestone XP Mode --}}
+                                <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight">
+                                    <div class="d-flex w-100 mt-2 mb-2 align-items-center justify-content-between ">
+                                        <div class="fb-45">
+                                            <label for="system.level.milestones"><b>{{localize "PTU.LevelMilestones"}}</b></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swsh-body">
+                                    <div
+                                        class="d-flex flexrow pt-1 pb-1 align-items-center justify-content-between center-text">
+                                        <input type="number" name="system.level.milestones"
+                                            value="{{actor.system.level.milestones}}" data-dtype="Number" min="0" step="1" />
                                     </div>
                                 </div>
                                 {{else}}
@@ -273,6 +290,7 @@
                                         {{/if}}
                                     </div>
                                 </div>
+                                {{/if}}
                                 {{/if}}
                                 <div class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight">
                                     <div class="d-flex w-100 mt-2 mb-2 align-items-center justify-content-center ">

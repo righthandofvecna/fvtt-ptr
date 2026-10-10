@@ -4,7 +4,7 @@
             <h3 class="m-auto">{{localize "PTU.CombatXP.Title"}}</h3>
         </div>
         <div class="swsh-body">
-            {{#unless useTiedLevels}}
+            {{#if awardXP}}
             <div class="d-flex align-items-center justify-content-between pt-1 pb-1">
                 <span>{{localize "PTU.CombatXP.BudgetLabel"}}: <strong>{{budget}}</strong></span>
                 <span>{{localize "PTU.CombatXP.PlayersLabel"}}: <strong>{{trainerCount}}</strong></span>
@@ -16,7 +16,6 @@
                     <small class="hint">— {{localize "PTU.CombatXP.TrainerPoolNote"}}</small>
                 {{/if}}
             </div>
-            {{/unless}}
 
             {{#if trainers}}
                 {{#each trainers as |trainer|}}
@@ -79,6 +78,7 @@
                 {{/each}}
             {{else}}
             <p class="hint">{{localize "PTU.CombatXP.NoPokemon"}}</p>
+            {{/if}}
             {{/if}}
         </div>
         {{!-- Money Rewards (trainer battles) --}}

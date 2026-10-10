@@ -16,10 +16,10 @@
         {{/if}}
         {{#each boxes as |box name|}}
             <div class="d-flex flex-column mb-2">
-                {{#if (getGameSetting "variant.pokemonLevelTied")}}
-                <h3>{{formatSlug name}}<span style="float:right;">{{#if (not (is name "training"))}}Average Level: {{#if box.metric}}{{box.metric}}{{/if}}{{/if}}</span></h3>
-                {{else}}
+                {{#if (eq (getGameSetting "variant.pokemonAdvancement") "exp")}}
                 <h3>{{formatSlug name}}<span style="float:right;">{{#if (is name "training")}}{{box.instances}} instances of {{box.xpinstance}} EXP for a Total EXP of: {{else}}Average Level: {{/if}}{{#if box.metric}}{{box.metric}}{{/if}}</span></h3>
+                {{else}}
+                <h3>{{formatSlug name}}<span style="float:right;">{{#if (not (is name "training"))}}Average Level: {{#if box.metric}}{{box.metric}}{{/if}}{{/if}}</span></h3>
                 {{/if}}
                 {{#if (is name "training")}}
                     <div style="text-align: center; margin-bottom: 10px;">

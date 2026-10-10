@@ -311,7 +311,7 @@ class PTUPokemonTrainingSheet extends FormApplication {
     }
 
     #calculateXPToDistribute() {
-        if (game.settings.get("ptu", "variant.pokemonLevelTied")) {
+        if (game.settings.get("ptu", "variant.pokemonAdvancement") !== "exp") {
             this.xpToDistribute = 0; // daily training gives no XP with Pokemon Level Tied
             return;
         }
@@ -646,7 +646,7 @@ class PTUPokemonTrainingSheet extends FormApplication {
             const instancesValue = parseInt(value) || (this.trainingPlaceholders?.[key] ?? 0);
             if (instancesValue === 0) continue;
 
-            if (!game.settings.get("ptu", "variant.pokemonLevelTied")) {
+            if (game.settings.get("ptu", "variant.pokemonAdvancement") === "exp") {
                 if (currentLevel > trainingLevelCap) {
                     message += `${actor.name} is too high level (${currentLevel}) for training (cap: ${trainingLevelCap})<br>`;
                 } else {

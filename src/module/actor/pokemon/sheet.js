@@ -300,10 +300,10 @@ export class PTUPokemonSheet extends PTUActorSheet {
 
 		html.find('.rollable.skill').click(this._onSkillRoll.bind(this));
 
-		// Level Up button (pokemonLevelTied variant)
+		// Level Up button (pokemonAdvancement LevelTied variant)
 		html.find('.ptu-level-up').click(async (event) => {
 			event.preventDefault();
-			if (!game.settings.get("ptu", "variant.pokemonLevelTied")) return;
+			if (game.settings.get("ptu", "variant.pokemonAdvancement") !== "level-tied") return;
 			const { softCap, current, exp } = this.actor.system.level;
 			if (current >= softCap) return;
 			const newExp = CONFIG.PTU.data.levelProgression[softCap] ?? exp;

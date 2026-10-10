@@ -1,6 +1,10 @@
-function calculateLevel(exp, level = 50) {
+function calculateLevel(exp, level = 50, milestones = 49) {
     const json = CONFIG.PTU.data.levelProgression;
     const maxLevel = Math.max(...Object.keys(json));
+
+    if (game.settings.get("ptu", "variant.pokemonAdvancement") === "milestones") {
+        return Math.clamp(milestones + 1, 1, maxLevel);
+    }
 
     if (exp <= json[1]) { return 1; }
     if (exp >= json[maxLevel]) { return maxLevel; }

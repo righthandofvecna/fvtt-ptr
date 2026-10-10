@@ -62,6 +62,17 @@ const VariantSettingsConfig = {
         default: "ptr-update",
         requiresReload: true,
     },
+    "pokemonAdvancement": {
+        name: "PTU.Settings.Variant.PokemonAdvancement.Name",
+        hint: "PTU.Settings.Variant.PokemonAdvancement.Hint",
+        type: String,
+        choices: {
+            "exp": "PTU.Settings.Variant.PokemonAdvancement.Exp",
+            "milestones": "PTU.Settings.Variant.PokemonAdvancement.Milestones",
+            "level-tied": "PTU.Settings.Variant.PokemonAdvancement.LevelTied"
+        },
+        default: "exp",
+    },
     "useContestRules": {
         name: "PTU.Settings.Variant.UseContestRules.Name",
         hint: "PTU.Settings.Variant.UseContestRules.Hint",
@@ -86,12 +97,6 @@ const VariantSettingsConfig = {
         },
         default: "friendshipSpirit",
         requiresReload: true
-    },
-    "pokemonLevelTied": {
-        name: "PTU.Settings.Variant.PokemonLevelTied.Name",
-        hint: "PTU.Settings.Variant.PokemonLevelTied.Hint",
-        type: Boolean,
-        default: false,
     },
     "levelCapAffectsLoafing": {
         name: "PTU.Settings.Variant.LevelCapAffectsLoafing.Name",

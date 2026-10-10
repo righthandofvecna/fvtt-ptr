@@ -393,7 +393,7 @@
         "CheckLabel": "{trainerName}'s Command — {pokemonName} (DC {dc})",
         "CommandSuccess": "{trainerName} commands {pokemonName} successfully (rolled {total} vs DC {dc}).",
         "CommandFailure": "{trainerName} fails to command {pokemonName} (rolled {total} vs DC {dc}) — {pokemonName} is Loafing!",
-        "Warning": "This Pokémon may not obey your commands. Raise its Friendship, your Trainer level, or your Command skill. Command DC: {dc}."
+        "Warning": "This Pokémon may not obey your commands. Raise its Friendship/Loyalty, your Trainer level, or your Command skill. Current Command DC: {dc}."
     },
 
     "Money": "Money",
@@ -1055,9 +1055,12 @@
           "Name": "Use Contest Rules",
           "Hint": "Enable the Pokémon Contest tab and items."
         },
-        "PokemonLevelTied": {
-          "Name": "Pokémon Level Tied to Trainer",
-          "Hint": "When enabled, Pokémon level up manually up to the cap set by trainer level and friendship. XP is not awarded post-combat — items and money still are. Experimental."
+        "PokemonAdvancement": {
+          "Name": "Pokémon Advancement Method",
+          "Hint": "Choose how Pokémon gain levels. 'Exp' uses experience points, 'Milestones' uses key achievements, and 'Level Tied' ties Pokémon level to the trainer's level and friendship.",
+          "Exp": "Experience Points",
+          "Milestones": "Pokemon Milestones",
+          "LevelTied": "Level Tied to Trainer"
         },
         "StatCalculation": {
           "Name": "Stat Calculation Method",

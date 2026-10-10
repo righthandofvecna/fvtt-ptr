@@ -89,7 +89,7 @@ class PTUPokemonActor extends PTUActor {
      */
     async rollLoafingCheck() {
         if (!game.settings.get("ptu", "automation.commandChecks")) return;
-        
+
         const trainer = this.trainer;
         if (!trainer) return;
 
@@ -306,30 +306,40 @@ class PTUPokemonActor extends PTUActor {
             }
         }
 
+        /* Calculate level and associated caps */
         const trainerLevel = this.trainer?.system?.level?.current ?? 0;
         const hardLevelCap = Math.max(...Object.keys(CONFIG.PTU.data.levelProgression));
         const softLevelCap = calcLevelCap({ trainerLevel, friendship: system.friendship });
         system.level.softCap = softLevelCap;
-        system.level.current = calculateLevel(system.level.exp);
-        system.level.expTillNextLevel = CONFIG.PTU.data.levelProgression[Math.min(system.level.current + 1, hardLevelCap)];
-        system.level.percent = Math.round(
-            (
-                (system.level.exp - CONFIG.PTU.data.levelProgression[system.level.current])
-                /
-                (system.level.expTillNextLevel - CONFIG.PTU.data.levelProgression[system.level.current])
-            ) * 100);
 
-        // Compute effective XP (applied + pending) for display purposes on the sheet
-        const pendingExp = system.level.pendingExp ?? 0;
-        system.level.totalEffectiveExp = system.level.exp + pendingExp;
-        system.level.effectivePercent = pendingExp > 0
-            ? Math.min(Math.round(
+        if (game.settings.get("ptu", "variant.pokemonAdvancement") === "milestones") {
+            system.level.current = Math.clamp((system.level.milestones ?? 0) + 1, 1, hardLevelCap);
+            system.level.expTillNextLevel = CONFIG.PTU.data.levelProgression[Math.min(system.level.current + 1, hardLevelCap)];
+            system.level.percent = 0;
+            system.level.totalEffectiveExp = CONFIG.PTU.data.levelProgression[system.level.current] ?? 0;
+            system.level.effectivePercent = 0;
+        } else {
+            system.level.current = calculateLevel(system.level.exp);
+            system.level.expTillNextLevel = CONFIG.PTU.data.levelProgression[Math.min(system.level.current + 1, hardLevelCap)];
+            system.level.percent = Math.round(
                 (
-                    (system.level.totalEffectiveExp - CONFIG.PTU.data.levelProgression[system.level.current])
+                    (system.level.exp - CONFIG.PTU.data.levelProgression[system.level.current])
                     /
                     (system.level.expTillNextLevel - CONFIG.PTU.data.levelProgression[system.level.current])
-                ) * 100), 100)
-            : system.level.percent;
+                ) * 100);
+
+            // Compute effective XP (applied + pending) for display purposes on the sheet
+            const pendingExp = system.level.pendingExp ?? 0;
+            system.level.totalEffectiveExp = system.level.exp + pendingExp;
+            system.level.effectivePercent = pendingExp > 0
+                ? Math.min(Math.round(
+                    (
+                        (system.level.totalEffectiveExp - CONFIG.PTU.data.levelProgression[system.level.current])
+                        /
+                        (system.level.expTillNextLevel - CONFIG.PTU.data.levelProgression[system.level.current])
+                    ) * 100), 100)
+                : system.level.percent;
+        }
 
 
         // Set attributes which are underrived data
@@ -695,10 +705,19 @@ class PTUPokemonActor extends PTUActor {
 
     /** @override */
     async _preUpdate(changed, options, userId) {
-        if (!game.settings.get("ptu", "automation.levelUpScreen") || (changed.system?.level?.exp ?? null) === null || changed.system.level.exp === this.system.level.exp)
+        const skipLevelUp = (()=>{
+            if (!game.settings.get("ptu", "automation.levelUpScreen")) return true;
+            // Milestone XP mode
+            if (game.settings.get("ptu", "variant.pokemonAdvancement") === "milestones") {
+                return (changed.system?.level?.milestones ?? null) === null || changed.system.level.milestones === this.system.level.milestones;
+            }
+            // Normal XP mode
+            return (changed.system?.level?.exp ?? null) === null || changed.system.level.exp === this.system.level.exp;
+        })();
+        if (skipLevelUp)
             return super._preUpdate(changed, options, userId);
 
-        const newLevel = calculateLevel(changed.system.level.exp, this.system.level.current);
+        const newLevel = calculateLevel(changed.system.level.exp, this.system.level.current, changed.system.level.milestones);
         if (newLevel <= this.system.level.current) return super._preUpdate(changed, options, userId);
 
         // If the actor has no species yet or the species is being updated, skip the level-up screen.
