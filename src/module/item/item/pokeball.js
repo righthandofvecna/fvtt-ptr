@@ -370,6 +370,7 @@ class PokeballItem extends PTUItemItem {
 
 
     async use(options = {}) {
+        if (this.isUsageProhibited()) return;
         return this.roll(options.event);
     }
 

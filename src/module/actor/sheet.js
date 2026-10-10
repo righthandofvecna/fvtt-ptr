@@ -77,6 +77,10 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
         new ActorConfig(this.actor).render(true);
     }
 
+    get isEditable() {
+        return super.isEditable && (game.user.isGM || !this.actor.isUsageProhibited({ notify: false }));
+    }
+
     
 	/** @override */
 	async getData() {

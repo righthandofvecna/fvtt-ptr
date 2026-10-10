@@ -197,6 +197,15 @@
                                         {{/if}}
                                     </div>
                                 </div>
+                                {{#if loafingWarning}}
+                                <div class="swsh-body">
+                                    <div class="d-flex flexrow pt-1 pb-1 align-items-center justify-content-center center-text" style="gap:8px;">
+                                        <div class="hint" style="color:#f00;">
+                                            {{loafingWarning}}
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/if}}
                                 {{#if (and (getGameSetting "variant.pokemonLevelTied") actor.trainer)}}
                                 {{!-- Tied-level mode: hide XP, show level cap info and Level Up button --}}
                                 <div class="swsh-body">

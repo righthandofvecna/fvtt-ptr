@@ -389,6 +389,13 @@
     "LevelUp": "Level Up!",
     "LevelAtCap": "At cap — level up your trainer to raise the cap.",
 
+    "Loafing": {
+        "CheckLabel": "{trainerName}'s Command — {pokemonName} (DC {dc})",
+        "CommandSuccess": "{trainerName} commands {pokemonName} successfully (rolled {total} vs DC {dc}).",
+        "CommandFailure": "{trainerName} fails to command {pokemonName} (rolled {total} vs DC {dc}) — {pokemonName} is Loafing!",
+        "Warning": "This Pokémon may not obey your commands. Raise its Friendship, your Trainer level, or your Command skill. Command DC: {dc}."
+    },
+
     "Money": "Money",
     "ItemCategories": "Item Categories",
     "HeldItem": "Held Item",
@@ -567,6 +574,7 @@
     "ConditionCheered": "Cheered",
     "ConditionVortex": "Vortex",
     "ConditionSeeded": "Seeded",
+    "ConditionLoafing": "Loafing",
     "Unidentified": "Unidentified Pokemon",
     "Genderless": "Genderless",
     "Male": "Male",
@@ -726,6 +734,7 @@
         "Success": "{name} is barely containing it's rage!",
         "Create": "{name}'s rage is getting out of hand, they entered Hyper Mode!"
       },
+      "Loafing": "A Loafing Pokémon can only be controlled by the GM!",
       "DamageSelector": "Damage Selector",
       "Damage": "Damage",
       "Apply": "Apply Damage",

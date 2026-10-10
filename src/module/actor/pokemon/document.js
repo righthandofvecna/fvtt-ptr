@@ -66,21 +66,6 @@ class PTUPokemonActor extends PTUActor {
         return game.actors.get(this.flags.ptu.party?.trainer) ?? null;
     }
 
-    get commandDC() {
-        const friendshipSetting = game.settings.get("ptu", "variant.spiritPlaytest");
-        const levelCapAffectsLoafing = game.settings.get("ptu", "variant.levelCapAffectsLoafing");
-        const penalty = levelCapAffectsLoafing ? Math.max(0, this.system.level.current - this.system.level.softCap) : 0;
-        const relevantValue = Math.clamp(Math.floor(friendshipSetting ? this.system.friendship : this.system.loyalty), 0, 6);
-        const result = (()=>{
-            switch (relevantValue) {
-                case 0: return 20 + penalty;
-                case 1: return 8 + penalty;
-                default: return 0 + penalty;
-            }
-        })();
-        return Math.clamp(result, 0, 30);
-    }
-
     /**
      * Force refresh of level caps when trainer data changes
      */
@@ -95,6 +80,82 @@ class PTUPokemonActor extends PTUActor {
         if (this.sheet?.rendered) {
             this.sheet.render(false);
         }
+    }
+
+    /**
+     * At the start of each combat round, check if the trainer can command this Pokemon.
+     * If commandDC > trainer's guaranteed minimum Command roll, roll Command vs the DC.
+     * On failure, apply the Loafing condition.
+     */
+    async rollLoafingCheck() {
+        if (!game.settings.get("ptu", "automation.commandChecks")) return;
+        
+        const trainer = this.trainer;
+        if (!trainer) return;
+
+        const dc = this.system.commandDC;
+        if (dc <= 0) return; // Pokemon always obeys; no check needed.
+
+        // Minimum possible roll = all dice showing 1 + modifier.
+        const commandSkill = trainer.system.skills?.command;
+        if (!commandSkill) return;
+        const diceCount = Math.clamp(commandSkill.value?.total ?? 1, 1, 6);
+        const modifier = commandSkill.modifier?.total ?? 0;
+        const minimumRoll = diceCount + modifier;
+
+        if (dc <= minimumRoll) return; // Guaranteed pass — skip the roll.
+
+        const commandAction = trainer.attributes.skills?.command;
+        if (!commandAction) return;
+
+        const pokemon = this;
+        const pokemonToken = this.getActiveTokens()[0]?.document ?? null;
+        const trainerToken = trainer.getActiveTokens()[0]?.document ?? null;
+        const speaker = ChatMessage.getSpeaker({ actor: trainer, token: trainerToken });
+
+        const alreadyLoafing = this.items.find(
+            i => (i.type === "condition" || i.type === "effect") && i.slug === "loafing"
+        );
+
+        await commandAction.roll({
+            dc: {
+                value: dc,
+                slug: "command-dc",
+                uuids: {
+                    actor: pokemon.uuid,
+                    token: pokemonToken?.uuid ?? null,
+                },
+            },
+            overrideLabel: game.i18n.format("PTU.Loafing.CheckLabel", {
+                trainerName: trainer.name,
+                pokemonName: this.name,
+                dc,
+            }),
+            additionalDomains: ["loafing-check"],
+            skipDialog: true,
+            targets: [], // DC-based check, no token targets needed
+            callback: async (_rolls, targets, _msg) => {
+                const outcome = targets[0]?.outcome;
+                const total = _rolls[0]?.total ?? 0;
+                const passed = outcome === "hit";
+
+                // Post success/failure message
+                const contentKey = passed ? "PTU.Loafing.CommandSuccess" : "PTU.Loafing.CommandFailure";
+                await ChatMessage.create({
+                    speaker,
+                    content: `<p>${game.i18n.format(contentKey, { trainerName: trainer.name, pokemonName: pokemon.name, dc, total })}</p>`,
+                    style: CONST.CHAT_MESSAGE_STYLES.OTHER,
+                });
+
+                if (!passed && !alreadyLoafing) {
+                    const LOAFING_UUID = "Compendium.ptu.effects.Item.loafing000000000";
+                    await this.createEmbeddedDocuments("Item", [(await fromUuid(LOAFING_UUID)).toObject()]);
+                }
+                if (passed && alreadyLoafing) {
+                    await alreadyLoafing.delete();
+                }
+            },
+        });
     }
 
     /** @override */
@@ -418,6 +479,23 @@ class PTUPokemonActor extends PTUActor {
             training: calcLevelCap({ trainerLevel:this.trainer?.system.level.current ?? 0 }), // The EXP Training Level Cap is based on the Level Cap without Friendship, it's the max level a Pokémon can reach through EXP Training
             amount: calcExpTrainingCap(), // The amount a Pokémon can gain from Daily EXP Training
         }
+
+        // Command DC
+        const friendshipSetting = game.settings.get("ptu", "variant.spiritPlaytest");
+        const levelCapAffectsLoafing = game.settings.get("ptu", "variant.levelCapAffectsLoafing");
+        const commandDCLevelPenalty = levelCapAffectsLoafing ? Math.max(0, this.system.level.current - this.system.level.softCap) : 0;
+        const commandDC = (()=>{
+            switch (Math.clamp(Math.floor(friendshipSetting ? this.system.friendship : this.system.loyalty), 0, 6)) {
+                case 0: return 20 + commandDCLevelPenalty;
+                case 1: return 8 + commandDCLevelPenalty;
+                case 2: return 0 + commandDCLevelPenalty;
+                case 3: return -8 + commandDCLevelPenalty;
+                case 4: return -16 + commandDCLevelPenalty;
+                case 5: return -20 + commandDCLevelPenalty;
+                case 6: return -60 + commandDCLevelPenalty;
+            }
+        })();
+        system.commandDC = Math.clamp(commandDC, 0, 30);
 
         // TODO: add a migration to copy Shedinja's rule elements to pre-existing Pokemon, then remove this
         if (this.species.slug === "shedinja") {

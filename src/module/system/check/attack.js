@@ -375,6 +375,10 @@ class PTUAttackCheck extends PTUDiceCheck {
             ui.notifications.warn("PTU.Action.SuppressedMove", { localize: true });
             return false;
         }
+        if (this.conditionOptions.has("condition:loafing") && !game.user.isGM) {
+            ui.notifications.warn("PTU.Action.Loafing", { localize: true });
+            return false;
+        }
         return true;
     }
 
