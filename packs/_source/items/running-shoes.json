@@ -4,7 +4,30 @@
     "origin": "",
     "effect": "Running Shoes grant a +2 bonus to Athletics Checks, to a maximum total modifier of +3, and increase your Overland Speed by +1.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "item:equipped"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.capabilities.overland",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "item:equipped"
+        ],
+        "mode": "add",
+        "path": "system.skills.athletics.modifier.mod",
+        "phase": "applyAEs",
+        "value": 2,
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "running-shoes",
     "schema": {
@@ -37,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -73,7 +97,7 @@
     "ptu": {
       "showInTokenPanel": false,
       "automationStatus": "needs-automation",
-      "devNote": ""
+      "devNote": "Maximum total modifier not bounded, otherwise functional"
     }
   },
   "_stats": {
@@ -87,5 +111,6 @@
     "exportSource": null
   },
   "sort": 41500000,
-  "_id": "ZAVlp1H0G9klhKJ3"
+  "_id": "ZAVlp1H0G9klhKJ3",
+  "folder": null
 }
