@@ -34,7 +34,7 @@
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.Rte47RBw2X8NHMHZ",
+            "value": "Compendium.ptu.moves.Item.3abHb5scrH2j6qMF",
             "label": "Hypnosis",
             "predicate": {
               "not": "move:hypnosis"
@@ -48,7 +48,7 @@
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.Ev7VAhpvAb0qJEAz",
+            "value": "Compendium.ptu.moves.Item.qltGKDIhEJpOqswU",
             "label": "Will-O-Wisp",
             "predicate": {
               "not": "move:will-o-wisp"
@@ -96,7 +96,7 @@
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.Rte47RBw2X8NHMHZ",
+            "value": "Compendium.ptu.moves.Item.3abHb5scrH2j6qMF",
             "label": "Hypnosis",
             "predicate": {
               "not": "move:hypnosis"
@@ -110,7 +110,7 @@
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.Ev7VAhpvAb0qJEAz",
+            "value": "Compendium.ptu.moves.Item.qltGKDIhEJpOqswU",
             "label": "Will-O-Wisp",
             "predicate": {
               "not": "move:will-o-wisp"
@@ -173,7 +173,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -196,7 +197,8 @@
     "name": "Hex Maniac Studies [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "hex-maniac-studies-rank-3",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
