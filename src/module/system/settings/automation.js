@@ -84,6 +84,12 @@ const AutomationSettingsConfig = {
         hint: "PTU.Settings.Automation.DexOnScan.Hint",
         type: Boolean,
         default: true,
+    },
+    "commandChecks": {
+        name: "PTU.Settings.Automation.CommandChecks.Name",
+        hint: "PTU.Settings.Automation.CommandChecks.Hint",
+        type: Boolean,
+        default: false
     }
 }
 

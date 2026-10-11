@@ -262,6 +262,9 @@ class PTUCombat extends Combat {
                     if (Object.keys(actorUpdates).length) {
                         await actor.update(actorUpdates);
                     }
+
+                    // Loafing check: Pokemon with a trainer may need to pass a Command roll.
+                    await actor.rollLoafingCheck?.();
                 }
             }
 

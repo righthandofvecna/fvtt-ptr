@@ -420,5 +420,18 @@ export const statusEffects = [
                 "priority": 50
             }
         ]
+    },
+    {
+        "id": "loafing",
+        "name": "PTU.ConditionLoafing",
+        "img": "icons/svg/anchor.svg",
+        "changes": [
+            {
+                "key": "flags.ptu.is_loafing",
+                "value": true,
+                "mode": 5,
+                "priority": 50
+            }
+        ]
     }
 ];

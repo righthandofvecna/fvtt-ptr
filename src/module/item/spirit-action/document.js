@@ -10,6 +10,7 @@ class PTUSpiritAction extends PTUItem {
   /** @override */
   async use(options = {}) {
     if (!this.actor) return;
+    if (this.isUsageProhibited()) return;
 
     const cost = this.spiritCost;
     if (cost > 0) {

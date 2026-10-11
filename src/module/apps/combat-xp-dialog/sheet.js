@@ -108,6 +108,7 @@ class CombatXPDialog extends FormApplication {
             perPokemonXP,
             trainers: trainerRows,
             useTrainerPool,
+            awardXP: game.settings.get("ptu", "variant.pokemonAdvancement") === "exp",
             isTrainerBattle,
             rewardTotal,
             rewardItems: this.rewardItems,

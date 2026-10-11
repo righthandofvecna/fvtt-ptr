@@ -62,6 +62,17 @@ const VariantSettingsConfig = {
         default: "ptr-update",
         requiresReload: true,
     },
+    "pokemonAdvancement": {
+        name: "PTU.Settings.Variant.PokemonAdvancement.Name",
+        hint: "PTU.Settings.Variant.PokemonAdvancement.Hint",
+        type: String,
+        choices: {
+            "exp": "PTU.Settings.Variant.PokemonAdvancement.Exp",
+            "milestones": "PTU.Settings.Variant.PokemonAdvancement.Milestones",
+            "level-tied": "PTU.Settings.Variant.PokemonAdvancement.LevelTied"
+        },
+        default: "exp",
+    },
     "useContestRules": {
         name: "PTU.Settings.Variant.UseContestRules.Name",
         hint: "PTU.Settings.Variant.UseContestRules.Hint",
@@ -74,6 +85,25 @@ const VariantSettingsConfig = {
         hint: "Enable the PP (Power Points) variant rule. Items gain a PP cost and actors have a PP pool of 64.",
         type: Boolean,
         default: false,
+    },
+    "controllabelLevelCapFormula": {
+        name: "PTU.Settings.Variant.ControllabelLevelCapFormula.Name",
+        hint: "PTU.Settings.Variant.ControllabelLevelCapFormula.Hint",
+        type: String,
+        choices: {
+            "directTrainerLevel": "PTU.Settings.Variant.ControllabelLevelCapFormula.DirectTrainerLevel",
+            "friendshipSpirit": "PTU.Settings.Variant.ControllabelLevelCapFormula.FriendshipSpirit",
+            "simplifiedFriendship": "PTU.Settings.Variant.ControllabelLevelCapFormula.SimplifiedFriendship"
+        },
+        default: "friendshipSpirit",
+        requiresReload: true
+    },
+    "levelCapAffectsLoafing": {
+        name: "PTU.Settings.Variant.LevelCapAffectsLoafing.Name",
+        hint: "PTU.Settings.Variant.LevelCapAffectsLoafing.Hint",
+        type: Boolean,
+        default: false,
+        requiresReload: false,
     }
 }
 

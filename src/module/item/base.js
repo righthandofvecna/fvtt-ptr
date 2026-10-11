@@ -588,8 +588,20 @@ class PTUItem extends Item {
         ui.notifications.info(`PTU | Item ${this.name} updated from compendium`);
     }
 
+    isUsageProhibited({ notify = true } = {}) {
+        if (!this.actor) return false;
+        if (this.actor.isUsageProhibited({ notify })) return true;
+        const rollOptions = new Set(Object.keys(this.actor?.flags?.ptu?.rollOptions?.all ?? {}));
+        if (rollOptions.has("condition:disabled") && rollOptions.has(`condition:disabled:${this.item.slug}`)) {
+            if (notify) ui.notifications.warn("PTU.Action.DisabledMove", { localize: true });
+            return true;
+        }
+        return false;
+    }
+
     async use(options = {}) {
         if (!this.actor) return;
+        if (this.isUsageProhibited()) return;
         await this.consume();
         await sendUsageMessage({ item: this, actor: this.actor });
     }

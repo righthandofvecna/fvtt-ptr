@@ -331,6 +331,7 @@ class PTUMove extends PTUItem {
 
     /** @override */
     async use(options = {}) {
+        if (this.isUsageProhibited()) return;
         // Rollable moves: run the attack check, then optionally chain damage.
         if (this.rollable) {
             return await this.roll({

@@ -77,12 +77,17 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
         new ActorConfig(this.actor).render(true);
     }
 
+    get isEditable() {
+        return super.isEditable && (game.user.isGM || !this.actor.isUsageProhibited({ notify: false }));
+    }
+
     
 	/** @override */
 	async getData() {
 		const data = await super.getData();
 		data.config = CONFIG.PTU.data;
 		data.ppVariant = game.settings.get("ptu", "variant.usePP");
+        data.isGM = game.user.isGM;
         return data;
     }
 

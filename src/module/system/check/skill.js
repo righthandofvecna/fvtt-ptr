@@ -109,7 +109,8 @@ class PTUSkillCheck extends PTUDiceCheck {
     */
     async execute(callback, isReroll = false) {
         const title = this.action.label;
-        const { skipDialog } = eventToRollParams(this.event);;
+        const { skipDialog: _skipDialog } = eventToRollParams(this.event);
+        const skipDialog = this.skipDialogOverride ?? _skipDialog;
 
         const rollMode = this.options.has("secret") ? (game.user.isGM ? "gmroll" : "blindroll") : "roll";
 

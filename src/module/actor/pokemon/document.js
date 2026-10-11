@@ -82,6 +82,82 @@ class PTUPokemonActor extends PTUActor {
         }
     }
 
+    /**
+     * At the start of each combat round, check if the trainer can command this Pokemon.
+     * If commandDC > trainer's guaranteed minimum Command roll, roll Command vs the DC.
+     * On failure, apply the Loafing condition.
+     */
+    async rollLoafingCheck() {
+        if (!game.settings.get("ptu", "automation.commandChecks")) return;
+
+        const trainer = this.trainer;
+        if (!trainer) return;
+
+        const dc = this.system.commandDC;
+        if (dc <= 0) return; // Pokemon always obeys; no check needed.
+
+        // Minimum possible roll = all dice showing 1 + modifier.
+        const commandSkill = trainer.system.skills?.command;
+        if (!commandSkill) return;
+        const diceCount = Math.clamp(commandSkill.value?.total ?? 1, 1, 6);
+        const modifier = commandSkill.modifier?.total ?? 0;
+        const minimumRoll = diceCount + modifier;
+
+        if (dc <= minimumRoll) return; // Guaranteed pass — skip the roll.
+
+        const commandAction = trainer.attributes.skills?.command;
+        if (!commandAction) return;
+
+        const pokemon = this;
+        const pokemonToken = this.getActiveTokens()[0]?.document ?? null;
+        const trainerToken = trainer.getActiveTokens()[0]?.document ?? null;
+        const speaker = ChatMessage.getSpeaker({ actor: trainer, token: trainerToken });
+
+        const alreadyLoafing = this.items.find(
+            i => (i.type === "condition" || i.type === "effect") && i.slug === "loafing"
+        );
+
+        await commandAction.roll({
+            dc: {
+                value: dc,
+                slug: "command-dc",
+                uuids: {
+                    actor: pokemon.uuid,
+                    token: pokemonToken?.uuid ?? null,
+                },
+            },
+            overrideLabel: game.i18n.format("PTU.Loafing.CheckLabel", {
+                trainerName: trainer.name,
+                pokemonName: this.name,
+                dc,
+            }),
+            additionalDomains: ["loafing-check"],
+            skipDialog: true,
+            targets: [], // DC-based check, no token targets needed
+            callback: async (_rolls, targets, _msg) => {
+                const outcome = targets[0]?.outcome;
+                const total = _rolls[0]?.total ?? 0;
+                const passed = outcome === "hit";
+
+                // Post success/failure message
+                const contentKey = passed ? "PTU.Loafing.CommandSuccess" : "PTU.Loafing.CommandFailure";
+                await ChatMessage.create({
+                    speaker,
+                    content: `<p>${game.i18n.format(contentKey, { trainerName: trainer.name, pokemonName: pokemon.name, dc, total })}</p>`,
+                    style: CONST.CHAT_MESSAGE_STYLES.OTHER,
+                });
+
+                if (!passed && !alreadyLoafing) {
+                    const LOAFING_UUID = "Compendium.ptu.effects.Item.loafing000000000";
+                    await this.createEmbeddedDocuments("Item", [(await fromUuid(LOAFING_UUID)).toObject()]);
+                }
+                if (passed && alreadyLoafing) {
+                    await alreadyLoafing.delete();
+                }
+            },
+        });
+    }
+
     /** @override */
     async createEmbeddedDocuments(embeddedName, data, options) {
         if (embeddedName === "Item") {
@@ -230,27 +306,40 @@ class PTUPokemonActor extends PTUActor {
             }
         }
 
-        system.level.current = calculateLevel(system.level.exp);
-        const maxLevel = Math.max(...Object.keys(CONFIG.PTU.data.levelProgression));
-        system.level.expTillNextLevel = CONFIG.PTU.data.levelProgression[Math.min(system.level.current + 1, maxLevel)];
-        system.level.percent = Math.round(
-            (
-                (system.level.exp - CONFIG.PTU.data.levelProgression[system.level.current])
-                /
-                (system.level.expTillNextLevel - CONFIG.PTU.data.levelProgression[system.level.current])
-            ) * 100);
+        /* Calculate level and associated caps */
+        const trainerLevel = this.trainer?.system?.level?.current ?? 0;
+        const hardLevelCap = Math.max(...Object.keys(CONFIG.PTU.data.levelProgression));
+        const softLevelCap = calcLevelCap({ trainerLevel, friendship: system.friendship });
+        system.level.softCap = softLevelCap;
 
-        // Compute effective XP (applied + pending) for display purposes on the sheet
-        const pendingExp = system.level.pendingExp ?? 0;
-        system.level.totalEffectiveExp = system.level.exp + pendingExp;
-        system.level.effectivePercent = pendingExp > 0
-            ? Math.min(Math.round(
+        if (game.settings.get("ptu", "variant.pokemonAdvancement") === "milestones") {
+            system.level.current = Math.clamp((system.level.milestones ?? 0) + 1, 1, hardLevelCap);
+            system.level.expTillNextLevel = CONFIG.PTU.data.levelProgression[Math.min(system.level.current + 1, hardLevelCap)];
+            system.level.percent = 0;
+            system.level.totalEffectiveExp = CONFIG.PTU.data.levelProgression[system.level.current] ?? 0;
+            system.level.effectivePercent = 0;
+        } else {
+            system.level.current = calculateLevel(system.level.exp);
+            system.level.expTillNextLevel = CONFIG.PTU.data.levelProgression[Math.min(system.level.current + 1, hardLevelCap)];
+            system.level.percent = Math.round(
                 (
-                    (system.level.totalEffectiveExp - CONFIG.PTU.data.levelProgression[system.level.current])
+                    (system.level.exp - CONFIG.PTU.data.levelProgression[system.level.current])
                     /
                     (system.level.expTillNextLevel - CONFIG.PTU.data.levelProgression[system.level.current])
-                ) * 100), 100)
-            : system.level.percent;
+                ) * 100);
+
+            // Compute effective XP (applied + pending) for display purposes on the sheet
+            const pendingExp = system.level.pendingExp ?? 0;
+            system.level.totalEffectiveExp = system.level.exp + pendingExp;
+            system.level.effectivePercent = pendingExp > 0
+                ? Math.min(Math.round(
+                    (
+                        (system.level.totalEffectiveExp - CONFIG.PTU.data.levelProgression[system.level.current])
+                        /
+                        (system.level.expTillNextLevel - CONFIG.PTU.data.levelProgression[system.level.current])
+                    ) * 100), 100)
+                : system.level.percent;
+        }
 
 
         // Set attributes which are underrived data
@@ -396,10 +485,27 @@ class PTUPokemonActor extends PTUActor {
         };
 
         this.attributes.level.cap = {
-            current: calcLevelCap(this.trainer?.system.level.current ?? 0, system.friendship ?? 0),
-            training: calcLevelCap(this.trainer?.system.level.current ?? 0, 0), // The EXP Training Level Cap is based on the Level Cap without Friendship, it's the max level a Pokémon can reach through EXP Training
+            current: calcLevelCap({ trainerLevel:this.trainer?.system.level.current ?? 0, friendship: system.friendship ?? 0 }),
+            training: calcLevelCap({ trainerLevel:this.trainer?.system.level.current ?? 0 }), // The EXP Training Level Cap is based on the Level Cap without Friendship, it's the max level a Pokémon can reach through EXP Training
             amount: calcExpTrainingCap(), // The amount a Pokémon can gain from Daily EXP Training
         }
+
+        // Command DC
+        const friendshipSetting = game.settings.get("ptu", "variant.spiritPlaytest");
+        const levelCapAffectsLoafing = game.settings.get("ptu", "variant.levelCapAffectsLoafing");
+        const commandDCLevelPenalty = levelCapAffectsLoafing ? Math.max(0, this.system.level.current - this.system.level.softCap) : 0;
+        const commandDC = (()=>{
+            switch (Math.clamp(Math.floor(friendshipSetting ? this.system.friendship : this.system.loyalty), 0, 6)) {
+                case 0: return 20 + commandDCLevelPenalty;
+                case 1: return 8 + commandDCLevelPenalty;
+                case 2: return 0 + commandDCLevelPenalty;
+                case 3: return -8 + commandDCLevelPenalty;
+                case 4: return -16 + commandDCLevelPenalty;
+                case 5: return -20 + commandDCLevelPenalty;
+                case 6: return -60 + commandDCLevelPenalty;
+            }
+        })();
+        system.commandDC = Math.clamp(commandDC, 0, 30);
 
         // TODO: add a migration to copy Shedinja's rule elements to pre-existing Pokemon, then remove this
         if (this.species.slug === "shedinja") {
@@ -599,10 +705,19 @@ class PTUPokemonActor extends PTUActor {
 
     /** @override */
     async _preUpdate(changed, options, userId) {
-        if (!game.settings.get("ptu", "automation.levelUpScreen") || (changed.system?.level?.exp ?? null) === null || changed.system.level.exp === this.system.level.exp)
+        const skipLevelUp = (()=>{
+            if (!game.settings.get("ptu", "automation.levelUpScreen")) return true;
+            // Milestone XP mode
+            if (game.settings.get("ptu", "variant.pokemonAdvancement") === "milestones") {
+                return (changed.system?.level?.milestones ?? null) === null || changed.system.level.milestones === this.system.level.milestones;
+            }
+            // Normal XP mode
+            return (changed.system?.level?.exp ?? null) === null || changed.system.level.exp === this.system.level.exp;
+        })();
+        if (skipLevelUp)
             return super._preUpdate(changed, options, userId);
 
-        const newLevel = calculateLevel(changed.system.level.exp, this.system.level.current);
+        const newLevel = calculateLevel(changed.system.level.exp, this.system.level.current, changed.system.level.milestones);
         if (newLevel <= this.system.level.current) return super._preUpdate(changed, options, userId);
 
         // If the actor has no species yet or the species is being updated, skip the level-up screen.

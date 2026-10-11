@@ -401,9 +401,10 @@ class PTUActor extends Actor {
 
             //apply mods and stages last
             for (const [key, value] of Object.entries(stats)) {
-                const sub = value.total + value.mod.value + value.mod.mod;
-
-                if (key != "hp") value.stage.total = Math.clamp((value.stage?.value ?? 0) + (value.stage?.mod ?? 0), -6, 6);
+                if (key == "hp") continue;
+                const sub = value.total + (value?.mod?.value ?? 0) + (value?.mod?.mod ?? 0);
+                value.stage ??= {};
+                value.stage.total = Math.clamp((value.stage?.value ?? 0) + (value.stage?.mod ?? 0), -6, 6);
                 if (value.stage?.total > 0) {
                     if (statCalculation == "improved-rework") {
                         value.total = Math.floor(sub * value.stage.total * (0.275 * Math.log10(130 - (isTrainer ? effectiveStatLevel * 2 : effectiveStatLevel)) - 0.325) + sub)
@@ -725,6 +726,19 @@ class PTUActor extends Actor {
     /** @override */
     applyActiveEffects() {
         return;
+    }
+
+    isUsageProhibited({ notify = true } = {}) {
+        const rollOptions = new Set(Object.keys(this.flags?.ptu?.rollOptions?.all ?? {}));
+        if (rollOptions.has("condition:loafing") && !game.user.isGM) {
+            if (notify) ui.notifications.warn("PTU.Action.Loafing", { localize: true });
+            return true;
+        }
+        if (rollOptions.has("condition:frozen")) {
+            if (notify) ui.notifications.warn("PTU.Action.MoveWhileFrozen", { localize: true });
+            return true;
+        }
+        return false;
     }
 
     /** @override */
@@ -1507,6 +1521,9 @@ class PTUActor extends Actor {
             .join(", ");
 
         action.roll = async (params = {}) => {
+            const allSelectors = params.additionalDomains?.length
+                ? [...selectors, ...params.additionalDomains]
+                : selectors;
             const check = new PTUSkillCheck({
                 source: {
                     actor: this,
@@ -1514,11 +1531,13 @@ class PTUActor extends Actor {
                     options
                 },
                 targets: params.targets ?? [...game.user.targets],
-                selectors,
+                selectors: allSelectors,
                 event: params.event,
                 action,
                 dc: params.dc ?? null
             })
+            if (params.skipDialog) check.skipDialogOverride = true;
+            if (params.overrideLabel) check.action = { ...check.action, label: params.overrideLabel };
 
             return await check.executeCheck(params.callback, action);
         }

@@ -311,6 +311,11 @@ class PTUPokemonTrainingSheet extends FormApplication {
     }
 
     #calculateXPToDistribute() {
+        if (game.settings.get("ptu", "variant.pokemonAdvancement") !== "exp") {
+            this.xpToDistribute = 0; // daily training gives no XP with Pokemon Level Tied
+            return;
+        }
+
         // Calculates the XP To Distribute using proper trainer data
         try {
             // Use the trainer's dedicated method to get proper EXP training data
@@ -641,18 +646,18 @@ class PTUPokemonTrainingSheet extends FormApplication {
             const instancesValue = parseInt(value) || (this.trainingPlaceholders?.[key] ?? 0);
             if (instancesValue === 0) continue;
 
-            // Calculate total EXP: instances × EXP per instance
-            const expValue = instancesValue * this.xpToDistribute;
+            if (game.settings.get("ptu", "variant.pokemonAdvancement") === "exp") {
+                if (currentLevel > trainingLevelCap) {
+                    message += `${actor.name} is too high level (${currentLevel}) for training (cap: ${trainingLevelCap})<br>`;
+                } else {
+                    // Calculate total EXP: instances × EXP per instance
+                    const expValue = instancesValue * this.xpToDistribute;
+                    const newPending = (actor.system.level.pendingExp ?? 0) + expValue;
+                    message += actor.name + " gained " + expValue + " EXP (" + instancesValue + " instances) as pending EXP (total pending: " + newPending + ")<br>";
 
-            if (currentLevel > trainingLevelCap) {
-                message += `${actor.name} is too high level (${currentLevel}) for training (cap: ${trainingLevelCap})<br>`;
-                continue;
+                    updates.push(actor.update({'system.level.pendingExp': newPending}));
+                }
             }
-
-            const newPending = (actor.system.level.pendingExp ?? 0) + expValue;
-            message += actor.name + " gained " + expValue + " EXP (" + instancesValue + " instances) as pending EXP (total pending: " + newPending + ")<br>";
-
-            const actorUpdates = [actor.update({'system.level.pendingExp': newPending})];
 
             if (trainingEffectID !== "") {
                 // TODO: this doesn't work
@@ -660,14 +665,12 @@ class PTUPokemonTrainingSheet extends FormApplication {
                 const compUuid = `Compendium.ptu.effects.Item.${trainingEffectID}`;
                 const alreadyHasEffect = actor.items.some(i => i.sourceId === compUuid || i.flags?.core?.sourceId === compUuid);
                 if (!alreadyHasEffect) {
-                    actorUpdates.push(
+                    updates.push(
                         game.packs.get("ptu.effects").getDocument(trainingEffectID)
                             .then(effect => actor.createEmbeddedDocuments('Item', [foundry.utils.mergeObject(effect.toObject(), {"flags": { "core": { "sourceId": compUuid }}, "ptu": { "trainingEffect": true }})]))
                     );
                 }
             }
-
-            updates.push(...actorUpdates);
         }
 
         await Promise.all(updates);

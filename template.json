@@ -535,7 +535,8 @@
 
       "level": {
         "exp": 40,
-        "pendingExp": 0
+        "pendingExp": 0,
+        "milestones": 0
       },
       "health": {
         "value": null,
