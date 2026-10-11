@@ -40,7 +40,7 @@ Please note that this branch is no longer receiving updates and is only compatib
 ## 🚨 Changes From Stable 🚨
 - Added opt-in automation for the Loafing system
 - Added settings for Pokemon Advancement: Pokemon Milestones, and Tie Level to Trainer Level
-- Added a setting to control the Level Cap forumula
+- Added a setting to control the Level Cap formula
 - You can now use the Original PTU Stat Calculations
 - Migrations are now applied to compendiums
 - Configured Condensed and Extended tracks to use the Trainer Level Up Wizard

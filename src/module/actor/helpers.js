@@ -373,6 +373,7 @@ function calcLevelCap({ trainerLevel, friendship }={}) {
     trainerLevel ??= 1;
 
     if (formula === "friendshipSpirit") {
+        friendship ??= 0;
         return Math.ceil(
             5 + 
             (79/50) * trainerLevel + 
@@ -384,7 +385,7 @@ function calcLevelCap({ trainerLevel, friendship }={}) {
         if (friendship === undefined) {
             return basePokemonLevelCap;
         }
-        const friendshipModifier = (Math.clamp(friendship - 2, -2, 3) * 4);
+        const friendshipModifier = Math.floor(Math.clamp(friendship - 2, -2, 3) * 4);
         return Math.clamp(basePokemonLevelCap + friendshipModifier, 1, POKEMON_LEVEL_CAP);
     }
 
