@@ -401,9 +401,10 @@ class PTUActor extends Actor {
 
             //apply mods and stages last
             for (const [key, value] of Object.entries(stats)) {
-                const sub = value.total + value.mod.value + value.mod.mod;
-
-                if (key != "hp") value.stage.total = Math.clamp((value.stage?.value ?? 0) + (value.stage?.mod ?? 0), -6, 6);
+                if (key == "hp") continue;
+                const sub = value.total + (value?.mod?.value ?? 0) + (value?.mod?.mod ?? 0);
+                value.stage ??= {};
+                value.stage.total = Math.clamp((value.stage?.value ?? 0) + (value.stage?.mod ?? 0), -6, 6);
                 if (value.stage?.total > 0) {
                     if (statCalculation == "improved-rework") {
                         value.total = Math.floor(sub * value.stage.total * (0.275 * Math.log10(130 - (isTrainer ? effectiveStatLevel * 2 : effectiveStatLevel)) - 0.325) + sub)

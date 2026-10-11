@@ -57,7 +57,7 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		data["ballStyle"] = this.ballStyle;
 
 		data["loafingWarning"] = ""
-		const trainerMinCommand = Math.clamp((this.actor.trainer.system.skills?.command?.value?.total ?? 0), 1, 6) + (this.actor.trainer?.system?.skills?.command?.modifier?.total ?? 0);
+		const trainerMinCommand = Math.clamp((this.actor.trainer?.system?.skills?.command?.value?.total ?? 0), 1, 6) + (this.actor.trainer?.system?.skills?.command?.modifier?.total ?? 0);
 		if (this.actor.hasCondition("loafing")) {
 			data["loafingWarning"] = game.i18n.format("PTU.Action.Loafing");
 		} else if (game.settings.get("ptu", "automation.commandChecks") && this.actor.system.commandDC > trainerMinCommand) {
