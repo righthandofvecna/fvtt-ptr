@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -55,12 +56,14 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher (Pokemon Caretaking)",
+    "class": "Researcher (Pokémon Caretaking)",
     "name": "Skill Trainer",
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -70,7 +73,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Pusher"
+      "prereqBackup": "Pusher",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -83,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 38400000,
   "_id": "Yvm66ufAY9WZhZiI"
 }
