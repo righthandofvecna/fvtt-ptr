@@ -2,7 +2,6 @@
   "name": "Sing",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "All legal Targets fall Asleep. On a miss, Sing instead causes targets to become Slowed and suffer a -2 penalty to their Evasion until the end of the user's next turn.\n\n@UUID[Compendium.ptu.effects.Item.MlJSSeAT9abuLZ3G]",
@@ -10,12 +9,26 @@
     "rules": [
       {
         "key": "ApplyEffect",
-        "predicate": [],
+        "predicate": [
+          "attack:outcome:hit"
+        ],
         "selectors": "{item|id}-apply-effects",
         "uuid": "Compendium.ptu.effects.Item.RekZDOcIsADhrfH3",
         "range": "",
         "value": "",
-        "affects": "target"
+        "affects": "target",
+        "linked": false
+      },
+      {
+        "key": "ApplyEffect",
+        "predicate": [
+          "attack:outcome:miss"
+        ],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.MlJSSeAT9abuLZ3G",
+        "range": "",
+        "linked": false,
+        "value": ""
       }
     ],
     "enabled": true,
@@ -60,7 +73,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -93,7 +107,9 @@
         "id": "l2MH6WgqF3NSBwNZ",
         "onDelete": "cascade"
       },
-      "used": null
+      "used": null,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "YD9PPN6tPaLMrvvm"
