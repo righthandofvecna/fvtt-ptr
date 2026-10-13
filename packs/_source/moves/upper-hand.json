@@ -1,0 +1,92 @@
+{
+  "name": "Upper Hand",
+  "type": "move",
+  "_id": "nyZMP5zDCALU2mmP",
+  "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
+  "system": {
+    "origin": "",
+    "effect": "If an adjacent foe uses a Move with the Priority Keyword, Upper Hand may be used as an interrupt Move against the triggering foe.\n\nUpper Hand Flinches the target.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.xE6uIFWZoYXAZQxA",
+        "range": "",
+        "linked": false,
+        "value": "",
+        "affects": "target"
+      }
+    ],
+    "enabled": true,
+    "slug": "upper-hand",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Target 1",
+      "Trigger",
+      "Interrupt"
+    ],
+    "sheerForce": false,
+    "toughClaws": false,
+    "technician": false,
+    "reckless": false,
+    "ironFist": false,
+    "megaLauncher": false,
+    "punkRock": false,
+    "strongJaw": false,
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "type": "Fighting",
+    "category": "Physical",
+    "damageBase": "7",
+    "ac": "2",
+    "range": "Melee",
+    "contestType": "Smart - Saving Grace",
+    "stab": false,
+    "damageBonus": 0,
+    "isStruggle": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  }
+}
