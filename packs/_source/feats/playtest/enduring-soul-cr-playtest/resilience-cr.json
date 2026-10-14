@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Trigger: Your Pokémon has less than 50% of its Max HP remaining, and has no Temporary HP at the end of its turn.\nEffect: Your Pokémon gains a Tick of Temporary HP.\n\nThis effect resolves after any other end-of-turn Damage or Healing has been applied.",
+    "effect": "Trigger: Your Pokémon has less than 50% of its Max HP remaining, and has no Temporary HP at the end of its turn.\nEffect: Your Pokémon gains a Tick of Temporary HP.\n<blockquote>This effect resolves after any other end-of-turn Damage or Healing has been applied.</blockquote>",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -40,7 +40,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,12 +61,16 @@
     "free": false,
     "class": "Enduring Soul",
     "contentSet": "class-rework",
-    "replacesSlug": "resilience"
+    "replacesSlug": "resilience",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "RxSQPAHAGbchEm1Y",

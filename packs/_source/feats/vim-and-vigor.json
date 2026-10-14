@@ -2,7 +2,7 @@
   "name": "Vim and Vigor",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 2 Tutor Points\nEffect: You spend an hour with the target. The target loses 2 Tutor Points, and gains the Vigor Ability. Vim and Vigor may target a Pokémon only once.",
+    "effect": "Target: Your Pokémon with at least 2 Tutor Points\nEffect: You spend an hour with the target. The target loses 2 Tutor Points, and gains the @UUID[Compendium.ptu.abilities.Item.lH3z3rYF5L5ks15O]{Vigor} Ability. Vim and Vigor may target a Pokémon only once.",
     "snippet": "",
     "rules": [
       {
@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +72,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -82,7 +85,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Shrug Off, Master Athletics or Focus",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -95,7 +100,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 68800000,
   "_id": "zo1FLIV76JAMRPXr"
 }

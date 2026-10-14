@@ -2,7 +2,7 @@
   "name": "Relentless Endurance",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Trigger: Your Pokémon falls below 50%% HP.\nEffect: Your Pokémon are considered at 1 Spirit for the sake of Bonuses from Spirit.\nBonus: If your Pokémon is below 20% HP, they are considered at 3 Spirit for the sake of Bonuses from Spirit.\n",
+    "effect": "Trigger: Your Pokémon falls below 50% HP.\nEffect: Your Pokémon are considered at 1 Spirit for the sake of Bonuses from Spirit.\nBonus: If your Pokémon is below 20% HP, they are considered at 3 Spirit for the sake of Bonuses from Spirit.\n",
     "snippet": "",
     "rules": [
       {
@@ -11,7 +11,8 @@
         "mode": "add",
         "path": "system.modifiers.baseStats.hp.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -45,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -68,8 +70,10 @@
     "name": "Shrug Off",
     "useCount": 0,
     "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -77,7 +81,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Enduring Soul, Adept Focus"
+      "prereqBackup": "Enduring Soul, Adept Focus",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
