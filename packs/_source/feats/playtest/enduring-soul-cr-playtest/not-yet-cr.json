@@ -42,7 +42,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -63,7 +64,9 @@
     "free": false,
     "class": "Enduring Soul",
     "contentSet": "class-rework",
-    "replacesSlug": "not-yet"
+    "replacesSlug": "not-yet",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
