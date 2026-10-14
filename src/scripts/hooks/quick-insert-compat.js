@@ -21,17 +21,22 @@ export const QuickInsertCompat = {
         if (pack) await pack.getIndex({ fields: ["system.slug", "system.contentSet", "system.replacesSlug"] });
       }
 
-      // Build hidden slugs from the index entries of all PTU results
-      const entryData = ptuResults.map(result => {
+      // split the PTU results by their pack
+      const entryDataByPack = ptuResults.reduce((acc, result) => {
+        const packId = result.item.package;
+        if (!acc[packId]) acc[packId] = [];
         const sys = game.packs.get(result.item.package)?.index.get(result.item.id)?.system ?? {};
-        return { slug: sys.slug, contentSet: sys.contentSet, replacesSlug: sys.replacesSlug };
-      });
-      const hiddenSlugs = buildHiddenSlugs(activeSetKeys, entryData);
+        acc[packId].push({ slug: sys.slug, contentSet: sys.contentSet, replacesSlug: sys.replacesSlug });
+        return acc;
+      }, {});
+      const hiddenSlugsByPack = Object.fromEntries(
+        Object.entries(entryDataByPack).map(([packId, entryData]) => [packId, buildHiddenSlugs(activeSetKeys, entryData)])
+      );
 
       // Remove items that should be hidden from the quick-insert index
       for (const result of ptuResults) {
         const sys = game.packs.get(result.item.package)?.index.get(result.item.id)?.system ?? {};
-        if (isHiddenByContentSet(sys.slug, sys.contentSet, hiddenSlugs, activeSetKeys)) {
+        if (isHiddenByContentSet(sys.slug, sys.contentSet, hiddenSlugsByPack[result.item.package], activeSetKeys)) {
           quickInsert.searchLib.removeItem(result.item.uuid);
         }
       }
