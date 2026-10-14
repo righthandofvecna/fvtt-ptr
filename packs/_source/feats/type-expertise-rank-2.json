@@ -45,6 +45,180 @@
         "predicate": [],
         "phase": "applyAEs",
         "priority": null
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.effects.Item.nSld8Amc3m0UwKXM",
+            "label": "Bug",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-bug"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.3Hg70m1G33Pv1zlB",
+            "label": "Dark",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-dark"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.BVGccdFOCzOkNk2l",
+            "label": "Dragon",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-dragon"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.7rkmSjUg2ACHgntK",
+            "label": "Electric",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-electric"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.qNtDGSY4rgfTRJ55",
+            "label": "Fairy",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-fairy"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.2zYeDpq6JRFiHIfe",
+            "label": "Fighting",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-fighting"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.QSyN1IhbBRMcrhAF",
+            "label": "Fire",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-fire"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.4u81RNnwSVH6dARz",
+            "label": "Flying",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-flying"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.xr0kyVEV7GYdc0Qr",
+            "label": "Ghost",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-ghost"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.gzlbSQBRtmCeso3c",
+            "label": "Grass",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-grass"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.9nOyjG5nQbDx6Kl2",
+            "label": "Ground",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-ground"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.iHia9ZGQYY02FmCk",
+            "label": "Ice",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-ice"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.CNa2FFFkRdzPsk8i",
+            "label": "Normal",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-normal"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.wkgYm7xvGnyjZccK",
+            "label": "Poison",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-poison"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.LJaaKxVRXKCLVwZW",
+            "label": "Psychic",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-psychic"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.KftD2nYyYLAvihJy",
+            "label": "Rock",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-rock"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.VvCEzUbF86Et0J2h",
+            "label": "Steel",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-steel"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.effects.Item.8JbGdYCba2hJslcN",
+            "label": "Water",
+            "predicate": [
+              {
+                "not": "effect:effect-type-stab-boost-water"
+              }
+            ]
+          }
+        ],
+        "flag": "typeExpertiseRank2Stab"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.typeExpertiseRank2Stab}"
       }
     ],
     "enabled": true,
@@ -106,7 +280,8 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -117,7 +292,7 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Level 9, 3 Moves of the Chosen Type in your Move List",
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -133,5 +308,6 @@
     "exportSource": null
   },
   "sort": 13900000,
-  "_id": "D9vL3Z8M6oLuKf2K"
+  "_id": "D9vL3Z8M6oLuKf2K",
+  "folder": null
 }
