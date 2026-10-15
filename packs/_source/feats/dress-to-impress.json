@@ -2,7 +2,7 @@
   "name": "Dress to Impress",
   "system": {
     "origin": "",
-    "effect": "Target: Your Chic Pokémon\nEffect: Your Pokémon gains the effect of all items in extra slots granted by Versatile Wardrobe for one full round. Dress to Impress may only target a Pokémon once per Scene.",
+    "effect": "Target: Your Chic Pokémon\nEffect: Your Pokémon gains the effect of all items in extra slots granted by @UUID[Compendium.ptu.feats.Item.O4JBRlOC2CrdltH9]{Versatile Wardrobe} for one full round. Dress to Impress may only target a Pokémon once per Scene.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -60,7 +61,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -70,7 +73,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Versatile Wardrobe, two Fashionista Skills at Expert"
+      "prereqBackup": "Versatile Wardrobe, two Fashionista Skills at Expert",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -83,7 +90,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 54000000,
   "_id": "lhaj6V4PXAK3uAHo"
 }

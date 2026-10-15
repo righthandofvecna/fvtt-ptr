@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Fashionista Recipes",
-    "effect": "You can create Lax Incense for $1000, Luck Incense for $900, and Full Incense for $450. ",
+    "effect": "You can create @UUID[Compendium.ptu.items.Item.QTGHP70R6HB5w6YL]{Lax Incense} for $1000, @UUID[Compendium.ptu.items.Item.ckQ8TcdPzRlOZq2O]{Luck Incense} for $900, and @UUID[Compendium.ptu.items.Item.YUMXPQyow8nKJcrE]{Full Incense} for $450. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "xJWDjzqPAL4mjKeS",
   "effects": [],
-  "folder": null,
   "sort": 31000000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

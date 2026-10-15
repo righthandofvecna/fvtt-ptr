@@ -2,7 +2,7 @@
   "name": "Parfumier",
   "system": {
     "origin": "",
-    "effect": "Whenever you create an Incense Held Item, choose Sweet Scent or Aromatic Mist. While your Pokémon is holding that Incense Item in an active Held Item slot, they add the chosen Move to their Move List.\nRecipe - Incense Maker",
+    "effect": "Whenever you create an Incense Held Item, choose @UUID[Compendium.ptu.moves.Item.nJhqaS0PzJJ7w1pS]{Sweet Scent} or @UUID[Compendium.ptu.moves.Item.PITSF6OhptqQFLxc]{Aromatic Mist}. While your Pokémon is holding that Incense Item in an active Held Item slot, they add the chosen Move to their Move List.\nRecipe - @UUID[Compendium.ptu.references.Item.xJWDjzqPAL4mjKeS]{Incense Maker}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -34,7 +34,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -49,7 +50,7 @@
     },
     "prerequisites": [
       "Fashionista",
-      "one Fashionista Skill at Expert"
+      "One Fashionista Skill at Expert"
     ],
     "notes": "",
     "free": false,
@@ -58,7 +59,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +71,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Fashionista, one Fashionista Skill at Expert"
+      "prereqBackup": "Fashionista, one Fashionista Skill at Expert",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -81,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 36700000,
   "_id": "XHyFPw5lAuRv92iK"
 }
