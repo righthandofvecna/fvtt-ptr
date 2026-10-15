@@ -2,7 +2,6 @@
   "name": "Blaze Kick",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Blaze Kick Burns the target on 19+ and is a Critical Hit on 18+.",
@@ -66,7 +65,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -90,7 +90,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "Vj2gQXAHg94lFdNb",
   "effects": [],

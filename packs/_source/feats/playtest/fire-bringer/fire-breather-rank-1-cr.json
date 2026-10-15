@@ -2,12 +2,11 @@
   "name": "Fire Breather Rank 1",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Learn three Fire Bringer Moves from the list below. You may choose any Move marked with the Fire Breather Rank you are taking or lower.\nRank 1: Fiery Dance, Fire Punch, Fire Spin, Flamethrower, Lava Plume\nRank 2: Blaze Kick, Burning Jealousy, Flare Blitz, Heat Wave, Inferno",
+    "effect": "Effect: Learn three Fire Bringer Moves from the list below. You may choose any Move marked with the Fire Breather Rank you are taking or lower.\nRank 1: @UUID[Compendium.ptu.moves.Item.TjyskB7OEbBoJ819]{Fiery Dance}, @UUID[Compendium.ptu.moves.Item.EA2vavVCPlHFLvwf]{Fire Punch}, @UUID[Compendium.ptu.moves.Item.TiIjSQqYprGxlHAZ]{Fire Spin}, @UUID[Compendium.ptu.moves.Item.m01FTVITfrqlu0Kn]{Flamethrower}, @UUID[Compendium.ptu.moves.Item.WpFzl62EYkpKipF5]{Lava Plume}\nRank 2: @UUID[Compendium.ptu.moves.Item.Vj2gQXAHg94lFdNb]{Blaze Kick}, @UUID[Compendium.ptu.moves.Item.eKo8Aq43yTIs1tus]{Burning Jealousy}, @UUID[Compendium.ptu.moves.Item.VxO7N8CbFaW3889w]{Flare Blitz}, @UUID[Compendium.ptu.moves.Item.Z0jlIyTMOL1QXcDb]{Heat Wave}, @UUID[Compendium.ptu.moves.Item.f25cGYvLApdYt14w]{Inferno}",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "firebreatherrank1",
         "choices": [
           {
@@ -36,30 +35,35 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.TjyskB7OEbBoJ819",
+            "label": "Fiery Dance",
             "predicate": {
               "not": "move:fiery-dance"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.EA2vavVCPlHFLvwf",
+            "label": "Fire Punch",
             "predicate": {
               "not": "move:fire-punch"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.TiIjSQqYprGxlHAZ",
+            "label": "Fire Spin",
             "predicate": {
               "not": "move:fire-spin"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.m01FTVITfrqlu0Kn",
+            "label": "Flamethrower",
             "predicate": {
               "not": "move:flamethrower"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.WpFzl62EYkpKipF5",
+            "label": "Lava Plume",
             "predicate": {
               "not": "move:lava-plume"
             }
@@ -79,30 +83,35 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.TjyskB7OEbBoJ819",
+            "label": "Fiery Dance",
             "predicate": {
               "not": "move:fiery-dance"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.EA2vavVCPlHFLvwf",
+            "label": "Fire Punch",
             "predicate": {
               "not": "move:fire-punch"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.TiIjSQqYprGxlHAZ",
+            "label": "Fire Spin",
             "predicate": {
               "not": "move:fire-spin"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.m01FTVITfrqlu0Kn",
+            "label": "Flamethrower",
             "predicate": {
               "not": "move:flamethrower"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.WpFzl62EYkpKipF5",
+            "label": "Lava Plume",
             "predicate": {
               "not": "move:lava-plume"
             }
@@ -122,30 +131,35 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.TjyskB7OEbBoJ819",
+            "label": "Fiery Dance",
             "predicate": {
               "not": "move:fiery-dance"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.EA2vavVCPlHFLvwf",
+            "label": "Fire Punch",
             "predicate": {
               "not": "move:fire-punch"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.TiIjSQqYprGxlHAZ",
+            "label": "Fire Spin",
             "predicate": {
               "not": "move:fire-spin"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.m01FTVITfrqlu0Kn",
+            "label": "Flamethrower",
             "predicate": {
               "not": "move:flamethrower"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.WpFzl62EYkpKipF5",
+            "label": "Lava Plume",
             "predicate": {
               "not": "move:lava-plume"
             }
@@ -193,7 +207,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -207,6 +222,7 @@
       "bind": false
     },
     "prerequisites": [
+      "Fire Bringer",
       "Expert Focus or Combat"
     ],
     "notes": "",
@@ -214,7 +230,9 @@
     "class": "Fire Bringer",
     "name": "Fire Breather [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "fire-breather-rank-1"
+    "replacesSlug": "fire-breather-rank-1",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -227,7 +245,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
