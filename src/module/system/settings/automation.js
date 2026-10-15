@@ -85,6 +85,23 @@ const AutomationSettingsConfig = {
         type: Boolean,
         default: true,
     },
+    "autoRecovery": {
+        name: "PTU.Settings.Automation.AutoRecovery.Name",
+        hint: "PTU.Settings.Automation.AutoRecovery.Hint",
+        type: String,
+        choices: {
+            "none": "PTU.Settings.Automation.AutoRecovery.Choices.None",
+            "prompt": "PTU.Settings.Automation.AutoRecovery.Choices.Prompt",
+            "auto": "PTU.Settings.Automation.AutoRecovery.Choices.Auto"
+        },
+        default: "prompt"
+    },
+    "sessionPromptExtendedRest": {
+        name: "PTU.Settings.Automation.SessionPromptExtendedRest.Name",
+        hint: "PTU.Settings.Automation.SessionPromptExtendedRest.Hint",
+        type: Boolean,
+        default: false
+    },
     "commandChecks": {
         name: "PTU.Settings.Automation.CommandChecks.Name",
         hint: "PTU.Settings.Automation.CommandChecks.Hint",

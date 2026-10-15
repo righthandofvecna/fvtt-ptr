@@ -210,6 +210,22 @@ class RuleElementPTU extends foundry.abstract.DataModel {
     onRoundEnd(actorUpdates) {};
 
     /**
+     * Run at the end of each scene.
+     * @param actorUpdates A record containing update data for the actor
+     * @param itemUpdates A record containing update data for the item
+     * @param ruleUpdates A record containing update data for the rule
+     */
+    onSceneEnd(actorUpdates, itemUpdates, ruleUpdates) {};
+
+    /**
+     * Run at the end of each day.
+     * @param actorUpdates A record containing update data for the actor
+     * @param itemUpdates A record containing update data for the item
+     * @param ruleUpdates A record containing update data for the rule
+     */
+    onDayEnd(actorUpdates, itemUpdates, ruleUpdates) {};
+
+    /**
      * Runs after an item holding this rule is removed from an actor. This method is used for cleaning up any values
      * on the actorData or token objects (e.g., removing temp HP).
      *

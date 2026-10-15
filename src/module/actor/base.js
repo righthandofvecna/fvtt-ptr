@@ -1308,6 +1308,28 @@ class PTUActor extends Actor {
     }
 
     /**
+     * Called at the end of a scene, handling end-of-scene cleanup and restoration.
+     */
+    async onSceneEnd() {
+        const itemUpdates = []
+        for (const item of this.items.contents) {
+            itemUpdates.push(await item.onSceneEnd?.({ doUpdates: false }));
+        }
+        if (itemUpdates.filter(Boolean).length) await this.updateEmbeddedDocuments("Item", itemUpdates.filter(Boolean));
+    }
+
+    /**
+     * Called at the end of a day, handling end-of-day cleanup and restoration.
+     */
+    async onDayEnd() {
+        const itemUpdates = []
+        for (const item of this.items.contents) {
+            itemUpdates.push(await item.onDayEnd?.({ doUpdates: false }));
+        }
+        if (itemUpdates.filter(Boolean).length) await this.updateEmbeddedDocuments("Item", itemUpdates.filter(Boolean));
+    }
+
+    /**
      * When combat ends, do cleanup
      */
     async onDeleteCombat() {

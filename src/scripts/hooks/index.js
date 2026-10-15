@@ -28,6 +28,7 @@ import { ConditionalContentEnricher } from "./conditional-enricher.js";
 import { TrainerProgressionEnricher } from "./trainer-progression-enricher.js";
 import { Tooltips } from "./tooltips.js";
 import { MathEnricher } from "./math-enricher.js";
+import { AutoRecovery } from "./auto-recovery.js";
 
 export const PtuHooks = {
     listen() {
@@ -63,6 +64,7 @@ export const PtuHooks = {
             TrainerProgressionEnricher,
             Tooltips,
             MathEnricher,
+            AutoRecovery,
         ]
         for(const listener of listeners) listener.listen();
     }
