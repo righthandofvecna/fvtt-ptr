@@ -2,12 +2,11 @@
   "name": "Fire Bringer",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose three of Flame Burst, Flame Charge, Flame Wheel, Sunny Day, or Will-O-Wisp. You learn the chosen Moves.",
+    "effect": "Effect: Choose three of @UUID[Compendium.ptu.moves.Item.JV9D80kHWzifgoYH]{Flame Burst}, @UUID[Compendium.ptu.moves.Item.TeL0p7BkR386XexV]{Flame Charge}, @UUID[Compendium.ptu.moves.Item.cDe2PIlHkOV2msto]{Flame Wheel}, @UUID[Compendium.ptu.moves.Item.q5LVpuZBDxntzB4D]{Sunny Day}, or @UUID[Compendium.ptu.moves.Item.qltGKDIhEJpOqswU]{Will-O-Wisp}. You learn the chosen Moves.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "firebringer",
         "choices": [
           {
@@ -36,30 +35,35 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.JV9D80kHWzifgoYH",
+            "label": "Flame Burst",
             "predicate": {
               "not": "move:flame-burst"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.TeL0p7BkR386XexV",
+            "label": "Flame Charge",
             "predicate": {
               "not": "move:flame-charge"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.cDe2PIlHkOV2msto",
+            "label": "Flame Wheel",
             "predicate": {
               "not": "move:flame-wheel"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.m787MkYyENqNyGOb",
+            "label": "Sunny Day",
             "predicate": {
               "not": "move:sunny-day"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.qltGKDIhEJpOqswU",
+            "label": "Will-O-Wisp",
             "predicate": {
               "not": "move:will-o-wisp"
             }
@@ -79,30 +83,35 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.JV9D80kHWzifgoYH",
+            "label": "Flame Burst",
             "predicate": {
               "not": "move:flame-burst"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.TeL0p7BkR386XexV",
+            "label": "Flame Charge",
             "predicate": {
               "not": "move:flame-charge"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.cDe2PIlHkOV2msto",
+            "label": "Flame Wheel",
             "predicate": {
               "not": "move:flame-wheel"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.m787MkYyENqNyGOb",
+            "label": "Sunny Day",
             "predicate": {
               "not": "move:sunny-day"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.qltGKDIhEJpOqswU",
+            "label": "Will-O-Wisp",
             "predicate": {
               "not": "move:will-o-wisp"
             }
@@ -122,30 +131,35 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.JV9D80kHWzifgoYH",
+            "label": "Flame Burst",
             "predicate": {
               "not": "move:flame-burst"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.TeL0p7BkR386XexV",
+            "label": "Flame Charge",
             "predicate": {
               "not": "move:flame-charge"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.cDe2PIlHkOV2msto",
+            "label": "Flame Wheel",
             "predicate": {
               "not": "move:flame-wheel"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.m787MkYyENqNyGOb",
+            "label": "Sunny Day",
             "predicate": {
               "not": "move:sunny-day"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.qltGKDIhEJpOqswU",
+            "label": "Will-O-Wisp",
             "predicate": {
               "not": "move:will-o-wisp"
             }
@@ -193,7 +207,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -215,7 +230,9 @@
     "class": "Fire Bringer",
     "name": "Fire Bringer [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "fire-bringer"
+    "replacesSlug": "fire-bringer",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -226,7 +243,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

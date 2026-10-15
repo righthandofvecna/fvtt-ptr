@@ -2,7 +2,6 @@
   "name": "Flame Wheel",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FireIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Flame Wheel Burns the target on 19+.",
@@ -60,7 +59,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -84,7 +84,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "cDe2PIlHkOV2msto",
   "effects": [],
