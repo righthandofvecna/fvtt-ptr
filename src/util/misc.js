@@ -158,15 +158,28 @@ export function sortStringRecord(record) {
 /**
  * Extract the minimum level requirement from an evolution predicate array.
  * Looks for a predicate string of the form "self:level:N+" and returns N.
+ * Do it as a breadth-first search through the predicate array.
  * Returns 1 if no level predicate is found.
  * @param {Array} predicate
  * @returns {number}
  */
 export function getMinLevelFromPredicate(predicate = []) {
-    for (const p of predicate) {
+    if (typeof predicate === "object" || typeof predicate === "string") {
+        predicate = [predicate];
+    }
+    const subpredicates = [...predicate];
+    while (subpredicates.length > 0) {
+        const p = subpredicates.shift();
         if (typeof p === "string") {
             const m = p.match(/^self:level:(\d+)\+$/);
             if (m) return parseInt(m[1]);
+        }
+        if (typeof p === "object" && p !== null) {
+            for (const key in p) {
+                if (Array.isArray(p[key])) {
+                    subpredicates.push(...p[key]);
+                }
+            }
         }
     }
     return 1;

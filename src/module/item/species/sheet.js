@@ -2,6 +2,9 @@ import { PTUItemSheet } from "../index.js";
 import { getMinLevelFromPredicate } from "../../../util/misc.js";
 
 class PTUSpeciesSheet extends PTUItemSheet {
+    /** Tracks which evolution indices are in 'complex' (raw JSON) predicate mode. */
+    _complexPredicateEvolutions = new Set();
+
     /** @override */
     static get defaultOptions() {
         const options = super.defaultOptions;
@@ -56,6 +59,21 @@ class PTUSpeciesSheet extends PTUItemSheet {
             return "entry";
         })();
 
+        // Auto-initialize complex mode for evolutions that already have non-simple predicates
+        // (objects rather than plain string arrays). Only auto-add; never auto-remove.
+        const storedEvolutions = this.item.system.evolutions ?? [];
+        for (let i = 0; i < storedEvolutions.length; i++) {
+            const pred = storedEvolutions[i].predicate;
+            if (pred !== null && pred !== undefined && (!Array.isArray(pred) || pred.some(p=>typeof p !== "string"))) {
+                this._complexPredicateEvolutions.add(i);
+            }
+        }
+
+        // Pass a plain-object map of { index -> true } for evolutions in complex predicate mode.
+        data.complexPredicateEvolutions = Object.fromEntries(
+            [...this._complexPredicateEvolutions].map(i => [i, true])
+        );
+
         return data;
     }
 
@@ -69,6 +87,18 @@ class PTUSpeciesSheet extends PTUItemSheet {
             if(!uuid) return;
             const item = await fromUuid(uuid);
             if(item) item.sheet.render(true);
+        });
+
+        // Toggle evolution predicate between tagify (simple) and raw JSON (complex) modes.
+        html.find('.ptu-toggle-evo-predicate').on('click', (event) => {
+            event.preventDefault();
+            const idx = parseInt(event.currentTarget.dataset.idx);
+            if (this._complexPredicateEvolutions.has(idx)) {
+                this._complexPredicateEvolutions.delete(idx);
+            } else {
+                this._complexPredicateEvolutions.add(idx);
+            }
+            this.render(false);
         });
 
         html.find('.capability-item .item-control.item-delete').on('click', (event) => {
@@ -377,14 +407,23 @@ class PTUSpeciesSheet extends PTUItemSheet {
                     evolutions[i].predicate = rawPredicate.every(p => p && typeof p === "object" && "value" in p)
                         ? rawPredicate.map(p => p.value).filter(Boolean)
                         : rawPredicate.filter(p => typeof p === "string" && p);
+                } else if (rawPredicate && typeof rawPredicate === "object") {
+                    // Complex predicate object (e.g. {"or": [...]}); keep as-is.
+                    evolutions[i].predicate = rawPredicate;
+                } else if (typeof rawPredicate === "string" && rawPredicate.trim()) {
+                    // Raw JSON string from complex-mode plain text input; try to parse.
+                    try {
+                        evolutions[i].predicate = JSON.parse(rawPredicate.trim());
+                    } catch {
+                        ui.notifications.error(`PTU | Evolution predicate JSON parse error: ${rawPredicate}`);
+                        throw new Error("Invalid evolution predicate JSON");
+                    }
                 } else {
                     evolutions[i].predicate = [];
                 }
             }
 
-            expanded.system.evolutions = evolutions.sort((a, b) =>
-                getMinLevelFromPredicate(a.predicate) - getMinLevelFromPredicate(b.predicate)
-            );
+            expanded.system.evolutions = evolutions;
         }
 
         return super._updateObject(event, foundry.utils.flattenObject(expanded));
