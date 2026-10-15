@@ -2,7 +2,7 @@
   "name": "Fashionista",
   "system": {
     "origin": "",
-    "effect": "You may craft any Fashionista Recipe for which you qualify. \nSpecial - When you take Fashionista, choose two of Charm, Command, Guile, Intimidate, or Intuition to become your Fashionista Skills. The Skills you choose must be at Novice Rank or higher.\nRecipes - Contest Trends, Adorable Fashion(Charm), Elegant Fashion(Intuition), Rad Fashion(Command), Rough Fashion(Intimidate), Slick Fashion(Guile)",
+    "effect": "You may craft any Fashionista Recipe for which you qualify. \nSpecial - When you take Fashionista, choose two of Charm, Command, Guile, Intimidate, or Intuition to become your Fashionista Skills. The Skills you choose must be at Novice Rank or higher.\nRecipes - @UUID[Compendium.ptu.references.Item.FsaXK2dtt9kP3HlZ]{Contest Trends}, @UUID[Compendium.ptu.references.Item.SLL8cTfeP1QGMDS1]{Basic Fashion}:\n@UUID[Compendium.ptu.references.Item.I9chbUzgBCkDEgBh]{Adorable Fashion}(Charm), @UUID[Compendium.ptu.references.Item.MVI0NGm5VVWycmlr]{Elegant Fashion}(Intuition), @UUID[Compendium.ptu.references.Item.dNlnVU6YRG77EMqV]{Rad Fashion}(Command), @UUID[Compendium.ptu.references.Item.h0kk8W1FywL0n0V1]{Rough Fashion}(Intimidate), @UUID[Compendium.ptu.references.Item.4zgNsnxQRGQgNjuq]{Slick Fashion}(Guile)",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,7 +60,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -70,7 +73,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Two of Charm, Command, Guile, Intuition, or Intimidate at Novice",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -83,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 29000000,
   "_id": "QrSXkvNqHIQ8AJla"
 }

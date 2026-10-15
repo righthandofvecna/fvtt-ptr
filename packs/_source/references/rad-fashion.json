@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Basic Fashion",
-    "effect": "Fashionista Skill: Command Effect: The holder may activate this item once a Scene as a Free Action to gain a +4 bonus to a single Save Check. ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.QrSXkvNqHIQ8AJla]{Fashionista}\nSkill: Command\nEffect: The holder may activate this item once a Scene as a Free Action to gain a +4 bonus to a single Save Check. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "dNlnVU6YRG77EMqV",
   "effects": [],
-  "folder": null,
   "sort": 20500000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

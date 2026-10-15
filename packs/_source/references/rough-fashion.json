@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Basic Fashion",
-    "effect": "Fashionista Skill: Intimidate Effect: The holder may activate this item once a Scene as a Free Action to cause a foe within 5 meters to take a -2 penalty to all rolls for one full round.  ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.QrSXkvNqHIQ8AJla]{Fashionista}\nSkill: Intimidate\nEffect: The holder may activate this item once a Scene as a Free Action to cause a foe within 5 meters to take a -2 penalty to all rolls for one full round.  ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "h0kk8W1FywL0n0V1",
   "effects": [],
-  "folder": null,
   "sort": 22900000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

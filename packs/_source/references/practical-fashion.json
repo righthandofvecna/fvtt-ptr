@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Fashionista Recipes",
-    "effect": "You can create Go-Goggles, Safety Goggles, or Winter Cloaks for $750. ",
+    "effect": "You can create @UUID[Compendium.ptu.items.Item.C6vdPKqbeDX56Zxu]{Go-Goggles}, @UUID[Compendium.ptu.items.Item.KCMw8tlwHQ2uqS0C]{Safety Goggles}, or @UUID[Compendium.ptu.items.Item.ncGFgpY3Z41OtK7D]{Winter Cloak}s for $750. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "rcTXpzkdOt05xMee",
   "effects": [],
-  "folder": null,
   "sort": 27800000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
