@@ -1,4 +1,4 @@
-import { sluggify, findItemInCompendium } from '../../../util/misc.js';
+import { sluggify, findItemInCompendium, inferRequirementsFromPredicate } from '../../../util/misc.js';
 import { PTUItem } from '../index.js';
 
 class PTUSpecies extends PTUItem {
@@ -15,6 +15,17 @@ class PTUSpecies extends PTUItem {
         return `${path.startsWith('/') ? "" : "/"}${path}${path.endsWith('/') ? "" : "/"}${useName ? this.slug : Handlebars.helpers.lpad(this.system.number, 3, 0)}${femaleTag}${shinyTag}${this.system.form ? ("_" + this.system.form) : ""}${suffix ?? ""}${extension.startsWith('.') ? "" : "."}${extension}`;
     }
 
+    prepareDerivedData() {
+        super.prepareDerivedData();
+        
+        // Add requirementsDescription for each evolution based on its predicate
+        const evolutions = this.system.evolutions ?? [];
+        for (let i = 0; i < evolutions.length; i++) {
+            evolutions[i].requirementsDescription ||= inferRequirementsFromPredicate(evolutions[i].predicate);
+        }
+    }
+
+    /** @deprecated */
     static async convertToPTUSpecies(speciesData, options = {}) {
         const data = { type: "species", system: {}, img: "/systems/ptu/static/css/images/icons/dex_icon.png", folder: "5Jvv9TXViaCrDerw", ...options };
 

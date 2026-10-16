@@ -185,6 +185,50 @@ export function getMinLevelFromPredicate(predicate = []) {
     return 1;
 }
 
+/**
+ * Makes a best-effort human-readable description of evolution requirements
+ * from a predicate array. Only handles simple string-predicate arrays;
+ * complex object predicates are left as an empty string.
+ *
+ * Examples:
+ *   ["self:level:5+", "item:water-stone"]  → "Level 5 with Water Stone"
+ *   ["self:level:25+", "self:gender:male"] → "Level 25 (Male)"
+ *   ["self:level:30+"]                     → "Level 30"
+ *   []                                     → ""
+ *
+ * @param {Array|Object} predicate
+ * @returns {string}
+ */
+export function inferRequirementsFromPredicate(predicate = []) {
+    if (!predicate || (Array.isArray(predicate) && predicate.length === 0)) return "";
+    if (!Array.isArray(predicate)) return "";
+
+    let level = null;
+    let gender = null;
+    let species = null;
+    const items = [];
+
+    for (const p of predicate) {
+        if (typeof p !== "string") continue;
+        const levelMatch = p.match(/^self:level:(\d+)\+$/);
+        if (levelMatch) { level = parseInt(levelMatch[1]); continue; }
+        const genderMatch = p.match(/^self:gender:(male|female)$/i);
+        if (genderMatch) { gender = genderMatch[1]; continue; }
+        const itemMatch = p.match(/^item:(.+)$/);
+        if (itemMatch) { items.push(formatSlug(itemMatch[1])); continue; }
+        const speciesMatch = p.match(/^species:(.+)$/);
+        if (speciesMatch) { species = formatSlug(speciesMatch[1]); continue; }
+    }
+
+    const segments = [];
+    if (level !== null) segments.push(`Level ${level}`);
+    if (species !== null) segments.push(`${species}`);
+    for (const item of items) segments.push(`with ${item}`);
+    if (gender) segments.push(`(${capitalize(gender)})`);
+
+    return segments.join(" ");
+}
+
 export async function getItemFromCompendium({ uuid, name, type, item }) {
     let found = null;
     if (uuid) {
