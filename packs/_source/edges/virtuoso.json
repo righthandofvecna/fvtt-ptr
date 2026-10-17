@@ -256,7 +256,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -281,7 +282,8 @@
     "useCount": 0,
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "edge",
   "img": "/systems/ptu/static/css/images/icons/edge_icon.png",
@@ -308,6 +310,5 @@
     "exportSource": null
   },
   "_id": "6QbP4LOoyEMgerm6",
-  "sort": 0,
-  "folder": null
+  "sort": 0
 }
