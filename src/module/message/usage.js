@@ -75,6 +75,7 @@ async function sendUsageMessage({ item, actor }) {
         ...actor.getSelfRollOptions("origin"),
         ...(item?.getRollOptions?.("item") ?? []),
         ...targetOptions,
+        `target:number:${currentTargets.length}`,
     ])).sort();
 
     await ChatMessage.create({
