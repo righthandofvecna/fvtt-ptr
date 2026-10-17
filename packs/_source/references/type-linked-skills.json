@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Type Ace",
-    "effect": "Create appropriate typing table",
+    "effect": "<table>\n    <thead>\n        <tr>\n            <th>\n                <p><strong>Type/Skill</strong></p>\n            </th>\n            <th>\n                <p><strong>Type/Skill</strong></p>\n            </th>\n            <th>\n                <p><strong>Type/Skill</strong></p>\n            </th>\n            <th>\n                <p><strong>Type/Skill</strong></p>\n            </th>\n            <th>\n                <p><strong>Type/Skill</strong></p>\n            </th>\n            <th>\n                <p><strong>Type/Skill</strong></p>\n            </th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>\n                <p><strong>Bug:</strong> Command or Survival</p>\n            </td>\n            <td>\n                <p><strong>Dark:</strong> Guile or Stealth</p>\n            </td>\n            <td>\n                <p><strong>Dragon:</strong> Command or Intimidate</p>\n            </td>\n            <td>\n                <p><strong>Electric:</strong> Focus or Technology Education</p>\n            </td>\n            <td>\n                <p><strong>Fairy:</strong> Charm or Guile</p>\n            </td>\n            <td>\n                <p><strong>Fighting:</strong> Combat or Intuition</p>\n            </td>\n        </tr>\n        <tr>\n            <td>\n                <p><strong>Fire:</strong> Focus or Intimidate</p>\n            </td>\n            <td>\n                <p><strong>Flying:</strong> Acrobatics or Perception</p>\n            </td>\n            <td>\n                <p><strong>Ghost:</strong> Intimidate or Occult Education</p>\n            </td>\n            <td>\n                <p><strong>Grass:</strong> Survival or General Education</p>\n            </td>\n            <td>\n                <p><strong>Ground:</strong> Perception or Intuition</p>\n            </td>\n            <td>\n                <p><strong>Ice:</strong> Athletics or Survival</p>\n            </td>\n        </tr>\n        <tr>\n            <td>\n                <p><strong>Normal:</strong> Charm or Intuition</p>\n            </td>\n            <td>\n                <p><strong>Poison:</strong> Intimidate or Stealth</p>\n            </td>\n            <td>\n                <p><strong>Psychic:</strong> Focus or Occult Education</p>\n            </td>\n            <td>\n                <p><strong>Rock:</strong> Combat or Survival</p>\n            </td>\n            <td>\n                <p><strong>Steel:</strong> Athletics or Intimidate</p>\n            </td>\n            <td>\n                <p><strong>Water:</strong> Athletics or Intuition</p>\n            </td>\n        </tr>\n    </tbody>\n</table>",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "FJFrGh3B3Ybd1vBL",
   "effects": [],
-  "folder": null,
   "sort": 7900000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
