@@ -96,15 +96,12 @@
       "highJump": 2,
       "longJump": 2,
       "power": 4,
+      "teleporter": 4,
       "naturewalk": [
         "Forest",
         "Grassland"
       ],
       "other": [
-        {
-          "slug": "teleporter-4",
-          "uuid": "Compendium.ptu.capabilities.Item.ylhIk5i0Xtp65asH"
-        },
         {
           "slug": "aura-reader",
           "uuid": "Compendium.ptu.capabilities.Item.TtY94KGl4bDY1e0b"

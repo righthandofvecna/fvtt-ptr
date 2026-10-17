@@ -106,11 +106,8 @@
       "longJump": 1,
       "power": 3,
       "naturewalk": [],
+      "teleporter": 4,
       "other": [
-        {
-          "slug": "teleporter-4",
-          "uuid": "Compendium.ptu.capabilities.Item.ylhIk5i0Xtp65asH"
-        },
         {
           "slug": "chilled",
           "uuid": "Compendium.ptu.capabilities.Item.4RJFVQvf9t70YWI3"
