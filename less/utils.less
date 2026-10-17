@@ -519,3 +519,79 @@
 .g-10 {
   gap: 10px;
 }
+// ── Keyword Journal Page — Rule Cards ────────────────────────────────────────
+.rules-section {
+  padding: 4px 0;
+
+  .rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .rule-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px;
+    border: 1px solid var(--color-border-light-tertiary, #c9c7b8);
+    border-radius: 3px;
+    background: var(--color-bg-option, rgba(0, 0, 0, 0.04));
+    gap: 8px;
+
+    .rule-card-info {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      overflow: hidden;
+
+      .rule-type {
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .rule-name {
+        color: var(--color-text-dark-secondary, #555);
+        font-size: 0.9em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .rule-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+
+      a {
+        opacity: 0.6;
+        &:hover { opacity: 1; }
+      }
+    }
+  }
+
+  .create-rule-element {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-top: 4px;
+
+    select { flex: 1; }
+  }
+}
+
+// -- Keyword Rule Element Dialog
+.keyword-rule-dialog {
+  .form-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px 0 2px;
+    border-top: 1px solid var(--color-border-light-tertiary, #c9c7b8);
+    margin-top: 8px;
+
+    button { width: auto; }
+  }
+}

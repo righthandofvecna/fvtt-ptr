@@ -477,6 +477,60 @@
         "NoValidOptions": "{actor} has no valid options for {item}",
         "NoSelection": "No selection made: {item} is inactive.",
         "Default": "Make a selection."
+      },
+      "ActiveEffectLike": {
+        "Label": "Active Effect-Like"
+      },
+      "GrantItem": {
+        "Label": "Grant Item"
+      },
+      "RollOption": {
+        "Label": "Roll Option"
+      },
+      "FlatModifier": {
+        "Label": "Flat Modifier"
+      },
+      "TokenImage": {
+        "Label": "Token Image"
+      },
+      "TokenName": {
+        "Label": "Token Name"
+      },
+      "TokenLight": {
+        "Label": "Token Light"
+      },
+      "TemporarySpecies": {
+        "Label": "Temporary Species"
+      },
+      "TypeOverwrite": {
+        "Label": "Type Overwrite"
+      },
+      "TempHP": {
+        "Label": "Temporary HP"
+      },
+      "Effectiveness": {
+        "Label": "Effectiveness"
+      },
+      "EphemeralEffect": {
+        "Label": "Ephemeral Effect"
+      },
+      "ActionPoint": {
+        "Label": "Action Point"
+      },
+      "ApplyEffect": {
+        "Label": "Apply Effect"
+      },
+      "Reminder": {
+        "Label": "Reminder"
+      },
+      "HealOnDamageDealt": {
+        "Label": "Heal On Damage Dealt"
+      },
+      "InstantChange": {
+        "Label": "Instant Change"
+      },
+      "Unrecognized": {
+        "Label": "Unknown Rule Element Type"
       }
     },
 
@@ -1430,6 +1484,10 @@
       }
     },
     "RulebookJournalSheetName": "Rulebook Sheet",
+    "KeywordJournalPageSheet": "Keyword Page Sheet",
+    "KeywordRuleElementDialog": {
+      "Title": "Edit Rule Element"
+    },
     "Frequency": {
       "AtWill": {
         "label": "At Will",
