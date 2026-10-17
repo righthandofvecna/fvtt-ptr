@@ -47,8 +47,8 @@
       "value": 1
     },
     "duration": {
-      "value": -1,
-      "unit": "unlimited",
+      "value": 1,
+      "unit": "rounds",
       "expiry": "turn-start"
     },
     "start": {

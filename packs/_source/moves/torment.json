@@ -10,16 +10,19 @@
     "rules": [
       {
         "key": "ApplyEffect",
-        "predicate": [],
+        "predicate": ["attack:outcome:hit"],
         "affects": "target",
-        "selectors": "{item|id}-damage-received",
+        "selectors": "{item|id}-apply-effects",
         "uuid": "Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY",
-        "range": "1",
-        "value": ""
+        "range": "",
+        "value": "",
+        "linked": false
       }
     ],
     "enabled": true,
     "slug": "torment",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -58,7 +61,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -71,6 +75,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Dark",
     "category": "Status",
     "damageBase": "--",
@@ -80,9 +85,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "zgeymOL0WIKgT6lq",
   "effects": [],
@@ -92,15 +95,18 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.53",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200826315,
+    "modifiedTime": 1792264837276,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
