@@ -11,7 +11,7 @@ const AutomationSettingsConfig = {
         name: "PTU.Settings.Automation.RemoveExpiredEffects.Name",
         hint: "PTU.Settings.Automation.RemoveExpiredEffects.Hint",
         type: Boolean,
-        default: false
+        default: true
     },
     "autoExpireEffects": {
         name: "PTU.Settings.Automation.AutoExpireEffects.Name",

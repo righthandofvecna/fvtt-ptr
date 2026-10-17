@@ -281,7 +281,8 @@ class PTUCombat extends Combat {
 
         if (this.started) {
             Hooks.callAll("ptu.endTurn", this.combatant ?? null, this, userId);
-            game.ptu.effectTracker.onEncounterEnd(this);
+            // post combat actor cleanup
+            this.combatants.contents.flatMap(c => c.actor ?? []).map(actor => actor.onDeleteCombat());
 
             if (game.user.isActiveGM) {
                 new CombatXPDialog(this).render(true);
@@ -289,9 +290,6 @@ class PTUCombat extends Combat {
         }
 
         game.user.targets.clear();
-
-        // post combat actor cleanup
-        this.combatants.contents.flatMap(c => c.actor ?? []).map(actor => actor.onDeleteCombat())
     }
 
     async _manageTurnEvents(adjustedTurn) {

@@ -1,6 +1,7 @@
 import { sluggify } from "../../util/misc.js";
 
 function addPageToCache(page) {
+  if (page.type !== "keyword") return;
   const key = sluggify(page.name);
   const existing = CONFIG.PTU.keywordPages.get(key);
   if (!existing) {
@@ -13,6 +14,7 @@ function addPageToCache(page) {
 }
 
 function removePageFromCache(page) {
+  if (page.type !== "keyword") return;
   const key = sluggify(page.name);
   const existing = CONFIG.PTU.keywordPages.get(key);
   if (!existing) return;

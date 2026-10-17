@@ -73,6 +73,12 @@ class BaseEffectPTU extends PTUItem {
             const remaining = startTurn + duration - ((game.combat?.round ?? 0) * (game.combat?.turns?.length ?? 1) + (game.combat?.turn ?? 0));
             return { remaining, expired: remaining <= 0 };
         }
+        if (this.system.duration.unit === "days") {
+            const { hoursPerDay, minutesPerHour, secondsPerMinute } = CONFIG?.time?.worldCalendarConfig?.days ; 
+            const startTime = this.system.start?.time ?? 0;
+            const remaining = duration + ((startTime - (game.time.worldTime ?? 0)) / (hoursPerDay * minutesPerHour * secondsPerMinute));
+            return { remaining, expired: remaining <= 0 };
+        }
     }
 
     /** @override */
@@ -140,11 +146,13 @@ class BaseEffectPTU extends PTUItem {
             const round = game.combat?.round ?? null;
             const turn = (game.combat?.round ?? 0) * (game.combat?.turns?.length ?? 1) + (game.combat?.turn ?? 0);
             const initiative = game.combat?.combatant?.initiative ?? null;
+            const time = game.time.worldTime;
             this.updateSource({
                 "system.start": {
                     round,
                     turn,
-                    initiative
+                    initiative,
+                    time
                 }
             })
         }

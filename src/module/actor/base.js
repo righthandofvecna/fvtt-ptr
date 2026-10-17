@@ -1334,13 +1334,11 @@ class PTUActor extends Actor {
      */
     async onDeleteCombat() {
         if (this.primaryUpdater === game.user) {
-            // remove Effect items
-            const effectsToRemove = this.itemTypes.effect.filter(e => e.system.duration?.unit !== "unlimited");
-            await this.deleteEmbeddedDocuments("Item", effectsToRemove.map(e => e.id));
+            // effect removal is handled in effect-tracker.js
 
             // Remove EOT flags
             const itemsWithEOTFlags = this.items.filter(i => i.flags.ptu?.eot);
-            await this.updateEmbeddedDocuments("Item", itemsWithEOTFlags.map(i => ({
+            if (itemsWithEOTFlags.length) await this.updateEmbeddedDocuments("Item", itemsWithEOTFlags.map(i => ({
                 _id: i.id,
                 "flags.ptu.-=eot": null
             })));
@@ -1350,9 +1348,7 @@ class PTUActor extends Actor {
             for (const rule of this.rules) {
                 await rule.onCombatEnd?.(actorUpdates);
             }
-            if (Object.keys(actorUpdates).length) {
-                await this.update(actorUpdates);
-            }
+            if (Object.keys(actorUpdates).length) await this.update(actorUpdates);
         }
 
         await this.reset();

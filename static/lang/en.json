@@ -81,6 +81,7 @@
         "Rounds": "Rounds",
         "Turns": "Turns",
         "Encounter": "End of Encounter",
+        "Days": "Days",
         "Unlimited": "Unlimited (never expires)"
       },
       "Expiry": {

@@ -115,6 +115,7 @@ const data = {
     },
     durationUnitOptions: {
       "unlimited": "ITEM.Duration.Unit.Unlimited",
+      "days": "ITEM.Duration.Unit.Days",
       "encounter": "ITEM.Duration.Unit.Encounter",
       "rounds": "ITEM.Duration.Unit.Rounds",
       "turns": "ITEM.Duration.Unit.Turns",
