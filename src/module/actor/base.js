@@ -551,6 +551,9 @@ class PTUActor extends Actor {
 
         this.system.spirit.weary = this.system.spirit.value >= 0 ? 0 : Math.abs(this.system.spirit.value);
 
+        // Add the alliance as a roll option
+        this.flags.ptu.rollOptions.all[`self:alliance:${this.system.alliance}`] = true;
+
         // Mark the currently-active combatant so predicates can gate on it
         if (game.combat?.combatant?.actor?.uuid === this.uuid) {
             this.flags.ptu.rollOptions.all["turn:active"] = true;

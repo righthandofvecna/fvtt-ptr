@@ -68,9 +68,13 @@ async function sendUsageMessage({ item, actor }) {
     // Collect domains and roll options so the Roll Inspector can display context for this message.
     const itemDomains = buildItemDomains(item, "apply-effects");
     const usageDomains = ["apply-effects", ...itemDomains];
+    const currentTargets = game.user.targets.size > 0 ? [...game.user.targets] : [];
+    const targetOptions = currentTargets.flatMap(token => token.actor?.getSelfRollOptions("target") ?? []);
     const rollOptions = Array.from(new Set([
         ...actor.getRollOptions([...usageDomains, "all"]),
+        ...actor.getSelfRollOptions("origin"),
         ...(item?.getRollOptions?.("item") ?? []),
+        ...targetOptions,
     ])).sort();
 
     await ChatMessage.create({
