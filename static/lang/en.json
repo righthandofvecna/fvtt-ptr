@@ -465,6 +465,7 @@
     "DexScan.Timeout": "Request to DM for Pokédex Scan timed out.",
 
     "RuleElement": {
+      "Title": "Rule Elements",
       "ChoiceSet": {
         "SaveLabel": "Save",
         "DeclineLabel": "Decline",
