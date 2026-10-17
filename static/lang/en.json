@@ -1233,6 +1233,10 @@
         "SceneDailyEOT": {
           "Name": "Scene/Daily Every Other Turn Automation",
           "Hint": "Whether Scene and Daily-frequency items should be restricted to being used every other turn (the default for PTU/PTR1e)."
+        },
+        "KeywordJournals": {
+          "Name": "Keyword Journals",
+          "Hint": "Include additional journals which have Keyword pages, for homebrew Keyword automations."
         }
       },
       "Type": {
