@@ -2,12 +2,11 @@
   "name": "Moving Wall",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Battle Armor and the Bodyguard Abilites.\nBonus: When you use and resolve Bodyguard, the foe whose attack triggered Bodyguard is Challenged until the end of your next turn.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.abilities.Item.gHfEkYe9Vdc6TqeX]{Battle Armor} and the @UUID[Compendium.ptu.abilities.Item.8O7o6xH3FIi4RXi9]{Bodyguard} Abilites.\nBonus: When you use and resolve Bodyguard, the foe whose attack triggered Bodyguard is @UUID[Compendium.ptu.feats.Item.KpLNFPm4asFl2GVK]{Challenged} until the end of your next turn.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "movingwall",
         "choices": [
           {
@@ -28,6 +27,18 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.gHfEkYe9Vdc6TqeX"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.8O7o6xH3FIi4RXi9"
       }
     ],
     "enabled": true,
@@ -63,7 +74,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -84,7 +96,9 @@
     "class": "Fortress",
     "name": "Moving Wall [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "moving-wall"
+    "replacesSlug": "moving-wall",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -97,7 +111,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "Ability grants added, a Challenged effect or status might be helpful"
     }
   },
   "_stats": {

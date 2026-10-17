@@ -6,18 +6,7 @@
     "origin": "",
     "effect": "Raise the user's Defense and Special Defense by 1 Combat Stage each.",
     "snippet": "",
-    "rules": [
-      {
-        "key": "ApplyEffect",
-        "predicate": [],
-        "selectors": "{item|id}-apply-effects",
-        "uuid": "Compendium.ptu.effects.Item.ioB998hEO5qD4Bum",
-        "range": "",
-        "linked": false,
-        "value": "",
-        "affects": "origin"
-      }
-    ],
+    "rules": [],
     "enabled": true,
     "slug": "cosmic-power",
     "schema": {
@@ -105,5 +94,6 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "folder": null
 }
