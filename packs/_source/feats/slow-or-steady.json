@@ -2,7 +2,7 @@
   "name": "Slow or Steady",
   "system": {
     "origin": "",
-    "effect": "Choose Analytic or Battle Armor. You gain the chosen ability.",
+    "effect": "Choose @UUID[Compendium.ptu.abilities.Item.BmvqFZyTXoO12Gik]{Analytic} or @UUID[Compendium.ptu.abilities.Item.gHfEkYe9Vdc6TqeX]{Battle Armor}. You gain the chosen ability.",
     "snippet": "",
     "rules": [
       {
@@ -20,10 +20,12 @@
         "adjustName": false,
         "choices": [
           {
-            "value": "Compendium.ptu.abilities.Item.BmvqFZyTXoO12Gik"
+            "value": "Compendium.ptu.abilities.Item.BmvqFZyTXoO12Gik",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.abilities.Item.gHfEkYe9Vdc6TqeX"
+            "value": "Compendium.ptu.abilities.Item.gHfEkYe9Vdc6TqeX",
+            "label": ""
           }
         ]
       },
@@ -66,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -89,7 +92,9 @@
     "name": "Slow or Steady",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -100,7 +105,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Fortress",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -113,7 +120,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 9400000,
   "_id": "7zVxKpGc9KsF4Y7i"
 }

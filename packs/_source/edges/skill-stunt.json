@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -86,6 +87,5 @@
     "exportSource": null
   },
   "sort": 0,
-  "_id": "eg9RIJE6jQbM96Ti",
-  "folder": null
+  "_id": "eg9RIJE6jQbM96Ti"
 }

@@ -46,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -62,11 +63,11 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "yZiHvAvegkNMcJxu",
   "effects": [],
-  "folder": null,
   "sort": 52900000,
   "ownership": {
     "default": 0

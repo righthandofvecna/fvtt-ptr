@@ -2,7 +2,7 @@
   "name": "Dashing Makeover",
   "system": {
     "origin": "",
-    "effect": "Target: A Trainer or Pokémon\nEffect: When you activate Dashing Makeover, choose one Equipment or Held Item you can create via Fashionista. While this Feature is Bound, the target gains the effects of the chosen item, as long as they would normally be able to equip it (e.g.: Trainers cannot equip Incense Items).They do not need to take up an Equipment or Held Item slot to gain this benefit. A target may only be affected by one instance of Dashing Makeover at a time.\nRecipe - Practical Fashion",
+    "effect": "Target: A Trainer or Pokémon\nEffect: When you activate Dashing Makeover, choose one Equipment or Held Item you can create via Fashionista. While this Feature is Bound, the target gains the effects of the chosen item, as long as they would normally be able to equip it (e.g.: Trainers cannot equip Incense Items). They do not need to take up an Equipment or Held Item slot to gain this benefit. A target may only be affected by one instance of Dashing Makeover at a time.\nRecipe - @UUID[Compendium.ptu.references.Item.rcTXpzkdOt05xMee]{Practical Fashion}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -34,7 +34,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -57,7 +58,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +71,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Fashionista",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -81,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 49300000,
   "_id": "iIHGbP7hGseRPmZn"
 }

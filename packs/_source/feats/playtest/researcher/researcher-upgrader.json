@@ -1,0 +1,72 @@
+{
+  "name": "Researcher (Upgrader)",
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "This is a Field of Study for the Researcher Class. You may take Features from this Field.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "researcher-upgrader",
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Class",
+      "Branch",
+      "Playtest",
+      "Class Rework"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "prerequisites": [
+      "Researcher"
+    ],
+    "notes": "",
+    "free": true,
+    "repeatable": false,
+    "class": "Researcher"
+  },
+  "effects": [],
+  "folder": "wKlgeANt8BWt41q1",
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_id": "FhYPW6e81XFeAoEu"
+}

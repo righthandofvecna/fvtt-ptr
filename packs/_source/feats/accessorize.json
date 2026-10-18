@@ -2,7 +2,7 @@
   "name": "Accessorize",
   "system": {
     "origin": "",
-    "effect": "You may wear and benefit from two Accessory Slot Items at once. The two items must be of different types and must not share an effect. For example, a Fire Brace cannot be paired with another Fire Brace or a Fire Plate, but it could be paired with an Ice Brace, a Fire Booster, or a Stat Booster.",
+    "effect": "You may wear and benefit from two Accessory Slot Items at once. The two items must be of different types and must not share an effect. For example, a @UUID[Compendium.ptu.items.Item.cZ4MpVnVSdmvKU8C]{Fire Brace} cannot be paired with another Fire Brace or a @UUID[Compendium.ptu.items.Item.ft3o9zxRVH9xLiHm]{Fire Plate}, but it could be paired with an @UUID[Compendium.ptu.items.Item.aAkmLEIXZboywg8p]{Ice Brace}, a @UUID[Compendium.ptu.items.Item.7DyUOQnYFrs93o0E]{Fire Booster}, or a @UUID[Compendium.ptu.items.Item.AT2gaIwem67KxHGi]{Stat Booster}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -34,7 +34,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +59,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +71,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Dashing Makeover, one Fashionista Skill at Adept"
+      "prereqBackup": "Dashing Makeover, one Fashionista Skill at Adept",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -81,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 20200000,
   "_id": "JYb9tmail4LwDs0K"
 }

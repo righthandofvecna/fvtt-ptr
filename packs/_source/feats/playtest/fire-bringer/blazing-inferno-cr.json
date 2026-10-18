@@ -2,12 +2,11 @@
   "name": "Blazing Inferno",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You becoming Blazing. While you are Blazing, whenever your Fire-Type Moves Inflict Burn, the Burned target immediately loses a Tick of Hit Points, and loses an additional Combat Stage in Defense. While Blazing, when you hit a foe with a damaging Fire-Type Move, you may choose to automatically burn one target of the Move. If you do, you lose the Blazing Condition after the Move’s effects are resolved.",
+    "effect": "Effect: You becoming Blazing. While you are Blazing, whenever your Fire-Type Moves inflict @UUID[Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj]{Burn}, the Burned target immediately loses a Tick of Hit Points, and loses an additional Combat Stage in Defense. While Blazing, when you hit a foe with a damaging Fire-Type Move, you may choose to automatically burn one target of the Move. If you do, you lose the Blazing Condition after the Move’s effects are resolved.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "blazinginferno",
         "choices": [
           {
@@ -63,7 +62,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -85,7 +85,9 @@
     "class": "Fire Bringer",
     "name": "Blazing Inferno [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "blazing-inferno"
+    "replacesSlug": "blazing-inferno",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -96,7 +98,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

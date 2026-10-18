@@ -2,7 +2,6 @@
   "name": "Crush Grip",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "For every 10% the target is below their full Hit Points, Crush Grip's Damage Base is reduced by 1.",
@@ -39,7 +38,7 @@
     "strongJaw": false,
     "frequency": {
       "type": "scene",
-      "max": 1,
+      "max": 2,
       "custom": "Scene",
       "modifiers": {
         "priorityLimited": false,
@@ -47,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -62,8 +62,8 @@
     },
     "type": "Normal",
     "category": "Physical",
-    "damageBase": 12,
-    "ac": 2,
+    "damageBase": "12",
+    "ac": "2",
     "range": "Melee",
     "contestType": "Tough - Double Time",
     "stab": false,
@@ -71,7 +71,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "zDwVpqzROx6ATlaW",
   "effects": [],
@@ -79,7 +80,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

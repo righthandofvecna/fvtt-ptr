@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 1 Tutor Point\nEffect: Your Pokémon loses 1 Tutor Point, and learns your choice of Purify or Recover, even if your Pokémon cannot normally learn this Move. This Move does not count against the target's Move List Limit.\n\n@embed[Compendium.ptu.moves.Item.ZrK6brsGu1ycega5]@embed[Compendium.ptu.moves.Item.qJILuzcs4SDgylfD]",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: Your Pokémon loses 1 Tutor Slot, and learns your choice of @UUID[Compendium.ptu.moves.Item.ZrK6brsGu1ycega5]{Purify} or @UUID[Compendium.ptu.moves.Item.qJILuzcs4SDgylfD]{Recover}, even if your Pokémon cannot normally learn this Move. This Move does not count against the target's Move List Limit.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -40,7 +40,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,12 +61,16 @@
     "free": false,
     "class": "Enduring Soul",
     "contentSet": "class-rework",
-    "replacesSlug": "staying-power"
+    "replacesSlug": "staying-power",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_id": "ryQiWYQEtDjA7iUE",

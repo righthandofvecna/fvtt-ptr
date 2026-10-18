@@ -1,0 +1,79 @@
+{
+  "name": "Hard Press",
+  "type": "move",
+  "_id": "XyWAPw7UhTuIHOXS",
+  "img": "/systems/ptu/css/images/types2/SteelIC_Icon.png",
+  "system": {
+    "origin": "",
+    "effect": "For every 10% the target is below their full Hit Points, Hard Press's Damage Base is reduced by 1.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "hard-press",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Target 1"
+    ],
+    "sheerForce": false,
+    "toughClaws": false,
+    "technician": false,
+    "reckless": false,
+    "ironFist": false,
+    "megaLauncher": false,
+    "punkRock": false,
+    "strongJaw": false,
+    "frequency": {
+      "type": "eot",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "type": "Steel",
+    "category": "Physical",
+    "damageBase": "10",
+    "ac": "2",
+    "range": "Melee",
+    "contestType": "Tough - Double Time",
+    "stab": false,
+    "damageBonus": 0,
+    "isStruggle": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  }
+}

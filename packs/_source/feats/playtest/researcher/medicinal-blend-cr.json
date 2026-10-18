@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -56,11 +57,12 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher",
+    "class": "Researcher (Apothecary)",
     "name": "Medicinal Blend [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "medicinal-blend",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",

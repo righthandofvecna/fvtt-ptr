@@ -54,7 +54,9 @@
   "folder": "gpLgMgi7hofskTVt",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "scene-packer": {
       "hash": "4b427ff0044629159bf4cfe5434680e1e44e10b7",

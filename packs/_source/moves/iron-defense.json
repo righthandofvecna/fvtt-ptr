@@ -2,7 +2,6 @@
   "name": "Iron Defense",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/SteelIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Raise the user's Defense by 2 Combat Stages.",
@@ -57,7 +56,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,

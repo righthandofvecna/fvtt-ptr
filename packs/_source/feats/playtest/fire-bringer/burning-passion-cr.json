@@ -2,12 +2,11 @@
   "name": "Burning Passion",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Fiery Crash Ability.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.abilities.Item.yZiHvAvegkNMcJxu]{Fiery Crash} Ability.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "burningpassion",
         "choices": [
           {
@@ -69,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -91,7 +91,9 @@
     "class": "Fire Bringer",
     "name": "Burning Passion [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "burning-passion"
+    "replacesSlug": "burning-passion",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -104,7 +106,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
