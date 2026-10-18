@@ -49,6 +49,12 @@ class GrantItemRuleElement extends RuleElementPTU {
         };
     }
 
+    /** @override */
+    static async description(source) {
+        const obj = await fromUuid(source.uuid);
+        return (obj?.name ?? "").replace("Effect: ", "");
+    }
+
     static ON_DELETE_ACTIONS = ["cascade", "detach", "restrict"];
 
     get grantedId() {

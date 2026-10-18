@@ -48,6 +48,11 @@ class HealOnDamageDealtRuleElement extends RuleElementPTU {
     }
 
     /** @override */
+    static async description(source) {
+        return `${(source.percent ?? 0.5) * 100}%`;
+    }
+
+    /** @override */
     beforePrepareData() {
         if (this.ignored) return;
 

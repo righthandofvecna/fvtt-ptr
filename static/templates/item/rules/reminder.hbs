@@ -61,10 +61,10 @@
 <div class="form-group">
     <label class="short">{{localize "PTU.RuleEditor.Reminder.MessagePredicate"}}</label>
     <div class="attached-input">
-        <button type="button" class="attachment" data-action="toggle-predicate">
-            {{#if predicationIsMultiple}}Multiple{{else}}Complex{{/if}}
+        <button type="button" class="attachment" data-action="toggle-message-predicate">
+            {{#if messagePredicationIsMultiple}}Multiple{{else}}Complex{{/if}}
         </button>
-        {{#if predicationIsMultiple}}
+        {{#if messagePredicationIsMultiple}}
             <input type="text" class="ptu-tagify predicate-list" name="system.rules.{{index}}.messagePredicate" value="{{json rule.messagePredicate}}" data-dtype="JSON"/>
         {{else}}
             <input type="text" name="system.rules.{{index}}.messagePredicate" value="{{json rule.messagePredicate}}" />

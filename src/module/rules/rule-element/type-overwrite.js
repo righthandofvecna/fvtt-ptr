@@ -10,6 +10,20 @@ export class TypeOverwriteRuleElement extends RuleElementPTU {
   }
 
   /** @override */
+  static async description(source) {
+    let valLabel = source.value;
+    if (Array.isArray(source.value)) {
+      valLabel = source.value.join(", ");
+    }
+
+    if (source.overwrite ?? true) {
+      return valLabel;
+    } else {
+      return `+${valLabel}`;
+    }
+  }
+
+  /** @override */
   beforePrepareData() {
     const type = this.resolveInjectedProperties(this.value);
     const isArray = Array.isArray(type);

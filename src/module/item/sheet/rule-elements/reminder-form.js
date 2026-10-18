@@ -16,6 +16,7 @@ class ReminderForm extends RuleElementForm {
             ...data,
             selectorIsArray: Array.isArray(this.rule.selectors),
             predicationIsMultiple: Array.isArray(this.rule.predicate) && this.rule.predicate.every(p => typeof p === "string"),
+            messagePredicationIsMultiple: Array.isArray(this.rule.messagePredicate) && this.rule.messagePredicate.every(p => typeof p === "string"),
         };
     }
 
@@ -31,6 +32,12 @@ class ReminderForm extends RuleElementForm {
             const predicate = this.rule.predicate;
             const newValue = Array.isArray(predicate) ? {"and": predicate.length ? predicate : []} : predicate?.["and"]?.length ? predicate["and"] : [];
             this.updateItem({ predicate: newValue });
+        });
+
+        html.querySelector("[data-action=toggle-message-predicate]")?.addEventListener("click", () => {
+            const messagePredicate = this.rule.messagePredicate;
+            const newValue = Array.isArray(messagePredicate) ? {"and": messagePredicate.length ? messagePredicate : []} : messagePredicate?.["and"]?.length ? messagePredicate["and"] : [];
+            this.updateItem({ messagePredicate: newValue });
         });
     }
 

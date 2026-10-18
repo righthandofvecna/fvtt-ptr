@@ -40,7 +40,6 @@ class PTUKeywordJournalPageSheet extends foundry.appv1.sheets.JournalTextPageShe
                 const label = game.i18n.localize(`PTU.RuleElement.${key}.Label`);
                 const recognized = label !== `PTU.RuleElement.${key}.Label`;
                 const sublabel = await RuleElements.getRuleElementDocument(rule.key).description(rule)
-                console.log("KW Rule", rule, label, sublabel);
                 return {
                     index,
                     rule,
@@ -177,38 +176,51 @@ class KeywordRuleElementDialog extends HandlebarsApplicationMixin(ApplicationV2)
         const form = this.element.querySelector("form");
         if (!form) return;
 
-        // Collect form data manually to avoid FormDataExtended's automatic JSON coercion,
-        // which throws "unexpected end of JSON input" on partial or empty JSON fields.
-        const rawData = {};
+        // Collect form data manually to avoid FormDataExtended's automatic JSON coercion
+        // and to correctly handle radio buttons (only the checked value) and the
+        // system.rules.N.* prefix stripping.
+        const prefix = `system.rules.${this.index}.`;
+        const wholeRuleKey = `system.rules.${this.index}`;
+        const ruleData = {};
+        let wholeRuleValue = null;
+
         for (const el of form.elements) {
             if (!el.name) continue;
+            // Skip unchecked radio buttons — only the checked one should contribute
+            if (el.type === "radio" && !el.checked) continue;
+
             let value = el.type === "checkbox" ? el.checked : el.value;
             // Parse fields explicitly marked as JSON dtype
             if (el.dataset?.dtype === "JSON" && typeof value === "string" && value.trim()) {
                 try { value = JSON.parse(value); } catch { /* keep as raw string */ }
             }
-            rawData[el.name] = value;
+
+            if (el.name === wholeRuleKey) {
+                wholeRuleValue = value; // Default textarea — the entire rule as a JSON string
+            } else if (el.name.startsWith(prefix)) {
+                const fieldPath = el.name.slice(prefix.length);
+                foundry.utils.setProperty(ruleData, fieldPath, value);
+            }
         }
 
-        const expanded = foundry.utils.expandObject(rawData);
         const rules = this.page.toObject().system.rules ?? [];
-        const ruleValue = foundry.utils.getProperty(expanded, `system.rules.${this.index}`);
-
-        if (ruleValue === undefined) return;
 
         this._isSaving = true;
         try {
-            if (typeof ruleValue === "string") {
-                // Default textarea template — treat as raw JSON for the entire rule
+            if (wholeRuleValue !== null) {
+                // Default textarea template — treat the whole value as JSON for the rule
                 try {
-                    rules[this.index] = JSON.parse(ruleValue);
+                    rules[this.index] = JSON.parse(wholeRuleValue);
                 } catch (err) {
                     ui.notifications.error(game.i18n.format("PTU.RuleParseSyntaxError", { message: err?.message }));
                     return;
                 }
             } else {
-                rules[this.index] = foundry.utils.mergeObject(rules[this.index] ?? {}, ruleValue);
-                this._ruleForm?._updateObject(rules[this.index]);
+                rules[this.index] = foundry.utils.mergeObject(rules[this.index] ?? {}, ruleData);
+                // NOTE: Do NOT call _ruleForm._updateObject here — that method
+                // converts Tagify-formatted data (e.g. [{value:"x"}] → ["x"]),
+                // but Tagify is not initialized in this dialog so the selectors/
+                // predicate fields are already in their final plain-JS format.
 
                 const predicate = rules[this.index].predicate;
                 if (typeof predicate === "string" && predicate.trim() === "") {

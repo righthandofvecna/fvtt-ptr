@@ -36,6 +36,11 @@ class RollOptionRuleElement extends RuleElementPTU {
         };
     }
 
+    /** @override */
+    static async description(source) {
+        return (source?.option ?? "");
+    }
+
     #resolveOption() {
         return this.resolveInjectedProperties(this.option)
             ?.replace(/[^-:\w]/g, "")
