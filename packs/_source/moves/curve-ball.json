@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -73,7 +74,6 @@
     "isStruggle": false
   },
   "effects": [],
-  "folder": null,
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
