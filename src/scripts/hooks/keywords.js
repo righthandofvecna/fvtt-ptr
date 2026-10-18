@@ -1,6 +1,9 @@
 import { sluggify } from "../../util/misc.js";
 
+const CORE_KEYWORD_JOURNAL_UUID = "Compendium.ptu.journals.JournalEntry.keywordsReferenc";
+
 function addPageToCache(page) {
+  if (page.type !== "keyword") return;
   const key = sluggify(page.name);
   const existing = CONFIG.PTU.keywordPages.get(key);
   if (!existing) {
@@ -13,6 +16,7 @@ function addPageToCache(page) {
 }
 
 function removePageFromCache(page) {
+  if (page.type !== "keyword") return;
   const key = sluggify(page.name);
   const existing = CONFIG.PTU.keywordPages.get(key);
   if (!existing) return;
@@ -24,41 +28,54 @@ function removePageFromCache(page) {
 export const Keywords = {
   listen: async () => {
     Hooks.on("ready", async () => {
-      const keywordJournal = await fromUuid("Compendium.ptu.journals.JournalEntry.keywordsReferenc");
+      CONFIG.PTU.keywordPages = new Map();
+      const keywordJournal = await fromUuid(CORE_KEYWORD_JOURNAL_UUID);
       if (keywordJournal) {
-        CONFIG.PTU.keywordPages = new Map();
         for (const page of keywordJournal.pages.contents) {
           addPageToCache(page);
         }
-        // Re-prepare all actors so items pick up keyword effects and rules
-        for (const actor of game.actors.values()) {
-          actor.reset();
+      }
+      // iterate over all keyword journals in the homebrew settings and add their pages to the cache
+      for (const journalId of game.settings.get("ptu", "keywordJournals") ?? []) {
+        const journal = await fromUuid(journalId);
+        if (journal) {
+          for (const page of journal.pages.contents) {
+            addPageToCache(page);
+          }
         }
-        // Also re-prepare synthetic actors (unlinked tokens on the active scene)
-        for (const token of canvas.tokens?.placeables ?? []) {
-          if (!token.actor?.isToken) continue;
-          token.actor.reset();
-        }
-        // Re-prepare all items so they pick up keyword effects and rules
-        for (const item of game.items.values()) {
-          item.reset();
-        }
+      }
+
+      // Re-prepare all actors so items pick up keyword effects and rules
+      for (const actor of game.actors.values()) {
+        actor.reset();
+      }
+      // Also re-prepare synthetic actors (unlinked tokens on the active scene)
+      for (const token of canvas.tokens?.placeables ?? []) {
+        if (!token.actor?.isToken) continue;
+        token.actor.reset();
+      }
+      // Re-prepare all items so they pick up keyword effects and rules
+      for (const item of game.items.values()) {
+        item.reset();
       }
     });
 
     // Keep the keyword pages cache in sync when keyword pages are created/updated/deleted
     Hooks.on("createJournalEntryPage", (page) => {
       if (!CONFIG.PTU.keywordPages) return;
+      if (![CORE_KEYWORD_JOURNAL_UUID, ...(game.settings.get("ptu", "keywordJournals") ?? [])].includes(page.parent?.uuid)) return;
       addPageToCache(page);
     });
 
     Hooks.on("updateJournalEntryPage", (page) => {
       if (!CONFIG.PTU.keywordPages) return;
+      if (![CORE_KEYWORD_JOURNAL_UUID, ...(game.settings.get("ptu", "keywordJournals") ?? [])].includes(page.parent?.uuid)) return;
       addPageToCache(page);
     });
 
     Hooks.on("deleteJournalEntryPage", (page) => {
       if (!CONFIG.PTU.keywordPages) return;
+      if (![CORE_KEYWORD_JOURNAL_UUID, ...(game.settings.get("ptu", "keywordJournals") ?? [])].includes(page.parent?.uuid)) return;
       removePageFromCache(page);
     });
   }

@@ -4,7 +4,6 @@ import { registerSettings } from "../../module/system/index.js"
 import { registerHandlebarsHelpers } from "../handlebars.js"
 import { registerSheets } from "../sheets.js"
 import { registerTemplates } from "../templates.js"
-import { insurgenceData, sageData, uraniumData } from "../config/data/fangame-species-data.js"
 import { measureDistances } from "../../module/canvas/helpers.js"
 import { registerGithubSync, ptr1eGH } from "../../module/apps/github-sync/index.js"
 import TokenRulerPTU from '../../module/canvas/ruler.js'

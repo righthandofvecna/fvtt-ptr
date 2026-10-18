@@ -146,6 +146,7 @@ export class PokemonGenerator {
                 shiny: this.shiny,
                 level: {
                     exp: levelProgression[this.level],
+                    milestones: this.level - 1,
                 },
                 nature: {
                     value: this.nature

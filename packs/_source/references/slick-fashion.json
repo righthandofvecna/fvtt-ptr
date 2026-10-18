@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Basic Fashion",
-    "effect": "Fashionista Skill: Guile Effect: The holder may activate this item once a Scene as a Free Action when provoking an Attack of Opportunity to instead not provoke one. ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.QrSXkvNqHIQ8AJla]{Fashionista}\nSkill: Guile\nEffect: The holder may activate this item once a Scene as a Free Action when provoking an @UUID[Compendium.ptu.moves.Item.lhaZXnE2PfttWp41]{Attack of Opportunity} to instead not provoke one. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "4zgNsnxQRGQgNjuq",
   "effects": [],
-  "folder": null,
   "sort": 2700000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

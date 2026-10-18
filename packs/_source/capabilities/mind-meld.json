@@ -1,0 +1,68 @@
+{
+  "name": "Mind Meld",
+  "type": "capability",
+  "_id": "fHVvZrrm457Qp30I",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "The Pokémon’s Struggle Attacks may be Psychic-Typed if they wish. They may also add their Special Attack instead of their Attack and have the attack deal Special Damage, if they wish. ",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "struggle",
+        "option": "psychic"
+      }
+    ],
+    "enabled": true,
+    "slug": "mind-meld",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Struggle"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  }
+}

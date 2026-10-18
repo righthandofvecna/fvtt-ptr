@@ -108,7 +108,7 @@ class EffectTracker {
      * @returns {Promise<void>}
      * */
     async #removeExpired(actor) {
-        if (actor.primaryUpdater === game.user) {
+        if (actor.primaryUpdater === game.user && game.settings.get("ptu", "automation.removeExpiredEffects")) {
             await actor.deleteEmbeddedDocuments(
                 "Item",
                 [
@@ -125,14 +125,15 @@ class EffectTracker {
      * @returns {Promise<void>}
      */
     async onEncounterEnd(encounter) {
+        if (!game.settings.get("ptu", "automation.removeExpiredEffects")) return;
         const actors = encounter.combatants.contents
             .flatMap((c) => c.actor ?? [])
             .filter((a) => game.user === a.primaryUpdater);
 
         for (const actor of actors) {
             const expiresNow = [
-                actor.itemTypes.effect.filter(e => e.system.duration.unit === "encounter"),
-                actor.itemTypes.condition.filter(e => e.system.duration.unit === "encounter")
+                actor.itemTypes.effect.filter(e => e.system.duration.unit === "encounter" || e.isExpired),
+                actor.itemTypes.condition.filter(e => e.system.duration.unit === "encounter" || e.isExpired)
             ].flat();
             if(expiresNow.length === 0) continue;
 

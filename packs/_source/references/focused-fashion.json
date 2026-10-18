@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Fashionista Recipes",
-    "effect": "Prerequisites: Style is Eternal Effect: You can create Focus Bands and Focus Sashes for $2000. ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.zHNeGl1EjjhwJLf3]{Style is Eternal}\nEffect: You can create @UUID[Compendium.ptu.items.Item.VjGpohZK9IALAGDo]{Focus Band}s and @UUID[Compendium.ptu.items.Item.ZfsxzrZhl9B4gsqt]{Focus Sash}es for $2000. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "mNjw5QDbvlFnzTTi",
   "effects": [],
-  "folder": null,
   "sort": 25900000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

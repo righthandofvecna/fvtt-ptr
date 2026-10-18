@@ -43,7 +43,7 @@
             "label": "Curve Ball",
             "predicate": [
               {
-                "not": "capability:curve-ball"
+                "not": "move:curve-ball"
               }
             ]
           },
@@ -135,7 +135,7 @@
             "label": "Curve Ball",
             "predicate": [
               {
-                "not": "capability:curve-ball"
+                "not": "move:curve-ball"
               }
             ]
           },
@@ -236,7 +236,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -259,7 +260,8 @@
     "class": "Capture Specialist",
     "automation": [],
     "name": "Advanced Capture Techniques Rank 3",
-    "useCount": 0
+    "useCount": 0,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
@@ -278,5 +280,6 @@
       "LBFormulaOverrideFlag": false,
       "ReplacementItemFlag": ""
     }
-  }
+  },
+  "folder": null
 }

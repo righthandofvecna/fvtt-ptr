@@ -43,7 +43,29 @@ class RuleElements {
     static custom = {}
 
     static get all() {
-        return {...this.builtin, ...this.custom};
+        return {...RuleElements.builtin, ...RuleElements.custom};
+    }
+    
+    static getRuleElementDocument(key) {
+        return RuleElements.custom[key] ?? RuleElements.builtin[key];
+    }
+
+    static fromSource(source, item, options = {}) {
+        source = foundry.utils.deepClone(source);
+        const RuleElementDocument = RuleElements.getRuleElementDocument(source.key);
+        if (!RuleElementDocument) {
+            console.warn(`PTU | RuleElements | Unrecognized rule element: ${source.key} on item ${item.name} (${item.uuid})`);
+            return null;
+        }
+
+        try {
+            return new RuleElementDocument(source, item, options);
+        } catch (error) {
+            if (!options.suppressWarnings) {
+                console.warn(`PTU | RuleElements | Error creating rule element: ${source.key} on item ${item.name} (${item.uuid})`, error);
+            }
+            return null;
+        }
     }
 
     static fromOwnedItem(item, options = {}) {
@@ -54,24 +76,8 @@ class RuleElements {
                 console.error(`PTU | RuleElements | Invalid rule key: ${source.key} on item ${item.name} (${item.uuid})`);
                 continue;
             }
-            const RuleElementDocument = this.custom[source.key] ?? this.builtin[source.key];
-            if(RuleElementDocument) {
-                const rule = (() => {
-                    try {
-                        return new RuleElementDocument(source, item, {...(options ?? {}), sourceIndex});
-                    }
-                    catch(error) {
-                        if(!options.suppressWarnings) {
-                            console.warn(`PTU | RuleElements | Error creating rule element: ${source.key} on item ${item.name} (${item.uuid})`, error);
-                        }
-                        return null;
-                    }
-                })();
-                if(rule) rules.push(rule);
-            }
-            else {
-                console.warn(`PTU | RuleElements | Unrecognized rule element: ${source.key} on item ${item.name} (${item.uuid})`);
-            }
+            const rule = RuleElements.fromSource(source, item, {...(options ?? {}), sourceIndex});
+            if(rule) rules.push(rule);
         }
         return rules;
     }

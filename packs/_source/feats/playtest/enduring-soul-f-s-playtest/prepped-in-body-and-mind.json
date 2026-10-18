@@ -11,7 +11,8 @@
         "mode": "add",
         "path": "system.modifiers.baseStats.hp.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -45,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -67,8 +69,10 @@
     "name": "Shrug Off",
     "useCount": 0,
     "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -76,7 +80,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "3 Enduring Soul Features"
+      "prereqBackup": "3 Enduring Soul Features",
+      "automationStatus": "needs-automation",
+      "devNote": "The phrasing of this is clunky and the grammar is broken. As this is from the F&S playtest, not bothering to clean up the phrasing. -WW"
     }
   },
   "_stats": {

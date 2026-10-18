@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Fashionista Recipes",
-    "effect": "Prerequisites: Fashionista Effect: You can create Contest Accessories for $750, Contest Fashion Items for $500, and Fancy Clothes for $2500.  ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.QrSXkvNqHIQ8AJla]{Fashionista} \nEffect: You can create @UUID[Compendium.ptu.items.Item.8j9tVHJ0bkcOz0kK]{Contest Accessories} for $750, @CompSearch[Items \"Contest Fashion\"]{Contest Fashion Items} for $500, and @UUID[Compendium.ptu.items.Item.U3Y74NVO3Z9lrfsy]{Fancy Clothes} for $2500.  ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "FsaXK2dtt9kP3HlZ",
   "effects": [],
-  "folder": null,
   "sort": 8200000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

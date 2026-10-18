@@ -57,7 +57,7 @@
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
-        "priority": false,
+        "priority": true,
         "reaction": false,
         "interrupt": false
       }

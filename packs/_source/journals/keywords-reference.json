@@ -111,6 +111,44 @@
       }
     },
     {
+      "sort": 350000,
+      "name": "Boss",
+      "type": "keyword",
+      "_id": "kwBoss0000000000",
+      "system": {
+        "rules": []
+      },
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Any Move, Poke-Edge, Item, or other feature with the Boss keyword is removed upon the Pokemon's capture. A Move, Poke-Edge, Item, or any feature with the Boss keyword is not selectable by a player without GM Permission.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.367",
+        "systemId": "ptu",
+        "systemVersion": "4.4.3.53",
+        "createdTime": 1792275400724,
+        "modifiedTime": 1792275452614,
+        "lastModifiedBy": "ptubuilder000000",
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    {
       "sort": 400000,
       "name": "Coat",
       "type": "keyword",
@@ -313,7 +351,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>These Moves automatically KO the target if they hit. The 1d100 roll may not be modified in any way or re-rolled through any means.</p>"
+        "content": "<p>These Moves automatically KO the target. Roll 1d100. This roll may not be modified in any way. If you roll X or lower, the target Faints. X is equal to 30 + The User's Level - The Target's Level. The 1d100 roll may not be modified in any way or re-rolled through any means.</p>"
       },
       "video": {
         "controls": true,
@@ -665,7 +703,20 @@
       "name": "Pass",
       "type": "keyword",
       "_id": "wkPass0000000000",
-      "system": {},
+      "system": {
+        "rules": [
+          {
+            "key": "ApplyEffect",
+            "predicate": [],
+            "affects": "origin",
+            "selectors": "{item|id}-apply-effects",
+            "uuid": "Compendium.ptu.effects.Item.OAD0F5Novpt2hYv3",
+            "range": "",
+            "linked": false,
+            "value": ""
+          }
+        ]
+      },
       "title": {
         "show": true,
         "level": 1
@@ -688,11 +739,11 @@
       "_stats": {
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.351",
+        "coreVersion": "14.367",
         "systemId": "ptu",
-        "systemVersion": "4.4.3.35",
+        "systemVersion": "4.4.3.53",
         "createdTime": 1782602578705,
-        "modifiedTime": 1782602585651,
+        "modifiedTime": 1792275914781,
         "lastModifiedBy": "ptubuilder000000"
       }
     },
@@ -930,7 +981,7 @@
       },
       "title": {
         "show": true,
-        "level": 1
+        "level": 2
       },
       "image": {},
       "text": {
@@ -950,11 +1001,11 @@
       "_stats": {
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.351",
+        "coreVersion": "14.367",
         "systemId": "ptu",
         "systemVersion": "4.4.3.35",
         "createdTime": 1782602764817,
-        "modifiedTime": 1782603409340,
+        "modifiedTime": 1792275343770,
         "lastModifiedBy": "ptubuilder000000"
       }
     },
@@ -976,7 +1027,7 @@
       },
       "title": {
         "show": true,
-        "level": 1
+        "level": 2
       },
       "image": {},
       "text": {
@@ -996,11 +1047,11 @@
       "_stats": {
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.351",
+        "coreVersion": "14.367",
         "systemId": "ptu",
         "systemVersion": "4.4.3.35",
         "createdTime": 1782602764817,
-        "modifiedTime": 1782603409340,
+        "modifiedTime": 1792275354360,
         "lastModifiedBy": "ptubuilder000000"
       }
     },
@@ -1022,7 +1073,7 @@
       },
       "title": {
         "show": true,
-        "level": 1
+        "level": 2
       },
       "image": {},
       "text": {
@@ -1042,11 +1093,11 @@
       "_stats": {
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.351",
+        "coreVersion": "14.367",
         "systemId": "ptu",
         "systemVersion": "4.4.3.35",
         "createdTime": 1782602764817,
-        "modifiedTime": 1782603409340,
+        "modifiedTime": 1792275361321,
         "lastModifiedBy": "ptubuilder000000"
       }
     },

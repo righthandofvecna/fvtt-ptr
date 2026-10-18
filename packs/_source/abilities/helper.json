@@ -6,9 +6,47 @@
     "origin": "",
     "effect": "Connection - Helping Hand. Whenever the user uses a Move that targets a single Ally, that Ally gains a +1 Bonus to Accuracy and Skill Checks until the end of the user’s next turn.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": {
+          "and": [
+            "item:type:move",
+            "target:number:1",
+            {
+              "or": [
+                {
+                  "and": [
+                    "self:alliance:party",
+                    "target:alliance:party"
+                  ]
+                },
+                {
+                  "and": [
+                    {
+                      "not": "self:alliance:party"
+                    },
+                    {
+                      "not": "target:alliance:party"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "affects": "target",
+        "selectors": "apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.oy9yit4Z1FNnQZSo",
+        "range": "",
+        "linked": false,
+        "value": ""
+      }
+    ],
     "enabled": true,
     "slug": "helper",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -36,7 +74,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -49,11 +88,9 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "automation": []
   },
   "_id": "wxQ2OjTbX4tdeTkV",
   "effects": [],
@@ -63,17 +100,20 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.53",
+    "coreVersion": "14.367",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200817025,
+    "modifiedTime": 1792267850234,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "folder": null
 }

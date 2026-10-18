@@ -2,12 +2,22 @@
   "name": "Charge Beam",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/ElectricIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "If Charge Beam successfully hits a target, roll 1d20. On a roll of 7+, the user's Special Attack is raised by 1 Combat Stage.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "affects": "origin",
+        "selectors": "{item|id}-damage-dealt",
+        "uuid": "Compendium.ptu.effects.Item.LJ30o41BPZ43Jlxd",
+        "range": "7",
+        "linked": false,
+        "value": ""
+      }
+    ],
     "enabled": true,
     "slug": "charge-beam",
     "schema": {
@@ -47,7 +57,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -82,7 +93,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

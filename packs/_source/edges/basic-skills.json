@@ -256,7 +256,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -303,6 +304,5 @@
     "exportSource": null
   },
   "_id": "HSJnMW0wcFNtbhp7",
-  "sort": 0,
-  "folder": null
+  "sort": 0
 }

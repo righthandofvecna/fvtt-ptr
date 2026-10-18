@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Fashionista Recipes",
-    "effect": "Prerequisites: Fashionista Cost: $500 Effect: You create one of the Basic Fashion Items below for which you have the chosen Fashionista Skill. These are Accessory Slot Items and may be used as Held Items by Pokémon",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.QrSXkvNqHIQ8AJla]{Fashionista} \nCost: $500 \nEffect: You create one of the Basic Fashion Items below for which you have the chosen Fashionista Skill. These are Accessory Slot Items and may be used as Held Items by Pokémon.\n@UUID[Compendium.ptu.references.Item.I9chbUzgBCkDEgBh]{Adorable Fashion} (Charm)\n@UUID[Compendium.ptu.references.Item.MVI0NGm5VVWycmlr]{Elegant Fashion} (Intuition)\n@UUID[Compendium.ptu.references.Item.dNlnVU6YRG77EMqV]{Rad Fashion} (Command)\n@UUID[Compendium.ptu.references.Item.h0kk8W1FywL0n0V1]{Rough Fashion} (Intimidate)\n@UUID[Compendium.ptu.references.Item.4zgNsnxQRGQgNjuq]{Slick Fashion} (Guile)",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "SLL8cTfeP1QGMDS1",
   "effects": [],
-  "folder": null,
   "sort": 14800000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

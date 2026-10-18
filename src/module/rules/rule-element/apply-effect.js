@@ -9,6 +9,12 @@ class ApplyEffectRuleElement extends RuleElementPTU {
     }
 
     /** @override */
+    static async description(source) {
+        const obj = await fromUuid(source.uuid);
+        return (obj?.name ?? "").replace("Effect: ", "");
+    }
+
+    /** @override */
     static defineSchema() {
         const { fields } = foundry.data;
 

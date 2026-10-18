@@ -102,6 +102,14 @@ class RuleElementPTU extends foundry.abstract.DataModel {
         return this.label.includes(":") ? this.label.replace(/^[^:]+:\s*|\s*\([^)]+\)$/g, "") : this.label;
     }
 
+    /**
+     * The description of this type of rule element, which should be a very brief description of what the rule does.
+     * @returns Promise<String>
+     */
+    static async description(source) {
+        return source?.label ?? "";
+    }
+
     /* Abstract Members */
 
     /**
@@ -208,6 +216,22 @@ class RuleElementPTU extends foundry.abstract.DataModel {
      * @param actorUpdates A record containing update data for the actor
      */
     onRoundEnd(actorUpdates) {};
+
+    /**
+     * Run at the end of each scene.
+     * @param actorUpdates A record containing update data for the actor
+     * @param itemUpdates A record containing update data for the item
+     * @param ruleUpdates A record containing update data for the rule
+     */
+    onSceneEnd(actorUpdates, itemUpdates, ruleUpdates) {};
+
+    /**
+     * Run at the end of each day.
+     * @param actorUpdates A record containing update data for the actor
+     * @param itemUpdates A record containing update data for the item
+     * @param ruleUpdates A record containing update data for the rule
+     */
+    onDayEnd(actorUpdates, itemUpdates, ruleUpdates) {};
 
     /**
      * Runs after an item holding this rule is removed from an actor. This method is used for cleaning up any values

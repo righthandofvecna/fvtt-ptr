@@ -6,3 +6,15 @@
 <section class="journal-page-content">
     {{{editor.content}}}
 </section>
+{{#if rules.cards.length}}
+<div class="rules-view-section">
+    <div class="rules-view-title">{{localize "PTU.RuleElement.Title"}}</div>
+    <div class="rules-view-list">
+        {{#each rules.cards}}
+        <span class="rule-badge">
+            {{label}}{{#if sublabel}} <span class="rule-badge-name">{{sublabel}}</span>{{/if}}
+        </span>
+        {{/each}}
+    </div>
+</div>
+{{/if}}

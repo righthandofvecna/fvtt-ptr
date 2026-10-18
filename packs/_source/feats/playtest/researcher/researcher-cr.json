@@ -4,7 +4,287 @@
     "origin": "Class Rework",
     "effect": "Effect: Choose two Researcher Fields of Study. You may take Features from those Fields with this instance of Researcher. Gain one Feature from a chosen Researcher Field for which you qualify.\nNote: Researcher is broken up into multiple Fields of Study. You may not take Features from a Field of Study you haven’t chosen with the base Researcher Feature. You may take Researcher any number of times, each time choosing two different Fields of Study.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "prompt": "Choose two Fields of Study.",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "Compendium.ptu.feats.Item.WqwZLi5En8p3Bbsc",
+            "label": "Apothecary",
+            "predicate": [
+              {
+                "not": "feat:researcher-apothecary"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.DSGMc15KeNBPriEe",
+            "label": "Artificer",
+            "predicate": [
+              {
+                "not": "feat:researcher-artificer"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.HCaWwQf9zxkOc4R0",
+            "label": "Botany",
+            "predicate": [
+              {
+                "not": "feat:researcher-botany"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.B4Xaj6jhuGKPaOHB",
+            "label": "Chemistry",
+            "predicate": [
+              {
+                "not": "feat:researcher-chemistry"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.xg0l9IRfpP1XVHsi",
+            "label": "Climatology",
+            "predicate": [
+              {
+                "not": "feat:researcher-climatology"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.g8T2g5FO9XZMrVeS",
+            "label": "Engineer",
+            "predicate": [
+              {
+                "not": "feat:researcher-engineer"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.5nUOmBQYitncHlna",
+            "label": "Gadgeteer",
+            "predicate": [
+              {
+                "not": "feat:researcher-gadgeteer"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.sOwfNXlag8TLEaPY",
+            "label": "General",
+            "predicate": [
+              {
+                "not": "feat:researcher-general"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.XNPtNxe28qB4TbdN",
+            "label": "Jailbreaker",
+            "predicate": [
+              {
+                "not": "feat:researcher-jailbreaker"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.ebvVPogqdNs6bYWH",
+            "label": "Malfeasance",
+            "predicate": [
+              {
+                "not": "feat:researcher-malfeasance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.d7h8dGY00B2B9x0g",
+            "label": "Occultism",
+            "predicate": [
+              {
+                "not": "feat:researcher-occultism"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.6hGTYuNwwTIh5QL0",
+            "label": "Paleontology",
+            "predicate": [
+              {
+                "not": "feat:researcher-paleontology"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.Pv4h2kPbHqf623Vg",
+            "label": "Pokémon Caretaking",
+            "predicate": [
+              {
+                "not": "feat:researcher-pokemon-caretaking"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.FhYPW6e81XFeAoEu",
+            "label": "Upgrader",
+            "predicate": [
+              {
+                "not": "feat:researcher-upgrader"
+              }
+            ]
+          }
+        ],
+        "flag": "researcher1"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.researcher1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.feats.Item.WqwZLi5En8p3Bbsc",
+            "label": "Apothecary",
+            "predicate": [
+              {
+                "not": "feat:researcher-apothecary"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.DSGMc15KeNBPriEe",
+            "label": "Artificer",
+            "predicate": [
+              {
+                "not": "feat:researcher-artificer"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.HCaWwQf9zxkOc4R0",
+            "label": "Botany",
+            "predicate": [
+              {
+                "not": "feat:researcher-botany"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.B4Xaj6jhuGKPaOHB",
+            "label": "Chemistry",
+            "predicate": [
+              {
+                "not": "feat:researcher-chemistry"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.xg0l9IRfpP1XVHsi",
+            "label": "Climatology",
+            "predicate": [
+              {
+                "not": "feat:researcher-climatology"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.g8T2g5FO9XZMrVeS",
+            "label": "Engineer",
+            "predicate": [
+              {
+                "not": "feat:researcher-engineer"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.5nUOmBQYitncHlna",
+            "label": "Gadgeteer",
+            "predicate": [
+              {
+                "not": "feat:researcher-gadgeteer"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.sOwfNXlag8TLEaPY",
+            "label": "General",
+            "predicate": [
+              {
+                "not": "feat:researcher-general"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.XNPtNxe28qB4TbdN",
+            "label": "Jailbreaker",
+            "predicate": [
+              {
+                "not": "feat:researcher-jailbreaker"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.ebvVPogqdNs6bYWH",
+            "label": "Malfeasance",
+            "predicate": [
+              {
+                "not": "feat:researcher-malfeasance"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.d7h8dGY00B2B9x0g",
+            "label": "Occultism",
+            "predicate": [
+              {
+                "not": "feat:researcher-occultism"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.6hGTYuNwwTIh5QL0",
+            "label": "Paleontology",
+            "predicate": [
+              {
+                "not": "feat:researcher-paleontology"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.Pv4h2kPbHqf623Vg",
+            "label": "Pokémon Caretaking",
+            "predicate": [
+              {
+                "not": "feat:researcher-pokemon-caretaking"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.FhYPW6e81XFeAoEu",
+            "label": "Upgrader",
+            "predicate": [
+              {
+                "not": "feat:researcher-upgrader"
+              }
+            ]
+          }
+        ],
+        "flag": "researcher2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.researcher2}"
+      }
+    ],
     "enabled": true,
     "repeatable": true,
     "slug": "researcher-cr",
@@ -40,7 +320,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,7 +342,8 @@
     "class": "Researcher",
     "name": "Researcher [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "researcher"
+    "replacesSlug": "researcher",
+    "leagueLegal": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -72,7 +354,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

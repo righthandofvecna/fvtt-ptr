@@ -29,13 +29,33 @@
                 </div>
             {{/if}}
             {{#if (is ../type "evolution")}}
-                <div class="evolution-predicate">
-                    <input type="hidden" name="system.evolutions.{{@index}}.uuid" value="{{item.uuid}}"/>
-                    <input type="hidden" name="system.evolutions.{{@index}}.slug" value="{{item.slug}}"/>
-                    <input type="text" class="ptu-tagify predicate-list"
-                           name="system.evolutions.{{@index}}.predicate"
-                           value="{{json item.predicate}}"
-                           data-dtype="JSON"/>
+                <div class="evolution-predicate-container flex-column">
+                    <div class="evolution-requirements">
+                        <input type="text"
+                            name="system.evolutions.{{@index}}.requirementsDescription"
+                            value="{{item.requirementsDescription}}"
+                            placeholder="e.g. Level 30 with Water Stone"/>
+                    </div>
+                    <div class="evolution-predicate">
+                        <input type="hidden" name="system.evolutions.{{@index}}.uuid" value="{{item.uuid}}"/>
+                        <input type="hidden" name="system.evolutions.{{@index}}.slug" value="{{item.slug}}"/>
+                        <div class="attached-input">
+                            <button type="button" class="attachment ptu-toggle-evo-predicate" data-idx="{{@index}}">
+                                {{#if (lookup ../complexPredicateEvolutions @index)}}Complex{{else}}Multiple{{/if}}
+                            </button>
+                            {{#if (lookup ../complexPredicateEvolutions @index)}}
+                            <input type="text"
+                                name="system.evolutions.{{@index}}.predicate"
+                                value="{{json item.predicate}}"
+                                data-dtype="String"/>
+                            {{else}}
+                            <input type="text" class="ptu-tagify predicate-list"
+                                name="system.evolutions.{{@index}}.predicate"
+                                value="{{json item.predicate}}"
+                                data-dtype="JSON"/>
+                            {{/if}}
+                        </div>
+                    </div>
                 </div>
             {{/if}}
             <div class="item-controls">

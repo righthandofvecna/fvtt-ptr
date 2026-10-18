@@ -203,6 +203,16 @@ export function registerSettings() {
         default: "available"
     });
 
+    game.settings.register("ptu", "keywordJournals", {
+        name: "PTU.Settings.Homebrew.KeywordJournals.Name",
+        hint: "PTU.Settings.Homebrew.KeywordJournals.Hint",
+        scope: "world",
+        config: true,
+        type: new foundry.data.fields.SetField(new foundry.data.fields.StringField()),
+        default: new Set(),
+        requiresReload: true
+    });
+
     game.settings.register("ptu", "compendiumBrowserPacks", {
         name: "Compendium Browser Packs",
         hint: "Settings to exclude packs from loading.",

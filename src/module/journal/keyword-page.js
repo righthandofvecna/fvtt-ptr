@@ -2,6 +2,8 @@ import { RuleElements } from "../rules/index.js";
 import { RULE_ELEMENT_FORMS, RuleElementForm } from "../item/sheet/rule-elements/index.js";
 import { sortStringRecord } from "../../util/misc.js";
 
+const { HandlebarsApplicationMixin, ApplicationV2 } = foundry.applications.api;
+
 class PTUKeywordJournalPage extends JournalEntryPage {
     get rules() {
         return this.system.rules;
@@ -11,7 +13,6 @@ class PTUKeywordJournalPage extends JournalEntryPage {
 class PTUKeywordJournalPageSheet extends foundry.appv1.sheets.JournalTextPageSheet {
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            dragDrop: [{ dragSelector: ".item-list .item", dropSelector: ".item-list" }],
             classes: [...super.defaultOptions.classes, "ptu-sheet"],
             scrollY: [".rules-list"],
         });
@@ -32,24 +33,21 @@ class PTUKeywordJournalPageSheet extends foundry.appv1.sheets.JournalTextPageShe
         if (data.editor) data.editor.collaborate = false;
 
         const rules = this.object.toObject().system.rules ?? [];
-        this.ruleElementForms = {};
-        for (const [index, rule] of rules.entries()) {
-            const FormClass = RULE_ELEMENT_FORMS[String(rule.key)] ?? RuleElementForm;
-            this.ruleElementForms[index] = new FormClass({
-                item: this.object,
-                index,
-                rule,
-                object: null
-            });
-        }
 
         data.rules = {
-            labels: rules.map(rule => {
-                const key = String(rule.key).replace(/^PTU\.RuleElement\./, "");
-                const label = game.i18n.localize(`PTU.RuleElement.${key}`);
-                const recognized = label !== `PTU.RuleElement.${key}`;
-                return { label: recognized ? label : game.i18n.localize("PTU.RuleElement.Unrecognized"), recognized };
-            }),
+            cards: await Promise.all(rules.map(async (rule, index) => {
+                const key = rule.key;
+                const label = game.i18n.localize(`PTU.RuleElement.${key}.Label`);
+                const recognized = label !== `PTU.RuleElement.${key}.Label`;
+                const sublabel = await RuleElements.getRuleElementDocument(rule.key).description(rule)
+                return {
+                    index,
+                    rule,
+                    label: recognized ? label : game.i18n.localize("PTU.RuleElement.Unrecognized.Label"),
+                    sublabel,
+                    recognized,
+                };
+            })),
             selection: {
                 selected: this.selectedRuleElementType,
                 types: sortStringRecord(
@@ -57,15 +55,8 @@ class PTUKeywordJournalPageSheet extends foundry.appv1.sheets.JournalTextPageShe
                         (result, key) => foundry.utils.mergeObject(result, { [key]: `RULES.Types.${key}` }),
                         {}
                     )
-                )
+                ),
             },
-            elements: await Promise.all(
-                rules.map(async (rule, index) => ({
-                    template: await this.ruleElementForms[index].render(),
-                    index,
-                    rule
-                }))
-            )
         };
 
         return data;
@@ -79,7 +70,6 @@ class PTUKeywordJournalPageSheet extends foundry.appv1.sheets.JournalTextPageShe
         });
 
         html.find('a.add-rule-element').click(async (event) => {
-            // Save any pending editor content without triggering a full re-render
             await this.saveEditor("text.content", { preventRender: true }).catch(() => {});
             const rulesData = this.object.toObject().system.rules ?? [];
             const key = this.selectedRuleElementType ?? "ActiveEffectLike";
@@ -88,7 +78,6 @@ class PTUKeywordJournalPageSheet extends foundry.appv1.sheets.JournalTextPageShe
         });
 
         html.find('a.remove-rule-element').click(async (event) => {
-            // Save any pending editor content without triggering a full re-render
             await this.saveEditor("text.content", { preventRender: true }).catch(() => {});
             const rulesData = this.object.toObject().system.rules ?? [];
             const index = Number(event.currentTarget.dataset.ruleIndex ?? NaN);
@@ -99,58 +88,159 @@ class PTUKeywordJournalPageSheet extends foundry.appv1.sheets.JournalTextPageShe
             }
         });
 
-        const rulesSections = html.find(".rules .rule-body");
-        for (const ruleSection of rulesSections) {
-            const idx = ruleSection.dataset.idx ? Number(ruleSection.dataset.idx) : NaN;
-            const form = this.ruleElementForms[idx];
-            if (form) {
-                form.activateListeners(ruleSection);
+        html.find('a.edit-rule-element').click(async (event) => {
+            const index = Number(event.currentTarget.dataset.ruleIndex ?? NaN);
+            if (!Number.isInteger(index)) return;
+            const dialog = new KeywordRuleElementDialog(this.object, index);
+            dialog.render(true);
+        });
+    }
+}
+
+/**
+ * AppV2 dialog for editing a single rule element on a keyword journal page.
+ * Isolated from the main journal page form to avoid FormDataExtended conflicts.
+ */
+class KeywordRuleElementDialog extends HandlebarsApplicationMixin(ApplicationV2) {
+    static DEFAULT_OPTIONS = {
+        classes: ["ptu", "keyword-rule-dialog"],
+        position: { width: 520, height: "auto" },
+        window: {
+            title: "PTU.KeywordRuleElementDialog.Title",
+            resizable: true,
+        },
+    };
+
+    static PARTS = {
+        content: {
+            template: "systems/ptu/static/templates/apps/journal/keyword-rule-dialog.hbs",
+        },
+    };
+
+    constructor(page, index, options = {}) {
+        super({ ...options, id: `keyword-rule-dialog-${page.id}-${index}` });
+        this.page = page;
+        this.index = index;
+    }
+
+    /** @override */
+    async _prepareContext(options) {
+        const rules = this.page.toObject().system.rules ?? [];
+        const rule = rules[this.index] ?? {};
+        const FormClass = RULE_ELEMENT_FORMS[String(rule.key)] ?? RuleElementForm;
+        this._ruleForm = new FormClass({ item: this.page, index: this.index, rule, object: null });
+        return {
+            ruleTemplate: await this._ruleForm.render(),
+            rule,
+            index: this.index,
+        };
+    }
+
+    /** @override */
+    _onRender(context, options) {
+        super._onRender(context, options);
+
+        // Activate the rule element form's interactive listeners (toggle buttons, etc.)
+        const ruleBody = this.element.querySelector(".rule-body");
+        if (ruleBody && this._ruleForm) {
+            this._ruleForm.activateListeners(ruleBody);
+        }
+
+        // Re-render the dialog when the underlying document changes (e.g., from updateItem calls
+        // triggered by interactive toggle buttons inside the rule form).
+        if (this._pageUpdateHook !== undefined) {
+            Hooks.off("updateJournalEntryPage", this._pageUpdateHook);
+        }
+        this._pageUpdateHook = Hooks.on("updateJournalEntryPage", async (page) => {
+            if (page.id === this.page.id && !this._isSaving) {
+                this.page = page;
+                this.render();
+            }
+        });
+
+        this.element.querySelector("[data-action=save-rule]")?.addEventListener("click", async () => {
+            await this._saveRule();
+        });
+    }
+
+    /** @override */
+    async close(options = {}) {
+        if (this._pageUpdateHook !== undefined) {
+            Hooks.off("updateJournalEntryPage", this._pageUpdateHook);
+            this._pageUpdateHook = undefined;
+        }
+        return super.close(options);
+    }
+
+    async _saveRule() {
+        const form = this.element.querySelector("form");
+        if (!form) return;
+
+        // Collect form data manually to avoid FormDataExtended's automatic JSON coercion
+        // and to correctly handle radio buttons (only the checked value) and the
+        // system.rules.N.* prefix stripping.
+        const prefix = `system.rules.${this.index}.`;
+        const wholeRuleKey = `system.rules.${this.index}`;
+        const ruleData = {};
+        let wholeRuleValue = null;
+
+        for (const el of form.elements) {
+            if (!el.name) continue;
+            // Skip unchecked radio buttons — only the checked one should contribute
+            if (el.type === "radio" && !el.checked) continue;
+
+            let value = el.type === "checkbox" ? el.checked : el.value;
+            // Parse fields explicitly marked as JSON dtype
+            if (el.dataset?.dtype === "JSON" && typeof value === "string" && value.trim()) {
+                try { value = JSON.parse(value); } catch { /* keep as raw string */ }
+            }
+
+            if (el.name === wholeRuleKey) {
+                wholeRuleValue = value; // Default textarea — the entire rule as a JSON string
+            } else if (el.name.startsWith(prefix)) {
+                const fieldPath = el.name.slice(prefix.length);
+                foundry.utils.setProperty(ruleData, fieldPath, value);
             }
         }
-    }
-    /** @override */
-    async _updateObject(event, formData) {
-        const expanded = foundry.utils.expandObject(formData);
 
-        if (expanded.system?.rules) {
-            const rules = this.object.toObject().system.rules ?? [];
+        const rules = this.page.toObject().system.rules ?? [];
 
-            for (const [key, value] of Object.entries(expanded.system.rules)) {
-                const idx = Number(key);
-                if (!Number.isInteger(idx) || idx >= rules.length) continue;
-
-                if (typeof value === "string") {
-                    try {
-                        rules[idx] = JSON.parse(value);
-                    } catch (error) {
-                        ui.notifications.error(game.i18n.format("PTU.RuleParseSyntaxError", { message: error?.message }));
-                        throw error;
-                    }
-                    continue;
+        this._isSaving = true;
+        try {
+            if (wholeRuleValue !== null) {
+                // Default textarea template — treat the whole value as JSON for the rule
+                try {
+                    rules[this.index] = JSON.parse(wholeRuleValue);
+                } catch (err) {
+                    ui.notifications.error(game.i18n.format("PTU.RuleParseSyntaxError", { message: err?.message }));
+                    return;
                 }
+            } else {
+                rules[this.index] = foundry.utils.mergeObject(rules[this.index] ?? {}, ruleData);
+                // NOTE: Do NOT call _ruleForm._updateObject here — that method
+                // converts Tagify-formatted data (e.g. [{value:"x"}] → ["x"]),
+                // but Tagify is not initialized in this dialog so the selectors/
+                // predicate fields are already in their final plain-JS format.
 
-                if (!value) continue;
-
-                rules[idx] = foundry.utils.mergeObject(rules[idx] ?? {}, value);
-                this.ruleElementForms[idx]?._updateObject(rules[idx]);
-
-                const predicate = rules[idx].predicate;
+                const predicate = rules[this.index].predicate;
                 if (typeof predicate === "string" && predicate.trim() === "") {
-                    delete rules[idx].predicate;
+                    delete rules[this.index].predicate;
                 } else if (typeof predicate === "string") {
                     try {
-                        rules[idx].predicate = JSON.parse(predicate);
-                    } catch (error) {
-                        ui.notifications.error(game.i18n.format("PTU.RuleParseSyntaxError", { message: error?.message }));
-                        throw error;
+                        rules[this.index].predicate = JSON.parse(predicate);
+                    } catch (err) {
+                        ui.notifications.error(game.i18n.format("PTU.RuleParseSyntaxError", { message: err?.message }));
+                        return;
                     }
                 }
             }
 
-            expanded.system.rules = rules;
+            await this.page.update({ "system.rules": rules });
+        } finally {
+            this._isSaving = false;
         }
 
-        return super._updateObject(event, foundry.utils.flattenObject(expanded));
+        this.close();
     }
 }
 

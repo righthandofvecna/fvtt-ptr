@@ -16,11 +16,11 @@ export class ActionPointsRuleElement extends RuleElementPTU {
         const rollOptions = Array.from(new Set(this.actor.getRollOptions()));
 
         if(!this.predicate.test(rollOptions)) return;
-        if(typeof this.drainedValue !== "number") return this.failValidation("drainedValue requires a non-zero value field");
-        if(typeof this.boundValue !== "number") return this.failValidation("boundValue requires a non-zero value field");
+        if(typeof this.drainedValue !== "number") return this.failValidation("drainedValue requires a non-zero numeric value field");
+        if(typeof this.boundValue !== "number") return this.failValidation("boundValue requires a non-zero numeric value field");
 
         const currentApBeforeRule = Number(this.actor.system.ap.value) || 0;
-        // this.onCreate() runs **AFTER** this.afterPrepareData(). Therefore, within the PTUTrainerActor.prepareDerivedData(), this Rules
+        // this.onCreate() runs **AFTER** this.beforePrepareData(). Therefore, within the PTUTrainerActor.prepareDerivedData(), this Rules
         // drained and bound values are already included. Therefore, the maxAp before this rule can only be calced by adding
         // this rules values up to it again.
         const maxApBeforeRule = (Number(this.actor.system.ap.max) || 0) + this.drainedValue + this.boundValue;
@@ -30,10 +30,17 @@ export class ActionPointsRuleElement extends RuleElementPTU {
         });
     }
 
-    afterPrepareData() {
+    beforePrepareData() {
         if(this.ignored) return;
         this.actor.synthetics.apAdjustments.bound.push({"value": this.boundValue, "sourceUuid": this.item.uuid})
         this.actor.synthetics.apAdjustments.drained.push({"value": this.drainedValue, "sourceUuid": this.item.uuid})
+    }
+
+    onDayEnd(actorUpdates, itemUpdates, ruleUpdates) {
+        if(this.ignored) return;
+
+        // remove drained value
+        ruleUpdates.drainedValue = 0;
     }
 
     /** @override */

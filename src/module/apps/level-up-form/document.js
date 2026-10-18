@@ -180,6 +180,7 @@ class LevelUpData {
             `self:level:${this.level.new}`,
         ]);
 
+        console.log("evolutions", {evolutions: this.evolutions, systemEvolutions: this.pokemon.species.system.evolutions});
         if (!this.evolutions) {
             this.evolutions = {
                 available: [],
@@ -191,6 +192,7 @@ class LevelUpData {
             }
 
             for (let i = 0; i < this.pokemon.species.system.evolutions.length; i++) {
+                console.log("Current roll options:", Array.from(rollOptions));
                 const evolution = this.pokemon.species.system.evolutions[i];
 
                 if (evolution.slug === this.pokemon.species.slug) {
@@ -205,8 +207,9 @@ class LevelUpData {
                 // skip non-self evolutions if evolution is forbidden
                 if (rollOptions.has("self:evolution-forbidden")) continue;
 
+                console.log("Evaluating evolution:", evolution.slug, "with predicate:", evolution.predicate);
                 // Skip evolutions whose predicate does not pass at the new level.
-                if (!(evolution.predicate ?? []).length || !PTUPredicate.test(evolution.predicate, rollOptions instanceof Set ? rollOptions : new Set(rollOptions))) continue;
+                if (!PTUPredicate.test(evolution.predicate ?? [], rollOptions)) continue;
 
                 if (this.pokemon.species.system.evolutions.findIndex(e => e.slug === (this.evolution?.slug ?? this.pokemon.species.slug)) < i) {
                     this.evolutions.available.push({

@@ -2,12 +2,22 @@
   "name": "Corrosive Gas",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Targets hit have their current Held Item(s) unable to be used for the remainder of the Scene. In addition, Steel-Type targets hit lose their immunity to Poison until they Faint or Take A Breather; Poison instead counts as neutral against Steel.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "{item|id}-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.SklG2X0kOdB1VLsr",
+        "range": "",
+        "linked": false,
+        "value": "",
+        "affects": "target"
+      }
+    ],
     "enabled": true,
     "slug": "corrosive-gas",
     "schema": {
@@ -45,7 +55,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -61,7 +72,7 @@
     "type": "Poison",
     "category": "Status",
     "damageBase": "",
-    "ac": 2,
+    "ac": "2",
     "range": "Burst 1",
     "contestType": "Smart - Sabotage",
     "stab": false,
@@ -70,7 +81,8 @@
     "automation": [],
     "damagebase": "--",
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "xBfoYzf7sJYoVu2Z",
   "effects": [],
@@ -78,7 +90,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

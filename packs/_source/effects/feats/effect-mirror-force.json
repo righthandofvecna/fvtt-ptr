@@ -1,0 +1,65 @@
+{
+  "name": "Effect: Mirror Force",
+  "type": "effect",
+  "_id": "dLMQjDjS6kCGpFxB",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "When your Steel-Type Pokémon has Positive DEF stages, they gain Physical Damage Resistance equal to your Type-Linked Skill Rank + the twice the DEF stage, maximum of 20. \n\n<blockquote>Effect functions however you should make a local copy and edit the 6 to be whatever double your Athletics or Intimidation is.</blockquote>",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.damageReduction.physical.mod",
+        "phase": "afterDerived",
+        "value": "min(max(@actor.system.stats.def.stage.total*2 + 6,0), 20)",
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-mirror-force",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null,
+      "round": null,
+      "turn": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "Uv4mgOt4xtb28hzB",
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  }
+}

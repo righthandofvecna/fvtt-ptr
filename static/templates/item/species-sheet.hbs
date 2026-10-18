@@ -185,7 +185,7 @@
             </div>
         </div>
         <div class="tab evolutions h-100" data-group="primary" data-tab="evolutions">
-            {{> systems/ptu/static/templates/partials/species-item-partial.hbs title=(localize "SPECIES.Evolutions") type="evolution" items=item.system.evolutions}}
+            {{> systems/ptu/static/templates/partials/species-item-partial.hbs title=(localize "SPECIES.Evolutions") type="evolution" items=item.system.evolutions complexPredicateEvolutions=complexPredicateEvolutions}}
         </div>
         <div class="tab moves h-100" data-group="primary" data-tab="moves">
             <div class="fb-100 d-flex flex-column mb-2 drop-zone" data-zone="move" data-sub-zone="level">

@@ -11,7 +11,7 @@ const AutomationSettingsConfig = {
         name: "PTU.Settings.Automation.RemoveExpiredEffects.Name",
         hint: "PTU.Settings.Automation.RemoveExpiredEffects.Hint",
         type: Boolean,
-        default: false
+        default: true
     },
     "autoExpireEffects": {
         name: "PTU.Settings.Automation.AutoExpireEffects.Name",
@@ -84,6 +84,23 @@ const AutomationSettingsConfig = {
         hint: "PTU.Settings.Automation.DexOnScan.Hint",
         type: Boolean,
         default: true,
+    },
+    "autoRecovery": {
+        name: "PTU.Settings.Automation.AutoRecovery.Name",
+        hint: "PTU.Settings.Automation.AutoRecovery.Hint",
+        type: String,
+        choices: {
+            "none": "PTU.Settings.Automation.AutoRecovery.Choices.None",
+            "prompt": "PTU.Settings.Automation.AutoRecovery.Choices.Prompt",
+            "auto": "PTU.Settings.Automation.AutoRecovery.Choices.Auto"
+        },
+        default: "prompt"
+    },
+    "sessionPromptExtendedRest": {
+        name: "PTU.Settings.Automation.SessionPromptExtendedRest.Name",
+        hint: "PTU.Settings.Automation.SessionPromptExtendedRest.Hint",
+        type: Boolean,
+        default: false
     },
     "commandChecks": {
         name: "PTU.Settings.Automation.CommandChecks.Name",

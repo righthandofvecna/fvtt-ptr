@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -56,12 +57,14 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Researcher (Pokemon Caretaking)",
+    "class": "Researcher (Pokémon Caretaking)",
     "name": "Re-Balancing",
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -71,7 +74,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Pusher, Master Pokemon Education"
+      "prereqBackup": "Pusher, Master Pokemon Education",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -84,7 +90,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 25500000,
   "_id": "NYsEpTNL0K6nyGwa"
 }

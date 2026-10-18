@@ -135,7 +135,7 @@
             "value": "Compendium.ptu.moves.Item.oY92cZyfclUEtNVa",
             "label": "Powder",
             "predicate": [
-              "capability:monarchs-embrace-hb",
+              "capability:monarchs-embrace",
               {
                 "not": "move:powder"
               }
@@ -689,7 +689,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [

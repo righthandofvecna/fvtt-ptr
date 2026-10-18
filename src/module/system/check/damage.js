@@ -3,6 +3,7 @@ import { PTUModifier, StatisticModifier } from "../../actor/modifiers.js";
 import { PTUMove } from "../../item/index.js";
 import { DamageRoll } from "../damage/roll.js";
 import { PTUDiceCheck, eventToRollParams } from "./check.js";
+import { buildOutcomeOptions } from "../../rules/pipeline.js";
 import { CheckDialog } from "./dialogs/dialog.js";
 import { resolveDbFormula } from "../../../util/value-resolver.js";
 
@@ -54,6 +55,15 @@ class PTUDamageCheck extends PTUDiceCheck {
             this._contexts = new Collection([[context.actor.uuid, context]]);
         }
         else await super.prepareContexts(attackStatistic);
+
+        // Inject attack:outcome:* options so FlatModifier and other REs can predicate on attack outcome.
+        if (this.outcomes) {
+            for (const outcome of new Set(Object.values(this.outcomes))) {
+                for (const opt of buildOutcomeOptions(outcome)) {
+                    this.targetOptions.add(opt);
+                }
+            }
+        }
 
         // Resolve formula DB now that we have target context
         if (this.item.damageBase?.isFormula) {

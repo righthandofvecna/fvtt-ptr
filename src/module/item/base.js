@@ -443,6 +443,10 @@ class PTUItem extends Item {
         await super._preCreate(data, options, user);
 
         this._source.system.rules = this._source.system.rules.filter((r) => !r.removeUponCreate);
+
+        if (game.settings.get("ptu", "devMode")) {
+            this.updateSource({ "system.contentSet": "", "system.source.value": "PTR Compendiums" });
+        }
     }
 
     /** @override */
@@ -544,16 +548,9 @@ class PTUItem extends Item {
         const keywordStartIndex = this.system.rules.length;
         const keywordRules = [];
         for (const [i, source] of keywordSources.entries()) {
-            const RuleElementClass = RuleElements.builtin[source.key] ?? RuleElements.custom[source.key];
-            if (!RuleElementClass) {
-                if (!options.suppressWarnings) console.warn(`PTU | RuleElements | Unrecognized keyword rule: ${source.key} on item ${this.name}`);
-                continue;
-            }
-            try {
-                keywordRules.push(new RuleElementClass(source, this, { ...options, sourceIndex: keywordStartIndex + i }));
-            } catch (err) {
-                if (!options.suppressWarnings) console.warn(`PTU | RuleElements | Error creating keyword rule: ${source.key} on item ${this.name}`, err);
-            }
+            const rule = RuleElements.fromSource(source, this, { ...options, sourceIndex: keywordStartIndex + i });
+            if (!rule) continue;
+            keywordRules.push(rule);
         }
 
         return (this.rules = [...baseRules, ...keywordRules]);
@@ -705,6 +702,88 @@ class PTUItem extends Item {
             updates["flags.ptu.eot"] = this.flags.ptu.eot - 1;
         }
         if (Object.keys(updates).length > 0) await this.update(updates);
+    }
+
+    /**
+     * Called at the end of a scene, handling end-of-scene cleanup and restoration.
+     * 
+     * @param {object} config 
+     * @param {boolean} config.doUpdates - Whether to apply the updates or just return them.
+     */
+    async onSceneEnd({ doUpdates = true }={}) {
+        const update = {};
+
+        // do end-of-scene frequency updates
+        if (["eot", "scene"].includes(this.system.frequency?.type)) {
+            const max = this.system.frequency?.max ?? 0;
+            if (max && this.flags.ptu.used > 0) {
+                update["flags.ptu.used"] = 0;
+            }
+            if (this.flags.ptu.eot) {
+                update["flags.ptu.-=eot"] = null;
+            }
+        }
+
+        // do end-of-scene rules updates
+        for (const rule of this.rules) {
+            const ruleUpdate = {};
+            rule.onSceneEnd({}, update, ruleUpdate);
+            if (Object.keys(ruleUpdate).length > 0) {
+                update["system.rules"] ??= foundry.utils.deepClone(this._source.system.rules);
+                Object.assign(update["system.rules"][rule.sourceIndex], ruleUpdate);
+            }
+        }
+
+        // apply the updates if there are any
+        if (Object.keys(update).length === 0) return;
+        if (doUpdates) {
+            return this.update(update);
+        }
+        return {
+            "_id": this.id,
+            ...update
+        }
+    }
+
+    /**
+     * Called at the end of a day, handling end-of-day cleanup and restoration.
+     * 
+     * @param {object} config 
+     * @param {boolean} config.doUpdates - Whether to apply the updates or just return them.
+     */
+    async onDayEnd({ doUpdates = true }={}) {
+        const update = {};
+
+        // do end-of-day frequency updates
+        if (["eot", "scene", "daily"].includes(this.system.frequency?.type)) {
+            const max = this.system.frequency?.max ?? 0;
+            if (max && this.flags.ptu.used > 0) {
+                update["flags.ptu.used"] = 0;
+            }
+            if (this.flags.ptu.eot) {
+                update["flags.ptu.-=eot"] = null;
+            }
+        }
+
+        // do end-of-day rules updates
+        for (const rule of this.rules) {
+            const ruleUpdate = {};
+            rule.onDayEnd({}, update, ruleUpdate);
+            if (Object.keys(ruleUpdate).length > 0) {
+                update["system.rules"] ??= foundry.utils.deepClone(this._source.system.rules);
+                Object.assign(update["system.rules"][rule.sourceIndex], ruleUpdate);
+            }
+        }
+
+        // apply the updates if there are any
+        if (Object.keys(update).length === 0) return;
+        if (doUpdates) {
+            return this.update(update);
+        }
+        return {
+            "_id": this.id,
+            ...update
+        }
     }
 }
 

@@ -374,6 +374,28 @@ class PTUTrainerActor extends PTUActor {
         return 5 + Math.floor(this.system.level.current / 5);
     }
 
+    async onSceneEnd() {
+        await super.onSceneEnd();
+
+        const updates = {};
+        // restore all AP that isn't drained or still bound
+        if (this.system?.ap?.value ?? 0 < this.system?.ap?.max ?? 0) {
+            updates["system.ap.value"] = this.system?.ap?.max ?? 0;
+        }
+        if (Object.keys(updates).length) await this.update(updates);
+    }
+
+    async onDayEnd() {
+        await super.onDayEnd();
+
+        const updates = {};
+        // restore all AP that isn't still bound
+        if ((this.system?.ap?.value ?? 0) < (this.system?.ap?.max ?? 0)) {
+            updates["system.ap.value"] = this.system?.ap?.max ?? 0
+        }
+        if (Object.keys(updates).length) await this.update(updates);
+    }
+
     _calcBaseStats() {
         const stats = foundry.utils.duplicate(this.system.stats);
 

@@ -2,12 +2,11 @@
   "name": "Wall of Iron",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Move Protect, and you learn your choice of Iron Defense, Amnesia, or Cosmic Power.",
+    "effect": "Effect: You learn the Move @UUID[Compendium.ptu.moves.Item.HfiQ6I7xp7aGazV0]{Protect}, and you learn your choice of @UUID[Compendium.ptu.moves.Item.K7oM1QaqyugwZzbF]{Iron Defense}, @UUID[Compendium.ptu.moves.Item.0JDFAZ8Q0rDKNodB]{Amnesia}, or @UUID[Compendium.ptu.moves.Item.wrMVLtxZcGmaJvNw]{Cosmic Power}.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "wallofiron",
         "choices": [
           {
@@ -28,6 +27,46 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.HfiQ6I7xp7aGazV0"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.K7oM1QaqyugwZzbF",
+            "label": "Iron Defense",
+            "predicate": {
+              "not": "move:iron-defense"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.0JDFAZ8Q0rDKNodB",
+            "label": "Amnesia",
+            "predicate": {
+              "not": "move:amnesia"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.wrMVLtxZcGmaJvNw",
+            "label": "Cosmic Power",
+            "predicate": {
+              "not": "move:cosmic-power"
+            }
+          }
+        ],
+        "flag": "move1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.move1}"
       }
     ],
     "enabled": true,
@@ -63,7 +102,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -85,7 +125,9 @@
     "class": "Fortress",
     "name": "Wall of Iron [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "wall-of-iron"
+    "replacesSlug": "wall-of-iron",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -96,7 +138,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

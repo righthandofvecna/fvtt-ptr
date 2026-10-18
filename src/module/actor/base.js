@@ -551,6 +551,9 @@ class PTUActor extends Actor {
 
         this.system.spirit.weary = this.system.spirit.value >= 0 ? 0 : Math.abs(this.system.spirit.value);
 
+        // Add the alliance as a roll option
+        this.flags.ptu.rollOptions.all[`self:alliance:${this.system.alliance}`] = true;
+
         // Mark the currently-active combatant so predicates can gate on it
         if (game.combat?.combatant?.actor?.uuid === this.uuid) {
             this.flags.ptu.rollOptions.all["turn:active"] = true;
@@ -1308,17 +1311,37 @@ class PTUActor extends Actor {
     }
 
     /**
+     * Called at the end of a scene, handling end-of-scene cleanup and restoration.
+     */
+    async onSceneEnd() {
+        const itemUpdates = []
+        for (const item of this.items.contents) {
+            itemUpdates.push(await item.onSceneEnd?.({ doUpdates: false }));
+        }
+        if (itemUpdates.filter(Boolean).length) await this.updateEmbeddedDocuments("Item", itemUpdates.filter(Boolean));
+    }
+
+    /**
+     * Called at the end of a day, handling end-of-day cleanup and restoration.
+     */
+    async onDayEnd() {
+        const itemUpdates = []
+        for (const item of this.items.contents) {
+            itemUpdates.push(await item.onDayEnd?.({ doUpdates: false }));
+        }
+        if (itemUpdates.filter(Boolean).length) await this.updateEmbeddedDocuments("Item", itemUpdates.filter(Boolean));
+    }
+
+    /**
      * When combat ends, do cleanup
      */
     async onDeleteCombat() {
         if (this.primaryUpdater === game.user) {
-            // remove Effect items
-            const effectsToRemove = this.itemTypes.effect.filter(e => e.system.duration?.unit !== "unlimited");
-            await this.deleteEmbeddedDocuments("Item", effectsToRemove.map(e => e.id));
+            // effect removal is handled in effect-tracker.js
 
             // Remove EOT flags
             const itemsWithEOTFlags = this.items.filter(i => i.flags.ptu?.eot);
-            await this.updateEmbeddedDocuments("Item", itemsWithEOTFlags.map(i => ({
+            if (itemsWithEOTFlags.length) await this.updateEmbeddedDocuments("Item", itemsWithEOTFlags.map(i => ({
                 _id: i.id,
                 "flags.ptu.-=eot": null
             })));
@@ -1328,9 +1351,7 @@ class PTUActor extends Actor {
             for (const rule of this.rules) {
                 await rule.onCombatEnd?.(actorUpdates);
             }
-            if (Object.keys(actorUpdates).length) {
-                await this.update(actorUpdates);
-            }
+            if (Object.keys(actorUpdates).length) await this.update(actorUpdates);
         }
 
         await this.reset();

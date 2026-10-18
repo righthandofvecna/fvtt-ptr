@@ -96,15 +96,11 @@
       "highJump": 2,
       "longJump": 3,
       "power": 4,
+      "teleporter": 2,
       "naturewalk": [
         "Mountain"
       ],
-      "other": [
-        {
-          "slug": "teleporter-2",
-          "uuid": "Compendium.ptu.capabilities.Item.ylhIk5i0Xtp65asH"
-        }
-      ]
+      "other": []
     },
     "moves": {
       "level": [

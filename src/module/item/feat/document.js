@@ -17,7 +17,7 @@ class PTUFeat extends PTUItem {
 
     /** @override */
     async _preCreate(data, options, user) {
-        super._preCreate(data, options, user);
+        await super._preCreate(data, options, user);
 
         // If the item has a class check if we have a class item for it
         if(this.system.class) {

@@ -33,7 +33,7 @@
       "max": 0,
       "custom": "At-Will - Special",
       "modifiers": {
-        "priorityLimited": false,
+        "priorityLimited": true,
         "priorityAdvanced": false,
         "priority": false,
         "reaction": false,
@@ -64,7 +64,8 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -97,6 +98,5 @@
     "default": 0
   },
   "_id": "MolTHMn3UrNiIZ3h",
-  "sort": 300000,
-  "folder": null
+  "sort": 300000
 }

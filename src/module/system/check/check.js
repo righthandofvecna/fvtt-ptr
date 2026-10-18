@@ -101,6 +101,8 @@ class PTUDiceCheck {
             const effectivenessOptions = this.item?.getRollOptionsWithTarget?.(context.actor, this.selectors) ?? [];
             this.targetOptions = new Set([...this.targetOptions, ...context.targetOptions, ...effectivenessOptions]);
         }
+
+        this.targetOptions.add(`target:number:${this._tokenTargets.length}`);
         
         return this;
     }

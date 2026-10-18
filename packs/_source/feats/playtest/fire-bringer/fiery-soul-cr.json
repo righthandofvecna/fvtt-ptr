@@ -2,12 +2,11 @@
   "name": "Fiery Soul",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose Flash Fire or Flame Body. You gain the chosen Ability.\nBonus: You gain the Heater Capability, and are immune to the Burn condition.",
+    "effect": "Effect: Choose @UUID[Compendium.ptu.abilities.Item.ZtDz88aFEkBCL83y]{Flash Fire} or @UUID[Compendium.ptu.abilities.Item.vF0vjHMDikFAthFY]{Flame Body}. You gain the chosen Ability.\nBonus: You gain the @UUID[Compendium.ptu.capabilities.Item.9DQsEtRIDXdw7ICw]{Heater} Capability, and are immune to the @UUID[Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj]{Burn} condition.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "fierysoul",
         "choices": [
           {
@@ -31,17 +30,19 @@
       },
       {
         "key": "ChoiceSet",
-        "flag": "move1",
+        "flag": "ability1",
         "adjustName": false,
         "choices": [
           {
             "value": "Compendium.ptu.abilities.Item.vF0vjHMDikFAthFY",
+            "label": "Flame Body",
             "predicate": {
               "not": "ability:flame-body"
             }
           },
           {
             "value": "Compendium.ptu.abilities.Item.ZtDz88aFEkBCL83y",
+            "label": "Flash Fire",
             "predicate": {
               "not": "ability:flash-fire"
             }
@@ -52,7 +53,7 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "{item|flags.ptu.rulesSelections.move1}"
+        "uuid": "{item|flags.ptu.rulesSelections.ability1}"
       },
       {
         "key": "GrantItem",
@@ -94,7 +95,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -115,7 +117,9 @@
     "class": "Fire Bringer",
     "name": "Fiery Soul [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "fiery-soul"
+    "replacesSlug": "fiery-soul",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -128,7 +132,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
