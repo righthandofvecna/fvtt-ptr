@@ -544,16 +544,9 @@ class PTUItem extends Item {
         const keywordStartIndex = this.system.rules.length;
         const keywordRules = [];
         for (const [i, source] of keywordSources.entries()) {
-            const RuleElementClass = RuleElements.builtin[source.key] ?? RuleElements.custom[source.key];
-            if (!RuleElementClass) {
-                if (!options.suppressWarnings) console.warn(`PTU | RuleElements | Unrecognized keyword rule: ${source.key} on item ${this.name}`);
-                continue;
-            }
-            try {
-                keywordRules.push(new RuleElementClass(source, this, { ...options, sourceIndex: keywordStartIndex + i }));
-            } catch (err) {
-                if (!options.suppressWarnings) console.warn(`PTU | RuleElements | Error creating keyword rule: ${source.key} on item ${this.name}`, err);
-            }
+            const rule = RuleElements.fromSource(source, this, { ...options, sourceIndex: keywordStartIndex + i });
+            if (!rule) continue;
+            keywordRules.push(rule);
         }
 
         return (this.rules = [...baseRules, ...keywordRules]);

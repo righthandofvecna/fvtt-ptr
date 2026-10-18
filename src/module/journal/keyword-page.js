@@ -40,6 +40,7 @@ class PTUKeywordJournalPageSheet extends foundry.appv1.sheets.JournalTextPageShe
                 const label = game.i18n.localize(`PTU.RuleElement.${key}.Label`);
                 const recognized = label !== `PTU.RuleElement.${key}.Label`;
                 const sublabel = await RuleElements.getRuleElementDocument(rule.key).description(rule)
+                console.log("KW Rule", rule, label, sublabel);
                 return {
                     index,
                     rule,
