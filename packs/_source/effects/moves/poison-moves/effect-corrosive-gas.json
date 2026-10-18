@@ -15,8 +15,8 @@
       }
     ],
     "enabled": true,
-    "slug": "effect-corrosive-gas-hb",
-    "contentSet": "homebrew",
+    "slug": "effect-corrosive-gas",
+    "contentSet": "",
     "replacesSlug": "",
     "schema": {
       "version": null,
@@ -24,7 +24,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [],

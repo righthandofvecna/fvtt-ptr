@@ -24,7 +24,7 @@
       {
         "key": "ActiveEffectLike",
         "predicate": [
-          "capability:arachnids-embrace-hb"
+          "capability:arachnids-embrace"
         ],
         "mode": "add",
         "path": "system.modifiers.baseStats.atk.mod",
@@ -35,7 +35,7 @@
       {
         "key": "ActiveEffectLike",
         "predicate": [
-          "capability:monarchs-embrace-hb"
+          "capability:monarchs-embrace"
         ],
         "mode": "add",
         "path": "system.modifiers.baseStats.spatk.mod",
@@ -59,7 +59,7 @@
     },
     "referenceEffect": "",
     "source": {
-      "value": "Homebrew"
+      "value": "PTR Compendiums"
     },
     "stackSlugs": false,
     "keywords": [

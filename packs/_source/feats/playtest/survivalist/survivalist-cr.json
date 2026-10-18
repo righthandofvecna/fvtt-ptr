@@ -22,7 +22,7 @@
             "label": "Naturewalk (Cave)",
             "predicate": [
               {
-                "not": "capability:naturewalk-cave-hb"
+                "not": "capability:naturewalk-cave"
               }
             ]
           },
@@ -31,7 +31,7 @@
             "label": "Naturewalk (Desert)",
             "predicate": [
               {
-                "not": "capability:naturewalk-desert-hb"
+                "not": "capability:naturewalk-desert"
               }
             ]
           },
@@ -58,7 +58,7 @@
             "label": "Naturewalk (Mountain)",
             "predicate": [
               {
-                "not": "capability:naturewalk-mountain-hb"
+                "not": "capability:naturewalk-mountain"
               }
             ]
           },
@@ -67,7 +67,7 @@
             "label": "Naturewalk (Ocean)",
             "predicate": [
               {
-                "not": "capability:naturewalk-ocean-hb"
+                "not": "capability:naturewalk-ocean"
               }
             ]
           },
@@ -76,7 +76,7 @@
             "label": "Naturewalk (Tundra)",
             "predicate": [
               {
-                "not": "capability:naturewalk-tundra-hb"
+                "not": "capability:naturewalk-tundra"
               }
             ]
           },
@@ -85,7 +85,7 @@
             "label": "Naturewalk (Urban)",
             "predicate": [
               {
-                "not": "capability:naturewalk-urban-hb"
+                "not": "capability:naturewalk-urban"
               }
             ]
           },
@@ -94,7 +94,7 @@
             "label": "Naturewalk (Wetlands)",
             "predicate": [
               {
-                "not": "capability:naturewalk-wetlands-hb"
+                "not": "capability:naturewalk-wetlands"
               }
             ]
           }
