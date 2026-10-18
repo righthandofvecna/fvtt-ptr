@@ -443,6 +443,10 @@ class PTUItem extends Item {
         await super._preCreate(data, options, user);
 
         this._source.system.rules = this._source.system.rules.filter((r) => !r.removeUponCreate);
+
+        if (game.settings.get("ptu", "devMode")) {
+            this.updateSource({ "system.contentSet": "", "system.source.value": "PTR Compendiums" });
+        }
     }
 
     /** @override */

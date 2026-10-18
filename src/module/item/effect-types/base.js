@@ -142,6 +142,7 @@ class BaseEffectPTU extends PTUItem {
 
     /** @override */
     async _preCreate(data, options, userId) {
+        await super._preCreate(data, options, userId);
         if(this.isOwned) {
             const round = game.combat?.round ?? null;
             const turn = (game.combat?.round ?? 0) * (game.combat?.turns?.length ?? 1) + (game.combat?.turn ?? 0);

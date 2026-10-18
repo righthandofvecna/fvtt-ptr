@@ -57,7 +57,7 @@ class PTUItemItem extends PTUItem {
             }
         }
 
-        super._preUpdate(changed, options, user);
+        await super._preUpdate(changed, options, user);
 
         if(oldClass?.actor) await oldClass.actor.update(oldClass.update);
         if(newClass?.actor) await newClass.actor.update(newClass.update);
