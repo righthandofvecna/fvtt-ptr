@@ -114,7 +114,7 @@
       "sort": 350000,
       "name": "Boss",
       "type": "keyword",
-      "_id": "HK0PqueTv67KiwFf",
+      "_id": "kwBoss0000000000",
       "system": {
         "rules": []
       },
@@ -351,7 +351,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>These Moves automatically KO the target if they hit. The 1d100 roll may not be modified in any way or re-rolled through any means.</p>"
+        "content": "<p>These Moves automatically KO the target. Roll 1d100. This roll may not be modified in any way. If you roll X or lower, the target Faints. X is equal to 30 + The User's Level - The Target's Level. The 1d100 roll may not be modified in any way or re-rolled through any means.</p>"
       },
       "video": {
         "controls": true,
