@@ -2,12 +2,11 @@
   "name": "Unstoppable Will",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose either Discipline or Stamina. You gain the chosen Ability.",
+    "effect": "Effect: Choose either @UUID[Compendium.ptu.abilities.Item.kHDxnwsm7KNgQuQY]{Discipline} or @UUID[Compendium.ptu.abilities.Item.6QGcPmP9cVKQnFRA]{Stamina}. You gain the chosen Ability.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "unstoppablewill",
         "choices": [
           {
@@ -28,6 +27,33 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.kHDxnwsm7KNgQuQY",
+            "label": "Discipline",
+            "predicate": {
+              "not": "ability:discipline"
+            }
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.6QGcPmP9cVKQnFRA",
+            "label": "Stamina",
+            "predicate": {
+              "not": "ability:stamina"
+            }
+          }
+        ],
+        "flag": "ability1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.ability1}"
       }
     ],
     "enabled": true,
@@ -63,7 +89,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -85,7 +112,9 @@
     "class": "Fortress",
     "name": "Unstoppable Will [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "unstoppable-will"
+    "replacesSlug": "unstoppable-will",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -98,7 +127,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

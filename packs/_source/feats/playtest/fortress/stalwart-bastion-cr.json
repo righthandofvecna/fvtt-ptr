@@ -2,12 +2,11 @@
   "name": "Stalwart Bastion",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: While this Feature is Bound, you and all adjacent allies gain Physical Damage Reduction equal to your Combat Rank and Special Damage Reduction equal to your Focus Rank.\nBonus: You gain the Shield Proficiency General Feature, even if you don't meet the prerequisites.",
+    "effect": "Effect: While this Feature is Bound, you and all adjacent allies gain Physical Damage Reduction equal to your Combat Rank and Special Damage Reduction equal to your Focus Rank.\nBonus: You gain the @UUID[Compendium.ptu.feats.Item.ghnRSRJzhYIi99Q4]{Shield Proficiency} General Feature, even if you don't meet the prerequisites.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "stalwartbastion",
         "choices": [
           {
@@ -28,6 +27,12 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.feats.Item.ghnRSRJzhYIi99Q4"
       }
     ],
     "enabled": true,
@@ -63,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -84,7 +90,9 @@
     "class": "Fortress",
     "name": "Stalwart Bastion [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "stalwart-bastion"
+    "replacesSlug": "stalwart-bastion",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -97,7 +105,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

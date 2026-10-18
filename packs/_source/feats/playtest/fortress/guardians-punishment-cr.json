@@ -2,12 +2,11 @@
   "name": "Guardian's Punishment",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You get hit by a Damaging Attack\nEffect: You may use the Move Counter or Mirror Coat as if it was on your Move List against the triggering attack. The Move you use is unrestricted by range.",
+    "effect": "Trigger: You get hit by a Damaging Attack\nEffect: You may use the Move @UUID[Compendium.ptu.moves.Item.fm4wwdVZiUeL6yFQ]{Counter} or @UUID[Compendium.ptu.moves.Item.70ikTYAJeGbsEN9K]{Mirror Coat} as if it was on your Move List against the triggering attack. The Move you use is unrestricted by range.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "guardianspunishment",
         "choices": [
           {
@@ -63,7 +62,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": true
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -85,7 +85,9 @@
     "class": "Fortress",
     "name": "Guardian’s Punishment [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "guardians-punishment"
+    "replacesSlug": "guardians-punishment",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -98,7 +100,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
