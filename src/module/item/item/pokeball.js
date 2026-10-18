@@ -1,5 +1,5 @@
 import { CheckModifier, PTUModifier, StatisticModifier } from "../../actor/modifiers.js";
-import { extractModifiers, extractRollSubstitutions } from "../../rules/helpers.js";
+import { extractModifiers, extractRollSubstitutions, extractApplyEffects } from "../../rules/helpers.js";
 import { PTUCheck } from "../../system/check/check.js";
 import { PTUItemItem } from "./document.js";
 import { getMinLevelFromPredicate } from "../../../util/misc.js";
@@ -465,6 +465,30 @@ class PokeballItem extends PTUItemItem {
                         }
 
                         await Actor.updateDocuments([pokemonUpdateData, trainerUpdateData]);
+
+                        // Remove all Boss keywords from the captured Pokémon
+                        const pokemonBossItems = pokemon.items.filter(i => i.system?.keywords?.includes("Boss"));
+                        if (pokemonBossItems.length > 0) await pokemon.deleteEmbeddedDocuments("Item", pokemonBossItems.map(i => i.id));
+
+                        // apply any Capture effects
+                        const rollOptions = [
+                            ...trainer.getRollOptions(["apply-capture"]),
+                            ...pokemon.getSelfRollOptions("target"),
+                        ]
+                        const captureEffects = await extractApplyEffects({
+                            affects: "target",
+                            origin: trainer,
+                            target: pokemon,
+                            item: this,
+                            domains: [`${this.id}-apply-capture`, "apply-capture"],
+                            options: rollOptions
+                        });
+                        console.log(captureEffects);
+                        if (captureEffects.length > 0) {
+                            await pokemon.createEmbeddedDocuments("Item", captureEffects, { render: false });
+                            pokemon.sheet?.render?.();
+                        }
+
                         const targetFolder = targetFolderId ? game.folders.get(targetFolderId) : null;
                         await ChatMessage.create({
                             content: `<span class="statements">${await foundry.applications.ux.TextEditor.implementation.enrichHTML(game.i18n.format("PTU.Dialog.CaptureSuccess.ChatMessage", { pokemon: pokemon.link, trainer: trainer.link, location: (targetFolder?.link ?? location) }), { async: true })}</span>`,

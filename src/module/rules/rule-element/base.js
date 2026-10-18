@@ -102,6 +102,14 @@ class RuleElementPTU extends foundry.abstract.DataModel {
         return this.label.includes(":") ? this.label.replace(/^[^:]+:\s*|\s*\([^)]+\)$/g, "") : this.label;
     }
 
+    /**
+     * The description of this type of rule element, which should be a very brief description of what the rule does.
+     * @returns Promise<String>
+     */
+    static async description(source) {
+        return source?.label ?? "";
+    }
+
     /* Abstract Members */
 
     /**

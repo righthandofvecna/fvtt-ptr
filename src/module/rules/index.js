@@ -45,6 +45,10 @@ class RuleElements {
     static get all() {
         return {...this.builtin, ...this.custom};
     }
+    
+    static getRuleElementDocument(key) {
+        return this.custom[key] ?? this.builtin[key];
+    }
 
     static fromOwnedItem(item, options = {}) {
         const rules = [];
@@ -54,7 +58,7 @@ class RuleElements {
                 console.error(`PTU | RuleElements | Invalid rule key: ${source.key} on item ${item.name} (${item.uuid})`);
                 continue;
             }
-            const RuleElementDocument = this.custom[source.key] ?? this.builtin[source.key];
+            const RuleElementDocument = this.getRuleElementDocument(source.key);
             if(RuleElementDocument) {
                 const rule = (() => {
                     try {

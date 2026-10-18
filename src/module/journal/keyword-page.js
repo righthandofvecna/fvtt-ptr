@@ -35,17 +35,19 @@ class PTUKeywordJournalPageSheet extends foundry.appv1.sheets.JournalTextPageShe
         const rules = this.object.toObject().system.rules ?? [];
 
         data.rules = {
-            cards: rules.map((rule, index) => {
+            cards: await Promise.all(rules.map(async (rule, index) => {
                 const key = rule.key;
                 const label = game.i18n.localize(`PTU.RuleElement.${key}.Label`);
                 const recognized = label !== `PTU.RuleElement.${key}.Label`;
+                const sublabel = await RuleElements.getRuleElementDocument(rule.key).description(rule)
                 return {
                     index,
                     rule,
                     label: recognized ? label : game.i18n.localize("PTU.RuleElement.Unrecognized.Label"),
+                    sublabel,
                     recognized,
                 };
-            }),
+            })),
             selection: {
                 selected: this.selectedRuleElementType,
                 types: sortStringRecord(

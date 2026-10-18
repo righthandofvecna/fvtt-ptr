@@ -1,0 +1,73 @@
+{
+  "folder": "UjuxQCHI76TeZxb7",
+  "name": "Effect: Pass Move Used",
+  "type": "effect",
+  "_id": "OAD0F5Novpt2hYv3",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+  "system": {
+    "origin": "",
+    "effect": "You have declared a move with the Pass keyword, and can move through enemies in your path as if they were Regular Terrain. You do not provoke Attacks of Opportunity.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "movement",
+        "option": "self:unconstrained-movement"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-pass-move-used",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "turns",
+      "expiry": "turn-start"
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "The \"no opportunity attacks\" bit will need to be addressed once we add automated opportunity attacks.",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.53",
+    "createdTime": 1792275577071,
+    "modifiedTime": 1792277902527,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}
