@@ -38,6 +38,19 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Fixed Quick-Insert Content set filtering to match the compendium browser
+- Don't show Loafing warnings for wild Pokemon
+- Fixed Drain/Bind AP rule and make it properly interact with resting
+- Added End-Of-Day/End-Of-Scene recovery automations
+- Added Complex Predicate button for Evolutions, and add descriptions for evolution predicates
+- Added "Days" expiry time
+- Made pre-existing "Remove Expired Effects" automation setting actually turn that feature off
+- Added `self:alliance:*` and `target:number:*` roll options
+- Made attack outcomes apply to FlatModifier for damage rolls
+- Added filter for Teleportation movement capability in the compendium browser
+- Added setting to allow the creation of homebrew keywords with automation
+- Added `apply-capture` selector for Apply Effects
+- Added the Boss keyword and automation for it (all Boss items are removed upon capture)
 - Added opt-in automation for the Loafing system
 - Added settings for Pokemon Advancement: Pokemon Milestones, and Tie Level to Trainer Level
 - Added a setting to control the Level Cap formula
