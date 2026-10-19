@@ -36,7 +36,7 @@ class PTUXpPoolSheet extends FormApplication {
             const exp = pokemon.system.level.exp ?? 0;
             const pendingExp = pokemon.system.level.pendingExp ?? 0;
             const totalEffective = exp + pendingExp;
-            const effectiveLevel = calculateLevel(totalEffective);
+            const effectiveLevel = pokemon._calculateLevel({ exp: totalEffective });
             const isMaxLevel = effectiveLevel >= maxLevel;
 
             const xpForNextLevel = isMaxLevel

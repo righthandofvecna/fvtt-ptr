@@ -243,6 +243,10 @@ class PTUActor extends Actor {
         return firstUpdater ?? null;
     }
 
+    _calculateLevel({ exp, milestones, dexExp, trainerAdvancementVariant, pokemonAdvancementVariant }={}) {
+        return 1 + milestones;
+    }
+
     _calculateStatTotal({ level, levelModifier, actorStats, nature, twistedPower, hybridArmor, levelUpPoints, statPointModifier, statCalculation }={}) {
         level ??= this.system.level.current;
         levelModifier ??= 1;
