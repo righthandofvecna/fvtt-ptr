@@ -2,7 +2,7 @@
   "name": "Winter's Herald Rank 1",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You may learn three Moves from the list below,marked with the Rank of Winter’s Herald you are gaining or lower.\nRank 1: Freeze-Dry, Ice Beam, Ice Punch, Ice Spinner, Icicle Crash\nRank 2: Avalanche, Blizzard, Frost Breath, Glaciate, Icicle Spear",
+    "effect": "Effect: You may learn three Moves from the list below, marked with the Rank of Winter’s Herald you are gaining or lower.\nRank 1: @UUID[Compendium.ptu.moves.Item.AZn05DqBo1RGVRLH]{Freeze-Dry}, @UUID[Compendium.ptu.moves.Item.ipZPqONhX7WsWJ5U]{Ice Beam}, @UUID[Compendium.ptu.moves.Item.I0Cy1NP2brM1jq1h]{Ice Punch}, @UUID[Compendium.ptu.moves.Item.PljheBBLgIqBu5GY]{Ice Spinner}, @UUID[Compendium.ptu.moves.Item.IiLJ3J3xpWhhTqvw]{Icicle Crash}\nRank 2: @UUID[Compendium.ptu.moves.Item.UcNQuMWgO1s8OxcP]{Avalanche}, @UUID[Compendium.ptu.moves.Item.nBJqHIJjExauiz2E]{Blizzard}, @UUID[Compendium.ptu.moves.Item.nM8DQhM6b8g5KZyy]{Frost Breath}, @UUID[Compendium.ptu.moves.Item.eNX5pFoS6PYxoqwx]{Glaciate}, @UUID[Compendium.ptu.moves.Item.xnllnYlK5CBzHzne]{Icicle Spear}",
     "snippet": "",
     "rules": [
       {
@@ -238,7 +238,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -260,7 +261,8 @@
     "name": "Winter's Herald [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "winters-herald-rank-1",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -273,7 +275,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

@@ -2,7 +2,7 @@
   "name": "Winter is Coming",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Frostbite Ability.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.abilities.Item.I0qzmUj5HSvUYTKX]{Frostbite} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -68,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -90,7 +91,8 @@
     "name": "Winter is Coming [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "winter-is-coming",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -103,7 +105,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

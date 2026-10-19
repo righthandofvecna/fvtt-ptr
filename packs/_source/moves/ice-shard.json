@@ -2,7 +2,6 @@
   "name": "Ice Shard",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "",
@@ -48,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -84,7 +84,8 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "no-automation-needed"
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {

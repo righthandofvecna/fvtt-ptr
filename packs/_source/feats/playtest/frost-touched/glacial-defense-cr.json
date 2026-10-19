@@ -2,7 +2,7 @@
   "name": "Glacial Defense",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose Ice Shield or Winter's Kiss. You gain the Chosen Ability.",
+    "effect": "Effect: Choose @UUID[Compendium.ptu.abilities.Item.qLsGWyGaBuWfJMYk]{Ice Shield} or @UUID[Compendium.ptu.abilities.Item.ysdI7l7jNsUsmsqt]{Winter's Kiss}. You gain the Chosen Ability.",
     "snippet": "",
     "rules": [
       {
@@ -93,7 +93,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -115,7 +116,8 @@
     "name": "Glacial Defense [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "glacial-defense",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -128,7 +130,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
