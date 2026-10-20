@@ -631,6 +631,47 @@ class PTUActor extends Actor {
             this.attributes.skills[key] = this.prepareSkill(key);
         }
 
+        // figure out if any modifier fields changed (e.g., from afterDerived rule elements)
+        // Mirrors the modifier-total loop in onPrepareDerivedData; only recalculates changed entries.
+        // Preserves any direct changes to .total (beyond value+mod) by applying them as a delta,
+        // analogous to how directStatChanges is handled for stats above.
+        const systemModifiers = this.system.modifiers;
+        if (systemModifiers && derivedData.modifiers) {
+            const MODIFIER_SKIP = new Set(["hardened", "flinch_count", "immuneToEffectDamage", "typeOverwrite", "tp", "capabilities"]);
+            const modifierDiff = foundry.utils.diffObject(derivedData.modifiers, systemModifiers);
+
+            for (const [key, diff] of Object.entries(modifierDiff)) {
+                if (MODIFIER_SKIP.has(key)) continue;
+                const mod = systemModifiers[key];
+                const snap = derivedData.modifiers[key];
+                if (!mod || typeof mod !== "object") continue;
+
+                // Nested modifier (e.g. damageReduction, evasion, baseStats)
+                const firstVal = mod[Object.keys(mod)[0]];
+                if (firstVal !== null && typeof firstVal === "object" && "value" in firstVal) {
+                    for (const [subkey, subDiff] of Object.entries(diff)) {
+                        if (!subDiff || typeof subDiff !== "object") continue;
+                        const subMod = mod[subkey];
+                        const subSnap = snap?.[subkey];
+                        if (!subMod || typeof subMod !== "object") continue;
+                        if ("value" in subDiff || "mod" in subDiff) {
+                            const snapshotBase = (subSnap?.value ?? 0) + (subSnap?.mod ?? 0);
+                            const directDelta = (subMod.total ?? snapshotBase) - snapshotBase;
+                            subMod.total = (subMod.value ?? 0) + (subMod.mod ?? 0) + directDelta;
+                        }
+                    }
+                    continue;
+                }
+
+                // Simple modifier (e.g. initiative, acBonus, saveChecks)
+                if ("value" in diff || "mod" in diff) {
+                    const snapshotBase = (snap?.value ?? 0) + (snap?.mod ?? 0);
+                    const directDelta = (mod.total ?? snapshotBase) - snapshotBase;
+                    mod.total = (mod.value ?? 0) + (mod.mod ?? 0) + directDelta;
+                }
+            }
+        }
+
         // just recalculate contest stats, since they're based on combat stats
         this.contests = this._calculateContestStats();
     }
