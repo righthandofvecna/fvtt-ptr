@@ -143,12 +143,24 @@ export function checkSinglePrereq(text, ctx, testDict={}) {
             return (ctx.skills[skillKey] ?? 1) >= rankNeeded;
         }
         if (rankNeeded && skillMatch.groups.skill.toLowerCase().includes(" or ")) {
-            const skillKeys = skillMatch.groups.skill.split(/( or )|(, (or)?)/gi).map(getSkillKey).filter(Boolean);
-            return skillKeys.some(k => (ctx.skills[k] ?? 1) >= rankNeeded);
+            const rankPrefix = new RegExp(`^${skillMatch.groups.rank}\\s+`, 'i');
+            const skillKeys = skillMatch.groups.skill.split(/( or )|(, (or)?)/gi)
+                .map(s => getSkillKey(s?.replace(rankPrefix, '')))
+                .filter(Boolean);
+            if (skillKeys.length > 0) {
+                return skillKeys.some(k => (ctx.skills[k] ?? 1) >= rankNeeded);
+            }
+            // No recognisable skill names found — fall through to other patterns
         }
         if (rankNeeded && skillMatch.groups.skill.toLowerCase().includes(" and ")) {
-            const skillKeys = skillMatch.groups.skill.split(/( and )|(, (and)?)/gi).map(getSkillKey).filter(Boolean);
-            return skillKeys.every(k => (ctx.skills[k] ?? 1) >= rankNeeded);
+            const rankPrefix = new RegExp(`^${skillMatch.groups.rank}\\s+`, 'i');
+            const skillKeys = skillMatch.groups.skill.split(/( and )|(, (and)?)/gi)
+                .map(s => getSkillKey(s?.replace(rankPrefix, '')))
+                .filter(Boolean);
+            if (skillKeys.length > 0) {
+                return skillKeys.every(k => (ctx.skills[k] ?? 1) >= rankNeeded);
+            }
+            // No recognisable skill names found — fall through to other patterns
         }
     }
 
