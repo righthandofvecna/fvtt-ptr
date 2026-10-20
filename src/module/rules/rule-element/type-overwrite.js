@@ -6,7 +6,7 @@ export class TypeOverwriteRuleElement extends RuleElementPTU {
     super(data, item, options);
 
     this.value = value;
-    this.overwrite = overwrite ?? true;
+    this.overwrite = overwrite ?? false;
   }
 
   /** @override */
@@ -16,7 +16,7 @@ export class TypeOverwriteRuleElement extends RuleElementPTU {
       valLabel = source.value.join(", ");
     }
 
-    if (source.overwrite ?? true) {
+    if (source.overwrite ?? false) {
       return valLabel;
     } else {
       return `+${valLabel}`;
