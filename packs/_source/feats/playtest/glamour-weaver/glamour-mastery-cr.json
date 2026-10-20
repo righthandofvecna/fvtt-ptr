@@ -2,7 +2,7 @@
   "name": "Glamour Mastery",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose two of Magic Guard, Magic Bounce, and Multiscale. You gain the Chosen Abilities.",
+    "effect": "Effect: Choose two of @UUID[Compendium.ptu.abilities.Item.3zEQl6AsWskjTjQy]{Magic Guard}, @UUID[Compendium.ptu.abilities.Item.yjMXQVY5eXWyrlzG]{Magic Bounce}, and @UUID[Compendium.ptu.abilities.Item.notS9vQ0jOhImwqe]{Multiscale}. You gain the Chosen Abilities.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,86 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.3zEQl6AsWskjTjQy",
+            "label": "Magic Guard",
+            "predicate": [
+              {
+                "not": "ability:magic-guard"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.yjMXQVY5eXWyrlzG",
+            "label": "Magic Bounce",
+            "predicate": [
+              {
+                "not": "ability:magic-bounce"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.notS9vQ0jOhImwqe",
+            "label": "Multiscale",
+            "predicate": [
+              {
+                "not": "ability:multiscale"
+              }
+            ]
+          }
+        ],
+        "flag": "glamourmastery1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.glamourmastery1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.3zEQl6AsWskjTjQy",
+            "label": "Magic Guard",
+            "predicate": [
+              {
+                "not": "ability:magic-guard"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.yjMXQVY5eXWyrlzG",
+            "label": "Magic Bounce",
+            "predicate": [
+              {
+                "not": "ability:magic-bounce"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.notS9vQ0jOhImwqe",
+            "label": "Multiscale",
+            "predicate": [
+              {
+                "not": "ability:multiscale"
+              }
+            ]
+          }
+        ],
+        "flag": "glamourmastery2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.glamourmastery2}"
       }
     ],
     "enabled": true,
@@ -48,7 +128,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +150,9 @@
     "class": "Glamour Weaver",
     "name": "Glamour Mastery [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "glamour-mastery"
+    "replacesSlug": "glamour-mastery",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +165,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

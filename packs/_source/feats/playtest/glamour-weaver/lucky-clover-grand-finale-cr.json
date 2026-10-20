@@ -2,7 +2,7 @@
   "name": "Lucky Clover Grand Finale",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Moonblast and Aromatic Mist.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.LkpfF5gcUddBm8CS]{Moonblast} and @UUID[Compendium.ptu.moves.Item.PITSF6OhptqQFLxc]{Aromatic Mist}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,18 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.LkpfF5gcUddBm8CS"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.PITSF6OhptqQFLxc"
       }
     ],
     "enabled": true,
@@ -48,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +83,9 @@
     "class": "Glamour Weaver",
     "name": "Lucky Clover Grand Finale [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "lucky-clover-grand-finale"
+    "replacesSlug": "lucky-clover-grand-finale",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +96,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
