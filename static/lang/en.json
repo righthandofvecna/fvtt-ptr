@@ -1054,6 +1054,11 @@
     },
     "Configure": "Configuring {name}",
 
+    "SessionEnd": {
+      "Title": "Session End",
+      "Submitted": "End-Of-Session Awards Submitted"
+    },
+
     "Settings": {
       "ResetChanges": "Reset Changes",
       "AddType": {

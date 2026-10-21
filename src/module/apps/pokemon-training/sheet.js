@@ -682,6 +682,14 @@ class PTUPokemonTrainingSheet extends FormApplication {
             trainingOption: trainingType
         });
 
+        // Record trained Pokémon as interacted with for the session
+        if (game.user.isGM) {
+            const { PTUSessionTracker } = await import("../session-tracker/tracker.js");
+            for (const pokemon of this.training) {
+                PTUSessionTracker.record(pokemon);
+            }
+        }
+
         this.sendChatMessage(message);
         await this.close();
     }

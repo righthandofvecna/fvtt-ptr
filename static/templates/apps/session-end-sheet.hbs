@@ -1,0 +1,83 @@
+<section class="session-end-content">
+    {{#if trainers.length}}
+    {{#each trainers}}
+    <div class="trainer-section" data-trainer-id="{{characterId}}">
+        <div class="trainer-header">
+            <img class="trainer-img" src="{{characterImg}}" title="{{characterName}}" />
+            <div>
+                <h3>{{characterName}} <span class="user-name">({{userName}})</span></h3>
+            </div>
+        </div>
+
+        {{#if pokemon.length}}
+        <table class="pokemon-awards">
+            <thead>
+                <tr>
+                    <th colspan="2">Pokémon</th>
+                    <th>Friendship</th>
+                    <th>FP Progress</th>
+                    <th>Award</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each pokemon}}
+                <tr class="pokemon-row{{#if isMaxFriendship}} max-friendship{{/if}}">
+                    <td class="img-cell"><img class="pkmn-img" src="{{img}}" /></td>
+                    <td class="name-cell">{{name}}</td>
+                    <td class="stars-cell">
+                        {{#each starsDisplay}}<i class="{{#if (eq this "filled")}}fas{{else}}far{{/if}} fa-star friendship-star {{this}}"></i>{{/each}}
+                    </td>
+                    <td class="fp-cell">
+                        {{#if isMaxFriendship}}
+                            <span class="max-label">Max Friendship</span>
+                        {{else}}
+                            <span class="fp-display" title="Accumulated FP / Cost to next level">{{currentFP}} / {{costToNext}} FP</span>
+                        {{/if}}
+                    </td>
+                    <td class="award-cell-td">
+                        {{#if isMaxFriendship}}
+                            <span>—</span>
+                        {{else}}
+                            <div class="award-stepper" data-actor-id="{{id}}">
+                                <button type="button" class="fp-decrement" tabindex="-1">−</button>
+                                <span class="fp-award-display">0</span>
+                                <button type="button" class="fp-increment" tabindex="-1">+</button>
+                                <input class="fp-award" type="hidden" data-actor-id="{{id}}" value="0" />
+                                <span class="per-award-warning"
+                                      title="Awarding more than 2 FP to one Pokémon in a single session is unusual">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </span>
+                            </div>
+                        {{/if}}
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <div class="award-summary">
+            <span>Awarding <strong class="count">0</strong> FP this session</span>
+            <span class="award-warning"
+                  title="Over the suggested 3 FP limit for one session">
+                <i class="fas fa-exclamation-triangle"></i> Over the suggested 3 FP limit
+            </span>
+        </div>
+        {{else}}
+        <p class="no-pokemon">No Pokémon interacted with this session.</p>
+        {{/if}}
+    </div>
+    {{/each}}
+    {{else}}
+    <p class="no-trainers">No player characters found.</p>
+    {{/if}}
+
+    <div class="add-pokemon-section">
+        <label><i class="fas fa-plus-circle"></i> Add Pokémon manually</label>
+        <input class="ptu-tagify" name="add-pokemon" value="" placeholder="Search for a Pokémon…" />
+    </div>
+
+    <div class="form-footer">
+        <button type="button" data-action="submitAwards">
+            <i class="fas fa-heart"></i> Award Friendship &amp; End Session
+        </button>
+    </div>
+</section>

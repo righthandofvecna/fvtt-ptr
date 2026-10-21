@@ -167,6 +167,14 @@ export function registerSettings() {
         config: true,
     })
 
+    // Session tracking: which player-owned Pokemon were interacted with this session
+    game.settings.register("ptu", "session.interactedPokemon", {
+        scope: "world",
+        config: false,
+        type: Array,
+        default: []
+    });
+
     game.settings.register("ptu", "training.lastSession", {
         scope: "client",
         config: false,

@@ -18,6 +18,7 @@ export class GMControlPanel extends HandlebarsApplicationMixin(ApplicationV2) {
       resetCustomFrequencyUses: GMControlPanel.#resetCustomFrequencyUses,
       healAllActors: GMControlPanel.#healAllActors,
       rest: GMControlPanel.#rest,
+      sessionEnd: GMControlPanel.#sessionEnd,
     },
   };
 
@@ -204,5 +205,9 @@ export class GMControlPanel extends HandlebarsApplicationMixin(ApplicationV2) {
 
     game.ptu.tokenPanel?.refresh?.();
     ui.notifications.info("Actors have rested.");
+  }
+
+  static async #sessionEnd() {
+    Hooks.callAll("ptu.sessionEnd");
   }
 }

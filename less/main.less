@@ -6766,6 +6766,218 @@ a.content-link {
 	min-height: 50px;
 }
 
+// ─── Session End (Friendship Check) ──────────────────────────────────────────
+.ptu.session-end {
+	.window-content {
+		padding: 0;
+	}
+
+	.session-end-content {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		overflow-y: auto;
+	}
+
+	// Fix Tagify dark-mode colours
+	tags.tagify, .tagify {
+		--input-color: var(--color-text-light-highlight, #fff);
+		--tag-text-color: #191813;
+		--tag-text-color--edit: #191813;
+		--placeholder-color: rgba(255,255,255,0.35);
+		--placeholder-color-focus: rgba(255,255,255,0.6);
+	}
+	input[type="number"] {
+		color: inherit;
+	}
+
+	// Trainer section card
+	.trainer-section {
+		border-bottom: 1px solid var(--color-border-light-tertiary, rgba(255,255,255,0.15));
+		padding: 0.75em 1em;
+
+		&:last-of-type { border-bottom: none; }
+	}
+
+	.trainer-header {
+		display: flex;
+		align-items: center;
+		gap: 0.6em;
+		margin-bottom: 0.6em;
+		padding-bottom: 0.4em;
+		border-bottom: 1px solid var(--color-border-light-tertiary, rgba(255,255,255,0.12));
+
+		.trainer-img {
+			width: 40px;
+			height: 40px;
+			object-fit: contain;
+			border-radius: 50%;
+			border: 2px solid var(--color-border-light-primary, rgba(255,255,255,0.25));
+			background: rgba(0,0,0,0.2);
+		}
+
+		h3 {
+			margin: 0;
+			font-size: 1rem;
+			font-weight: 700;
+		}
+
+		.user-name {
+			font-weight: 400;
+			font-size: 0.82em;
+			opacity: 0.6;
+			margin-left: 0.15em;
+		}
+	}
+
+	// Pokémon award table
+	table.pokemon-awards {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.875rem;
+
+		th {
+			padding: 0.2em 0.5em;
+			border-bottom: 1px solid var(--color-border-light-tertiary, rgba(255,255,255,0.1));
+			text-align: left;
+			font-size: 0.78em;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			opacity: 0.65;
+		}
+
+		td {
+			padding: 0.3em 0.5em;
+			vertical-align: middle;
+		}
+
+		tr.pokemon-row {
+			transition: background 0.1s;
+			border-radius: 3px;
+
+			&:hover {
+				background: rgba(255,255,255,0.04);
+			}
+			&.max-friendship {
+				opacity: 0.45;
+			}
+		}
+
+		.pkmn-img {
+			width: 34px;
+			height: 34px;
+			object-fit: contain;
+			border: none;
+			background: rgba(0,0,0,0.15);
+			border-radius: 50%;
+		}
+
+		.friendship-star {
+			font-size: 0.82em;
+			margin-right: 1px;
+			&.filled { color: #f0c040; }
+			&.empty   { color: var(--color-text-light-passive, rgba(255,255,255,0.25)); }
+		}
+
+		.fp-display {
+			font-variant-numeric: tabular-nums;
+			font-size: 0.85em;
+			white-space: nowrap;
+			color: var(--color-text-light-passive, rgba(255,255,255,0.55));
+		}
+
+		.max-label {
+			font-size: 0.78em;
+			opacity: 0.5;
+			font-style: italic;
+		}
+
+		.award-stepper {
+			display: flex;
+			align-items: center;
+			gap: 0.2em;
+
+			button.fp-decrement,
+			button.fp-increment {
+				width: 1.6em;
+				height: 1.6em;
+				padding: 0;
+				font-size: 1em;
+				line-height: 1;
+				border-radius: 3px;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-width: unset;
+			}
+
+			.fp-award-display {
+				width: 1.8em;
+				text-align: center;
+				font-variant-numeric: tabular-nums;
+				font-size: 0.95em;
+			}
+
+			// Reserve fixed space so the warning icon never shifts the row.
+			// Uses opacity (not display/visibility) so the element always takes space.
+			.per-award-warning {
+				width: 1.1em;
+				text-align: center;
+				color: #e07030;
+				font-size: 0.85em;
+				cursor: default;
+				opacity: 0; // invisible by default; JS sets opacity:1 when pts > 2
+				transition: opacity 0.15s;
+			}
+		}
+	}
+
+	// Per-trainer award summary row
+	.award-summary {
+		display: flex;
+		align-items: center;
+		gap: 0.75em;
+		margin-top: 0.35em;
+		font-size: 0.82em;
+		padding: 0.2em 0.5em;
+		border-radius: 3px;
+		background: rgba(255,255,255,0.04);
+
+		.award-warning {
+			color: #e07030;
+			display: flex;
+			align-items: center;
+			gap: 0.25em;
+				opacity: 0;
+				transition: opacity 0.15s;
+
+		label {
+			display: block;
+			font-size: 0.8em;
+			margin-bottom: 0.3em;
+			opacity: 0.75;
+			letter-spacing: 0.02em;
+		}
+	}
+
+	// Submit footer
+	.form-footer {
+		display: flex;
+		justify-content: flex-end;
+		padding: 0.6em 1em;
+		border-top: 1px solid var(--color-border-light-tertiary, rgba(255,255,255,0.12));
+		background: rgba(0,0,0,0.08);
+
+		button {
+			display: flex;
+			align-items: center;
+			gap: 0.4em;
+			font-size: 0.9em;
+		}
+	}
+}
+
 blockquote {
 	border-left: 4px solid grey;
 }
