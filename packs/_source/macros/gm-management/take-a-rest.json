@@ -1,0 +1,25 @@
+{
+  "folder": "gmManagement0000",
+  "name": "Take a Rest",
+  "type": "script",
+  "_id": "takeARest0000000",
+  "author": "dylanIsSuperOK00",
+  "img": "icons/sundries/survival/bedroll-worn-blue.webp",
+  "scope": "global",
+  "command": "const { DialogV2 } = foundry.applications.api;\nconst dialogHTML = `\n  <form class=\"rest-dialog\">\n    <div class=\"form-group\">\n      <a class=\"content-link\" draggable=\"true\" data-link=\"\" data-uuid=\"Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.NAEMeEwuP73MtrDX\" data-id=\"NAEMeEwuP73MtrDX\" data-type=\"JournalEntryPage\" data-pack=\"ptu.journals\" data-tooltip=\"Page\" data-tooltip-text=\"Resting\"><i class=\"fa-solid fa-file-lines\" inert=\"\"></i>Resting Rules Reference</a>\n    </div>\n    <div class=\"form-group\">\n        <label>Rest Duration</label>\n        <div class=\"form-fields\">\n            <input type=\"range\" name=\"hours\" min=\"0.5\" step=\"0.5\" value=\"8\" max=\"8\" />\n            <span class=\"time-label\">1 hour</span>\n        </div>\n    </div>\n    <div class=\"form-group\">\n        <label>Pokémon Center</label>\n        <div class=\"form-fields\">\n            <input type=\"checkbox\" name=\"pokemonCenter\" />\n        </div>\n    </div>\n    <div class=\"poke-center-warning\"></div>\n  </form>\n`;\n\nconst getPokeCenterWarnings = (hours) => {\n    const actors = [...game.actors.values()].filter(a => a.hasPlayerOwner);\n    const warnings = actors\n        .map(actor => {\n            const injuries = Math.max(actor.system.health.injuries ?? 0, 0);\n            const injuryRequiredHours = injuries < 5 ? (2 + injuries) / 2 : 1 + injuries;\n            const ppRequiredHours = Math.ceil((actor.system.pp?.max - actor.system.pp?.value) / 4) * 2;\n            const requiredHours = Math.max(injuryRequiredHours, ppRequiredHours);\n            return { actor, requiredHours };\n        })\n        .filter(({ requiredHours }) => requiredHours > hours);\n\n    if (warnings.length === 0) return \"\";\n\n    const warningList = warnings.map(({ actor, requiredHours }) => {\n        const hours = Math.floor(requiredHours);\n        const minutes = (requiredHours % 1) * 60;\n        const timeString = `${hours > 0 ? `${hours}h` : \"\"}${minutes > 0 ? `${minutes}m` : \"\"}`.trim() || \"0m\";\n        return `<li>${actor.trainer?.name ?? \"No Trainer\"}'s ${actor.name} (requires ${timeString})</li>`;\n    }).join(\"\");\n\n    return `<p>The following actors won't receive full Pokémon Center benefits:</p><ul>${warningList}</ul>`;\n};\n\nconst result = await DialogV2.prompt({\n    window: { title: \"Rest\" },\n    content: dialogHTML,\n    ok: {\n        label: \"Rest\",\n        callback: (event, button) => {\n            const form = button.closest(\"form\");\n            const formData = new FormData(form);\n            return {\n                hours: Number(formData.get(\"hours\")),\n                pokemonCenter: formData.get(\"pokemonCenter\") === \"on\",\n            }\n        }\n    },\n    cancel: { label: \"Cancel\" },\n    render: (event, app) => {\n        let html = app.element;\n      console.log(\"Rest dialog rendered\", html);\n        const hoursInput = html.querySelector('input[name=\"hours\"]');\n        const pokemonCenterInput = html.querySelector('input[name=\"pokemonCenter\"]');\n        const timeLabel = html.querySelector('.time-label');\n        const warningDiv = html.querySelector('.poke-center-warning');\n\n        const updateDialog = () => {\n            const halfHours = Number(hoursInput.value) * 2;\n            const hours = Math.floor(halfHours / 2);\n            const minutes = (halfHours % 2) * 30;\n            timeLabel.textContent = `${hours > 0 ? `${hours} hour${hours > 1 ? \"s\" : \"\"}` : \"\"}${minutes > 0 ? ` ${minutes} minutes` : \"\"}`.trim() || \"0 minutes\";\n\n            if (pokemonCenterInput.checked) {\n                warningDiv.innerHTML = getPokeCenterWarnings(halfHours / 2);\n            } else {\n                warningDiv.innerHTML = \"\";\n            }\n        };\n\n        hoursInput.addEventListener(\"input\", updateDialog);\n        pokemonCenterInput.addEventListener(\"change\", updateDialog);\n        updateDialog();\n    }\n});\n\nif (!result) return;\n\nawait game.ptu.macros.applyRest(result.hours, result.pokemonCenter);\n\ngame.ptu.tokenPanel?.refresh?.();\nui.notifications.info(\"Actors have rested.\");",
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.54",
+    "createdTime": 1792604573244,
+    "modifiedTime": 1792604652419,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

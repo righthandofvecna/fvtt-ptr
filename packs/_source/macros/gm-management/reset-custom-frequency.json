@@ -1,0 +1,25 @@
+{
+  "folder": "gmManagement0000",
+  "name": "Reset Custom Frequency",
+  "type": "script",
+  "_id": "resetCustomFreq0",
+  "author": "dylanIsSuperOK00",
+  "img": "icons/magic/time/arrows-circling-green.webp",
+  "scope": "global",
+  "command": "const updates = [];\nfor (const actor of game.actors.values()) {\n  for (const item of actor.items.values()) {\n    if (item.system.frequency?.type !== \"custom\") continue;\n    const max = item.system.frequency?.max ?? 0;\n    if (!max) continue;\n    updates.push(item.setFlag(\"ptu\", \"used\", 0));\n  }\n}\nawait Promise.all(updates);\ngame.ptu.tokenPanel?.refresh?.();\nui.notifications.info(\"Custom frequency uses reset for all actors.\");",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.54",
+    "createdTime": 1792605013392,
+    "modifiedTime": 1792605043828,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}
