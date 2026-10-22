@@ -54,7 +54,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -77,7 +78,8 @@
     "damageBonus": 0,
     "isStruggle": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "folder": "O2vsL1IY0u9DOERr",
