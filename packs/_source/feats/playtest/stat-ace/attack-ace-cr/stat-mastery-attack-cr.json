@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.6r4WJX7j8a75ENzo",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,12 +62,16 @@
     "free": false,
     "class": "Stat Ace (Attack)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-mastery-attack"
+    "replacesSlug": "stat-mastery-attack",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "R6p2riHebzRYt9Ak",
