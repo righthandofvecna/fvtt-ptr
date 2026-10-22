@@ -152,8 +152,7 @@ class AELikeRuleElement extends RuleElementPTU {
             } else if (isArrayAdd) {
                 return value;
             }
-
-            this._warn("path");
+            this._warn("value", value);
             return null;
         };
 
@@ -216,8 +215,8 @@ class AELikeRuleElement extends RuleElementPTU {
         entries[foundry.utils.randomID()] = { mode: this.mode, value, sourceId: this.item.isGlobal ? (this.item.flags?.core?.sourceId ?? this.item.uuid) : this.item.uuid, source: this.item.name.includes(":") ? this.item.name.split(":")[1].trim() : this.item.name};
     }
 
-    _warn(property) {
-        this.failValidation(`Invalid ${property} for ${this.mode} rule element`, property);
+    _warn(property, value) {
+        this.failValidation(`Invalid ${property} for ${this.mode} rule element`, value ?? this[property]);
     }
 }
 

@@ -352,7 +352,7 @@ class RuleElementPTU extends foundry.abstract.DataModel {
             value = value.trim();
             if (value.toLowerCase() === "inf" || value.toLowerCase() === "infinity") return Infinity;
             if (value.toLowerCase() === "-inf" || value.toLowerCase() === "-infinity") return -Infinity;
-            if(value.indexOf("{") === 0 && value.lastIndexOf("}") === value.length - 1) return this.resolveInjectedProperties(value, injectables);
+            if (value.indexOf("{") === 0 && value.lastIndexOf("}") === value.length - 1 && value.substring(1, value.length - 1).lastIndexOf("{") === -1) return this.resolveInjectedProperties(value, injectables);
             value = this.resolveInjectedProperties(value, injectables);
         }
 
@@ -404,11 +404,13 @@ class RuleElementPTU extends foundry.abstract.DataModel {
             }
         };
 
-        return value instanceof Object && defaultValue instanceof Object 
-            ? foundry.utils.mergeObject(defaultValue, value, {inplace: false})
-            : typeof value === "string" && evaluate
-            ? saferEval(Roll.replaceFormulaData(value, {actor: this.actor, item: this.item, ...injectables}))
-            : value;
+        if (value instanceof Object && defaultValue instanceof Object) {
+            return foundry.utils.mergeObject(defaultValue, value, {inplace: false});
+        }
+        if (typeof value === "string" && evaluate) {
+            return saferEval(Roll.replaceFormulaData(value, {actor: this.actor, item: this.item, ...injectables}));
+        }
+        return value;
     }
 
     failValidation(...message) {
