@@ -1,7 +1,7 @@
 {
   "name": "Capture DC: Legendary",
   "type": "effect",
-  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "img": "systems/ptu/static/css/images/icons/permanent_effect_icon.png",
   "system": {
     "origin": "",
     "effect": "",
@@ -18,6 +18,8 @@
     ],
     "enabled": true,
     "slug": "capture-dc-legendary",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.112,
       "lastMigration": {
@@ -41,7 +43,7 @@
     "duration": {
       "value": -1,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -52,30 +54,30 @@
       "show": true
     },
     "badge": null,
-    "context": null,
-    "contentSet": "",
-    "replacesSlug": ""
+    "context": null
   },
   "effects": [],
-  "folder": "UjuxQCHI76TeZxb7",
+  "folder": "bossEffects00000",
   "ownership": {
     "default": 0
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.2.2",
-    "coreVersion": "13.350",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1698007480685,
-    "modifiedTime": 1710853989325,
+    "modifiedTime": 1792639381906,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
   },
   "_id": "eiHI7pSRauVpiEMD",
-  "sort": 700000
+  "sort": 100000
 }

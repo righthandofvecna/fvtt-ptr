@@ -37,6 +37,7 @@ export class SpeciesGeneratorData {
             min: game.settings.get("ptu", "generation.defaultDexDragInLevelMin") ?? 0,
             max: game.settings.get("ptu", "generation.defaultDexDragInLevelMax") ?? 0
         }
+        this.alphaChance = Number(game.settings.get("ptu", "generation.defaultDexDragInAlphaChance")) ?? 0;
         this.helpText = {
             species: undefined,
             table: undefined,
@@ -126,6 +127,7 @@ export class SpeciesGeneratorData {
             folder: this.folder ?? this.folderField.value,
             level: this.level,
             amount: this.amount,
+            alphaChance: this.alphaChance,
         }
 
         if (this.speciesTab == "species") {

@@ -77,6 +77,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
 
         this.data.level.min = formData["level.min"];
         this.data.level.max = formData["level.max"];
+        this.data.alphaChance = Number(formData["alpha-chance"]) || 0;
 
         return this.render(true);
     }
@@ -132,6 +133,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
             await Promise.all([
                 game.settings.set("ptu", "generation.defaultDexDragInLevelMin", this.data.level.min),
                 game.settings.set("ptu", "generation.defaultDexDragInLevelMax", this.data.level.max),
+                game.settings.set("ptu", "generation.defaultDexDragInAlphaChance", this.data.alphaChance),
                 game.settings.set("ptu", "generation.defaultMassGeneratorAmount", this.data.amount),
                 game.settings.set("ptu", "generation.defaultMassGeneratorSpeciesTab", this.data.speciesTab),
                 game.settings.set("ptu", "generation.defaultMassGeneratorSpeciesUuid", this.data.speciesField.value ?? ""),
@@ -145,11 +147,12 @@ export class PTUSpeciesMassGenerator extends FormApplication {
     }
 
     async generate(data) {
-        const { species, table, amount, level } = data;
+        const { species, table, amount, level, alphaChance: rawAlphaChance } = data;
         let folder = data.folder;
         const monsToGenerate = [];
 
         const shinyChance = game.settings.get("ptu", "generation.defaultDexDragInShinyChance") > 1 ? game.settings.get("ptu", "generation.defaultDexDragInShinyChance") / 100 : game.settings.get("ptu", "generation.defaultDexDragInShinyChance");
+        const alphaChance = (rawAlphaChance ?? 0) > 1 ? (rawAlphaChance ?? 0) / 100 : (rawAlphaChance ?? 0);
 
         if (species) {
             for (let i = 0; i < amount; i++) {
@@ -157,6 +160,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
                     species: species,
                     level: level.min == level.max ? level.min : Math.floor(Math.random() * (level.max - level.min + 1)) + level.min,
                     shiny: Math.random() < shinyChance,
+                    alpha: Math.random() < alphaChance,
                     folder
                 }
                 monsToGenerate.push(mon);
@@ -199,6 +203,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
                     species,
                     level: level.min == level.max ? level.min : Math.floor(Math.random() * (level.max - level.min + 1)) + level.min,
                     shiny: Math.random() < shinyChance,
+                    alpha: Math.random() < alphaChance,
                     folder
                 }
                 monsToGenerate.push(mon);
@@ -210,6 +215,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
             const generator = new PokemonGenerator(mon.species);
             generator.level = mon.level;
             generator.shiny = mon.shiny;
+            generator.alpha = mon.alpha;
             await generator.prepare();
             const generatorData = await generator.create({ folder: mon.folder , generate: false});
 

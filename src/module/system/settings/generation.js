@@ -61,6 +61,13 @@ const GenerationSettingsConfig = {
         scope: "user",
         default: false
     },
+    "defaultDexDragInAlphaChance": {
+        name: "PTU.Settings.Generation.DefaultDexDragInAlphaChance.Name",
+        hint: "PTU.Settings.Generation.DefaultDexDragInAlphaChance.Hint",
+        type: Number,
+        scope: "user",
+        default: 0
+    },
     // TODO: remove these next ones and just make them hidden settings
     "defaultMassGeneratorAmount": {
         name: "PTU.Settings.Generation.DefaultMassGeneratorAmount.Name",

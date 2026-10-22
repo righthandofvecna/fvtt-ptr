@@ -602,6 +602,7 @@
     "ShinyChance": "Shiny Chance",
     "StatRandomness": "% Stat Randomness",
     "PreventEvolution": "Prevent Evolution?",
+    "AlphaChance": "Alpha Chance (%)",
     "Submit": "Submit",
 
     "ConditionFainted": "Fainted",
@@ -1255,6 +1256,10 @@
         "DefaultDexDragInPreventEvolution": {
           "Name": "Default Species Drag-In Prevent Evolution",
           "Hint": "Whether a Pokémon's evolution should be prevented during Species Drag-In Generation."
+        },
+        "DefaultDexDragInAlphaChance": {
+          "Name": "Default Species Drag-In Alpha Chance (%)",
+          "Hint": "The default alpha chance for a Pokémon dragged into a scene from a species item. 0 means no chance, 100 means guaranteed."
         }
       },
       "Metagame": {

@@ -14,13 +14,14 @@ export class PokemonGenerator {
     }
 
     async prepare(
-        { minLevel, maxLevel, shinyChance, statRandomness, preventEvolution, saveDefault } =
+        { minLevel, maxLevel, shinyChance, statRandomness, preventEvolution, alphaChance, saveDefault } =
             {
                 minLevel: Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMin")),
                 maxLevel: Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMax")),
                 shinyChance: Number(game.settings.get("ptu", "generation.defaultDexDragInShinyChance")),
                 statRandomness: Number(game.settings.get("ptu", "generation.defaultDexDragInStatRandomness")),
                 preventEvolution: game.settings.get("ptu", "generation.defaultDexDragInPreventEvolution"),
+                alphaChance: Number(game.settings.get("ptu", "generation.defaultDexDragInAlphaChance")),
                 saveDefault: false
             }) {
         if (!this.level) {
@@ -54,6 +55,8 @@ export class PokemonGenerator {
         if (!this.capabilities) this.prepareCapabilities();
         if (!this.shiny) this.prepareShinyness(shinyChance);
         if (!this.form) this.prepareForm();
+        if (this.alpha === undefined) this.prepareAlpha(alphaChance ?? 0);
+        if (this.alpha) this.prepareAlphaMove();
 
         this.img = await PokemonGenerator.getImage(this.species, { gender: this.gender, shiny: this.shiny });
         this.tokenImg = await (async () => {
@@ -202,6 +205,30 @@ export class PokemonGenerator {
             }
 
             itemsData.push(capabilityData);
+        }
+
+        if (this.alpha) {
+            const ALPHA_CAPABILITY_UUID = "Compendium.ptu.poke-edges.Item.alphaPokemon0000";
+            const WILD_MIGHT_UUID = "Compendium.ptu.effects.Item.wildMight0000000";
+
+            const alphaCapability = await fromUuid(ALPHA_CAPABILITY_UUID);
+            if (alphaCapability) {
+                const capData = alphaCapability.toObject();
+                capData.flags.core = { sourceId: ALPHA_CAPABILITY_UUID };
+                itemsData.push(capData);
+            }
+
+            const wildMight = await fromUuid(WILD_MIGHT_UUID);
+            if (wildMight) {
+                const effectData = wildMight.toObject();
+                effectData.flags.core = { sourceId: WILD_MIGHT_UUID };
+                itemsData.push(effectData);
+            }
+
+            actorData.system.boss ??= {};
+            actorData.system.boss.is = true;
+            actorData.system.boss.turns = 3;
+            actorData.system.boss.bars = 2;
         }
 
         if (!generate) return { actor: actorData, items: itemsData };
@@ -370,6 +397,26 @@ export class PokemonGenerator {
 
         if (shinyChance == 0) return this.shiny = false;
         return this.shiny = Math.random() < shinyChance;
+    }
+
+    prepareAlpha(alphaChance) {
+        if (alphaChance > 1) alphaChance /= 100;
+        if (alphaChance === 0) return this.alpha = false;
+        return this.alpha = Math.random() < alphaChance;
+    }
+
+    prepareAlphaMove() {
+        if (!this.moves?.length) return;
+        const levelUpSlugs = new Set(this.moves.map(m => m.slug));
+        const candidates = [
+            ...(this.species.system.moves.egg ?? []),
+            ...(this.species.system.moves.tutor ?? []),
+            ...(this.species.system.moves.machine ?? []),
+        ].filter(m => m.uuid && !levelUpSlugs.has(m.slug));
+        if (candidates.length === 0) return;
+        const alphaMove = candidates[Math.floor(Math.random() * candidates.length)];
+        const replaceIndex = Math.floor(Math.random() * this.moves.length);
+        this.moves[replaceIndex] = alphaMove;
     }
 
     prepareForm() {

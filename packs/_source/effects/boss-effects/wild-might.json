@@ -1,0 +1,132 @@
+{
+  "folder": "bossEffects00000",
+  "name": "Wild Might",
+  "type": "effect",
+  "_id": "wildMight0000000",
+  "img": "systems/ptu/static/css/images/icons/permanent_effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Alpha Pokémon are filled with a wild might in battle, granting a bonus to Attack, Defense, Special Attack, and Special Defense equal to +@Math[{actor|system.level.current} / 4]{one quarter their level}. Their Capture DC also gains a -20 penalty.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.atk.mod.mod",
+        "phase": "applyAEs",
+        "value": "{actor|system.level.current} / 4",
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.def.mod.mod",
+        "phase": "applyAEs",
+        "value": "{actor|system.level.current} / 4",
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.spatk.mod.mod",
+        "phase": "applyAEs",
+        "value": "{actor|system.level.current} / 4",
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.stats.spdef.mod.mod",
+        "phase": "applyAEs",
+        "value": "{actor|system.level.current} / 4",
+        "priority": null
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "label": "Alpha",
+        "hideIfDisabled": false,
+        "selectors": "capture-dc",
+        "value": -20
+      },
+      {
+        "key": "TokenLight",
+        "value": {
+          "animation": {
+            "type": "ghost",
+            "speed": 4,
+            "intensity": 7
+          },
+          "alpha": 1,
+          "angle": 360,
+          "bright": 0.1,
+          "dim": 0.1,
+          "color": "#990000"
+        }
+      }
+    ],
+    "enabled": true,
+    "slug": "wild-might",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Boss"
+    ],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null,
+      "round": 0,
+      "turn": 0,
+      "time": 1036800
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "This is just my take on what Alpha Pokemon should have as far as their Wild Might bonuses (the bonuses they get but don't keep once you catch them). -Dylan",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.54",
+    "createdTime": 1792639377334,
+    "modifiedTime": 1792639377334,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0
+}
