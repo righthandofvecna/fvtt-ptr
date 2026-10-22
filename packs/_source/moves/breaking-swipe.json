@@ -2,7 +2,6 @@
   "name": "Breaking Swipe",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target's Attack is lowered 1 Combat Stage.",
@@ -15,7 +14,8 @@
         "selectors": "{item|id}-damage-received",
         "uuid": "Compendium.ptu.effects.Item.sELPTwMyqYX6Mym5",
         "range": "1",
-        "value": ""
+        "value": "",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -55,7 +55,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -90,7 +91,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
