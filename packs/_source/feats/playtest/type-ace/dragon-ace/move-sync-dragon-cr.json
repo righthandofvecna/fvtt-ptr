@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -55,14 +56,15 @@
       "bind": false
     },
     "prerequisites": [
-      "3 Type Ace (X) [CR] Features"
+      "3 Type Ace (Dragon) Features"
     ],
     "notes": "",
     "free": false,
     "class": "Type Ace (Dragon)",
     "contentSet": "class-rework",
     "replacesSlug": "move-sync-dragon",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {

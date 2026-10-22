@@ -38,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -52,8 +53,8 @@
       "bind": false
     },
     "prerequisites": [
-      "Type-Linked Skill at Master",
-      "Life Isn't Fair"
+      "Guile or Stealth at Master",
+      "Rigged From the Start [CR]"
     ],
     "notes": "",
     "free": false,
@@ -62,7 +63,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
-    "replacesSlug": "black-out-strike"
+    "replacesSlug": "black-out-strike",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -70,7 +73,10 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Clever Ruse, Type-Linked Skill at Master",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "folder": "WkzYl2eCkah61zli",
