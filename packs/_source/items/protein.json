@@ -2,7 +2,7 @@
   "name": "Protein",
   "system": {
     "origin": "",
-    "effect": "Raise the user’s Attack Base Stat 1. You may only get use out of up to five Vitamins per Pokémon.",
+    "effect": "Raise the user’s Attack Base Stat 1. A Pokémon may benefit from a maximum of 5 Vitamins, regardless of type.",
     "snippet": "",
     "rules": [
       {
