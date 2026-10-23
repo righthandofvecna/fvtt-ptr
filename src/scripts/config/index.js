@@ -133,6 +133,7 @@ const data = {
       "egg": "PTU.Move.LearnedFrom.Egg.Label",
       "tutor": "PTU.Move.LearnedFrom.Tutor.Label",
       "grant": "PTU.Move.LearnedFrom.Grant.Label",
+      "alpha": "PTU.Move.LearnedFrom.Alpha.Label",
       "unknown": "PTU.Move.LearnedFrom.Unknown.Label"
     }
   },

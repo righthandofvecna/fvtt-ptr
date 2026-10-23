@@ -269,6 +269,10 @@
           "Label": "Grant",
           "Hint": "This move was granted by an external source"
         },
+        "Alpha": {
+          "Label": "Alpha",
+          "Hint": "This move was learned as an Alpha move"
+        },
         "Unknown": {
           "Label": "Unknown",
           "Hint": "This move is of mysterious origin"

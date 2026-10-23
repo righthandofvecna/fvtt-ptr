@@ -54,7 +54,7 @@ export class PokemonGenerator {
         if (!this.shiny) this.prepareShinyness(shinyChance);
         if (!this.form) this.prepareForm();
         if (this.alpha === undefined) this.prepareAlpha(alphaChance ?? 0);
-        if (this.alpha) this.prepareAlphaMove();
+        if (this.alpha) await this.prepareAlphaMove();
 
         this.img = await PokemonGenerator.getImage(this.species, { gender: this.gender, shiny: this.shiny });
         this.tokenImg = await (async () => {
@@ -174,6 +174,8 @@ export class PokemonGenerator {
             moveData.flags.core = {
                 sourceId: speciesMove.uuid,
             }
+            moveData.flags.ptu ??= {};
+            moveData.flags.ptu.learnedFrom = speciesMove.learnedFrom ?? "level";
 
             itemsData.push(moveData);
         }
@@ -403,18 +405,44 @@ export class PokemonGenerator {
         return this.alpha = Math.random() < alphaChance;
     }
 
-    prepareAlphaMove() {
+    async prepareAlphaMove() {
         if (!this.moves?.length) return;
+
+        // Determine which attacker types are super-effective against this species
+        const speciesTypes = this.species.system.types ?? [];
+        const typeChart = CONFIG.PTU.data.typeEffectiveness ?? {};
+        const vulnerableToTypes = new Set();
+        for (const [attackerType, attackerData] of Object.entries(typeChart)) {
+            if (!attackerData.effectiveness) continue;
+            const multiplier = speciesTypes.reduce((acc, defType) => acc * (attackerData.effectiveness[defType] ?? 1), 1);
+            if (multiplier > 1) vulnerableToTypes.add(attackerType);
+        }
+
         const levelUpSlugs = new Set(this.moves.map(m => m.slug));
-        const candidates = [
+        const pool = [
             ...(this.species.system.moves.egg ?? []),
             ...(this.species.system.moves.tutor ?? []),
             ...(this.species.system.moves.machine ?? []),
         ].filter(m => m.uuid && !levelUpSlugs.has(m.slug));
-        if (candidates.length === 0) return;
-        const alphaMove = candidates[Math.floor(Math.random() * candidates.length)];
-        const replaceIndex = Math.floor(Math.random() * this.moves.length);
-        this.moves[replaceIndex] = alphaMove;
+
+        if (pool.length === 0) return;
+
+        // Load moves to check their type; prefer those that hit a weakness of the species, of a type not already known by the Pokémon, and that do damage
+        const loadedPool = await Promise.all(pool.map(async m => ({ moveSpec: m, move: await fromUuid(m.uuid) })));
+        const typedCandidates = loadedPool.filter(({ move }) => move &&
+            vulnerableToTypes.has(move.system?.type) &&
+            !this.moves.some(m => m.system?.type === move.system?.type && ![0, NaN].includes(parseInt(m.system?.damageBase))) &&
+            ![0, NaN].includes(parseInt(move.system?.damageBase)));
+        const finalPool = typedCandidates.length > 0 ? typedCandidates.map(c => c.moveSpec) : pool;
+
+        const alphaMove = finalPool[Math.floor(Math.random() * finalPool.length)];
+        alphaMove.learnedFrom = "alpha";
+        if (this.moves.length >= 6) {
+            const replaceIndex = Math.floor(Math.random() * this.moves.length);
+            this.moves[replaceIndex] = alphaMove;
+        } else {
+            this.moves.push(alphaMove);
+        }
     }
 
     prepareForm() {

@@ -15,7 +15,7 @@
         "mode": "add",
         "path": "system.stats.atk.mod.mod",
         "phase": "applyAEs",
-        "value": "{actor|system.level.current} / 4",
+        "value": "floor({actor|system.level.current} / 4)",
         "priority": null
       },
       {
@@ -24,7 +24,7 @@
         "mode": "add",
         "path": "system.stats.def.mod.mod",
         "phase": "applyAEs",
-        "value": "{actor|system.level.current} / 4",
+        "value": "floor({actor|system.level.current} / 4)",
         "priority": null
       },
       {
@@ -33,7 +33,7 @@
         "mode": "add",
         "path": "system.stats.spatk.mod.mod",
         "phase": "applyAEs",
-        "value": "{actor|system.level.current} / 4",
+        "value": "floor({actor|system.level.current} / 4)",
         "priority": null
       },
       {
@@ -42,7 +42,7 @@
         "mode": "add",
         "path": "system.stats.spdef.mod.mod",
         "phase": "applyAEs",
-        "value": "{actor|system.level.current} / 4",
+        "value": "floor({actor|system.level.current} / 4)",
         "priority": null
       },
       {
