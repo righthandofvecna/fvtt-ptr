@@ -5,12 +5,11 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Effect: You learn 3 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\nRank 3: Shadow Half, Shadow Sky, Shadow Storm, Shadow Crush, Shadow End",
+    "effect": "Effect: You learn 3 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\nRank 1: @UUID[Compendium.ptu.moves.Item.g19b3alAuzMQr7Qs]{Shadow Rush}, @UUID[Compendium.ptu.moves.Item.8MUEKNGgj0oc7P2f]{Shadow Down}, @UUID[Compendium.ptu.moves.Item.dwcRQgIBszpHjNpE]{Shadow Shave}, @UUID[Compendium.ptu.moves.Item.LUIEdoSRzg2bt0Xp]{Shadow Corruption}, @UUID[Compendium.ptu.moves.Item.Zh2B4hg2TvpbliA8]{Shadow Panic}\nRank 2: @UUID[Compendium.ptu.moves.Item.CcEasi84O10SiFBr]{Shadow Hold}, @UUID[Compendium.ptu.moves.Item.0YcLWdTRlotpUzIL]{Shadow Rave}, @UUID[Compendium.ptu.moves.Item.teuroDno8HeBaqGD]{Shadow Shed}, @UUID[Compendium.ptu.moves.Item.lVkbWxSKwAlWmxld]{Shadow Boost}, @UUID[Compendium.ptu.moves.Item.EklvvYXb00hwyeBg]{Shadow Pummel}\nRank 3: @UUID[Compendium.ptu.moves.Item.XPsTpx9TE3B3cyBh]{Shadow Half}, @UUID[Compendium.ptu.moves.Item.ROAjPgAwsH73sI9C]{Shadow Sky}, @UUID[Compendium.ptu.moves.Item.cQjFQ21hgYxXU7Zy]{Shadow Storm}, @UUID[Compendium.ptu.moves.Item.Ct5RNVHWvEpGXEWw]{Shadow Crush}, @UUID[Compendium.ptu.moves.Item.jNuZznhN6F3R36Me]{Shadow End}",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "unrivaledBattlePower3",
         "choices": [
           {
@@ -29,7 +28,8 @@
         "mode": "add",
         "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.unrivaledBattlePower3}.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       },
       {
         "key": "ChoiceSet",
@@ -38,90 +38,105 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.g19b3alAuzMQr7Qs",
+            "label": "Shadow Rush",
             "predicate": {
               "not": "move:shadow-rush"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.8MUEKNGgj0oc7P2f",
+            "label": "Shadow Down",
             "predicate": {
               "not": "move:shadow-down"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.dwcRQgIBszpHjNpE",
+            "label": "Shadow Shave",
             "predicate": {
               "not": "move:shadow-shave"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.LUIEdoSRzg2bt0Xp",
+            "label": "Shadow Corruption",
             "predicate": {
               "not": "move:shadow-corruption"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.Zh2B4hg2TvpbliA8",
+            "label": "Shadow Panic",
             "predicate": {
               "not": "move:shadow-panic"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.CcEasi84O10SiFBr",
+            "label": "Shadow Hold",
             "predicate": {
               "not": "move:shadow-hold"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.0YcLWdTRlotpUzIL",
+            "label": "Shadow Rave",
             "predicate": {
               "not": "move:shadow-rave"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.teuroDno8HeBaqGD",
+            "label": "Shadow Shed",
             "predicate": {
               "not": "move:shadow-shed"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.lVkbWxSKwAlWmxld",
+            "label": "Shadow Boost",
             "predicate": {
               "not": "move:shadow-boost"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.EklvvYXb00hwyeBg",
+            "label": "Shadow Pummel",
             "predicate": {
               "not": "move:shadow-pummel"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.XPsTpx9TE3B3cyBh",
+            "label": "Shadow Half",
             "predicate": {
               "not": "move:shadow-half"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.ROAjPgAwsH73sI9C",
+            "label": "Shadow Sky",
             "predicate": {
               "not": "move:shadow-sky"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.cQjFQ21hgYxXU7Zy",
+            "label": "Shadow Storm",
             "predicate": {
               "not": "move:shadow-storm"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.Ct5RNVHWvEpGXEWw",
+            "label": "Shadow Crush",
             "predicate": {
               "not": "move:shadow-crush"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.jNuZznhN6F3R36Me",
+            "label": "Shadow End",
             "predicate": {
               "not": "move:shadow-end"
             }
@@ -141,90 +156,105 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.g19b3alAuzMQr7Qs",
+            "label": "Shadow Rush",
             "predicate": {
               "not": "move:shadow-rush"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.8MUEKNGgj0oc7P2f",
+            "label": "Shadow Down",
             "predicate": {
               "not": "move:shadow-down"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.dwcRQgIBszpHjNpE",
+            "label": "Shadow Shave",
             "predicate": {
               "not": "move:shadow-shave"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.LUIEdoSRzg2bt0Xp",
+            "label": "Shadow Corruption",
             "predicate": {
               "not": "move:shadow-corruption"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.Zh2B4hg2TvpbliA8",
+            "label": "Shadow Panic",
             "predicate": {
               "not": "move:shadow-panic"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.CcEasi84O10SiFBr",
+            "label": "Shadow Hold",
             "predicate": {
               "not": "move:shadow-hold"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.0YcLWdTRlotpUzIL",
+            "label": "Shadow Rave",
             "predicate": {
               "not": "move:shadow-rave"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.teuroDno8HeBaqGD",
+            "label": "Shadow Shed",
             "predicate": {
               "not": "move:shadow-shed"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.lVkbWxSKwAlWmxld",
+            "label": "Shadow Boost",
             "predicate": {
               "not": "move:shadow-boost"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.EklvvYXb00hwyeBg",
+            "label": "Shadow Pummel",
             "predicate": {
               "not": "move:shadow-pummel"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.XPsTpx9TE3B3cyBh",
+            "label": "Shadow Half",
             "predicate": {
               "not": "move:shadow-half"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.ROAjPgAwsH73sI9C",
+            "label": "Shadow Sky",
             "predicate": {
               "not": "move:shadow-sky"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.cQjFQ21hgYxXU7Zy",
+            "label": "Shadow Storm",
             "predicate": {
               "not": "move:shadow-storm"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.Ct5RNVHWvEpGXEWw",
+            "label": "Shadow Crush",
             "predicate": {
               "not": "move:shadow-crush"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.jNuZznhN6F3R36Me",
+            "label": "Shadow End",
             "predicate": {
               "not": "move:shadow-end"
             }
@@ -244,90 +274,105 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.g19b3alAuzMQr7Qs",
+            "label": "Shadow Rush",
             "predicate": {
               "not": "move:shadow-rush"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.8MUEKNGgj0oc7P2f",
+            "label": "Shadow Down",
             "predicate": {
               "not": "move:shadow-down"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.dwcRQgIBszpHjNpE",
+            "label": "Shadow Shave",
             "predicate": {
               "not": "move:shadow-shave"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.LUIEdoSRzg2bt0Xp",
+            "label": "Shadow Corruption",
             "predicate": {
               "not": "move:shadow-corruption"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.Zh2B4hg2TvpbliA8",
+            "label": "Shadow Panic",
             "predicate": {
               "not": "move:shadow-panic"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.CcEasi84O10SiFBr",
+            "label": "Shadow Hold",
             "predicate": {
               "not": "move:shadow-hold"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.0YcLWdTRlotpUzIL",
+            "label": "Shadow Rave",
             "predicate": {
               "not": "move:shadow-rave"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.teuroDno8HeBaqGD",
+            "label": "Shadow Shed",
             "predicate": {
               "not": "move:shadow-shed"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.lVkbWxSKwAlWmxld",
+            "label": "Shadow Boost",
             "predicate": {
               "not": "move:shadow-boost"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.EklvvYXb00hwyeBg",
+            "label": "Shadow Pummel",
             "predicate": {
               "not": "move:shadow-pummel"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.XPsTpx9TE3B3cyBh",
+            "label": "Shadow Half",
             "predicate": {
               "not": "move:shadow-half"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.ROAjPgAwsH73sI9C",
+            "label": "Shadow Sky",
             "predicate": {
               "not": "move:shadow-sky"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.cQjFQ21hgYxXU7Zy",
+            "label": "Shadow Storm",
             "predicate": {
               "not": "move:shadow-storm"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.Ct5RNVHWvEpGXEWw",
+            "label": "Shadow Crush",
             "predicate": {
               "not": "move:shadow-crush"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.jNuZznhN6F3R36Me",
+            "label": "Shadow End",
             "predicate": {
               "not": "move:shadow-end"
             }
@@ -373,7 +418,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -392,8 +438,10 @@
     "notes": "",
     "free": false,
     "class": "Heartless",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -402,7 +450,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
