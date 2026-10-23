@@ -52,8 +52,8 @@
       "bind": false
     },
     "prerequisites": [
-      "Type-Linked Skill at Master",
-      "High Voltage"
+      "High Voltage",
+      "Master Focus or Technology Education"
     ],
     "notes": "",
     "free": false,

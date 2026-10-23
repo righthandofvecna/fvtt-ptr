@@ -54,8 +54,8 @@
       "bind": true
     },
     "prerequisites": [
-      "Type-Linked Skill at Adept",
-      "Geothermal Energy"
+      "Geothermal Energy",
+      "Adept Perception or Intuition"
     ],
     "notes": "",
     "free": false,

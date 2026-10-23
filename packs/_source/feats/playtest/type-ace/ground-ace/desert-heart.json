@@ -61,8 +61,8 @@
     },
     "leagueLegal": false,
     "prerequisites": [
-      "Type-Linked Skill at Adept",
-      "Geothermal Energy [CR]"
+      "Geothermal Energy",
+      "Adept Perception or Intuition"
     ],
     "notes": "",
     "free": false,
@@ -76,10 +76,6 @@
     "ptu": {
       "showInTokenPanel": true,
       "prereqBackup": "Mold the Earth, Type-Linked Skill at Adept",
-      "grantedBy": {
-        "id": "cxGqerNDwVbP6Oge",
-        "onDelete": "detach"
-      },
       "automationStatus": "needs-automation",
       "devNote": ""
     },

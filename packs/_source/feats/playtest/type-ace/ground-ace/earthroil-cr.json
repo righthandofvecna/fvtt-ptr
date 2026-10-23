@@ -52,8 +52,8 @@
       "bind": false
     },
     "prerequisites": [
-      "Type-Linked Skill at Expert",
-      "Geothermal Energy"
+      "Geothermal Energy",
+      "Expert Perception or Intuition"
     ],
     "notes": "",
     "free": false,

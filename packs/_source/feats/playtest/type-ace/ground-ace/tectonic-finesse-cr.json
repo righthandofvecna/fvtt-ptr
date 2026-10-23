@@ -55,8 +55,8 @@
       "bind": false
     },
     "prerequisites": [
-      "Type-Linked Skill at Master Rank",
-      "Geothermal Energy"
+      "Geothermal Energy",
+      "Master Perception or Intuition"
     ],
     "notes": "",
     "free": false,
