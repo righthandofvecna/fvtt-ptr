@@ -230,6 +230,14 @@ export class PTUSessionEndApp extends HandlebarsApplicationMixin(ApplicationV2) 
         }
         await game.settings.set("ptu", PTUSessionTracker.SETTING, sceneActorIds);
 
+        if (game.settings.get("ptu", "variant.useSessionBasedRecovery")) {
+            const updates = [];
+            for (const actor of game.actors.values()) {
+                updates.push(actor.onDayEnd());
+            }
+            await Promise.allSettled(updates);
+        }
+
         ui.notifications.info(game.i18n.localize("PTU.SessionEnd.Submitted"));
         this.close();
     }

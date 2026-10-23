@@ -870,7 +870,7 @@ class PTUPokemonActor extends PTUActor {
     async onDayEnd() {
         await super.onDayEnd();
         const actorUpdate = {};
-        const newItems = [];
+        const itemCreations = [];
 
         // Handle end-of-day Spirit recharging
         if (game.settings.get("ptu", "variant.spiritPlaytest") && this.trainer !== null) {
@@ -886,13 +886,13 @@ class PTUPokemonActor extends PTUActor {
 
             // if spirit was at -1, add the -1 penalty
             if (this.system.spirit.value <= -1) {
-                newItems.push(foundry.utils.deepClone((await fromUuid("Compendium.ptu.effects.Item.I42OHlDF6lnNLp2I")).toObject()));
+                itemCreations.push(foundry.utils.deepClone((await fromUuid("Compendium.ptu.effects.Item.I42OHlDF6lnNLp2I")).toObject()));
             }
 
             actorUpdate["system.spirit.value"] = newSpirit;
         }
 
-        if (newItems.length > 0) await this.createEmbeddedDocuments("Item", newItems);
+        if (itemCreations.length > 0) await this.createEmbeddedDocuments("Item", itemCreations);
         if (Object.keys(actorUpdate).length > 0) await this.update(actorUpdate);
     }
 }
