@@ -2,7 +2,7 @@
   "name": "Glitch Burst",
   "system": {
     "origin": "",
-    "effect": "Trigger - You hit with Topsy-Turvy or use another Glitch Bender Move\nEffect: Glitch Burst’s effect depends on the triggering Move.\n»» Disable: The target of Disable is also Suppressed.\n»» Snatch: Regain one use of a Glitch Bender Move. This may only affect each Move once per Scene.\n»» Metronome: Generate three random Moves instead of one, and choose which Move to use.\n»» Topsy-Turvy: The target of Topsy-Turvy becomes Confused. They are automatically cured The Glitch Pokémon of this Confusion at the end of their next turn.",
+    "effect": "Trigger - You hit with Topsy-Turvy or use another Glitch Bender Move\nEffect: Glitch Burst’s effect depends on the triggering Move.\n»» Disable: The target of Disable is also @UUID[Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY]{Suppressed}.\n»» Snatch: Regain one use of a Glitch Bender Move. This may only affect each Move once per Scene.\n»» Metronome: Generate three random Moves instead of one, and choose which Move to use.\n»» Topsy-Turvy: The target of Topsy-Turvy becomes @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confused}. They are automatically cured of this Confusion at the end of their next turn.",
     "snippet": "",
     "rules": [
       {
@@ -11,7 +11,8 @@
         "path": "system.modifiers.baseStats.spdef.mod",
         "value": 1,
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -45,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +71,9 @@
     "name": "Glitch Burst",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -80,7 +84,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Glitch Shuffle, Master Focus, Occult Education, or Perception",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -93,7 +99,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 2300000,
   "_id": "1bm65cuemk5YAqkR"
 }

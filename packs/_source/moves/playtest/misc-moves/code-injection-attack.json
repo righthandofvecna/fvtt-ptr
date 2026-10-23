@@ -1,0 +1,78 @@
+{
+  "name": "Code Injection Attack",
+  "type": "move",
+  "_id": "QVdZhkvTSxFvHjGO",
+  "img": "systems/ptu/static/css/images/types2/UntypedIC_Icon.png",
+  "system": {
+    "origin": "",
+    "effect": "You may use any of the Glitches below. You may only use each Glitch once per Scene, and each target may only be affected by @UUID[Compendium.ptu.feats.Item.Ge1U5JZApkLL7sQn]{Code Injection} once per Scene.\n»» Object Not Found: The target may not benefit from Equipment, Held Items, and consumable Items for one full round.\n»» Access Denied: The target is @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed} and may only take At-Will actions for one full round.\n»» Blue Screen: The target is @UUID[Compendium.ptu.effects.Item.g2QutQJutABxFIw6]{Blinded} and @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI]{Vulnerable} for one full round.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "code-injection-attack",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "sheerForce": false,
+    "toughClaws": false,
+    "technician": false,
+    "reckless": false,
+    "ironFist": false,
+    "megaLauncher": false,
+    "punkRock": false,
+    "strongJaw": false,
+    "frequency": {
+      "type": "custom",
+      "max": 0,
+      "custom": "1 AP - At Will",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "type": "Untyped",
+    "category": "Status",
+    "damageBase": "",
+    "ac": "2",
+    "range": "5",
+    "contestType": "",
+    "stab": false,
+    "damageBonus": 0,
+    "isStruggle": false
+  },
+  "effects": [],
+  "folder": "ub2kPQbets63XkWw",
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true,
+      "used": null
+    }
+  }
+}
