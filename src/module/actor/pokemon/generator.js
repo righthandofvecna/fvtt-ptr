@@ -417,24 +417,50 @@ export class PokemonGenerator {
             const multiplier = speciesTypes.reduce((acc, defType) => acc * (attackerData.effectiveness[defType] ?? 1), 1);
             if (multiplier > 1) vulnerableToTypes.add(attackerType);
         }
+        const loadedMoves = await Promise.all(this.moves.map(m => fromUuid(m.uuid)));
 
         const levelUpSlugs = new Set(this.moves.map(m => m.slug));
-        const pool = [
-            ...(this.species.system.moves.egg ?? []),
-            ...(this.species.system.moves.tutor ?? []),
-            ...(this.species.system.moves.machine ?? []),
-        ].filter(m => m.uuid && !levelUpSlugs.has(m.slug));
+        const pool = await (async ()=>{
+            if (!game.settings.get("ptu", "generation.alphaMoveUnrestricted")) {
+                return [
+                    ...(this.species.system.moves.egg ?? []),
+                    ...(this.species.system.moves.tutor ?? []),
+                    ...(this.species.system.moves.machine ?? []),
+                ].filter(m => m.uuid && !levelUpSlugs.has(m.slug));
+            }
+            const allCorePTUMoves = [...(await game.packs.get("ptu.moves").getIndex({fields:["system.slug", "system.type", "system.damageBase", "system.keywords"]})).values()];
+            const eligibleMoves = allCorePTUMoves.filter(m => {
+                if (levelUpSlugs.has(m.system.slug)) return false;
+                if ((m.system.keywords ?? []).includes("Signature")) return false;
+                if (m.system.damageBase && parseInt(m.system.damageBase) > 0) {
+                    // check that the damage base is within the range of already-assigned moves
+                    const assignedDamageBases = this.moves.map(m => parseInt(m.damageBase)).filter(db => ![0, NaN].includes(db));
+                    if (assignedDamageBases.length === 0) assignedDamageBases.push(1, 4);
+                    const minDamageBase = Math.min(...assignedDamageBases);
+                    const maxDamageBase = Math.max(...assignedDamageBases);
+                    const moveDamageBase = parseInt(m.system.damageBase);
+                    if (moveDamageBase < minDamageBase || moveDamageBase > maxDamageBase) return false;
+                }
+                return true;
+            });
+            return eligibleMoves.map(m => ({
+                uuid: m.uuid,
+                slug: m.system.slug,
+                obj: m,
+            }));
+        })();
 
         if (pool.length === 0) return;
 
         // Load moves to check their type; prefer those that hit a weakness of the species, of a type not already known by the Pokémon, and that do damage
-        const loadedPool = await Promise.all(pool.map(async m => ({ moveSpec: m, move: await fromUuid(m.uuid) })));
+        const loadedPool = await Promise.all(pool.map(async m => ({ moveSpec: m, move: m.obj ?? await fromUuid(m.uuid) })));
         const typedCandidates = loadedPool.filter(({ move }) => move &&
             vulnerableToTypes.has(move.system?.type) &&
-            !this.moves.some(m => m.system?.type === move.system?.type && ![0, NaN].includes(parseInt(m.system?.damageBase))) &&
+            !loadedMoves.some(m => m.system?.type === move.system?.type && ![0, NaN].includes(parseInt(m.system?.damageBase))) &&
             ![0, NaN].includes(parseInt(move.system?.damageBase)));
         const finalPool = typedCandidates.length > 0 ? typedCandidates.map(c => c.moveSpec) : pool;
 
+        console.log("Final pool of alpha moves:", finalPool);
         const alphaMove = finalPool[Math.floor(Math.random() * finalPool.length)];
         alphaMove.learnedFrom = "alpha";
         if (this.moves.length >= 6) {

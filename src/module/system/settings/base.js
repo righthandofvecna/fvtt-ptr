@@ -83,6 +83,7 @@ class PTUSettingsMenu extends FormApplication {
         let requiresWorldReload = false;
         const settings = this.constructor.settings;
         for (const key of this.constructor.SETTINGS) {
+            if (settings[key]?.hidden) continue;
             const settingKey = `${this.prefix}${key}`;
             const value = data[key];
             this.cache[key] = value;

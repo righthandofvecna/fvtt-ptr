@@ -26,6 +26,12 @@ const GenerationSettingsConfig = {
         type: Boolean,
         default: false
     },
+    "alphaMoveUnrestricted": {
+        name: "PTU.Settings.Generation.AlphaMoveUnrestricted.Name",
+        hint: "PTU.Settings.Generation.AlphaMoveUnrestricted.Hint",
+        type: Boolean,
+        default: false
+    },
     // These settings should be hidden, since they're auto-set
     // Drag-In Settings
     "defaultDexDragInLevelMin": {

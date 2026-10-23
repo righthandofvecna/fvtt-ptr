@@ -1241,6 +1241,10 @@
           "Name": "Pokemon Image Name Type",
           "Hint": "Whether the images are based on name (checked) or dex number (unchecked)"
         },
+        "AlphaMoveUnrestricted": {
+          "Name": "Alpha Move Unrestricted",
+          "Hint": "Allow Alpha moves to be generated without restricting to the Pokémon's Egg/Tutor list."
+        },
         "DefaultDexDragInLevelMin": {
           "Name": "Default Minimum Species Drag-In Level",
           "Hint": "The default minimum level for a Pokémon dragged into a scene from a species item"
