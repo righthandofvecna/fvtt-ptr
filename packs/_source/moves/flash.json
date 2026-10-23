@@ -93,13 +93,7 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true,
-      "itemGrants": {
-        "glow": {
-          "id": "2Z8zU36aQAdjQQHY",
-          "onDelete": "detach"
-        }
-      }
+      "showInTokenPanel": true
     }
   },
   "_id": "joekwsOGEcyJt9BB",

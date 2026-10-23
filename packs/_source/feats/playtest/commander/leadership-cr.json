@@ -110,10 +110,6 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "grantedBy": {
-        "id": "eMm2aHaoScr1TLsj",
-        "onDelete": "detach"
-      },
       "showInTokenPanel": true,
       "automationStatus": "completed",
       "devNote": ""

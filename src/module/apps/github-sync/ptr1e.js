@@ -48,6 +48,8 @@ export function transform(data) {
   // remove data that shouldn't get synced
   if (data?.flags?.ptu?.learnedFrom) delete data.flags.ptu.learnedFrom;
   if (data?.flags?.ptu?.bonusItemSource) delete data.flags.ptu.bonusItemSource;
+  if (data?.flags?.ptu?.itemGrants) delete data.flags.ptu.itemGrants;
+  if (data?.flags?.ptu?.grantedBy) delete data.flags.ptu.grantedBy;
   return data;
 }
 

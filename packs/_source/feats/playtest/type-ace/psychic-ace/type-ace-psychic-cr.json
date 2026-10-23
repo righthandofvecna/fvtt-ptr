@@ -76,13 +76,7 @@
   "flags": {
     "ptu": {
       "prereqBackup": "2 Different Pokémon of the chosen Type, Type-Linked Skill* at Novice\nOR\nElemental Connection (of the chosen Type), 1 Pokémon of the chosen Type, Type-Linked Skill* at Novice\n*See Extras - Class Mechanics for details.",
-      "showInTokenPanel": true,
-      "itemGrants": {
-        "Ik1cJYcjl59EUnvj": {
-          "id": "Ik1cJYcjl59EUnvj",
-          "onDelete": "detach"
-        }
-      }
+      "showInTokenPanel": true
     }
   },
   "folder": "VrgkSS17WexYz7or",

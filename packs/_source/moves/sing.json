@@ -103,10 +103,6 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "grantedBy": {
-        "id": "l2MH6WgqF3NSBwNZ",
-        "onDelete": "cascade"
-      },
       "used": null,
       "automationStatus": "needs-automation",
       "devNote": ""

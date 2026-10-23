@@ -95,12 +95,6 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "itemGrants": {
-        "inflatable": {
-          "id": "BX3AqS6IawvK7NeR",
-          "onDelete": "detach"
-        }
-      },
       "automationStatus": "needs-automation",
       "devNote": ""
     }

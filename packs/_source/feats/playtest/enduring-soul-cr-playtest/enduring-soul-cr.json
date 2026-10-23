@@ -85,7 +85,6 @@
     "ptu": {
       "showInTokenPanel": true,
       "prereqBackup": "Novice Focus",
-      "itemGrants": {},
       "automationStatus": "needs-automation",
       "devNote": "Effect applied to trainers and pokemon works as intended. Only automation missing is the Temp HP for each scene."
     }

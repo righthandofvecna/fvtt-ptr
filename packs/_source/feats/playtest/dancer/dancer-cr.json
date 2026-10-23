@@ -114,16 +114,6 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "itemGrants": {
-        "vd0AWlLvEhLLTpgE": {
-          "id": "vd0AWlLvEhLLTpgE",
-          "onDelete": "detach"
-        }
-      },
-      "grantedBy": {
-        "id": "vd0AWlLvEhLLTpgE",
-        "onDelete": "detach"
-      },
       "automationStatus": "completed",
       "devNote": ""
     }

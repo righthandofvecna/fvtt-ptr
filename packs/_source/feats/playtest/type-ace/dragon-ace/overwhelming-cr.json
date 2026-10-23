@@ -72,10 +72,6 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "grantedBy": {
-        "id": "1vQUZwGkxpawuWEC",
-        "onDelete": "detach"
-      },
       "automationStatus": "needs-automation",
       "devNote": ""
     }
