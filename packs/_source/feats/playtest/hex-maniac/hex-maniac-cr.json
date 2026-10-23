@@ -2,7 +2,7 @@
   "name": "Hex Maniac",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose Cursed Body or Omen. You gain the Chosen Ability.",
+    "effect": "Choose @UUID[Compendium.ptu.abilities.Item.eq6HX7kv2a2Fo51U]{Cursed Body} or @UUID[Compendium.ptu.abilities.Item.pMSDhQp6Tx0Cojng]{Omen}. You gain the Chosen Ability.",
     "snippet": "",
     "rules": [
       {
@@ -19,12 +19,14 @@
         "choices": [
           {
             "value": "Compendium.ptu.abilities.Item.pMSDhQp6Tx0Cojng",
+            "label": "Omen",
             "predicate": {
               "not": "ability:omen"
             }
           },
           {
             "value": "Compendium.ptu.abilities.Item.eq6HX7kv2a2Fo51U",
+            "label": "Cursed Body",
             "predicate": {
               "not": "ability:cursed-body"
             }
@@ -73,7 +75,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -83,7 +86,7 @@
       "extended": false
     },
     "ap": {
-      "cost": 0,
+      "cost": null,
       "bind": false
     },
     "prerequisites": [
@@ -94,7 +97,9 @@
     "class": "Hex Maniac",
     "name": "Hex Maniac [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "hex-maniac"
+    "replacesSlug": "hex-maniac",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -107,7 +112,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
