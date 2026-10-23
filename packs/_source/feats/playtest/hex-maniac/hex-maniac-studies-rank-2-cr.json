@@ -2,7 +2,7 @@
   "name": "Hex Maniac Studies Rank 2",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Learn two Hex Maniac Moves. You may choose any Move marked with the Hex Maniac Studies Rank you are taking or lower.\nRank 1: Confuse Ray, Curse, Hypnosis, Spite, Will-O-Wisp,\nRank 3: Hex, Dream Eater\nNote: When using Curse, you must use Curse as if you were a Ghost-Type Pokémon.",
+    "effect": "Learn two Hex Maniac Moves. You may choose any Move marked with the Hex Maniac Studies Rank you are taking or lower.\nRank 1: @UUID[Compendium.ptu.moves.Item.WUgXHLrvnUAn2vky]{Confuse Ray}, @UUID[Compendium.ptu.moves.Item.5A0ZjnRjOwj1i7n8]{Curse}, @UUID[Compendium.ptu.moves.Item.3abHb5scrH2j6qMF]{Hypnosis}, @UUID[Compendium.ptu.moves.Item.7sMVSFGaJax6lWuM]{Spite}, @UUID[Compendium.ptu.moves.Item.qltGKDIhEJpOqswU]{Will-O-Wisp}\nRank 3: @UUID[Compendium.ptu.moves.Item.XbAfCHhH425Ldmj4]{Hex}, @UUID[Compendium.ptu.moves.Item.hGvLkFzRbc1D0FX0]{Dream Eater}\nNote: When using Curse, you must use Curse as if you were a Ghost-Type Pokémon.",
     "snippet": "",
     "rules": [
       {
@@ -182,7 +182,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   },

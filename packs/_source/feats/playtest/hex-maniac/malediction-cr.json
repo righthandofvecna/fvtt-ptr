@@ -2,7 +2,7 @@
   "name": "Malediction",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: A foe within 5 meters misses all targets with an attack\nEffect: Use a Status-Class Move gained from Hex Maniac Studies targeting the triggering foe as a Free Action, Frequency-permitting.",
+    "effect": "Trigger: A foe within 5 meters misses all targets with an attack\nEffect: Use a Status-Class Move gained from @UUID[Compendium.ptu.feats.Item.J4P2Kybavp5VhCmW]{Hex Maniac Studies} targeting the triggering foe as a Free Action, Frequency-permitting.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "class": "Hex Maniac",
     "name": "Malediction [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "malediction"
+    "replacesSlug": "malediction",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
