@@ -1,6 +1,6 @@
 {
   "folder": "6meG7SeyLvR39TI3",
-  "name": "Overwhelming",
+  "name": "Overwhelming [CR]",
   "type": "feat",
   "_id": "8MddVltNQSurblOp",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -32,7 +32,7 @@
     "keywords": [
       "Branch",
       "Playtest",
-      "CR"
+      "Class Rework"
     ],
     "frequency": {
       "type": "static",
@@ -44,7 +44,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,11 +61,12 @@
     "leagueLegal": false,
     "prerequisites": [
       "Tyrant's Roar [CR]",
-      "Type-Linked Skill at Expert Rank"
+      "Command or Intimidate at Expert"
     ],
     "notes": "",
     "free": false,
-    "class": "Type Ace (Dragon)"
+    "class": "Type Ace (Dragon)",
+    "repeatable": false
   },
   "effects": [],
   "flags": {
@@ -73,7 +75,9 @@
       "grantedBy": {
         "id": "1vQUZwGkxpawuWEC",
         "onDelete": "detach"
-      }
+      },
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   }
 }

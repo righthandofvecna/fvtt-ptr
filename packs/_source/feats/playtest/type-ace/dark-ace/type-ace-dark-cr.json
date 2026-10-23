@@ -27,7 +27,8 @@
       "Class",
       "Branch",
       "Playtest",
-      "Class Rework"
+      "Class Rework",
+      "Type Linked (Dark)"
     ],
     "frequency": {
       "type": "at-will",
@@ -39,7 +40,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -54,11 +56,11 @@
     },
     "prerequisites": [
       "All A or B options",
-      "A: 2 Different Pokémon of the chosen Type",
-      "A: Type-Linked Skill at Novice",
-      "B: Elemental Connection (of the chosen Type)",
-      "B: 1 Pokémon of the chosen Type",
-      "B: Type-Linked Skill at Novice"
+      "A: 2 Different Dark Type Pokemon",
+      "A: Guile or Stealth at Novice",
+      "B: Elemental Connection (Dark)",
+      "B: 1 Dark Type Pokemon",
+      "B: Guile or Stealth at Novice"
     ],
     "notes": "",
     "free": false,
@@ -67,7 +69,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
-    "replacesSlug": "type-ace-dark"
+    "replacesSlug": "type-ace-dark",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -75,7 +79,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "2 Different Pokémon of the chosen Type, Type-Linked Skill* at Novice\nOR\nElemental Connection (of the chosen Type), 1 Pokémon of the chosen Type, Type-Linked Skill* at Novice\n*See Extras - Class Mechanics for details.",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "folder": "WkzYl2eCkah61zli",
