@@ -2,7 +2,7 @@
   "name": "Passionato Harmony",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Dazzling Gleam and Draining Kiss.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.tqoJF3EAgEEv3l1l]{Dazzling Gleam} and @UUID[Compendium.ptu.moves.Item.8BihXjkV4RVUcbMf]{Draining Kiss}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,18 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.tqoJF3EAgEEv3l1l"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.8BihXjkV4RVUcbMf"
       }
     ],
     "enabled": true,
@@ -48,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +83,9 @@
     "class": "Glamour Weaver",
     "name": "Passionato Harmony [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "passionato-harmony"
+    "replacesSlug": "passionato-harmony",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +96,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
