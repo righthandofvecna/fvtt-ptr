@@ -132,10 +132,10 @@ export class PTUSpeciesMassGenerator extends FormApplication {
     async close(options) {
         if (options?.properClose) {
             await Promise.all([
-                game.settings.set("ptu", "generation.defaultDexDragInLevelMin", this.data.level.min),
-                game.settings.set("ptu", "generation.defaultDexDragInLevelMax", this.data.level.max),
-                game.settings.set("ptu", "generation.defaultDexDragInShinyChance", this.data.shinyChance),
-                game.settings.set("ptu", "generation.defaultDexDragInAlphaChance", this.data.alphaChance),
+                game.settings.set("ptu", "generation.defaultMassGeneratorLevelMin", this.data.level.min),
+                game.settings.set("ptu", "generation.defaultMassGeneratorLevelMax", this.data.level.max),
+                game.settings.set("ptu", "generation.defaultMassGeneratorShinyChance", this.data.shinyChance),
+                game.settings.set("ptu", "generation.defaultMassGeneratorAlphaChance", this.data.alphaChance),
                 game.settings.set("ptu", "generation.defaultMassGeneratorAmount", this.data.amount),
                 game.settings.set("ptu", "generation.defaultMassGeneratorSpeciesTab", this.data.speciesTab),
                 game.settings.set("ptu", "generation.defaultMassGeneratorSpeciesUuid", this.data.speciesField.value ?? ""),

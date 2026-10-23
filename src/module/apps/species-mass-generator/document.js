@@ -34,11 +34,11 @@ export class SpeciesGeneratorData {
             updated: !!savedFolderField,
         }
         this.level = {
-            min: game.settings.get("ptu", "generation.defaultDexDragInLevelMin") ?? 0,
-            max: game.settings.get("ptu", "generation.defaultDexDragInLevelMax") ?? 0
+            min: game.settings.get("ptu", "generation.defaultMassGeneratorLevelMin") ?? 0,
+            max: game.settings.get("ptu", "generation.defaultMassGeneratorLevelMax") ?? 0
         }
-        this.shinyChance = Number(game.settings.get("ptu", "generation.defaultDexDragInShinyChance")) ?? 0;
-        this.alphaChance = Number(game.settings.get("ptu", "generation.defaultDexDragInAlphaChance")) ?? 0;
+        this.shinyChance = Number(game.settings.get("ptu", "generation.defaultMassGeneratorShinyChance")) ?? 0;
+        this.alphaChance = Number(game.settings.get("ptu", "generation.defaultMassGeneratorAlphaChance")) ?? 0;
         this.helpText = {
             species: undefined,
             table: undefined,

@@ -27,6 +27,7 @@ const GenerationSettingsConfig = {
         default: false
     },
     // These settings should be hidden, since they're auto-set
+    // Drag-In Settings
     "defaultDexDragInLevelMin": {
         name: "PTU.Settings.Generation.DefaultDexDragInLevelMin.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInLevelMin.Hint",
@@ -75,6 +76,47 @@ const GenerationSettingsConfig = {
         default: 0,
         hidden: true
     },
+    // Mass Generator Settings
+    "defaultMassGeneratorLevelMin": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorLevelMin.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorLevelMin.Hint",
+        type: Number,
+        scope: "user",
+        default: 10,
+        hidden: true
+    },
+    "defaultMassGeneratorLevelMax": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorLevelMax.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorLevelMax.Hint",
+        type: Number,
+        scope: "user",
+        default: 10,
+        hidden: true
+    },
+    "defaultMassGeneratorPreventEvolution": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorPreventEvolution.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorPreventEvolution.Hint",
+        type: Boolean,
+        scope: "user",
+        default: false,
+        hidden: true
+    },
+    "defaultMassGeneratorAlphaChance": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorAlphaChance.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorAlphaChance.Hint",
+        type: Number,
+        scope: "user",
+        default: 0,
+        hidden: true
+    },
+    "defaultMassGeneratorShinyChance": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorShinyChance.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorShinyChance.Hint",
+        type: Number,
+        scope: "user",
+        default: 2,
+        hidden: true
+    },
     "defaultMassGeneratorAmount": {
         name: "PTU.Settings.Generation.DefaultMassGeneratorAmount.Name",
         hint: "PTU.Settings.Generation.DefaultMassGeneratorAmount.Hint",
@@ -114,7 +156,7 @@ const GenerationSettingsConfig = {
         scope: "user",
         default: "",
         hidden: true
-    }
+    },
 }
 
 export class GenerationSettings extends PTUSettingsMenu {
