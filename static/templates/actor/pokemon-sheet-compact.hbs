@@ -1414,6 +1414,33 @@
                         </div>
                     </div>
 
+                    {{!-- Friendship and Loyalty --}}
+                    <div class="swsh-box mb-2 w-100">
+                        <div
+                            class="swsh-header ball-themes ball-theme-{{ballStyle}} highlight pt-2 center-text justify-content-center">
+                            <div class="fb-50 center-text pl-2 pr-2">
+                                <label for="system.friendship"><b>{{localize "PTU.Spirit.Friendship"}}</b></label>
+                            </div>
+                            <div class="fb-50 center-text pl-2 pr-2">
+                                <label for="system.loyalty"><b>{{localize "PTU.Loyalty"}}</b></label>
+                            </div>
+                        </div>
+                        <div class="swsh-body mt-1 mb-1 justify-content-evenly">
+                            <div class="fb-50 center-text pl-2 pr-2">
+                                {{#if (getGameSetting "variant.spiritPlaytest")}}
+                                <span data-tooltip="The Friendship value is configurable in the Spirit and Friendship tab.">{{actor.system.friendship}}</span>
+                                {{else}}
+                                <input type="number" name="system.friendship" value="{{actor.system.friendship}}"
+                                    data-dtype="Number" {{#unless isGM}}disabled{{/unless}} />
+                                {{/if}}
+                            </div>
+                            <div class="fb-50 center-text pl-2 pr-2">
+                                <input type="number" name="system.loyalty" value="{{actor.system.loyalty}}"
+                                    data-dtype="Number" {{#unless isGM}}disabled{{/unless}} />
+                            </div>
+                        </div>
+                    </div>
+
                     {{#if (isGm)}}
                     <!-- Boss Settings -->
                     <div class="swsh-box mb-2 w-100">
