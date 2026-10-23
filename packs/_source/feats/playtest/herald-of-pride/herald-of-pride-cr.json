@@ -28,7 +28,7 @@
     "enabled": true,
     "slug": "herald-of-pride-cr",
     "contentSet": "class-rework",
-    "replacesSlug": "",
+    "replacesSlug": "herald-of-pride",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -41,6 +41,7 @@
     "keywords": [
       "Class",
       "+Attack",
+      "Type Linked (Dragon)",
       "Weapon",
       "Playtest",
       "Class Rework"
@@ -76,7 +77,7 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Herald of Pride [CR]",
+    "class": "Herald of Pride",
     "name": "Herald of Pride [CR]",
     "repeatable": false
   },
