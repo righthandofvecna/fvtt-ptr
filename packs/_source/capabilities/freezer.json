@@ -31,9 +31,7 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [
-      "Struggle"
-    ],
+    "keywords": [],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -84,6 +82,5 @@
       "devNote": "",
       "showInTokenPanel": false
     }
-  },
-  "folder": null
+  }
 }

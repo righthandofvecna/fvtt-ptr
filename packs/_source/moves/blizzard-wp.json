@@ -63,7 +63,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -97,6 +98,5 @@
       "devNote": "",
       "used": null
     }
-  },
-  "folder": null
+  }
 }

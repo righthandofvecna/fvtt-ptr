@@ -2,12 +2,11 @@
   "name": "The Cold Never Bothered Me Anyway",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Naturewalk (Tundra) Capability, are immune to being Frozen, and do not lose Hit Points from Hail.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.capabilities.Item.JxfnaqlVTjGaXTmF]{Naturewalk (Tundra)} Capability, are immune to being @UUID[Compendium.ptu.effects.Item.7F4dkJoDuD7wNcEK]{Frozen}, and do not lose Hit Points from Hail.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "thecoldneverbotheredmeanyway",
         "choices": [
           {
@@ -28,6 +27,12 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.JxfnaqlVTjGaXTmF"
       }
     ],
     "enabled": true,
@@ -63,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -84,7 +90,9 @@
     "class": "Frost Touched",
     "name": "The Cold Never Bothered Me Anyway [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "the-cold-never-bothered-me-anyway"
+    "replacesSlug": "the-cold-never-bothered-me-anyway",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -97,7 +105,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
