@@ -1,15 +1,10 @@
-import { sluggify } from "../../util/misc.js";
 import { PTUCombatant } from "../combat/combatant.js";
 import { PTUCondition } from "../item/index.js";
 import { ChatMessagePTU } from "../message/base.js";
 import { extractEphemeralEffects, processPreUpdateActorHooks } from "../rules/helpers.js";
-import { PTUAttackCheck } from "../system/check/attack.js";
-import { PTUDiceCheck, eventToRollParams } from "../system/check/check.js";
-import { PTUDamageCheck } from "../system/check/damage.js";
+import { PTUDiceCheck, } from "../system/check/check.js";
 import { InitiativeRoll } from "../system/check/rolls/initiative-roll.js";
 import { PTUSkillCheck } from "../system/check/skill.js";
-import { PTUDamage } from "../system/damage/damage.js";
-import { PTUMoveDamage } from "../system/damage/move.js";
 import { ActorConditions } from "./conditions.js";
 import { IWRData, ImmunityData, ResistanceData, WeaknessData } from "./iwr.js";
 import { PTUModifier, StatisticModifier } from "./modifiers.js";
@@ -55,7 +50,7 @@ class PTUActor extends Actor {
     }
 
     get sizeClass() {
-        return "Medium;"
+        return "Medium"
     }
 
     get alliance() {

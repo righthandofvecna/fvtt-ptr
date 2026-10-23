@@ -115,7 +115,7 @@ class PTUSettingsMenu extends FormApplication {
     }
 }
 function settingsToSheetData(settings, cache, prefix = "") {
-    return Object.entries(settings).reduce((result, [key, setting]) => {
+    return Object.entries(settings).filter(([key, setting]) => !setting.hidden).reduce((result, [key, setting]) => {
         const lookupKey = `${prefix}${key}`;
         const value = key in cache ? cache[key] : game.settings.get("ptu", lookupKey);
         cache[key] = value;

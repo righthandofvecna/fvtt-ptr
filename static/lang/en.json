@@ -599,8 +599,8 @@
 
     "QuickPokemonGeneration": "Quick Generate Pokemon",
     "LevelRange": "Level Range",
-    "ShinyChance": "Shiny Chance",
-    "StatRandomness": "% Stat Randomness",
+    "ShinyChance": "Shiny Chance (%)",
+    "StatRandomness": "Stat Randomness (%)",
     "PreventEvolution": "Prevent Evolution?",
     "AlphaChance": "Alpha Chance (%)",
     "Submit": "Submit",

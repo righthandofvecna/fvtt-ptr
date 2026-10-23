@@ -29,15 +29,16 @@ export class PTUSpeciesDragOptionsPrompt extends FormApplication {
 
         const shinyChanceDefault = Number(game.settings.get("ptu", "generation.defaultDexDragInShinyChance"));
         const statRandomnessDefault = Number(game.settings.get("ptu", "generation.defaultDexDragInStatRandomness"));
+        const alphaChanceDefault = Number(game.settings.get("ptu", "generation.defaultDexDragInAlphaChance"));
 
         return {
             ...data,
             levelMinDefault: game.settings.get("ptu", "generation.defaultDexDragInLevelMin"),
             levelMaxDefault: game.settings.get("ptu", "generation.defaultDexDragInLevelMax"),
-            shinyChanceDefault: shinyChanceDefault > 1 ? shinyChanceDefault / 100 : shinyChanceDefault,
-            statRandomnessDefault: statRandomnessDefault > 1 ? statRandomnessDefault / 100 : statRandomnessDefault,
+            shinyChanceDefault,
+            statRandomnessDefault,
+            alphaChanceDefault,
             preventDefault: game.settings.get("ptu", "generation.defaultDexDragInPreventEvolution"),
-            alphaChanceDefault: Number(game.settings.get("ptu", "generation.defaultDexDragInAlphaChance")),
             species: this.species.name
         }
     }

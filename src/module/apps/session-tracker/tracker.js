@@ -11,6 +11,9 @@ export class PTUSessionTracker {
     /**
      * Base friendship-point costs to advance from each level.
      * Index = current friendship level (0-4).
+     * Because "lowest friendship" affects the cost multiplier,
+     * the cost for 0->1 friendship and 1->2 friendship is always higher
+     * than listed here.
      */
     static BASE_COSTS = [3, 3, 3, 6, 12];
 

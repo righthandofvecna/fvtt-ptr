@@ -13,17 +13,15 @@ export class PokemonGenerator {
         this.prepared = false;
     }
 
-    async prepare(
-        { minLevel, maxLevel, shinyChance, statRandomness, preventEvolution, alphaChance, saveDefault } =
-            {
-                minLevel: Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMin")),
-                maxLevel: Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMax")),
-                shinyChance: Number(game.settings.get("ptu", "generation.defaultDexDragInShinyChance")),
-                statRandomness: Number(game.settings.get("ptu", "generation.defaultDexDragInStatRandomness")),
-                preventEvolution: game.settings.get("ptu", "generation.defaultDexDragInPreventEvolution"),
-                alphaChance: Number(game.settings.get("ptu", "generation.defaultDexDragInAlphaChance")),
-                saveDefault: false
-            }) {
+    async prepare({ minLevel, maxLevel, shinyChance, statRandomness, preventEvolution, alphaChance, saveDefault } = {}) {
+        minLevel ??= Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMin")),
+        maxLevel ??= Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMax")),
+        shinyChance ??= Number(game.settings.get("ptu", "generation.defaultDexDragInShinyChance")),
+        statRandomness ??= Number(game.settings.get("ptu", "generation.defaultDexDragInStatRandomness")),
+        preventEvolution ??= game.settings.get("ptu", "generation.defaultDexDragInPreventEvolution"),
+        alphaChance ??= Number(game.settings.get("ptu", "generation.defaultDexDragInAlphaChance")),
+        saveDefault ??= false
+        
         if (!this.level) {
             this.level = (() => {
                 if (minLevel == maxLevel) return minLevel;
@@ -314,7 +312,7 @@ export class PokemonGenerator {
     }
 
     prepareStats(randomness) {
-        if (randomness > 1) randomness *= 0.01;
+        randomness /= 100;
 
         const levelUpPoints = this.level + 10;
         const randomPoints = Math.ceil(Math.random() * (levelUpPoints * randomness));
@@ -393,14 +391,14 @@ export class PokemonGenerator {
     }
 
     prepareShinyness(shinyChance) {
-        if (shinyChance >= 1) shinyChance *= 0.01;
+        shinyChance /= 100;
 
         if (shinyChance == 0) return this.shiny = false;
         return this.shiny = Math.random() < shinyChance;
     }
 
     prepareAlpha(alphaChance) {
-        if (alphaChance > 1) alphaChance /= 100;
+        alphaChance /= 100;
         if (alphaChance === 0) return this.alpha = false;
         return this.alpha = Math.random() < alphaChance;
     }

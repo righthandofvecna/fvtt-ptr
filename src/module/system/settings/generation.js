@@ -26,12 +26,14 @@ const GenerationSettingsConfig = {
         type: Boolean,
         default: false
     },
+    // These settings should be hidden, since they're auto-set
     "defaultDexDragInLevelMin": {
         name: "PTU.Settings.Generation.DefaultDexDragInLevelMin.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInLevelMin.Hint",
         type: Number,
         scope: "user",
-        default: 10
+        default: 10,
+        hidden: true
     },
     "defaultDexDragInLevelMax": {
         name: "PTU.Settings.Generation.DefaultDexDragInLevelMax.Name",
@@ -39,70 +41,79 @@ const GenerationSettingsConfig = {
         type: Number,
         scope: "user",
         default: 10,
+        hidden: true
     },
     "defaultDexDragInShinyChance": {
         name: "PTU.Settings.Generation.DefaultDexDragInShinyChance.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInShinyChance.Hint",
         type: Number,
         scope: "user",
-        default: 2
+        default: 2,
+        hidden: true
     },
     "defaultDexDragInStatRandomness": {
         name: "PTU.Settings.Generation.DefaultDexDragInStatRandomness.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInStatRandomness.Hint",
         type: Number,
         scope: "user",
-        default: 20
+        default: 20,
+        hidden: true
     },
     "defaultDexDragInPreventEvolution": {
         name: "PTU.Settings.Generation.DefaultDexDragInPreventEvolution.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInPreventEvolution.Hint",
         type: Boolean,
         scope: "user",
-        default: false
+        default: false,
+        hidden: true
     },
     "defaultDexDragInAlphaChance": {
         name: "PTU.Settings.Generation.DefaultDexDragInAlphaChance.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInAlphaChance.Hint",
         type: Number,
         scope: "user",
-        default: 0
+        default: 0,
+        hidden: true
     },
-    // TODO: remove these next ones and just make them hidden settings
     "defaultMassGeneratorAmount": {
         name: "PTU.Settings.Generation.DefaultMassGeneratorAmount.Name",
         hint: "PTU.Settings.Generation.DefaultMassGeneratorAmount.Hint",
         type: Number,
         scope: "user",
-        default: 20
+        default: 20,
+        hidden: true
     },
     "defaultMassGeneratorSpeciesTab": {
         name: "PTU.Settings.Generation.DefaultMassGeneratorSpeciesTab.Name",
         hint: "PTU.Settings.Generation.DefaultMassGeneratorSpeciesTab.Hint",
         type: String,
         scope: "user",
-        default: "species"
+        default: "species",
+        hidden: true
     },
     "defaultMassGeneratorSpeciesUuid": {
         name: "PTU.Settings.Generation.DefaultMassGeneratorSpeciesUuid.Name",
         hint: "PTU.Settings.Generation.DefaultMassGeneratorSpeciesUuid.Hint",
         type: String,
         scope: "user",
-        default: ""
+        default: "",
+        hidden: true
     },
     "defaultMassGeneratorTableUuid": {
         name: "PTU.Settings.Generation.DefaultMassGeneratorTableUuid.Name",
         hint: "PTU.Settings.Generation.DefaultMassGeneratorTableUuid.Hint",
         type: String,
         scope: "user",
-        default: ""
+        default: "",
+        hidden: true
     },
     "defaultMassGeneratorFolderField": {
         name: "PTU.Settings.Generation.DefaultMassGeneratorFolderField.Name",
         hint: "PTU.Settings.Generation.DefaultMassGeneratorFolderField.Hint",
         type: String,
         scope: "user",
-        default: ""
+        default: "",
+        hidden: true
     }
 }
 
