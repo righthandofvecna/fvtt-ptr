@@ -865,6 +865,36 @@ class PTUPokemonActor extends PTUActor {
         if (toRemove.length > 0) await this.deleteEmbeddedDocuments("Item", toRemove);
         if (toAdd.length > 0) await this.createEmbeddedDocuments("Item", toAdd);
     }
+
+    /** @override */
+    async onDayEnd() {
+        await super.onDayEnd();
+        const actorUpdate = {};
+        const newItems = [];
+
+        // Handle end-of-day Spirit recharging
+        if (game.settings.get("ptu", "variant.spiritPlaytest") && this.trainer !== null) {
+            // Spirit gets set to Friendship -2, unless it was at -3. Then it's Friendship -3.
+
+            let newSpirit = this.system.friendship - 2;
+            if (this.system.spirit.value <= -3) newSpirit -= 1;
+
+            // if spirit was -2, lose a tick of hit points
+            if (this.system.spirit.value <= -2) {
+                actorUpdate["system.health.value"] = Math.max(this.system.attributes.hp.value - this.system.attributes.hp.max, 0);
+            }
+
+            // if spirit was at -1, add the -1 penalty
+            if (this.system.spirit.value <= -1) {
+                newItems.push(foundry.utils.deepClone((await fromUuid("Compendium.ptu.effects.Item.I42OHlDF6lnNLp2I")).toObject()));
+            }
+
+            actorUpdate["system.spirit.value"] = newSpirit;
+        }
+
+        if (newItems.length > 0) await this.createEmbeddedDocuments("Item", newItems);
+        if (Object.keys(actorUpdate).length > 0) await this.update(actorUpdate);
+    }
 }
 
 export { PTUPokemonActor }

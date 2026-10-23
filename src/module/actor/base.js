@@ -1363,6 +1363,7 @@ class PTUActor extends Actor {
 
     /**
      * Called at the end of a day, handling end-of-day cleanup and restoration.
+     * This is an Extended Rest.
      */
     async onDayEnd() {
         const itemUpdates = []
