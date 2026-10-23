@@ -2,7 +2,6 @@
   "name": "Dragon Tail",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target is Pushed 6 meters minus their Weight Class. The target is also Tripped on 15+.",
@@ -15,7 +14,8 @@
         "uuid": "Compendium.ptu.effects.Item.4lqKV4CxikZxxNWJ",
         "range": "15",
         "value": "",
-        "affects": "target"
+        "affects": "target",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -58,7 +58,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -93,7 +94,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

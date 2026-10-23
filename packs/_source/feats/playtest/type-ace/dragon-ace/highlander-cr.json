@@ -1,6 +1,6 @@
 {
   "folder": "6meG7SeyLvR39TI3",
-  "name": "Highlander",
+  "name": "Highlander [CR]",
   "type": "feat",
   "_id": "DsVu60K0m8R8e9G8",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -32,9 +32,9 @@
     "keywords": [
       "Branch",
       "Playtest",
-      "CR",
       "Orders",
-      "Stratagem"
+      "Stratagem",
+      "Class Rework"
     ],
     "frequency": {
       "type": "static",
@@ -46,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -61,21 +62,24 @@
     },
     "leagueLegal": false,
     "prerequisites": [
-      "Tyrant's Roar",
-      "Type-Linked Skill at Adept"
+      "Tyrant's Roar [CR]",
+      "Command or Intimidate at Adept"
     ],
     "notes": "",
     "free": false,
     "class": "Type Ace (Dragon)",
     "name": "Highlander",
     "useCount": 0,
-    "automation": []
+    "automation": [],
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Tyrant's Roar, Type-Linked Skill at Adept"
+      "prereqBackup": "Tyrant's Roar, Type-Linked Skill at Adept",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "LocknKey": {
       "IDKeysFlag": "",

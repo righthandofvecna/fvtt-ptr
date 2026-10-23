@@ -2,7 +2,6 @@
   "name": "Topsy-Turvy",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target's Combat Stages are inverted; +1 Stage becomes -1 Stage, -3 Stages becomes +3 Stages, etc.",
@@ -47,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -71,7 +71,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "WTWYhB6hi3Ya4U9i",
   "effects": [],
@@ -79,7 +80,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

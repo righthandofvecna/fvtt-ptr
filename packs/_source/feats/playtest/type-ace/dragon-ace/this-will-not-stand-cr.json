@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -55,18 +56,23 @@
       "bind": false
     },
     "prerequisites": [
-      "Tyrant's Roar"
+      "Tyrant's Roar [CR]"
     ],
     "notes": "",
     "free": false,
     "class": "Type Ace (Dragon)",
     "contentSet": "class-rework",
-    "replacesSlug": "this-will-not-stand"
+    "replacesSlug": "this-will-not-stand",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_id": "69cVFbdSyh2ykHYo",

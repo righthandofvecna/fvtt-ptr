@@ -1,0 +1,60 @@
+{
+  "name": "Effect: Enchanting Transformation",
+  "type": "effect",
+  "_id": "b12GoZepeDgUSj26",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Your natural Weaknesses, Resistances, and Immunities change to match that of the Fairy Type.\n\n<blockquote>The below effects are not automated!</blockquote> Additionally, your Glamour Weaver Moves have the additional effects below:\n    - Sweet Kiss: Sweet Kiss ignores Speed Evasion.\n    - Disarming Voice: You may also choose to use Disarming Voice as a Line 4 or Cone 2.\n    - Dazzling Gleam: On Even-Numbered rolls, targets hit by Dazzling Gleam have their Accuracy Lowered by 1.\n    - Draining Kiss: You gain an additional Tick of Hit Points when gaining Hit Points from Draining Kiss.\n    - Moonblast: Whenever Moonblast misses a target, they lose a Tick of Hit Points.\n    - Aromatic Mist: All allies affected by Aromatic Mist gain a +2 bonus to their next Save Check.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.effects.Item.d5w5ffrIIYmFUUzj"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-enchanting-transformation",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "Uv4mgOt4xtb28hzB",
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Additional Move effects not automated",
+      "showInTokenPanel": false
+    }
+  }
+}

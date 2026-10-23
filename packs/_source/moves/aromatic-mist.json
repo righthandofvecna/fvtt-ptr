@@ -2,7 +2,6 @@
   "name": "Aromatic Mist",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FairyIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Raise the Special Defense of all allied legal targets by 1 Combat Stage.",

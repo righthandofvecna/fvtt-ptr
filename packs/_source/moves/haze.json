@@ -2,7 +2,6 @@
   "name": "Haze",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The Combat Stages of the user and all Pokémon and Trainers in the encounter are set to their default state (usually 0).",
@@ -45,7 +44,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -80,7 +80,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

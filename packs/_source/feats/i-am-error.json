@@ -2,14 +2,17 @@
   "name": "I Am Error",
   "system": {
     "origin": "",
-    "effect": "Trigger: You gain a Status Affliction:  \nRoll 1d10 and change which Status Affliction is gained: \n1-Sleep, 2-Burn, 3-Frozen, 4, Infatuation (Chosen Randomly among foes), 5-Poison\n, 6-Confused, 7-Paralysis, 8-Enraged, 9-Disabled (chosen at random from Known Moves), 10-Suppressed. \nIf the target already has that Status Affliction, roll again.",
+    "effect": "Trigger: You gain a Status Affliction:  \nRoll 1d10 and change which Status Affliction is gained: \n1-@UUID[Compendium.ptu.effects.Item.RekZDOcIsADhrfH3]{Sleep}, 2-@UUID[Compendium.ptu.effects.Item.NA1Vn8A2h6JIIUhj]{Burn}, 3-@UUID[Compendium.ptu.effects.Item.7F4dkJoDuD7wNcEK]{Frozen}, 4-@UUID[Compendium.ptu.effects.Item.ABTHN2VM50VQabZq]{Infatuation} (Chosen Randomly among foes), 5-@UUID[Compendium.ptu.effects.Item.299X6pActAV8ITz7]{Poison}, 6-@UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confused}, 7-@UUID[Compendium.ptu.effects.Item.bzZaLfYxVyKbJOCo]{Paralysis}, 8-@UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Enraged}, 9-@UUID[Compendium.ptu.effects.Item.GUKAMwsFi0EJ56WD]{Disabled} (chosen at random from Known Moves), 10-@UUID[Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY]{Suppressed}. \nIf you already have that Status Affliction, roll again.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spdef.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -43,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -66,7 +70,9 @@
     "name": "I Am Error",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -76,7 +82,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Glitch Bender"
+      "prereqBackup": "Glitch Bender",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -89,7 +98,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 40400000,
   "_id": "aetIM2w7iHxoeUi9"
 }

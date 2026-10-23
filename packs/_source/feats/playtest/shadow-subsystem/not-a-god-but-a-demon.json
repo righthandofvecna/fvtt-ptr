@@ -6,12 +6,11 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Effect: You enter Hyper Mode without needing to meet one of the appropriate triggers or failing the initial Save roll.",
+    "effect": "Effect: You enter @UUID[Compendium.ptu.effects.Item.NegVrXO5uxnkiyIZ]{Hyper Mode} without needing to meet one of the appropriate triggers or failing the initial Save roll.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "notAGodButADemon",
         "choices": [
           {
@@ -30,7 +29,8 @@
         "mode": "add",
         "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.notAGodButADemon}.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -64,7 +64,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -85,7 +86,9 @@
     "free": false,
     "class": "",
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -94,7 +97,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

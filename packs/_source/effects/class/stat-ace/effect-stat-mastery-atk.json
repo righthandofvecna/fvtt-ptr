@@ -1,0 +1,64 @@
+{
+  "folder": "3ytoWW3tJMtnZJNo",
+  "name": "Effect: Stat Mastery (Atk)",
+  "type": "effect",
+  "_id": "6r4WJX7j8a75ENzo",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "When your Pokémon rolls an 18+ on the Accuracy Check with a Physical Attack and hits the target, the target of the Physical Attack loses a Tick of Hit Points.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "affects": "target",
+        "selectors": "physical-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.xJGO9iEdMWko0tu6",
+        "range": "18",
+        "linked": false,
+        "value": ""
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-stat-mastery-atk",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  }
+}

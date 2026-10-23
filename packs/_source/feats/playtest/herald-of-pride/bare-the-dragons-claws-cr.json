@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Breaking Swipe, Dragon Claw, and Dragon Tail. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.lA7uzkBcGhFOexAT]{Breaking Swipe}, @UUID[Compendium.ptu.moves.Item.ulXmidTSzjPqUrfI]{Dragon Claw}, and @UUID[Compendium.ptu.moves.Item.fQxEojo3sSwnLk1q]{Dragon Tail}. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
     "snippet": "",
     "rules": [
       {
@@ -21,24 +21,45 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.moves.Item.fQxEojo3sSwnLk1q"
+        "uuid": "Compendium.ptu.moves.Item.fQxEojo3sSwnLk1q",
+        "modifications": [
+          {
+            "key": "system.keywords",
+            "operation": "add",
+            "value": "Weapon"
+          }
+        ]
       },
       {
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.moves.Item.ulXmidTSzjPqUrfI"
+        "uuid": "Compendium.ptu.moves.Item.ulXmidTSzjPqUrfI",
+        "modifications": [
+          {
+            "key": "system.keywords",
+            "operation": "add",
+            "value": "Weapon"
+          }
+        ]
       },
       {
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.moves.Item.lA7uzkBcGhFOexAT"
+        "uuid": "Compendium.ptu.moves.Item.lA7uzkBcGhFOexAT",
+        "modifications": [
+          {
+            "key": "system.keywords",
+            "operation": "add",
+            "value": "Weapon"
+          }
+        ]
       }
     ],
     "enabled": true,
     "slug": "bare-the-dragons-claws-cr",
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": "",
     "schema": {
       "version": null,
@@ -65,7 +86,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -86,13 +108,16 @@
     "notes": "",
     "free": false,
     "class": "Herald of Pride",
-    "name": "Bare the Dragon’s Claws [CR]"
+    "name": "Bare the Dragon’s Claws [CR]",
+    "repeatable": false
   },
   "folder": "lZqjsR5bQoFGXnFK",
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   }
 }

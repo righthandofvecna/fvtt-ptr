@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Regal Challenge Ability.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.abilities.Item.SRJ62OMgoKi2xUII]{Regal Challenge} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -21,12 +21,12 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.abilities.Item.7QhiKxrM6NO3tbuP"
+        "uuid": "Compendium.ptu.abilities.Item.SRJ62OMgoKi2xUII"
       }
     ],
     "enabled": true,
     "slug": "noblesse-oblige-cr",
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": "",
     "schema": {
       "version": null,
@@ -52,7 +52,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -72,14 +73,15 @@
     "notes": "",
     "free": false,
     "class": "Herald of Pride",
-    "name": "Noblesse Oblige [CR]"
+    "name": "Noblesse Oblige [CR]",
+    "repeatable": false
   },
   "folder": "lZqjsR5bQoFGXnFK",
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

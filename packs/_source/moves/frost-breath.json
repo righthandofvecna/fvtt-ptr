@@ -2,7 +2,6 @@
   "name": "Frost Breath",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "If Frost Breath hits, it is a Critical Hit. *Grants: Freezer",

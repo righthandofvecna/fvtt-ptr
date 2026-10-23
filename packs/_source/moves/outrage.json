@@ -2,7 +2,6 @@
   "name": "Outrage",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Outrage makes the user becomes Enraged and Confused after damage is dealt.",
@@ -15,7 +14,8 @@
         "uuid": "Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh",
         "range": "1",
         "value": "",
-        "affects": "origin"
+        "affects": "origin",
+        "linked": false
       },
       {
         "key": "ApplyEffect",
@@ -24,7 +24,8 @@
         "selectors": "{item|id}-damage-dealt",
         "uuid": "Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH",
         "range": "1",
-        "value": ""
+        "value": "",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -67,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -102,7 +104,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

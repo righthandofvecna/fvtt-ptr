@@ -2,7 +2,7 @@
   "name": "Glamour Weaver",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Sweet Kiss and Disarming Voice.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.0cpoDUWBYwTiDlnG]{Sweet Kiss} and @UUID[Compendium.ptu.moves.Item.NAhc5NF7m0p5BPmP]{Disarming Voice}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,18 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.0cpoDUWBYwTiDlnG"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.NAhc5NF7m0p5BPmP"
       }
     ],
     "enabled": true,
@@ -49,7 +61,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +84,9 @@
     "class": "Glamour Weaver",
     "name": "Glamour Weaver [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "glamour-weaver"
+    "replacesSlug": "glamour-weaver",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -82,7 +97,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

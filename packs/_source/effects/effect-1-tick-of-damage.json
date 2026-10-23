@@ -1,0 +1,63 @@
+{
+  "name": "Effect: 1 tick of damage",
+  "type": "effect",
+  "_id": "xJGO9iEdMWko0tu6",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "InstantChange",
+        "predicate": [],
+        "trigger": "onCreate",
+        "mode": "subtract",
+        "path": "system.health.value",
+        "value": "floor({actor|system.health.total}/10)",
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-1-tick-of-damage",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  }
+}

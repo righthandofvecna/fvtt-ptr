@@ -2,7 +2,6 @@
   "name": "Ice Spinner",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Destroy all terrains and hazards on the Field. This attack does 5 more damage for each.",
