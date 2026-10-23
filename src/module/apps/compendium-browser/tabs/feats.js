@@ -134,7 +134,19 @@ export class CompendiumBrowserFeatsTab extends CompendiumBrowserTab {
 
         // Class
         if (checkboxes.class.selected.length) {
-            if (!checkboxes.class.selected.includes(entry.class.toLowerCase())) return false;
+            const entryClass = entry.class.toLowerCase();
+            const matches = checkboxes.class.selected.some(selectedSlug => {
+                if (entryClass === selectedSlug) return true;
+                // If the selected class is a parenthesized subclass (e.g. "type-ace-fire"),
+                // also show features belonging to the base class (e.g. "type-ace").
+                const option = checkboxes.class.options[selectedSlug];
+                if (option) {
+                    const basePretty = option.label.replace(/\s*\([^)]*\)\s*$/, '').trim();
+                    if (basePretty !== option.label && entryClass === sluggify(basePretty)) return true;
+                }
+                return false;
+            });
+            if (!matches) return false;
         }
 
         if (!this.isEntryHonoringMultiselect(multiselects.keywords, entry.keywords)) return false;

@@ -8,6 +8,7 @@
 import { TestRegistry } from "../registry.js";
 import { assert, assertEqual } from "../helpers/index.js";
 import { checkSinglePrereq, simplifyString, meetsPrereqsWithContext } from "../../util/prereq-checker.js";
+import { sluggify } from "../../util/misc.js";
 
 const CATEGORY = "prerequisites";
 
@@ -17,17 +18,28 @@ const CATEGORY = "prerequisites";
  * Build a minimal prereq context.
  * @param {{ level?: number, skills?: Record<string, number>, itemNames?: string[], itemSlugs?: string[] }} opts
  */
-function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [] } = {}) {
+function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], typeLinkedKeywords = [] } = {}) {
     const simplified = itemNames.map(n => simplifyString(n));
     const baseNames = new Set(simplified);
-    for (const name of simplified) {
-        const base = name?.replace(/\s*\([^)]*\)\s*$/, '').trim();
-        if (base && base !== name) baseNames.add(base);
+    const itemNameSlugs = new Set();
+    for (const name of itemNames) {
+        const simpleName = simplifyString(name);
+        const base = simpleName?.replace(/\s*\([^)]*\)\s*$/, '').trim();
+        if (base && base !== simpleName) baseNames.add(base);
+        const nameSlug = sluggify(name);
+        if (nameSlug) itemNameSlugs.add(nameSlug);
+        const baseName = name?.replace(/\s*\([^)]*\)\s*$/, '').trim();
+        if (baseName && baseName !== name) {
+            const baseSlug = sluggify(baseName);
+            if (baseSlug) itemNameSlugs.add(baseSlug);
+        }
     }
     return {
         level,
         itemNames: new Set(simplified),
         itemBaseNames: baseNames,
+        itemNameSlugs,
+        typeLinkedKeywords: new Set(typeLinkedKeywords.map(k => k.toLowerCase())),
         itemSlugs: new Set(itemSlugs),
         skills,
     };
@@ -275,5 +287,48 @@ TestRegistry.register(CATEGORY, "meetsPrereqsWithContext | class prereq is check
     const item = { class: "ace trainer", keywords: [], prerequisites: [] };
     assert(meetsPrereqsWithContext(item, ctxWith), "Class prereq met when class item is owned");
     assert(!meetsPrereqsWithContext(item, ctxWithout), "Class prereq NOT met when class item is absent");
+});
+
+TestRegistry.register(CATEGORY, "meetsPrereqsWithContext | subclass item satisfies base class prereq (slug)", () => {
+    // Actor owns "Type Ace (Bug)"; feat.class slugs:
+    //   "type-ace-bug" = the subclass itself
+    //   "type-ace"     = the base class shared features
+    const ctxSubclass = makeCtx({ itemNames: ["Type Ace (Bug)"] });
+    const ctxBase = makeCtx({ itemNames: ["Type Ace"] });
+    const ctxNeither = makeCtx();
+    const subclassFeat = { class: "type-ace-bug", keywords: [], prerequisites: [] };
+    const baseFeat = { class: "type-ace", keywords: [], prerequisites: [] };
+    assert(meetsPrereqsWithContext(subclassFeat, ctxSubclass), "Owning 'Type Ace (Bug)' satisfies subclass feat class 'type-ace-bug'");
+    assert(meetsPrereqsWithContext(baseFeat, ctxSubclass), "Owning 'Type Ace (Bug)' satisfies base class feat 'type-ace'");
+    assert(meetsPrereqsWithContext(baseFeat, ctxBase), "Owning base 'Type Ace' satisfies base class feat 'type-ace'");
+    assert(!meetsPrereqsWithContext(subclassFeat, ctxBase), "Owning only base 'Type Ace' does NOT satisfy subclass feat 'type-ace-bug'");
+    assert(!meetsPrereqsWithContext(subclassFeat, ctxNeither), "Owning neither does NOT satisfy the prereq");
+});
+
+TestRegistry.register(CATEGORY, "checkSinglePrereq | base class prereq text satisfied by subclass item", () => {
+    // When a prerequisite is listed as plain text "Type Ace", owning "Type Ace (Bug)" should satisfy it.
+    const ctx = makeCtx({ itemNames: ["Type Ace (Bug)"] });
+    assert(checkSinglePrereq("Type Ace", ctx), "Prereq 'Type Ace' met when actor owns 'Type Ace (Bug)'");
+    assert(!checkSinglePrereq("Type Ace (Ice)", ctx), "Prereq 'Type Ace (Ice)' NOT met when actor only owns 'Type Ace (Bug)'");
+});
+
+// ─── Type-Linked Class prerequisites ────────────────────────────────────────────────────────────────────
+
+TestRegistry.register(CATEGORY, "Prereq | 'A Type-Linked Class' matches any Type Linked keyword", () => {
+    const ctxGeneric  = makeCtx({ typeLinkedKeywords: ["Type Linked"] });
+    const ctxSpecific = makeCtx({ typeLinkedKeywords: ["Type Linked (Water)"] });
+    const ctxNone     = makeCtx();
+    assert(checkSinglePrereq("A Type-Linked Class", ctxGeneric),  "Met when actor has generic 'Type Linked' keyword");
+    assert(checkSinglePrereq("A Type-Linked Class", ctxSpecific), "Met when actor has 'Type Linked (Water)' keyword");
+    assert(!checkSinglePrereq("A Type-Linked Class", ctxNone),    "NOT met when actor has no Type Linked keywords");
+});
+
+TestRegistry.register(CATEGORY, "Prereq | 'A Water-Type-Linked Class' matches only the Water variant", () => {
+    const ctxWater   = makeCtx({ typeLinkedKeywords: ["Type Linked (Water)"] });
+    const ctxFire    = makeCtx({ typeLinkedKeywords: ["Type Linked (Fire)"] });
+    const ctxGeneric = makeCtx({ typeLinkedKeywords: ["Type Linked"] });
+    assert( checkSinglePrereq("A Water-Type-Linked Class", ctxWater),  "Met when actor has 'Type Linked (Water)'");
+    assert(!checkSinglePrereq("A Water-Type-Linked Class", ctxFire),   "NOT met when actor only has 'Type Linked (Fire)'");
+    assert(!checkSinglePrereq("A Water-Type-Linked Class", ctxGeneric),"NOT met when actor only has generic 'Type Linked'");
 });
 
