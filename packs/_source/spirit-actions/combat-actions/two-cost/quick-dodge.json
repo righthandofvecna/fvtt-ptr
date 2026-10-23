@@ -10,6 +10,8 @@
     "rules": [],
     "enabled": true,
     "slug": "quick-dodge",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -37,7 +39,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -50,11 +53,10 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "cost": "2",
     "trigger": "When you got hit by an attack",
-    "active": true,
-    "contentSet": "",
-    "replacesSlug": ""
+    "active": true
   },
   "_id": "Sb72t2uSXWhUn8Cx",
   "effects": [],
@@ -62,13 +64,18 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "requires-system-changes",
+      "devNote": "Reminder + Macro -Dylan\n\nThere's a bunch of these that could use a function on a roll to edit the roll (+ evasion, + attack roll, etc)."
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.55",
+    "coreVersion": "14.367",
     "createdTime": 1694340162234,
-    "modifiedTime": 1778200886176,
+    "modifiedTime": 1792780821686,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

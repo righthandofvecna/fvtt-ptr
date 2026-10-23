@@ -7,9 +7,22 @@
     "origin": "",
     "effect": "For the remainder of the Scene, you gain an additional Ability from this Pokémons Ability List.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "affects": "origin",
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.j8SENDmUzH6JMAww",
+        "range": "",
+        "linked": false,
+        "value": ""
+      }
+    ],
     "enabled": true,
     "slug": "synergy",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -37,7 +50,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -50,11 +64,10 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "cost": "3",
     "trigger": "At-Will",
-    "active": true,
-    "contentSet": "",
-    "replacesSlug": ""
+    "active": true
   },
   "_id": "AEb1weKDvWn2Ietd",
   "effects": [],
@@ -62,13 +75,18 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Same automation as Ability Mastery, but with an \"encounter end\" duration -Dylan"
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.55",
+    "coreVersion": "14.367",
     "createdTime": 1694339291185,
-    "modifiedTime": 1778200886176,
+    "modifiedTime": 1792799278856,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

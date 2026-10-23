@@ -10,6 +10,8 @@
     "rules": [],
     "enabled": true,
     "slug": "intercept",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -36,8 +38,9 @@
         "priorityAdvanced": false,
         "priority": false,
         "reaction": false,
-        "interrupt": false
-      }
+        "interrupt": true
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -50,11 +53,10 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "cost": "1",
     "trigger": "At-Will",
-    "active": true,
-    "contentSet": "",
-    "replacesSlug": ""
+    "active": true
   },
   "_id": "E48L5So0QCNB2H65",
   "effects": [],
@@ -62,13 +64,18 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "requires-system-changes",
+      "devNote": "The \"this can be used at 0 spirit\" thing needs system changes. The \"at the cost of your next turn's Shift Action\" also requires system changes. That's true of all interrupts/Priority moves, actually. Honestly, this should be marked as an interrupt. -Dylan"
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.55",
+    "coreVersion": "14.367",
     "createdTime": 1694340625974,
-    "modifiedTime": 1778200886176,
+    "modifiedTime": 1792780341175,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

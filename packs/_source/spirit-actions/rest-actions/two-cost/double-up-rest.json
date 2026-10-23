@@ -10,6 +10,8 @@
     "rules": [],
     "enabled": true,
     "slug": "double-up-rest",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -37,24 +39,24 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
       "rapid": false,
       "shift": false,
-      "free": true,
-      "extended": false
+      "free": false,
+      "extended": true
     },
     "ap": {
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "cost": "2",
-    "trigger": "Extended Action",
-    "active": false,
-    "contentSet": "",
-    "replacesSlug": ""
+    "trigger": "Extended Rest",
+    "active": false
   },
   "_id": "5flSoZTeFmviBByQ",
   "effects": [],
@@ -62,13 +64,18 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": ""
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.55",
+    "coreVersion": "14.367",
     "createdTime": 1694341444307,
-    "modifiedTime": 1778200886176,
+    "modifiedTime": 1792779712731,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

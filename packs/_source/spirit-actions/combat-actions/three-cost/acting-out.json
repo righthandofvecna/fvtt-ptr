@@ -10,6 +10,8 @@
     "rules": [],
     "enabled": true,
     "slug": "acting-out",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -37,7 +39,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -50,11 +53,10 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "cost": "3",
     "trigger": "End of Turn",
-    "active": true,
-    "contentSet": "",
-    "replacesSlug": ""
+    "active": true
   },
   "_id": "RV7lDcq6aptrotLM",
   "effects": [],
@@ -62,13 +64,18 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "requires-system-changes",
+      "devNote": "This is a very weird one. This might be doable with a macro, or it could require system changes. -Dylan"
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.55",
+    "coreVersion": "14.367",
     "createdTime": 1694339291185,
-    "modifiedTime": 1778200886176,
+    "modifiedTime": 1792780999039,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
