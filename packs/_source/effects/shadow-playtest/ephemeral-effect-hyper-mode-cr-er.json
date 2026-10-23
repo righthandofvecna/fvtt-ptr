@@ -13,7 +13,8 @@
         "mode": "add",
         "path": "system.modifiers.effectRange.mod",
         "phase": "applyAEs",
-        "value": 2
+        "value": 2,
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -21,7 +22,8 @@
         "mode": "add",
         "path": "system.modifiers.critRange.mod",
         "phase": "applyAEs",
-        "value": 2
+        "value": 2,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -42,7 +44,7 @@
     "duration": {
       "value": -1,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -54,7 +56,7 @@
     },
     "badge": null,
     "context": null,
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": ""
   },
   "effects": [],
@@ -62,7 +64,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Should only apply to Shadow-type moves",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.0.3",

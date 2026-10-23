@@ -54,8 +54,8 @@
       "bind": true
     },
     "prerequisites": [
-      "Type-Linked Skill at Adept",
-      "Glacial Floe"
+      "Glacial Floe",
+      "Adept Athletics or Survival"
     ],
     "notes": "",
     "free": false,

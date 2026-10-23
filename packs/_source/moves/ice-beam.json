@@ -2,7 +2,6 @@
   "name": "Ice Beam",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Ice Beam Freezes on 19+.",
@@ -57,7 +56,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,

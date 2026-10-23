@@ -71,12 +71,8 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "itemGrants": {
-        "sandstorm-weather-playtest": {
-          "id": "Cm7QXGmiv4FWNjwp",
-          "onDelete": "detach"
-        }
-      }
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "LocknKey": {
       "IDKeysFlag": "",

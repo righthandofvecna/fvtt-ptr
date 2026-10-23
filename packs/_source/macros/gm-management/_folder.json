@@ -1,0 +1,22 @@
+{
+  "type": "Macro",
+  "folder": null,
+  "name": "GM Management",
+  "color": null,
+  "sorting": "a",
+  "_id": "gmManagement0000",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.54",
+    "createdTime": 1792604474969,
+    "modifiedTime": 1792604474969,
+    "lastModifiedBy": "dylanIsSuperOK00",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

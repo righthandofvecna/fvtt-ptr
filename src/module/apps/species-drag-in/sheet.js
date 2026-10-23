@@ -29,13 +29,15 @@ export class PTUSpeciesDragOptionsPrompt extends FormApplication {
 
         const shinyChanceDefault = Number(game.settings.get("ptu", "generation.defaultDexDragInShinyChance"));
         const statRandomnessDefault = Number(game.settings.get("ptu", "generation.defaultDexDragInStatRandomness"));
+        const alphaChanceDefault = Number(game.settings.get("ptu", "generation.defaultDexDragInAlphaChance"));
 
         return {
             ...data,
             levelMinDefault: game.settings.get("ptu", "generation.defaultDexDragInLevelMin"),
             levelMaxDefault: game.settings.get("ptu", "generation.defaultDexDragInLevelMax"),
-            shinyChanceDefault: shinyChanceDefault > 1 ? shinyChanceDefault / 100 : shinyChanceDefault,
-            statRandomnessDefault: statRandomnessDefault > 1 ? statRandomnessDefault / 100 : statRandomnessDefault,
+            shinyChanceDefault,
+            statRandomnessDefault,
+            alphaChanceDefault,
             preventDefault: game.settings.get("ptu", "generation.defaultDexDragInPreventEvolution"),
             species: this.species.name
         }
@@ -60,6 +62,7 @@ export class PTUSpeciesDragOptionsPrompt extends FormApplication {
             game.settings.set("ptu", "generation.defaultDexDragInShinyChance", formData["shiny-chance"]),
             game.settings.set("ptu", "generation.defaultDexDragInStatRandomness", formData["stat-randomness"]),
             game.settings.set("ptu", "generation.defaultDexDragInPreventEvolution", formData["prevent-evolution"]),
+            game.settings.set("ptu", "generation.defaultDexDragInAlphaChance", formData["alpha-chance"]),
         ]);
 
         const generator = new PokemonGenerator(this.species, { x: this.x, y: this.y })
@@ -69,6 +72,7 @@ export class PTUSpeciesDragOptionsPrompt extends FormApplication {
             shinyChance: formData["shiny-chance"],
             statRandomness: formData["stat-randomness"],
             preventEvolution: formData["prevent-evolution"],
+            alphaChance: formData["alpha-chance"],
             saveDefault: false
         })
         await generator.create();

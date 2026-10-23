@@ -91,10 +91,6 @@
   },
   "flags": {
     "ptu": {
-      "grantedBy": {
-        "id": "gmV1mYAtE9PJ62Sp",
-        "onDelete": "detach"
-      },
       "showInTokenPanel": true,
       "prereqBackup": "Nomad, Adept Focus"
     }

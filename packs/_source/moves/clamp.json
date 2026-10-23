@@ -59,7 +59,7 @@
       "bind": false
     },
     "type": "Water",
-    "category": "Static",
+    "category": "Status",
     "damageBase": "--",
     "ac": "--",
     "range": "--",

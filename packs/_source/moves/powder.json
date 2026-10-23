@@ -9,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "powder",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -28,7 +30,8 @@
     "keywords": [
       "Target 1",
       "Interrupt",
-      "Powder"
+      "Powder",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -62,6 +65,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Bug",
     "category": "Status",
     "damageBase": "--",
@@ -71,10 +75,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "automation": []
   },
   "_id": "oY92cZyfclUEtNVa",
   "effects": [],
@@ -84,13 +85,14 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200825703,
+    "modifiedTime": 1792740435999,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null
+  "folder": null,
+  "flags": {}
 }

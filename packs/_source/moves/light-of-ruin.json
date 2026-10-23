@@ -10,6 +10,8 @@
     "rules": [],
     "enabled": true,
     "slug": "light-of-ruin",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -28,7 +30,8 @@
     "stackSlugs": false,
     "keywords": [
       "Smite",
-      "Recoil 1/2"
+      "Recoil 1/2",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -48,7 +51,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -61,6 +65,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Fairy",
     "category": "Special",
     "damageBase": "14",
@@ -70,10 +75,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "automation": []
   },
   "_id": "L0bIqzozC7ec4O3T",
   "effects": [],
@@ -91,10 +93,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200824000,
+    "modifiedTime": 1792740435799,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

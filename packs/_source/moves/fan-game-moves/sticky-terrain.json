@@ -11,6 +11,8 @@
     "rules": [],
     "enabled": true,
     "slug": "sticky-terrain",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -27,7 +29,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Signature"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
@@ -46,7 +50,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -59,6 +64,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Poison",
     "category": "Status",
     "damageBase": "--",
@@ -70,9 +76,7 @@
     "isStruggle": false,
     "name": "",
     "automation": [],
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": ""
+    "useCount": 0
   },
   "ownership": {
     "default": 0
@@ -82,10 +86,10 @@
   "sort": 4700000,
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1689606523899,
-    "modifiedTime": 1778200825548,
+    "modifiedTime": 1792740436021,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

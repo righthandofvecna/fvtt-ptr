@@ -312,14 +312,14 @@ class PTUPokemonActor extends PTUActor {
         system.level.softCap = softLevelCap;
 
         if (game.settings.get("ptu", "variant.pokemonAdvancement") === "milestones") {
-            system.level.milestones ??= this._calcLevel({ exp: system.level.exp, pokemonAdvancementVariant: "exp" }) - 1;
+            system.level.milestones ??= this._calculateLevel({ exp: system.level.exp, pokemonAdvancementVariant: "exp" }) - 1;
             system.level.current = Math.clamp(system.level.milestones + 1, 1, hardLevelCap);
             system.level.expTillNextLevel = CONFIG.PTU.data.levelProgression[Math.min(system.level.current + 1, hardLevelCap)];
             system.level.percent = 0;
             system.level.totalEffectiveExp = CONFIG.PTU.data.levelProgression[system.level.current] ?? 0;
             system.level.effectivePercent = 0;
         } else {
-            system.level.current = this._calcLevel({ exp: system.level.exp });
+            system.level.current = this._calculateLevel({ exp: system.level.exp });
             system.level.expTillNextLevel = CONFIG.PTU.data.levelProgression[Math.min(system.level.current + 1, hardLevelCap)];
             system.level.percent = Math.round(
                 (
@@ -615,7 +615,7 @@ class PTUPokemonActor extends PTUActor {
         return finalCapabilities;
     }
 
-    _calcLevel({ exp, milestones, pokemonAdvancementVariant}={}) {
+    _calculateLevel({ exp, milestones, pokemonAdvancementVariant}={}) {
         const json = CONFIG.PTU.data.levelProgression;
         const maxLevel = Math.max(...Object.keys(json));
 
@@ -734,7 +734,7 @@ class PTUPokemonActor extends PTUActor {
         if (skipLevelUp)
             return super._preUpdate(changed, options, userId);
 
-        const newLevel = this._calcLevel({ exp: changed.system.level.exp, milestones: changed.system.level.milestones });
+        const newLevel = this._calculateLevel({ exp: changed.system.level.exp, milestones: changed.system.level.milestones });
         if (newLevel <= this.system.level.current) return super._preUpdate(changed, options, userId);
 
         // If the actor has no species yet or the species is being updated, skip the level-up screen.

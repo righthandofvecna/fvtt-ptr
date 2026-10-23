@@ -6,6 +6,7 @@
  * acquire prerequisite items from the compendium. This version is synchronous
  * and only checks what the actor ALREADY HAS.
  */
+import { sluggify } from "./misc.js";
 
 // ─── Regex constants ─────────────────────────────────────────────────────────
 // NOTE: Do NOT use /g flag on these — they are NOT safe to call async with /g.
@@ -17,6 +18,7 @@ const CATEGORY_SKILL_RE = /An? (?<category>[A-Za-z][A-Za-z-]*) Skills? at (?<ran
 const FEAT_WITH_SUB_RE = /(?<main>[^\(\)]+) (\((?<sub>.+)\)) ?(?<cr>\[CR\])?/i;
 const N_FEATS_FROM_LIST_RE = /(?<n>([0-9]+)|(A)|(One)|(Two)|(Three)|(Four)|(Five)|(Six)|(Seven)|(Eight)|(Nine)) of (?<features>.+)?/i;
 const LEVEL_RE = /Level (?<lv>[0-9]+)/i;
+const TYPE_LINKED_CLASS_RE = /^A (?:(?<type>[A-Za-z]+)-)?Type-Linked Class$/i;
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -96,10 +98,32 @@ export function buildActorPrereqContext(actor) {
         const base = name?.replace(/\s*\([^)]*\)\s*$/, '').trim();
         if (base && base !== name) itemBaseNames.add(base);
     }
+    // Build a set of sluggified item names (and their parenthetical-stripped bases).
+    // This lets item.class (a slug from the compendium browser) match an actor item
+    // whose system.slug differs (e.g. "type-ace-bug-cr" for "Type Ace (Bug)").
+    const itemNameSlugs = new Set();
+    for (const item of items) {
+        const nameSlug = sluggify(item.name);
+        if (nameSlug) itemNameSlugs.add(nameSlug);
+        const baseName = item.name?.replace(/\s*\([^)]*\)\s*$/, '').trim();
+        if (baseName && baseName !== item.name) {
+            const baseSlug = sluggify(baseName);
+            if (baseSlug) itemNameSlugs.add(baseSlug);
+        }
+    }
+    // Collect "Type Linked" and "Type Linked (Water)" etc. from owned class items.
+    const typeLinkedKeywords = new Set();
+    for (const item of items) {
+        for (const kw of (item.system?.keywords ?? [])) {
+            if (/^Type Linked/i.test(kw)) typeLinkedKeywords.add(kw.toLowerCase());
+        }
+    }
     return {
         level: actor.system.level.current ?? 1,
         itemNames,
         itemBaseNames,
+        itemNameSlugs,
+        typeLinkedKeywords,
         itemSlugs: new Set(items.map(i => i.system?.slug?.toLowerCase()).filter(Boolean)),
         skills: Object.fromEntries(
             Object.entries(actor.system.skills ?? {}).map(
@@ -143,12 +167,24 @@ export function checkSinglePrereq(text, ctx, testDict={}) {
             return (ctx.skills[skillKey] ?? 1) >= rankNeeded;
         }
         if (rankNeeded && skillMatch.groups.skill.toLowerCase().includes(" or ")) {
-            const skillKeys = skillMatch.groups.skill.split(/( or )|(, (or)?)/gi).map(getSkillKey).filter(Boolean);
-            return skillKeys.some(k => (ctx.skills[k] ?? 1) >= rankNeeded);
+            const rankPrefix = new RegExp(`^${skillMatch.groups.rank}\\s+`, 'i');
+            const skillKeys = skillMatch.groups.skill.split(/( or )|(, (or)?)/gi)
+                .map(s => getSkillKey(s?.replace(rankPrefix, '')))
+                .filter(Boolean);
+            if (skillKeys.length > 0) {
+                return skillKeys.some(k => (ctx.skills[k] ?? 1) >= rankNeeded);
+            }
+            // No recognisable skill names found — fall through to other patterns
         }
         if (rankNeeded && skillMatch.groups.skill.toLowerCase().includes(" and ")) {
-            const skillKeys = skillMatch.groups.skill.split(/( and )|(, (and)?)/gi).map(getSkillKey).filter(Boolean);
-            return skillKeys.every(k => (ctx.skills[k] ?? 1) >= rankNeeded);
+            const rankPrefix = new RegExp(`^${skillMatch.groups.rank}\\s+`, 'i');
+            const skillKeys = skillMatch.groups.skill.split(/( and )|(, (and)?)/gi)
+                .map(s => getSkillKey(s?.replace(rankPrefix, '')))
+                .filter(Boolean);
+            if (skillKeys.length > 0) {
+                return skillKeys.every(k => (ctx.skills[k] ?? 1) >= rankNeeded);
+            }
+            // No recognisable skill names found — fall through to other patterns
         }
     }
 
@@ -194,6 +230,18 @@ export function checkSinglePrereq(text, ctx, testDict={}) {
             // Unknown category – assume met (cannot verify)
             return true;
         }
+    }
+
+    // "A Type-Linked Class" / "A Fire-Type-Linked Class"
+    const typeLinkedMatch = text.match(TYPE_LINKED_CLASS_RE);
+    if (typeLinkedMatch) {
+        const type = typeLinkedMatch.groups.type; // e.g. "Water", or undefined
+        if (!type) {
+            // Any Type Linked class satisfies this
+            return (ctx.typeLinkedKeywords?.size ?? 0) > 0;
+        }
+        // Specific type: "A Water-Type-Linked Class" → keyword "type linked (water)"
+        return ctx.typeLinkedKeywords?.has(`type linked (${type.toLowerCase()})`) ?? false;
     }
 
     // "N of FEAT1 or FEAT2 or ..." – need at least N of these items
@@ -259,7 +307,13 @@ export function meetsPrereqsWithContext(item, ctx) {
     // (keywords includes "Class"), item.class is the name of what they ARE —
     // not a prerequisite. Only check item.class as a prereq for non-class feats.
     if (item.class && !item.keywords?.includes("Class")) {
-        if (!ctx.itemNames.has(item.class) && !ctx.itemSlugs.has(item.class)) {
+        // item.class is a slug (e.g. "type-ace" or "type-ace-bug"). Check against:
+        //  - itemSlugs: system.slug values on owned items
+        //  - itemNameSlugs: sluggify(item.name) for owned items, plus sluggified
+        //    base names (parenthetical stripped) so owning "Type Ace (Bug)" matches
+        //    both class slug "type-ace-bug" AND base class slug "type-ace".
+        if (!ctx.itemNames.has(item.class) && !ctx.itemSlugs.has(item.class)
+            && !ctx.itemNameSlugs?.has(item.class)) {
             return false;
         }
     }

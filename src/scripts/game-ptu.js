@@ -18,6 +18,7 @@ import { Weather } from "../module/apps/weather.js";
 import { PTUPokemonTrainingSheet } from "../module/apps/pokemon-training/index.js";
 import { PTUXpPoolSheet } from "../module/apps/xp-pool-sheet/sheet.js";
 import { PTUTests } from "../tests/index.js";
+import { PTUSessionEndApp } from "../module/apps/session-tracker/index.js";
 
 const GamePTU = {
     onInit() {
@@ -72,6 +73,14 @@ const GamePTU = {
             },
             tokenPanel: new TokenPanel(),
             github: GithubSyncManager,
+            /**
+             * Trigger the end-of-session friendship check.
+             * Fires the `ptu.sessionEnd` hook (which the SessionTrackerHooks
+             * listener uses to open the PTUSessionEndApp for the GM).
+             */
+            sessionEnd() {
+                Hooks.callAll("ptu.sessionEnd");
+            },
         }
 
         Weather._initializeGlobalEffects();

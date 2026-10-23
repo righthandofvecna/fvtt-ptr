@@ -66,12 +66,6 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "itemGrants": {
-        "vo8ePTPkunOud3IB": {
-          "id": "vo8ePTPkunOud3IB",
-          "onDelete": "detach"
-        }
-      },
       "automationStatus": "no-automation-needed",
       "devNote": ""
     }

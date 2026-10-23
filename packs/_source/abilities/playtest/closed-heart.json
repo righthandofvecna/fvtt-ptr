@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
   "system": {
     "origin": "",
-    "effect": "You can enter Hyper Mode, using the same triggers detailed in the Shadow Pokémon section for Hyper Mode. You are now affected by Features that interact with Hyper Mode. Your Save rolls to end Hyper Mode have a -2 penalty.",
+    "effect": "You can enter Hyper Mode, using the same triggers detailed in the @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.8EGJLU8Db3uLbt1K]{Shadow Pokémon} section for Hyper Mode. You are now affected by Features that interact with Hyper Mode. Your Save rolls to end Hyper Mode have a -2 penalty.",
     "snippet": "",
     "rules": [
       {
@@ -44,7 +44,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,7 +61,8 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "folder": "rAhydZslb0d4Cvio",
@@ -70,10 +72,8 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "grantedBy": {
-        "id": "1ci0y7uxFxnfEF8v",
-        "onDelete": "cascade"
-      }
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

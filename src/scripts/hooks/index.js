@@ -30,6 +30,7 @@ import { Tooltips } from "./tooltips.js";
 import { MathEnricher } from "./math-enricher.js";
 import { AutoRecovery } from "./auto-recovery.js";
 import { EffectTrackerHooks } from "./effect-tracker-hooks.js";
+import { SessionTrackerHooks } from "./session-tracker-hooks.js";
 
 export const PtuHooks = {
     listen() {
@@ -67,6 +68,7 @@ export const PtuHooks = {
             MathEnricher,
             AutoRecovery,
             EffectTrackerHooks,
+            SessionTrackerHooks,
         ]
         for(const listener of listeners) listener.listen();
     }

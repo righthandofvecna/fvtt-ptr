@@ -1,15 +1,10 @@
-import { sluggify } from "../../util/misc.js";
 import { PTUCombatant } from "../combat/combatant.js";
 import { PTUCondition } from "../item/index.js";
 import { ChatMessagePTU } from "../message/base.js";
 import { extractEphemeralEffects, processPreUpdateActorHooks } from "../rules/helpers.js";
-import { PTUAttackCheck } from "../system/check/attack.js";
-import { PTUDiceCheck, eventToRollParams } from "../system/check/check.js";
-import { PTUDamageCheck } from "../system/check/damage.js";
+import { PTUDiceCheck, } from "../system/check/check.js";
 import { InitiativeRoll } from "../system/check/rolls/initiative-roll.js";
 import { PTUSkillCheck } from "../system/check/skill.js";
-import { PTUDamage } from "../system/damage/damage.js";
-import { PTUMoveDamage } from "../system/damage/move.js";
 import { ActorConditions } from "./conditions.js";
 import { IWRData, ImmunityData, ResistanceData, WeaknessData } from "./iwr.js";
 import { PTUModifier, StatisticModifier } from "./modifiers.js";
@@ -55,7 +50,7 @@ class PTUActor extends Actor {
     }
 
     get sizeClass() {
-        return "Medium;"
+        return "Medium"
     }
 
     get alliance() {
@@ -241,6 +236,10 @@ class PTUActor extends Actor {
             .sort((a, b) => (a.id > b.id ? 1 : -1))
             .shift();
         return firstUpdater ?? null;
+    }
+
+    _calculateLevel({ exp, milestones, dexExp, trainerAdvancementVariant, pokemonAdvancementVariant }={}) {
+        return 1 + milestones;
     }
 
     _calculateStatTotal({ level, levelModifier, actorStats, nature, twistedPower, hybridArmor, levelUpPoints, statPointModifier, statCalculation }={}) {
@@ -625,6 +624,47 @@ class PTUActor extends Actor {
         for (let [key, skill] of Object.entries(this.system.skills)) {
             if (!skill?.rank) continue;
             this.attributes.skills[key] = this.prepareSkill(key);
+        }
+
+        // figure out if any modifier fields changed (e.g., from afterDerived rule elements)
+        // Mirrors the modifier-total loop in onPrepareDerivedData; only recalculates changed entries.
+        // Preserves any direct changes to .total (beyond value+mod) by applying them as a delta,
+        // analogous to how directStatChanges is handled for stats above.
+        const systemModifiers = this.system.modifiers;
+        if (systemModifiers && derivedData.modifiers) {
+            const MODIFIER_SKIP = new Set(["hardened", "flinch_count", "immuneToEffectDamage", "typeOverwrite", "tp", "capabilities"]);
+            const modifierDiff = foundry.utils.diffObject(derivedData.modifiers, systemModifiers);
+
+            for (const [key, diff] of Object.entries(modifierDiff)) {
+                if (MODIFIER_SKIP.has(key)) continue;
+                const mod = systemModifiers[key];
+                const snap = derivedData.modifiers[key];
+                if (!mod || typeof mod !== "object") continue;
+
+                // Nested modifier (e.g. damageReduction, evasion, baseStats)
+                const firstVal = mod[Object.keys(mod)[0]];
+                if (firstVal !== null && typeof firstVal === "object" && "value" in firstVal) {
+                    for (const [subkey, subDiff] of Object.entries(diff)) {
+                        if (!subDiff || typeof subDiff !== "object") continue;
+                        const subMod = mod[subkey];
+                        const subSnap = snap?.[subkey];
+                        if (!subMod || typeof subMod !== "object") continue;
+                        if ("value" in subDiff || "mod" in subDiff) {
+                            const snapshotBase = (subSnap?.value ?? 0) + (subSnap?.mod ?? 0);
+                            const directDelta = (subMod.total ?? snapshotBase) - snapshotBase;
+                            subMod.total = (subMod.value ?? 0) + (subMod.mod ?? 0) + directDelta;
+                        }
+                    }
+                    continue;
+                }
+
+                // Simple modifier (e.g. initiative, acBonus, saveChecks)
+                if ("value" in diff || "mod" in diff) {
+                    const snapshotBase = (snap?.value ?? 0) + (snap?.mod ?? 0);
+                    const directDelta = (mod.total ?? snapshotBase) - snapshotBase;
+                    mod.total = (mod.value ?? 0) + (mod.mod ?? 0) + directDelta;
+                }
+            }
         }
 
         // just recalculate contest stats, since they're based on combat stats

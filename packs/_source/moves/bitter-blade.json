@@ -10,6 +10,8 @@
     "rules": [],
     "enabled": true,
     "slug": "bitter-blade",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -29,7 +31,8 @@
     "keywords": [
       "Target 1",
       "Slice",
-      "Drain"
+      "Drain",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -49,7 +52,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -62,6 +66,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Fire",
     "category": "Physical",
     "damageBase": "9",
@@ -71,9 +76,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "3U2zGFwFkqRHlIMq",
   "effects": [],
@@ -88,10 +91,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200823126,
+    "modifiedTime": 1792740435847,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -2,7 +2,6 @@
   "name": "Powder Snow",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Powder Snow Freezes all Legal Targets on 19+. *Grants: Freezer",
@@ -17,7 +16,8 @@
         "uuid": "Compendium.ptu.effects.Item.7F4dkJoDuD7wNcEK",
         "range": "19",
         "value": "",
-        "affects": "target"
+        "affects": "target",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -57,7 +57,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -92,7 +93,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

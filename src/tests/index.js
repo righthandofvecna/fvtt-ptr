@@ -33,6 +33,12 @@ import "./rule-elements/action-point.test.js";
 // ---- combat integration tests ----
 import "./combat/combat-integration.test.js";
 
+// ---- generation integration tests ----
+import "./generation/generation.test.js";
+
+// ---- prerequisite-checker tests ----
+import "./prerequisites/prereq-checker.test.js";
+
 /** Singleton app instance reused across opens. */
 let _app = null;
 

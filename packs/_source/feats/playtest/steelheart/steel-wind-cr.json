@@ -99,10 +99,6 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "grantedBy": {
-        "id": "tCEAmSTUodbQlAei",
-        "onDelete": "detach"
-      },
       "automationStatus": "needs-automation",
       "devNote": ""
     }

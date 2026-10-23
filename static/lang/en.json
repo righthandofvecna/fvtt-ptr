@@ -269,6 +269,10 @@
           "Label": "Grant",
           "Hint": "This move was granted by an external source"
         },
+        "Alpha": {
+          "Label": "Alpha",
+          "Hint": "This move was learned as an Alpha move"
+        },
         "Unknown": {
           "Label": "Unknown",
           "Hint": "This move is of mysterious origin"
@@ -599,9 +603,10 @@
 
     "QuickPokemonGeneration": "Quick Generate Pokemon",
     "LevelRange": "Level Range",
-    "ShinyChance": "Shiny Chance",
-    "StatRandomness": "% Stat Randomness",
+    "ShinyChance": "Shiny Chance (%)",
+    "StatRandomness": "Stat Randomness (%)",
     "PreventEvolution": "Prevent Evolution?",
+    "AlphaChance": "Alpha Chance (%)",
     "Submit": "Submit",
 
     "ConditionFainted": "Fainted",
@@ -1054,6 +1059,11 @@
     },
     "Configure": "Configuring {name}",
 
+    "SessionEnd": {
+      "Title": "Session End",
+      "Submitted": "End-Of-Session Awards Submitted"
+    },
+
     "Settings": {
       "ResetChanges": "Reset Changes",
       "AddType": {
@@ -1231,6 +1241,10 @@
           "Name": "Pokemon Image Name Type",
           "Hint": "Whether the images are based on name (checked) or dex number (unchecked)"
         },
+        "AlphaMoveUnrestricted": {
+          "Name": "Alpha Move Unrestricted",
+          "Hint": "Allow Alpha moves to be generated without restricting to the Pokémon's Egg/Tutor list."
+        },
         "DefaultDexDragInLevelMin": {
           "Name": "Default Minimum Species Drag-In Level",
           "Hint": "The default minimum level for a Pokémon dragged into a scene from a species item"
@@ -1250,6 +1264,10 @@
         "DefaultDexDragInPreventEvolution": {
           "Name": "Default Species Drag-In Prevent Evolution",
           "Hint": "Whether a Pokémon's evolution should be prevented during Species Drag-In Generation."
+        },
+        "DefaultDexDragInAlphaChance": {
+          "Name": "Default Species Drag-In Alpha Chance (%)",
+          "Hint": "The default alpha chance for a Pokémon dragged into a scene from a species item. 0 means no chance, 100 means guaranteed."
         }
       },
       "Metagame": {

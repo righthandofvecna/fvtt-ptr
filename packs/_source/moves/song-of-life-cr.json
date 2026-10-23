@@ -57,7 +57,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -85,11 +86,23 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "grantedBy": {
-        "id": "O7eciIBdFyAQwnjI",
-        "onDelete": "cascade"
-      }
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
-  "_id": "LhTnUoIfqL3gYmZB"
+  "_id": "LhTnUoIfqL3gYmZB",
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
 }

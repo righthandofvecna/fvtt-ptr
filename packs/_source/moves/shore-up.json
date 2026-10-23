@@ -9,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "shore-up",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +27,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Signature"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
@@ -58,6 +62,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Ground",
     "category": "Status",
     "damageBase": "--",
@@ -67,10 +72,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "automation": []
   },
   "_id": "GQ77dajKVTZN6OTQ",
   "effects": [],
@@ -88,12 +90,13 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200823708,
+    "modifiedTime": 1792740435875,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "folder": null
 }

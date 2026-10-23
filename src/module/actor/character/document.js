@@ -75,18 +75,18 @@ class PTUTrainerActor extends PTUActor {
             : 0;
     }
 
-    _calculateLevel() {
-        const trainerAdvancement = game.settings.get("ptu", "variant.trainerAdvancement");
-        const dexexp = this._calculateDexExp();
+    _calculateLevel({ exp, milestones, dexExp, trainerAdvancementVariant, pokemonAdvancementVariant }={}) {
+        trainerAdvancementVariant ??= game.settings.get("ptu", "variant.trainerAdvancement");
+        dexExp ??= this._calculateDexExp();
 
-        const levelUpRequirement = trainerAdvancement === "short-track" ? 20 : 10;
+        const levelUpRequirement = trainerAdvancementVariant === "short-track" ? 20 : 10;
 
-        const maxLevel = CONFIG.PTU.data.trainerProgressions[trainerAdvancement]?.cap ?? 50; 
+        const maxLevel = CONFIG.PTU.data.trainerProgressions[trainerAdvancementVariant]?.cap ?? 50; 
 
         return Math.clamp(
             1
             + Number(this.system.level.milestones)
-            + Math.trunc((Number(this.system.level.miscexp) / levelUpRequirement) + (Number(dexexp) / levelUpRequirement)),
+            + Math.trunc((Number(this.system.level.miscexp) / levelUpRequirement) + (Number(dexExp) / levelUpRequirement)),
             1,
             maxLevel
         );

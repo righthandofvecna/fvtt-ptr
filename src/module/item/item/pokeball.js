@@ -447,7 +447,10 @@ class PokeballItem extends PTUItemItem {
                                 [user.id]: CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER
                             },
                             "system.pokeball": this.name,
-                            "folder": targetFolderId
+                            "system.boss.is": false,
+                            "system.boss.turns": 1,
+                            "system.boss.bars": 0,
+                            "folder": targetFolderId,
                         }
                         if (location !== "available") {
                             pokemonUpdateData["flags.ptu.party"] = {

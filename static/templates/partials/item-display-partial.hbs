@@ -53,6 +53,11 @@
                                 <i class="fa-solid fa-chalkboard-teacher"></i>
                             </div>
                         {{/if}}
+                        {{#if (eq item.learnedFrom "alpha")}}
+                            <div class="tag shadowless tooltip" title="{{localize "PTU.Move.LearnedFrom.Alpha.Hint"}}" style="color:blueviolet">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        {{/if}}
                         {{#if (eq item.learnedFrom "unknown")}}
                             <div class="tag shadowless tooltip" title="{{localize "PTU.Move.LearnedFrom.Unknown.Hint"}}" style="color:blueviolet">
                                 <i class="fa-solid fa-question"></i>

@@ -10,6 +10,8 @@
     "rules": [],
     "enabled": true,
     "slug": "shell-trap",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -29,7 +31,8 @@
     "keywords": [
       "Target 1",
       "Interrupt",
-      "Trigger"
+      "Trigger",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -49,7 +52,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -62,6 +66,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Fire",
     "category": "Special",
     "damageBase": 15,
@@ -71,9 +76,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "5vCVNAK7CmGTCrIb",
   "effects": [],
@@ -84,10 +87,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200823277,
+    "modifiedTime": 1792740435855,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

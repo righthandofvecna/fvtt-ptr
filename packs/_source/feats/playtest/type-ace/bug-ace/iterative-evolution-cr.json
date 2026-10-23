@@ -43,7 +43,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -58,18 +59,22 @@
     },
     "prerequisites": [
       "Hivemind",
-      "Type-Linked Skill at Adept"
+      "Command or Survival at Adept"
     ],
     "notes": "",
     "free": false,
     "class": "Type Ace (Bug)",
     "contentSet": "class-rework",
-    "replacesSlug": "iterative-evolution"
+    "replacesSlug": "iterative-evolution",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "vgxKI5sXlsByjnHS",

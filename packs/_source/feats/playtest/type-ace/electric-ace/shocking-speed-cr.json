@@ -52,8 +52,8 @@
       "bind": false
     },
     "prerequisites": [
-      "Type-Linked Skill at Expert",
-      "High Voltage"
+      "High Voltage",
+      "Expert Focus or Technology Education"
     ],
     "notes": "",
     "free": false,

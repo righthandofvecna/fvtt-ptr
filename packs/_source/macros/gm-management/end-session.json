@@ -1,0 +1,25 @@
+{
+  "name": "End Session",
+  "type": "script",
+  "_id": "endSession000000",
+  "author": "dylanIsSuperOK00",
+  "img": "icons/skills/movement/portal-silhouette-pink.webp",
+  "scope": "global",
+  "command": "game.ptu.sessionEnd()",
+  "folder": "gmManagement0000",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.54",
+    "createdTime": 1792604652356,
+    "modifiedTime": 1792604652419,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 200000
+}

@@ -6,12 +6,11 @@
   "img": "systems/ptu/static/css/images/icons/class_feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "You learn the Moves Shadow Blitz and Shadow Wave.\nBonus: You gain the Closed Heart Ability.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.tE474QZHhRRPSVzO]{Shadow Blitz} and @UUID[Compendium.ptu.moves.Item.au5PFBJ4h8dgnxIS]{Shadow Wave}.\nBonus: You gain the @UUID[Compendium.ptu.abilities.Item.WaW4EsUrdBvMPWfe]{Closed Heart} Ability.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "heartless",
         "choices": [
           {
@@ -30,7 +29,8 @@
         "mode": "add",
         "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.heartless}.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       },
       {
         "key": "GrantItem",
@@ -83,7 +83,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -106,7 +107,9 @@
     "free": false,
     "class": "",
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -115,7 +118,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

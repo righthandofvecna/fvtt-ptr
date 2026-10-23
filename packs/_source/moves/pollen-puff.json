@@ -90,5 +90,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null
+  "folder": null,
+  "flags": {}
 }

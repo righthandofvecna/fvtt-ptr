@@ -2,7 +2,7 @@
   "name": "Frost Touched",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose three out of Aurora Beam, Haze, Ice Shard, Mist, and Powder Snow. You learn the Chosen Moves.",
+    "effect": "Effect: Choose three out of @UUID[Compendium.ptu.moves.Item.UqFpnMAAoEOqvUDj]{Aurora Beam}, @UUID[Compendium.ptu.moves.Item.xOwF6QzLLB5POWAK]{Haze}, @UUID[Compendium.ptu.moves.Item.SUduMarNZi7p42fG]{Ice Shard}, @UUID[Compendium.ptu.moves.Item.uaOHYAjzdGsqGBJ0]{Mist}, and @UUID[Compendium.ptu.moves.Item.l4TzdGjtPZHycF5b]{Powder Snow}. You learn the Chosen Moves.",
     "snippet": "",
     "rules": [
       {
@@ -225,6 +225,7 @@
     "keywords": [
       "Class",
       "+Attack or Special Attack",
+      "Type Linked (Ice)",
       "Playtest",
       "Class Rework"
     ],
@@ -238,7 +239,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -261,7 +263,8 @@
     "name": "Frost Touched [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "frost-touched",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -275,7 +278,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   },

@@ -164,7 +164,7 @@ export function sortStringRecord(record) {
  * @returns {number}
  */
 export function getMinLevelFromPredicate(predicate = []) {
-    if (typeof predicate === "object" || typeof predicate === "string") {
+    if (!Array.isArray(predicate)) {
         predicate = [predicate];
     }
     const subpredicates = [...predicate];

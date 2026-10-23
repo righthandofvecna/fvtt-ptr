@@ -26,6 +26,7 @@
     "keywords": [
       "Class",
       "Branch",
+      "Type Linked (Dragon)",
       "Playtest",
       "Class Rework"
     ],
@@ -39,7 +40,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -67,7 +69,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
-    "replacesSlug": "type-ace-dragon"
+    "replacesSlug": "type-ace-dragon",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -75,7 +79,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "2 Different Pokémon of the chosen Type, Type-Linked Skill* at Novice\nOR\nElemental Connection (of the chosen Type), 1 Pokémon of the chosen Type, Type-Linked Skill* at Novice\n*See Extras - Class Mechanics for details.",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "folder": "6meG7SeyLvR39TI3",

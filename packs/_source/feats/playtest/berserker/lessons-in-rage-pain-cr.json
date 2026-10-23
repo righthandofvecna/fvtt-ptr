@@ -107,12 +107,6 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "itemGrants": {
-        "revenge": {
-          "id": "txFsN9GFPfZww6l3",
-          "onDelete": "detach"
-        }
-      },
       "automationStatus": "completed",
       "devNote": ""
     }

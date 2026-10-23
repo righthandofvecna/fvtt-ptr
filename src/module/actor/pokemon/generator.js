@@ -13,16 +13,15 @@ export class PokemonGenerator {
         this.prepared = false;
     }
 
-    async prepare(
-        { minLevel, maxLevel, shinyChance, statRandomness, preventEvolution, saveDefault } =
-            {
-                minLevel: Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMin")),
-                maxLevel: Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMax")),
-                shinyChance: Number(game.settings.get("ptu", "generation.defaultDexDragInShinyChance")),
-                statRandomness: Number(game.settings.get("ptu", "generation.defaultDexDragInStatRandomness")),
-                preventEvolution: game.settings.get("ptu", "generation.defaultDexDragInPreventEvolution"),
-                saveDefault: false
-            }) {
+    async prepare({ minLevel, maxLevel, shinyChance, statRandomness, preventEvolution, alphaChance, saveDefault } = {}) {
+        minLevel ??= Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMin")),
+        maxLevel ??= Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMax")),
+        shinyChance ??= Number(game.settings.get("ptu", "generation.defaultDexDragInShinyChance")),
+        statRandomness ??= Number(game.settings.get("ptu", "generation.defaultDexDragInStatRandomness")),
+        preventEvolution ??= game.settings.get("ptu", "generation.defaultDexDragInPreventEvolution"),
+        alphaChance ??= Number(game.settings.get("ptu", "generation.defaultDexDragInAlphaChance")),
+        saveDefault ??= false
+        
         if (!this.level) {
             this.level = (() => {
                 if (minLevel == maxLevel) return minLevel;
@@ -54,6 +53,8 @@ export class PokemonGenerator {
         if (!this.capabilities) this.prepareCapabilities();
         if (!this.shiny) this.prepareShinyness(shinyChance);
         if (!this.form) this.prepareForm();
+        if (this.alpha === undefined) this.prepareAlpha(alphaChance ?? 0);
+        if (this.alpha) await this.prepareAlphaMove();
 
         this.img = await PokemonGenerator.getImage(this.species, { gender: this.gender, shiny: this.shiny });
         this.tokenImg = await (async () => {
@@ -173,6 +174,8 @@ export class PokemonGenerator {
             moveData.flags.core = {
                 sourceId: speciesMove.uuid,
             }
+            moveData.flags.ptu ??= {};
+            moveData.flags.ptu.learnedFrom = speciesMove.learnedFrom ?? "level";
 
             itemsData.push(moveData);
         }
@@ -202,6 +205,30 @@ export class PokemonGenerator {
             }
 
             itemsData.push(capabilityData);
+        }
+
+        if (this.alpha) {
+            const ALPHA_CAPABILITY_UUID = "Compendium.ptu.poke-edges.Item.alphaPokemon0000";
+            const WILD_MIGHT_UUID = "Compendium.ptu.effects.Item.wildMight0000000";
+
+            const alphaCapability = await fromUuid(ALPHA_CAPABILITY_UUID);
+            if (alphaCapability) {
+                const capData = alphaCapability.toObject();
+                capData.flags.core = { sourceId: ALPHA_CAPABILITY_UUID };
+                itemsData.push(capData);
+            }
+
+            const wildMight = await fromUuid(WILD_MIGHT_UUID);
+            if (wildMight) {
+                const effectData = wildMight.toObject();
+                effectData.flags.core = { sourceId: WILD_MIGHT_UUID };
+                itemsData.push(effectData);
+            }
+
+            actorData.system.boss ??= {};
+            actorData.system.boss.is = true;
+            actorData.system.boss.turns = 3;
+            actorData.system.boss.bars = 2;
         }
 
         if (!generate) return { actor: actorData, items: itemsData };
@@ -287,7 +314,7 @@ export class PokemonGenerator {
     }
 
     prepareStats(randomness) {
-        if (randomness > 1) randomness *= 0.01;
+        randomness /= 100;
 
         const levelUpPoints = this.level + 10;
         const randomPoints = Math.ceil(Math.random() * (levelUpPoints * randomness));
@@ -366,10 +393,82 @@ export class PokemonGenerator {
     }
 
     prepareShinyness(shinyChance) {
-        if (shinyChance >= 1) shinyChance *= 0.01;
+        shinyChance /= 100;
 
         if (shinyChance == 0) return this.shiny = false;
         return this.shiny = Math.random() < shinyChance;
+    }
+
+    prepareAlpha(alphaChance) {
+        alphaChance /= 100;
+        if (alphaChance === 0) return this.alpha = false;
+        return this.alpha = Math.random() < alphaChance;
+    }
+
+    async prepareAlphaMove() {
+        if (!this.moves?.length) return;
+
+        // Determine which attacker types are super-effective against this species
+        const speciesTypes = this.species.system.types ?? [];
+        const typeChart = CONFIG.PTU.data.typeEffectiveness ?? {};
+        const vulnerableToTypes = new Set();
+        for (const [attackerType, attackerData] of Object.entries(typeChart)) {
+            if (!attackerData.effectiveness) continue;
+            const multiplier = speciesTypes.reduce((acc, defType) => acc * (attackerData.effectiveness[defType] ?? 1), 1);
+            if (multiplier > 1) vulnerableToTypes.add(attackerType);
+        }
+        const loadedMoves = await Promise.all(this.moves.map(m => fromUuid(m.uuid)));
+
+        const levelUpSlugs = new Set(this.moves.map(m => m.slug));
+        const pool = await (async ()=>{
+            if (!game.settings.get("ptu", "generation.alphaMoveUnrestricted")) {
+                return [
+                    ...(this.species.system.moves.egg ?? []),
+                    ...(this.species.system.moves.tutor ?? []),
+                    ...(this.species.system.moves.machine ?? []),
+                ].filter(m => m.uuid && !levelUpSlugs.has(m.slug));
+            }
+            const allCorePTUMoves = [...(await game.packs.get("ptu.moves").getIndex({fields:["system.slug", "system.type", "system.damageBase", "system.keywords"]})).values()];
+            const eligibleMoves = allCorePTUMoves.filter(m => {
+                if (levelUpSlugs.has(m.system.slug)) return false;
+                if ((m.system.keywords ?? []).includes("Signature")) return false;
+                if (m.system.damageBase && parseInt(m.system.damageBase) > 0) {
+                    // check that the damage base is within the range of already-assigned moves
+                    const assignedDamageBases = this.moves.map(m => parseInt(m.damageBase)).filter(db => ![0, NaN].includes(db));
+                    if (assignedDamageBases.length === 0) assignedDamageBases.push(1, 4);
+                    const minDamageBase = Math.min(...assignedDamageBases);
+                    const maxDamageBase = Math.max(...assignedDamageBases);
+                    const moveDamageBase = parseInt(m.system.damageBase);
+                    if (moveDamageBase < minDamageBase || moveDamageBase > maxDamageBase) return false;
+                }
+                return true;
+            });
+            return eligibleMoves.map(m => ({
+                uuid: m.uuid,
+                slug: m.system.slug,
+                obj: m,
+            }));
+        })();
+
+        if (pool.length === 0) return;
+
+        // Load moves to check their type; prefer those that hit a weakness of the species, of a type not already known by the Pokémon, and that do damage
+        const loadedPool = await Promise.all(pool.map(async m => ({ moveSpec: m, move: m.obj ?? await fromUuid(m.uuid) })));
+        const typedCandidates = loadedPool.filter(({ move }) => move &&
+            vulnerableToTypes.has(move.system?.type) &&
+            !loadedMoves.some(m => m.system?.type === move.system?.type && ![0, NaN].includes(parseInt(m.system?.damageBase))) &&
+            ![0, NaN].includes(parseInt(move.system?.damageBase)));
+        const finalPool = typedCandidates.length > 0 ? typedCandidates.map(c => c.moveSpec) : pool;
+
+        console.log("Final pool of alpha moves:", finalPool);
+        const alphaMove = finalPool[Math.floor(Math.random() * finalPool.length)];
+        alphaMove.learnedFrom = "alpha";
+        if (this.moves.length >= 6) {
+            const replaceIndex = Math.floor(Math.random() * this.moves.length);
+            this.moves[replaceIndex] = alphaMove;
+        } else {
+            this.moves.push(alphaMove);
+        }
     }
 
     prepareForm() {

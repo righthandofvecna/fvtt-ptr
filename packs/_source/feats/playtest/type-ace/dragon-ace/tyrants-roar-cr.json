@@ -38,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -52,8 +53,7 @@
       "bind": false
     },
     "prerequisites": [
-      "Type Ace",
-      "Dragon as Chosen Type"
+      "Type Ace (Dragon) [CR]"
     ],
     "notes": "",
     "free": false,
@@ -62,7 +62,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
-    "replacesSlug": "tyrants-roar"
+    "replacesSlug": "tyrants-roar",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -70,7 +72,10 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Type Ace, Dragon as Chosen Type",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "folder": "6meG7SeyLvR39TI3",

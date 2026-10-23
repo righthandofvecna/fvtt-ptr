@@ -38,6 +38,8 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Added new Alpha Pokemon generation option (as well as a generation setting to control which bonus moves it gets)
+- Added "Prevent Evolution" checkbox for Mass Species Generator
 - Fixed Quick-Insert Content set filtering to match the compendium browser
 - Don't show Loafing warnings for wild Pokemon
 - Fixed Drain/Bind AP rule and make it properly interact with resting

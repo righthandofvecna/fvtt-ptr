@@ -2,7 +2,7 @@
   "name": "Null Error",
   "system": {
     "origin": "",
-    "effect": "You learn the Moves Snatch and Disable.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.s6hVuNnG75HkMapT]{Snatch} and @UUID[Compendium.ptu.effects.Item.GUKAMwsFi0EJ56WD]{Disable}.",
     "snippet": "",
     "rules": [
       {
@@ -21,7 +21,10 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spdef.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -55,7 +58,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -78,7 +82,9 @@
     "name": "Null Error",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -88,7 +94,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Glitch Bender"
+      "prereqBackup": "Glitch Bender",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -101,7 +110,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 54100000,
   "_id": "llVPgJjWOiDnds3y"
 }

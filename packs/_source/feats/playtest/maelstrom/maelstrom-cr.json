@@ -36,8 +36,8 @@
     ],
     "enabled": true,
     "slug": "maelstrom-cr",
-    "contentSet": "",
-    "replacesSlug": "",
+    "contentSet": "class-rework",
+    "replacesSlug": "maelstrom",
     "schema": {
       "version": 0.119,
       "lastMigration": {
@@ -57,6 +57,7 @@
     "keywords": [
       "Class",
       "+Speed",
+      "Type Linked (Water)",
       "Playtest",
       "Class Rework"
     ],

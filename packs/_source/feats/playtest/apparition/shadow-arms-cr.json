@@ -102,24 +102,6 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "grantedBy": {
-        "id": "bffAwvKW5M1HggAL",
-        "onDelete": "detach"
-      },
-      "itemGrants": {
-        "shadow-claw": {
-          "id": "bvuiwd9NkoK3Yq0i",
-          "onDelete": "detach"
-        },
-        "shadow-punch": {
-          "id": "JQDu5pU60gq0vh56",
-          "onDelete": "detach"
-        },
-        "shadow-sneak": {
-          "id": "sbQ4RWrqRJSWI0cf",
-          "onDelete": "detach"
-        }
-      },
       "automationStatus": "needs-automation",
       "devNote": ""
     },

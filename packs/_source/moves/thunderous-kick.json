@@ -26,6 +26,8 @@
     ],
     "enabled": true,
     "slug": "thunderous-kick",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -42,7 +44,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Signature"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
@@ -61,7 +65,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -74,6 +79,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Fighting",
     "category": "Physical",
     "damageBase": "9",
@@ -83,9 +89,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "41lgi7iBh3mZMMTl",
   "effects": [],
@@ -100,10 +104,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200823126,
+    "modifiedTime": 1792740436090,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

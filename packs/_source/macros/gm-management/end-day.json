@@ -1,0 +1,25 @@
+{
+  "folder": "gmManagement0000",
+  "name": "End Day",
+  "type": "script",
+  "_id": "endDay0000000000",
+  "author": "dylanIsSuperOK00",
+  "img": "icons/magic/time/day-night-sunset-sunrise.webp",
+  "scope": "global",
+  "command": "const updates = [];\nfor (const actor of game.actors.values()) {\n  updates.push(actor.onDayEnd());\n}\nawait Promise.allSettled(updates);\nui.notifications.info(\"Day ended for all actors!\");",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.54",
+    "createdTime": 1792604929622,
+    "modifiedTime": 1792604996863,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

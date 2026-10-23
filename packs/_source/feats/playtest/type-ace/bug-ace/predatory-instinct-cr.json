@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -56,18 +57,22 @@
     },
     "prerequisites": [
       "Hivemind",
-      "Type-Linked Skill at Expert Rank"
+      "Command or Survival at Expert Rank"
     ],
     "notes": "",
     "free": false,
     "class": "Type Ace (Bug)",
     "contentSet": "class-rework",
-    "replacesSlug": "predatory-instinct"
+    "replacesSlug": "predatory-instinct",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "xwNB9bjYdnafx8bf",

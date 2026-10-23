@@ -20,6 +20,8 @@
     ],
     "enabled": true,
     "slug": "decorate",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -37,7 +39,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1"
+      "Target 1",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -71,6 +74,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Fairy",
     "category": "Status",
     "damageBase": "--",
@@ -80,10 +84,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "automation": []
   },
   "_id": "atfJ82WbWx4OeOtG",
   "effects": [],
@@ -101,12 +102,13 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200824834,
+    "modifiedTime": 1792740435762,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "folder": null
 }

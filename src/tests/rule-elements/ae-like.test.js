@@ -148,3 +148,92 @@ TestRegistry.register(CATEGORY, "AELike | stat + skill + contest change during a
         throw err;
     }
 });
+
+// -----------------------------------------------------------------
+// modifier totals are recalculated when .mod changes in afterDerived
+// -----------------------------------------------------------------
+TestRegistry.register(CATEGORY, "AELike | simple modifier total recomputed after afterDerived mod change", async () => {
+    let actor = await createTestPokemon();
+    try {
+        const before = actor.system.modifiers.acBonus.total ?? 0;
+
+        await addEffectWithRules(actor, [{
+            key: "ActiveEffectLike",
+            mode: "add",
+            path: "system.modifiers.acBonus.mod",
+            value: 7,
+            phase: "afterDerived",
+        }]);
+
+        actor = game.actors.get(actor.id);
+        assertEqual(actor.system.modifiers.acBonus.mod, 7, "acBonus.mod should be 7 after afterDerived AELike");
+        assertEqual(actor.system.modifiers.acBonus.total, before + 7, "cleanupPrepareDerivedData should recompute acBonus.total");
+        await deleteTestActor(actor);
+    } catch (err) {
+        throw err;
+    }
+}, { description: "Regression: modifier totals were not recomputed in cleanupPrepareDerivedData." });
+
+TestRegistry.register(CATEGORY, "AELike | nested modifier total recomputed after afterDerived mod change", async () => {
+    let actor = await createTestPokemon();
+    try {
+        const beforeDR = actor.system.modifiers.damageReduction.physical.total ?? 0;
+
+        await addEffectWithRules(actor, [{
+            key: "ActiveEffectLike",
+            mode: "add",
+            path: "system.modifiers.damageReduction.physical.mod",
+            value: 5,
+            phase: "afterDerived",
+        }]);
+
+        actor = game.actors.get(actor.id);
+        assertEqual(
+            actor.system.modifiers.damageReduction.physical.mod, 5,
+            "damageReduction.physical.mod should be 5"
+        );
+        assertEqual(
+            actor.system.modifiers.damageReduction.physical.total, beforeDR + 5,
+            "cleanupPrepareDerivedData should recompute damageReduction.physical.total"
+        );
+        await deleteTestActor(actor);
+    } catch (err) {
+        throw err;
+    }
+}, { description: "Regression: nested modifier totals (damageReduction) not recomputed after afterDerived." });
+
+TestRegistry.register(CATEGORY, "AELike | direct total change preserved alongside mod change", async () => {
+    // If someone adds to .total directly AND to .mod, both deltas should be reflected.
+    let actor = await createTestPokemon();
+    try {
+        const beforeTotal = actor.system.modifiers.acBonus.total ?? 0;
+
+        await addEffectWithRules(actor, [
+            {
+                key: "ActiveEffectLike",
+                mode: "add",
+                path: "system.modifiers.acBonus.mod",
+                value: 3,
+                phase: "afterDerived",
+                priority: 20,
+            },
+            {
+                key: "ActiveEffectLike",
+                mode: "add",
+                path: "system.modifiers.acBonus.total",
+                value: 10,
+                phase: "afterDerived",
+                priority: 30,
+            },
+        ], { name: "[TEST] acBonus dual change" });
+
+        actor = game.actors.get(actor.id);
+        assertEqual(
+            actor.system.modifiers.acBonus.total, beforeTotal + 3 + 10,
+            "Both mod change (+3) and direct total change (+10) should be reflected"
+        );
+        await deleteTestActor(actor);
+    } catch (err) {
+        throw err;
+    }
+}, { description: "Regression guard: direct .total changes must not be discarded when .mod also changes." });

@@ -30,6 +30,8 @@
     ],
     "enabled": true,
     "slug": "amber-wave",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -46,7 +48,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Signature"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
@@ -65,7 +69,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -78,6 +83,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Rock",
     "category": "Special",
     "damageBase": "8",
@@ -87,9 +93,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "CO3NXf29h9urtwId",
   "effects": [],
@@ -105,10 +109,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1693119119587,
-    "modifiedTime": 1778200823571,
+    "modifiedTime": 1792740435829,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

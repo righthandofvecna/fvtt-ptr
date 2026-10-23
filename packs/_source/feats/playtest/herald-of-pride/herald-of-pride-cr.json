@@ -27,8 +27,8 @@
     ],
     "enabled": true,
     "slug": "herald-of-pride-cr",
-    "contentSet": "",
-    "replacesSlug": "",
+    "contentSet": "class-rework",
+    "replacesSlug": "herald-of-pride",
     "schema": {
       "version": null,
       "lastMigration": null
@@ -41,6 +41,7 @@
     "keywords": [
       "Class",
       "+Attack",
+      "Type Linked (Dragon)",
       "Weapon",
       "Playtest",
       "Class Rework"
@@ -55,7 +56,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -75,8 +77,9 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Herald of Pride [CR]",
-    "name": "Herald of Pride [CR]"
+    "class": "Herald of Pride",
+    "name": "Herald of Pride [CR]",
+    "repeatable": false
   },
   "folder": "lZqjsR5bQoFGXnFK",
   "effects": [],
@@ -84,7 +87,7 @@
     "ptu": {
       "showInTokenPanel": true,
       "automationStatus": "needs-automation",
-      "devNote": ""
+      "devNote": "Ignorning DR doesn't appear to calculate correctly as of v4.4.3.54"
     }
   }
 }

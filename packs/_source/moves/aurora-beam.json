@@ -2,7 +2,6 @@
   "name": "Aurora Beam",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/IceIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Aurora Beam lowers the target's Attack 1 Combat Stage on 18+. *Grants: Freezer",
@@ -15,7 +14,8 @@
         "uuid": "Compendium.ptu.effects.Item.QXstaqQofzAUn774",
         "range": "18",
         "value": "",
-        "affects": "target"
+        "affects": "target",
+        "linked": false
       },
       {
         "key": "GrantItem",
@@ -63,7 +63,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -98,7 +99,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

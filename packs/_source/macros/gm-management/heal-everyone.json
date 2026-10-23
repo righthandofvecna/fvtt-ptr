@@ -1,0 +1,25 @@
+{
+  "folder": "gmManagement0000",
+  "name": "Heal Everyone",
+  "type": "script",
+  "_id": "healEveryone0000",
+  "author": "dylanIsSuperOK00",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "scope": "global",
+  "command": "const { DialogV2 } = foundry.applications.api;\nconst confirmed = await DialogV2.confirm({\n  window: { title: \"Heal All Actors\" },\n  content: \"<p>Restore <em>all actors</em> to full health, reduce injuries by 3, and remove all conditions?</p>\",\n  rejectClose: false,\n});\nif (!confirmed) return;\n\nconst actorUpdates = [];\nfor (const actor of game.actors.values()) {\n  if (!actor) continue;\n  // delete effects first so things reducing max HP don't stick around\n  await actor.deleteEmbeddedDocuments(\n    \"Item\",\n    actor.items.filter(i => i.type === \"condition\" && !i.isGranted).map(i => i.id)\n  );\n  actorUpdates.push({\n    _id: actor.id,\n    \"system.health.value\": actor.system.health.total,\n    \"system.health.injuries\": Math.max(0, (actor.system.health.injuries ?? 0) - 3),\n    \"system.pp.value\": actor.system.pp.max ?? 0,\n  });\n}\nif (actorUpdates.length > 0) {\n  await Actor.updateDocuments(actorUpdates);\n}\ngame.ptu.tokenPanel?.refresh?.();\nui.notifications.info(`Healed ${actorUpdates.length} actor(s).`);",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.54",
+    "createdTime": 1792604494405,
+    "modifiedTime": 1792604652419,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

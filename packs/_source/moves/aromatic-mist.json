@@ -2,7 +2,6 @@
   "name": "Aromatic Mist",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FairyIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Raise the Special Defense of all allied legal targets by 1 Combat Stage.",
@@ -57,7 +56,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -90,5 +90,19 @@
       "automationStatus": "needs-automation",
       "devNote": ""
     }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
   }
 }

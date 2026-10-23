@@ -11,6 +11,8 @@
     "rules": [],
     "enabled": true,
     "slug": "electro-shot",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -29,7 +31,8 @@
     "stackSlugs": false,
     "keywords": [
       "Target 1",
-      "Set-Up"
+      "Set-Up",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -49,7 +52,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -62,6 +66,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Electric",
     "category": "Special",
     "damageBase": "13",
@@ -70,9 +75,7 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false,
-    "contentSet": "",
-    "replacesSlug": ""
+    "isStruggle": false
   },
   "effects": [],
   "sort": 300000,
@@ -86,10 +89,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1705061082548,
-    "modifiedTime": 1778200823425,
+    "modifiedTime": 1792740435849,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

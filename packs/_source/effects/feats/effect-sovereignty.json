@@ -1,0 +1,78 @@
+{
+  "name": "Effect: Sovereignty",
+  "type": "effect",
+  "_id": "Cg6l2mIeJfuD5XHI",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "While this Feature is bound, you gain a +3 Bonus to Save Checks against Volatile Status Afflictions, and a +3 Bonus to Opposed Checks when defending against being Disarmed, Grappled, Pushed, or Tripped.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "manual"
+        ],
+        "label": "Sovereignty (Volatile Condition?)",
+        "hideIfDisabled": false,
+        "selectors": "save-check",
+        "value": 3
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "skill:acrobatics",
+          "skill:athletics",
+          "skill:combat",
+          "skill:stealth",
+          "manual"
+        ],
+        "label": "Sovereignty (Opposing Disarm, Grapple, Push, or Trip?)",
+        "hideIfDisabled": false,
+        "selectors": "skill-check",
+        "value": 3
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-sovereignty",
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "Uv4mgOt4xtb28hzB",
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  }
+}

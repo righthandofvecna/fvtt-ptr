@@ -70,10 +70,6 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "grantedBy": {
-        "id": "clN70mmp5f0qNjZT",
-        "onDelete": "detach"
-      },
       "automationStatus": "completed",
       "devNote": "Linked effect is missing",
       "used": null

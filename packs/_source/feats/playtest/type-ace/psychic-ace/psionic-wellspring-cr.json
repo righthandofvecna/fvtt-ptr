@@ -69,10 +69,8 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "grantedBy": {
-        "id": "fkjYwivs5Tadh5lY",
-        "onDelete": "detach"
-      }
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "LocknKey": {
       "IDKeysFlag": "",

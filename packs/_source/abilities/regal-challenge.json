@@ -38,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -56,13 +57,8 @@
     "automation": []
   },
   "effects": [],
-  "folder": null,
   "flags": {
     "ptu": {
-      "grantedBy": {
-        "id": "3pr00KmazcAcr8Iv",
-        "onDelete": "cascade"
-      },
       "used": null,
       "showInTokenPanel": true,
       "automationStatus": "needs-automation",

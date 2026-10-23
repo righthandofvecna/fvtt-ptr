@@ -1,0 +1,25 @@
+{
+  "folder": "gmManagement0000",
+  "name": "End Scene",
+  "type": "script",
+  "_id": "endScene00000000",
+  "author": "dylanIsSuperOK00",
+  "img": "icons/magic/movement/chevrons-down-yellow.webp",
+  "scope": "global",
+  "command": "const updates = [];\nfor (const actor of game.actors.values()) {\n  updates.push(actor.onSceneEnd());\n}\nawait Promise.allSettled(updates);\nui.notifications.info(\"Scene ended for all actors!\");",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.54",
+    "createdTime": 1792604686609,
+    "modifiedTime": 1792605003273,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

@@ -91,10 +91,6 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "grantedBy": {
-        "id": "ker0oUdKCKj4yogm",
-        "onDelete": "detach"
-      },
       "showInTokenPanel": false,
       "automationStatus": "needs-automation",
       "devNote": ""

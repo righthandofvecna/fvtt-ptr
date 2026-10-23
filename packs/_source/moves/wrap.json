@@ -73,7 +73,7 @@
       "bind": false
     },
     "type": "Normal",
-    "category": "Static",
+    "category": "Status",
     "damageBase": "--",
     "ac": "--",
     "range": "--",
