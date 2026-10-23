@@ -2,7 +2,6 @@
   "name": "Dragon Rush",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DragonIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target is Pushed 3 Meters. Dragon Rush Flinches the target on 17+.",
@@ -15,7 +14,8 @@
         "selectors": "{item|id}-damage-received",
         "uuid": "Compendium.ptu.effects.Item.xE6uIFWZoYXAZQxA",
         "range": "17",
-        "value": ""
+        "value": "",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -55,7 +55,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -90,7 +91,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
