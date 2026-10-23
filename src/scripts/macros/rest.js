@@ -104,7 +104,7 @@ export async function applyRest(hours, pokemonCenter) {
       if (actor) await actor.updateEmbeddedDocuments("Item", updatesByActor[actorId]);
     }
   }
-  
+
   // do endOfDay calls for all actors
-  await Promise.all(game.actors.values().map(actor => actor.endOfDay()));
+  if (isExtendedRest) await Promise.all(game.actors.values().map(actor => actor.endOfDay()));
 }
