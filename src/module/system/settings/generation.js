@@ -101,6 +101,14 @@ const GenerationSettingsConfig = {
         default: false,
         hidden: true
     },
+    "defaultMassGeneratorPreventEvolution": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorPreventEvolution.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorPreventEvolution.Hint",
+        type: Boolean,
+        scope: "user",
+        default: false,
+        hidden: true
+    },
     "defaultMassGeneratorAlphaChance": {
         name: "PTU.Settings.Generation.DefaultMassGeneratorAlphaChance.Name",
         hint: "PTU.Settings.Generation.DefaultMassGeneratorAlphaChance.Hint",

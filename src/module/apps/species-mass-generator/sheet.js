@@ -77,6 +77,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
 
         this.data.level.min = formData["level.min"];
         this.data.level.max = formData["level.max"];
+        this.data.preventEvolution = formData["preventEvolution"] || false;
         this.data.shinyChance = Number(formData["shiny-chance"]) || 0;
         this.data.alphaChance = Number(formData["alpha-chance"]) || 0;
 
@@ -134,6 +135,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
             await Promise.all([
                 game.settings.set("ptu", "generation.defaultMassGeneratorLevelMin", this.data.level.min),
                 game.settings.set("ptu", "generation.defaultMassGeneratorLevelMax", this.data.level.max),
+                game.settings.set("ptu", "generation.defaultMassGeneratorPreventEvolution", this.data.preventEvolution),
                 game.settings.set("ptu", "generation.defaultMassGeneratorShinyChance", this.data.shinyChance),
                 game.settings.set("ptu", "generation.defaultMassGeneratorAlphaChance", this.data.alphaChance),
                 game.settings.set("ptu", "generation.defaultMassGeneratorAmount", this.data.amount),
@@ -153,6 +155,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
         let folder = data.folder;
         const monsToGenerate = [];
 
+        const preventEvolution = data.preventEvolution ?? false;
         const shinyChance = (rawShinyChance ?? 0) / 100;
         const alphaChance = (rawAlphaChance ?? 0) / 100;
 
@@ -219,7 +222,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
             generator.shiny = mon.shiny;
             generator.alpha = mon.alpha;
             await generator.prepare({
-                preventEvolution: false,
+                preventEvolution: preventEvolution
             });
             const generatorData = await generator.create({ folder: mon.folder , generate: false});
 

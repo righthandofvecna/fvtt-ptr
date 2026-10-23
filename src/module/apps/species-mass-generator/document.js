@@ -37,6 +37,7 @@ export class SpeciesGeneratorData {
             min: game.settings.get("ptu", "generation.defaultMassGeneratorLevelMin") ?? 0,
             max: game.settings.get("ptu", "generation.defaultMassGeneratorLevelMax") ?? 0
         }
+        this.preventEvolution = game.settings.get("ptu", "generation.defaultMassGeneratorPreventEvolution") ?? false;
         this.shinyChance = Number(game.settings.get("ptu", "generation.defaultMassGeneratorShinyChance")) ?? 0;
         this.alphaChance = Number(game.settings.get("ptu", "generation.defaultMassGeneratorAlphaChance")) ?? 0;
         this.helpText = {
@@ -128,6 +129,7 @@ export class SpeciesGeneratorData {
             folder: this.folder ?? this.folderField.value,
             level: this.level,
             amount: this.amount,
+            preventEvolution: this.preventEvolution,
             shinyChance: this.shinyChance,
             alphaChance: this.alphaChance,
         }
