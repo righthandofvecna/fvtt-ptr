@@ -9,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "burning-jealousy",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -26,7 +28,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Spirit Surge"
+      "Spirit Surge",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -60,6 +63,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Fire",
     "category": "Special",
     "damageBase": 7,
@@ -69,10 +73,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "automation": []
   },
   "_id": "eKo8Aq43yTIs1tus",
   "effects": [],
@@ -82,12 +83,14 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200825115,
+    "modifiedTime": 1792740436081,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "flags": {},
+  "folder": null
 }

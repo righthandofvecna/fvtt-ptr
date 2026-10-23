@@ -39,7 +39,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Signature"
+    ],
     "sheerForce": false,
     "toughClaws": false,
     "technician": false,
@@ -103,9 +105,9 @@
   "_stats": {
     "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.50",
+    "systemVersion": "4.4.3.54",
     "createdTime": 1721747226102,
-    "modifiedTime": 1791493991209,
+    "modifiedTime": 1792740436050,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

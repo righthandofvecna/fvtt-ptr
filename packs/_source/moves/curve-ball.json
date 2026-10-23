@@ -81,5 +81,20 @@
       "devNote": ""
     }
   },
-  "_id": "oCbNYdXL9EM5YyXo"
+  "_id": "oCbNYdXL9EM5YyXo",
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
 }

@@ -20,6 +20,8 @@
     ],
     "enabled": true,
     "slug": "ceaseless-edge",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -38,7 +40,8 @@
     "stackSlugs": false,
     "keywords": [
       "Target 1",
-      "Slice"
+      "Slice",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -58,7 +61,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -71,6 +75,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Dark",
     "category": "Physical",
     "damageBase": "7",
@@ -80,9 +85,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "SJgQHdeEdZ98BPbU",
   "effects": [],
@@ -97,10 +100,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200824437,
+    "modifiedTime": 1792740436056,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

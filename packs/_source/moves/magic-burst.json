@@ -51,7 +51,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -64,6 +65,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Normal",
     "category": "Special",
     "damageBase": "6",
@@ -87,5 +89,16 @@
       "used": null,
       "showInTokenPanel": true
     }
+  },
+  "effects": [],
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
   }
 }

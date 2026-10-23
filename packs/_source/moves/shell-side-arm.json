@@ -34,6 +34,8 @@
     ],
     "enabled": true,
     "slug": "shell-side-arm",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -51,7 +53,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Target 1"
+      "Target 1",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -71,7 +74,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -84,6 +88,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Poison",
     "category": "Special",
     "damageBase": "9",
@@ -93,9 +98,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "9hLYoVcrTZHP4lg4",
   "effects": [],
@@ -110,10 +113,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200823425,
+    "modifiedTime": 1792740436011,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

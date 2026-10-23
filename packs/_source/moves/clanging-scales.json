@@ -28,6 +28,8 @@
     ],
     "enabled": true,
     "slug": "clanging-scales",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -46,7 +48,8 @@
     "stackSlugs": false,
     "keywords": [
       "Target 1 or Burst 1",
-      "Sonic"
+      "Sonic",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -66,7 +69,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -79,6 +83,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Dragon",
     "category": "Special",
     "damageBase": "11",
@@ -88,9 +93,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "SDPk5W5qpagi8HVC",
   "effects": [],
@@ -105,10 +108,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200824437,
+    "modifiedTime": 1792740435889,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

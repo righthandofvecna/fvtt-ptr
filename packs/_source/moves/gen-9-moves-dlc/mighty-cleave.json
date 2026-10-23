@@ -11,6 +11,8 @@
     "rules": [],
     "enabled": true,
     "slug": "mighty-cleave",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -29,7 +31,8 @@
     "stackSlugs": false,
     "keywords": [
       "Target 1",
-      "Slice"
+      "Slice",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -49,7 +52,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -62,6 +66,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Rock",
     "category": "Physical",
     "damageBase": "10",
@@ -70,9 +75,7 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false,
-    "contentSet": "",
-    "replacesSlug": ""
+    "isStruggle": false
   },
   "effects": [],
   "sort": 250000,
@@ -86,10 +89,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1705073471248,
-    "modifiedTime": 1778200824685,
+    "modifiedTime": 1792740435923,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

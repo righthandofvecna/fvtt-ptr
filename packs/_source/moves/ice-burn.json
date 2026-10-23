@@ -22,6 +22,8 @@
     ],
     "enabled": true,
     "slug": "ice-burn",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -41,7 +43,8 @@
     "keywords": [
       "Target 1",
       "Set-Up",
-      "Full Action"
+      "Full Action",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -61,7 +64,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -74,6 +78,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Ice",
     "category": "Special",
     "damageBase": "14",
@@ -83,9 +88,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "rp4bkyPC1p1PILp4",
   "effects": [],
@@ -100,10 +103,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200825844,
+    "modifiedTime": 1792740436087,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

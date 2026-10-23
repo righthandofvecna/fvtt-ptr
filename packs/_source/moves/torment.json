@@ -10,7 +10,9 @@
     "rules": [
       {
         "key": "ApplyEffect",
-        "predicate": ["attack:outcome:hit"],
+        "predicate": [
+          "attack:outcome:hit"
+        ],
         "affects": "target",
         "selectors": "{item|id}-apply-effects",
         "uuid": "Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY",

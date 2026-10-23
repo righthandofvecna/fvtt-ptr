@@ -22,6 +22,8 @@
     ],
     "enabled": true,
     "slug": "steam-eruption",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -39,7 +41,8 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Smite"
+      "Smite",
+      "Signature"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -59,7 +62,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -72,6 +76,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "type": "Water",
     "category": "Special",
     "damageBase": "11",
@@ -81,9 +86,7 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "zNrQceSpUoEV62cU",
   "effects": [],
@@ -98,10 +101,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
     "createdTime": 1692963260348,
-    "modifiedTime": 1778200826315,
+    "modifiedTime": 1792740435918,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

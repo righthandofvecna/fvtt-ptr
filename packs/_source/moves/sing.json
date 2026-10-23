@@ -112,5 +112,20 @@
       "devNote": ""
     }
   },
-  "_id": "YD9PPN6tPaLMrvvm"
+  "_id": "YD9PPN6tPaLMrvvm",
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
 }
