@@ -2,7 +2,7 @@
   "name": "Dilettante Rank 3",
   "system": {
     "origin": "",
-    "effect": "You gain both an Edge and a General Feature from the lists on page 86 of the Core handbook. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites.  Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead.",
+    "effect": "You gain both an Edge and a General Feature from the @UUID[Compendium.ptu.references.Item.7tvEbcIHhwfBvoZo]{Delettante Options} list. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites.  Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,7 +60,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +72,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Hobbyist"
+      "prereqBackup": "Hobbyist",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -82,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 42900000,
   "_id": "cT1uNd3NN8lUlYYm"
 }

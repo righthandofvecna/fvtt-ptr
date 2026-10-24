@@ -3,8 +3,8 @@
   "type": "reference",
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
-    "origin": "Look and Learn",
-    "effect": "Shoud list the proper edges & features",
+    "origin": "Hobbyist",
+    "effect": "<b>Scene Features List: (Feature - Prerequisite)</b>\nCritical Moment - Commander’s Voice\nCapture Techniques (False Strike and Catch Combo only) - Poké Ball Crafter\nStaying Power - Medic Training\nSleight - Command Versatility\nChemical Warfare - Repel Crafter\nMettle - Defender\n\n<b>Action Point Features List: (Feature - Prerequisite)</b>\nNuanced Performance - Grace\nRound Trip - Quick Switch\nHits the Spot - Basic Cooking\nStyle is Eternal - Groomer\nCoaching - Swimmer\nQuick Gymnastics - Acrobat",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "OjFwyh29VOqXIJAM",
   "effects": [],
-  "folder": null,
   "sort": 12900000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

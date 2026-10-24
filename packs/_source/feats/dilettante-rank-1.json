@@ -2,7 +2,7 @@
   "name": "Dilettante Rank 1",
   "system": {
     "origin": "",
-    "effect": "You gain both an Edge and a General Feature from the lists on page 86 of the Core handbook. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites.  Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead.",
+    "effect": "You gain both an Edge and a General Feature from the @UUID[Compendium.ptu.references.Item.7tvEbcIHhwfBvoZo]{Delettante Options} list. You may gain the chosen Edge and Feature even if you do not meet the Skill prerequisites. You must meet any other Prerequisites.  Whenever you gain a Feature or Edge this way, change any Skill Rank applications or Skill Checks mandated directly by the Edge or Feature into your choice of General Education or Perception Skill Checks or Rank applications instead.",
     "snippet": "",
     "rules": [
       {
@@ -17,46 +17,60 @@
         },
         "choices": [
           {
-            "value": "Compendium.ptu.feats.Item.1otscPPJIq4HWkwD"
+            "value": "Compendium.ptu.feats.Item.1otscPPJIq4HWkwD",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.Wvs66BTJ7t6965f2"
+            "value": "Compendium.ptu.feats.Item.Wvs66BTJ7t6965f2",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.PMI58lLIZJqHwuwW"
+            "value": "Compendium.ptu.feats.Item.PMI58lLIZJqHwuwW",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.JiO7eCRryFoYiBSe"
+            "value": "Compendium.ptu.feats.Item.JiO7eCRryFoYiBSe",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.beL0mQ0ddaiE24tt"
+            "value": "Compendium.ptu.feats.Item.beL0mQ0ddaiE24tt",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.NVnFquC0fdo74toT"
+            "value": "Compendium.ptu.feats.Item.NVnFquC0fdo74toT",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.M028wUlRhCcuOqZ3"
+            "value": "Compendium.ptu.feats.Item.M028wUlRhCcuOqZ3",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.HrcEC7rRfqY9LMwD"
+            "value": "Compendium.ptu.feats.Item.HrcEC7rRfqY9LMwD",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.UF07jMVuiSeRawZR"
+            "value": "Compendium.ptu.feats.Item.UF07jMVuiSeRawZR",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.r1OvX4IECRfZUkwJ"
+            "value": "Compendium.ptu.feats.Item.r1OvX4IECRfZUkwJ",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.2WbLqVLtcQhLOUyi"
+            "value": "Compendium.ptu.feats.Item.2WbLqVLtcQhLOUyi",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.mIqSUpYJRx7QoIWd"
+            "value": "Compendium.ptu.feats.Item.mIqSUpYJRx7QoIWd",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.c2uDrArNVis0yMlT"
+            "value": "Compendium.ptu.feats.Item.c2uDrArNVis0yMlT",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.feats.Item.MkkO6bYRLHH2TaZW"
+            "value": "Compendium.ptu.feats.Item.MkkO6bYRLHH2TaZW",
+            "label": ""
           }
         ]
       },
@@ -72,70 +86,92 @@
         },
         "choices": [
           {
-            "value": "Compendium.ptu.edges.Item.EUkre7TTFIJ6e9Tn"
+            "value": "Compendium.ptu.edges.Item.EUkre7TTFIJ6e9Tn",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.83SDkFFlZImPrJUe"
+            "value": "Compendium.ptu.edges.Item.83SDkFFlZImPrJUe",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.PTvClFCXvrCvVIzn"
+            "value": "Compendium.ptu.edges.Item.PTvClFCXvrCvVIzn",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.Gmg2iQ6uI5EceU6L"
+            "value": "Compendium.ptu.edges.Item.Gmg2iQ6uI5EceU6L",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.Pby1ihkgH4vG8XUN"
+            "value": "Compendium.ptu.edges.Item.Pby1ihkgH4vG8XUN",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.6h6WUePk3eR3LM76"
+            "value": "Compendium.ptu.edges.Item.6h6WUePk3eR3LM76",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.RcNRBaZ7ZcnhbNza"
+            "value": "Compendium.ptu.edges.Item.RcNRBaZ7ZcnhbNza",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.XCYP5vlWl3u3s7LS"
+            "value": "Compendium.ptu.edges.Item.XCYP5vlWl3u3s7LS",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.KjZ1VN3rZpnoSRVk"
+            "value": "Compendium.ptu.edges.Item.KjZ1VN3rZpnoSRVk",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.FTh106Tw4v67qQzx"
+            "value": "Compendium.ptu.edges.Item.FTh106Tw4v67qQzx",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.b9Y1rKIPqKEWPcrc"
+            "value": "Compendium.ptu.edges.Item.b9Y1rKIPqKEWPcrc",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.sTO4hjOM4tcQIqPh"
+            "value": "Compendium.ptu.edges.Item.sTO4hjOM4tcQIqPh",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.7ipgmPobmlKbY65X"
+            "value": "Compendium.ptu.edges.Item.7ipgmPobmlKbY65X",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.4hq51JxDQWMVn4BR"
+            "value": "Compendium.ptu.edges.Item.4hq51JxDQWMVn4BR",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.80LqzME9iDpVQWko"
+            "value": "Compendium.ptu.edges.Item.80LqzME9iDpVQWko",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.EN9bBp3zK0OVe7Yp"
+            "value": "Compendium.ptu.edges.Item.EN9bBp3zK0OVe7Yp",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.e5w4Szs2uY8PdgNa"
+            "value": "Compendium.ptu.edges.Item.e5w4Szs2uY8PdgNa",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.2rUgHr7755xzp25k"
+            "value": "Compendium.ptu.edges.Item.2rUgHr7755xzp25k",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.JSOBQlTlh8jXDq1Q"
+            "value": "Compendium.ptu.edges.Item.JSOBQlTlh8jXDq1Q",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.BEKoMxGkYLzJyMsG"
+            "value": "Compendium.ptu.edges.Item.BEKoMxGkYLzJyMsG",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.D7YCqoAEVoea5DxA"
+            "value": "Compendium.ptu.edges.Item.D7YCqoAEVoea5DxA",
+            "label": ""
           },
           {
-            "value": "Compendium.ptu.edges.Item.DxmWdTGKbBORgNLD"
+            "value": "Compendium.ptu.edges.Item.DxmWdTGKbBORgNLD",
+            "label": ""
           }
         ]
       },
@@ -191,7 +227,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -214,7 +251,9 @@
     "name": "Dilettante Rank 1",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -224,7 +263,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Hobbyist"
+      "prereqBackup": "Hobbyist",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -237,7 +279,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 62300000,
   "_id": "ttUnwGNh6FkJcUok"
 }
