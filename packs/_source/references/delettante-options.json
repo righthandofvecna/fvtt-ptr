@@ -1,0 +1,28 @@
+{
+  "name": "Delettante Options",
+  "type": "reference",
+  "_id": "7tvEbcIHhwfBvoZo",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "Hobbyist",
+    "effect": "Edges: @UUID[Compendium.ptu.edges.Item.EUkre7TTFIJ6e9Tn]{Acrobat}, @UUID[Compendium.ptu.edges.Item.83SDkFFlZImPrJUe]{Apricorn Balls}, @UUID[Compendium.ptu.edges.Item.PTvClFCXvrCvVIzn]{Basic Balls}, @UUID[Compendium.ptu.edges.Item.Gmg2iQ6uI5EceU6L]{Basic Cooking}, @UUID[Compendium.ptu.edges.Item.Pby1ihkgH4vG8XUN]{Basic Martial Arts}, @UUID[Compendium.ptu.edges.Item.6h6WUePk3eR3LM76]{Beast Master}, @UUID[Compendium.ptu.edges.Item.RcNRBaZ7ZcnhbNza]{Breeder}, @UUID[Compendium.ptu.edges.Item.XCYP5vlWl3u3s7LS]{Dynamism}, @UUID[Compendium.ptu.edges.Item.KjZ1VN3rZpnoSRVk]{Gem Lore}, @UUID[Compendium.ptu.edges.Item.FTh106Tw4v67qQzx]{Grace}, @UUID[Compendium.ptu.edges.Item.DxmWdTGKbBORgNLD]{Green Thumb}, @UUID[Compendium.ptu.edges.Item.b9Y1rKIPqKEWPcrc]{Groomer}, @UUID[Compendium.ptu.edges.Item.sTO4hjOM4tcQIqPh]{Instinctive Aptitude}, @UUID[Compendium.ptu.edges.Item.7ipgmPobmlKbY65X]{Instruction}, @UUID[Compendium.ptu.edges.Item.4hq51JxDQWMVn4BR]{Intimidating Presence}, @UUID[Compendium.ptu.edges.Item.80LqzME9iDpVQWko]{Iron Mind}, @UUID[Compendium.ptu.edges.Item.EN9bBp3zK0OVe7Yp]{Medic Training}, @UUID[Compendium.ptu.edges.Item.e5w4Szs2uY8PdgNa]{Mounted Prowess}, @UUID[Compendium.ptu.edges.Item.2rUgHr7755xzp25k]{Repel Crafter}, @UUID[Compendium.ptu.edges.Item.JSOBQlTlh8jXDq1Q]{Slippery}, @UUID[Compendium.ptu.edges.Item.BEKoMxGkYLzJyMsG]{Swimmer}, @UUID[Compendium.ptu.edges.Item.D7YCqoAEVoea5DxA]{Train the Reserves}.\n\nFeatures: @UUID[Compendium.ptu.feats.Item.1otscPPJIq4HWkwD]{Command Versatility}, @UUID[Compendium.ptu.feats.Item.Wvs66BTJ7t6965f2]{Commander’s Voice}, @UUID[Compendium.ptu.feats.Item.PMI58lLIZJqHwuwW]{Defender}, @UUID[Compendium.ptu.feats.Item.JiO7eCRryFoYiBSe]{Dive}, @UUID[Compendium.ptu.feats.Item.beL0mQ0ddaiE24tt]{First Aid Expertise}, @UUID[Compendium.ptu.feats.Item.NVnFquC0fdo74toT]{Let Me Help You With That}, @UUID[Compendium.ptu.feats.Item.R6O1UULwZzsCJXyA]{Poké Ball Crafter}, @UUID[Compendium.ptu.feats.Item.HrcEC7rRfqY9LMwD]{PokéManiac}, @UUID[Compendium.ptu.feats.Item.UF07jMVuiSeRawZR]{Press}, @UUID[Compendium.ptu.feats.Item.r1OvX4IECRfZUkwJ]{Quick Switch}, @UUID[Compendium.ptu.feats.Item.2WbLqVLtcQhLOUyi]{Skill Monkey}, @UUID[Compendium.ptu.feats.Item.mIqSUpYJRx7QoIWd]{Species Savant}, any @CompSearch[Feats keywords=Training]{Training Feature}, @UUID[Compendium.ptu.feats.Item.c2uDrArNVis0yMlT]{Tutoring}, @UUID[Compendium.ptu.feats.Item.MkkO6bYRLHH2TaZW]{Walk It Off}.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "delettante-options",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "folder": null
+}
