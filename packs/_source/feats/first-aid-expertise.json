@@ -62,7 +62,8 @@
     "useCount": 0,
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -90,6 +91,5 @@
     "exportSource": null
   },
   "sort": 41500000,
-  "_id": "beL0mQ0ddaiE24tt",
-  "folder": null
+  "_id": "beL0mQ0ddaiE24tt"
 }

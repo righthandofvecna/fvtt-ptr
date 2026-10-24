@@ -54,7 +54,7 @@
     "ptu": {
       "automationStatus": "needs-automation",
       "devNote": "Additional Move effects not automated",
-      "showInTokenPanel": false
+      "showInTokenPanel": true
     }
   }
 }

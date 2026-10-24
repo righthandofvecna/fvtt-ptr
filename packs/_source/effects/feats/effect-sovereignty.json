@@ -72,7 +72,7 @@
     "ptu": {
       "automationStatus": "completed",
       "devNote": "",
-      "showInTokenPanel": false
+      "showInTokenPanel": true
     }
   }
 }
