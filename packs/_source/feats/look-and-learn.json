@@ -2,7 +2,7 @@
   "name": "Look and Learn",
   "system": {
     "origin": "",
-    "effect": "When you activate Look and Learn, you may gain any of the Features listed on page 86 of the Core handbook even though they are Features from other Classes. You do not need to meet their normal prerequisites, but you must meet the Prerequisites listed. Look and Learn can be used two times; once to learn a Feature from the Scene Features List, and once to learn a Feature from the Action Point Features List.",
+    "effect": "When you activate Look and Learn, you may gain any of the Features from the @UUID[Compendium.ptu.references.Item.OjFwyh29VOqXIJAM]{Look and Learn List} even though they are Features from other Classes. You do not need to meet their normal prerequisites, but you must meet the Prerequisites listed. Look and Learn can be used two times; once to learn a Feature from the Scene Features List, and once to learn a Feature from the Action Point Features List.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -34,7 +34,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +59,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +71,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Hobbyist, Expert General Education or Perception"
+      "prereqBackup": "Hobbyist, Expert General Education or Perception",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -81,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 61800000,
   "_id": "tWtFX7OLTiTAcYwj"
 }

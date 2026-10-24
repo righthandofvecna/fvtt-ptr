@@ -34,7 +34,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +59,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +71,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Hobbyist, Expert General Education or Perception"
+      "prereqBackup": "Hobbyist, Expert General Education or Perception",
+      "automationStatus": "needs-automation",
+      "devNote": "May need adjustments based on Progression Track",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -81,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 58700000,
   "_id": "pvPFqhvgcmw5P2XD"
 }

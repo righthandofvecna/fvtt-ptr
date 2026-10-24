@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": true
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +72,8 @@
     "useCount": 0,
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -99,5 +101,6 @@
     "exportSource": null
   },
   "sort": 20600000,
-  "_id": "JiO7eCRryFoYiBSe"
+  "_id": "JiO7eCRryFoYiBSe",
+  "folder": null
 }
