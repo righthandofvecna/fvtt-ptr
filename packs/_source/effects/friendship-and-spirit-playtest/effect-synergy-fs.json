@@ -1,0 +1,133 @@
+{
+  "folder": "ozYy01vstiDtLJRD",
+  "name": "Effect: Synergy",
+  "type": "effect",
+  "_id": "j8SENDmUzH6JMAww",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "For the remainder of the Scene, you gain an additional Ability from this Pokémons Ability List.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "{actor|species.system.abilities.basic.0.uuid}",
+            "label": "{actor|species.system.abilities.basic.0.slug}",
+            "predicate": [
+              {
+                "not": "ability:{actor|species.system.abilities.basic.0.slug}"
+              }
+            ]
+          },
+          {
+            "value": "{actor|species.system.abilities.basic.1.uuid}",
+            "label": "{actor|species.system.abilities.basic.1.slug}",
+            "predicate": [
+              {
+                "not": "ability:{actor|species.system.abilities.basic.1.slug}"
+              }
+            ]
+          },
+          {
+            "value": "{actor|species.system.abilities.advanced.0.uuid}",
+            "label": "{actor|species.system.abilities.advanced.0.slug}",
+            "predicate": [
+              {
+                "not": "ability:{actor|species.system.abilities.advanced.0.slug}"
+              }
+            ]
+          },
+          {
+            "value": "{actor|species.system.abilities.advanced.1.uuid}",
+            "label": "{actor|species.system.abilities.advanced.1.slug}",
+            "predicate": [
+              {
+                "not": "ability:{actor|species.system.abilities.advanced.1.slug}"
+              }
+            ]
+          },
+          {
+            "value": "{actor|species.system.abilities.advanced.2.uuid}",
+            "label": "{actor|species.system.abilities.advanced.2.slug}",
+            "predicate": [
+              {
+                "not": "ability:{actor|species.system.abilities.advanced.2.slug}"
+              }
+            ]
+          },
+          {
+            "value": "{actor|species.system.abilities.high.0.uuid}",
+            "label": "{actor|species.system.abilities.high.0.slug}",
+            "predicate": [
+              {
+                "not": "ability:{actor|species.system.abilities.high.0.slug}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.effectSynergyFs}"
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-synergy-fs",
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "encounter",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.55",
+    "createdTime": 1792799232933,
+    "modifiedTime": 1792799253828,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

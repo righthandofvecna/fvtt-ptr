@@ -1088,6 +1088,10 @@
         "Name": "Variant Rules",
         "Label": "Toggle Variant Rules",
         "Hint": "Enable and configure variant rules like 'Use Dex EXP' for the system.",
+        "UseSessionBasedRecovery": {
+          "Name": "Use Session-Based Recovery",
+          "Hint": "Instead of time-based hit point and injury recovery, Pokémon and Trainers gain the benefits of an Extended Rest at the end of each session, fully healing all damage and injuries."
+        },
         "UseTutorPoints": {
           "Name": "Use Tutor Points for Pokémon",
           "Hint": "Otherwise use the suggested changes in the 'GM Advice and Suggested Houserules' (see: https://pastebin.com/iDt2Mj0d)"

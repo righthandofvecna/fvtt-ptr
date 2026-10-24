@@ -10,6 +10,8 @@
     "rules": [],
     "enabled": true,
     "slug": "recoup-3",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -37,7 +39,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -50,11 +53,10 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "cost": "3",
     "trigger": "At-Will",
-    "active": true,
-    "contentSet": "",
-    "replacesSlug": ""
+    "active": true
   },
   "_id": "Kx69xfAIR6c0Q2IZ",
   "effects": [],
@@ -62,13 +64,18 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Macro -Dylan"
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.55",
+    "coreVersion": "14.367",
     "createdTime": 1694339291185,
-    "modifiedTime": 1778200886176,
+    "modifiedTime": 1792781147203,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -281,6 +281,8 @@ class PTUCombat extends Combat {
 
         if (this.started) {
             Hooks.callAll("ptu.endTurn", this.combatant ?? null, this, userId);
+            game.ptu.effectTracker.onEncounterEnd(this);
+
             // post combat actor cleanup
             this.combatants.contents.flatMap(c => c.actor ?? []).map(actor => actor.onDeleteCombat());
 

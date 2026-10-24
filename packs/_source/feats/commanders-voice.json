@@ -61,7 +61,8 @@
     "class": "",
     "name": "Commander's Voice",
     "automation": [],
-    "useCount": 0
+    "useCount": 0,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -88,5 +89,6 @@
     "exportSource": null
   },
   "sort": 36100000,
-  "_id": "Wvs66BTJ7t6965f2"
+  "_id": "Wvs66BTJ7t6965f2",
+  "folder": null
 }

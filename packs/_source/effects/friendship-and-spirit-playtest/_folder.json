@@ -1,0 +1,22 @@
+{
+  "type": "Item",
+  "folder": null,
+  "name": "Friendship and Spirit Playtest",
+  "color": null,
+  "sorting": "a",
+  "_id": "ozYy01vstiDtLJRD",
+  "description": "",
+  "sort": 1400000,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.55",
+    "createdTime": 1792784304769,
+    "modifiedTime": 1792784425977,
+    "lastModifiedBy": "GFCVv4EMgQDa5fGR",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

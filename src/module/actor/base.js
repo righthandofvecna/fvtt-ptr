@@ -821,7 +821,7 @@ class PTUActor extends Actor {
         if (changed?.system?.spirit?.value !== undefined) {
             changed.system.spirit.value = Math.clamp(
                 changed.system.spirit.value,
-                this.system.spirit.min ?? this.system.spirit.min,
+                changed.system.spirit.min ?? this.system.spirit.min,
                 changed.system.spirit.max ?? this.system.spirit.max
             );
         }
@@ -1363,12 +1363,26 @@ class PTUActor extends Actor {
 
     /**
      * Called at the end of a day, handling end-of-day cleanup and restoration.
+     * This is an Extended Rest.
      */
     async onDayEnd() {
-        const itemUpdates = []
+        const actorUpdate = {};
+        const itemUpdates = [];
+        const itemDeletions = [];
         for (const item of this.items.contents) {
             itemUpdates.push(await item.onDayEnd?.({ doUpdates: false }));
         }
+
+        // Handle healing and injury recovery
+        if (game.settings.get("ptu", "variant.useSessionBasedRecovery")) {
+            actorUpdate["system.health.value"] = this.system.attributes.hp.max;
+            actorUpdate["system.injury.value"] = 0;
+            actorUpdate["system.pp.value"] = this.system.pp.max ?? 0;
+            const persistentConditions = this.items.filter(i => i.type === "condition" && !i.isGranted && i.persistent).map(i => i.id);
+            if (persistentConditions.length > 0) itemDeletions.push(...persistentConditions);
+        }
+
+        if (itemDeletions.length > 0) await this.deleteEmbeddedDocuments("Item", itemDeletions);
         if (itemUpdates.filter(Boolean).length) await this.updateEmbeddedDocuments("Item", itemUpdates.filter(Boolean));
     }
 

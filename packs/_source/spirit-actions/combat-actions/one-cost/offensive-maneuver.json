@@ -7,9 +7,22 @@
     "origin": "",
     "effect": "Your attacks deal +5 Damage for the remainder of the Scene.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "affects": "origin",
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.ODCUGdPFqvryatyX",
+        "range": "",
+        "linked": false,
+        "value": ""
+      }
+    ],
     "enabled": true,
     "slug": "offensive-maneuver",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -37,7 +50,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -50,11 +64,10 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "cost": "1",
     "trigger": "At-Will",
-    "active": true,
-    "contentSet": "",
-    "replacesSlug": ""
+    "active": true
   },
   "_id": "JzukNRoAQZ5c6E7h",
   "effects": [],
@@ -62,13 +75,18 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Eminently doable"
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.55",
+    "coreVersion": "14.367",
     "createdTime": 1694340625974,
-    "modifiedTime": 1778200886176,
+    "modifiedTime": 1792794699166,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

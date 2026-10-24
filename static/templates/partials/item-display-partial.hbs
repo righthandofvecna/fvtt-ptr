@@ -355,6 +355,16 @@
             <img src="systems/ptu/static/images/icons/FreeAction.svg"/>
         </div>
     {{/if}}
+    {{#if item.system.frequency.modifiers.reaction}}
+        <div class="tag shadowless tooltip" title="Reaction">
+            <i class="fa-solid fa-u-turn-down-left"></i>
+        </div>
+    {{/if}}
+    {{#if item.system.free}}
+        <div class="tag shadowless tooltip" title="This does not count against your maximum">
+            <i class="fa-solid fa-ticket"></i>
+        </div>
+    {{/if}}
     {{#if item.grantedBy}}
         <div class="tag shadowless tooltip" title="Granted by {{item.grantedBy.name}}">
             <img src="systems/ptu/static/css/images/icons/granted_icon.png"/>

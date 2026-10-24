@@ -38,6 +38,10 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Added Friendship and Loyalty fields to Pokemon character sheet, even if F&S Playtest is disabled
+- Display an icon if an Edge or Feature is marked as "Free"
+- Display an arrow if something is marked as being a reaction
+- Added a "Session-Based Recovery" variant rule
 - Added new Alpha Pokemon generation option (as well as a generation setting to control which bonus moves it gets)
 - Added "Prevent Evolution" checkbox for Mass Species Generator
 - Fixed Quick-Insert Content set filtering to match the compendium browser

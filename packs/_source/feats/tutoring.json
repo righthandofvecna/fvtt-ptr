@@ -35,7 +35,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,7 +60,8 @@
     "automation": [],
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +71,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice General Education, Special (See Effect)"
+      "prereqBackup": "Novice General Education, Special (See Effect)",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -82,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 42200000,
   "_id": "c2uDrArNVis0yMlT"
 }

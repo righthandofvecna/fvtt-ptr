@@ -1,6 +1,12 @@
 import { PTUSettingsMenu } from "./base.js";
 
 const VariantSettingsConfig = {
+    "useSessionBasedRecovery": {
+        name: "PTU.Settings.Variant.UseSessionBasedRecovery.Name",
+        hint: "PTU.Settings.Variant.UseSessionBasedRecovery.Hint",
+        type: Boolean,
+        default: false
+    },
     "useTutorPoints": {
         name: "PTU.Settings.Variant.UseTutorPoints.Name",
         hint: "PTU.Settings.Variant.UseTutorPoints.Hint",
