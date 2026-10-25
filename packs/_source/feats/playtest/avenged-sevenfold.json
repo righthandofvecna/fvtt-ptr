@@ -5,9 +5,37 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "You gain the move Return+ or Frustration+ of your choice.",
+    "effect": "You gain the move @UUID[Compendium.ptu.moves.Item.ZfiKeomwzV8LtjDx]{Return+} or @UUID[Compendium.ptu.moves.Item.tkATQl42vxqWDfjd]{Frustration+} of your choice.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.ZfiKeomwzV8LtjDx",
+            "label": "Return+",
+            "predicate": {
+              "not": "move:return+"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.tkATQl42vxqWDfjd",
+            "label": "Frustration+",
+            "predicate": {
+              "not": "move:frustration+"
+            }
+          }
+        ],
+        "flag": "sevenfold1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.sevenfold1}"
+      }
+    ],
     "enabled": true,
     "slug": "avenged-sevenfold",
     "schema": {
@@ -39,7 +67,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,14 +87,18 @@
     "notes": "",
     "free": false,
     "class": "Hustler",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Weakness is Power"
+      "prereqBackup": "Weakness is Power",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
