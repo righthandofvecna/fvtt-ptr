@@ -1216,10 +1216,6 @@
             "Auto": "Auto-Apply"
           }
         },
-        "SessionPromptExtendedRest": {
-          "Name": "Session Prompt for Extended Rest",
-          "Hint": "Prompt the GM at the start of the session to apply an extended rest for Pokémon and Trainers. This triggers only when all users are active and there are no in-progress combats."
-        },
         "CommandChecks": {
           "Name": "Command Checks",
           "Hint": "Automatically perform command checks if necessary for low Loyalty or Friendship Pokemon."
