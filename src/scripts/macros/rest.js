@@ -1,11 +1,14 @@
-export async function applyRest(hours, pokemonCenter) {
+export async function applyRest(hours, pokemonCenter, actors=undefined) {
   const isExtendedRest = hours >= 4;
+  actors ??= [...game.actors.values()];
+
+  const prevActorValues = actors.map(a=>foundry.utils.deepClone(a.toObject()));
 
   const actorUpdates = [];
   const itemDeletions = new Map();
   const itemUpdates = [];
 
-  for (const actor of game.actors.values()) {
+  for (const actor of actors) {
     const actorUpdate = { _id: actor.id };
     let healedAtCenter = false;
 
@@ -16,13 +19,14 @@ export async function applyRest(hours, pokemonCenter) {
       }
     }
 
+    const injuries = Math.max(actor.system.health.injuries ?? 0, 0);
     if (pokemonCenter) {
-      const injuries = Math.max(actor.system.health.injuries ?? 0, 0);
       const requiredHours = injuries < 5 ? (2 + injuries) / 2 : 1 + injuries;
 
       if (requiredHours <= hours) {
         healedAtCenter = true;
         actorUpdate["system.health.value"] = actor.system.health.total;
+        actorUpdate["system.health.injuries"] = Math.max(0, injuries - 3);
 
         const conditionsToDelete = actor.items.filter(i => i.type === "condition" && !i.isGranted).map(i => i.id);
         if (conditionsToDelete.length > 0) {
@@ -40,7 +44,7 @@ export async function applyRest(hours, pokemonCenter) {
 
     // Natural Healing (if not healed at center)
     if (!healedAtCenter) {
-      if ((actor.system.health.injuries ?? 0) < 5) {
+      if (injuries < 5) {
         const healAmount = hours * 2 * Math.ceil(actor.system.health.max / 16);
         if (healAmount > 0) {
           const currentHP = actor.system.health.value;
@@ -106,5 +110,34 @@ export async function applyRest(hours, pokemonCenter) {
   }
 
   // do endOfDay calls for all actors
-  if (isExtendedRest) await Promise.all(game.actors.values().map(actor => actor.endOfDay()));
+  if (isExtendedRest) await Promise.all(actors.map(actor => actor.onDayEnd()));
+
+  // send the rest summary message to the chat, including a list of actors who rested, how much HP, injuries, spirit, PP, and AP were restored
+  let chatMessageContent = `<p>Rest applied for ${hours} hour${(hours !== 1 ? "s" : "")}${isExtendedRest ? " (Extended Rest)" : ""}${pokemonCenter ? " at a Pokémon Center" : ""}.</p><ul>`;
+  for (const actor of actors) {
+    // use diff from prevActorValues
+    const prevActor = prevActorValues.find(a => a._id === actor.id);
+    const hpDiff = actor.system.health.value - (prevActor?.system?.health?.value ?? 0);
+    const injuriesDiff = (actor.system.health.injuries ?? 0) - (prevActor?.system?.health?.injuries ?? 0);
+    const spiritDiff = actor.system.spirit.value - (prevActor?.system?.spirit?.value ?? 0);
+    const ppDiff = actor.system.pp.value - (prevActor?.system?.pp?.value ?? 0);
+    const apDiff = actor.type === "character" ? actor.system.ap.value - (prevActor?.system?.ap?.value ?? 0) : 0;
+    const deletedItems = (prevActor?.items ?? []).filter(item => !actor.items.get(item._id));
+    if (hpDiff || injuriesDiff || spiritDiff || ppDiff || apDiff) {
+      let qualifiedName = actor.name;
+      if (actor.trainer) qualifiedName = `${actor.trainer.name}'s ${actor.name}`;
+      chatMessageContent += `<li><strong>${qualifiedName}</strong><ul>`
+      if (hpDiff) chatMessageContent += `<li><em>HP</em> <strong>${hpDiff > 0 ? `+${hpDiff}` : hpDiff}</strong></li>`;
+      if (injuriesDiff) chatMessageContent += `<li><em>Injuries</em> <strong>${injuriesDiff > 0 ? `+${injuriesDiff}` : injuriesDiff}</strong></li>`;
+      if (spiritDiff) chatMessageContent += `<li><em>Spirit</em> <strong>${spiritDiff > 0 ? `+${spiritDiff}` : spiritDiff}</strong></li>`;
+      if (ppDiff) chatMessageContent += `<li><em>PP</em> <strong>${ppDiff > 0 ? `+${ppDiff}` : ppDiff}</strong></li>`;
+      if (apDiff) chatMessageContent += `<li><em>AP</em> <strong>${apDiff > 0 ? `+${apDiff}` : apDiff}</strong></li>`;
+      for (const item of deletedItems) {
+        chatMessageContent += `<li><strong>-${item.name}</strong></li>`;
+      }
+      chatMessageContent += `</ul></li>`;
+    }
+  }
+  chatMessageContent += `</ul>`;
+  ChatMessage.create({ content: chatMessageContent });
 }
