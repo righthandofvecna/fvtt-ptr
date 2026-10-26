@@ -430,6 +430,7 @@ export class PokemonGenerator {
             }
             const allCorePTUMoves = [...(await game.packs.get("ptu.moves").getIndex({fields:["system.slug", "system.type", "system.damageBase", "system.keywords"]})).values()];
             const eligibleMoves = allCorePTUMoves.filter(m => {
+                if (["Nuclear", "Shadow"].includes(m.system.type ?? "")) return false;
                 if (levelUpSlugs.has(m.system.slug)) return false;
                 if ((m.system.keywords ?? []).includes("Signature")) return false;
                 if (m.system.damageBase && parseInt(m.system.damageBase) > 0) {
