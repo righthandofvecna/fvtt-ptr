@@ -55,11 +55,11 @@
     },
     "prerequisites": [
       "All A or B options",
-      "A: 2 Different Pokémon of the chosen Type",
-      "A: Type-Linked Skill at Novice",
-      "B: Elemental Connection (of the chosen Type)",
-      "B: 1 Pokémon of the chosen Type",
-      "B: Type-Linked Skill at Novice"
+      "A: 2 Different Poison Type Pokémon",
+      "A: Novice Intimidate or Stealth",
+      "B: Elemental Connection (Poison)",
+      "B: 1 Poison Type Pokémon",
+      "B: Novice Intimidate or Stealth"
     ],
     "notes": "",
     "free": false,

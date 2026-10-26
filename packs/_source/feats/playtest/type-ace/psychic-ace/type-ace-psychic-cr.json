@@ -55,11 +55,11 @@
     },
     "prerequisites": [
       "All A or B options",
-      "A: 2 Different Pokémon of the chosen Type",
-      "A: Type-Linked Skill at Novice",
-      "B: Elemental Connection (of the chosen Type)",
-      "B: 1 Pokémon of the chosen Type",
-      "B: Type-Linked Skill at Novice"
+      "A: 2 Different Psychic Type Pokémon",
+      "A: Novice Focus or Occult Education",
+      "B: Elemental Connection (Psychic)",
+      "B: 1 Psychic Type Pokémon",
+      "B: Novice Focus or Occult Education"
     ],
     "notes": "",
     "free": false,

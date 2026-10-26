@@ -54,11 +54,11 @@
     },
     "prerequisites": [
       "All A or B options",
-      "A: 2 Different Pokémon of the chosen Type",
-      "A: Type-Linked Skill at Novice",
-      "B: Elemental Connection (of the chosen Type)",
-      "B: 1 Pokémon of the chosen Type",
-      "B: Type-Linked Skill at Novice"
+      "A: 2 Different Normal Type Pokémon",
+      "A: Novice Charm or Intuition",
+      "B: Elemental Connection (Normal)",
+      "B: 1 Normal Type Pokémon",
+      "B: Novice Charm or Intuition"
     ],
     "notes": "",
     "free": false,

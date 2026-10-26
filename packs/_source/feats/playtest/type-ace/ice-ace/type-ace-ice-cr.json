@@ -54,11 +54,11 @@
     },
     "prerequisites": [
       "All A or B options",
-      "A: 2 Different Pokémon of the chosen Type",
-      "A: Type-Linked Skill at Novice",
-      "B: Elemental Connection (of the chosen Type)",
-      "B: 1 Pokémon of the chosen Type",
-      "B: Type-Linked Skill at Novice"
+      "A: 2 Different Ice Type Pokémon",
+      "A: Novice Athletics or Survival",
+      "B: Elemental Connection (Ice)",
+      "B: 1 Ice Type Pokémon",
+      "B: Novice Athletics or Survival"
     ],
     "notes": "",
     "free": false,

@@ -55,11 +55,11 @@
     },
     "prerequisites": [
       "All A or B options",
-      "A: 2 Different Pokémon of the chosen Type",
-      "A: Type-Linked Skill at Novice",
-      "B: Elemental Connection (of the chosen Type)",
-      "B: 1 Pokémon of the chosen Type",
-      "B: Type-Linked Skill at Novice"
+      "A: 2 Different Fire Type Pokémon",
+      "A: Novice Focus or Intimidate",
+      "B: Elemental Connection (Fire)",
+      "B: 1 Fire Type Pokémon",
+      "B: Novice Focus or Intimidate"
     ],
     "notes": "",
     "free": false,

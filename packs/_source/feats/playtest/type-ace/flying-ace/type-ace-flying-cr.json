@@ -55,11 +55,11 @@
     },
     "prerequisites": [
       "All A or B options",
-      "A: 2 Different Pokémon of the chosen Type",
-      "A: Type-Linked Skill at Novice",
-      "B: Elemental Connection (of the chosen Type)",
-      "B: 1 Pokémon of the chosen Type",
-      "B: Type-Linked Skill at Novice"
+      "A: 2 Different Flying Type Pokémon",
+      "A: Novice Acrobatics or Perception",
+      "B: Elemental Connection (Flying)",
+      "B: 1 Flying Type Pokémon",
+      "B: Novice Acrobatics or Perception"
     ],
     "notes": "",
     "free": false,
