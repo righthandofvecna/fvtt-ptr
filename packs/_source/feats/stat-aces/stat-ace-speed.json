@@ -52,9 +52,9 @@
     "prerequisites": [
       "All A or B options",
       "A: Ace Trainer or Style Expert",
-      "A: 1 Pokémon with the chosen stat at 15 or more",
+      "A: 1 Pokémon with Speed 15",
       "A: Novice Command or Focus",
-      "B: 3 Pokémon with the chosen stat at 20 or higher",
+      "B: 3 Pokémon with Speed 20",
       "B: Novice Command or Focus"
     ],
     "notes": "",

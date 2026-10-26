@@ -18,7 +18,7 @@ const CATEGORY = "prerequisites";
  * Build a minimal prereq context.
  * @param {{ level?: number, skills?: Record<string, number>, itemNames?: string[], itemSlugs?: string[] }} opts
  */
-function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], typeLinkedKeywords = [], typedPokemonCounts = {} } = {}) {
+function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], typeLinkedKeywords = [], typedPokemonCounts = {}, pokemonStatTotals = {} } = {}) {
     const simplified = itemNames.map(n => simplifyString(n));
     const baseNames = new Set(simplified);
     const itemNameSlugs = new Set();
@@ -45,6 +45,7 @@ function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], type
         itemNameSlugs,
         typeLinkedKeywords: new Set(typeLinkedKeywords.map(k => k.toLowerCase())),
         typedPokemonCounts: typedPokemonCountsMap,
+        pokemonStatTotals,
         itemSlugs: new Set(itemSlugs),
         skills,
     };
@@ -337,16 +338,33 @@ TestRegistry.register(CATEGORY, "Prereq | 'A Water-Type-Linked Class' matches on
     assert(!checkSinglePrereq("A Water-Type-Linked Class", ctxGeneric),"NOT met when actor only has generic 'Type Linked'");
 });
 
-// ─── Typed Pokémon prerequisites ──────────────────────────────────────────────────────────────────────────────────────
+// ─── Typed Pokémon prerequisites ─────────────────────────────────────────────
 
 TestRegistry.register(CATEGORY, "Prereq | 'N [Different] TYPE Type Pokemon' counts typed pokémon", () => {
     const ctx = makeCtx({ typedPokemonCounts: { Dark: 2, Water: 1 } });
     assert( checkSinglePrereq("1 Dark Type Pokemon", ctx),             "1 Dark met with 2 dark pokémon");
     assert( checkSinglePrereq("2 Different Dark Type Pokemon", ctx),   "2 Different Dark met with 2 dark pokémon");
     assert(!checkSinglePrereq("3 Different Dark Type Pokemon", ctx),   "3 Different Dark NOT met with only 2");
-    assert( checkSinglePrereq("1 Water Type Pok\u00e9mon", ctx),          "1 Water met with 1 water pokémon (accent)");
+    assert( checkSinglePrereq("1 Water Type Pokémon", ctx),            "1 Water met with 1 water pokémon (accent)");
     assert(!checkSinglePrereq("2 Water Type Pokemon", ctx),            "2 Water NOT met with only 1");
     assert(!checkSinglePrereq("1 Fire Type Pokemon", ctx),             "1 Fire NOT met with 0 fire pokémon");
+});
+
+// ─── Typed Pokémon prerequisites ──────────────────────────────────────────────────────────────────────────────────────
+
+TestRegistry.register(CATEGORY, "Prereq | 'N Pokémon with STAT of AMOUNT' checks stat totals", () => {
+    // Trainer has 3 pokémon with atk totals: 120, 90, 75
+    const ctx = makeCtx({ pokemonStatTotals: { atk: [120, 90, 75], spd: [110, 60] } });
+    assert( checkSinglePrereq("1 Pokémon with Attack of 90",  ctx), "1 Pokémon with Attack of 90: met (2 qualify)");
+    assert( checkSinglePrereq("2 Pokémon with Attack of 90",  ctx), "2 Pokémon with Attack of 90: met (2 qualify)");
+    assert(!checkSinglePrereq("3 Pokémon with Attack of 90",  ctx), "3 Pokémon with Attack of 90: NOT met (only 2 qualify)");
+    assert( checkSinglePrereq("1 Pokemon with Attack of 120",  ctx), "1 Pokemon with Attack of 120: met (1 qualifies)");
+    assert(!checkSinglePrereq("2 Pokemon with Attack of 120",  ctx), "2 Pokemon with Attack of 120: NOT met (only 1 qualifies)");
+    assert( checkSinglePrereq("1 Pokémon with Speed at 100",  ctx), "'at' variant: met");
+    assert( checkSinglePrereq("1 Pokémon with Speed at 110 or more", ctx), "'at X or more' variant: met");
+    assert(!checkSinglePrereq("1 Pokémon with Speed of 115",  ctx), "1 Pokémon with Speed of 115: NOT met (max is 110)");
+    // Unknown stat name should assume met
+    assert( !checkSinglePrereq("1 Pokémon with Wizardry of 9000", ctx), "Unknown stat assumes unmet");
 });
 
 // ─── "All A or B options" grouped prerequisites ───────────────────────────────────────────────────────

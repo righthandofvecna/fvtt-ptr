@@ -25,6 +25,22 @@ const ALL_OPTIONS_RE = /^All [A-Z](?: or [A-Z])+ options$/i;
 const GROUP_MEMBER_RE = /^([A-Z]):\s*(.+)$/i;
 // "N [Different] TYPE Type Pokemon" e.g. "2 Different Dark Type Pokemon"
 const TYPED_POKEMON_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) (?:Different )?(?<type>[A-Za-z]+) Type Pok[e\u00e9]mon$/i;
+// "N Pokemon with STAT of AMOUNT" e.g. "1 Pokémon with Attack of 110"
+const POKEMON_STAT_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) Pok[e\u00e9]mon with (?<stat>.+?) (?:of|at) (?<amount>[0-9]+)(?:\s+(?:or\s+)?(?:more|higher))?$/i;
+
+// Maps human-readable stat names to actor.system.stats keys
+const STAT_NAME_MAP = {
+    hp: 'hp',
+    attack: 'atk',
+    defense: 'def',
+    'special attack': 'spatk',
+    'special defense': 'spdef',
+    'sp. atk': 'spatk',
+    'sp. def': 'spdef',
+    'sp atk': 'spatk',
+    'sp def': 'spdef',
+    speed: 'spd',
+};
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -125,13 +141,22 @@ export function buildActorPrereqContext(actor) {
         }
     }
     // Count Pokémon of each type belonging to this trainer (including boxed).
+    // Also collect stat totals for each Pokémon.
     const typedPokemonCounts = new Map();
+    const pokemonStatTotals = {}; // { statKey: number[] }
     if (typeof game !== 'undefined' && game?.actors && actor.id) {
         for (const pokemon of game.actors) {
             if (pokemon.flags?.ptu?.party?.trainer !== actor.id) continue;
             for (const type of (pokemon.system?.typing ?? [])) {
                 const t = type.toLowerCase();
                 typedPokemonCounts.set(t, (typedPokemonCounts.get(t) ?? 0) + 1);
+            }
+            const stats = pokemon.system?.stats ?? {};
+            for (const [key, statData] of Object.entries(stats)) {
+                const total = statData?.total;
+                if (typeof total === 'number') {
+                    (pokemonStatTotals[key] ??= []).push(total);
+                }
             }
         }
     }
@@ -142,6 +167,7 @@ export function buildActorPrereqContext(actor) {
         itemNameSlugs,
         typeLinkedKeywords,
         typedPokemonCounts,
+        pokemonStatTotals,
         itemSlugs: new Set(items.map(i => i.system?.slug?.toLowerCase()).filter(Boolean)),
         skills: Object.fromEntries(
             Object.entries(actor.system.skills ?? {}).map(
@@ -275,6 +301,20 @@ export function checkSinglePrereq(text, ctx, testDict={}) {
         const type = typedPokemonMatch.groups.type.toLowerCase();
         const count = ctx.typedPokemonCounts?.get(type) ?? 0;
         return !Number.isNaN(n) && count >= n;
+    }
+
+    // "N Pokemon with STAT of AMOUNT" e.g. "1 Pokémon with Attack of 110"
+    const pokemonStatMatch = text.match(POKEMON_STAT_RE);
+    if (pokemonStatMatch) {
+        const n = parseIntA(pokemonStatMatch.groups.n);
+        const statKey = STAT_NAME_MAP[pokemonStatMatch.groups.stat.trim().toLowerCase()];
+        const amount = parseInt(pokemonStatMatch.groups.amount);
+        if (!Number.isNaN(n) && statKey && !Number.isNaN(amount)) {
+            const totals = ctx.pokemonStatTotals?.[statKey] ?? [];
+            const qualifying = totals.filter(v => v >= amount).length;
+            return qualifying >= n;
+        }
+        // Unknown stat name, fall through
     }
 
     // "N of FEAT1 or FEAT2 or ..." – need at least N of these items
