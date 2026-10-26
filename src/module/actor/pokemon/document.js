@@ -440,6 +440,13 @@ class PTUPokemonActor extends PTUActor {
         Hooks.call("updateInitiative", this);
 
         system.tp.max = (system.level.current > 0 ? Math.floor(system.level.current / 5) : 0) + 1 + (system.modifiers.tp ?? 0);
+        const tutorSlotCostTotal = this.items.reduce((sum, item) => {
+            if (["move", "ability", "pokeedge"].includes(item.type)) {
+                return sum + (item.system.tutorSlotCost ?? 0);
+            }
+            return sum;
+        }, 0);
+        system.tp.max = Math.max(0, system.tp.max - tutorSlotCostTotal);
         system.tp.pep.value = this.items.filter(x => x.type == "pokeedge" && x.system.origin?.toLowerCase() != "pusher").length;
         system.tp.pep.max = system.level.current > 0 ? Math.floor(system.level.current / 10) + 1 : 1;
 

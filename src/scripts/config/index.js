@@ -1,7 +1,7 @@
 import { automation } from './automation.js';
 import { PTUActor, PTUTrainerActor, PTUPokemonActor, PTUCharacterSheet, PTUPokemonSheet } from '../../module/actor/index.js';
-import { PTUItemProxy, PTUItem, PTUEffect, PTUEdge, PTUFeat, PTUMove, PTUSpecies, PTUSpeciesSheet, PTUItemItem, PTUCondition, PTUSpiritAction } from '../../module/item/index.js';
-import { PTUItemSheet, PTUEffectSheet, PTUEdgeSheet, PTUFeatSheet, PTUMoveSheet } from '../../module/item/index.js';
+import { PTUItemProxy, PTUItem, PTUEffect, PTUEdge, PTUFeat, PTUMove, PTUPokeEdge, PTUSpecies, PTUSpeciesSheet, PTUItemItem, PTUCondition, PTUSpiritAction } from '../../module/item/index.js';
+import { PTUItemSheet, PTUEffectSheet, PTUEdgeSheet, PTUFeatSheet, PTUMoveSheet, PTUPokeEdgeSheet } from '../../module/item/index.js';
 import { PTUSkills } from '../../module/actor/index.js';
 import { PTUCombat } from '../../module/combat/document.js';
 import { levelProgression, trainerProgressions, typeEffectiveness, natureData, dbData, helpText } from './data/index.js';
@@ -378,7 +378,7 @@ export const PTUCONFIG = {
       item: PTUItemItem,
       pokeball: PokeballItem,
       capability: PTUItem,
-      pokeedge: PTUItem,
+      pokeedge: PTUPokeEdge,
       dexentry: PTUItem,
       effect: PTUEffect,
       species: PTUSpecies,
@@ -392,6 +392,7 @@ export const PTUCONFIG = {
       edge: PTUEdgeSheet,
       feat: PTUFeatSheet,
       move: PTUMoveSheet,
+      pokeedge: PTUPokeEdgeSheet,
       contestmove: PTUContestMoveSheet,
       effect: PTUEffectSheet,
       species: PTUSpeciesSheet,

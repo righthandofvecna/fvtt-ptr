@@ -733,7 +733,8 @@
     },
     "ability": {
       "templates": ["base", "frequencyTracked"],
-      "tier": ""
+      "tier": "",
+      "tutorSlotCost": 0
     },
     "move": {
       "templates": ["base", "interactions", "frequencyTracked"],
@@ -745,7 +746,8 @@
       "contestType": "",
       "stab": false,
       "damageBonus": 0,
-      "isStruggle": false
+      "isStruggle": false,
+      "tutorSlotCost": 0
     },
     "contestmove": {
       "templates": ["base", "frequencyTracked"],
@@ -758,7 +760,8 @@
     "pokeedge": {
       "templates": ["base", "frequencyTracked"],
       "prerequisites": [],
-      "cost": 0
+      "cost": 0,
+      "tutorSlotCost": 0
     },
     "item": {
       "templates": ["base", "frequencyTracked"],
@@ -1094,7 +1097,8 @@
     },
     "ability": {
       "templates": ["base", "frequencyTracked"],
-      "tier": ""
+      "tier": "",
+      "tutorSlotCost": 0
     },
     "move": {
       "templates": ["base", "interactions", "frequencyTracked"],
@@ -1106,7 +1110,8 @@
       "contestType": "",
       "stab": false,
       "damageBonus": 0,
-      "isStruggle": false
+      "isStruggle": false,
+      "tutorSlotCost": 0
     },
     "contestmove": {
       "templates": ["base", "frequencyTracked"],
@@ -1119,7 +1124,8 @@
     "pokeedge": {
       "templates": ["base", "frequencyTracked"],
       "prerequisites": [],
-      "cost": 0
+      "cost": 0,
+      "tutorSlotCost": 1
     },
     "item": {
       "templates": ["base", "frequencyTracked"],
