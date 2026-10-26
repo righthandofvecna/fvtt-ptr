@@ -194,7 +194,23 @@ export class PTUPokemonSheet extends PTUActorSheet {
 				}
 			}
 		}
-		sheetData.spiritactions = spiritactions;
+
+		// Split and sort spirit actions into three categories.
+		// Sort order within each category: owned first, then by cost ascending, then by name.
+		const spiritActionSort = (a, b) => {
+			const aPhantom = a.flags?.ptu?.phantom ? 1 : 0;
+			const bPhantom = b.flags?.ptu?.phantom ? 1 : 0;
+			if (aPhantom !== bPhantom) return aPhantom - bPhantom;
+			const aCost = Number(a.system?.cost) || 0;
+			const bCost = Number(b.system?.cost) || 0;
+			if (aCost !== bCost) return aCost - bCost;
+			return (a.name ?? "").localeCompare(b.name ?? "");
+		};
+		sheetData.spiritactions = {
+			onTurn: spiritactions.filter(sa => !sa.system?.frequency?.modifiers?.reaction && !sa.system?.actionCost?.extended).sort(spiritActionSort),
+			reaction: spiritactions.filter(sa => sa.system?.frequency?.modifiers?.reaction).sort(spiritActionSort),
+			extended: spiritactions.filter(sa => sa.system?.actionCost?.extended).sort(spiritActionSort),
+		};
 
 		sheetData.actions = await (async () => {
 			const moves = [];

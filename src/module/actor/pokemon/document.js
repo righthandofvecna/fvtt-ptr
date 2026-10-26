@@ -919,7 +919,7 @@ class PTUPokemonActor extends PTUActor {
 
             // if spirit was -2, lose a tick of hit points
             if (this.system.spirit.value <= -2) {
-                actorUpdate["system.health.value"] = Math.max(this.system.attributes.hp.value - this.system.attributes.hp.max, 0);
+                actorUpdate["system.health.value"] = Math.max(this.system.health.value - this.system.health.tick, 0);
             }
 
             // if spirit was at -1, add the -1 penalty

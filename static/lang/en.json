@@ -69,6 +69,11 @@
     "TypeDexentryPlural": "Dex Entries",
     "TypeContestMovesPlural": "Contest Moves",
     "TypeSpiritActionPlural": "Spirit Actions",
+    "TypeSpiritAction": {
+      "OnTurn": "Spirit Actions (On-Turn)",
+      "Reaction": "Spirit Actions (Reaction)",
+      "Extended": "Spirit Actions (Extended Action)"
+    },
     "Modifier": "Modifier",
     "ShowInTokenPanel": "Show in Token Panel",
     "Dice": "Base Dice",
