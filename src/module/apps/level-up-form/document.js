@@ -180,7 +180,6 @@ class LevelUpData {
             `self:level:${this.level.new}`,
         ]);
 
-        console.log("evolutions", {evolutions: this.evolutions, systemEvolutions: this.pokemon.species.system.evolutions});
         if (!this.evolutions) {
             this.evolutions = {
                 available: [],
@@ -207,7 +206,6 @@ class LevelUpData {
                 // skip non-self evolutions if evolution is forbidden
                 if (rollOptions.has("self:evolution-forbidden")) continue;
 
-                console.log("Evaluating evolution:", evolution.slug, "with predicate:", evolution.predicate);
                 // Skip evolutions whose predicate does not pass at the new level.
                 if (!PTUPredicate.test(evolution.predicate ?? [], rollOptions)) continue;
 
