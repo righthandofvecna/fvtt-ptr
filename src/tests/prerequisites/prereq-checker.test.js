@@ -18,7 +18,7 @@ const CATEGORY = "prerequisites";
  * Build a minimal prereq context.
  * @param {{ level?: number, skills?: Record<string, number>, itemNames?: string[], itemSlugs?: string[] }} opts
  */
-function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], typeLinkedKeywords = [] } = {}) {
+function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], typeLinkedKeywords = [], typedPokemonCounts = {} } = {}) {
     const simplified = itemNames.map(n => simplifyString(n));
     const baseNames = new Set(simplified);
     const itemNameSlugs = new Set();
@@ -34,12 +34,17 @@ function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], type
             if (baseSlug) itemNameSlugs.add(baseSlug);
         }
     }
+    // Convert plain object to Map for typedPokemonCounts
+    const typedPokemonCountsMap = new Map(
+        Object.entries(typedPokemonCounts).map(([k, v]) => [k.toLowerCase(), v])
+    );
     return {
         level,
         itemNames: new Set(simplified),
         itemBaseNames: baseNames,
         itemNameSlugs,
         typeLinkedKeywords: new Set(typeLinkedKeywords.map(k => k.toLowerCase())),
+        typedPokemonCounts: typedPokemonCountsMap,
         itemSlugs: new Set(itemSlugs),
         skills,
     };
@@ -330,5 +335,84 @@ TestRegistry.register(CATEGORY, "Prereq | 'A Water-Type-Linked Class' matches on
     assert( checkSinglePrereq("A Water-Type-Linked Class", ctxWater),  "Met when actor has 'Type Linked (Water)'");
     assert(!checkSinglePrereq("A Water-Type-Linked Class", ctxFire),   "NOT met when actor only has 'Type Linked (Fire)'");
     assert(!checkSinglePrereq("A Water-Type-Linked Class", ctxGeneric),"NOT met when actor only has generic 'Type Linked'");
+});
+
+// ─── Typed Pokémon prerequisites ──────────────────────────────────────────────────────────────────────────────────────
+
+TestRegistry.register(CATEGORY, "Prereq | 'N [Different] TYPE Type Pokemon' counts typed pokémon", () => {
+    const ctx = makeCtx({ typedPokemonCounts: { Dark: 2, Water: 1 } });
+    assert( checkSinglePrereq("1 Dark Type Pokemon", ctx),             "1 Dark met with 2 dark pokémon");
+    assert( checkSinglePrereq("2 Different Dark Type Pokemon", ctx),   "2 Different Dark met with 2 dark pokémon");
+    assert(!checkSinglePrereq("3 Different Dark Type Pokemon", ctx),   "3 Different Dark NOT met with only 2");
+    assert( checkSinglePrereq("1 Water Type Pok\u00e9mon", ctx),          "1 Water met with 1 water pokémon (accent)");
+    assert(!checkSinglePrereq("2 Water Type Pokemon", ctx),            "2 Water NOT met with only 1");
+    assert(!checkSinglePrereq("1 Fire Type Pokemon", ctx),             "1 Fire NOT met with 0 fire pokémon");
+});
+
+// ─── "All A or B options" grouped prerequisites ───────────────────────────────────────────────────────
+
+TestRegistry.register(CATEGORY, "Prereq | 'All A or B options' – A group satisfied passes", () => {
+    // Simulates: all A-options pass, B-options are not checked
+    const ctx = makeCtx({ level: 10, skills: { guile: 4 }, itemNames: ["Dark Type Pokemon", "Dark Type Pokemon 2"] });
+    const item = {
+        prerequisites: [
+            { label: "All A or B options" },
+            { label: "A: Level 5" },
+            { label: "A: Adept Guile" },
+            { label: "B: Level 20" },      // would fail on its own
+            { label: "B: Master Combat" }, // would fail on its own
+        ],
+    };
+    assert(meetsPrereqsWithContext(item, ctx), "All A options satisfied \u2192 overall pass");
+});
+
+TestRegistry.register(CATEGORY, "Prereq | 'All A or B options' – B group satisfied passes", () => {
+    const ctx = makeCtx({ level: 10, skills: { guile: 6 } });
+    const item = {
+        prerequisites: [
+            { label: "All A or B options" },
+            { label: "A: Level 20" },       // fails
+            { label: "A: Master Combat" },  // fails
+            { label: "B: Level 5" },
+            { label: "B: Master Guile" },
+        ],
+    };
+    assert(meetsPrereqsWithContext(item, ctx), "All B options satisfied \u2192 overall pass");
+});
+
+TestRegistry.register(CATEGORY, "Prereq | 'All A or B options' – neither group satisfied fails", () => {
+    const ctx = makeCtx({ level: 5, skills: { guile: 3 } });
+    const item = {
+        prerequisites: [
+            { label: "All A or B options" },
+            { label: "A: Level 10" },      // fails (level 5)
+            { label: "A: Expert Guile" },  // fails (guile 3)
+            { label: "B: Level 10" },      // fails (level 5)
+            { label: "B: Master Guile" },  // fails (guile 3)
+        ],
+    };
+    assert(!meetsPrereqsWithContext(item, ctx), "Neither group satisfied \u2192 overall fail");
+});
+
+TestRegistry.register(CATEGORY, "Prereq | 'All A or B options' – ungrouped prereq failing blocks even when group passes", () => {
+    const ctx = makeCtx({ level: 1, skills: { guile: 6 } });
+    const item = {
+        prerequisites: [
+            { label: "All A or B options" },
+            { label: "Level 99" },          // ungrouped, fails
+            { label: "A: Master Guile" },   // would pass
+        ],
+    };
+    assert(!meetsPrereqsWithContext(item, ctx), "Ungrouped fail blocks overall even when A group passes");
+});
+
+TestRegistry.register(CATEGORY, "Prereq | checkSinglePrereq passes meta-line 'All A or B options'", () => {
+    assert(checkSinglePrereq("All A or B options", makeCtx()), "Meta-line should always return true from checkSinglePrereq");
+});
+
+TestRegistry.register(CATEGORY, "Prereq | checkSinglePrereq strips 'A: ' prefix and checks remainder", () => {
+    const ctx = makeCtx({ level: 10 });
+    assert(checkSinglePrereq("A: Level 5", ctx),  "'A: Level 5' should be met at level 10");
+    assert(!checkSinglePrereq("B: Level 20", ctx), "'B: Level 20' should NOT be met at level 10");
 });
 

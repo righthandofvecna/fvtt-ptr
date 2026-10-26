@@ -19,6 +19,12 @@ const FEAT_WITH_SUB_RE = /(?<main>[^\(\)]+) (\((?<sub>.+)\)) ?(?<cr>\[CR\])?/i;
 const N_FEATS_FROM_LIST_RE = /(?<n>([0-9]+)|(A)|(One)|(Two)|(Three)|(Four)|(Five)|(Six)|(Seven)|(Eight)|(Nine)) of (?<features>.+)?/i;
 const LEVEL_RE = /Level (?<lv>[0-9]+)/i;
 const TYPE_LINKED_CLASS_RE = /^A (?:(?<type>[A-Za-z]+)-)?Type-Linked Class$/i;
+// "All A or B options" – the meta-line that triggers grouped prerequisite evaluation
+const ALL_OPTIONS_RE = /^All [A-Z](?: or [A-Z])+ options$/i;
+// "A: something" or "B: something" – a member of a named option group
+const GROUP_MEMBER_RE = /^([A-Z]):\s*(.+)$/i;
+// "N [Different] TYPE Type Pokemon" e.g. "2 Different Dark Type Pokemon"
+const TYPED_POKEMON_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) (?:Different )?(?<type>[A-Za-z]+) Type Pok[e\u00e9]mon$/i;
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -118,12 +124,24 @@ export function buildActorPrereqContext(actor) {
             if (/^Type Linked/i.test(kw)) typeLinkedKeywords.add(kw.toLowerCase());
         }
     }
+    // Count Pokémon of each type belonging to this trainer (including boxed).
+    const typedPokemonCounts = new Map();
+    if (typeof game !== 'undefined' && game?.actors && actor.id) {
+        for (const pokemon of game.actors) {
+            if (pokemon.flags?.ptu?.party?.trainer !== actor.id) continue;
+            for (const type of (pokemon.system?.typing ?? [])) {
+                const t = type.toLowerCase();
+                typedPokemonCounts.set(t, (typedPokemonCounts.get(t) ?? 0) + 1);
+            }
+        }
+    }
     return {
         level: actor.system.level.current ?? 1,
         itemNames,
         itemBaseNames,
         itemNameSlugs,
         typeLinkedKeywords,
+        typedPokemonCounts,
         itemSlugs: new Set(items.map(i => i.system?.slug?.toLowerCase()).filter(Boolean)),
         skills: Object.fromEntries(
             Object.entries(actor.system.skills ?? {}).map(
@@ -146,6 +164,12 @@ export function buildActorPrereqContext(actor) {
 export function checkSinglePrereq(text, ctx, testDict={}) {
     text = text?.trim() ?? '';
     if (!text) return true;
+
+    // "All A or B options" is a meta-line evaluated at the list level – not a real check
+    if (ALL_OPTIONS_RE.test(text)) return true;
+    // "A: something" / "B: something" – strip the group prefix and check the actual prereq
+    const groupedPrefixMatch = text.match(GROUP_MEMBER_RE);
+    if (groupedPrefixMatch) return checkSinglePrereq(groupedPrefixMatch[2].trim(), ctx, testDict);
 
     // Strip parenthesized sub-selection from the main prereq name for name matching
     const withSub = text.match(FEAT_WITH_SUB_RE);
@@ -244,6 +268,15 @@ export function checkSinglePrereq(text, ctx, testDict={}) {
         return ctx.typeLinkedKeywords?.has(`type linked (${type.toLowerCase()})`) ?? false;
     }
 
+    // "N [Different] TYPE Type Pokemon" e.g. "2 Different Dark Type Pokemon"
+    const typedPokemonMatch = text.match(TYPED_POKEMON_RE);
+    if (typedPokemonMatch) {
+        const n = parseIntA(typedPokemonMatch.groups.n);
+        const type = typedPokemonMatch.groups.type.toLowerCase();
+        const count = ctx.typedPokemonCounts?.get(type) ?? 0;
+        return !Number.isNaN(n) && count >= n;
+    }
+
     // "N of FEAT1 or FEAT2 or ..." – need at least N of these items
     const nFeatsOfMatch = mainText.match(N_FEATS_FROM_LIST_RE);
     if (nFeatsOfMatch) {
@@ -319,5 +352,30 @@ export function meetsPrereqsWithContext(item, ctx) {
     }
 
     if (!item.prerequisites?.length) return true;
-    return item.prerequisites.every(prereq => checkSinglePrereq(prereq.label ?? '', ctx));
+
+    const prereqLabels = item.prerequisites.map(p => p.label ?? '');
+
+    // "All A or B options" grouped logic: either all A-prefixed OR all B-prefixed must pass
+    if (prereqLabels.some(l => ALL_OPTIONS_RE.test(l))) {
+        const groups = {};
+        const ungrouped = [];
+        for (const label of prereqLabels) {
+            if (ALL_OPTIONS_RE.test(label)) continue; // skip the meta-line itself
+            const m = label.match(GROUP_MEMBER_RE);
+            if (m) {
+                const key = m[1].toUpperCase();
+                (groups[key] ??= []).push(m[2].trim());
+            } else {
+                ungrouped.push(label);
+            }
+        }
+        // All non-grouped prerequisites must pass regardless
+        if (!ungrouped.every(l => checkSinglePrereq(l, ctx))) return false;
+        // At least one option group must have every one of its prerequisites pass
+        const groupKeys = Object.keys(groups);
+        return groupKeys.length === 0
+            || groupKeys.some(key => groups[key].every(l => checkSinglePrereq(l, ctx)));
+    }
+
+    return prereqLabels.every(label => checkSinglePrereq(label, ctx));
 }

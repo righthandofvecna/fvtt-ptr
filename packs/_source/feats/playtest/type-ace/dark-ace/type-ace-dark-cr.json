@@ -57,10 +57,10 @@
     "prerequisites": [
       "All A or B options",
       "A: 2 Different Dark Type Pokemon",
-      "A: Guile or Stealth at Novice",
+      "A: Novice Guile or Stealth",
       "B: Elemental Connection (Dark)",
       "B: 1 Dark Type Pokemon",
-      "B: Guile or Stealth at Novice"
+      "B: Novice Guile or Stealth"
     ],
     "notes": "",
     "free": false,
