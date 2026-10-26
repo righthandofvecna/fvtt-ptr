@@ -178,12 +178,19 @@ export class PTUPokemonSheet extends PTUActorSheet {
 				const ownedSlugs = new Set(spiritactions.map(sa => sa.system?.slug).filter(Boolean));
 				for (const sa of cache) {
 					if (ownedSlugs.has(sa.system?.slug)) continue;
-					const data = sa.toObject();
-					foundry.utils.setProperty(data, 'flags.ptu.phantom', true);
-					foundry.utils.setProperty(data, 'flags.ptu.sourceUuid', sa.uuid);
-					const phantomItem = new Item.implementation(data, { parent: this.actor, temporary: true });
-					spiritactions.push(phantomItem);
-					this.actor._phantomItems.set(data._id, phantomItem);
+					// Reuse the phantom created during prepareRuleElements (which also registered its rules
+					// into actor.synthetics). Fall back to creating a new one if the cache wasn't ready yet.
+					const existing = this.actor._phantomItems.get(sa.id);
+					if (existing) {
+						spiritactions.push(existing);
+					} else {
+						const data = sa.toObject();
+						foundry.utils.setProperty(data, 'flags.ptu.phantom', true);
+						foundry.utils.setProperty(data, 'flags.ptu.sourceUuid', sa.uuid);
+						const phantomItem = new Item.implementation(data, { parent: this.actor, temporary: true });
+						spiritactions.push(phantomItem);
+						this.actor._phantomItems.set(data._id, phantomItem);
+					}
 				}
 			}
 		}

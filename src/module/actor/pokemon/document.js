@@ -364,6 +364,37 @@ class PTUPokemonActor extends PTUActor {
     }
 
     /** @override */
+    prepareRuleElements() {
+        const baseRules = super.prepareRuleElements();
+
+        if (!game.settings?.get("ptu", "variant.spiritPlaytest")) return baseRules;
+        const cache = game.ptu?.spiritActionCache;
+        if (!cache?.length) return baseRules;
+
+        const ownedSlugs = new Set(
+            (this.itemTypes.spiritaction ?? []).map(i => i.system?.slug).filter(Boolean)
+        );
+
+        const phantomRules = [];
+        for (const sa of cache) {
+            if (ownedSlugs.has(sa.system?.slug)) continue;
+            const data = sa.toObject();
+            foundry.utils.setProperty(data, 'flags.ptu.phantom', true);
+            foundry.utils.setProperty(data, 'flags.ptu.sourceUuid', sa.uuid);
+            const phantomItem = new Item.implementation(data, { parent: this, temporary: true });
+            this._phantomItems.set(data._id, phantomItem);
+            try {
+                phantomRules.push(...phantomItem.prepareRuleElements());
+            } catch (err) {
+                console.error(`PTU | Failed to prepare rule elements for phantom spirit action "${sa.name}":`, err);
+            }
+        }
+
+        if (!phantomRules.length) return baseRules;
+        return [...baseRules, ...phantomRules.filter(r => !r.ignored)].sort((a, b) => a.priority - b.priority);
+    }
+
+    /** @override */
     onPrepareDerivedData() {
         super.onPrepareDerivedData?.();
         const system = this.system;
