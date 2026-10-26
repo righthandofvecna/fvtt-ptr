@@ -50,9 +50,7 @@
       "cost": 2,
       "bind": false
     },
-    "prerequisites": [
-      "Type Ace"
-    ],
+    "prerequisites": [],
     "notes": "",
     "free": false,
     "class": "Type Ace (Water)",
