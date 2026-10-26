@@ -31,6 +31,8 @@ const POKEMON_STAT_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|
 const CLASS_FEATURES_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) (?<class>.+?) Features?$/i;
 // "N Friendship X Pokemon" e.g. "Three Friendship 4 Pokemon"
 const POKEMON_FRIENDSHIP_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) Friendship (?<amount>[0-9]+) Pok[e\u00e9]mon$/i;
+// "[at least] N Feature(s) with the [KEYWORD] tag" e.g. "Two Features with the [Orders] tag"
+const KEYWORD_FEATURES_RE = /^(?:at least )?(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) Features? with the \[(?<keyword>[^\]]+)\] (tag|keyword)$/i;
 
 // Maps human-readable stat names to actor.system.stats keys
 const STAT_NAME_MAP = {
@@ -146,11 +148,17 @@ export function buildActorPrereqContext(actor) {
     }
     // Count owned feats/features by class for "N Class Features" prerequisites.
     const featuresByClass = {};
+    // Count owned feats/features by keyword for "N Features with the [KEYWORD] tag" prerequisites.
+    const featuresByKeyword = {};
     for (const item of items) {
         const cls = item.system?.class?.trim();
         if (cls) {
             const key = cls.toLowerCase();
             featuresByClass[key] = (featuresByClass[key] ?? 0) + 1;
+        }
+        for (const kw of (item.system?.keywords ?? [])) {
+            const key = kw.toLowerCase();
+            featuresByKeyword[key] = (featuresByKeyword[key] ?? 0) + 1;
         }
     }
     // Count Pokémon of each type belonging to this trainer (including boxed).
@@ -186,6 +194,7 @@ export function buildActorPrereqContext(actor) {
         pokemonStatTotals,
         pokemonFriendships,
         featuresByClass,
+        featuresByKeyword,
         itemSlugs: new Set(items.map(i => i.system?.slug?.toLowerCase()).filter(Boolean)),
         skills: Object.fromEntries(
             Object.entries(actor.system.skills ?? {}).map(
@@ -335,6 +344,15 @@ export function checkSinglePrereq(text, ctx, testDict={}) {
         const friendships = ctx.pokemonFriendships ?? [];
         const qualifying = friendships.filter(f => f >= amount).length;
         return !Number.isNaN(n) && !Number.isNaN(amount) && qualifying >= n;
+    }
+
+    // "[at least] N Feature(s) with the [KEYWORD] tag" e.g. "Two Features with the [Orders] tag"
+    const keywordFeatMatch = text.match(KEYWORD_FEATURES_RE);
+    if (keywordFeatMatch) {
+        const n = parseIntA(keywordFeatMatch.groups.n);
+        const keyword = keywordFeatMatch.groups.keyword.trim().toLowerCase();
+        const count = ctx.featuresByKeyword?.[keyword] ?? 0;
+        return !Number.isNaN(n) && count >= n;
     }
 
     // "N Pokemon with STAT of AMOUNT" e.g. "1 Pokémon with Attack of 110"

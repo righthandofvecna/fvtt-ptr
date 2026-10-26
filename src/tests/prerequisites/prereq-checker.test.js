@@ -18,7 +18,7 @@ const CATEGORY = "prerequisites";
  * Build a minimal prereq context.
  * @param {{ level?: number, skills?: Record<string, number>, itemNames?: string[], itemSlugs?: string[] }} opts
  */
-function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], typeLinkedKeywords = [], typedPokemonCounts = {}, pokemonStatTotals = {}, pokemonFriendships = [], featuresByClass = {} } = {}) {
+function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], typeLinkedKeywords = [], typedPokemonCounts = {}, pokemonStatTotals = {}, pokemonFriendships = [], featuresByClass = {}, featuresByKeyword = {} } = {}) {
     const simplified = itemNames.map(n => simplifyString(n));
     const baseNames = new Set(simplified);
     const itemNameSlugs = new Set();
@@ -42,6 +42,9 @@ function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], type
     const fbClass = Object.fromEntries(
         Object.entries(featuresByClass).map(([k, v]) => [k.toLowerCase(), v])
     );
+    const fbKeyword = Object.fromEntries(
+        Object.entries(featuresByKeyword).map(([k, v]) => [k.toLowerCase(), v])
+    );
     return {
         level,
         itemNames: new Set(simplified),
@@ -52,6 +55,7 @@ function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], type
         pokemonStatTotals,
         pokemonFriendships,
         featuresByClass: fbClass,
+        featuresByKeyword: fbKeyword,
         itemSlugs: new Set(itemSlugs),
         skills,
     };
@@ -411,6 +415,19 @@ TestRegistry.register(CATEGORY, "Prereq | 'N Friendship X Pokemon' counts pokém
         checkSinglePrereq("Three Friendship 4 Pokemon or One Friendship 5 Pokemon", ctx),
         "OR: second term (One Friendship 5) passes"
     );
+});
+
+// ─── Keyword tag prerequisites ────────────────────────────────────────────────────────────────────────────────────
+
+TestRegistry.register(CATEGORY, "Prereq | 'N Features with the [KEYWORD] tag' counts items by keyword", () => {
+    const ctx = makeCtx({ featuresByKeyword: { Orders: 3, Branch: 1 } });
+    assert( checkSinglePrereq("Two Features with the [Orders] tag", ctx),      "Two [Orders]: met with 3");
+    assert(!checkSinglePrereq("Four Features with the [Orders] tag", ctx),     "Four [Orders]: NOT met with 3");
+    assert( checkSinglePrereq("1 Feature with the [Branch] tag", ctx),         "1 [Branch] Feature: met");
+    assert(!checkSinglePrereq("1 Feature with the [Missing] tag", ctx),        "1 [Missing]: NOT met");
+    // 'at least N' prefix is also accepted
+    assert( checkSinglePrereq("at least two Features with the [Orders] Tag", ctx),
+        "'at least two': met");
 });
 // ─── "All A or B options" grouped prerequisites ───────────────────────────────────────────────────────
 
