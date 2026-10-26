@@ -51,10 +51,7 @@
       "cost": 0,
       "bind": false
     },
-    "prerequisites": [
-      "Type Ace",
-      "Normal as Chosen Type"
-    ],
+    "prerequisites": [],
     "notes": "",
     "free": false,
     "class": "Type Ace (Normal)",

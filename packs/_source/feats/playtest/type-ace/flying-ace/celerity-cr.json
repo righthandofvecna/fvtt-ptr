@@ -53,10 +53,7 @@
       "cost": 2,
       "bind": true
     },
-    "prerequisites": [
-      "Type Ace",
-      "Flying as Chosen Type"
-    ],
+    "prerequisites": [],
     "notes": "",
     "free": false,
     "class": "Type Ace (Flying)",

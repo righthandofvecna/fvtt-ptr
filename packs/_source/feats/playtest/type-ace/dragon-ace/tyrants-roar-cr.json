@@ -52,13 +52,11 @@
       "cost": 0,
       "bind": false
     },
-    "prerequisites": [
-      "Type Ace (Dragon) [CR]"
-    ],
+    "prerequisites": [],
     "notes": "",
     "free": false,
     "class": "Type Ace (Dragon)",
-    "name": "Tyrant’s Roar",
+    "name": "Tyrant's Roar",
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
