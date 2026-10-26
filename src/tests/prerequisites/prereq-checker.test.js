@@ -479,3 +479,8 @@ TestRegistry.register(CATEGORY, "Prereq | checkSinglePrereq strips 'A: ' prefix 
     assert(!checkSinglePrereq("B: Level 20", ctx), "'B: Level 20' should NOT be met at level 10");
 });
 
+TestRegistry.register(CATEGORY, "Prereq | 'does not have X' meta-line", () => {
+    const ctx = makeCtx({ itemNames: ["Feature"] });
+    assert(!checkSinglePrereq("does not have Feature", ctx),  "'does not have Feature' should NOT be met");
+    assert(checkSinglePrereq("does not have Another Feature", ctx), "'does not have Another Feature' should be met");
+});

@@ -215,6 +215,12 @@ export function checkSinglePrereq(text, ctx, testDict={}) {
     const groupedPrefixMatch = text.match(GROUP_MEMBER_RE);
     if (groupedPrefixMatch) return checkSinglePrereq(groupedPrefixMatch[2].trim(), ctx, testDict);
 
+    // check "does not have X"
+    if (text.toLowerCase().startsWith("does not have ")) {
+        const itemName = text.slice("does not have ".length).trim();
+        return !checkSinglePrereq(itemName, ctx, testDict);
+    }
+
     // Strip parenthesized sub-selection from the main prereq name for name matching
     const withSub = text.match(FEAT_WITH_SUB_RE);
     const mainText = withSub?.groups?.sub ? withSub.groups.main.trim() : text;
