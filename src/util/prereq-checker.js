@@ -27,6 +27,8 @@ const GROUP_MEMBER_RE = /^([A-Z]):\s*(.+)$/i;
 const TYPED_POKEMON_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) (?:Different )?(?<type>[A-Za-z]+) Type Pok[e\u00e9]mon$/i;
 // "N Pokemon with STAT of AMOUNT" e.g. "1 Pokémon with Attack of 110"
 const POKEMON_STAT_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) Pok[e\u00e9]mon with (?<stat>.+?) (?:of|at) (?<amount>[0-9]+)(?:\s+(?:or\s+)?(?:more|higher))?$/i;
+// "N CLASS Features" e.g. "4 Skirmisher Features" or "4 Type Ace (Fire) Features"
+const CLASS_FEATURES_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) (?<class>.+?) Features?$/i;
 
 // Maps human-readable stat names to actor.system.stats keys
 const STAT_NAME_MAP = {
@@ -140,6 +142,15 @@ export function buildActorPrereqContext(actor) {
             if (/^Type Linked/i.test(kw)) typeLinkedKeywords.add(kw.toLowerCase());
         }
     }
+    // Count owned feats/features by class for "N Class Features" prerequisites.
+    const featuresByClass = {};
+    for (const item of items) {
+        const cls = item.system?.class?.trim();
+        if (cls) {
+            const key = cls.toLowerCase();
+            featuresByClass[key] = (featuresByClass[key] ?? 0) + 1;
+        }
+    }
     // Count Pokémon of each type belonging to this trainer (including boxed).
     // Also collect stat totals for each Pokémon.
     const typedPokemonCounts = new Map();
@@ -168,6 +179,7 @@ export function buildActorPrereqContext(actor) {
         typeLinkedKeywords,
         typedPokemonCounts,
         pokemonStatTotals,
+        featuresByClass,
         itemSlugs: new Set(items.map(i => i.system?.slug?.toLowerCase()).filter(Boolean)),
         skills: Object.fromEntries(
             Object.entries(actor.system.skills ?? {}).map(
@@ -315,6 +327,21 @@ export function checkSinglePrereq(text, ctx, testDict={}) {
             return qualifying >= n;
         }
         // Unknown stat name, fall through
+    }
+
+    // "N CLASS Features" e.g. "4 Skirmisher Features" or "4 Type Ace (Fire) Features"
+    const classFeaturesMatch = text.match(CLASS_FEATURES_RE);
+    if (classFeaturesMatch) {
+        const n = parseIntA(classFeaturesMatch.groups.n);
+        const cls = classFeaturesMatch.groups.class.trim().toLowerCase();
+        const fbClass = ctx.featuresByClass ?? {};
+        // Count features for this exact class name
+        let count = fbClass[cls] ?? 0;
+        // If the class name has a parenthetical (e.g. "type ace (fire)"),
+        // also count features of the stripped base class ("type ace").
+        const baseClass = cls.replace(/\s*\([^)]*\)\s*$/, '').trim();
+        if (baseClass !== cls) count += fbClass[baseClass] ?? 0;
+        return !Number.isNaN(n) && count >= n;
     }
 
     // "N of FEAT1 or FEAT2 or ..." – need at least N of these items

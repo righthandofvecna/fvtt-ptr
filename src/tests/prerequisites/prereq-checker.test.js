@@ -18,7 +18,7 @@ const CATEGORY = "prerequisites";
  * Build a minimal prereq context.
  * @param {{ level?: number, skills?: Record<string, number>, itemNames?: string[], itemSlugs?: string[] }} opts
  */
-function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], typeLinkedKeywords = [], typedPokemonCounts = {}, pokemonStatTotals = {} } = {}) {
+function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], typeLinkedKeywords = [], typedPokemonCounts = {}, pokemonStatTotals = {}, featuresByClass = {} } = {}) {
     const simplified = itemNames.map(n => simplifyString(n));
     const baseNames = new Set(simplified);
     const itemNameSlugs = new Set();
@@ -38,6 +38,10 @@ function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], type
     const typedPokemonCountsMap = new Map(
         Object.entries(typedPokemonCounts).map(([k, v]) => [k.toLowerCase(), v])
     );
+    // Lowercase all class keys in featuresByClass
+    const fbClass = Object.fromEntries(
+        Object.entries(featuresByClass).map(([k, v]) => [k.toLowerCase(), v])
+    );
     return {
         level,
         itemNames: new Set(simplified),
@@ -46,6 +50,7 @@ function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], type
         typeLinkedKeywords: new Set(typeLinkedKeywords.map(k => k.toLowerCase())),
         typedPokemonCounts: typedPokemonCountsMap,
         pokemonStatTotals,
+        featuresByClass: fbClass,
         itemSlugs: new Set(itemSlugs),
         skills,
     };
@@ -366,7 +371,28 @@ TestRegistry.register(CATEGORY, "Prereq | 'N Pokémon with STAT of AMOUNT' check
     // Unknown stat name should assume met
     assert( !checkSinglePrereq("1 Pokémon with Wizardry of 9000", ctx), "Unknown stat assumes unmet");
 });
+// ─── Class feature count prerequisites ────────────────────────────────────────────────────────────────
 
+TestRegistry.register(CATEGORY, "Prereq | 'N CLASS Features' counts items by system.class", () => {
+    // Actor has 5 Skirmisher features and 3 Type Ace features
+    const ctx = makeCtx({ featuresByClass: { Skirmisher: 5, 'Type Ace': 3 } });
+    assert( checkSinglePrereq("4 Skirmisher Features", ctx), "4 Skirmisher Features: met with 5");
+    assert(!checkSinglePrereq("6 Skirmisher Features", ctx), "6 Skirmisher Features: NOT met with 5");
+    assert( checkSinglePrereq("3 Type Ace Features", ctx),   "3 Type Ace Features: met");
+    assert( checkSinglePrereq("1 Skirmisher Feature", ctx),  "singular 'Feature' variant: met");
+    assert(!checkSinglePrereq("1 Hunter Features", ctx),     "1 Hunter Features: NOT met (no hunter features)");
+});
+
+TestRegistry.register(CATEGORY, "Prereq | 'N TYPE ACE (FIRE) Features' also counts base class feats", () => {
+    // Subclass prerequisite should count both subclass-specific AND base class features
+    const ctx = makeCtx({ featuresByClass: { 'Type Ace': 3, 'Type Ace (Fire)': 2 } });
+    assert( checkSinglePrereq("4 Type Ace (Fire) Features", ctx),  "4 Type Ace (Fire): met (2+3=5)");
+    assert(!checkSinglePrereq("6 Type Ace (Fire) Features", ctx),  "6 Type Ace (Fire): NOT met (only 5 total)");
+    // Non-parenthetical only counts its own class
+    const ctxBase = makeCtx({ featuresByClass: { 'Type Ace': 3 } });
+    assert(!checkSinglePrereq("4 Type Ace (Fire) Features", ctxBase), "base class only: NOT met for subclass-prefixed prereq");
+    assert( checkSinglePrereq("3 Type Ace Features", ctxBase),         "3 Type Ace Features: met with 3");
+});
 // ─── "All A or B options" grouped prerequisites ───────────────────────────────────────────────────────
 
 TestRegistry.register(CATEGORY, "Prereq | 'All A or B options' – A group satisfied passes", () => {
