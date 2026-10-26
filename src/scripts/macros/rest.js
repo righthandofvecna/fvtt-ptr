@@ -127,11 +127,11 @@ export async function applyRest(hours, pokemonCenter, actors=undefined) {
       let qualifiedName = actor.name;
       if (actor.trainer) qualifiedName = `${actor.trainer.name}'s ${actor.name}`;
       chatMessageContent += `<li><strong>${qualifiedName}</strong><ul>`
-      if (hpDiff) chatMessageContent += `<li><em>HP</em> <strong>${hpDiff > 0 ? `+${hpDiff}` : hpDiff}</strong></li>`;
-      if (injuriesDiff) chatMessageContent += `<li><em>Injuries</em> <strong>${injuriesDiff > 0 ? `+${injuriesDiff}` : injuriesDiff}</strong></li>`;
-      if (spiritDiff) chatMessageContent += `<li><em>Spirit</em> <strong>${spiritDiff > 0 ? `+${spiritDiff}` : spiritDiff}</strong></li>`;
-      if (ppDiff) chatMessageContent += `<li><em>PP</em> <strong>${ppDiff > 0 ? `+${ppDiff}` : ppDiff}</strong></li>`;
-      if (apDiff) chatMessageContent += `<li><em>AP</em> <strong>${apDiff > 0 ? `+${apDiff}` : apDiff}</strong></li>`;
+      if (hpDiff) chatMessageContent += `<li><em>HP</em> <strong>${hpDiff > 0 ? `+${hpDiff}` : hpDiff}</strong> (${actor.system.health.value}/${actor.system.health.max})</li>`;
+      if (injuriesDiff) chatMessageContent += `<li><em>Injuries</em> <strong>${injuriesDiff > 0 ? `+${injuriesDiff}` : injuriesDiff}</strong> (${actor.system.health.injuries ?? 0})</li>`;
+      if (spiritDiff) chatMessageContent += `<li><em>Spirit</em> <strong>${spiritDiff > 0 ? `+${spiritDiff}` : spiritDiff}</strong> (${actor.system.spirit.value}/${actor.system.spirit.max})</li>`;
+      if (ppDiff) chatMessageContent += `<li><em>PP</em> <strong>${ppDiff > 0 ? `+${ppDiff}` : ppDiff}</strong> (${actor.system.pp.value}/${actor.system.pp.max})</li>`;
+      if (apDiff) chatMessageContent += `<li><em>AP</em> <strong>${apDiff > 0 ? `+${apDiff}` : apDiff}</strong> (${actor.system.ap.value}/${actor.system.ap.max})</li>`;
       for (const item of deletedItems) {
         chatMessageContent += `<li><strong>-${item.name}</strong></li>`;
       }
