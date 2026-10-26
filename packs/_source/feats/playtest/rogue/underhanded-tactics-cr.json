@@ -81,8 +81,7 @@
       "bind": false
     },
     "prerequisites": [
-      "Rogue",
-      "a Rogue Skill at Expert Rank"
+      "One of Athletics or Acrobatics or Stealth at Adept"
     ],
     "notes": "",
     "free": false,

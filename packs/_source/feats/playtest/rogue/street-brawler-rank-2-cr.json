@@ -185,12 +185,12 @@
       "bind": false
     },
     "prerequisites": [
-      "Expert in 2 Rogue Skills"
+      "Two of Athletics or Acrobatics or Stealth at Expert"
     ],
     "notes": "",
     "free": false,
     "class": "Rogue",
-    "name": "Street Brawler [CR]Rank 1 [CR]",
+    "name": "Street Brawler [CR]Rank 2 [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "street-brawler-rank-2"
   },

@@ -50,8 +50,6 @@
       "bind": false
     },
     "prerequisites": [
-      "Style Expert",
-      "Tough as Chosen Stat",
       "Novice Intimidate"
     ],
     "notes": "",

@@ -53,8 +53,10 @@
       "bind": false
     },
     "prerequisites": [
-      "Adept Intuition and Novice Pokémon Education",
-      "or Mystic Senses"
+      "All A or B options",
+      "A: Adept Intuition",
+      "A: Novice Pokémon Education",
+      "B: Mystic Senses"
     ],
     "notes": "",
     "free": false,
