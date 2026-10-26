@@ -29,6 +29,8 @@ const TYPED_POKEMON_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight
 const POKEMON_STAT_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) Pok[e\u00e9]mon with (?<stat>.+?) (?:of|at) (?<amount>[0-9]+)(?:\s+(?:or\s+)?(?:more|higher))?$/i;
 // "N CLASS Features" e.g. "4 Skirmisher Features" or "4 Type Ace (Fire) Features"
 const CLASS_FEATURES_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) (?<class>.+?) Features?$/i;
+// "N Friendship X Pokemon" e.g. "Three Friendship 4 Pokemon"
+const POKEMON_FRIENDSHIP_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) Friendship (?<amount>[0-9]+) Pok[e\u00e9]mon$/i;
 
 // Maps human-readable stat names to actor.system.stats keys
 const STAT_NAME_MAP = {
@@ -152,9 +154,10 @@ export function buildActorPrereqContext(actor) {
         }
     }
     // Count Pokémon of each type belonging to this trainer (including boxed).
-    // Also collect stat totals for each Pokémon.
+    // Also collect stat totals and friendship values for each Pokémon.
     const typedPokemonCounts = new Map();
     const pokemonStatTotals = {}; // { statKey: number[] }
+    const pokemonFriendships = []; // friendship value for each trainer pokémon
     if (typeof game !== 'undefined' && game?.actors && actor.id) {
         for (const pokemon of game.actors) {
             if (pokemon.flags?.ptu?.party?.trainer !== actor.id) continue;
@@ -169,6 +172,8 @@ export function buildActorPrereqContext(actor) {
                     (pokemonStatTotals[key] ??= []).push(total);
                 }
             }
+            const friendship = pokemon.system?.friendship;
+            if (typeof friendship === 'number') pokemonFriendships.push(friendship);
         }
     }
     return {
@@ -179,6 +184,7 @@ export function buildActorPrereqContext(actor) {
         typeLinkedKeywords,
         typedPokemonCounts,
         pokemonStatTotals,
+        pokemonFriendships,
         featuresByClass,
         itemSlugs: new Set(items.map(i => i.system?.slug?.toLowerCase()).filter(Boolean)),
         skills: Object.fromEntries(
@@ -313,6 +319,16 @@ export function checkSinglePrereq(text, ctx, testDict={}) {
         const type = typedPokemonMatch.groups.type.toLowerCase();
         const count = ctx.typedPokemonCounts?.get(type) ?? 0;
         return !Number.isNaN(n) && count >= n;
+    }
+
+    // "N Friendship X Pokemon" e.g. "Three Friendship 4 Pokemon"
+    const friendshipMatch = text.match(POKEMON_FRIENDSHIP_RE);
+    if (friendshipMatch) {
+        const n = parseIntA(friendshipMatch.groups.n);
+        const amount = parseInt(friendshipMatch.groups.amount);
+        const friendships = ctx.pokemonFriendships ?? [];
+        const qualifying = friendships.filter(f => f >= amount).length;
+        return !Number.isNaN(n) && !Number.isNaN(amount) && qualifying >= n;
     }
 
     // "N Pokemon with STAT of AMOUNT" e.g. "1 Pokémon with Attack of 110"

@@ -18,7 +18,7 @@ const CATEGORY = "prerequisites";
  * Build a minimal prereq context.
  * @param {{ level?: number, skills?: Record<string, number>, itemNames?: string[], itemSlugs?: string[] }} opts
  */
-function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], typeLinkedKeywords = [], typedPokemonCounts = {}, pokemonStatTotals = {}, featuresByClass = {} } = {}) {
+function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], typeLinkedKeywords = [], typedPokemonCounts = {}, pokemonStatTotals = {}, pokemonFriendships = [], featuresByClass = {} } = {}) {
     const simplified = itemNames.map(n => simplifyString(n));
     const baseNames = new Set(simplified);
     const itemNameSlugs = new Set();
@@ -50,6 +50,7 @@ function makeCtx({ level = 10, skills = {}, itemNames = [], itemSlugs = [], type
         typeLinkedKeywords: new Set(typeLinkedKeywords.map(k => k.toLowerCase())),
         typedPokemonCounts: typedPokemonCountsMap,
         pokemonStatTotals,
+        pokemonFriendships,
         featuresByClass: fbClass,
         itemSlugs: new Set(itemSlugs),
         skills,
@@ -392,6 +393,24 @@ TestRegistry.register(CATEGORY, "Prereq | 'N TYPE ACE (FIRE) Features' also coun
     const ctxBase = makeCtx({ featuresByClass: { 'Type Ace': 3 } });
     assert(!checkSinglePrereq("4 Type Ace (Fire) Features", ctxBase), "base class only: NOT met for subclass-prefixed prereq");
     assert( checkSinglePrereq("3 Type Ace Features", ctxBase),         "3 Type Ace Features: met with 3");
+});
+
+// ─── Friendship Pokémon prerequisites ─────────────────────────────────────────────────────────────────────────────────────
+
+TestRegistry.register(CATEGORY, "Prereq | 'N Friendship X Pokemon' counts pokémon with friendship >= X", () => {
+    // 3 pokémon with friendship 5, 4, 2
+    const ctx = makeCtx({ pokemonFriendships: [5, 4, 2] });
+    // 5≥4 and 4≥4 → 2 qualify for "Friendship 4"
+    assert( checkSinglePrereq("Two Friendship 4 Pokemon",   ctx), "Two Friendship 4: met (2 have friendship ≥ 4)");
+    assert(!checkSinglePrereq("Three Friendship 4 Pokemon", ctx), "Three Friendship 4: NOT met (only 2 qualify)");
+    // Only 5≥5 → 1 qualifies for "Friendship 5"
+    assert( checkSinglePrereq("One Friendship 5 Pokemon",   ctx), "One Friendship 5: met (friendship 5 exists)");
+    assert(!checkSinglePrereq("Two Friendship 5 Pokemon",   ctx), "Two Friendship 5: NOT met (only one has ≥5)");
+    // OR clause: "Three Friendship 4 Pokemon or One Friendship 5 Pokemon" → second term passes
+    assert(
+        checkSinglePrereq("Three Friendship 4 Pokemon or One Friendship 5 Pokemon", ctx),
+        "OR: second term (One Friendship 5) passes"
+    );
 });
 // ─── "All A or B options" grouped prerequisites ───────────────────────────────────────────────────────
 
