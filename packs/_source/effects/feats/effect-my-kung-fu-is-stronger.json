@@ -1,0 +1,63 @@
+{
+  "name": "Effect: My Kung-Fu is Stronger",
+  "type": "effect",
+  "_id": "tmn6LxxUen1EdEWW",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Increases Rock Smash's Effect Range by +2 until end of turn.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "move:rock-smash"
+        ],
+        "hideIfDisabled": false,
+        "selectors": "effect-range",
+        "value": 2
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-my-kung-fu-is-stronger",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "turns",
+      "expiry": "turn-start"
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "Uv4mgOt4xtb28hzB",
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  }
+}
