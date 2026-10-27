@@ -11,6 +11,9 @@ import { TypeSettings } from "./types.js";
 import { VariantSettings } from "./variant.js";
 import { DevelopmentSettings } from "./development.js";
 
+// default values for settings
+import { defaultHeldItemChances } from "../../../scripts/config/data/default-held-item-chances.js";
+
 export function registerSettings() {
     // // game.settings.register("ptu", "errata", {
     // //     name: "PTU Errata",
@@ -391,6 +394,14 @@ export function registerSettings() {
     // //     default: false,
     // //     
     // // });
+
+    game.settings.register("ptu", "heldItemChances", {
+        name: "Held Item Generation Chances",
+        scope: "world",
+        config: false,
+        type: Object,
+        default: defaultHeldItemChances
+    });
 
     // DO NOT DELETE THIS SETTING
     // They are required for backwards compatibility and importing of the old data

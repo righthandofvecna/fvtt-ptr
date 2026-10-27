@@ -80,6 +80,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
         this.data.preventEvolution = formData["preventEvolution"] || false;
         this.data.shinyChance = Number(formData["shiny-chance"]) || 0;
         this.data.alphaChance = Number(formData["alpha-chance"]) || 0;
+        this.data.generateHeldItem = formData["generateHeldItem"] || false;
 
         return this.render(true);
     }
@@ -143,6 +144,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
                 game.settings.set("ptu", "generation.defaultMassGeneratorSpeciesUuid", this.data.speciesField.value ?? ""),
                 game.settings.set("ptu", "generation.defaultMassGeneratorTableUuid", this.data.tableSelect.value ?? ""),
                 game.settings.set("ptu", "generation.defaultMassGeneratorFolderField", this.data.folderField.value ?? ""),
+                game.settings.set("ptu", "generation.defaultMassGeneratorGenerateHeldItem", this.data.generateHeldItem ?? false),
             ]);
             await this.generate(await this.data.finalize());
         }
@@ -222,7 +224,8 @@ export class PTUSpeciesMassGenerator extends FormApplication {
             generator.shiny = mon.shiny;
             generator.alpha = mon.alpha;
             await generator.prepare({
-                preventEvolution: preventEvolution
+                preventEvolution: preventEvolution,
+                generateHeldItem: data.generateHeldItem ?? false,
             });
             const generatorData = await generator.create({ folder: mon.folder , generate: false});
 

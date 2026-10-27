@@ -613,6 +613,7 @@
     "StatRandomness": "Stat Randomness (%)",
     "PreventEvolution": "Prevent Evolution?",
     "AlphaChance": "Alpha Chance (%)",
+    "GenerateHeldItem": "Generate Held Item?",
     "Submit": "Submit",
 
     "ConditionFainted": "Fainted",

@@ -32,6 +32,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
     async getData() {
         const data = super.getData();
         data.config = CONFIG.PTU.data;
+        data.isGM = game.user.isGM;
         
         data.editLocked = data.editable == false ? true : this.object.getFlag('ptu', 'editLocked') ?? false;
 

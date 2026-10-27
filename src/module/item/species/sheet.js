@@ -74,6 +74,20 @@ class PTUSpeciesSheet extends PTUItemSheet {
             [...this._complexPredicateEvolutions].map(i => [i, true])
         );
 
+        // Load held items for this species from the world setting
+        const heldItemChances = game.settings.get("ptu", "heldItemChances");
+        const rawHeldItems = heldItemChances[this.item.slug] ?? [];
+        data.heldItems = await Promise.all(rawHeldItems.map(async entry => {
+            const heldItemDoc = entry.uuid ? await fromUuid(entry.uuid) : null;
+            return {
+                slug: entry.slug,
+                uuid: entry.uuid,
+                chance: entry.chance,
+                name: heldItemDoc?.name ?? entry.slug,
+                img: heldItemDoc?.img ?? "icons/svg/item-bag.svg",
+            };
+        }));
+
         return data;
     }
 
@@ -172,6 +186,33 @@ class PTUSpeciesSheet extends PTUItemSheet {
         $(html).find('.linked-item').each(async (i, element) => {
 			await CONFIG.PTU.util.Enricher.enrichContentLinks(element);
 		});
+
+        // Held Items (GM only)
+        if (game.user.isGM) {
+            html.find('.held-item-delete').on('click', async (event) => {
+                event.preventDefault();
+                const uuid = event.currentTarget.closest('[data-uuid]')?.dataset.uuid;
+                if (!uuid) return;
+                const heldItemChances = game.settings.get("ptu", "heldItemChances");
+                const slug = this.item.slug;
+                heldItemChances[slug] = (heldItemChances[slug] ?? []).filter(e => e.uuid !== uuid);
+                await game.settings.set("ptu", "heldItemChances", heldItemChances);
+                return this.render(false);
+            });
+
+            html.find('.held-item-chance').on('change', async (event) => {
+                const uuid = event.currentTarget.closest('[data-uuid]')?.dataset.uuid;
+                if (!uuid) return;
+                const chance = Math.clamp(Number(event.currentTarget.value), 0, 100);
+                const heldItemChances = game.settings.get("ptu", "heldItemChances");
+                const slug = this.item.slug;
+                const entry = (heldItemChances[slug] ?? []).find(e => e.uuid === uuid);
+                if (entry) {
+                    entry.chance = chance;
+                    await game.settings.set("ptu", "heldItemChances", heldItemChances);
+                }
+            });
+        }
     }
 
     get allowedDropTypes() {
@@ -344,6 +385,17 @@ class PTUSpeciesSheet extends PTUItemSheet {
                     const predicate = existingEvo?.predicate ?? [`self:level:${getMinLevelFromPredicate(existingEvo?.predicate)}+`];
                     evolutions.push({ slug: item.slug, uuid: item.uuid, other: { predicate } });
                     return this.item.update({"system.evolutions": evolutions});
+                }
+                case "item": {
+                    if (!game.user.isGM) return;
+                    const heldItemChances = game.settings.get("ptu", "heldItemChances");
+                    const speciesSlug = this.item.slug;
+                    const current = heldItemChances[speciesSlug] ?? [];
+                    if (current.find(e => e.uuid === item.uuid)) return;
+                    current.push({ slug: item.slug, uuid: item.uuid, chance: 5 });
+                    heldItemChances[speciesSlug] = current;
+                    await game.settings.set("ptu", "heldItemChances", heldItemChances);
+                    return this.render(false);
                 }
             }
         }

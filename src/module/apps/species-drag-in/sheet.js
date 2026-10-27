@@ -39,6 +39,7 @@ export class PTUSpeciesDragOptionsPrompt extends FormApplication {
             statRandomnessDefault,
             alphaChanceDefault,
             preventDefault: game.settings.get("ptu", "generation.defaultDexDragInPreventEvolution"),
+            generateHeldItemDefault: game.settings.get("ptu", "generation.defaultDexDragInGenerateHeldItem"),
             species: this.species.name
         }
     }
@@ -63,6 +64,7 @@ export class PTUSpeciesDragOptionsPrompt extends FormApplication {
             game.settings.set("ptu", "generation.defaultDexDragInStatRandomness", formData["stat-randomness"]),
             game.settings.set("ptu", "generation.defaultDexDragInPreventEvolution", formData["prevent-evolution"]),
             game.settings.set("ptu", "generation.defaultDexDragInAlphaChance", formData["alpha-chance"]),
+            game.settings.set("ptu", "generation.defaultDexDragInGenerateHeldItem", formData["generate-held-item"] ?? false),
         ]);
 
         const generator = new PokemonGenerator(this.species, { x: this.x, y: this.y })
@@ -73,6 +75,7 @@ export class PTUSpeciesDragOptionsPrompt extends FormApplication {
             statRandomness: formData["stat-randomness"],
             preventEvolution: formData["prevent-evolution"],
             alphaChance: formData["alpha-chance"],
+            generateHeldItem: formData["generate-held-item"] ?? false,
             saveDefault: false
         })
         await generator.create();

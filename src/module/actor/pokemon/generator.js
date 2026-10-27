@@ -13,13 +13,14 @@ export class PokemonGenerator {
         this.prepared = false;
     }
 
-    async prepare({ minLevel, maxLevel, shinyChance, statRandomness, preventEvolution, alphaChance, saveDefault } = {}) {
+    async prepare({ minLevel, maxLevel, shinyChance, statRandomness, preventEvolution, alphaChance, generateHeldItem, saveDefault } = {}) {
         minLevel ??= Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMin")),
         maxLevel ??= Number(game.settings.get("ptu", "generation.defaultDexDragInLevelMax")),
         shinyChance ??= Number(game.settings.get("ptu", "generation.defaultDexDragInShinyChance")),
         statRandomness ??= Number(game.settings.get("ptu", "generation.defaultDexDragInStatRandomness")),
         preventEvolution ??= game.settings.get("ptu", "generation.defaultDexDragInPreventEvolution"),
         alphaChance ??= Number(game.settings.get("ptu", "generation.defaultDexDragInAlphaChance")),
+        generateHeldItem ??= false,
         saveDefault ??= false
         
         if (!this.level) {
@@ -55,6 +56,7 @@ export class PokemonGenerator {
         if (!this.form) this.prepareForm();
         if (this.alpha === undefined) this.prepareAlpha(alphaChance ?? 0);
         if (this.alpha) await this.prepareAlphaMove();
+        if (this.heldItem === undefined) this.prepareHeldItem(generateHeldItem);
 
         this.img = await PokemonGenerator.getImage(this.species, { gender: this.gender, shiny: this.shiny });
         this.tokenImg = await (async () => {
@@ -231,6 +233,15 @@ export class PokemonGenerator {
             actorData.system.boss.bars = 2;
         }
 
+        if (this.heldItem) {
+            const heldItemDoc = await fromUuid(this.heldItem.uuid);
+            if (heldItemDoc) {
+                const heldItemData = heldItemDoc.toObject();
+                heldItemData.flags.core = { sourceId: this.heldItem.uuid };
+                itemsData.push(heldItemData);
+            }
+        }
+
         if (!generate) return { actor: actorData, items: itemsData };
 
         const actor = await Actor.create(actorData);
@@ -403,6 +414,20 @@ export class PokemonGenerator {
         alphaChance /= 100;
         if (alphaChance === 0) return this.alpha = false;
         return this.alpha = Math.random() < alphaChance;
+    }
+
+    prepareHeldItem(generateHeldItem = false) {
+        if (!generateHeldItem) return this.heldItem = null;
+
+        const heldItemChances = game.settings.get("ptu", "heldItemChances");
+        const items = heldItemChances[this.species.slug] ?? [];
+
+        for (const entry of items) {
+            if (Math.random() < (entry.chance ?? 0) / 100) {
+                return this.heldItem = entry;
+            }
+        }
+        return this.heldItem = null;
     }
 
     async prepareAlphaMove() {
