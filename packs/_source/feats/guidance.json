@@ -2,7 +2,7 @@
   "name": "Guidance",
   "system": {
     "origin": "",
-    "effect": "Your Pokémon’s base Move List limit is increased by +1 (Reminder: The default Move List Limit is 6).",
+    "effect": "Your Pokémon’s base Move List limit is increased by +1.\n<blockquote>Reminder: The default Move List Limit is 6.</blockquote>",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -34,7 +34,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -57,7 +58,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +70,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Mentor"
+      "prereqBackup": "Mentor",
+      "automationStatus": "no-automation-needed",
+      "devNote": "Unless Move List Limit is enforced by future functions, this feature needs no automation",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -80,7 +86,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 26300000,
   "_id": "OQv1XsuHhMWe96lf"
 }
