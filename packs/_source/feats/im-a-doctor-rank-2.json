@@ -4,7 +4,62 @@
     "origin": "",
     "effect": "Each Rank, you gain one of @UUID[Compendium.ptu.edges.Item.j6KUhupcGmKRD1wr]{Field Clinic} or @UUID[Compendium.ptu.edges.Item.EN9bBp3zK0OVe7Yp]{Medic Training} and one of @UUID[Compendium.ptu.feats.Item.G3FxaPfnkNH88PiA]{Nurse} or @UUID[Compendium.ptu.feats.Item.beL0mQ0ddaiE24tt]{First Aid Expertise}.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.edges.Item.j6KUhupcGmKRD1wr",
+            "label": "Field Clinic",
+            "predicate": {
+              "not": "edge:field-clinic"
+            }
+          },
+          {
+            "value": "Compendium.ptu.edges.Item.EN9bBp3zK0OVe7Yp",
+            "label": "Medic Training",
+            "predicate": {
+              "not": "edge:medic-training"
+            }
+          }
+        ],
+        "flag": "doctor2-1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.doctor2-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.feats.Item.G3FxaPfnkNH88PiA",
+            "label": "Nurse",
+            "predicate": {
+              "not": "feat:nurse"
+            }
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.beL0mQ0ddaiE24tt",
+            "label": "First Aid Expertise",
+            "predicate": {
+              "not": "feat:first-aid-expertise"
+            }
+          }
+        ],
+        "flag": "doctor2-2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.doctor2-2}"
+      }
+    ],
     "enabled": true,
     "slug": "im-a-doctor-rank-2",
     "schema": {
@@ -36,7 +91,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,7 +117,8 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -72,8 +129,8 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Medic, Adept Medicine Education",
-      "automationStatus": "needs-automation",
-      "devNote": "Choice Set?",
+      "automationStatus": "completed",
+      "devNote": "",
       "showInTokenPanel": false
     }
   },
@@ -88,5 +145,6 @@
     "exportSource": null
   },
   "sort": 37500000,
-  "_id": "YDfiIOSn2VuMH3va"
+  "_id": "YDfiIOSn2VuMH3va",
+  "folder": null
 }
