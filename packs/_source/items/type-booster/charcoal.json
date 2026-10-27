@@ -1,14 +1,14 @@
 {
-  "name": "Type Booster (Water)",
+  "name": "Charcoal",
   "system": {
     "origin": "",
-    "effect": "Grants a +5 Damage Bonus to all direct-damage Water Moves used by the holder. Accessory Item for Trainers.",
+    "effect": "Grants a +5 Damage Bonus to all direct-damage Fire Moves used by the holder. Accessory Item for Trainers.",
     "snippet": "",
     "rules": [
       {
         "key": "FlatModifier",
         "predicate": [
-          "move:type:water"
+          "move:type:fire"
         ],
         "hideIfDisabled": false,
         "selectors": "damage-roll",
@@ -16,11 +16,11 @@
       }
     ],
     "enabled": true,
-    "slug": "type-booster-water",
+    "slug": "charcoal",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:41.438Z",
+        "datetime": "2026-05-08T00:40:41.117Z",
         "version": {
           "schema": 0.114,
           "foundry": "13.351",
@@ -68,14 +68,14 @@
     "subtype": "",
     "container": false,
     "automation": [],
-    "name": "Type Brace (Water)",
+    "name": "Charcoal",
     "useCount": 0,
     "contentSet": "",
     "replacesSlug": "",
     "leagueLegal": false
   },
   "type": "item",
-  "img": "/systems/ptu/static/css/images/icons/item_icon.png",
+  "img": "/systems/ptu/static/images/item_icons/Dream_Charcoal_Sprite.png",
   "effects": [],
   "flags": {
     "ptu": {
@@ -88,14 +88,14 @@
   "ownership": {
     "default": 0
   },
-  "_id": "Gsmx5zKcB5dUXox9",
+  "_id": "7DyUOQnYFrs93o0E",
   "sort": 0,
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
     "createdTime": 1710773503174,
-    "modifiedTime": 1778200841475,
+    "modifiedTime": 1778200841159,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

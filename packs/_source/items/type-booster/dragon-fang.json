@@ -1,14 +1,14 @@
 {
-  "name": "Type Booster (Fairy)",
+  "name": "Dragon Fang",
   "system": {
     "origin": "",
-    "effect": "Grants a +5 Damage Bonus to all direct-damage Fairy Moves used by the holder. Accessory Item for Trainers.",
+    "effect": "Grants a +5 Damage Bonus to all direct-damage Dragon Moves used by the holder. Accessory Item for Trainers.",
     "snippet": "",
     "rules": [
       {
         "key": "FlatModifier",
         "predicate": [
-          "move:type:fairy"
+          "move:type:dragon"
         ],
         "hideIfDisabled": false,
         "selectors": "damage-roll",
@@ -16,11 +16,11 @@
       }
     ],
     "enabled": true,
-    "slug": "type-booster-fairy",
+    "slug": "dragon-fang",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:42.373Z",
+        "datetime": "2026-05-08T00:40:42.225Z",
         "version": {
           "schema": 0.114,
           "foundry": "13.351",
@@ -68,14 +68,14 @@
     "subtype": "",
     "container": false,
     "automation": [],
-    "name": "Type Brace (Water)",
+    "name": "Dragon Fang",
     "useCount": 0,
     "contentSet": "",
     "replacesSlug": "",
     "leagueLegal": false
   },
   "type": "item",
-  "img": "/systems/ptu/static/css/images/icons/item_icon.png",
+  "img": "/systems/ptu/static/images/item_icons/Dream_Dragon_Fang_Sprite.png",
   "effects": [],
   "flags": {
     "ptu": {
@@ -88,14 +88,14 @@
   "ownership": {
     "default": 0
   },
-  "_id": "v4uAGDYjl2GqQ28j",
+  "_id": "psyNLNlEzKEWK2o6",
   "sort": 0,
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
     "createdTime": 1710773503174,
-    "modifiedTime": 1778200842391,
+    "modifiedTime": 1778200842266,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

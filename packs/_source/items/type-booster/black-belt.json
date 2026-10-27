@@ -1,28 +1,26 @@
 {
-  "name": "Type Booster (Bug)",
+  "name": "Black Belt",
   "system": {
     "origin": "",
-    "effect": "Grants a +5 Damage Bonus to all direct-damage Bug Moves used by the holder. Accessory Item for Trainers.",
+    "effect": "Grants a +5 Damage Bonus to all direct-damage Fighting Moves used by the holder. Accessory Item for Trainers.",
     "snippet": "",
     "rules": [
       {
         "key": "FlatModifier",
-        "predicate": {
-          "and": [
-            "move:type:bug"
-          ]
-        },
+        "predicate": [
+          "move:type:fighting"
+        ],
         "hideIfDisabled": false,
         "selectors": "damage-roll",
         "value": 5
       }
     ],
     "enabled": true,
-    "slug": "type-booster-bug",
+    "slug": "black-belt",
     "schema": {
       "version": 0.116,
       "lastMigration": {
-        "datetime": "2026-05-08T00:40:42.108Z",
+        "datetime": "2026-05-08T00:40:41.232Z",
         "version": {
           "schema": 0.114,
           "foundry": "13.351",
@@ -70,14 +68,14 @@
     "subtype": "",
     "container": false,
     "automation": [],
-    "name": "Type Brace (Water)",
+    "name": "Black Belt",
     "useCount": 0,
     "contentSet": "",
     "replacesSlug": "",
     "leagueLegal": false
   },
   "type": "item",
-  "img": "/systems/ptu/static/css/images/icons/item_icon.png",
+  "img": "/systems/ptu/static/images/item_icons/Dream_Black_Belt_Sprite.png",
   "effects": [],
   "flags": {
     "ptu": {
@@ -90,14 +88,14 @@
   "ownership": {
     "default": 0
   },
-  "_id": "mSDoRkF5Rnt83jct",
+  "_id": "CWJO8qhb40mihXLj",
   "sort": 0,
   "_stats": {
     "coreVersion": "13.351",
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
     "createdTime": 1710773503174,
-    "modifiedTime": 1778200842152,
+    "modifiedTime": 1778200841272,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

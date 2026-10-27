@@ -1,5 +1,5 @@
 {
-  "name": "Type Booster (Rock)",
+  "name": "Hard Stone",
   "system": {
     "origin": "",
     "effect": "Grants a +5 Damage Bonus to all direct-damage Rock Moves used by the holder. Accessory Item for Trainers.",
@@ -16,7 +16,7 @@
       }
     ],
     "enabled": true,
-    "slug": "type-booster-rock",
+    "slug": "hard-stone",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -68,14 +68,14 @@
     "subtype": "",
     "container": false,
     "automation": [],
-    "name": "Type Brace (Water)",
+    "name": "Hard Stone",
     "useCount": 0,
     "contentSet": "",
     "replacesSlug": "",
     "leagueLegal": false
   },
   "type": "item",
-  "img": "/systems/ptu/static/css/images/icons/item_icon.png",
+  "img": "/systems/ptu/static/images/item_icons/Dream_Hard_Stone_Sprite.png",
   "effects": [],
   "flags": {
     "ptu": {
