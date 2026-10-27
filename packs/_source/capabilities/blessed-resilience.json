@@ -1,0 +1,61 @@
+{
+  "name": "Blessed Resilience",
+  "type": "capability",
+  "_id": "OfrHSBwgJa206c89",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.capabilities.Item.7VLMV0YrAJO3DKIT]\nMessiah: Static\nSigner: Standard Action\nMessiah Effect: Choose two Types your Patron has Resistance or Immunity to. You gain Resistance to these types.\nSigner Effect: Choose a single Type your Patron has Resistance or Immunity to. You gain this Resistance to this Type until the end of the Scene. You may choose a different Type each time you use Blessed Resilience.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "blessed-resilience",
+    "contentSet": "blessed-and-damned",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "custom",
+      "max": null,
+      "custom": "Messiah: Static / Signer: Standard",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false,
+      "used": null
+    }
+  }
+}

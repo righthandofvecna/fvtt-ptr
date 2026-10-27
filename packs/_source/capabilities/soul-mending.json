@@ -1,0 +1,61 @@
+{
+  "name": "Soul Mending",
+  "type": "capability",
+  "_id": "iEt64KXAiUvDZGw6",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.capabilities.Item.ExEQE9O4ZDdW3qTt]{Spirit Mending}\nMessiah: Special\nSigner: Free Action, Interrupt\nMessiah Trigger: A Trainer or Pokémon dies. \nMessiah Effect: Your divine powers allow you to intervene, saving the Target’s life. If used in combat as a Free Action interrupt, they are set to 5 Injuries that will heal at half the normal rate, and 50% HP. Until the end of combat, they have DR equal to their tick value, and may not be healed. If used out of combat, as an Extended Action, the target is set to 5 injuries and 1 HP. This Feature has one use, plus one additional time for each of the Level 5, 10, 20, 30, and 40 Character Advancement Level Trainer Tiers that you have reached.\nSigner Trigger: A Trainer or Pokémon is reduced below 0 HP.\nSigner Effect: The Target receives no further injuries after being reduced below 0 HP. If being Knocked Out alone would set them to 10 injuries, they instead are set to 9 Injuries.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "soul-mending",
+    "contentSet": "blessed-and-damned",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "custom",
+      "max": null,
+      "custom": "Messiah: Special / Signer: Free, Interrupt",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false,
+      "used": null
+    }
+  }
+}
