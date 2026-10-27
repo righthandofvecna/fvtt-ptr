@@ -1,0 +1,105 @@
+{
+  "name": "Rare Leek",
+  "system": {
+    "origin": "",
+    "effect": "When held by a Farfetch’d, this rare Leek increase the holder’s critical range by 2. Rare Leeks are Wielded. Cannot be used by Trainers.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": {
+          "or": [
+            "species:farfetchd",
+            "species:sirfetchd"
+          ]
+        },
+        "hideIfDisabled": false,
+        "selectors": "crit-range",
+        "value": 2
+      }
+    ],
+    "enabled": true,
+    "slug": "rare-leek",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:42.044Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Rare Leek",
+    "useCount": 0
+  },
+  "type": "item",
+  "img": "systems/ptu/static/images/item_icons/rare leek.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "14.367",
+    "createdTime": 1683368789200,
+    "modifiedTime": 1793133379389,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 200000,
+  "_id": "horp5SPziquIVMF5",
+  "folder": "w7LwZW6fD6O8YmRm"
+}

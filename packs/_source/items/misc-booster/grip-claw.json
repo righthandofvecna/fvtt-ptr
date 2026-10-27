@@ -1,0 +1,96 @@
+{
+  "folder": "XtbIrywzkrVnpOXb",
+  "name": "Grip Claw",
+  "type": "item",
+  "_id": "x50nPu3l9BGvF8Fe",
+  "img": "systems/ptu/static/images/item_icons/Dream_Grip_Claw_Sprite.png",
+  "system": {
+    "origin": "",
+    "effect": "The holder gains a +2 Bonus to Skill Checks made to initiate Grapple Maneuvers or gain Dominance",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "manual"
+        ],
+        "label": "Grappling? (Grip Claw Bonus)",
+        "hideIfDisabled": false,
+        "selectors": [
+          "skill-combat",
+          "skill-athletics"
+        ],
+        "value": 2
+      }
+    ],
+    "enabled": true,
+    "slug": "grip-claw",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "10000",
+    "consumable": 0,
+    "subtype": "",
+    "container": false
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.56",
+    "createdTime": 1793127324828,
+    "modifiedTime": 1793129130881,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

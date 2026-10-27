@@ -73,7 +73,7 @@
     "leagueLegal": false
   },
   "type": "item",
-  "img": "/systems/ptu/static/css/images/icons/item_icon.png",
+  "img": "systems/ptu/static/images/item_icons/Dream_Wide_Lens_Sprite.png",
   "effects": [],
   "flags": {
     "ptu": {
@@ -86,7 +86,7 @@
   "ownership": {
     "default": 0
   },
-  "_id": "7WtvMDdV1JsPC1gO",
+  "_id": "Fcmg6RWfjalodUIY",
   "sort": 0,
   "_stats": {
     "coreVersion": "13.351",

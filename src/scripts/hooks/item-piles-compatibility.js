@@ -129,6 +129,11 @@ export async function GetItemArt(item_name, type = ".webp") {
   }
 
   if (result.status === 404) {
+    path = customBasePath + `Dream_${clean_item_name.replace("_"," ").titleCase().replace(" ", "_")}_Sprite.png`;
+    result = await fetch(path);
+  }
+
+  if (result.status === 404) {
     path = basePath + clean_item_name + type;
     result = await fetch(path);
   }

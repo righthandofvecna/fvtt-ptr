@@ -1,0 +1,82 @@
+{
+  "folder": "HcqVf7oajq6tXRmB",
+  "name": "Lucky Egg",
+  "type": "item",
+  "_id": "r7dfcRmtzmYigNgJ",
+  "img": "systems/ptu/static/images/item_icons/lucky egg.webp",
+  "system": {
+    "origin": "",
+    "effect": "An item to be held by a Pokémon. It's an egg filled with happiness that doesn't do anything yet.\n\n<em>There's no current effects for the Lucky Egg.</em>",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "lucky-egg",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "25000",
+    "consumable": 0,
+    "subtype": "",
+    "container": false
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "I'm not entirely sure what we'd even want this to do? -Dylan",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.56",
+    "createdTime": 1793131769548,
+    "modifiedTime": 1793131873757,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

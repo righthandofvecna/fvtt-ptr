@@ -84,7 +84,7 @@
     "subtype": "",
     "container": false,
     "automation": [],
-    "name": "Focus",
+    "name": "Stat Booster (Evasion)",
     "useCount": 0,
     "contentSet": "",
     "replacesSlug": "",
@@ -104,7 +104,7 @@
   "ownership": {
     "default": 0
   },
-  "_id": "0brhQceJnMPR1A1E",
+  "_id": "tBTtUE0klWedbaPz",
   "sort": 0,
   "_stats": {
     "coreVersion": "13.351",

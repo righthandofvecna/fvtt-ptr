@@ -38,8 +38,8 @@
     },
     "duration": {
       "value": 0,
-      "unit": "encounter",
-      "expiry": null
+      "unit": "turns",
+      "expiry": "turn-start"
     },
     "start": {
       "value": 0,
@@ -59,7 +59,7 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -69,9 +69,9 @@
     "exportSource": null,
     "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.29",
+    "systemVersion": "4.4.3.56",
     "createdTime": 1780340122373,
-    "modifiedTime": 1789352187752,
+    "modifiedTime": 1793132666441,
     "lastModifiedBy": "ptubuilder000000"
   }
 }
