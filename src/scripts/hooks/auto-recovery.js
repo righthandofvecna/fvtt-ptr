@@ -77,7 +77,7 @@ export const AutoRecovery = {
 
     // Switching the active scene should trigger end-of-scene recovery if applicable
     Hooks.on("updateScene", async (scene, changes)=>{
-      if (changes.active === false) return;
+      if (!changes.active) return;
       Hooks.callAll("ptu.sceneEnd");
     });
 
