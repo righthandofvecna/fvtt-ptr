@@ -2,7 +2,7 @@
   "name": "Tag In",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You recall a Pokémon\nEffect: The next Pokémon you send out is treated as if the recalled Pokémon had used Baton Pass on it.",
+    "effect": "Trigger: You recall a Pokémon\nEffect: The next Pokémon you send out is treated as if the recalled Pokémon had used @UUID[Compendium.ptu.moves.Item.uZjoE8y3gbmlRVcc]{Baton Pass} on it.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "class": "Juggler",
     "name": "Tag In [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "tag-in"
+    "replacesSlug": "tag-in",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
