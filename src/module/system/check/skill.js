@@ -146,7 +146,7 @@ class PTUSkillCheck extends PTUDiceCheck {
         })();
         if (!diceDialogContext) return null;
 
-        const dice = this.diceModifiers.map(mod => `${mod.diceNumber}d${mod.dieSize}`).join(" + ");
+        const dice = diceDialogContext.statistic.totalModifier;
 
         const options = {
             origin: {
