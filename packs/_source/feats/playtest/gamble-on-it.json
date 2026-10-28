@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Scene x3 – Free Action\nTarget: Your Pokémon within 5m.\nEffect: For each of your Skills (Athletics, Acrobatics and Combat) Adept and above, you and your Pokémon gain the following (Choose one when activating, of applicable Skills):\nAthletics – All movement capabilities are doubled for this round and halved for the next. (at Master Athletics, ignore halving movement)\nAcrobatics – Your Pokémon gains evasion equal to its Weary and you gain half that (Rounded Down) until the end of your respective turns. (at Master Acro, You double all evasion gains from this feature.)\nCombat – All Physical moves (For you and your active Pokémon) Trip on a 18+ for the remainder of the Scene. Tripped Pokémon that would be Tripped again, lose a Tick of Hit Points instead. (at Master Combat, Trip becomes 16+)\nEach of these effects can only be used once per scene.\nFor all Effects, your Pokémon loses 1 Spirit, if they become Weary, they gain +1 CS of your choice.",
+    "effect": "Target: Your Pokémon within 5m.\nEffect: For each of your Skills (Athletics, Acrobatics and Combat) Adept and above, you and your Pokémon gain the following (Choose one when activating, of applicable Skills):\nAthletics – All movement capabilities are doubled for this round and halved for the next. (at Master Athletics, ignore halving movement)\nAcrobatics – Your Pokémon gains evasion equal to its Weary and you gain half that (Rounded Down) until the end of your respective turns. (at Master Acrobatics, you double all evasion gains from this feature.)\nCombat – All Physical moves (For you and your active Pokémon) @UUID[Compendium.ptu.effects.Item.4lqKV4CxikZxxNWJ]{Trip} on a 18+ for the remainder of the Scene. Tripped Pokémon that would be Tripped again, lose a Tick of Hit Points instead. (at Master Combat, Trip becomes 16+)\nEach of these effects can only be used once per scene.\nFor all Effects, your Pokémon loses 1 Spirit, if they become Weary, they gain +1 CS of your choice.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -30,8 +30,8 @@
       "+HP or Attack"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 3,
       "custom": "1 AP – Rapid Action",
       "modifiers": {
         "priorityLimited": false,
@@ -39,17 +39,18 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
-      "rapid": true,
+      "rapid": false,
       "shift": false,
-      "free": false,
+      "free": true,
       "extended": false
     },
     "ap": {
-      "cost": 1,
+      "cost": null,
       "bind": false
     },
     "prerequisites": [
@@ -59,14 +60,19 @@
     "notes": "",
     "free": false,
     "class": "Hustler",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Hustler, Adept Athletics, Acrobatics or Combat"
+      "prereqBackup": "Hustler, Adept Athletics, Acrobatics or Combat",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

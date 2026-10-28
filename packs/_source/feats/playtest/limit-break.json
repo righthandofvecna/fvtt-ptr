@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": " You must declare Limit Break at the beginning of the Round. Both you and your Pokémon act immediately before priority can trigger. Declare a target, you and your Pokémon take a Full Action to shift and then attack the target. Limit Break cannot be avoided by Moves with the Shield Keyword, the Dodge Ability, or similar effect, and Intercepts may not be attempted in response. If this attack faints the target, both you and your Pokémon restore HP equal to the damage dealt (to 0) and supernaturally heal 1 injury. If it does not, both you and your Pokemons HP is set to 1 and you both gain an injury.",
+    "effect": "You must declare Limit Break at the beginning of the Round. Both you and your Pokémon act immediately before Priority can trigger. You and your Pokémon take a Full Action to shift and then attack the same target. Limit Break cannot be avoided by Moves with the @CompSearch[Moves keywords=Shield]{Shield} Keyword, the @UUID[Compendium.ptu.abilities.Item.TAtIrb9iZKJLUtQT]{Dodge} Ability, or similar effect, and @CompSearch[Moves Intercept]{Intercepts} may not be attempted in response. If this attack faints the target, both you and your Pokémon restore HP equal to the damage dealt (to 0) and supernaturally heal 1 injury. If it does not, both you and your Pokémon's HP is set to 1 and you both gain an injury.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -30,7 +30,7 @@
       "+HP or Attack"
     ],
     "frequency": {
-      "type": "daily",
+      "type": "custom",
       "max": 2,
       "custom": "Daily x2 – Full Action, Special, Pokemon at Weary 3",
       "modifiers": {
@@ -39,10 +39,11 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
-      "standard": true,
+      "standard": false,
       "rapid": false,
       "shift": false,
       "free": false,
@@ -59,14 +60,19 @@
     "notes": "",
     "free": false,
     "class": "Hustler",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Hustler, 2 of Master Athletics, Acrobatics or Combat"
+      "prereqBackup": "Hustler, 2 of Master Athletics, Acrobatics or Combat",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

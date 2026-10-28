@@ -2,9 +2,141 @@
   "name": "In My Name Rank 4",
   "system": {
     "origin": "",
-    "effect": "You gain a Blessing marked Rank 3 or lower. You must additionally meet any Prerequisites of the Blessing.\nRank 3 Blessings: @UUID[Compendium.ptu.references.Item.jSN6wAIauThvSDcg], @UUID[Compendium.ptu.references.Item.bXVPBPJm8s9Hu68o]",
+    "effect": "You gain a Blessing marked Rank 3 or lower. You must additionally meet any Prerequisites of the Blessing.\nRank 1 Blessings: @UUID[Compendium.ptu.capabilities.Item.irI10S0Ac862yBVT], @UUID[Compendium.ptu.capabilities.Item.uIz7kJ3tVQvXnghu], @UUID[Compendium.ptu.capabilities.Item.i3Cesfp4PaQ7qVL1], @UUID[Compendium.ptu.capabilities.Item.ExEQE9O4ZDdW3qTt]\nRank 2 Blessings: @UUID[Compendium.ptu.capabilities.Item.7VLMV0YrAJO3DKIT], @UUID[Compendium.ptu.capabilities.Item.IR0yjstn0ABv1ggy], @UUID[Compendium.ptu.capabilities.Item.iEt64KXAiUvDZGw6]\nRank 3 Blessings: @UUID[Compendium.ptu.capabilities.Item.OfrHSBwgJa206c89], @UUID[Compendium.ptu.capabilities.Item.zbY26ZmCWvhdkCav]",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "hp",
+            "label": "HP"
+          },
+          {
+            "value": "atk",
+            "label": "ATK"
+          },
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spatk",
+            "label": "SpATK"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          },
+          {
+            "value": "spd",
+            "label": "SPD"
+          }
+        ],
+        "flag": "patron4",
+        "adjustName": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.patron3}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.capabilities.Item.irI10S0Ac862yBVT",
+            "label": "Ancient Wisdom",
+            "predicate": {
+              "not": "capability:ancient-wisdom"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.uIz7kJ3tVQvXnghu",
+            "label": "Blessed Strike",
+            "predicate": {
+              "not": "capability:blessed-strike"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.i3Cesfp4PaQ7qVL1",
+            "label": "Paragon",
+            "predicate": {
+              "not": "capability:paragon"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.ExEQE9O4ZDdW3qTt",
+            "label": "Spirit Mending",
+            "predicate": {
+              "not": "capability:spirit-mending"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.7VLMV0YrAJO3DKIT",
+            "label": "Blessed Power",
+            "predicate": [
+              "capability:blessed-strike",
+              {
+                "not": "capability:blessed-power"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.IR0yjstn0ABv1ggy",
+            "label": "Luck of the Gods",
+            "predicate": [
+              "capability:paragon",
+              {
+                "not": "capability:luck-of-the-gods"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.iEt64KXAiUvDZGw6",
+            "label": "Soul Mending",
+            "predicate": [
+              "capability:spirit-mending",
+              {
+                "not": "capability:soul-mending"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.OfrHSBwgJa206c89",
+            "label": "Blessed Resilience",
+            "predicate": [
+              "capability:blessed-power",
+              {
+                "not": "capability:blessed-resilience"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.zbY26ZmCWvhdkCav",
+            "label": "Insight of the Great Ones",
+            "predicate": [
+              "capability:ancient-wisdom",
+              {
+                "not": "capability:insight-of-the-great-ones"
+              }
+            ]
+          }
+        ],
+        "flag": "inmyname4",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.inmyname4}"
+      }
+    ],
     "enabled": true,
     "slug": "in-my-name-rank-4",
     "schema": {
@@ -53,8 +185,7 @@
       "bind": false
     },
     "prerequisites": [
-      "A Pact Gift",
-      "All your Patron's Major Gifts"
+      "A Pact Gift or All your Patron's Major Gifts"
     ],
     "notes": "",
     "free": false,
@@ -64,7 +195,8 @@
     "automation": [],
     "contentSet": "blessed-and-damned",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -75,7 +207,7 @@
   "flags": {
     "ptu": {
       "prereqBackup": "A Pact Gift, GM Permission\nOR\nAll your Patron's Major Gifts, GM Permission (if no Pact Gift)",
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -91,5 +223,6 @@
     "exportSource": null
   },
   "sort": 43100000,
-  "_id": "chLEffocDzpxxugm"
+  "_id": "chLEffocDzpxxugm",
+  "folder": null
 }

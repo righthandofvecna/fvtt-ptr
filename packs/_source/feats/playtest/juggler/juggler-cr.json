@@ -2,7 +2,7 @@
   "name": "Juggler",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Quick Switch Feature, and using it costs only 1 AP.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.feats.Item.r1OvX4IECRfZUkwJ]{Quick Switch} Feature, and using it costs only 1 AP.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,19 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.feats.Item.r1OvX4IECRfZUkwJ",
+        "modifications": [
+          {
+            "key": "system.ap.cost",
+            "operation": "override",
+            "value": "1"
+          }
+        ]
       }
     ],
     "enabled": true,
@@ -49,7 +62,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +84,9 @@
     "class": "Juggler",
     "name": "Juggler [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "juggler"
+    "replacesSlug": "juggler",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -81,7 +97,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

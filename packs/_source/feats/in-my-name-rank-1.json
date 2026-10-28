@@ -4,7 +4,90 @@
     "origin": "",
     "effect": "You gain a Rank 1 Blessing.\nRank 1 Blessings: @UUID[Compendium.ptu.references.Item.bxAMXMpavL2OvhlA], @UUID[Compendium.ptu.references.Item.RU6ok1dtRlDhTo3a], @UUID[Compendium.ptu.references.Item.O6BYap68R4OMCHbk], @UUID[Compendium.ptu.references.Item.EfxmNFWRAWQ8aHQM]",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "hp",
+            "label": "HP"
+          },
+          {
+            "value": "atk",
+            "label": "ATK"
+          },
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spatk",
+            "label": "SpATK"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          },
+          {
+            "value": "spd",
+            "label": "SPD"
+          }
+        ],
+        "flag": "patron1",
+        "adjustName": false,
+        "prompt": "Patron Stat?"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.patron1}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.capabilities.Item.irI10S0Ac862yBVT",
+            "label": "Ancient Wisdom",
+            "predicate": {
+              "not": "capability:ancient-wisdom"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.uIz7kJ3tVQvXnghu",
+            "label": "Blessed Strike",
+            "predicate": {
+              "not": "capability:blessed-strike"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.i3Cesfp4PaQ7qVL1",
+            "label": "Paragon",
+            "predicate": {
+              "not": "capability:paragon"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.ExEQE9O4ZDdW3qTt",
+            "label": "Spirit Mending",
+            "predicate": {
+              "not": "capability:spirit-mending"
+            }
+          }
+        ],
+        "flag": "inmyname1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.inmyname1}"
+      }
+    ],
     "enabled": true,
     "slug": "in-my-name-rank-1",
     "schema": {
@@ -53,8 +136,7 @@
       "bind": false
     },
     "prerequisites": [
-      "Messiah",
-      "GM Permission"
+      "Messiah"
     ],
     "notes": "",
     "free": false,
@@ -64,7 +146,8 @@
     "automation": [],
     "contentSet": "blessed-and-damned",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -75,7 +158,7 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Messiah, GM Permission",
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -91,5 +174,6 @@
     "exportSource": null
   },
   "sort": 23800000,
-  "_id": "MQ9E8ahsjA95ZvkY"
+  "_id": "MQ9E8ahsjA95ZvkY",
+  "folder": null
 }

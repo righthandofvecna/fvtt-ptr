@@ -2,7 +2,7 @@
   "name": "Pack Tactics",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: Your Pokémon with at least 2 Tutor Points\nEffect: The target loses 2 Tutor Points, and gains the Pack Hunt or Teamwork Ability. You may target a Pokémon with Pack Tactics only once.",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: The target loses 1 Tutor Slot, and gains the @UUID[Compendium.ptu.abilities.Item.YTY79dfwdUWYjXl4]{Pack Hunt} or @UUID[Compendium.ptu.abilities.Item.cERfnFsIgZ0D6NUL]{Teamwork} Ability. You may target a Pokémon with Pack Tactics only once.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +70,9 @@
     "class": "Hunter",
     "name": "Pack Tactics [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "pack-tactics"
+    "replacesSlug": "pack-tactics",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -80,7 +83,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

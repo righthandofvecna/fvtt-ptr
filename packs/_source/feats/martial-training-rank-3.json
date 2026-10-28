@@ -2,7 +2,7 @@
   "name": "Martial Training Rank 3",
   "system": {
     "origin": "",
-    "effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. Moves marked with an Ability require that Ability to be chosen.\nRank 3 Moves: Cross Chop(Inner Focus), Close Combat, Triple Kick(Technician), High Jump Kick(Reckless), Sky Uppercut(Iron Fist), Storm Throw(Guts)",
+    "effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. Moves marked with an Ability require that Ability to be chosen.\nRank 1: @UUID[Compendium.ptu.moves.Item.iQXpUEYL3sawCfvM]{Acupressure}(Limber), @UUID[Compendium.ptu.moves.Item.MVQIN27r61bxzB7J]{Arm Thrust}(Technician), @UUID[Compendium.ptu.moves.Item.24gRKtjHojSS9Vb0]{Double Kick}, @UUID[Compendium.ptu.moves.Item.TbqvNIqswHYAVHOW]{Focus Energy}, @UUID[Compendium.ptu.moves.Item.AJTIueQXgC9l1plL]{Karate Chop}(inner Focus), @UUID[Compendium.ptu.moves.Item.PdslVg2qIvDMDHiA]{Low Sweep}, @UUID[Compendium.ptu.moves.Item.tfZD8XbANRwj7C1a]{Mach Punch}(Iron Fist), @UUID[Compendium.ptu.moves.Item.SLG74AL41rgCYYrw]{Rolling Kick}(Reckless), @UUID[Compendium.ptu.moves.Item.NNIBGqOXtXQDkeky]{Vital Throw}(Guts)\n\nRank 2: @UUID[Compendium.ptu.moves.Item.QD9iT4AII5PpKxab]{Brick Break}, @UUID[Compendium.ptu.moves.Item.zGKvNAhdvuPO5Bxo]{Circle Throw}(Guts), @UUID[Compendium.ptu.moves.Item.lZlIuEyXp4Xt2It8]{Comet Punch}(Iron Fist), @UUID[Compendium.ptu.moves.Item.fm4wwdVZiUeL6yFQ]{Counter}(Limber), @UUID[Compendium.ptu.moves.Item.dOMKjZx7flfPZTtV]{Low Kick}(Inner Focus), @UUID[Compendium.ptu.moves.Item.X5S085dhT6JG9Top]{Jump Kick}(Reckless), @UUID[Compendium.ptu.moves.Item.iljoYobHdCVQg42m]{Power Trick}(Limber), @UUID[Compendium.ptu.moves.Item.pAcczsQCPnopyveq]{Quick Guard}(Technician)\n\nRank 3: @UUID[Compendium.ptu.moves.Item.FUT3S0b75wJUZQrh]{Cross Chop}(Inner Focus), @UUID[Compendium.ptu.moves.Item.7CkvaKCsI8Oyb3LO]{Close Combat}, @UUID[Compendium.ptu.moves.Item.87puwvWzfGqdOQVN]{Triple Kick}(Technician), @UUID[Compendium.ptu.moves.Item.3UQ4JHBBipOJg72d]{High Jump Kick}(Reckless), @UUID[Compendium.ptu.moves.Item.hxl2mc7IwXPK406t]{Sky Uppercut}(Iron Fist), @UUID[Compendium.ptu.moves.Item.5ArMjuhjw1Qb16M4]{Storm Throw}(Guts)",
     "snippet": "",
     "rules": [
       {
@@ -12,7 +12,9 @@
         "value": 1,
         "predicate": [
           "class:martial-artist-guts-hp"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -27,7 +29,9 @@
               "class:martial-artist-technician-speed"
             ]
           }
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -36,7 +40,9 @@
         "value": 1,
         "predicate": [
           "class:martial-artist-iron-fist-defense"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -45,7 +51,9 @@
         "value": 1,
         "predicate": [
           "class:martial-artist-reckless-attack"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ChoiceSet",
@@ -53,8 +61,8 @@
         "adjustName": false,
         "choices": [
           {
-            "label": "Acupressure",
             "value": "Compendium.ptu.moves.Item.iQXpUEYL3sawCfvM",
+            "label": "Acupressure",
             "predicate": [
               "ability:limber",
               {
@@ -63,8 +71,8 @@
             ]
           },
           {
-            "label": "Arm Thrust",
             "value": "Compendium.ptu.moves.Item.MVQIN27r61bxzB7J",
+            "label": "Arm Thrust",
             "predicate": [
               "ability:technician",
               {
@@ -73,8 +81,8 @@
             ]
           },
           {
-            "label": "Double Kick",
             "value": "Compendium.ptu.moves.Item.24gRKtjHojSS9Vb0",
+            "label": "Double Kick",
             "predicate": [
               {
                 "not": "move:double-kick"
@@ -82,8 +90,8 @@
             ]
           },
           {
-            "label": "Focus Energy",
             "value": "Compendium.ptu.moves.Item.TbqvNIqswHYAVHOW",
+            "label": "Focus Energy",
             "predicate": [
               {
                 "not": "move:focus-energy"
@@ -91,8 +99,8 @@
             ]
           },
           {
-            "label": "Karate Chop",
             "value": "Compendium.ptu.moves.Item.AJTIueQXgC9l1plL",
+            "label": "Karate Chop",
             "predicate": [
               "ability:inner-focus",
               {
@@ -101,8 +109,8 @@
             ]
           },
           {
-            "label": "Low Sweep",
             "value": "Compendium.ptu.moves.Item.PdslVg2qIvDMDHiA",
+            "label": "Low Sweep",
             "predicate": [
               {
                 "not": "move:low-sweep"
@@ -110,8 +118,8 @@
             ]
           },
           {
-            "label": "Mach Punch",
             "value": "Compendium.ptu.moves.Item.tfZD8XbANRwj7C1a",
+            "label": "Mach Punch",
             "predicate": [
               "ability:iron-fist",
               {
@@ -120,8 +128,8 @@
             ]
           },
           {
-            "label": "Rolling Kick",
             "value": "Compendium.ptu.moves.Item.SLG74AL41rgCYYrw",
+            "label": "Rolling Kick",
             "predicate": [
               "ability:reckless",
               {
@@ -130,8 +138,8 @@
             ]
           },
           {
-            "label": "Vital Throw",
             "value": "Compendium.ptu.moves.Item.NNIBGqOXtXQDkeky",
+            "label": "Vital Throw",
             "predicate": [
               "ability:guts",
               {
@@ -140,8 +148,8 @@
             ]
           },
           {
-            "label": "Brick Break",
             "value": "Compendium.ptu.moves.Item.QD9iT4AII5PpKxab",
+            "label": "Brick Break",
             "predicate": [
               {
                 "not": "move:brick-break"
@@ -149,8 +157,8 @@
             ]
           },
           {
-            "label": "Circle Throw",
             "value": "Compendium.ptu.moves.Item.zGKvNAhdvuPO5Bxo",
+            "label": "Circle Throw",
             "predicate": [
               "ability:guts",
               {
@@ -159,8 +167,8 @@
             ]
           },
           {
-            "label": "Comet Punch",
             "value": "Compendium.ptu.moves.Item.lZlIuEyXp4Xt2It8",
+            "label": "Comet Punch",
             "predicate": [
               "ability:iron-fist",
               {
@@ -169,8 +177,8 @@
             ]
           },
           {
-            "label": "Counter",
             "value": "Compendium.ptu.moves.Item.fm4wwdVZiUeL6yFQ",
+            "label": "Counter",
             "predicate": [
               "ability:limber",
               {
@@ -179,8 +187,8 @@
             ]
           },
           {
-            "label": "Low Kick",
             "value": "Compendium.ptu.moves.Item.dOMKjZx7flfPZTtV",
+            "label": "Low Kick",
             "predicate": [
               "ability:inner-focus",
               {
@@ -189,8 +197,8 @@
             ]
           },
           {
-            "label": "Jump Kick",
             "value": "Compendium.ptu.moves.Item.X5S085dhT6JG9Top",
+            "label": "Jump Kick",
             "predicate": [
               "ability:reckless",
               {
@@ -199,8 +207,8 @@
             ]
           },
           {
-            "label": "Power Trick",
             "value": "Compendium.ptu.moves.Item.iljoYobHdCVQg42m",
+            "label": "Power Trick",
             "predicate": [
               "ability:limber",
               {
@@ -209,8 +217,8 @@
             ]
           },
           {
-            "label": "Quick Guard",
             "value": "Compendium.ptu.moves.Item.pAcczsQCPnopyveq",
+            "label": "Quick Guard",
             "predicate": [
               "ability:technician",
               {
@@ -219,8 +227,8 @@
             ]
           },
           {
-            "label": "Cross Chop",
             "value": "Compendium.ptu.moves.Item.FUT3S0b75wJUZQrh",
+            "label": "Cross Chop",
             "predicate": [
               "ability:inner-focus",
               {
@@ -229,8 +237,8 @@
             ]
           },
           {
-            "label": "Close Combat",
             "value": "Compendium.ptu.moves.Item.7CkvaKCsI8Oyb3LO",
+            "label": "Close Combat",
             "predicate": [
               {
                 "not": "move:close-combat"
@@ -238,8 +246,8 @@
             ]
           },
           {
-            "label": "Triple Kick",
             "value": "Compendium.ptu.moves.Item.87puwvWzfGqdOQVN",
+            "label": "Triple Kick",
             "predicate": [
               "ability:technician",
               {
@@ -248,8 +256,8 @@
             ]
           },
           {
-            "label": "High Jump Kick",
             "value": "Compendium.ptu.moves.Item.3UQ4JHBBipOJg72d",
+            "label": "High Jump Kick",
             "predicate": [
               "ability:reckless",
               {
@@ -258,8 +266,8 @@
             ]
           },
           {
-            "label": "Sky Uppercut",
             "value": "Compendium.ptu.moves.Item.hxl2mc7IwXPK406t",
+            "label": "Sky Uppercut",
             "predicate": [
               "ability:iron-fist",
               {
@@ -268,8 +276,8 @@
             ]
           },
           {
-            "label": "Storm Throw",
             "value": "Compendium.ptu.moves.Item.5ArMjuhjw1Qb16M4",
+            "label": "Storm Throw",
             "predicate": [
               "ability:guts",
               {
@@ -295,8 +303,8 @@
         "adjustName": false,
         "choices": [
           {
-            "label": "Acupressure",
             "value": "Compendium.ptu.moves.Item.iQXpUEYL3sawCfvM",
+            "label": "Acupressure",
             "predicate": [
               "ability:limber",
               {
@@ -313,8 +321,8 @@
             ]
           },
           {
-            "label": "Arm Thrust",
             "value": "Compendium.ptu.moves.Item.MVQIN27r61bxzB7J",
+            "label": "Arm Thrust",
             "predicate": [
               "ability:technician",
               {
@@ -331,8 +339,8 @@
             ]
           },
           {
-            "label": "Double Kick",
             "value": "Compendium.ptu.moves.Item.24gRKtjHojSS9Vb0",
+            "label": "Double Kick",
             "predicate": [
               {
                 "not": "move:double-kick"
@@ -348,8 +356,8 @@
             ]
           },
           {
-            "label": "Focus Energy",
             "value": "Compendium.ptu.moves.Item.TbqvNIqswHYAVHOW",
+            "label": "Focus Energy",
             "predicate": [
               {
                 "not": "move:focus-energy"
@@ -365,8 +373,8 @@
             ]
           },
           {
-            "label": "Karate Chop",
             "value": "Compendium.ptu.moves.Item.AJTIueQXgC9l1plL",
+            "label": "Karate Chop",
             "predicate": [
               "ability:inner-focus",
               {
@@ -383,8 +391,8 @@
             ]
           },
           {
-            "label": "Low Sweep",
             "value": "Compendium.ptu.moves.Item.PdslVg2qIvDMDHiA",
+            "label": "Low Sweep",
             "predicate": [
               {
                 "not": "move:low-sweep"
@@ -400,8 +408,8 @@
             ]
           },
           {
-            "label": "Mach Punch",
             "value": "Compendium.ptu.moves.Item.tfZD8XbANRwj7C1a",
+            "label": "Mach Punch",
             "predicate": [
               "ability:iron-fist",
               {
@@ -418,8 +426,8 @@
             ]
           },
           {
-            "label": "Rolling Kick",
             "value": "Compendium.ptu.moves.Item.SLG74AL41rgCYYrw",
+            "label": "Rolling Kick",
             "predicate": [
               "ability:reckless",
               {
@@ -436,8 +444,8 @@
             ]
           },
           {
-            "label": "Vital Throw",
             "value": "Compendium.ptu.moves.Item.NNIBGqOXtXQDkeky",
+            "label": "Vital Throw",
             "predicate": [
               "ability:guts",
               {
@@ -454,8 +462,8 @@
             ]
           },
           {
-            "label": "Brick Break",
             "value": "Compendium.ptu.moves.Item.QD9iT4AII5PpKxab",
+            "label": "Brick Break",
             "predicate": [
               {
                 "not": "move:brick-break"
@@ -471,8 +479,8 @@
             ]
           },
           {
-            "label": "Circle Throw",
             "value": "Compendium.ptu.moves.Item.zGKvNAhdvuPO5Bxo",
+            "label": "Circle Throw",
             "predicate": [
               "ability:guts",
               {
@@ -489,8 +497,8 @@
             ]
           },
           {
-            "label": "Comet Punch",
             "value": "Compendium.ptu.moves.Item.lZlIuEyXp4Xt2It8",
+            "label": "Comet Punch",
             "predicate": [
               "ability:iron-fist",
               {
@@ -507,8 +515,8 @@
             ]
           },
           {
-            "label": "Counter",
             "value": "Compendium.ptu.moves.Item.fm4wwdVZiUeL6yFQ",
+            "label": "Counter",
             "predicate": [
               "ability:limber",
               {
@@ -525,8 +533,8 @@
             ]
           },
           {
-            "label": "Low Kick",
             "value": "Compendium.ptu.moves.Item.dOMKjZx7flfPZTtV",
+            "label": "Low Kick",
             "predicate": [
               "ability:inner-focus",
               {
@@ -543,8 +551,8 @@
             ]
           },
           {
-            "label": "Jump Kick",
             "value": "Compendium.ptu.moves.Item.X5S085dhT6JG9Top",
+            "label": "Jump Kick",
             "predicate": [
               "ability:reckless",
               {
@@ -561,8 +569,8 @@
             ]
           },
           {
-            "label": "Power Trick",
             "value": "Compendium.ptu.moves.Item.iljoYobHdCVQg42m",
+            "label": "Power Trick",
             "predicate": [
               "ability:limber",
               {
@@ -579,8 +587,8 @@
             ]
           },
           {
-            "label": "Quick Guard",
             "value": "Compendium.ptu.moves.Item.pAcczsQCPnopyveq",
+            "label": "Quick Guard",
             "predicate": [
               "ability:technician",
               {
@@ -597,8 +605,8 @@
             ]
           },
           {
-            "label": "Cross Chop",
             "value": "Compendium.ptu.moves.Item.FUT3S0b75wJUZQrh",
+            "label": "Cross Chop",
             "predicate": [
               "ability:inner-focus",
               {
@@ -615,8 +623,8 @@
             ]
           },
           {
-            "label": "Close Combat",
             "value": "Compendium.ptu.moves.Item.7CkvaKCsI8Oyb3LO",
+            "label": "Close Combat",
             "predicate": [
               {
                 "not": "move:close-combat"
@@ -632,8 +640,8 @@
             ]
           },
           {
-            "label": "Triple Kick",
             "value": "Compendium.ptu.moves.Item.87puwvWzfGqdOQVN",
+            "label": "Triple Kick",
             "predicate": [
               "ability:technician",
               {
@@ -650,8 +658,8 @@
             ]
           },
           {
-            "label": "High Jump Kick",
             "value": "Compendium.ptu.moves.Item.3UQ4JHBBipOJg72d",
+            "label": "High Jump Kick",
             "predicate": [
               "ability:reckless",
               {
@@ -668,8 +676,8 @@
             ]
           },
           {
-            "label": "Sky Uppercut",
             "value": "Compendium.ptu.moves.Item.hxl2mc7IwXPK406t",
+            "label": "Sky Uppercut",
             "predicate": [
               "ability:iron-fist",
               {
@@ -686,8 +694,8 @@
             ]
           },
           {
-            "label": "Storm Throw",
             "value": "Compendium.ptu.moves.Item.5ArMjuhjw1Qb16M4",
+            "label": "Storm Throw",
             "predicate": [
               "ability:guts",
               {
@@ -747,7 +755,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -771,7 +780,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -781,7 +792,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Martial Artist, Master Combat"
+      "prereqBackup": "Martial Artist, Master Combat",
+      "automationStatus": "needs-automation",
+      "devNote": "Move selection checks abilities, but if a trainer has those abilities outside of their Martial Artist style, those options should not be available",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -794,7 +808,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 20500000,
   "_id": "JfxdAc9czuasid6u"
 }

@@ -2,7 +2,7 @@
   "name": "Crippling Shot",
   "system": {
     "origin": "",
-    "effect": "Make a Ranged Struggle Attack attack with a -2 penalty to Accuracy. If you hit, the attack deals Damage as if it was resisted one step, but the target becomes Slowed, loses 1 Speed Combat Stage, and you initiate a Trip Maneuver against the target. You may use your Perception Skill to resolve the Opposed Check if you wish.",
+    "effect": "Make a Ranged Struggle Attack attack with a -2 penalty to Accuracy. If you hit, the attack deals Damage as if it was resisted one step, but the target becomes @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed}, loses 1 Speed Combat Stage, and you initiate a @UUID[Compendium.ptu.moves.Item.wF3ORK20xylO1ZGs]{Trip Maneuver} against the target. You may use your Perception Skill to resolve the Opposed Check if you wish.",
     "snippet": "",
     "rules": [
       {
@@ -28,7 +28,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.YcROCuPmgPLfXojt",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -72,7 +73,9 @@
     "name": "Crippling Shot",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -83,7 +86,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Marksman, Expert Perception or Combat",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -96,7 +101,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 17000000,
   "_id": "GS5wBuIRxEbJGe0q"
 }

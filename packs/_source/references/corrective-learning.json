@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Mentor Lessons",
-    "effect": "Prerequisites: Mentor, Intimidate as a Mentor Skill Target: A Pokémon that has spent Tutor Points on a Poké Edge or a Feature’s effect Effect: The target loses one effect gained from a Poké Edge or Feature and refunds all Tutor Points spent on it.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.ohuHe7DxrHOxna6E]{Mentor}, Intimidate as a Mentor Skill\nTarget: A Pokémon that has spent Tutor Points on a Poké Edge or a Feature’s effect\nEffect: The target loses one effect gained from a Poké Edge or Feature and refunds all Tutor Points spent on it.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "Qs80HP7ivbF8e28G",
   "effects": [],
-  "folder": null,
   "sort": 14000000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

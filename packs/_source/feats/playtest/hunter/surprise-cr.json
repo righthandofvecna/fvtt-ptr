@@ -2,7 +2,7 @@
   "name": "Surprise!",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You make an attack against a foe while Hidden, or is adjacent to your Pokémon with Pack Hunt or Teamwork\nEffect: Make two attack rolls for the triggering action, and use the better result to finalize the attack. If both attacks would hit, the target is Flinched. Surprise! may be used only once per Scene per target. If the triggering attack was a Poké Ball, Hand Net, Weighted Net, Glue Cannon, or Struggle Attack, Surprise! costs 1 AP to activate; otherwise, it costs 2 AP.",
+    "effect": "Trigger: You make an attack against a foe while @UUID[Compendium.ptu.effects.Item.wKlB25Mu17lmwpKB]{Hidden}, or is adjacent to your Pokémon with @UUID[Compendium.ptu.abilities.Item.YTY79dfwdUWYjXl4]{Pack Hunt} or @UUID[Compendium.ptu.abilities.Item.cERfnFsIgZ0D6NUL]{Teamwork}\nEffect: Make two attack rolls for the triggering action, and use the better result to finalize the attack. If both attacks would hit, the target is @UUID[Compendium.ptu.effects.Item.xE6uIFWZoYXAZQxA]{Flinched}. Surprise! may be used only once per Scene per target. If the triggering attack was a Poké Ball, @UUID[Compendium.ptu.items.Item.GJ4dp8n9Mqy64tqz]{Hand Net}, Weighted Net, @UUID[Compendium.ptu.items.Item.3qtWGQbViSwE7yuC]{Glue Cannon}, or Struggle Attack, Surprise! costs 1 AP to activate; otherwise, it costs 2 AP.",
     "snippet": "",
     "rules": [
       {
@@ -39,7 +39,7 @@
       "Class Rework"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "custom",
       "max": 0,
       "custom": "X AP – Rapid Action",
       "modifiers": {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "class": "Hunter",
     "name": "Surprise! [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "surprise"
+    "replacesSlug": "surprise",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

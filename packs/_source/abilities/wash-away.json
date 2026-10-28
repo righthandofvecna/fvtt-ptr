@@ -36,7 +36,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,5 +72,5 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "flags": {}
+  "folder": null
 }

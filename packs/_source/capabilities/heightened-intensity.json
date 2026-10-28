@@ -1,0 +1,61 @@
+{
+  "name": "Heightened Intensity",
+  "type": "capability",
+  "_id": "1OrVjNemeZHegzFx",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.abilities.Item.uM561WHxXwcdrMWl]{Inner Focus}, @UUID[Compendium.ptu.feats.Item.6p7ZH0x8uvrvptWZ]{Martial Achievement}\n2 AP – Shift Action \nEffect: You may use @UUID[Compendium.ptu.moves.Item.TbqvNIqswHYAVHOW]{Focus Energy} as a Free Action.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "heightened-intensity",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "custom",
+      "max": null,
+      "custom": "2AP - Shift",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": true,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": true,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": true,
+      "used": null
+    }
+  }
+}

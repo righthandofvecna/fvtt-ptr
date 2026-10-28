@@ -2,7 +2,7 @@
   "name": "Round Trip",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: Your Pokémon uses a Move.\nEffect: You may immediately switch your Pokémon that just performed a Move for another of your Pokémon. This effect lets Pokémon with the Trapped condition switch out.",
+    "effect": "Trigger: Your Pokémon uses a Move.\nEffect: You may immediately switch your Pokémon that just performed a Move for another of your Pokémon. This effect lets Pokémon with the @UUID[Compendium.ptu.effects.Item.uqo5H1DwUuAiaYRA]{Trapped} condition switch out.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "class": "Juggler",
     "name": "Round Trip [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "round-trip"
+    "replacesSlug": "round-trip",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

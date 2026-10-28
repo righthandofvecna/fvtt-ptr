@@ -2,7 +2,7 @@
   "name": "Finisher",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You and your Pokémon gain a +5 bonus to Damage Rolls against Fainted, Flinched, Sleeping, Stuck, Slowed, Trapped, or Tripped targets.",
+    "effect": "Effect: You and your Pokémon gain a +5 bonus to Damage Rolls against @UUID[Compendium.ptu.effects.Item.SdnNC6eLuDDf9zSa]{Fainted}, @UUID[Compendium.ptu.effects.Item.xE6uIFWZoYXAZQxA]{Flinched}, @UUID[Compendium.ptu.effects.Item.RekZDOcIsADhrfH3]{Sleeping}, @UUID[Compendium.ptu.effects.Item.OzGm9ZwyLd8yEhCK]{Stuck}, @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed}, @UUID[Compendium.ptu.effects.Item.uqo5H1DwUuAiaYRA]{Trapped}, or @UUID[Compendium.ptu.effects.Item.4lqKV4CxikZxxNWJ]{Tripped} targets.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "class": "Hunter",
     "name": "Finisher [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "finisher"
+    "replacesSlug": "finisher",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

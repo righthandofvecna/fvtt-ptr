@@ -2,7 +2,6 @@
   "name": "Scald",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/WaterIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Scald Burns the target on 15+.",
@@ -59,7 +58,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,

@@ -2,7 +2,6 @@
   "name": "Water Pulse",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/WaterIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Water Pulse Confuses the target on 17+.",
@@ -54,7 +53,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,

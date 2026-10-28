@@ -1,0 +1,61 @@
+{
+  "name": "Wrestlemania",
+  "type": "capability",
+  "_id": "75lSNM4iueKiMwHn",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.abilities.Item.MmN3OuS0wuIjvAWR]{Guts}, @UUID[Compendium.ptu.feats.Item.6p7ZH0x8uvrvptWZ]{Martial Achievement}\nTrigger: You begin your turn with Dominance in a @UUID[Compendium.ptu.moves.Item.gBjnwPNmaFiIeqIs]{Grapple}\nEffect: This turn, you may perform two different Grappling Effects as a Full Action instead of just one",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "wrestlemania",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "custom",
+      "max": null,
+      "custom": "1AP - Rapid",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": true,
+      "used": null
+    }
+  }
+}
