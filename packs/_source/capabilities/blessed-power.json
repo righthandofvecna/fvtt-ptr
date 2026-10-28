@@ -1,0 +1,61 @@
+{
+  "name": "Blessed Power",
+  "type": "capability",
+  "_id": "7VLMV0YrAJO3DKIT",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.capabilities.Item.uIz7kJ3tVQvXnghu]\nMessiah: Static\nSigner: Rapid Action\nMessiah Effect: Choose a Damaging Move on your Patron’s Level Up List that has a Damage Base of 8 or lower and matches one of their Types. You learn this Move.\nSigner Effect: You instead gain this chosen Move until end of combat. You may choose a different Move each time you activate this Sign.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "blessed-power",
+    "contentSet": "blessed-and-damned",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "custom",
+      "max": null,
+      "custom": "Messiah: Static / Signer: Rapid",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false,
+      "used": null
+    }
+  }
+}
