@@ -10,6 +10,8 @@
     "rules": [],
     "enabled": true,
     "slug": "poison-puppeteer",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -26,7 +28,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Signature"
+    ],
     "frequency": {
       "type": "static",
       "max": null,
@@ -37,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -50,9 +55,9 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "contentSet": "",
-    "replacesSlug": ""
+    "tutorSlotCost": 0
   },
   "effects": [],
   "ownership": {
@@ -65,10 +70,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.57",
+    "coreVersion": "14.367",
     "createdTime": 1705618989637,
-    "modifiedTime": 1778200815925,
+    "modifiedTime": 1793170293199,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

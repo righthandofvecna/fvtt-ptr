@@ -9,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "dragonize",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +27,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Signature"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -36,7 +40,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -49,11 +54,10 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "tutorSlotCost": 0,
+    "automation": []
   },
   "effects": [],
   "ownership": {
@@ -67,13 +71,14 @@
   "_stats": {
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.351",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.57",
     "createdTime": 1776549747350,
-    "modifiedTime": 1778200816158,
+    "modifiedTime": 1793170292913,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "Bau9n0zbVcG2AhB7",
-  "sort": 0
+  "sort": 0,
+  "folder": null
 }

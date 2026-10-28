@@ -9,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "piercing-drill",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +27,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Signature"
+    ],
     "frequency": {
       "type": "static",
       "max": null,
@@ -36,7 +40,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -49,11 +54,10 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "tutorSlotCost": 0,
+    "automation": []
   },
   "effects": [],
   "ownership": {
@@ -67,13 +71,14 @@
   "_stats": {
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.351",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.57",
     "createdTime": 1776552138766,
-    "modifiedTime": 1778200817025,
+    "modifiedTime": 1793170293233,
     "lastModifiedBy": "ptubuilder000000"
   },
   "_id": "v1b8OFRPmjjQnXNv",
-  "sort": 0
+  "sort": 0,
+  "folder": null
 }

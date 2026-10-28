@@ -9,6 +9,8 @@
     "rules": [],
     "enabled": true,
     "slug": "screen-cleaner",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -25,7 +27,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Signature"
+    ],
     "frequency": {
       "type": "daily",
       "max": 1,
@@ -36,7 +40,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -49,10 +54,10 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "tutorSlotCost": 0,
+    "automation": []
   },
   "_id": "PDJZoKEvnPTluF01",
   "effects": [],
@@ -64,10 +69,10 @@
   "flags": {},
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.57",
+    "coreVersion": "14.367",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816498,
+    "modifiedTime": 1793170293066,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

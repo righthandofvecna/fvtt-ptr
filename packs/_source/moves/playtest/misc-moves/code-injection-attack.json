@@ -63,7 +63,8 @@
     "contestType": "",
     "stab": false,
     "damageBonus": 0,
-    "isStruggle": false
+    "isStruggle": false,
+    "tutorSlotCost": 0
   },
   "effects": [],
   "folder": "ub2kPQbets63XkWw",
@@ -74,5 +75,19 @@
       "showInTokenPanel": true,
       "used": null
     }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
   }
 }

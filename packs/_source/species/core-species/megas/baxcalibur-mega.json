@@ -623,5 +623,20 @@
   "folder": "irSNiCnUnI7il9mJ",
   "name": "Baxcalibur-Mega",
   "effects": [],
-  "_id": "kcoTiQhwG3YhS6F8"
+  "_id": "kcoTiQhwG3YhS6F8",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
 }

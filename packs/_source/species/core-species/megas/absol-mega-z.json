@@ -687,5 +687,20 @@
   "folder": "irSNiCnUnI7il9mJ",
   "name": "Absol-Mega-Z",
   "effects": [],
-  "_id": "MIXOBveAZW4mQusU"
+  "_id": "MIXOBveAZW4mQusU",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
 }

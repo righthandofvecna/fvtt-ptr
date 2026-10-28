@@ -26,6 +26,8 @@
     ],
     "enabled": true,
     "slug": "wind-rider-wp",
+    "contentSet": "weather-playtest",
+    "replacesSlug": "wind-rider",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -45,7 +47,8 @@
     "keywords": [
       "Weather",
       "Playtest",
-      "Defensive"
+      "Defensive",
+      "Signature"
     ],
     "frequency": {
       "type": "static",
@@ -57,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,10 +74,10 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "automation": [],
-    "contentSet": "weather-playtest",
-    "replacesSlug": "wind-rider"
+    "tutorSlotCost": 0,
+    "automation": []
   },
   "effects": [],
   "folder": "MsdL8dYgE7JbY1ya",
@@ -83,11 +87,11 @@
     }
   },
   "_stats": {
-    "coreVersion": "13.351",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.57",
     "createdTime": 1707854107379,
-    "modifiedTime": 1778200816782,
+    "modifiedTime": 1793170292988,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
