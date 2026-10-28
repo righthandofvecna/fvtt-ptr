@@ -2,7 +2,7 @@
   "name": "Flexible Form",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Your body becomes more malleable, and even your bones are able to flex when required. You do not gain Injuries from taking Massive damage, and you gain a +2 Bonus to any Acrobatics or Athletics Check made to bend, squeeze, or otherwise contort your body - including those to avoid Trip or Grapple maneuvers.",
+    "effect": "Effect: Your body becomes more malleable, and even your bones are able to flex when required. You do not gain Injuries from taking Massive damage, and you gain a +2 Bonus to any Acrobatics or Athletics Check made to bend, squeeze, or otherwise contort your body - including those to avoid @UUID[Compendium.ptu.moves.Item.wF3ORK20xylO1ZGs]{Trip} or @UUID[Compendium.ptu.moves.Item.gBjnwPNmaFiIeqIs]{Grapple} maneuvers.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +70,9 @@
     "class": "Miasmic",
     "name": "Flexible Form [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "flexible-form"
+    "replacesSlug": "flexible-form",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -80,7 +83,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

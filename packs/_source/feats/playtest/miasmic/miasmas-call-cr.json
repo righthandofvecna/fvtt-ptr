@@ -2,7 +2,7 @@
   "name": "Miasma's Call",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the moves Acid Armor and Sludge Bomb.\nBonus: You learn the move Acid Rain.",
+    "effect": "Effect: You learn the moves @UUID[Compendium.ptu.moves.Item.joCaLnLmgcLh36ym]{Acid Armor} and @UUID[Compendium.ptu.moves.Item.T4KEAGNoEIpiO0G5]{Sludge Bomb}.\nBonus: You learn the move @UUID[Compendium.ptu.moves.Item.Tt8ssSf6NLQzZFOO]{Acid Rain}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,24 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.joCaLnLmgcLh36ym"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.T4KEAGNoEIpiO0G5"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.Tt8ssSf6NLQzZFOO"
       }
     ],
     "enabled": true,
@@ -48,7 +66,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +89,9 @@
     "class": "Miasmic",
     "name": "Miasma’s Call [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "miasmas-call"
+    "replacesSlug": "miasmas-call",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +102,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

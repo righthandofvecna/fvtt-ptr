@@ -2,7 +2,6 @@
   "name": "Acid",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Acid lowers the target's Special Defense by 1 Combat Stage on 18+.",
@@ -15,7 +14,8 @@
         "uuid": "Compendium.ptu.effects.Item.hfe2s7t6fb8huiiQ",
         "range": "18",
         "value": "",
-        "affects": "target"
+        "affects": "target",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -55,7 +55,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -80,7 +81,8 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "Rj7PzPVf9YeEn5mG",
   "effects": [],
@@ -90,7 +92,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

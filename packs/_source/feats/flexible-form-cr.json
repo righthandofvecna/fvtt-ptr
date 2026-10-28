@@ -1,5 +1,4 @@
 {
-  "folder": null,
   "name": "Flexible Form",
   "type": "feat",
   "_id": "fugbfNow3LKoq4ha",
@@ -72,7 +71,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -92,12 +92,15 @@
     "notes": "",
     "free": false,
     "class": "Miasmic",
-    "name": "Flexible Form [CR]"
+    "name": "Flexible Form [CR]",
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "Can be removed in favor of Compendium.ptu.feats.Item.fmdJClTpUfYtGu1g"
     }
   }
 }

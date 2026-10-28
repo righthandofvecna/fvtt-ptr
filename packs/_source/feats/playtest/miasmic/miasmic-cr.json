@@ -2,7 +2,7 @@
   "name": "Miasmic",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Acid and Clear Smog.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.Rj7PzPVf9YeEn5mG]{Acid} and @UUID[Compendium.ptu.moves.Item.RKyKtJkj75j2CNJF]{Clear Smog}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,18 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.Rj7PzPVf9YeEn5mG"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.RKyKtJkj75j2CNJF"
       }
     ],
     "enabled": true,
@@ -50,7 +62,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -72,7 +85,9 @@
     "class": "Miasmic",
     "name": "Miasmic [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "miasmic"
+    "replacesSlug": "miasmic",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -83,7 +98,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
