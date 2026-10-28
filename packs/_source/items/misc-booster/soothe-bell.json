@@ -1,0 +1,82 @@
+{
+  "folder": "XtbIrywzkrVnpOXb",
+  "name": "Soothe Bell",
+  "type": "item",
+  "_id": "ti1gx4hM4Ny138mV",
+  "img": "systems/ptu/static/images/item_icons/soothe bell.webp",
+  "system": {
+    "origin": "",
+    "effect": "An item to be held by a Pokémon. The comforting chime of this bell calms the holder, making it friendly. Friendship gain for this Pokémon is 10% faster.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "soothe-bell",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "5000",
+    "consumable": 0,
+    "subtype": "",
+    "container": false
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Reduce the number of ticks needed by 10% (rounded down?) -Dylan",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.57",
+    "createdTime": 1793170708998,
+    "modifiedTime": 1793170950514,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}
