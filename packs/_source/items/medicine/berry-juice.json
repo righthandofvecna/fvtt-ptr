@@ -2,11 +2,11 @@
   "folder": "UmW4Ev3e0iI1XQ0D",
   "name": "Berry Juice",
   "type": "item",
-  "_id": "giOKQ3RxkQZM7zCn",
+  "_id": "7fMNsUfMhbr6ZB8W",
   "img": "systems/ptu/static/images/item_icons/berry juice.webp",
   "system": {
     "origin": "",
-    "effect": "Heals 20 Hit Points.",
+    "effect": "Heals 30 Hit Points. A Pokémon or Trainer can only consume one refreshment per half hour, unless they have the @UUID[Compendium.ptu.abilities.Item.r5RAP7wiKkOLZ81U]{Gluttony} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -34,8 +34,9 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Medicine",
-      "Held Item"
+      "Berry",
+      "Refreshment",
+      "Food"
     ],
     "frequency": {
       "type": "at-will",
