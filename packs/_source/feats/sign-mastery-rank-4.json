@@ -54,8 +54,7 @@
     },
     "prerequisites": [
       "A Pact Gift",
-      "GM Permission\nOR\nAll your Patron's Major Gifts",
-      "GM Permission (if no Pact Gift)"
+      "All your Patron's Major Gifts"
     ],
     "notes": "",
     "free": false,

@@ -1,0 +1,61 @@
+{
+  "name": "Whirlwind Strikes",
+  "type": "capability",
+  "_id": "3DzsaePVGcCd0u0q",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.abilities.Item.mfD1Ga7xMCBqOk5H]{Technician}, @UUID[Compendium.ptu.feats.Item.6p7ZH0x8uvrvptWZ]{Martial Achievement}\n1 AP – Full Action\nEffect: You may use @UUID[Compendium.ptu.moves.Item.jZzomtDAHtgzeeSV]{Rock Smash}, targeting against any number of adjacent foes. You do not count as Flanked for one full round.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "whirlwind-strikes",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "custom",
+      "max": null,
+      "custom": "1AP - Full",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true,
+      "used": null
+    }
+  }
+}

@@ -25,6 +25,21 @@ class PTUSpecies extends PTUItem {
         }
     }
 
+    /** @override */
+    prepareActorData() {
+        super.prepareActorData();
+        const { actor } = this;
+        if (!actor) return;
+        const slug = this.slug;
+        // remove all self:species roll options
+        for (const key of Object.keys(actor.rollOptions.all)) {
+            if (key.startsWith(`self:species:`)) {
+                delete actor.rollOptions.all[key];
+            }
+        }
+        actor.rollOptions.all[`self:species:${slug}`] = true;
+    }
+
     /** @deprecated */
     static async convertToPTUSpecies(speciesData, options = {}) {
         const data = { type: "species", system: {}, img: "/systems/ptu/static/css/images/icons/dex_icon.png", folder: "5Jvv9TXViaCrDerw", ...options };

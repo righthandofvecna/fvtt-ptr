@@ -62,6 +62,17 @@
                                         disabled
                                     />
                                 </span>
+                                {{#if item.system.tutorSlotCost}}
+                                <span style="flex: 0 0 100%;">
+                                    {{localize "ITEM.TutorSlotCost"}}
+                                    <input
+                                        class="ml-1 mr-1"
+                                        type="number"
+                                        value="{{item.system.tutorSlotCost}}"
+                                        disabled
+                                    />
+                                </span>
+                                {{/if}}
                             </div>
                         </div>
                     </div>
@@ -75,6 +86,10 @@
             <div class="item-row">
                 <label for="system.prerequisites">{{localize "ITEM.Prerequisites"}}</label>
                 <input type="text" class="ptu-tagify system-prerequisites" name="system.prerequisites" value="{{json item.system.prerequisites}}" data-dtype="JSON"/>
+            </div>
+            <div class="item-row">
+                <label for="system.tutorSlotCost">{{localize "ITEM.TutorSlotCost"}}</label>
+                <input class="ml-1 mr-1" name="system.tutorSlotCost" type="number" value="{{item.system.tutorSlotCost}}" placeholder="1" {{#if editLocked}}disabled{{/if}}/>
             </div>
             {{> systems/ptu/static/templates/partials/item-frequency-partial.hbs hasAP=false}}
             <div class="item-row">

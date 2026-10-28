@@ -1,0 +1,82 @@
+{
+  "folder": "UmW4Ev3e0iI1XQ0D",
+  "name": "Sacred Ash",
+  "type": "item",
+  "_id": "44A7p0ntypoi9ddr",
+  "img": "systems/ptu/static/images/item_icons/Dream_Sacred_Ash_Sprite.png",
+  "system": {
+    "origin": "",
+    "effect": "This rare ash can revive all fainted Pokémon in a party. In doing so, it also fully restores their HP.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "sacred-ash",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Medicine"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "25000",
+    "consumable": 0,
+    "subtype": "",
+    "container": false
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.56",
+    "createdTime": 1793133209542,
+    "modifiedTime": 1793133275519,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

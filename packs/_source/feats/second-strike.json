@@ -2,7 +2,7 @@
   "name": "Second Strike",
   "system": {
     "origin": "",
-    "effect": "Trigger - You attempt to use a Grapple, Push, Trip, or Disarm Combat Maneuver but fail the Opposed Roll\nEffect: You may immediately use Rock Smash or a Struggle Attack against your target as a Free Action.",
+    "effect": "Trigger - You attempt to use a @UUID[Compendium.ptu.moves.Item.gBjnwPNmaFiIeqIs]{Grapple}, @UUID[Compendium.ptu.moves.Item.79nCOdXheYY2AXTB]{Push}, @UUID[Compendium.ptu.moves.Item.wF3ORK20xylO1ZGs]{Trip}, or @UUID[Compendium.ptu.moves.Item.h0slhD40dRasSRXj]{Disarm} Combat Maneuver but fail the Opposed Roll\nEffect: You may immediately use @UUID[Compendium.ptu.moves.Item.jZzomtDAHtgzeeSV]{Rock Smash} or a Struggle Attack against your target as a Free Action.",
     "snippet": "",
     "rules": [
       {
@@ -12,7 +12,9 @@
         "value": 1,
         "predicate": [
           "class:martial-artist-guts-hp"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -27,7 +29,9 @@
               "class:martial-artist-technician-speed"
             ]
           }
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -36,7 +40,9 @@
         "value": 1,
         "predicate": [
           "class:martial-artist-iron-fist-defense"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -45,7 +51,9 @@
         "value": 1,
         "predicate": [
           "class:martial-artist-reckless-attack"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -77,7 +85,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -101,7 +110,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -111,7 +122,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Martial Training Rank 1, Expert Combat"
+      "prereqBackup": "Martial Training Rank 1, Expert Combat",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -124,7 +138,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 22900000,
   "_id": "LpSdrGqrQGiqWvm0"
 }

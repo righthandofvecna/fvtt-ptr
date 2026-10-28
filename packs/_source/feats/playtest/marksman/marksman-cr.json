@@ -2,7 +2,7 @@
   "name": "Marksman",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Sniper Ability.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.abilities.Item.tc2hu0HycAIRYAPk]{Sniper} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,12 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.tc2hu0HycAIRYAPk"
       }
     ],
     "enabled": true,
@@ -50,7 +56,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +78,9 @@
     "class": "Marksman",
     "name": "Marksman [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "marksman"
+    "replacesSlug": "marksman",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -82,7 +91,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -364,6 +364,37 @@ class PTUPokemonActor extends PTUActor {
     }
 
     /** @override */
+    prepareRuleElements() {
+        const baseRules = super.prepareRuleElements();
+
+        if (!game.settings?.get("ptu", "variant.spiritPlaytest")) return baseRules;
+        const cache = game.ptu?.spiritActionCache;
+        if (!cache?.length) return baseRules;
+
+        const ownedSlugs = new Set(
+            (this.itemTypes.spiritaction ?? []).map(i => i.system?.slug).filter(Boolean)
+        );
+
+        const phantomRules = [];
+        for (const sa of cache) {
+            if (ownedSlugs.has(sa.system?.slug)) continue;
+            const data = sa.toObject();
+            foundry.utils.setProperty(data, 'flags.ptu.phantom', true);
+            foundry.utils.setProperty(data, 'flags.ptu.sourceUuid', sa.uuid);
+            const phantomItem = new Item.implementation(data, { parent: this, temporary: true });
+            this._phantomItems.set(data._id, phantomItem);
+            try {
+                phantomRules.push(...phantomItem.prepareRuleElements());
+            } catch (err) {
+                console.error(`PTU | Failed to prepare rule elements for phantom spirit action "${sa.name}":`, err);
+            }
+        }
+
+        if (!phantomRules.length) return baseRules;
+        return [...baseRules, ...phantomRules.filter(r => !r.ignored)].sort((a, b) => a.priority - b.priority);
+    }
+
+    /** @override */
     onPrepareDerivedData() {
         super.onPrepareDerivedData?.();
         const system = this.system;
@@ -440,6 +471,13 @@ class PTUPokemonActor extends PTUActor {
         Hooks.call("updateInitiative", this);
 
         system.tp.max = (system.level.current > 0 ? Math.floor(system.level.current / 5) : 0) + 1 + (system.modifiers.tp ?? 0);
+        const tutorSlotCostTotal = this.items.reduce((sum, item) => {
+            if (["move", "ability", "pokeedge"].includes(item.type)) {
+                return sum + (item.system.tutorSlotCost ?? 0);
+            }
+            return sum;
+        }, 0);
+        system.tp.max = Math.max(0, system.tp.max - tutorSlotCostTotal);
         system.tp.pep.value = this.items.filter(x => x.type == "pokeedge" && x.system.origin?.toLowerCase() != "pusher").length;
         system.tp.pep.max = system.level.current > 0 ? Math.floor(system.level.current / 10) + 1 : 1;
 
@@ -881,7 +919,7 @@ class PTUPokemonActor extends PTUActor {
 
             // if spirit was -2, lose a tick of hit points
             if (this.system.spirit.value <= -2) {
-                actorUpdate["system.health.value"] = Math.max(this.system.attributes.hp.value - this.system.attributes.hp.max, 0);
+                actorUpdate["system.health.value"] = Math.max(this.system.health.value - this.system.health.tick, 0);
             }
 
             // if spirit was at -1, add the -1 penalty

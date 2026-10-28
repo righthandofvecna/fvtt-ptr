@@ -1509,8 +1509,8 @@ class PTUActor extends Actor {
     prepareMoves({ includeStruggles = true } = {}) {
         const struggles = includeStruggles ? this._prepareStruggles() : [];
 
-        // Register struggle phantoms so sheets can look them up for materialization
-        this._phantomItems = new Map();
+        // Register struggle phantoms so sheets can look them up for materialization.
+        // Preserve existing phantom items (e.g. spirit action phantoms added during prepareRuleElements).
         for (const struggle of struggles) {
             this._phantomItems.set(struggle.realId, struggle);
         }

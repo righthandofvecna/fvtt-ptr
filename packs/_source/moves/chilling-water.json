@@ -2,7 +2,6 @@
   "name": "Chilling Water",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/WaterIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Lower the Attack of all legal targets by 1 Combat Stage.",
@@ -55,7 +54,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,

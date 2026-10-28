@@ -38,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -80,12 +81,12 @@
     "systemVersion": "4.4.3.16",
     "coreVersion": "14.367",
     "createdTime": 1683368795627,
-    "modifiedTime": 1789352465756,
+    "modifiedTime": 1793133368938,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
   },
-  "sort": 157032,
+  "sort": 100000,
   "_id": "1HkqyxFShtqF6wac",
   "folder": "UmW4Ev3e0iI1XQ0D"
 }

@@ -19,6 +19,34 @@ const FEAT_WITH_SUB_RE = /(?<main>[^\(\)]+) (\((?<sub>.+)\)) ?(?<cr>\[CR\])?/i;
 const N_FEATS_FROM_LIST_RE = /(?<n>([0-9]+)|(A)|(One)|(Two)|(Three)|(Four)|(Five)|(Six)|(Seven)|(Eight)|(Nine)) of (?<features>.+)?/i;
 const LEVEL_RE = /Level (?<lv>[0-9]+)/i;
 const TYPE_LINKED_CLASS_RE = /^A (?:(?<type>[A-Za-z]+)-)?Type-Linked Class$/i;
+// "All A or B options" – the meta-line that triggers grouped prerequisite evaluation
+const ALL_OPTIONS_RE = /^All [A-Z](?: or [A-Z])+ options$/i;
+// "A: something" or "B: something" – a member of a named option group
+const GROUP_MEMBER_RE = /^([A-Z]):\s*(.+)$/i;
+// "N [Different] TYPE Type Pokemon" e.g. "2 Different Dark Type Pokemon"
+const TYPED_POKEMON_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) (?:Different )?(?<type>[A-Za-z]+) Type Pok[e\u00e9]mon$/i;
+// "N Pokemon with STAT of AMOUNT" e.g. "1 Pokémon with Attack of 110"
+const POKEMON_STAT_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) Pok[e\u00e9]mon with (?<stat>.+?) (?:of|at) (?<amount>[0-9]+)(?:\s+(?:or\s+)?(?:more|higher))?$/i;
+// "N CLASS Features" e.g. "4 Skirmisher Features" or "4 Type Ace (Fire) Features"
+const CLASS_FEATURES_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) (?<class>.+?) Features?$/i;
+// "N Friendship X Pokemon" e.g. "Three Friendship 4 Pokemon"
+const POKEMON_FRIENDSHIP_RE = /^(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) Friendship (?<amount>[0-9]+) Pok[e\u00e9]mon$/i;
+// "[at least] N Feature(s) with the [KEYWORD] tag" e.g. "Two Features with the [Orders] tag"
+const KEYWORD_FEATURES_RE = /^(?:at least )?(?<n>[0-9]+|A|One|Two|Three|Four|Five|Six|Seven|Eight|Nine) Features? with the \[(?<keyword>[^\]]+)\] (tag|keyword)$/i;
+
+// Maps human-readable stat names to actor.system.stats keys
+const STAT_NAME_MAP = {
+    hp: 'hp',
+    attack: 'atk',
+    defense: 'def',
+    'special attack': 'spatk',
+    'special defense': 'spdef',
+    'sp. atk': 'spatk',
+    'sp. def': 'spdef',
+    'sp atk': 'spatk',
+    'sp def': 'spdef',
+    speed: 'spd',
+};
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -118,12 +146,55 @@ export function buildActorPrereqContext(actor) {
             if (/^Type Linked/i.test(kw)) typeLinkedKeywords.add(kw.toLowerCase());
         }
     }
+    // Count owned feats/features by class for "N Class Features" prerequisites.
+    const featuresByClass = {};
+    // Count owned feats/features by keyword for "N Features with the [KEYWORD] tag" prerequisites.
+    const featuresByKeyword = {};
+    for (const item of items) {
+        const cls = item.system?.class?.trim();
+        if (cls) {
+            const key = cls.toLowerCase();
+            featuresByClass[key] = (featuresByClass[key] ?? 0) + 1;
+        }
+        for (const kw of (item.system?.keywords ?? [])) {
+            const key = kw.toLowerCase();
+            featuresByKeyword[key] = (featuresByKeyword[key] ?? 0) + 1;
+        }
+    }
+    // Count Pokémon of each type belonging to this trainer (including boxed).
+    // Also collect stat totals and friendship values for each Pokémon.
+    const typedPokemonCounts = new Map();
+    const pokemonStatTotals = {}; // { statKey: number[] }
+    const pokemonFriendships = []; // friendship value for each trainer pokémon
+    if (typeof game !== 'undefined' && game?.actors && actor.id) {
+        for (const pokemon of game.actors) {
+            if (pokemon.flags?.ptu?.party?.trainer !== actor.id) continue;
+            for (const type of (pokemon.system?.typing ?? [])) {
+                const t = type.toLowerCase();
+                typedPokemonCounts.set(t, (typedPokemonCounts.get(t) ?? 0) + 1);
+            }
+            const stats = pokemon.system?.stats ?? {};
+            for (const [key, statData] of Object.entries(stats)) {
+                const total = statData?.total;
+                if (typeof total === 'number') {
+                    (pokemonStatTotals[key] ??= []).push(total);
+                }
+            }
+            const friendship = pokemon.system?.friendship;
+            if (typeof friendship === 'number') pokemonFriendships.push(friendship);
+        }
+    }
     return {
         level: actor.system.level.current ?? 1,
         itemNames,
         itemBaseNames,
         itemNameSlugs,
         typeLinkedKeywords,
+        typedPokemonCounts,
+        pokemonStatTotals,
+        pokemonFriendships,
+        featuresByClass,
+        featuresByKeyword,
         itemSlugs: new Set(items.map(i => i.system?.slug?.toLowerCase()).filter(Boolean)),
         skills: Object.fromEntries(
             Object.entries(actor.system.skills ?? {}).map(
@@ -146,6 +217,18 @@ export function buildActorPrereqContext(actor) {
 export function checkSinglePrereq(text, ctx, testDict={}) {
     text = text?.trim() ?? '';
     if (!text) return true;
+
+    // "All A or B options" is a meta-line evaluated at the list level – not a real check
+    if (ALL_OPTIONS_RE.test(text)) return true;
+    // "A: something" / "B: something" – strip the group prefix and check the actual prereq
+    const groupedPrefixMatch = text.match(GROUP_MEMBER_RE);
+    if (groupedPrefixMatch) return checkSinglePrereq(groupedPrefixMatch[2].trim(), ctx, testDict);
+
+    // check "does not have X"
+    if (text.toLowerCase().startsWith("does not have ")) {
+        const itemName = text.slice("does not have ".length).trim();
+        return !checkSinglePrereq(itemName, ctx, testDict);
+    }
 
     // Strip parenthesized sub-selection from the main prereq name for name matching
     const withSub = text.match(FEAT_WITH_SUB_RE);
@@ -244,6 +327,63 @@ export function checkSinglePrereq(text, ctx, testDict={}) {
         return ctx.typeLinkedKeywords?.has(`type linked (${type.toLowerCase()})`) ?? false;
     }
 
+    // "N [Different] TYPE Type Pokemon" e.g. "2 Different Dark Type Pokemon"
+    const typedPokemonMatch = text.match(TYPED_POKEMON_RE);
+    if (typedPokemonMatch) {
+        const n = parseIntA(typedPokemonMatch.groups.n);
+        const type = typedPokemonMatch.groups.type.toLowerCase();
+        const count = ctx.typedPokemonCounts?.get(type) ?? 0;
+        return !Number.isNaN(n) && count >= n;
+    }
+
+    // "N Friendship X Pokemon" e.g. "Three Friendship 4 Pokemon"
+    const friendshipMatch = text.match(POKEMON_FRIENDSHIP_RE);
+    if (friendshipMatch) {
+        const n = parseIntA(friendshipMatch.groups.n);
+        const amount = parseInt(friendshipMatch.groups.amount);
+        const friendships = ctx.pokemonFriendships ?? [];
+        const qualifying = friendships.filter(f => f >= amount).length;
+        return !Number.isNaN(n) && !Number.isNaN(amount) && qualifying >= n;
+    }
+
+    // "[at least] N Feature(s) with the [KEYWORD] tag" e.g. "Two Features with the [Orders] tag"
+    const keywordFeatMatch = text.match(KEYWORD_FEATURES_RE);
+    if (keywordFeatMatch) {
+        const n = parseIntA(keywordFeatMatch.groups.n);
+        const keyword = keywordFeatMatch.groups.keyword.trim().toLowerCase();
+        const count = ctx.featuresByKeyword?.[keyword] ?? 0;
+        return !Number.isNaN(n) && count >= n;
+    }
+
+    // "N Pokemon with STAT of AMOUNT" e.g. "1 Pokémon with Attack of 110"
+    const pokemonStatMatch = text.match(POKEMON_STAT_RE);
+    if (pokemonStatMatch) {
+        const n = parseIntA(pokemonStatMatch.groups.n);
+        const statKey = STAT_NAME_MAP[pokemonStatMatch.groups.stat.trim().toLowerCase()];
+        const amount = parseInt(pokemonStatMatch.groups.amount);
+        if (!Number.isNaN(n) && statKey && !Number.isNaN(amount)) {
+            const totals = ctx.pokemonStatTotals?.[statKey] ?? [];
+            const qualifying = totals.filter(v => v >= amount).length;
+            return qualifying >= n;
+        }
+        // Unknown stat name, fall through
+    }
+
+    // "N CLASS Features" e.g. "4 Skirmisher Features" or "4 Type Ace (Fire) Features"
+    const classFeaturesMatch = text.match(CLASS_FEATURES_RE);
+    if (classFeaturesMatch) {
+        const n = parseIntA(classFeaturesMatch.groups.n);
+        const cls = classFeaturesMatch.groups.class.trim().toLowerCase();
+        const fbClass = ctx.featuresByClass ?? {};
+        // Count features for this exact class name
+        let count = fbClass[cls] ?? 0;
+        // If the class name has a parenthetical (e.g. "type ace (fire)"),
+        // also count features of the stripped base class ("type ace").
+        const baseClass = cls.replace(/\s*\([^)]*\)\s*$/, '').trim();
+        if (baseClass !== cls) count += fbClass[baseClass] ?? 0;
+        return !Number.isNaN(n) && count >= n;
+    }
+
     // "N of FEAT1 or FEAT2 or ..." – need at least N of these items
     const nFeatsOfMatch = mainText.match(N_FEATS_FROM_LIST_RE);
     if (nFeatsOfMatch) {
@@ -319,5 +459,30 @@ export function meetsPrereqsWithContext(item, ctx) {
     }
 
     if (!item.prerequisites?.length) return true;
-    return item.prerequisites.every(prereq => checkSinglePrereq(prereq.label ?? '', ctx));
+
+    const prereqLabels = item.prerequisites.map(p => p.label ?? '');
+
+    // "All A or B options" grouped logic: either all A-prefixed OR all B-prefixed must pass
+    if (prereqLabels.some(l => ALL_OPTIONS_RE.test(l))) {
+        const groups = {};
+        const ungrouped = [];
+        for (const label of prereqLabels) {
+            if (ALL_OPTIONS_RE.test(label)) continue; // skip the meta-line itself
+            const m = label.match(GROUP_MEMBER_RE);
+            if (m) {
+                const key = m[1].toUpperCase();
+                (groups[key] ??= []).push(m[2].trim());
+            } else {
+                ungrouped.push(label);
+            }
+        }
+        // All non-grouped prerequisites must pass regardless
+        if (!ungrouped.every(l => checkSinglePrereq(l, ctx))) return false;
+        // At least one option group must have every one of its prerequisites pass
+        const groupKeys = Object.keys(groups);
+        return groupKeys.length === 0
+            || groupKeys.some(key => groups[key].every(l => checkSinglePrereq(l, ctx)));
+    }
+
+    return prereqLabels.every(label => checkSinglePrereq(label, ctx));
 }

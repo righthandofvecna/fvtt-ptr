@@ -1,0 +1,77 @@
+{
+  "folder": "y5t72CsAiIk4F5xo",
+  "name": "Effect: Berry Juice",
+  "type": "effect",
+  "_id": "ZaJ9sKIqedyG2ia3",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "InstantChange",
+        "predicate": [],
+        "trigger": "onCreate",
+        "mode": "add",
+        "path": "system.health.value",
+        "value": 20,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-berry-juice",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 0,
+      "unit": "turns",
+      "expiry": "turn-start"
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.56",
+    "createdTime": 1793132632554,
+    "modifiedTime": 1793132691174,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

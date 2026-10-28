@@ -2,7 +2,7 @@
   "name": "Expand Horizons",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon\nEffect: Your Pokémon gains 3 Tutor Points. A Pokémon may be targeted by Expand Horizons only once.",
+    "effect": "Target: Your Pokémon\nEffect: Your Pokémon gains 3 Tutor Points. A Pokémon may be targeted by Expand Horizons only once.\n@UUID[Compendium.ptu.poke-edges.Item.F6F8l717rLFJtLkO]{Expand Horizons Poké Edge}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Legacy"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
@@ -34,7 +36,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -57,7 +60,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +72,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Mentor"
+      "prereqBackup": "Mentor",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -80,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 16800000,
   "_id": "GGa7OT8dHc4RLIEj"
 }

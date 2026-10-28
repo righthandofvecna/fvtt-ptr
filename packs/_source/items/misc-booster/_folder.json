@@ -1,0 +1,22 @@
+{
+  "type": "Item",
+  "folder": null,
+  "name": "Misc Booster",
+  "color": null,
+  "sorting": "a",
+  "_id": "XtbIrywzkrVnpOXb",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.56",
+    "createdTime": 1793127316045,
+    "modifiedTime": 1793127316045,
+    "lastModifiedBy": "GFCVv4EMgQDa5fGR",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

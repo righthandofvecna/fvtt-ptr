@@ -1,0 +1,93 @@
+{
+  "folder": "HcqVf7oajq6tXRmB",
+  "name": "Cell Battery",
+  "type": "item",
+  "_id": "RTElmOV6uEXHyYnW",
+  "img": "systems/ptu/static/images/item_icons/Dream_Cell_Battery_Sprite.png",
+  "system": {
+    "origin": "",
+    "effect": "If the holder is hit by an Electric-type damaging move, the Cell Battery is consumed and the holder's Attack is increased by one stage.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [],
+        "selectors": "electric-damage-received",
+        "uuid": "Compendium.ptu.effects.Item.YefHOX8RY6j2XXEL",
+        "range": "",
+        "linked": false,
+        "value": "",
+        "affects": "origin"
+      }
+    ],
+    "enabled": true,
+    "slug": "cell-battery",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "5000",
+    "consumable": 0,
+    "subtype": "",
+    "container": false
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.56",
+    "createdTime": 1793128705667,
+    "modifiedTime": 1793129170934,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

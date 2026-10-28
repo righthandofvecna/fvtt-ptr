@@ -1,0 +1,93 @@
+{
+  "folder": "660LTTSr3wOiUw99",
+  "name": "Red Nectar",
+  "type": "item",
+  "_id": "o2mee1byKgb9EwSk",
+  "img": "systems/ptu/static/images/item_icons/red nectar.webp",
+  "system": {
+    "origin": "",
+    "effect": "Flower nectar obtained from a red flower. It changes the form of an Oricorio to Baile Style.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": [
+          "target:species:oricorio"
+        ],
+        "affects": "target",
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.6LnX3gn8aEZBxgAd",
+        "range": "",
+        "linked": false,
+        "value": ""
+      }
+    ],
+    "enabled": true,
+    "slug": "red-nectar",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "300",
+    "consumable": 0,
+    "subtype": "",
+    "container": false
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "requires-system-changes",
+      "devNote": "Add the Delete Self rule element -Dylan",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.56",
+    "createdTime": 1793136573949,
+    "modifiedTime": 1793151286917,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

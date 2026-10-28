@@ -37,7 +37,7 @@ TestRegistry.register(CATEGORY, "ApplyEffect | rule element is registered and no
         actor = game.actors.get(actor.id);
 
         // Verify the rule element exists on the actor and is not ignored.
-        const rule = actor.rules.find(r => r.key === "ApplyEffect");
+        const rule = actor.rules.find(r => r.key === "ApplyEffect" && r.uuid == effectItem.uuid);
         assertDefined(rule, "ApplyEffect rule element should be present on actor.rules");
         if (rule.ignored) throw new Error("ApplyEffect rule element should not be ignored");
 
@@ -63,7 +63,7 @@ TestRegistry.register(CATEGORY, "ApplyEffect | rule element is added for referen
         actor = game.actors.get(actor.id);
 
         // Verify the rule element exists on the actor and references the correct effect.
-        const rule = actor.rules.find(r => r.key === "ApplyEffect");
+        const rule = actor.rules.find(r => r.key === "ApplyEffect" && r.uuid == effectItem.uuid);
         assertDefined(rule, "ApplyEffect rule element should be present on actor.rules");
 
         await item.delete();
@@ -76,7 +76,7 @@ TestRegistry.register(CATEGORY, "ApplyEffect | rule element is added for referen
         });
 
         // Verify the rule element exists on the actor and references the correct effect.
-        const ruleAC = actor.rules.find(r => r.key === "ApplyEffect");
+        const ruleAC = actor.rules.find(r => r.key === "ApplyEffect" && r.uuid == effectItem.uuid);
         assertDefined(ruleAC, "ApplyEffect rule element should be present on actor.rules after adding item with ac");
 
         await item.delete();
@@ -90,7 +90,7 @@ TestRegistry.register(CATEGORY, "ApplyEffect | rule element is added for referen
         });
 
         // Verify the rule element exists on the actor and references the correct effect.
-        const ruleDB = actor.rules.find(r => r.key === "ApplyEffect");
+        const ruleDB = actor.rules.find(r => r.key === "ApplyEffect" && r.uuid == effectItem.uuid);
         assertDefined(ruleDB, "ApplyEffect rule element should be present on actor.rules after adding item with ac and db");
 
         await deleteTestActor(actor);
@@ -118,7 +118,7 @@ TestRegistry.register(CATEGORY, "ApplyEffect | rule element is not added for ref
         actor = game.actors.get(actor.id);
 
         // Verify the rule element exists on the actor and references the correct effect.
-        const rule = actor.rules.find(r => r.key === "ApplyEffect");
+        const rule = actor.rules.find(r => r.key === "ApplyEffect" && r.uuid == effectItem.uuid);
         assert(!rule, "ApplyEffect rule element should not be present on actor.rules");
 
         await deleteTestActor(actor);

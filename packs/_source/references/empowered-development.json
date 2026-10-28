@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Mentor Lessons",
-    "effect": "Prerequisites: Mentor, Charm as a Mentor Skill Target: A Pokémon with at least 1 Tutor Point Effect: The target loses 1 Tutor Point, and gains any three of the following Poké Edges: Skill Improvement, Advanced Mobility, or Capability Training. A Pokémon may be targeted only once by Empowered Development. The target may gain Poké Edges this way even if they do not meet the prerequisites, however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.ohuHe7DxrHOxna6E]{Mentor}, Charm as a Mentor Skill\nTarget: A Pokémon with at least 1 Tutor Point\nEffect: The target loses 1 Tutor Point, and gains any three of the following Poké Edges: @UUID[Compendium.ptu.poke-edges.Item.DnYmGXzYAu5ErvbS]{Skill Improvement}, @UUID[Compendium.ptu.poke-edges.Item.Igr1mD6tDszkZc18]{Advanced Mobility}, or @UUID[Compendium.ptu.poke-edges.Item.HNK35xsz32VOWf4Z]{Capability Training}. A Pokémon may be targeted only once by Empowered Development. The target may gain Poké Edges this way even if they do not meet the prerequisites, however, they must still follow other limitations; Advanced Mobility can only improve a Movement Capability once, for example.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "CokfL7bfL1fVLtDK",
   "effects": [],
-  "folder": null,
   "sort": 6900000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

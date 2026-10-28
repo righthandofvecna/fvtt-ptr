@@ -1,0 +1,82 @@
+{
+  "folder": "HcqVf7oajq6tXRmB",
+  "name": "Electric Seed",
+  "type": "item",
+  "_id": "QexOFMkNZMfrO9fY",
+  "img": "systems/ptu/static/images/item_icons/Dream_Electric_Seed_Sprite.png",
+  "system": {
+    "origin": "",
+    "effect": "If a Pokémon is holding an Electric Seed while the field is Electric Terrain, it consumes the Electric Seed and its Defense is increased by one stage.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "electric-seed",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "20000",
+    "consumable": 0,
+    "subtype": "",
+    "container": false
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "requires-system-changes",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.56",
+    "createdTime": 1793151821435,
+    "modifiedTime": 1793151872097,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

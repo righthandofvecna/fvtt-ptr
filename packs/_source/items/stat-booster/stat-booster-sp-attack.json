@@ -1,5 +1,5 @@
 {
-  "name": "Stat Booster (SpAttack)",
+  "name": "Stat Booster (Special Attack)",
   "system": {
     "origin": "",
     "effect": "The default state of the holder's Special Attack Stat is +1 Combat Stage. Accessory Item for Trainers.",
@@ -64,7 +64,7 @@
     "subtype": "",
     "container": false,
     "automation": [],
-    "name": "Focus",
+    "name": "Stat Booster (Special Attack)",
     "useCount": 0,
     "contentSet": "",
     "replacesSlug": ""
@@ -81,7 +81,7 @@
   "ownership": {
     "default": 0
   },
-  "_id": "8J33pMMrY5YvfUXz",
+  "_id": "DtM0bts4Ckwi2uS7",
   "sort": 0,
   "_stats": {
     "coreVersion": "13.351",

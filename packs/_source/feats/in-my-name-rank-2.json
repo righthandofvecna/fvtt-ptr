@@ -2,9 +2,122 @@
   "name": "In My Name Rank 2",
   "system": {
     "origin": "",
-    "effect": "You gain a Blessing marked Rank 2 or lower. You must additionally meet any Prerequisites of the Blessing.\nRank 2 Blessings: @UUID[Compendium.ptu.references.Item.Uk2cfeJO0ATH2tR2], @UUID[Compendium.ptu.references.Item.fTlWMdC4AT3JirzY], @UUID[Compendium.ptu.references.Item.Tg399r4Ole9IvrbJ]",
+    "effect": "You gain a Blessing marked Rank 2 or lower. You must additionally meet any Prerequisites of the Blessing.\nRank 1 Blessings: @UUID[Compendium.ptu.capabilities.Item.irI10S0Ac862yBVT], @UUID[Compendium.ptu.capabilities.Item.uIz7kJ3tVQvXnghu], @UUID[Compendium.ptu.capabilities.Item.i3Cesfp4PaQ7qVL1], @UUID[Compendium.ptu.capabilities.Item.ExEQE9O4ZDdW3qTt]\nRank 2 Blessings: @UUID[Compendium.ptu.capabilities.Item.7VLMV0YrAJO3DKIT], @UUID[Compendium.ptu.capabilities.Item.IR0yjstn0ABv1ggy], @UUID[Compendium.ptu.capabilities.Item.iEt64KXAiUvDZGw6]",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "hp",
+            "label": "HP"
+          },
+          {
+            "value": "atk",
+            "label": "ATK"
+          },
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spatk",
+            "label": "SpATK"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          },
+          {
+            "value": "spd",
+            "label": "SPD"
+          }
+        ],
+        "flag": "patron2",
+        "prompt": "Patron Stat?",
+        "adjustName": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.patron2}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.capabilities.Item.irI10S0Ac862yBVT",
+            "label": "Ancient Wisdom",
+            "predicate": {
+              "not": "capability:ancient-wisdom"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.uIz7kJ3tVQvXnghu",
+            "label": "Blessed Strike",
+            "predicate": {
+              "not": "capability:blessed-strike"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.i3Cesfp4PaQ7qVL1",
+            "label": "Paragon",
+            "predicate": {
+              "not": "capability:paragon"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.ExEQE9O4ZDdW3qTt",
+            "label": "Spirit Mending",
+            "predicate": {
+              "not": "capability:spirit-mending"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.7VLMV0YrAJO3DKIT",
+            "label": "Blessed Power",
+            "predicate": [
+              "capability:blessed-strike",
+              {
+                "not": "capability:blessed-power"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.IR0yjstn0ABv1ggy",
+            "label": "Luck of the Gods",
+            "predicate": [
+              "capability:paragon",
+              {
+                "not": "capability:luck-of-the-gods"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.iEt64KXAiUvDZGw6",
+            "label": "Soul Mending",
+            "predicate": [
+              "capability:spirit-mending",
+              {
+                "not": "capability:soul-mending"
+              }
+            ]
+          }
+        ],
+        "flag": "inmyname2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.inmyname2}"
+      }
+    ],
     "enabled": true,
     "slug": "in-my-name-rank-2",
     "schema": {
@@ -53,8 +166,7 @@
       "bind": false
     },
     "prerequisites": [
-      "Completed a task on behalf of your Patron",
-      "GM Permission"
+      "Completed a task on behalf of your Patron"
     ],
     "notes": "",
     "free": false,
@@ -64,7 +176,8 @@
     "automation": [],
     "contentSet": "blessed-and-damned",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -91,5 +204,6 @@
     "exportSource": null
   },
   "sort": 61200000,
-  "_id": "sZz972w3V0O4mtcY"
+  "_id": "sZz972w3V0O4mtcY",
+  "folder": null
 }

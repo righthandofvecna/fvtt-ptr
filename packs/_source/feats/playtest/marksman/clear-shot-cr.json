@@ -2,7 +2,7 @@
   "name": "Clear Shot",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You make a ranged Weapon Attack against a target with no other combatants or Rough or Blocking Terrain within 2 meters\nEffect: The target is considered Vulnerable against this attack, and you increase your Critical Hit range by +4 for this attack.",
+    "effect": "Trigger: You make a ranged Weapon Attack against a target with no other combatants or Rough or Blocking Terrain within 2 meters\nEffect: The target is considered @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI]{Vulnerable} against this attack, and you increase your Critical Hit range by +4 for this attack.",
     "snippet": "",
     "rules": [
       {
@@ -28,7 +28,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.2T1niXREIrGF3GYd",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -49,7 +49,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +72,9 @@
     "class": "Marksman",
     "name": "Clear Shot [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "clear-shot"
+    "replacesSlug": "clear-shot",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +85,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

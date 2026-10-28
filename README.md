@@ -38,6 +38,16 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Fixed custom dice modifiers not applying to skill checks
+- Added Held Item generation system
+- Fix Shadow condition type overwrite (you'll have to re-drag the Shadow condition onto the pokemon)
+- Show summary of a rest when a rest is triggered
+- Additional Spirit Action automation improvements
+- No longer generate Alpha pokemon with nuclear or shadow moves
+- Added tutor slot automation
+- Parse additional prerequisites for Features and Edges in the trainer level-up window
+- Added [CR]/[WP]/etc labels to Quick Insert when the content set filtering is disabled
+- Fix auto-recovery system on the Sqyre platform
 - Added Friendship and Loyalty fields to Pokemon character sheet, even if F&S Playtest is disabled
 - Display an icon if an Edge or Feature is marked as "Free"
 - Display an arrow if something is marked as being a reaction

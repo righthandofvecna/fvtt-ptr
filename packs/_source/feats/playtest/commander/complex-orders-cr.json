@@ -53,7 +53,7 @@
     },
     "prerequisites": [
       "Commander",
-      "at least two Features with the [Orders] Tag that have targets"
+      "Two Features with the [Orders] Tag"
     ],
     "notes": "",
     "free": false,

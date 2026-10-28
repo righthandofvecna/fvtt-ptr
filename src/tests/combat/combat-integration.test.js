@@ -48,7 +48,7 @@ async function addTackle(actor) {
 async function createCombatWith(tokenDocs) {
     const scene = canvas.scene;
     if (!scene) throw new Error("No active scene. Load a scene before running combat tests.");
-    const combat = await Combat.create({ scene: scene.id });
+    const combat = await foundry.documents.Combat.create({ scene: scene.id });
     await combat.createEmbeddedDocuments("Combatant", tokenDocs.map(t => ({
         tokenId: t.id,
         actorId: t.actorId,
@@ -349,15 +349,15 @@ TestRegistry.register(
             actor = await createTestPokemon("rattata");
             token = await placeToken(actor, canvas.scene, { x: 300, y: 100 });
             combat = await createCombatWith([token]);
+            await combat.activate();
             await combat.startCombat();
 
             const combatant = combat.combatants.find(c => c.tokenId === token.id);
             assertDefined(combatant, "Combatant should be created");
 
             await combat.rollInitiative([combatant.id]);
-            await new Promise(resolve => setTimeout(resolve, 200));
 
-            const updated = game.combat?.combatants?.get(combatant.id) ?? combat.combatants.get(combatant.id);
+            const updated = combat.combatants.get(combatant.id);
             assertDefined(updated?.initiative, "Initiative should be set after rollInitiative");
             assertGreaterThan(updated.initiative, 0, "Initiative value should be positive");
 

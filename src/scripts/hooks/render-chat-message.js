@@ -35,26 +35,13 @@ export const RenderChatMessage = {
 
                 (async () => {
                     const originUUID = message.flags?.ptu?.origin?.actor;
-                    const itemUUID = message.flags?.ptu?.origin?.item;
-
                     const originActor = originUUID ? await fromUuid(originUUID) : null;
-                    const item = itemUUID ? await fromUuid(itemUUID) : null;
 
                     if (!originActor?.synthetics?.applyEffects) return;
 
-                    // Build domains — mirrors the logic in applyEffectsFromUsage.
-                    const itemDomains = item ? [
-                        `${item.id}-apply-effects`,
-                        `${item.slug}-apply-effects`,
-                    ] : [];
-                    if (item?.type === "move") {
-                        itemDomains.push(
-                            `${item.system.category.toLocaleLowerCase(game.i18n.lang)}-apply-effects`,
-                            `${item.system.type.toLocaleLowerCase(game.i18n.lang)}-apply-effects`,
-                            `${item.system.frequency?.type ?? "at-will"}-apply-effects`,
-                        );
-                    }
-                    const domains = ["apply-effects", ...itemDomains];
+                    // Use the domains stored at send-time — this correctly handles phantom items
+                    // (non-materialized spirit actions) whose UUIDs cannot be resolved via fromUuid().
+                    const domains = message.flags?.ptu?.context?.domains ?? ["apply-effects"];
 
                     const hasEffects = domains.some(domain => {
                         const entry = originActor.synthetics.applyEffects[domain];

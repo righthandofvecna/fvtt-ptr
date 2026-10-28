@@ -1,0 +1,105 @@
+{
+  "name": "Thick Club",
+  "system": {
+    "origin": "",
+    "effect": "When held by a Cubone or Marowak, this rare, dense bone grants the @UUID[Compendium.ptu.abilities.Item.nuGa21WQ0QD07kQj]{Pure Power} Ability. Thick Clubs are Wielded. Cannot be used by Trainers.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": {
+          "or": [
+            "species:cubone",
+            "species:marowak",
+            "species:marowak-alolan"
+          ]
+        },
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.nuGa21WQ0QD07kQj"
+      }
+    ],
+    "enabled": true,
+    "slug": "thick-club",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:42.373Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "Compendium.ptu.abilities.Item.nuGa21WQ0QD07kQj",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Thick Club",
+    "useCount": 0
+  },
+  "type": "item",
+  "img": "systems/ptu/static/images/item_icons/thick club.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "14.367",
+    "createdTime": 1683368784295,
+    "modifiedTime": 1793127138734,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 100000,
+  "_id": "vabigvqHJ9OqFM0V",
+  "folder": "w7LwZW6fD6O8YmRm"
+}

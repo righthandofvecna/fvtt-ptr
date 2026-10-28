@@ -2,7 +2,7 @@
   "name": "Don't Look Away",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You or your Pokémon with Pack Hunt or Teamwork hits with an Attack of Opportunity or with any Move while Hidden\nEffect: The hit foe loses a Tick of Hit Points, and is Slowed for 1 round. Don’t Look Away may be triggered once per round.",
+    "effect": "Trigger: You or your Pokémon with @UUID[Compendium.ptu.abilities.Item.YTY79dfwdUWYjXl4]{Pack Hunt} or @UUID[Compendium.ptu.abilities.Item.cERfnFsIgZ0D6NUL]{Teamwork} hits with an @UUID[Compendium.ptu.moves.Item.lhaZXnE2PfttWp41]{Attack of Opportunity} or with any Move while @UUID[Compendium.ptu.effects.Item.wKlB25Mu17lmwpKB]{Hidden}\nEffect: The hit foe loses a Tick of Hit Points, and is @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed} for 1 round. Don’t Look Away may be triggered once per round.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "class": "Hunter",
     "name": "Don’t Look Away [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "dont-look-away"
+    "replacesSlug": "dont-look-away",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

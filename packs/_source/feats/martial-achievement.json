@@ -2,9 +2,148 @@
   "name": "Martial Achievement",
   "system": {
     "origin": "",
-    "effect": "You gain a Martial Achievement based on your chosen Ability.\n»» Guts: Wrestlemania\n»» Inner Focus: Heightened Intensity\n»» Iron Fist: Pummeling Momentum\n»» Limber: Bend Like the Willow\n»» Reckless: Soft Landing\n»» Technician: Whirlwind Strikes",
+    "effect": "You gain a Martial Achievement based on your chosen Ability.\n»» Guts: @UUID[Compendium.ptu.capabilities.Item.75lSNM4iueKiMwHn]{Wrestlemania}\n»» Inner Focus: @UUID[Compendium.ptu.capabilities.Item.1OrVjNemeZHegzFx]{Heightened Intensity}\n»» Iron Fist: @UUID[Compendium.ptu.capabilities.Item.IwFEzqNKQ5PUrQJZ]{Pummeling Momentum}\n»» Limber: @UUID[Compendium.ptu.capabilities.Item.nKdgUlJSFfqSJJYc]{Bend Like the Willow}\n»» Reckless: @UUID[Compendium.ptu.capabilities.Item.xv3ok3C1fNjAlEvh]{Soft Landing}\n»» Technician: @UUID[Compendium.ptu.capabilities.Item.3DzsaePVGcCd0u0q]{Whirlwind Strikes}",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.MmN3OuS0wuIjvAWR"
+          ]
+        },
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.75lSNM4iueKiMwHn"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.uM561WHxXwcdrMWl"
+          ]
+        },
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.1OrVjNemeZHegzFx"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.Ro8jM65y4N3lP1tq"
+          ]
+        },
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.IwFEzqNKQ5PUrQJZ"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.GfjB1TuUfCwWHWaw"
+          ]
+        },
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.nKdgUlJSFfqSJJYc"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.rCJBNK2adHEKBYfG"
+          ]
+        },
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.xv3ok3C1fNjAlEvh"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.mfD1Ga7xMCBqOk5H"
+          ]
+        },
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.3DzsaePVGcCd0u0q"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.MmN3OuS0wuIjvAWR"
+          ]
+        },
+        "mode": "add",
+        "path": "system.modifiers.baseStats.hp.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "or": [
+            {
+              "eq": [
+                "{item|flags.ptu.rulesSelections.martialartist}",
+                "Compendium.ptu.abilities.Item.uM561WHxXwcdrMWl"
+              ]
+            },
+            {
+              "eq": [
+                "{item|flags.ptu.rulesSelections.martialartist}",
+                "Compendium.ptu.abilities.Item.GfjB1TuUfCwWHWaw"
+              ]
+            },
+            {
+              "eq": [
+                "{item|flags.ptu.rulesSelections.martialartist}",
+                "Compendium.ptu.abilities.Item.mfD1Ga7xMCBqOk5H"
+              ]
+            }
+          ]
+        },
+        "mode": "add",
+        "path": "system.modifiers.baseStats.spd.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.Ro8jM65y4N3lP1tq"
+          ]
+        },
+        "mode": "add",
+        "path": "system.modifiers.baseStats.def.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.rCJBNK2adHEKBYfG"
+          ]
+        },
+        "mode": "add",
+        "path": "system.modifiers.baseStats.atk.mod",
+        "phase": "applyAEs",
+        "value": "",
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "martial-achievement",
     "schema": {
@@ -34,7 +173,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -57,7 +197,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +209,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Martial Artist"
+      "prereqBackup": "Martial Artist",
+      "automationStatus": "needs-automation",
+      "devNote": "Revisit when flags can be referenced outside of the relevant item, e.g. itemsBySlug. Predicates will need to be corrected to check Martial Artist when that becomes an option. -WW",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -80,7 +225,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 8000000,
   "_id": "6p7ZH0x8uvrvptWZ"
 }

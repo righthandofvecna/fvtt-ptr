@@ -34,7 +34,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +59,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +71,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Mentor, one Mentor Skill at Expert Rank"
+      "prereqBackup": "Mentor, one Mentor Skill at Expert Rank",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -81,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 21000000,
   "_id": "KPx9fkYxVsrEdY9p"
 }

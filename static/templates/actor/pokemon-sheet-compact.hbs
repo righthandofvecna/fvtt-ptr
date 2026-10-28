@@ -556,7 +556,11 @@
                     <div class="swsh-box w-100">
                         <div class="swsh-body w-100" style="display: block;">
                             {{> "systems/ptu/static/templates/partials/item-display-partial.hbs" title=(localize
-                            "ITEM.TypeSpiritActionPlural") type="spiritaction" items=spiritactions ballStyle=ballStyle}}
+                            "ITEM.TypeSpiritAction.OnTurn") type="spiritaction" items=spiritactions.onTurn ballStyle=ballStyle}}
+                            {{> "systems/ptu/static/templates/partials/item-display-partial.hbs" title=(localize
+                            "ITEM.TypeSpiritAction.Reaction") type="spiritaction" items=spiritactions.reaction ballStyle=ballStyle}}
+                            {{> "systems/ptu/static/templates/partials/item-display-partial.hbs" title=(localize
+                            "ITEM.TypeSpiritAction.Extended") type="spiritaction" items=spiritactions.extended ballStyle=ballStyle}}
                         </div>
                     </div>
                 </div>

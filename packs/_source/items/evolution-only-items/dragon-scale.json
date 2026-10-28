@@ -1,0 +1,93 @@
+{
+  "name": "Dragon Scale",
+  "system": {
+    "origin": "",
+    "effect": "Evolves Seadra.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "dragon-scale",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:42.005Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Keepsake",
+      "Evo. Item"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "3000",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Dragon Scale",
+    "useCount": 0
+  },
+  "type": "item",
+  "img": "systems/ptu/static/images/item_icons/dragon scale.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "14.367",
+    "createdTime": 1683368793039,
+    "modifiedTime": 1793127193952,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 100000,
+  "_id": "dQR3lbrpLgaZK3LT",
+  "folder": "vEuVgAZOAyGrdoQd"
+}

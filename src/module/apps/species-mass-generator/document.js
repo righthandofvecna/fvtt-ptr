@@ -40,6 +40,7 @@ export class SpeciesGeneratorData {
         this.preventEvolution = game.settings.get("ptu", "generation.defaultMassGeneratorPreventEvolution") ?? false;
         this.shinyChance = Number(game.settings.get("ptu", "generation.defaultMassGeneratorShinyChance")) ?? 0;
         this.alphaChance = Number(game.settings.get("ptu", "generation.defaultMassGeneratorAlphaChance")) ?? 0;
+        this.generateHeldItem = game.settings.get("ptu", "generation.defaultMassGeneratorGenerateHeldItem") ?? false;
         this.helpText = {
             species: undefined,
             table: undefined,
@@ -132,6 +133,7 @@ export class SpeciesGeneratorData {
             preventEvolution: this.preventEvolution,
             shinyChance: this.shinyChance,
             alphaChance: this.alphaChance,
+            generateHeldItem: this.generateHeldItem,
         }
 
         if (this.speciesTab == "species") {

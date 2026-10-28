@@ -34,6 +34,10 @@
             <label for="prevent-evolution">{{localize "PTU.PreventEvolution"}}</label>
             <input type="checkbox" name="prevent-evolution" {{checked preventDefault}}/>
         </div>
+        <div class="d-flex flex-column justify-content-center align-items-center mb-2">
+            <label for="generate-held-item">{{localize "PTU.GenerateHeldItem"}}</label>
+            <input type="checkbox" name="generate-held-item" {{checked generateHeldItemDefault}}/>
+        </div>
     </div>
     <div class="d-flex flex-row justify-content-center mt-auto">
         <input type="submit" autofocus value="{{localize "PTU.Submit"}}"/>

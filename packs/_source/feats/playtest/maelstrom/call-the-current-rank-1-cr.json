@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn 3 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\nRank 1: Aqua Jet, Aqua Ring, Chilling Water, Water Pulse, Water Sport\nRank 2: Brine, Rain Dance, Scald, Waterfall, Whirlpool\nRank 3: Aqua Tail, Dive, Hydro Pump, Surf, Wave Crash",
+    "effect": "Effect: You learn 3 Moves chosen from the list below, marked with the Rank of this Feature you are gaining or lower.\nRank 1: @UUID[Compendium.ptu.moves.Item.Htb3LXoNd24yFNEG]{Aqua Jet}, @UUID[Compendium.ptu.moves.Item.ywYeIhxlrHb9gOP1]{Aqua Ring}, @UUID[Compendium.ptu.moves.Item.Mh5MHyCuN80yItfC]{Chilling Water}, @UUID[Compendium.ptu.moves.Item.9TnRLGZ6WIGqIeQ4]{Water Pulse}, @UUID[Compendium.ptu.moves.Item.aQC3OZK3LUV4UHj2]{Water Sport}\nRank 2: @UUID[Compendium.ptu.moves.Item.5ORKWU9EYYyzJOaH]{Brine}, @UUID[Compendium.ptu.moves.Item.mwyMas4TIBJtb24c]{Rain Dance}, @UUID[Compendium.ptu.moves.Item.Nu3QmPfiZVzOccNU]{Scald}, @UUID[Compendium.ptu.moves.Item.72Gli6hv7dk4QRdN]{Waterfall}, @UUID[Compendium.ptu.moves.Item.DUWjQv05jUb2p6gj]{Whirlpool}\nRank 3: @UUID[Compendium.ptu.moves.Item.O8DwOJXqhrynxm8B]{Aqua Tail}, @UUID[Compendium.ptu.moves.Item.5P4ZKecoBzCd8vh5]{Dive}, @UUID[Compendium.ptu.moves.Item.oRu76Vk1LfE93pky]{Hydro Pump}, @UUID[Compendium.ptu.moves.Item.pRxBTVSGS7ScdK5s]{Surf}, @UUID[Compendium.ptu.moves.Item.XNmCCgclMJf0MP6C]{Wave Crash}",
     "snippet": "",
     "rules": [
       {
@@ -31,7 +31,7 @@
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.hsTeK70y3vDOnrx7",
+            "value": "Compendium.ptu.moves.Item.ywYeIhxlrHb9gOP1",
             "label": "Aqua Ring",
             "predicate": {
               "not": "move:aqua-ring"
@@ -79,7 +79,7 @@
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.hsTeK70y3vDOnrx7",
+            "value": "Compendium.ptu.moves.Item.ywYeIhxlrHb9gOP1",
             "label": "Aqua Ring",
             "predicate": {
               "not": "move:aqua-ring"
@@ -127,7 +127,7 @@
             }
           },
           {
-            "value": "Compendium.ptu.moves.Item.hsTeK70y3vDOnrx7",
+            "value": "Compendium.ptu.moves.Item.ywYeIhxlrHb9gOP1",
             "label": "Aqua Ring",
             "predicate": {
               "not": "move:aqua-ring"
@@ -165,7 +165,7 @@
     ],
     "enabled": true,
     "slug": "call-the-current-rank-1-cr",
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -199,7 +199,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -219,13 +220,14 @@
     "notes": "",
     "free": false,
     "class": "Maelstrom",
-    "name": "Call The Current [CR]Rank 1 [CR]"
+    "name": "Call The Current [CR]Rank 1 [CR]",
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

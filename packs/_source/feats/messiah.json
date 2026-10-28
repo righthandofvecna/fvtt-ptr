@@ -2,9 +2,51 @@
   "name": "Messiah",
   "system": {
     "origin": "",
-    "effect": "Your Connection with one of your Patrons has reached such a point that even you are capable of performing the miracles they are renowned and worshiped for. Expending a use of Messiah allows you to perform such a miracle. For example, in a region where Shaymin is known to restore withered forests to their former glory, a Touched who is a Messiah of Shaymin might be able to cause a forest to start to rapidly recover from the aftermath of a wildfire. Such acts are usually, but not always, noticeably supernatural and divine.",
+    "effect": "Your Connection with one of your Patrons has reached such a point that even you are capable of performing the miracles they are renowned and worshiped for. Expending a use of Messiah allows you to perform such a miracle. For example, in a region where Shaymin is known to restore withered forests to their former glory, a Touched who is a Messiah of Shaymin might be able to cause a forest to start to rapidly recover from the aftermath of a wildfire. Such acts are usually, but not always, noticeably supernatural and divine.\nSpecial: You begin with three uses of Messiah, but, at your GM’s discretion, may gain more by completing significant goals or quests aligned with your Patron’s portfolio.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "prompt": "Patron Stat?",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "hp",
+            "label": "HP"
+          },
+          {
+            "value": "atk",
+            "label": "ATK"
+          },
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spatk",
+            "label": "SpATK"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          },
+          {
+            "value": "spd",
+            "label": "SPD"
+          }
+        ],
+        "flag": "messiah"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.messiah}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      }
+    ],
     "enabled": true,
     "slug": "messiah",
     "contentSet": "blessed-and-damned",
@@ -29,24 +71,24 @@
       "General"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
-      "custom": "One Time Use/5",
+      "type": "custom",
+      "max": 3,
+      "custom": "Special",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
-        "priority": false,
+        "priority": true,
         "reaction": false,
         "interrupt": false
       },
       "ppCost": null
     },
     "actionCost": {
-      "standard": true,
+      "standard": false,
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -63,7 +105,8 @@
     "useCount": 0,
     "automation": [],
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -75,8 +118,9 @@
     "ptu": {
       "prereqBackup": "Touched, GM Permission",
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
-      "devNote": ""
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
@@ -90,5 +134,6 @@
     "exportSource": null
   },
   "sort": 52700000,
-  "_id": "kNFe3VaimLkzLQtj"
+  "_id": "kNFe3VaimLkzLQtj",
+  "folder": null
 }

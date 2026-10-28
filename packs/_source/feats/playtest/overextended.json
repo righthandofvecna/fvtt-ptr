@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "When your Pokemon hits with an Attack, and has 4 remaining movement or more, it may expend all remaining movement to make the target Vulnerable before the attack and until the end of this Pokemons next turn.",
+    "effect": "When your Pokémon hits with an Attack, and has 4 remaining movement or more, it may expend all remaining movement to make the target @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI]{Vulnerable} before the attack and until the end of this Pokémon's next turn.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,14 +59,18 @@
     "notes": "",
     "free": false,
     "class": "Hustler",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Hustler"
+      "prereqBackup": "Hustler",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

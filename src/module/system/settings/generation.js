@@ -82,6 +82,14 @@ const GenerationSettingsConfig = {
         default: 0,
         hidden: true
     },
+    "defaultDexDragInGenerateHeldItem": {
+        name: "PTU.Settings.Generation.DefaultDexDragInGenerateHeldItem.Name",
+        hint: "PTU.Settings.Generation.DefaultDexDragInGenerateHeldItem.Hint",
+        type: Boolean,
+        scope: "user",
+        default: false,
+        hidden: true
+    },
     // Mass Generator Settings
     "defaultMassGeneratorLevelMin": {
         name: "PTU.Settings.Generation.DefaultMassGeneratorLevelMin.Name",
@@ -169,6 +177,14 @@ const GenerationSettingsConfig = {
         type: String,
         scope: "user",
         default: "",
+        hidden: true
+    },
+    "defaultMassGeneratorGenerateHeldItem": {
+        name: "PTU.Settings.Generation.DefaultMassGeneratorGenerateHeldItem.Name",
+        hint: "PTU.Settings.Generation.DefaultMassGeneratorGenerateHeldItem.Hint",
+        type: Boolean,
+        scope: "user",
+        default: true,
         hidden: true
     },
 }

@@ -50,8 +50,6 @@
       "bind": false
     },
     "prerequisites": [
-      "Style Expert",
-      "Smart as Chosen Stat",
       "Novice Guile"
     ],
     "notes": "",

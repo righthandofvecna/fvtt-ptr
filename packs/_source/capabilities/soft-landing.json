@@ -1,0 +1,61 @@
+{
+  "name": "Soft Landing",
+  "type": "capability",
+  "_id": "xv3ok3C1fNjAlEvh",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.abilities.Item.rCJBNK2adHEKBYfG]{Reckless}, @UUID[Compendium.ptu.feats.Item.6p7ZH0x8uvrvptWZ]{Martial Achievement}\n1 AP – Free Action \nTrigger: You take fall damage, or miss with @UUID[Compendium.ptu.moves.Item.X5S085dhT6JG9Top]{Jump Kick} or @UUID[Compendium.ptu.moves.Item.3UQ4JHBBipOJg72d]{High Jump Kick}\nEffect: When taking fall damage, calculate the result as if you had fallen X meters less, where X is half your Combat Rank. If you miss with Jump Kick or High Jump Kick, you lose no Hit Points as a result.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "soft-landing",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "custom",
+      "max": null,
+      "custom": "1AP - Free",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": true,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Automation may not be necessary until something enforces fall damage",
+      "showInTokenPanel": true,
+      "used": null
+    }
+  }
+}

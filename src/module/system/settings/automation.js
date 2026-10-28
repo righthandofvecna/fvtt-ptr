@@ -96,12 +96,6 @@ const AutomationSettingsConfig = {
         },
         default: "prompt"
     },
-    "sessionPromptExtendedRest": {
-        name: "PTU.Settings.Automation.SessionPromptExtendedRest.Name",
-        hint: "PTU.Settings.Automation.SessionPromptExtendedRest.Hint",
-        type: Boolean,
-        default: false
-    },
     "commandChecks": {
         name: "PTU.Settings.Automation.CommandChecks.Name",
         hint: "PTU.Settings.Automation.CommandChecks.Hint",

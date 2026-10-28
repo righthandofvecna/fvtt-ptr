@@ -77,7 +77,7 @@ export const AutoRecovery = {
 
     // Switching the active scene should trigger end-of-scene recovery if applicable
     Hooks.on("updateScene", async (scene, changes)=>{
-      if (changes.active === false) return;
+      if (!changes.active) return;
       Hooks.callAll("ptu.sceneEnd");
     });
 
@@ -91,7 +91,7 @@ export const AutoRecovery = {
       if (eodSessionCheckTriggered) return;
       eodSessionCheckTriggered = true;
       game.settings.set("ptu", "gmEndOfDayLastAlive", game.time.serverTime);
-      if (!game.settings.get("ptu", "automation.sessionPromptExtendedRest")) return;
+      if (!game.settings.get("ptu", "variant.useSessionBasedRecovery")) return;
       Hooks.callAll("ptu.dayEnd");
     }
 
@@ -100,7 +100,7 @@ export const AutoRecovery = {
     const checkAfterCombatDeletion = ()=>{
       if (deletedCombatHook) return;
       deletedCombatHook = Hooks.on("deleteCombat", ()=>{
-        if (game.users.every(u => u.active) && !game.combats.contents.some(c=>c.active)) {
+        if (game.users.contents.every(u => u.active) && !game.combats.contents.some(c=>c.active)) {
           triggerDayEndSession();
         }
       });
@@ -110,7 +110,7 @@ export const AutoRecovery = {
     const userConnectedHook = Hooks.on("userConnected", (user, connected)=>{
       if (!connected) return;
       // if all users are connected and there are no in-progress combats, trigger end-of-day recovery
-      const allConnected = game.users.every(u => u.active);
+      const allConnected = game.users.contents.every(u => u.active);
       const noCombat = !game.combats.contents.some(c=>c.active);
       if (allConnected && noCombat) {
         triggerDayEndSession();
@@ -127,7 +127,7 @@ export const AutoRecovery = {
 
       eodSessionCheckTriggered ||= game.settings.get("ptu", "gmEndOfDayLastAlive") >= (game.time.serverTime - HEARTBEAT_INTERVAL * 2);
 
-      if (!eodSessionCheckTriggered && game.users.every(u => u.active) && !game.combats.contents.some(c=>c.active)) {
+      if (!eodSessionCheckTriggered && game.users.contents.every(u => u.active) && !game.combats.contents.some(c=>c.active)) {
         triggerDayEndSession();
       }
 

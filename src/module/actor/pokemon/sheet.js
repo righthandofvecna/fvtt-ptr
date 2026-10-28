@@ -178,16 +178,39 @@ export class PTUPokemonSheet extends PTUActorSheet {
 				const ownedSlugs = new Set(spiritactions.map(sa => sa.system?.slug).filter(Boolean));
 				for (const sa of cache) {
 					if (ownedSlugs.has(sa.system?.slug)) continue;
-					const data = sa.toObject();
-					foundry.utils.setProperty(data, 'flags.ptu.phantom', true);
-					foundry.utils.setProperty(data, 'flags.ptu.sourceUuid', sa.uuid);
-					const phantomItem = new Item.implementation(data, { parent: this.actor, temporary: true });
-					spiritactions.push(phantomItem);
-					this.actor._phantomItems.set(data._id, phantomItem);
+					// Reuse the phantom created during prepareRuleElements (which also registered its rules
+					// into actor.synthetics). Fall back to creating a new one if the cache wasn't ready yet.
+					const existing = this.actor._phantomItems.get(sa.id);
+					if (existing) {
+						spiritactions.push(existing);
+					} else {
+						const data = sa.toObject();
+						foundry.utils.setProperty(data, 'flags.ptu.phantom', true);
+						foundry.utils.setProperty(data, 'flags.ptu.sourceUuid', sa.uuid);
+						const phantomItem = new Item.implementation(data, { parent: this.actor, temporary: true });
+						spiritactions.push(phantomItem);
+						this.actor._phantomItems.set(data._id, phantomItem);
+					}
 				}
 			}
 		}
-		sheetData.spiritactions = spiritactions;
+
+		// Split and sort spirit actions into three categories.
+		// Sort order within each category: owned first, then by cost ascending, then by name.
+		const spiritActionSort = (a, b) => {
+			const aPhantom = a.flags?.ptu?.phantom ? 1 : 0;
+			const bPhantom = b.flags?.ptu?.phantom ? 1 : 0;
+			if (aPhantom !== bPhantom) return aPhantom - bPhantom;
+			const aCost = Number(a.system?.cost) || 0;
+			const bCost = Number(b.system?.cost) || 0;
+			if (aCost !== bCost) return aCost - bCost;
+			return (a.name ?? "").localeCompare(b.name ?? "");
+		};
+		sheetData.spiritactions = {
+			onTurn: spiritactions.filter(sa => !sa.system?.frequency?.modifiers?.reaction && !sa.system?.actionCost?.extended).sort(spiritActionSort),
+			reaction: spiritactions.filter(sa => sa.system?.frequency?.modifiers?.reaction).sort(spiritActionSort),
+			extended: spiritactions.filter(sa => sa.system?.actionCost?.extended).sort(spiritActionSort),
+		};
 
 		sheetData.actions = await (async () => {
 			const moves = [];

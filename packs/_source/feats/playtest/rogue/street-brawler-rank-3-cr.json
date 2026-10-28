@@ -185,7 +185,9 @@
       "bind": false
     },
     "prerequisites": [
-      "Master in 3 Rogue Skills"
+      "Master Athletics",
+      "Master Acrobatics",
+      "Master Stealth"
     ],
     "notes": "",
     "free": false,

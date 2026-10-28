@@ -34,7 +34,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +59,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +71,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Move Tutor, one Mentor Skill at Master Rank"
+      "prereqBackup": "Move Tutor, one Mentor Skill at Master Rank",
+      "automationStatus": "no-automation-needed",
+      "devNote": "Move List Limits are not enforced",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -81,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 58200000,
   "_id": "pXC58ggNIX6QFb5s"
 }

@@ -2,7 +2,7 @@
   "name": "Type Refresh (Poison)",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon\nEffect: The target regains one use of a Scene-Frequency Move of your Chosen Type, and refreshes the Frequency of all EOT-Frequency Moves of your chosen Type. A Target can be affected by Type Refresh only once per Scene.",
+    "effect": "Target: Your Pokémon\nEffect: The target regains one use of a Scene-Frequency Poison Type Move, and refreshes the Frequency of all EOT-Frequency Poison Type Moves. A Target can be affected by Type Refresh only once per Scene.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -30,7 +30,7 @@
     "frequency": {
       "type": "at-will",
       "max": 0,
-      "custom": "2 AP - Standard Acrion",
+      "custom": "2 AP - Standard Action",
       "modifiers": {
         "priorityLimited": false,
         "priorityAdvanced": false,
@@ -50,9 +50,7 @@
       "cost": 2,
       "bind": false
     },
-    "prerequisites": [
-      "Type Ace"
-    ],
+    "prerequisites": [],
     "notes": "",
     "free": false,
     "class": "Type Ace (Poison)",

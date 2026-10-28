@@ -116,8 +116,9 @@ async function applyEffectsFromUsage({ message }) {
 
     const messageOptions = message.flags.ptu.context?.options ?? [];
 
-    const itemDomains = buildItemDomains(item, "apply-effects");
-    const domains = ["apply-effects", ...itemDomains];
+    // Prefer the domains stored at send-time; they are correct even for phantom items
+    // (non-materialized spirit actions) whose UUIDs cannot be resolved via fromUuid().
+    const domains = message.flags?.ptu?.context?.domains ?? ["apply-effects", ...buildItemDomains(item, "apply-effects")];
 
     // Targets: prefer user targets, fall back to controlled tokens.
     // Usage messages have no attack roll, so there is no hit/miss outcome.

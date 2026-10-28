@@ -2,7 +2,7 @@
   "name": "Type Ace (Psychic)",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 2 Tutor Points remaining.\nEffect: The target loses 2 Tutor Points and learns the Last Chance or Type Strategist Ability for your Chosen Type. You may target a Pokémon only once with Type Ace.\n@Embed[Compendium.ptu.abilities.Item.jhOa5RNWvY7t958b] @Embed[Compendium.ptu.abilities.Item.Rp2iYtEMxDsbRm0g]",
+    "effect": "Target: Your Pokémon with at least 2 Tutor Points remaining.\nEffect: The target loses 2 Tutor Points and learns the Last Chance (Psychic) or Type Strategist (Psychic) Ability. You may target a Pokémon only once with Type Ace.\n@Embed[Compendium.ptu.abilities.Item.jhOa5RNWvY7t958b] @Embed[Compendium.ptu.abilities.Item.Rp2iYtEMxDsbRm0g]",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -55,11 +55,11 @@
     },
     "prerequisites": [
       "All A or B options",
-      "A: 2 Different Pokémon of the chosen Type",
-      "A: Type-Linked Skill at Novice",
-      "B: Elemental Connection (of the chosen Type)",
-      "B: 1 Pokémon of the chosen Type",
-      "B: Type-Linked Skill at Novice"
+      "A: 2 Different Psychic Type Pokémon",
+      "A: Novice Focus or Occult Education",
+      "B: Elemental Connection (Psychic)",
+      "B: 1 Psychic Type Pokémon",
+      "B: Novice Focus or Occult Education"
     ],
     "notes": "",
     "free": false,

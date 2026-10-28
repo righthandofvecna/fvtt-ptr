@@ -2,7 +2,7 @@
   "name": "Oceanic Feeling",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: See Text\nEffect: You may activate Oceanic Feeling when either Wash Away or Storm Drain would be triggered to gain that Ability for 1 full round, if you do not already have it, and immediately Trigger it. Activating an Ability this way ignores its usual Frequency. You may use each Ability once per Scene this way.",
+    "effect": "Trigger: See Text\nEffect: You may activate Oceanic Feeling when either @UUID[Compendium.ptu.abilities.Item.xSdfPpetsaum7unj]{Wash Away} or @UUID[Compendium.ptu.abilities.Item.gPFOWD8FeI5TQrum]{Storm Drain} would be triggered to gain that Ability for 1 full round, if you do not already have it, and immediately Trigger it. Activating an Ability this way ignores its usual Frequency. You may use each Ability once per Scene this way.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -62,7 +63,7 @@
       "bind": false
     },
     "prerequisites": [
-      "Water’s Shroud",
+      "Water's Shroud",
       "Master Athletics or Acrobatics"
     ],
     "notes": "",
@@ -70,7 +71,9 @@
     "class": "Maelstrom",
     "name": "Oceanic Feeling [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "oceanic-feeling"
+    "replacesSlug": "oceanic-feeling",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

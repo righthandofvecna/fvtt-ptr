@@ -6,9 +6,32 @@
     "origin": "",
     "effect": "The user gains a Tick of Hit Points. Rain Dish may only be used while the user is under 50% Hit Points or in Rainy Weather.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ApplyEffect",
+        "predicate": {
+          "or": [
+            "effect:rainy",
+            {
+              "lt": [
+                "{actor|system.health.totalPercent}",
+                "50"
+              ]
+            }
+          ]
+        },
+        "affects": "origin",
+        "selectors": "{item|id}-apply-effects",
+        "uuid": "Compendium.ptu.effects.Item.NBsNjWKPHl7vq58h",
+        "range": "",
+        "linked": false,
+        "value": ""
+      }
+    ],
     "enabled": true,
     "slug": "rain-dish",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -38,7 +61,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -51,10 +75,9 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "automation": []
   },
   "_id": "nodKAkLraePEpPt1",
   "effects": [],
@@ -63,13 +86,20 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.55",
+    "coreVersion": "14.367",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816919,
+    "modifiedTime": 1792892271165,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

@@ -1,0 +1,61 @@
+{
+  "name": "Spirit Mending",
+  "type": "capability",
+  "_id": "ExEQE9O4ZDdW3qTt",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Messiah: Daily x3 – Standard Action\nSigner: Standard Action\nTarget: A Pokémon or Trainer\nMessiah Effect: When using Spirit Mending, choose one of the following: The Target is Heals 30 HP, or the Target recovers two Injuries.\nSigner Effect: The target recovers 50 HP and one Injury.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "spirit-mending",
+    "contentSet": "blessed-and-damned",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "custom",
+      "max": null,
+      "custom": "Messiah: Daily x3 - Standard / Signer: Standard",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false,
+      "used": null
+    }
+  }
+}

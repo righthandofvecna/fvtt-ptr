@@ -2,7 +2,7 @@
   "name": "Martial Training Rank 1",
   "system": {
     "origin": "",
-    "effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. Moves marked with an Ability require that Ability to be chosen.\nRank 1 Moves: Acupressure(Limber), Arm Thrust(Technician), Double Kick, Focus Energy, Karate Chop(inner Focus), Low Sweep, Mach Punch(Iron Fist), Rolling Kick(Reckless), Vital Throw(Guts)",
+    "effect": "Learn two Martial Artist Moves. You may choose any Move marked with the Martial Training Rank you are taking or lower. Moves marked with an Ability require that Ability to be chosen.\nRank 1: @UUID[Compendium.ptu.moves.Item.iQXpUEYL3sawCfvM]{Acupressure}(Limber), @UUID[Compendium.ptu.moves.Item.MVQIN27r61bxzB7J]{Arm Thrust}(Technician), @UUID[Compendium.ptu.moves.Item.24gRKtjHojSS9Vb0]{Double Kick}, @UUID[Compendium.ptu.moves.Item.TbqvNIqswHYAVHOW]{Focus Energy}, @UUID[Compendium.ptu.moves.Item.AJTIueQXgC9l1plL]{Karate Chop}(inner Focus), @UUID[Compendium.ptu.moves.Item.PdslVg2qIvDMDHiA]{Low Sweep}, @UUID[Compendium.ptu.moves.Item.tfZD8XbANRwj7C1a]{Mach Punch}(Iron Fist), @UUID[Compendium.ptu.moves.Item.SLG74AL41rgCYYrw]{Rolling Kick}(Reckless), @UUID[Compendium.ptu.moves.Item.NNIBGqOXtXQDkeky]{Vital Throw}(Guts)",
     "snippet": "",
     "rules": [
       {
@@ -12,7 +12,9 @@
         "value": 1,
         "predicate": [
           "class:martial-artist-guts-hp"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -27,7 +29,9 @@
               "class:martial-artist-technician-speed"
             ]
           }
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -36,7 +40,9 @@
         "value": 1,
         "predicate": [
           "class:martial-artist-iron-fist-defense"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -45,7 +51,9 @@
         "value": 1,
         "predicate": [
           "class:martial-artist-reckless-attack"
-        ]
+        ],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ChoiceSet",
@@ -53,8 +61,8 @@
         "adjustName": false,
         "choices": [
           {
-            "label": "Acupressure",
             "value": "Compendium.ptu.moves.Item.iQXpUEYL3sawCfvM",
+            "label": "Acupressure",
             "predicate": [
               "ability:limber",
               {
@@ -63,8 +71,8 @@
             ]
           },
           {
-            "label": "Arm Thrust",
             "value": "Compendium.ptu.moves.Item.MVQIN27r61bxzB7J",
+            "label": "Arm Thrust",
             "predicate": [
               "ability:technician",
               {
@@ -73,8 +81,8 @@
             ]
           },
           {
-            "label": "Double Kick",
             "value": "Compendium.ptu.moves.Item.24gRKtjHojSS9Vb0",
+            "label": "Double Kick",
             "predicate": [
               {
                 "not": "move:double-kick"
@@ -82,8 +90,8 @@
             ]
           },
           {
-            "label": "Focus Energy",
             "value": "Compendium.ptu.moves.Item.TbqvNIqswHYAVHOW",
+            "label": "Focus Energy",
             "predicate": [
               {
                 "not": "move:focus-energy"
@@ -91,8 +99,8 @@
             ]
           },
           {
-            "label": "Karate Chop",
             "value": "Compendium.ptu.moves.Item.AJTIueQXgC9l1plL",
+            "label": "Karate Chop",
             "predicate": [
               "ability:inner-focus",
               {
@@ -101,8 +109,8 @@
             ]
           },
           {
-            "label": "Low Sweep",
             "value": "Compendium.ptu.moves.Item.PdslVg2qIvDMDHiA",
+            "label": "Low Sweep",
             "predicate": [
               {
                 "not": "move:low-sweep"
@@ -110,8 +118,8 @@
             ]
           },
           {
-            "label": "Mach Punch",
             "value": "Compendium.ptu.moves.Item.tfZD8XbANRwj7C1a",
+            "label": "Mach Punch",
             "predicate": [
               "ability:iron-fist",
               {
@@ -120,8 +128,8 @@
             ]
           },
           {
-            "label": "Rolling Kick",
             "value": "Compendium.ptu.moves.Item.SLG74AL41rgCYYrw",
+            "label": "Rolling Kick",
             "predicate": [
               "ability:reckless",
               {
@@ -130,8 +138,8 @@
             ]
           },
           {
-            "label": "Vital Throw",
             "value": "Compendium.ptu.moves.Item.NNIBGqOXtXQDkeky",
+            "label": "Vital Throw",
             "predicate": [
               "ability:guts",
               {
@@ -157,8 +165,8 @@
         "adjustName": false,
         "choices": [
           {
-            "label": "Acupressure",
             "value": "Compendium.ptu.moves.Item.iQXpUEYL3sawCfvM",
+            "label": "Acupressure",
             "predicate": [
               "ability:limber",
               {
@@ -175,8 +183,8 @@
             ]
           },
           {
-            "label": "Arm Thrust",
             "value": "Compendium.ptu.moves.Item.MVQIN27r61bxzB7J",
+            "label": "Arm Thrust",
             "predicate": [
               "ability:technician",
               {
@@ -193,8 +201,8 @@
             ]
           },
           {
-            "label": "Double Kick",
             "value": "Compendium.ptu.moves.Item.24gRKtjHojSS9Vb0",
+            "label": "Double Kick",
             "predicate": [
               {
                 "not": "move:double-kick"
@@ -210,8 +218,8 @@
             ]
           },
           {
-            "label": "Focus Energy",
             "value": "Compendium.ptu.moves.Item.TbqvNIqswHYAVHOW",
+            "label": "Focus Energy",
             "predicate": [
               {
                 "not": "move:focus-energy"
@@ -227,8 +235,8 @@
             ]
           },
           {
-            "label": "Karate Chop",
             "value": "Compendium.ptu.moves.Item.AJTIueQXgC9l1plL",
+            "label": "Karate Chop",
             "predicate": [
               "ability:inner-focus",
               {
@@ -245,8 +253,8 @@
             ]
           },
           {
-            "label": "Low Sweep",
             "value": "Compendium.ptu.moves.Item.PdslVg2qIvDMDHiA",
+            "label": "Low Sweep",
             "predicate": [
               {
                 "not": "move:low-sweep"
@@ -262,8 +270,8 @@
             ]
           },
           {
-            "label": "Mach Punch",
             "value": "Compendium.ptu.moves.Item.tfZD8XbANRwj7C1a",
+            "label": "Mach Punch",
             "predicate": [
               "ability:iron-fist",
               {
@@ -280,8 +288,8 @@
             ]
           },
           {
-            "label": "Rolling Kick",
             "value": "Compendium.ptu.moves.Item.SLG74AL41rgCYYrw",
+            "label": "Rolling Kick",
             "predicate": [
               "ability:reckless",
               {
@@ -298,8 +306,8 @@
             ]
           },
           {
-            "label": "Vital Throw",
             "value": "Compendium.ptu.moves.Item.NNIBGqOXtXQDkeky",
+            "label": "Vital Throw",
             "predicate": [
               "ability:guts",
               {
@@ -359,7 +367,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -382,7 +391,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -392,7 +403,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Martial Artist"
+      "prereqBackup": "Martial Artist",
+      "automationStatus": "needs-automation",
+      "devNote": "Move selection checks abilities, but if a trainer has those abilities outside of their Martial Artist style, those options should not be available",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -405,7 +419,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 55900000,
   "_id": "mqv5LEPHUE4GTpKk"
 }

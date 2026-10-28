@@ -1,0 +1,61 @@
+{
+  "name": "Insight of the Great Ones",
+  "type": "capability",
+  "_id": "zbY26ZmCWvhdkCav",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.capabilities.Item.irI10S0Ac862yBVT]\nMessiah: Scene - Rapid Action\nSigner: Rapid Action\nTarget: A Pokémon or Trainer.\nMessiah Effect: You become aware of any Pacts, Patrons, or Allegiances the Target may have to a Legendary being or any organizations. If this Target has a particular weakness (Both Narrative and mechanical), you become aware of it. You also become aware of any goals or motives the Target might possess at the moment.\nSigner Effect: You learn one of the Target’s weaknesses (Narrative or mechanical). If this target aligned to a Legendary or an organization, you become of aware of this fact, but not of who or what in particular. You also learn if this Targets motives or goals would harm your Patron or their followers.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "insight-of-the-great-ones",
+    "contentSet": "blessed-and-damned",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "custom",
+      "max": null,
+      "custom": "Messiah: Scene - Rapid / Signer: Rapid",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": true,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false,
+      "used": null
+    }
+  }
+}

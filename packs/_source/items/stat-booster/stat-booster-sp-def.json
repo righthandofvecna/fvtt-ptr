@@ -1,5 +1,5 @@
 {
-  "name": "Stat Booster (SpDef)",
+  "name": "Stat Booster (Special Defense)",
   "system": {
     "origin": "",
     "effect": "The default state of the holder's Special Defense Stat is +1 Combat Stage. Accessory Item for Trainers.",
@@ -64,7 +64,7 @@
     "subtype": "",
     "container": false,
     "automation": [],
-    "name": "Focus",
+    "name": "Stat Booster (Special Defense)",
     "useCount": 0,
     "contentSet": "",
     "replacesSlug": ""
@@ -81,7 +81,7 @@
   "ownership": {
     "default": 0
   },
-  "_id": "3TjY0hxdF9Kwe1yw",
+  "_id": "y2YpdrPUzgxy7H4b",
   "sort": 0,
   "_stats": {
     "coreVersion": "13.351",

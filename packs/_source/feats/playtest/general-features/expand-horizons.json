@@ -1,0 +1,82 @@
+{
+  "name": "Expand Horizons",
+  "system": {
+    "origin": "",
+    "effect": "Target: Your Pokémon\nEffect: Your Pokémon gains 3 Tutor Slots. A Pokémon may be targeted by Expand Horizons only once.\n@UUID[Compendium.ptu.poke-edges.Item.F6F8l717rLFJtLkO]{Expand Horizons Poké Edge}",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "expand-horizons",
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:29.256Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Playtest",
+      "Class Rework",
+      "General"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "At-Will - Extended Action",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "prerequisites": [
+      "Mentoring"
+    ],
+    "notes": "",
+    "free": false,
+    "repeatable": false,
+    "class": "",
+    "name": "Expand Horizons",
+    "useCount": 0,
+    "automation": []
+  },
+  "type": "feat",
+  "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "prereqBackup": "Mentor",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "folder": "99i7IqV920YvWab8",
+  "_id": "p3i9ZMzCx3rhyUQu"
+}

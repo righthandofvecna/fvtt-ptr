@@ -392,6 +392,14 @@ export function registerSettings() {
     // //     
     // // });
 
+    game.settings.register("ptu", "heldItemChances", {
+        name: "Held Item Generation Chances",
+        scope: "world",
+        config: false,
+        type: Object,
+        default: {}
+    });
+
     // DO NOT DELETE THIS SETTING
     // They are required for backwards compatibility and importing of the old data
     game.settings.register("ptu", "customSpeciesData", {

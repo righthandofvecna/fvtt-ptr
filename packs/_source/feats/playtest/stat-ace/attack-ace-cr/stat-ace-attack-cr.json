@@ -64,9 +64,9 @@
     },
     "prerequisites": [
       "All A or B options",
-      "A:1 Pokémon with the chosen stat of 30 more",
+      "A: 1 Pokémon with Attack of 30",
       "A: Expert Command or Focus",
-      "B:4 Pokémon with the chosen stat at 20 or higher",
+      "B: 4 Pokémon with Attack of 20",
       "B: Adept Command or Focus"
     ],
     "notes": "",

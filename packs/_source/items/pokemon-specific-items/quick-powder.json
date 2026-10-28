@@ -1,0 +1,94 @@
+{
+  "folder": "w7LwZW6fD6O8YmRm",
+  "name": "Quick Powder",
+  "type": "item",
+  "_id": "1uT59SLltdPNBDcS",
+  "img": "systems/ptu/static/images/item_icons/quick powder.webp",
+  "system": {
+    "origin": "",
+    "effect": "An item to be held by Ditto. Extremely fine yet hard, this odd powder boosts the Speed stat by +5 while Ditto is not transformed.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "species:ditto"
+        ],
+        "mode": "add",
+        "path": "system.stats.spd.mod.mod",
+        "phase": "applyAEs",
+        "value": 5,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "quick-powder",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "2500",
+    "consumable": 0,
+    "subtype": "",
+    "container": false
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.56",
+    "createdTime": 1793132089992,
+    "modifiedTime": 1793132222748,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

@@ -2,87 +2,117 @@
   "name": "Martial Artist",
   "system": {
     "origin": "",
-    "effect": "Choose one of the following abilities: Guts [+HP], Inner Focus [+Speed], Iron Fist [+Defense], Limber [+Speed], Reckless [+Attack], Technician [+Speed]. You gain the chosen Ability and its associated tag. Whenever you gain any Martial Artist Feature, you also gain the associated tag.",
+    "effect": "Choose one of the following abilities: @UUID[Compendium.ptu.abilities.Item.MmN3OuS0wuIjvAWR]{Guts} [+HP], @UUID[Compendium.ptu.abilities.Item.uM561WHxXwcdrMWl]{Inner Focus} [+Speed], @UUID[Compendium.ptu.abilities.Item.Ro8jM65y4N3lP1tq]{Iron Fist} [+Defense], @UUID[Compendium.ptu.abilities.Item.GfjB1TuUfCwWHWaw]{Limber} [+Speed], @UUID[Compendium.ptu.abilities.Item.rCJBNK2adHEKBYfG]{Reckless} [+Attack], @UUID[Compendium.ptu.abilities.Item.mfD1Ga7xMCBqOk5H]{Technician} [+Speed]. You gain the chosen Ability and its associated tag. Whenever you gain any Martial Artist Feature, you also gain the associated tag.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "flag": "move",
-        "adjustName": true,
+        "flag": "martialartist",
         "choices": [
           {
-            "label": "Guts: [+HP]",
-            "value": "Compendium.ptu.abilities.Item.MmN3OuS0wuIjvAWR"
+            "value": "Compendium.ptu.abilities.Item.MmN3OuS0wuIjvAWR",
+            "label": "Guts: [+HP]"
           },
           {
-            "label": "Inner Focus: [+Speed]",
-            "value": "Compendium.ptu.abilities.Item.uM561WHxXwcdrMWl"
+            "value": "Compendium.ptu.abilities.Item.uM561WHxXwcdrMWl",
+            "label": "Inner Focus: [+Speed]"
           },
           {
-            "label": "Iron Fist: [+Defense]",
-            "value": "Compendium.ptu.abilities.Item.Ro8jM65y4N3lP1tq"
+            "value": "Compendium.ptu.abilities.Item.Ro8jM65y4N3lP1tq",
+            "label": "Iron Fist: [+Defense]"
           },
           {
-            "label": "Limber: [+Speed]",
-            "value": "Compendium.ptu.abilities.Item.GfjB1TuUfCwWHWaw"
+            "value": "Compendium.ptu.abilities.Item.GfjB1TuUfCwWHWaw",
+            "label": "Limber: [+Speed]"
           },
           {
-            "label": "Reckless: [+Attack]",
-            "value": "Compendium.ptu.abilities.Item.rCJBNK2adHEKBYfG"
+            "value": "Compendium.ptu.abilities.Item.rCJBNK2adHEKBYfG",
+            "label": "Reckless: [+Attack]"
           },
           {
-            "label": "Technician: [+Speed]",
-            "value": "Compendium.ptu.abilities.Item.mfD1Ga7xMCBqOk5H"
+            "value": "Compendium.ptu.abilities.Item.mfD1Ga7xMCBqOk5H",
+            "label": "Technician: [+Speed]"
           }
-        ]
+        ],
+        "adjustName": false
       },
       {
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "{item|flags.ptu.rulesSelections.move}"
+        "uuid": "{item|flags.ptu.rulesSelections.martialartist}"
       },
       {
         "key": "ActiveEffectLike",
         "path": "system.modifiers.baseStats.hp.mod",
         "mode": "add",
         "value": 1,
-        "predicate": [
-          "class:martial-artist-guts-hp"
-        ]
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.MmN3OuS0wuIjvAWR"
+          ]
+        },
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
         "path": "system.modifiers.baseStats.spd.mod",
         "mode": "add",
         "value": 1,
-        "predicate": [
-          {
-            "or": [
-              "class:martial-artist-inner-focus-speed",
-              "class:martial-artist-limber-speed",
-              "class:martial-artist-technician-speed"
-            ]
-          }
-        ]
+        "predicate": {
+          "or": [
+            {
+              "eq": [
+                "{item|flags.ptu.rulesSelections.martialartist}",
+                "Compendium.ptu.abilities.Item.uM561WHxXwcdrMWl"
+              ]
+            },
+            {
+              "eq": [
+                "{item|flags.ptu.rulesSelections.martialartist}",
+                "Compendium.ptu.abilities.Item.GfjB1TuUfCwWHWaw"
+              ]
+            },
+            {
+              "eq": [
+                "{item|flags.ptu.rulesSelections.martialartist}",
+                "Compendium.ptu.abilities.Item.mfD1Ga7xMCBqOk5H"
+              ]
+            }
+          ]
+        },
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
         "path": "system.modifiers.baseStats.def.mod",
         "mode": "add",
         "value": 1,
-        "predicate": [
-          "class:martial-artist-iron-fist-defense"
-        ]
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.Ro8jM65y4N3lP1tq"
+          ]
+        },
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
         "path": "system.modifiers.baseStats.atk.mod",
         "mode": "add",
         "value": 1,
-        "predicate": [
-          "class:martial-artist-reckless-attack"
-        ]
+        "predicate": {
+          "eq": [
+            "{item|flags.ptu.rulesSelections.martialartist}",
+            "Compendium.ptu.abilities.Item.rCJBNK2adHEKBYfG"
+          ]
+        },
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -116,7 +146,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -140,7 +171,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -151,7 +184,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Basic Martial Arts, Novice Combat"
+      "prereqBackup": "Basic Martial Arts, Novice Combat",
+      "automationStatus": "completed",
+      "devNote": "Checks for initial style selection work for this feature, but need to wait for flags to be readable beyond the local item to apply to subsequent features"
     }
   },
   "_stats": {
@@ -164,7 +199,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 29600000,
   "_id": "RRgxTLIcGFVgDmCt"
 }
