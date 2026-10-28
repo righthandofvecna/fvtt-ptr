@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Mentor Lessons",
-    "effect": "Prerequisites: Mentor, Intuition as a Mentor Skill Target: A Pokémon with at least 1 Tutor Point. Effect: The target loses a Tutor Point, and you may change the target’s Nature to any other Nature which either raises the same Stat as its current nature, or lowers the same Stat as its current Nature.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.ohuHe7DxrHOxna6E]{Mentor}, Intuition as a Mentor Skill\nTarget: A Pokémon with at least 1 Tutor Point.\nEffect: The target loses a Tutor Point, and you may change the target’s Nature to any other Nature which either raises the same Stat as its current nature, or lowers the same Stat as its current Nature.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "yrRxcxnjaO97zKaX",
   "effects": [],
-  "folder": null,
   "sort": 31400000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
