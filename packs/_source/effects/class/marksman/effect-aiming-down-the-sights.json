@@ -36,9 +36,9 @@
       "value": 1
     },
     "duration": {
-      "value": -1,
-      "unit": "unlimited",
-      "expiry": null
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-start"
     },
     "start": {
       "value": 0,
@@ -60,7 +60,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "Expiry set to start of next turn, would need to be manually removed if spent sooner"
     }
   },
   "_stats": {

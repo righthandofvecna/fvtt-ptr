@@ -2,7 +2,7 @@
   "name": "Hobbling Shot",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Make a Ranged Struggle Attack attack with a -2 penalty to Accuracy. If you hit, the attack deals Damage as if it was resisted one step, but the target becomes Slowed, loses 1 Speed Combat Stage, and you initiate a Trip Maneuver against the target. You may use your Perception Skill to resolve the Opposed Check if you wish.",
+    "effect": "Effect: Make a Ranged Struggle Attack attack with a -2 penalty to Accuracy. If you hit, the attack deals Damage as if it was resisted one step, but the target becomes @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed}, loses 1 Speed Combat Stage, and you initiate a @UUID[Compendium.ptu.moves.Item.wF3ORK20xylO1ZGs]{Trip Maneuver} against the target. You may use your Perception Skill to resolve the Opposed Check if you wish.",
     "snippet": "",
     "rules": [
       {
@@ -28,7 +28,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.LSvzMwpQ1G3gW8Pt",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -49,7 +49,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -71,7 +72,9 @@
     "class": "Marksman",
     "name": "Hobbling Shot [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "hobbling-shot"
+    "replacesSlug": "hobbling-shot",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +85,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
