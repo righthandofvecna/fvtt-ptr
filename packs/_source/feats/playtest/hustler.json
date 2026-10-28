@@ -2,9 +2,51 @@
   "name": "Hustler",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Trigger: You train your Pokémon\nEffect: Your Pokémon of Friendship 4 or higher are able train up to 4 different Trainings during your hour training. You gain additional training when taking this class, you can choose any training ignoring prerequisites. For each training above the 1st, your Pokémon loses one Spirit.\nBonus: When your Pokémon are using Spirit, they can always spend Spirit to -3.\nNote: To Clarify, while at 0 or Above, Hustlers can spend Spirit down to -3, all other classes can only spend down to 0 (or -1 for intercepting)",
+    "effect": "Trigger: You train one of your Pokémon with Friendship 4 or greater\nEffect: Your Pokémon can receive up to 4 different concurrent [Training] effects. For each [Training] effect beyond the first, your Pokémon loses one Spirit.\nBonus: You gain one additional [Training] Feature when taking this class, ignoring prerequisites.\nBonus: Whenever your Pokémon use Spirit, they can always spend Spirit to -3.\n<blockquote>Note: To clarify, while at 0 Spirit or above, Hustlers can spend Spirit down to -3. Non-Hustlers can only spend down to 0 (or to -1 when Intercepting).</blockquote",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.feats.Item.TQ6scoBM3iZKMuZT",
+            "label": "Agility Training",
+            "predicate": {
+              "not": "feat:agility-training"
+            }
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.MolTHMn3UrNiIZ3h",
+            "label": "Brutal Training",
+            "predicate": {
+              "not": "feat:brutal-training"
+            }
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.FLSt79Zix8j69T07",
+            "label": "Focused Training",
+            "predicate": {
+              "not": "feat:focused-training"
+            }
+          },
+          {
+            "value": "Compendium.ptu.feats.Item.WfLcIrUmRwblAaYr",
+            "label": "Inspired Training",
+            "predicate": {
+              "not": "feat:inspired-training"
+            }
+          }
+        ],
+        "flag": "hustler1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.hustler1}"
+      }
+    ],
     "enabled": true,
     "slug": "hustler",
     "schema": {
@@ -37,7 +79,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,8 +102,10 @@
     "name": "Enduring Soul",
     "useCount": 0,
     "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -68,7 +113,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Novice Athletics or Acrobatics or Combat"
+      "prereqBackup": "Novice Athletics or Acrobatics or Combat",
+      "automationStatus": "needs-automation",
+      "devNote": "A proposed rephrasing based on my understanding of the original language -WW"
     }
   },
   "_stats": {

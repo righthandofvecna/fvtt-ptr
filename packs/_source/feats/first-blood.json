@@ -2,7 +2,7 @@
   "name": "First Blood",
   "system": {
     "origin": "",
-    "effect": "Trigger - You release a Pokémon from its Poké Ball\nEffect: If you have a Pokémon turn available this round or next, your Pokémon may use a Move as an Interrupt as soon as it is sent out. This consumes your Pokémon turn for the round (or the following round) as normal.",
+    "effect": "Trigger: You release a Pokémon from its Poké Ball\nEffect: If you have a Pokémon turn available this round or next, your Pokémon may use a Move as an Interrupt as soon as it is sent out. This consumes your Pokémon turn for the round (or the following round) as normal.",
     "snippet": "",
     "rules": [
       {
@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +72,9 @@
     "name": "First Blood",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -82,7 +85,10 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Tag In, Master Acrobatics or Guile",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
@@ -95,7 +101,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 1300000,
   "_id": "0v2CL7tQH8WrKZg9"
 }

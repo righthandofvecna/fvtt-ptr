@@ -2,7 +2,7 @@
   "name": "Tag Out",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You recall a Pokémon\nEffect: Your Pokémon may Take A Breather as a Free Action inside it's ball immediately after being recalled.",
+    "effect": "Trigger: You recall a Pokémon\nEffect: Your Pokémon may @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.kh6plRgPLPwlnnlY]{Take A Breather} as a Free Action inside it's ball immediately after being recalled.",
     "snippet": "",
     "rules": [
       {
@@ -39,8 +39,8 @@
       "Class Rework"
     ],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "scene",
+      "max": 2,
       "custom": "2x Scene – Free Action",
       "modifiers": {
         "priorityLimited": false,
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +70,9 @@
     "class": "Juggler",
     "name": "Tag Out [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "tag-out"
+    "replacesSlug": "tag-out",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -80,7 +83,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false,
+      "used": null
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
