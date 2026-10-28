@@ -1,0 +1,94 @@
+{
+  "name": "Enigma Berry",
+  "system": {
+    "origin": "",
+    "effect": "User gains Temporary HP equal to 1/6th of their Max HP when hit by a Super Effective Move. Tier 2.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "enigma-berry",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:42.327Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Berry",
+      "Tier 2",
+      "Wild Drop",
+      "Spicy",
+      "Dry"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "quantity": "1",
+    "category": "",
+    "cost": "250",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Enigma Berry",
+    "useCount": 0
+  },
+  "type": "item",
+  "img": "systems/ptu/static/images/item_icons/enigma berry.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.31",
+    "coreVersion": "13.351",
+    "createdTime": 1683368847831,
+    "modifiedTime": 1781458371254,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "berriesFolder000",
+  "sort": 62800000,
+  "_id": "uahYsx6JSnsISmvH"
+}

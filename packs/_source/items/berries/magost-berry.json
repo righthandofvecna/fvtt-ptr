@@ -1,0 +1,95 @@
+{
+  "name": "Magost Berry",
+  "system": {
+    "origin": "",
+    "effect": "Cures @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Enraged} condition. Tier 2.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "magost-berry",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:41.917Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Berry",
+      "Tier 2",
+      "Wild Drop",
+      "Sweet",
+      "Bitter"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "quantity": "1",
+    "category": "",
+    "cost": "250",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Magost Berry",
+    "useCount": 0,
+    "leagueLegal": false
+  },
+  "type": "item",
+  "img": "systems/ptu/static/images/item_icons/magost berry.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.31",
+    "coreVersion": "13.351",
+    "createdTime": 1683368802327,
+    "modifiedTime": 1781458453365,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 41200000,
+  "_id": "YvfMvlPLXjg1ObaG",
+  "folder": "berriesFolder000"
+}

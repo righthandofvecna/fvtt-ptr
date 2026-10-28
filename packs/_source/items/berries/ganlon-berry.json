@@ -1,0 +1,95 @@
+{
+  "name": "Ganlon Berry",
+  "system": {
+    "origin": "",
+    "effect": "+1 Defense Combat Stage. Tier 2.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "ganlon-berry",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:41.715Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Berry",
+      "Tier 2",
+      "Wild Drop",
+      "Dry",
+      "Sweet",
+      "Bitter"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "quantity": "1",
+    "category": "",
+    "cost": "250",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Ganlon Berry",
+    "useCount": 0
+  },
+  "type": "item",
+  "img": "systems/ptu/static/images/item_icons/ganlon berry.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.31",
+    "coreVersion": "13.351",
+    "createdTime": 1683368810078,
+    "modifiedTime": 1781458381724,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "berriesFolder000",
+  "sort": 36200000,
+  "_id": "UQZg03UetHtq6tBK"
+}

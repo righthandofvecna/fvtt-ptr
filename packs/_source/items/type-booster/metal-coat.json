@@ -2,7 +2,7 @@
   "name": "Metal Coat",
   "system": {
     "origin": "",
-    "effect": "Grants a +5 Damage Bonus to all direct-damage Steel Moves used by the holder. Accessory Item for Trainers.",
+    "effect": "Grants a +5 Damage Bonus to all direct-damage Steel Moves used by the holder. Accessory Item for Trainers.\n\nEvolves Onix and Scyther.",
     "snippet": "",
     "rules": [
       {
@@ -17,6 +17,8 @@
     ],
     "enabled": true,
     "slug": "metal-coat",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -36,7 +38,8 @@
     "keywords": [
       "Held Item",
       "Accessory",
-      "Artificer"
+      "Artificer",
+      "Evo. Item"
     ],
     "frequency": {
       "type": "static",
@@ -48,7 +51,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,6 +65,7 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "quantity": "1",
     "category": "",
     "cost": "1800",
@@ -69,10 +74,7 @@
     "container": false,
     "automation": [],
     "name": "Metal Coat",
-    "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": "",
-    "leagueLegal": false
+    "useCount": 0
   },
   "type": "item",
   "img": "/systems/ptu/static/images/item_icons/Dream_Metal_Coat_Sprite.png",
@@ -89,13 +91,13 @@
     "default": 0
   },
   "_id": "Wt7PCOHdVHRaDklg",
-  "sort": 0,
+  "sort": 78712,
   "_stats": {
-    "coreVersion": "13.351",
+    "coreVersion": "14.367",
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
+    "systemVersion": "4.4.3.57",
     "createdTime": 1710773503174,
-    "modifiedTime": 1778200841850,
+    "modifiedTime": 1793172019812,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

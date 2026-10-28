@@ -1,0 +1,95 @@
+{
+  "name": "Grepa Berry",
+  "system": {
+    "origin": "",
+    "effect": "Lowers Special Defense Base Stat by 1 when consumed, only if Pokémon’s trainer wishes it to. Tier 3.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "grepa-berry",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:40.999Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Berry",
+      "Tier 3",
+      "Wild Drop",
+      "Dry",
+      "Sweet",
+      "Sour"
+    ],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "quantity": "1",
+    "category": "",
+    "cost": "500",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Grepa Berry",
+    "useCount": 0
+  },
+  "type": "item",
+  "img": "systems/ptu/static/images/item_icons/grepa berry.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.31",
+    "coreVersion": "13.351",
+    "createdTime": 1683368783966,
+    "modifiedTime": 1781458386924,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "berriesFolder000",
+  "sort": 8200000,
+  "_id": "5c1Ra5oqykO2dMb9"
+}
