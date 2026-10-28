@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "You gain the move @UUID[Compendium.ptu.moves.Item.ZfiKeomwzV8LtjDx]{Return+} or @UUID[Compendium.ptu.moves.Item.tkATQl42vxqWDfjd]{Frustration+} of your choice.",
+    "effect": "Choose @UUID[Compendium.ptu.moves.Item.ZfiKeomwzV8LtjDx]{Return+} or @UUID[Compendium.ptu.moves.Item.tkATQl42vxqWDfjd]{Frustration+}. You gain the chosen Move.",
     "snippet": "",
     "rules": [
       {
