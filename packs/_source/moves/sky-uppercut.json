@@ -2,7 +2,6 @@
   "name": "Sky Uppercut",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FightingIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Sky Uppercut may be used as an Interrupt when against a target initiating Bounce, Fly, or Sky Drop to allow the user to Shift and use Sky Uppercut. If Sky Uppercut successfully hits its target, the triggering Move fails (though the target may take their next turn normally).",
@@ -49,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -73,7 +73,8 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "_id": "hxl2mc7IwXPK406t",
   "effects": [],
