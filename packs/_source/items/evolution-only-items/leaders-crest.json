@@ -1,16 +1,16 @@
 {
-  "folder": "4po1acTFNEREFHDX",
-  "name": "Pretty Feather",
+  "folder": "vEuVgAZOAyGrdoQd",
+  "name": "Leader's Crest",
   "type": "item",
-  "_id": "lpJqqDgsk1tjaWG8",
-  "img": "systems/ptu/static/images/item_icons/pretty wing.webp",
+  "_id": "zaQ7OEEZtzRUJ6xn",
+  "img": "systems/ptu/static/images/item_icons/leaders_crest.png",
   "system": {
     "origin": "",
-    "effect": "Though this feather is beautiful, it's just a regular feather and has no effect on Pokémon.",
+    "effect": "A shard of what appears to be an old blade of some sort. It is held only by Bisharp that head up a group of Pawniard.\n\nA Bisharp that defeats three other Bisharp who hold a Leader's Crest gains the ability to evolve into a Kingambit.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "pretty-wing",
+    "slug": "leaders-crest",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -23,7 +23,7 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Treasure"
+      "Held Item"
     ],
     "frequency": {
       "type": "static",
@@ -52,7 +52,7 @@
     "leagueLegal": false,
     "quantity": "1",
     "category": "",
-    "cost": "500",
+    "cost": "3750",
     "consumable": 0,
     "subtype": "",
     "container": false
@@ -64,17 +64,18 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "no-automation-needed",
+      "automationStatus": "requires-system-changes",
       "devNote": "",
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "used": null
     }
   },
   "_stats": {
     "coreVersion": "14.367",
     "systemId": "ptu",
     "systemVersion": "4.4.3.56",
-    "createdTime": 1793133568682,
-    "modifiedTime": 1793133606875,
+    "createdTime": 1793136271996,
+    "modifiedTime": 1793136387003,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

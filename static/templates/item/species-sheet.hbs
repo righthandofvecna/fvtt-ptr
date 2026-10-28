@@ -222,7 +222,7 @@
                     </div>
                     <ol class="item-list inventory-list p-0 m-0">
                         {{#each heldItems}}
-                            <li class="item d-flex flex-row align-items-center p-1" data-uuid="{{uuid}}">
+                            <li class="item d-flex flex-row align-items-center p-1" data-uuid="{{uuid}}" data-slug="{{slug}}">
                                 <img class="item-image" src="{{img}}" title="{{name}}" style="width:24px;height:24px;object-fit:contain;margin-right:4px;"/>
                                 <span class="item-name" style="flex:1;">{{name}}</span>
                                 <input class="held-item-chance" type="number" value="{{chance}}" min="0" max="100" step="1" style="width:50px;text-align:center;"/>

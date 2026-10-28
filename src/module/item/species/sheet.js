@@ -75,7 +75,10 @@ class PTUSpeciesSheet extends PTUItemSheet {
         );
 
         // Load held items for this species from the world setting
-        const heldItemChances = game.settings.get("ptu", "heldItemChances");
+        const heldItemChances = {
+            ...CONFIG.PTU.data.defaultHeldItemChances,
+            ...game.settings.get("ptu", "heldItemChances")
+        };
         const rawHeldItems = heldItemChances[this.item.slug] ?? [];
         data.heldItems = await Promise.all(rawHeldItems.map(async entry => {
             const heldItemDoc = entry.uuid ? await fromUuid(entry.uuid) : null;
@@ -191,28 +194,46 @@ class PTUSpeciesSheet extends PTUItemSheet {
         if (game.user.isGM) {
             html.find('.held-item-delete').on('click', async (event) => {
                 event.preventDefault();
-                const uuid = event.currentTarget.closest('[data-uuid]')?.dataset.uuid;
+                const li = event.currentTarget.closest('[data-uuid]');
+                const uuid = li?.dataset.uuid;
                 if (!uuid) return;
                 const heldItemChances = game.settings.get("ptu", "heldItemChances");
-                const slug = this.item.slug;
-                heldItemChances[slug] = (heldItemChances[slug] ?? []).filter(e => e.uuid !== uuid);
+                const speciesSlug = this.item.slug;
+                const entries = PTUSpeciesSheet.#getOrCopyDefaultEntries(heldItemChances, speciesSlug);
+                heldItemChances[speciesSlug] = entries.filter(e => e.uuid !== uuid);
                 await game.settings.set("ptu", "heldItemChances", heldItemChances);
                 return this.render(false);
             });
 
             html.find('.held-item-chance').on('change', async (event) => {
-                const uuid = event.currentTarget.closest('[data-uuid]')?.dataset.uuid;
+                const li = event.currentTarget.closest('[data-uuid]');
+                const uuid = li?.dataset.uuid;
+                const itemSlug = li?.dataset.slug ?? '';
                 if (!uuid) return;
                 const chance = Math.clamp(Number(event.currentTarget.value), 0, 100);
                 const heldItemChances = game.settings.get("ptu", "heldItemChances");
-                const slug = this.item.slug;
-                const entry = (heldItemChances[slug] ?? []).find(e => e.uuid === uuid);
+                const speciesSlug = this.item.slug;
+                const entries = PTUSpeciesSheet.#getOrCopyDefaultEntries(heldItemChances, speciesSlug);
+                const entry = entries.find(e => e.uuid === uuid);
                 if (entry) {
                     entry.chance = chance;
-                    await game.settings.set("ptu", "heldItemChances", heldItemChances);
+                } else {
+                    entries.push({ slug: itemSlug, uuid, chance });
                 }
+                heldItemChances[speciesSlug] = entries;
+                await game.settings.set("ptu", "heldItemChances", heldItemChances);
             });
         }
+    }
+
+    /**
+     * Returns the saved held-item entries for a species, or a deep-cloned copy of the
+     * default entries if the species hasn't been customised yet (copy-on-write).
+     */
+    static #getOrCopyDefaultEntries(heldItemChances, speciesSlug) {
+        if (speciesSlug in heldItemChances) return heldItemChances[speciesSlug];
+        const defaults = CONFIG.PTU.data.defaultHeldItemChances?.[speciesSlug];
+        return defaults ? foundry.utils.deepClone(defaults) : [];
     }
 
     get allowedDropTypes() {
@@ -390,7 +411,7 @@ class PTUSpeciesSheet extends PTUItemSheet {
                     if (!game.user.isGM) return;
                     const heldItemChances = game.settings.get("ptu", "heldItemChances");
                     const speciesSlug = this.item.slug;
-                    const current = heldItemChances[speciesSlug] ?? [];
+                    const current = PTUSpeciesSheet.#getOrCopyDefaultEntries(heldItemChances, speciesSlug);
                     if (current.find(e => e.uuid === item.uuid)) return;
                     current.push({ slug: item.slug, uuid: item.uuid, chance: 5 });
                     heldItemChances[speciesSlug] = current;

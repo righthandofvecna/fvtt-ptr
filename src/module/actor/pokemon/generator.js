@@ -419,7 +419,10 @@ export class PokemonGenerator {
     prepareHeldItem(generateHeldItem = false) {
         if (!generateHeldItem) return this.heldItem = null;
 
-        const heldItemChances = game.settings.get("ptu", "heldItemChances");
+        const heldItemChances = {
+            ...CONFIG.PTU.data.defaultHeldItemChances,
+            ...game.settings.get("ptu", "heldItemChances"),
+        }
         const items = heldItemChances[this.species.slug] ?? [];
 
         for (const entry of items) {

@@ -1,0 +1,82 @@
+{
+  "folder": "XtbIrywzkrVnpOXb",
+  "name": "Light Clay",
+  "type": "item",
+  "_id": "u7mwwdQTMRqjYF1s",
+  "img": "systems/ptu/static/images/item_icons/Dream_Light_Clay_Sprite.png",
+  "system": {
+    "origin": "",
+    "effect": "An item to be held by a Pokémon. When the holder uses @UUID[Compendium.ptu.moves.Item.weEc5wlOZ5H7Tguh]{Light Screen}, @UUID[Compendium.ptu.moves.Item.eDFWwKCjaJ7vNNbJ]{Reflect}, or @UUID[Compendium.ptu.moves.Item.C70wtWRmVuXR7SGi]{Aurora Veil}, the Blessing may be activated two additional times before expiring.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "light-clay",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "20000",
+    "consumable": 0,
+    "subtype": "",
+    "container": false
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "requires-system-changes",
+      "devNote": "I need to add automation for blessings like Light Screen, Reflect, and Aurora Veil before this will do anything -Dylan",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.56",
+    "createdTime": 1793135139997,
+    "modifiedTime": 1793135427229,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}

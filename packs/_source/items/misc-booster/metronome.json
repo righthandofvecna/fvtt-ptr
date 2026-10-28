@@ -1,0 +1,82 @@
+{
+  "folder": "XtbIrywzkrVnpOXb",
+  "name": "Metronome",
+  "type": "item",
+  "_id": "u2B5JmlSugjAZoX5",
+  "img": "systems/ptu/static/images/item_icons/Dream_Metronome_Sprite.png",
+  "system": {
+    "origin": "",
+    "effect": "An item to be held by a Pokémon. It boosts the damage of a move that's used repeatedly. Each time the holder uses a move successively, it gains a +5 bonus to damage (to a maximum of +20). If the holder uses a different move, this bonus is removed.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "metronome",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "10000",
+    "consumable": 0,
+    "subtype": "",
+    "container": false
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.56",
+    "createdTime": 1793135542241,
+    "modifiedTime": 1793135704866,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}
