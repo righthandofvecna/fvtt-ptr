@@ -1,5 +1,4 @@
 {
-  "folder": null,
   "name": "Miasmic Spray",
   "type": "feat",
   "_id": "Bht6BgqNjJFoWfxk",
@@ -25,7 +24,8 @@
         "selectors": "acid-damage-received",
         "uuid": "Compendium.ptu.effects.Item.DSXd33NkJkdeFnnc",
         "range": "1",
-        "value": ""
+        "value": "",
+        "linked": false
       },
       {
         "key": "ApplyEffect",
@@ -34,7 +34,8 @@
         "selectors": "sludge-bomb-damage-received",
         "uuid": "Compendium.ptu.effects.Item.StOU5tMmTDCZhuow",
         "range": "1",
-        "value": ""
+        "value": "",
+        "linked": false
       },
       {
         "key": "ApplyEffect",
@@ -43,7 +44,8 @@
         "selectors": "sludge-wave-damage-received",
         "uuid": "Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt",
         "range": "1",
-        "value": ""
+        "value": "",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -81,7 +83,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -102,12 +105,15 @@
     "notes": "",
     "free": false,
     "class": "Miasmic",
-    "name": "Miasmic Spray [CR]"
+    "name": "Miasmic Spray [CR]",
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "Can be removed in favor of Compendium.ptu.feats.Item.mlwYIUn21vVaPSDj"
     }
   }
 }

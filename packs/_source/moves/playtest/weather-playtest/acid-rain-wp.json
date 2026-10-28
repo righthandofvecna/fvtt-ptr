@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -73,7 +74,8 @@
     "automation": [],
     "contentSet": "weather-playtest",
     "replacesSlug": "acid-rain",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "effects": [],
   "sort": 100000,

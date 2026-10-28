@@ -2,7 +2,6 @@
   "name": "Clear Smog",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target's Combat Stages are reset to their defaults, and all Coats on the target are destroyed. Clear Smog cannot miss.",
@@ -47,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -62,7 +62,7 @@
     },
     "type": "Poison",
     "category": "Special",
-    "damageBase": 5,
+    "damageBase": "5",
     "ac": "--",
     "range": "Range 6",
     "contestType": "Smart - Sabotage",
@@ -72,7 +72,8 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "RKyKtJkj75j2CNJF",
   "effects": [],
@@ -90,5 +91,12 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "flags": {}
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": true
+    }
+  }
 }

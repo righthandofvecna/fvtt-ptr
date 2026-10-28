@@ -2,7 +2,7 @@
   "name": "Vile Body",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose two of Absorb Force, Poison Point, or Poison Touch. You gain the chosen Abilities.",
+    "effect": "Effect: Choose two of @UUID[Compendium.ptu.abilities.Item.KjHj0iWe2S1gs9m6]{Absorb Force}, @UUID[Compendium.ptu.abilities.Item.osJgodPktGSkPJf4]{Poison Point}, or @UUID[Compendium.ptu.abilities.Item.tZqCQEp1Y7W3J3TG]{Poison Touch}. You gain the chosen Abilities.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,88 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.KjHj0iWe2S1gs9m6",
+            "label": "Absorb Force",
+            "predicate": [
+              {
+                "not": "ability:absorb-force"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.osJgodPktGSkPJf4",
+            "label": "Poison Point",
+            "predicate": [
+              {
+                "not": "ability:poison-point"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.tZqCQEp1Y7W3J3TG",
+            "label": "Poison Touch",
+            "predicate": [
+              {
+                "not": "ability:poison-touch"
+              }
+            ]
+          }
+        ],
+        "flag": "vilebody1",
+        "adjustName": false,
+        "prompt": "Choose two Abilities."
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.vilebody1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.KjHj0iWe2S1gs9m6",
+            "label": "Absorb Force",
+            "predicate": [
+              {
+                "not": "ability:absorb-force"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.osJgodPktGSkPJf4",
+            "label": "Poison Point",
+            "predicate": [
+              {
+                "not": "ability:poison-point"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.tZqCQEp1Y7W3J3TG",
+            "label": "Poison Touch",
+            "predicate": [
+              {
+                "not": "ability:poison-touch"
+              }
+            ]
+          }
+        ],
+        "flag": "vilebody2",
+        "prompt": "Choose two Abilities.",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.vilebody2}"
       }
     ],
     "enabled": true,
@@ -48,7 +130,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +152,9 @@
     "class": "Miasmic",
     "name": "Vile Body [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "vile-body"
+    "replacesSlug": "vile-body",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -80,7 +165,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

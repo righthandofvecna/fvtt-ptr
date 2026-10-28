@@ -36,7 +36,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -53,7 +54,8 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "osJgodPktGSkPJf4",
   "effects": [],
@@ -71,5 +73,5 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "flags": {}
+  "folder": null
 }

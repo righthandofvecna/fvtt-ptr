@@ -13,6 +13,13 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "EphemeralEffect",
+        "predicate": [],
+        "affects": "origin",
+        "selectors": "poison-damage",
+        "uuid": "Compendium.ptu.effects.Item.DQbQb7SHdnMGoHuu"
       }
     ],
     "enabled": true,
@@ -48,7 +55,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +77,9 @@
     "class": "Miasmic",
     "name": "Corrupt Blood [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "corrupt-blood"
+    "replacesSlug": "corrupt-blood",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -80,7 +90,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "Only missing status immunity, Poison resistance implemented",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

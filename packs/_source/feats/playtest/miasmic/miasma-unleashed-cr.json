@@ -2,7 +2,7 @@
   "name": "Miasma Unleashed",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the moves Sludge Wave and Toxic.",
+    "effect": "Effect: You learn the moves @UUID[Compendium.ptu.moves.Item.HisedpFvMgmEqsbV]{Sludge Wave} and @UUID[Compendium.ptu.moves.Item.eFxRUdqQgdnJybY4]{Toxic}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,18 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.HisedpFvMgmEqsbV"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.eFxRUdqQgdnJybY4"
       }
     ],
     "enabled": true,
@@ -48,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +83,9 @@
     "class": "Miasmic",
     "name": "Miasma Unleashed [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "miasma-unleashed"
+    "replacesSlug": "miasma-unleashed",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +96,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
