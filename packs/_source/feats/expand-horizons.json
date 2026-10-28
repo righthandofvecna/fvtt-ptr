@@ -23,7 +23,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Legacy"
+    ],
     "frequency": {
       "type": "at-will",
       "max": 0,
