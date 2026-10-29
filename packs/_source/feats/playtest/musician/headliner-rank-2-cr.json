@@ -2,7 +2,7 @@
   "name": "Headliner Rank 2",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn two Musician Moves marked with the Rank of this Feature you are taking or lower.\nRank 1: Sing, Supersonic, Sonic Boom\nRank 2: Screech, Metal Sound, Snarl, Echoed Voice\nRank 3: Hyper Voice, Uproar, Round, Chatter\nRank 4: Boomburst, Overdrive, Ancient Roar",
+    "effect": "Effect: You learn two Musician Moves marked with the Rank of this Feature you are taking or lower.\nRank 1: @UUID[Compendium.ptu.moves.Item.YD9PPN6tPaLMrvvm]{Sing}, @UUID[Compendium.ptu.moves.Item.I8d7of2dA9eAP0OG]{Supersonic}, @UUID[Compendium.ptu.moves.Item.kLwGOMnWIIl2m3sU]{Sonic Boom}\nRank 2: @UUID[Compendium.ptu.moves.Item.TD9T2QEalKGQZicp]{Screech}, @UUID[Compendium.ptu.moves.Item.FrDQDljR3YE3roFi]{Metal Sound}, @UUID[Compendium.ptu.moves.Item.jVruXIDWy3HEHAeA]{Snarl}, @UUID[Compendium.ptu.moves.Item.gOhBiJMpOl84MLaX]{Echoed Voice}\nRank 3: @UUID[Compendium.ptu.moves.Item.1Zrse7wrjRftpdXD]{Hyper Voice}, @UUID[Compendium.ptu.moves.Item.Si0MaGpUCvDBY8Gd]{Uproar}, @UUID[Compendium.ptu.moves.Item.GgdkAr3gDO6snP7r]{Round}, @UUID[Compendium.ptu.moves.Item.Y4ZEuPq2fnFkDFy7]{Chatter}\nRank 4: @UUID[Compendium.ptu.moves.Item.D6jojqxcGzhoRDwL]{Boomburst}, @UUID[Compendium.ptu.moves.Item.XjxlA3XnsIEo5J8y]{Overdrive}, @UUID[Compendium.ptu.moves.Item.rbt17HN0D19aABeC]{Ancient Roar}",
     "snippet": "",
     "rules": [
       {
@@ -21,42 +21,49 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.YD9PPN6tPaLMrvvm",
+            "label": "Sing",
             "predicate": {
               "not": "move:sing"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.I8d7of2dA9eAP0OG",
+            "label": "Supersonic",
             "predicate": {
               "not": "move:supersonic"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.kLwGOMnWIIl2m3sU",
+            "label": "Sonic Boom",
             "predicate": {
               "not": "move:sonic-boom"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.TD9T2QEalKGQZicp",
+            "label": "Screech",
             "predicate": {
               "not": "move:screech"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.FrDQDljR3YE3roFi",
+            "label": "Metal Sound",
             "predicate": {
               "not": "move:metal-sound"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.jVruXIDWy3HEHAeA",
+            "label": "Snarl",
             "predicate": {
               "not": "move:snarl"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.gOhBiJMpOl84MLaX",
+            "label": "Echoed Voice",
             "predicate": {
               "not": "move:echoed-voice"
             }
@@ -76,42 +83,49 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.YD9PPN6tPaLMrvvm",
+            "label": "Sing",
             "predicate": {
               "not": "move:sing"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.I8d7of2dA9eAP0OG",
+            "label": "Supersonic",
             "predicate": {
               "not": "move:supersonic"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.kLwGOMnWIIl2m3sU",
+            "label": "Sonic Boom",
             "predicate": {
               "not": "move:sonic-boom"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.TD9T2QEalKGQZicp",
+            "label": "Screech",
             "predicate": {
               "not": "move:screech"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.FrDQDljR3YE3roFi",
+            "label": "Metal Sound",
             "predicate": {
               "not": "move:metal-sound"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.jVruXIDWy3HEHAeA",
+            "label": "Snarl",
             "predicate": {
               "not": "move:snarl"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.gOhBiJMpOl84MLaX",
+            "label": "Echoed Voice",
             "predicate": {
               "not": "move:echoed-voice"
             }
@@ -159,7 +173,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -181,7 +196,9 @@
     "class": "Musician",
     "name": "Headliner [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "headliner-rank-2"
+    "replacesSlug": "headliner-rank-2",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -193,7 +210,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

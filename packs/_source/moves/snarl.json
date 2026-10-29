@@ -2,7 +2,6 @@
   "name": "Snarl",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Lower the Special Attack of all legal targets by 1 Combat Stage.",
@@ -15,7 +14,8 @@
         "selectors": "{item|id}-damage-received",
         "uuid": "Compendium.ptu.effects.Item.dqug0lkN2cNObB7t",
         "range": "1",
-        "value": ""
+        "value": "",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -57,7 +57,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -81,7 +82,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "jVruXIDWy3HEHAeA",
   "effects": [],
@@ -91,7 +94,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

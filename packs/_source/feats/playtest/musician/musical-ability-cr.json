@@ -2,7 +2,7 @@
   "name": "Musical Ability",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose Punk Rock or Sound Lance. You gain the chosen Ability.",
+    "effect": "Effect: Choose @UUID[Compendium.ptu.abilities.Item.tGUi7mWP6heTEOoW]{Punk Rock} or @UUID[Compendium.ptu.abilities.Item.5Ggs5ri8KolxSCmx]{Sound Lance}. You gain the chosen Ability.",
     "snippet": "",
     "rules": [
       {
@@ -16,14 +16,16 @@
       },
       {
         "key": "ChoiceSet",
-        "flag": "move",
+        "flag": "ability",
         "adjustName": false,
         "choices": [
           {
-            "value": "Compendium.ptu.abilities.Item.tGUi7mWP6heTEOoW"
+            "value": "Compendium.ptu.abilities.Item.tGUi7mWP6heTEOoW",
+            "label": "Punk Rock"
           },
           {
-            "value": "Compendium.ptu.abilities.Item.5Ggs5ri8KolxSCmx"
+            "value": "Compendium.ptu.abilities.Item.5Ggs5ri8KolxSCmx",
+            "label": "Sound Lance"
           }
         ]
       },
@@ -31,7 +33,7 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "{item|flags.ptu.rulesSelections.move}"
+        "uuid": "{item|flags.ptu.rulesSelections.ability}"
       }
     ],
     "enabled": true,
@@ -67,7 +69,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -80,13 +83,17 @@
       "cost": 0,
       "bind": false
     },
-    "prerequisites": [],
+    "prerequisites": [
+      "Musician"
+    ],
     "notes": "",
     "free": false,
     "class": "Musician",
     "name": "Musical Ability [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "musical-ability"
+    "replacesSlug": "musical-ability",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -99,7 +106,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

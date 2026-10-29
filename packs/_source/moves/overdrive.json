@@ -2,7 +2,6 @@
   "name": "Overdrive",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/ElectricIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "",
@@ -74,7 +73,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "_id": "XjxlA3XnsIEo5J8y",
   "effects": [],
@@ -85,7 +85,8 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "no-automation-needed"
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {
