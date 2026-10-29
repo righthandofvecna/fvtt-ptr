@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Target: Your Pokémon\nEffect: Targeted Pokémon loses 2 Tutor Points and gains the Empower Ability.",
+    "effect": "Target: Your Pokémon\nEffect: Targeted Pokémon loses 1 Tutor Slot and gains the @UUID[Compendium.ptu.abilities.Item.w5xfL4tul12d4MVp]{Empower} Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -28,7 +28,7 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "static",
+      "type": "at-will",
       "max": null,
       "custom": "Static",
       "modifiers": {
@@ -37,14 +37,15 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -56,14 +57,18 @@
     "notes": "",
     "free": false,
     "class": "Mystic",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Adept Pokémon Education or Expert Intuition"
+      "prereqBackup": "Adept Pokémon Education or Expert Intuition",
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {

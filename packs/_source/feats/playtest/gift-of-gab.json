@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Effect: Until the end of the scene, you and your Pokémon can speak to each other fluently, as if you shared a language. Others cannot understand this language; to them, it sounds like a meaningless series of sounds unless they have other ways of understanding you or your Pokémon.\n\nBonus: You gain a +1d6 to Guile, Charm, and Intimidate checks against Pokémon who have a member of their evolutionary family in your Pokedex. If you have the Mystic senses trait, you gain a 1d6 bonus to using it replace a Guile, Charm, or Intimidate check against those Pokémon.\n\nNote: If your game doesn't use or heavily feature Pokédex’s, any Pokémon that the trainer has seen before qualifies",
+    "effect": "Effect: Until the end of the scene, you and your Pokémon can speak to each other fluently, as if you shared a language. Others cannot understand this language; to them, it sounds like a meaningless series of sounds unless they have other ways of understanding you or your Pokémon.\n\nBonus: You gain a +1d6 to Guile, Charm, and Intimidate checks against Pokémon who have a member of their evolutionary family in your Pokedex. If you have the @UUID[Compendium.ptu.edges.Item.qvIqXtN2QM5dIwgX]{Mystic Senses} Edge, you gain a 1d6 bonus to using it replace a Guile, Charm, or Intimidate check against those Pokémon.\n\nNote: If your game doesn't use or heavily feature Pokédexes, any Pokémon that the trainer has seen before qualifies.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -28,8 +28,8 @@
     "stackSlugs": false,
     "keywords": [],
     "frequency": {
-      "type": "at-will",
-      "max": 0,
+      "type": "custom",
+      "max": null,
       "custom": "Drain 1 AP – Free Action",
       "modifiers": {
         "priorityLimited": false,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -47,7 +48,7 @@
       "extended": false
     },
     "ap": {
-      "cost": 0,
+      "cost": 1,
       "bind": false
     },
     "prerequisites": [
@@ -57,14 +58,19 @@
     "notes": "",
     "free": false,
     "class": "Mystic",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Mystic, Expert Pokémon Education or Expert Intuition"
+      "prereqBackup": "Mystic, Expert Pokémon Education or Expert Intuition",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
