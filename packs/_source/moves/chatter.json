@@ -2,7 +2,6 @@
   "name": "Chatter",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/FlyingIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Chatter confuses the target on 16+.",
@@ -15,7 +14,8 @@
         "uuid": "Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH",
         "range": "16",
         "value": "",
-        "affects": "target"
+        "affects": "target",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -85,7 +85,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "_id": "Y4ZEuPq2fnFkDFy7",
   "effects": [],
@@ -95,7 +96,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
