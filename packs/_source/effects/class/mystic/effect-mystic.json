@@ -5,14 +5,17 @@
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Your Pokémon of Friendship 3 or Higher, start the day with an additional Spirit, and their Max spirit is increased by 1 as long as they benefit from Training.",
+    "effect": "Your Pokémon of Friendship 3 or Higher start the day with an additional Spirit, and their Max Spirit is increased by 1 as long as they benefit from Training.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.spirit.max",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -40,7 +43,7 @@
     "duration": {
       "value": -1,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -52,14 +55,20 @@
     },
     "badge": null,
     "context": null,
-    "contentSet": "",
+    "contentSet": "friendship-spirit",
     "replacesSlug": ""
   },
   "effects": [],
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.0.12",
