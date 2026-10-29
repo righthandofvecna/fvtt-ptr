@@ -215,10 +215,12 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		sheetData.actions = await (async () => {
 			const moves = [];
 			const struggles = [];
+			const maneuvers = [];
 			const effects = {};
 
 			for (const move of this.actor.attacks) {
 				if (move.system.isStruggle) struggles.push(move);
+				else if (move.system.keywords?.includes("Maneuver")) maneuvers.push(move);
 				else moves.push(move);
 
 				const effect = move.system.effect + (move.effectReference ? "<br/></br>" + move.effectReference : "");
@@ -226,7 +228,7 @@ export class PTUPokemonSheet extends PTUActorSheet {
 			}
 
 			return {
-				moves: moves.sort((a, b) => (a.sort ?? 0) - (b.sort ?? 0)), struggles, effects
+				moves: moves.sort((a, b) => (a.sort ?? 0) - (b.sort ?? 0)), struggles, maneuvers, effects
 			}
 		})();
 
