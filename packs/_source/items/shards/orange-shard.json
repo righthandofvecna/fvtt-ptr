@@ -65,7 +65,7 @@
     "leagueLegal": false
   },
   "type": "item",
-  "img": "/systems/ptu/static/css/images/icons/item_icon.png",
+  "img": "systems/ptu/static/images/item_icons/orange shard.webp",
   "effects": [],
   "ownership": {
     "default": 0
