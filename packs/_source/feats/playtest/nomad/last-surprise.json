@@ -5,14 +5,17 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Select 1 enemy in your Teleporter Capability range, each making a contested Focus Check. If you succeed, you and the target swap places, similar to Ally Switch.\n\nIf you are undetected by your target, this instead is a DC 10 Focus Check. When successful in this way, your target also becomes Vulnerable for 1 round.",
+    "effect": "Select 1 enemy in your @UUID[Compendium.ptu.capabilities.Item.ylhIk5i0Xtp65asH]{Teleporter} Capability range, each making a contested Focus Check. If you succeed, you and the target swap places, similar to @UUID[Compendium.ptu.moves.Item.BFyiKFMmD0rwvIl7]{Ally Switch}.\n\nIf you are undetected by your target, this instead is a DC 10 Focus Check. When successful in this way, your target also becomes @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI]{Vulnerable} for 1 round.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -46,7 +49,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -66,8 +70,10 @@
     "notes": "",
     "free": false,
     "class": "Nomad",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "ownership": {
@@ -76,7 +82,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Nomad, Adept Focus"
+      "prereqBackup": "Nomad, Adept Focus",
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

@@ -5,14 +5,17 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "You learn the moves Magic Room and Wonder Room.",
+    "effect": "You learn the moves @UUID[Compendium.ptu.moves.Item.gkHbjclskfbhxEZs]{Magic Room} and @UUID[Compendium.ptu.moves.Item.oZW7peinTFoJ7cim]{Wonder Room}.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "GrantItem",
@@ -58,7 +61,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -78,8 +82,10 @@
     "notes": "",
     "free": false,
     "class": "Nomad",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "ownership": {
@@ -88,7 +94,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Nomad, Expert Focus"
+      "prereqBackup": "Nomad, Expert Focus",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
