@@ -2,7 +2,6 @@
   "name": "Double Team",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The user gains 3 activations of Double Team. The user may either activate Double Team when being targeted by an attack to increase their Evasion by 2 against that attack or when making an attack to increase their Accuracy by 2 for that attack.",
@@ -48,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -72,7 +72,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "BHmRIX70tqHROfdN",
   "effects": [],
@@ -82,7 +84,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

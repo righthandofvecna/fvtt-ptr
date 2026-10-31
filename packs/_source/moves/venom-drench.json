@@ -2,7 +2,6 @@
   "name": "Venom Drench",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "All Poisoned targets have their Attack, Special Attack, and Speed lowered by 1 Combat Stage. Venom Drench cannot miss.",
@@ -45,7 +44,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -69,7 +69,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "oYlTFgi4c74YPeW6",
   "effects": [],
@@ -79,7 +81,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
