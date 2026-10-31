@@ -2,7 +2,7 @@
   "name": "Utility Drop",
   "system": {
     "origin": "",
-    "effect": "Trigger - You Shift\nEffect: You may use a Smoke Ball, Caltrops, or Toxic Caltrops as a Free action during your Shift. Instead of the Move’s usual area of effect, you leave one square of Smokescreen, Spikes, or Toxic Spikes on each square you leave as you Shift. Once you place 8 meters of Smoke, Spikes, or Toxic Spikes you may not place any more.",
+    "effect": "Trigger - You Shift\nEffect: You may use a @UUID[Compendium.ptu.items.Item.eLpDB3IBw8rB0IFM]{Smoke Ball}, @UUID[Compendium.ptu.items.Item.cCWwpE0CXZnur5qT]{Caltrops}, or @UUID[Compendium.ptu.items.Item.PEYD11jzGQbpclRO]{Toxic Caltrops} as a Free action during your Shift. Instead of the Move’s usual area of effect, you leave one square of @UUID[Compendium.ptu.moves.Item.kvvdzOdMFvhMbQga]{Smokescreen}, @UUID[Compendium.ptu.moves.Item.nJnfeqvu1znRWtOl]{Spikes}, or @UUID[Compendium.ptu.moves.Item.LyEh7DPaMxvOwU3G]{Toxic Spikes} on each square you leave as you Shift. Once you place 8 meters of Smoke, Spikes, or Toxic Spikes you may not place any more.",
     "snippet": "",
     "rules": [
       {
@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +72,9 @@
     "name": "Utility Drop",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -82,7 +85,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Ninja's Arsenal, Expert Stealth",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -95,7 +100,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 55600000,
   "_id": "mevDgc0eNh0UicOK"
 }

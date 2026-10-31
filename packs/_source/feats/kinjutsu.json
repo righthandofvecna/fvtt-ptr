@@ -2,7 +2,7 @@
   "name": "Kinjutsu",
   "system": {
     "origin": "",
-    "effect": "You learn the Moves Substitute and Toxic.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.IGk8nNBogMKp3seI]{Substitute} and @UUID[Compendium.ptu.moves.Item.eFxRUdqQgdnJybY4]{Toxic}.",
     "snippet": "",
     "rules": [
       {
@@ -59,7 +59,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -83,7 +84,9 @@
     "name": "Kinjutsu",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -94,7 +97,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Poison Weapons, Master Stealth",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -107,7 +112,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 54900000,
   "_id": "m9KmnLLpdw3RGqhZ"
 }

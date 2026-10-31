@@ -2,7 +2,7 @@
   "name": "Genjutsu",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You form an Illusion around yourself. This Illusion conceals you, allowing you to use the Hide Manuever as if you were in Obscurring Terrain. This Illusiuon can look like a cloud of darkness, or disguise you as a mundane, inanimate object. The Illusion can even fool Aura, concealing you from Aura Sight for its duration. However, the Illusion requires complete concentration, and is broken if you take any actions at all. Anyone that interacts with the Illusion directly may make an Occult Education or Intuition Check with a DC equal to 10 plus your Stealth Rank; if they succeed, the Illusion is broken, and you are no longer Hidden.\nBonus: You gain the Blender Capability.",
+    "effect": "Effect: You form an Illusion around yourself. This Illusion conceals you, allowing you to use the @UUID[Compendium.ptu.moves.Item.wfPqkBCNoGkNVDeS]{Hide Manuever} as if you were in Obscurring Terrain. This Illusiuon can look like a cloud of darkness, or disguise you as a mundane, inanimate object. The Illusion can even fool Aura, concealing you from @UUID[Compendium.ptu.capabilities.Item.TtY94KGl4bDY1e0b]{Aura Sight} for its duration. However, the Illusion requires complete concentration, and is broken if you take any actions at all. Anyone that interacts with the Illusion directly may make an Occult Education or Intuition Check with a DC equal to 10 plus your Stealth Rank; if they succeed, the Illusion is broken, and you are no longer Hidden.\nBonus: You gain the @UUID[Compendium.ptu.capabilities.Item.77fEVlIy87KrANwC]{Blender} Capability.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,12 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.77fEVlIy87KrANwC"
       }
     ],
     "enabled": true,
@@ -48,7 +54,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -70,7 +77,9 @@
     "class": "Ninja",
     "name": "Genjutsu [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "genjutsu"
+    "replacesSlug": "genjutsu",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +90,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

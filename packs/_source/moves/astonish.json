@@ -2,7 +2,6 @@
   "name": "Astonish",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/GhostIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Astonish Flinches the target on 15+. Once per Scene, if the target is unaware of the user's presence, Astonish automatically Flinches.",
@@ -55,7 +54,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -80,7 +80,8 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "VtkRa05N67wR9RcG",
   "effects": [],

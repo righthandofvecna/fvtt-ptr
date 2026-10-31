@@ -56,7 +56,10 @@
     ],
     "persistent": {
       "formula": "5 * pow(2, (@item.system.value.value - 2))",
-      "type": "persistent"
+      "type": "persistent",
+      "dc": 10,
+      "decrease": false,
+      "saveEnds": false
     },
     "name": "",
     "tokenIcon": {
@@ -72,7 +75,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.1.4",

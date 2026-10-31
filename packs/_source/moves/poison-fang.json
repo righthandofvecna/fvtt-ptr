@@ -2,7 +2,6 @@
   "name": "Poison Fang",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Poison Fang Badly Poisons the target on 17+.",
@@ -60,7 +59,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -84,7 +84,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "KbOJDmhqPMfCTmGr",
   "effects": [],
