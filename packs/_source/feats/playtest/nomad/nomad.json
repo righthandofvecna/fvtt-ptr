@@ -5,7 +5,7 @@
   "img": "systems/ptu/static/css/images/icons/class_feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Effect: You gain the Moves Ally Switch and Teleport.\nBonus: For every 2 Nomad class features you possess (beyond Nomad), you gain +1 to to your Teleporter Speed.",
+    "effect": "Effect: You gain the Moves @UUID[Compendium.ptu.moves.Item.BFyiKFMmD0rwvIl7]{Ally Switch} and @UUID[Compendium.ptu.moves.Item.RJi8fqc4Kx3yZnVJ]{Teleport}.\nBonus: For every 2 Nomad class features you possess (beyond Nomad), you gain +1 to to your Teleporter Speed.",
     "snippet": "",
     "rules": [
       {
@@ -63,7 +63,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -83,8 +84,10 @@
     "notes": "",
     "free": false,
     "class": "",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "ownership": {
@@ -93,7 +96,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Elemental Connection (Psychic), Novice Focus"
+      "prereqBackup": "Elemental Connection (Psychic), Novice Focus",
+      "automationStatus": "needs-automation",
+      "devNote": "Improvement to Teleporter speed not automated"
     }
   },
   "_stats": {
