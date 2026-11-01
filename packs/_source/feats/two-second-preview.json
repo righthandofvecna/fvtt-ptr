@@ -2,7 +2,7 @@
   "name": "Two-Second Preview",
   "system": {
     "origin": "",
-    "effect": "You gain the Instinct Ability.",
+    "effect": "You gain the @UUID[Compendium.ptu.abilities.Item.gFpskHpwGRXfoaLL]{Instinct} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,12 @@
         "predicate": [],
         "phase": "applyAEs",
         "priority": null
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.gFpskHpwGRXfoaLL"
       }
     ],
     "enabled": true,
@@ -47,7 +53,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +78,9 @@
     "name": "Two-Second Preview",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -82,7 +91,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "3 Oracle Features, Expert Perception",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -95,7 +106,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 6200000,
   "_id": "5H22YbDPcMOKy5JB"
 }
