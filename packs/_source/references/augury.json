@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Oracle",
-    "effect": "Target: Self Effect: The user has a vision, dream, or similar that may depict past, present, or future events. The clarity of the dream may vary, as well as the user’s ability to remember it. See the next page for more details.",
+    "effect": "Target: Self \nEffect: The user has a vision, dream, or similar that may depict past, present, or future events. The clarity of the dream may vary, as well as the user’s ability to remember it.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "iXMQXX1fHETK34Go",
   "effects": [],
-  "folder": null,
   "sort": 23500000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

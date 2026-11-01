@@ -11,19 +11,22 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.evasion.physical.mod",
-        "value": 2
+        "value": 2,
+        "predicate": []
       },
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.evasion.special.mod",
-        "value": 2
+        "value": 2,
+        "predicate": []
       },
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.evasion.speed.mod",
-        "value": 2
+        "value": 2,
+        "predicate": []
       }
     ],
     "enabled": true,
@@ -55,7 +58,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,10 +74,11 @@
     },
     "tier": "",
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "effects": [],
-  "folder": null,
   "ownership": {
     "default": 0
   },
