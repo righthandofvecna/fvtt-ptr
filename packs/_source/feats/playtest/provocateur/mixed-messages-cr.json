@@ -2,7 +2,7 @@
   "name": "Mixed Messages",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Sweet Kiss, Lovely Kiss and Torment.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.0cpoDUWBYwTiDlnG]{Sweet Kiss}, @UUID[Compendium.ptu.moves.Item.FtteBhLvsPR6XCEk]{Lovely Kiss} and @UUID[Compendium.ptu.moves.Item.zgeymOL0WIKgT6lq]{Torment}.",
     "snippet": "",
     "rules": [
       {
@@ -62,7 +62,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -75,13 +76,18 @@
       "cost": 0,
       "bind": false
     },
-    "prerequisites": [],
+    "prerequisites": [
+      "Provocateur",
+      "Two Provocateur Skills at Adept Rank"
+    ],
     "notes": "",
     "free": false,
     "class": "Provocateur",
     "name": "Mixed Messages [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "mixed-messages"
+    "replacesSlug": "mixed-messages",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -94,7 +100,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

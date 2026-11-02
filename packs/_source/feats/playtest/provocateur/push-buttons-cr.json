@@ -2,7 +2,7 @@
   "name": "Push Buttons",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Your Social Moves’ Frequency is not Expended if they miss. You gain the Demoralize Edge, even if you do not meet the prerequisites. Its effects for Status Moves now trigger on 18+, and Social Moves that activate this “Crit” Range cause their targets to lose a tick of Hit Points. If you already have Demoralize, you may gain another Edge for which you meet the prerequisites.",
+    "effect": "Effect: Your Social Moves’ Frequency is not Expended if they miss. You gain the @UUID[Compendium.ptu.edges.Item.wSkGt15izAhUNZEr]{Demoralize} Edge, even if you do not meet the prerequisites. Its effects for Status Moves now trigger on 18+, and Social Moves that activate this “Crit” Range cause their targets to lose a tick of Hit Points. If you already have Demoralize, you may gain another Edge for which you meet the prerequisites.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,12 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.edges.Item.wSkGt15izAhUNZEr"
       }
     ],
     "enabled": true,
@@ -48,7 +54,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +76,9 @@
     "class": "Provocateur",
     "name": "Push Buttons [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "push-buttons"
+    "replacesSlug": "push-buttons",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -80,7 +89,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

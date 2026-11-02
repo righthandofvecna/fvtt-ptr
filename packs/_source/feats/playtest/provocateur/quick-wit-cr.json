@@ -2,7 +2,7 @@
   "name": "Quick Wit",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You may make a Manipulate Maneuver or use a Social Move you know, Frequency allowing.",
+    "effect": "Effect: You may make a @UUID[Compendium.ptu.moves.Item.EHk6fkrj1wuCHnCX]{Manipulate} Maneuver or use a Social Move you know, Frequency allowing.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -63,14 +64,16 @@
     },
     "prerequisites": [
       "Provocateur",
-      "a Provocateur Skill at Adept Rank."
+      "a Provocateur Skill at Adept Rank"
     ],
     "notes": "",
     "free": false,
     "class": "Provocateur",
     "name": "Quick Wit [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "quick-wit"
+    "replacesSlug": "quick-wit",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
