@@ -6,9 +6,34 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Cost: $1000 in materials\nTarget: Your Shadow Pokémon at Friendship Level 3\nEffect: You perform a Purification Ceremony on the target, granting Purification rewards and receiving extra effects from Redeemer's Class Features. A Pokémon that undergoes Purification with this Feature gains 1 Friendship. At Master Charm, the Target changes to \"Your Shadow Pokémon at Friendship Level 2\".\nBonus: Your Purified Pokémon receive a total of X Points to distribute amongst their Base Stats, where X is equal to half your Charm Skill Rank, plus one.",
+    "effect": "Cost: @Poke[1000] in materials\nTarget: Your Shadow Pokémon at Friendship Level 3\nEffect: You perform a Purification Ceremony on the target, granting Purification rewards and receiving extra effects from Redeemer's Class Features. A Pokémon that undergoes Purification with this Feature gains 1 Friendship. At Master Charm, the Target changes to \"Your Shadow Pokémon at Friendship Level 2\".\nBonus: Your Purified Pokémon receive a total of X Points to distribute amongst their Base Stats, where X is equal to half your Charm Skill Rank, plus one.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          }
+        ],
+        "adjustName": false,
+        "flag": "stat"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.stat}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      }
+    ],
     "enabled": true,
     "slug": "open-your-heart",
     "schema": {
@@ -40,7 +65,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,8 +86,10 @@
     "notes": "",
     "free": false,
     "class": "Redeemer",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -70,7 +98,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

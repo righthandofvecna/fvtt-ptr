@@ -6,9 +6,34 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 2 Tutor Points\nEffect: Choose either Courage or Serene Grace. Your Pokémon gains the chosen Ability by spending 2 Tutor Points.\nBonus: When your Pokémon is Purified, they may freely be tutored using Light Within Darkness at that time. If they've already been tutored with this feature before Purification, they gain the other Ability.",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: Choose either @UUID[Compendium.ptu.abilities.Item.pvfbtAhZJdE0W3KN]{Courage} or @UUID[Compendium.ptu.abilities.Item.l1zthf1EjKeMd3R7]{Serene Grace}. Your Pokémon gains the chosen Ability by spending 1 Tutor Slot.\nBonus: When your Pokémon is Purified, they may freely be tutored using Light Within Darkness at that time. If they've already been tutored with this feature before Purification, they gain the other Ability.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          }
+        ],
+        "flag": "stat",
+        "adjustName": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.stat}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      }
+    ],
     "enabled": true,
     "slug": "light-within-darkness",
     "schema": {
@@ -40,7 +65,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,8 +86,10 @@
     "notes": "",
     "free": false,
     "class": "Redeemer",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -70,7 +98,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {
