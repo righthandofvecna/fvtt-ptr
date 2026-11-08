@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Artificer Recipes",
-    "effect": "Prerequisites: Rainbow Light, Expert Occult Education Ingredients: A Type Booster and a Type Brace of the same Type. Effects: You create a Type Plate matching the Type Booster and Brace used.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.HTDQPrLkPziQA2yw]{Rainbow Light}, Expert Occult Education\nIngredients: A @UUID[Compendium.ptu.items.Item.iE24HRf5UlABgjhy]{Type Booster} and a @UUID[Compendium.ptu.items.Item.czrGMUtwY24DquOI]{Type Brace} of the same Type. \nEffects: You create a @CompSearch[Items keywords=Artificer \"Type Plate]{Type Plate} matching the Type Booster and Brace used.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "0I0O9vQIC5oxdItt",
   "effects": [],
-  "folder": null,
   "sort": 300000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
