@@ -2,9 +2,23 @@
   "name": "Fistful of Force",
   "system": {
     "origin": "Class Rework",
-    "effect": "Condition: You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force.\nEffect: You may destroy the Shard to use the Move Judgment. Judgment’s Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled.",
+    "effect": "Condition: You must have a Shard in your Main Hand or Off-Hand to use Fistful of Force.\nEffect: You may destroy the Shard to use the Move @UUID[Compendium.ptu.moves.Item.Zi3FxQffHkS00SRL]{Judgment}. Judgment’s Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.Zi3FxQffHkS00SRL",
+        "modifications": [
+          {
+            "key": "system.effect",
+            "operation": "override",
+            "value": "\"Judgment's Type must be one of the Types associated with the used Shard. Instead of adding your Special Attack when using this attack, you may choose to add your Occult Education Rank tripled.\""
+          }
+        ]
+      }
+    ],
     "enabled": true,
     "slug": "fistful-of-force-cr",
     "schema": {
