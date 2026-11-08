@@ -47,14 +47,16 @@
     },
     "badge": null,
     "context": null,
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": ""
   },
   "effects": [],
   "folder": "A1BMh0oUl6hmIRqv",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "scene-packer": {
       "hash": "090e8e2f2b5baea5e34896e227b2331da5a3a399",

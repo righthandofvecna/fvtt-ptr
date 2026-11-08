@@ -6,9 +6,34 @@
   "img": "systems/ptu/static/css/images/icons/class_feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Effect: Any Shadow Pokémon you own can level up from experience, evolve and spend Tutor Points. All other conditions and restrictions still apply as normal.\n\nNote: this Feature is exclusive from Tyrant, you cannot select Redeemer if you already have Tyrant.",
+    "effect": "Effect: Any Shadow Pokémon you own can level up from experience, evolve and spend Tutor Slots. All other conditions and restrictions still apply as normal.\n\nNote: This Feature is exclusive from @UUID[Compendium.ptu.feats.Item.Ho2F6YMv6BzqyRJr]{Tyrant}; you cannot select Redeemer if you already have Tyrant.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          }
+        ],
+        "flag": "stat",
+        "adjustName": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.stat}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      }
+    ],
     "enabled": true,
     "slug": "redeemer",
     "schema": {
@@ -41,7 +66,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -63,8 +89,10 @@
     "notes": "",
     "free": false,
     "class": "",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -73,7 +101,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

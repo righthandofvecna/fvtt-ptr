@@ -16,7 +16,8 @@
         "selectors": "{item|id}-damage-received",
         "uuid": "Compendium.ptu.effects.Item.XxsE2tDurOsmFpeJ",
         "range": "18",
-        "value": ""
+        "value": "",
+        "linked": false
       },
       {
         "key": "EphemeralEffect",
@@ -67,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -89,8 +91,10 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "effects": [],
   "sort": 0,
@@ -99,7 +103,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

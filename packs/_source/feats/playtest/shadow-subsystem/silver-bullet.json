@@ -6,9 +6,34 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Target: Your non-Shadow Pokémon with at least 1 Tutor Points\nEffect: The target loses 1 Tutor Point and learns either Heartful Embrace or Empathy Pulse.\nBonus: Your Purified Pokémon deal +X bonus damage to Shadow-Type Pokémon, where X is equal to the sum your Charm and Intuition Ranks.",
+    "effect": "Target: Your non-Shadow Pokémon with at least 1 Tutor Slot\nEffect: The target loses 1 Tutor Slot and learns either @UUID[Compendium.ptu.moves.Item.GSHZw2lYnynGILPU]{Heartful Embrace} or @UUID[Compendium.ptu.moves.Item.xEwozu4vSNVgqbUm]{Empathy Pulse}.\nBonus: Your Purified Pokémon deal +X bonus damage to Shadow-Type Pokémon, where X is equal to the sum your Charm and Intuition Ranks.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          }
+        ],
+        "flag": "stat",
+        "adjustName": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.stat}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      }
+    ],
     "enabled": true,
     "slug": "silver-bullet",
     "schema": {
@@ -40,7 +65,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,8 +85,10 @@
     "notes": "",
     "free": false,
     "class": "Redeemer",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -69,7 +97,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

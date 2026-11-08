@@ -6,9 +6,40 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Effect: You learn the Move Benediction Field.\nBonus: Your Purified Pokémon gain +2 to their Critical Range while affected by the Sanctified effect.",
+    "effect": "Effect: You learn the Move @UUID[Compendium.ptu.moves.Item.22aPOHozV4VuQTbd]{Benediction Field}.\nBonus: Your Purified Pokémon gain +2 to their Critical Range while affected by the Sanctified effect.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          }
+        ],
+        "adjustName": false,
+        "flag": "stat"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.stat}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.22aPOHozV4VuQTbd"
+      }
+    ],
     "enabled": true,
     "slug": "banisher-of-malice",
     "schema": {
@@ -40,7 +71,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,8 +92,10 @@
     "notes": "",
     "free": false,
     "class": "Redeemer",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -70,7 +104,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

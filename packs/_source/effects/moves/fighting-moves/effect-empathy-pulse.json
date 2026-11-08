@@ -4,8 +4,8 @@
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "+1 Atk CS, +1 Accuracy",
-    "snippet": "+1 Atk CS, +1 Accuracy",
+    "effect": "-1 SpAtk CS",
+    "snippet": "-1 SpAtk CS",
     "rules": [
       {
         "key": "ActiveEffectLike",
@@ -47,14 +47,16 @@
     },
     "badge": null,
     "context": null,
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": ""
   },
   "effects": [],
   "folder": "fxR7gYSzdO2ZAQya",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "scene-packer": {
       "hash": "99608edcb8890bd01313f9508e11a0997f179646",
