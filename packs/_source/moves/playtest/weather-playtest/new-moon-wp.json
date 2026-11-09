@@ -28,7 +28,8 @@
     "stackSlugs": false,
     "keywords": [
       "Weather",
-      "Playtest"
+      "Playtest",
+      "Weather Creation"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -48,7 +49,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -72,7 +74,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "weather-playtest",
-    "replacesSlug": "new-moon"
+    "replacesSlug": "new-moon",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "effects": [],
   "sort": 100000,
