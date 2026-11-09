@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Chemistry Recipes",
-    "effect": "Prerequisites: Chemist Cost: $100 Effect: You can create any X-Item, Dire Hit, or Guard Spec.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.D2gdYC215goQ9kt2]{Chemist}\nCost: @Poke[100]\nEffect: You can create any @CompSearch[Items keywords=X-Item]{X-Item}, @UUID[Compendium.ptu.items.Item.GRNFFXDGwgfFxqeh]{Dire Hit}, or @UUID[Compendium.ptu.items.Item.eAgBzYWiZUMOqWwb]{Guard Spec}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "wHQXfH4e6Wkef3Xi",
   "effects": [],
-  "folder": null,
   "sort": 30600000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

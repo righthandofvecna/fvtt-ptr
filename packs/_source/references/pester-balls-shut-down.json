@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Chemistry Recipes",
-    "effect": "Prerequisites: Caustic Chemistry Cost: $50 Effect: You create Pester Balls that can inflict Paralysis or Sleep.",
+    "effect": "Prerequisites: Caustic Chemistry\nCost: @Poke[50]\nEffect: You create @UUID[Compendium.ptu.items.Item.1e63A4th1XwoZ3Xf]{Pester Balls} that can inflict @UUID[Compendium.ptu.items.Item.Orm2WwtIrG6zlUY6]{Paralysis} or @UUID[Compendium.ptu.items.Item.CpQ5BIJJrMtGu0zX]{Sleep}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "mU2KYq8NHPCkTQaO",
   "effects": [],
-  "folder": null,
   "sort": 26000000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -2,7 +2,7 @@
   "name": "Chemical Warfare",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You throw a Pester Ball\nEffect: The Pester Ball creates a Blast 2, affecting all targets in the area.",
+    "effect": "Trigger: You throw a @UUID[Compendium.ptu.items.Item.1e63A4th1XwoZ3Xf]{Pester Ball}\nEffect: The Pester Ball creates a Blast 2, affecting all targets in the area.\n\n@UUID[Compendium.ptu.references.Item.m4bcj46XVLE9vm02]{Pester Balls: Pain}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -75,7 +75,7 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": "",
       "used": null,
       "showInTokenPanel": false

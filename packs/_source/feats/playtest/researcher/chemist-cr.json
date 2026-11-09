@@ -2,7 +2,7 @@
   "name": "Chemist",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You may craft any Chemistry Recipe for which you qualify using your Chemistry Set.",
+    "effect": "Effect: You may craft any Chemistry Recipe for which you qualify using your Chemistry Set.\n\n@UUID[Compendium.ptu.references.Item.wHQXfH4e6Wkef3Xi]{Enhancers}\n@UUID[Compendium.ptu.references.Item.puhMrcKwed0nEl9Q]{Pester Balls: Disorient}",
     "snippet": "",
     "rules": [],
     "enabled": true,
