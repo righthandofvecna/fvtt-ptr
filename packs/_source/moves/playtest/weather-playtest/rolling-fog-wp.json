@@ -28,7 +28,8 @@
     "stackSlugs": false,
     "keywords": [
       "Weather",
-      "Playtest"
+      "Playtest",
+      "Weather Creation"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -74,7 +75,8 @@
     "automation": [],
     "contentSet": "weather-playtest",
     "replacesSlug": "rolling-fog",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "8LmPzewqrpdkMjcr",
   "effects": [],

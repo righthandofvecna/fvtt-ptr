@@ -28,7 +28,8 @@
     "stackSlugs": false,
     "keywords": [
       "Weather",
-      "Playtest"
+      "Playtest",
+      "Weather Creation"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -48,7 +49,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -72,7 +74,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "weather-playtest",
-    "replacesSlug": "fallout"
+    "replacesSlug": "fallout",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "effects": [],
   "sort": 100000,
@@ -81,7 +85,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
