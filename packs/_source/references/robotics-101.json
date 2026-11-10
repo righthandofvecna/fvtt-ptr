@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Engineer Recipes",
-    "effect": "Prerequisites: Engineer Effect: You can create a Small Pokébot for $1000, a Medium Pokébot for $2000, or a Large Pokébot for $3000. Pokébots you create begin at Level 5. You can create and install Basic Combat and Basic Utility Parts for Pokébots. ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.QH7vUbORhNz8cs93]{Engineer}\nEffect: You can create a Small Pokébot for @Poke[1000], a Medium Pokébot for @Poke[2000], or a Large Pokébot for @Poke[3000]. Pokébots you create begin at Level 5. You can create and install Basic Combat and Basic Utility Parts for Pokébots. \n@UUID[Compendium.ptu.references.Item.Ca12l8J5X2kFNBu9]{Pokébot and Upgrade Parts}\n@UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.3dMSO2VzZK7BMKaJ]{Pokébot Rulebook Page}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "ADALNbQLjpyt5R17",
   "effects": [],
-  "folder": null,
   "sort": 5800000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

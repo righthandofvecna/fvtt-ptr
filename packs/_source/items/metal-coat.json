@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -72,7 +73,7 @@
   "flags": {
     "ptu": {
       "automationStatus": "needs-automation",
-      "devNote": "",
+      "devNote": "Delete in favor of Compendium.ptu.items.Item.Wt7PCOHdVHRaDklg",
       "showInTokenPanel": false
     }
   },
@@ -87,5 +88,6 @@
     "exportSource": null
   },
   "sort": 67000000,
-  "_id": "x4Q96GGlAkJjAnXU"
+  "_id": "x4Q96GGlAkJjAnXU",
+  "folder": null
 }
