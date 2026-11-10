@@ -1,0 +1,103 @@
+{
+  "name": "Judgment",
+  "type": "move",
+  "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Judgment's Type can be whatever Elemental Type the user wants it to be.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "judgment",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:24.773Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Smite",
+      "Signature"
+    ],
+    "sheerForce": false,
+    "toughClaws": false,
+    "technician": false,
+    "reckless": false,
+    "ironFist": false,
+    "megaLauncher": false,
+    "punkRock": false,
+    "strongJaw": false,
+    "frequency": {
+      "type": "daily",
+      "max": 1,
+      "custom": "Daily",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": true,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "type": "Normal",
+    "category": "Special",
+    "damageBase": "10",
+    "ac": "2",
+    "range": "Range 6, Ranged Blast 3",
+    "contestType": "Smart - Tease",
+    "stab": false,
+    "damageBonus": 0,
+    "isStruggle": false,
+    "automation": [],
+    "tutorSlotCost": 0
+  },
+  "_id": "Zi3FxQffHkS00SRL",
+  "effects": [],
+  "sort": 51900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.54",
+    "coreVersion": "14.367",
+    "createdTime": 1692963260348,
+    "modifiedTime": 1792740435960,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}
