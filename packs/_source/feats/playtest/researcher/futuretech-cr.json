@@ -75,7 +75,7 @@
   "flags": {
     "ptu": {
       "automationStatus": "needs-automation",
-      "devNote": "",
+      "devNote": "Can be deleted in favor of Compendium.ptu.references.Item.UpYQ1DK4AswzVGOE",
       "showInTokenPanel": false
     }
   },

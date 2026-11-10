@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Engineer Recipes",
-    "effect": "Prerequisites: Robofighter Effect: You can create and install Advanced Combat and Advanced Utility Parts for Pokébots.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.LXLjuy9Dj3Ykfy89]{Robofighter}\nEffect: You can create and install Advanced Combat and Advanced Utility Parts for Pokébots.\n@UUID[Compendium.ptu.references.Item.Ca12l8J5X2kFNBu9]{Pokébot and Upgrade Parts}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "f9heuvlESQeh7CZA",
   "effects": [],
-  "folder": null,
   "sort": 21500000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
