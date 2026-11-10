@@ -9,7 +9,21 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "Compendium.ptu.moves.Item.GWZv0em5fcIPGnFo"
+        "uuid": "Compendium.ptu.moves.Item.GWZv0em5fcIPGnFo",
+        "modifications": []
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.GWZv0em5fcIPGnFo",
+        "modifications": [
+          {
+            "key": "system.category",
+            "operation": "override",
+            "value": "Physical"
+          }
+        ]
       }
     ],
     "enabled": true,
@@ -44,7 +58,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -65,7 +80,9 @@
     "class": "Researcher (Climatology)",
     "name": "Climatology [CR]",
     "contentSet": "weather-playtest",
-    "replacesSlug": "weaponized-weather"
+    "replacesSlug": "weaponized-weather",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -76,7 +93,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

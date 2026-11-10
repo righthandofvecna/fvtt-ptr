@@ -1,0 +1,28 @@
+{
+  "name": "Perpetual Storm Clarification",
+  "type": "reference",
+  "_id": "TwMqcDP5PqUuLkgN",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Weather lasts a certain amount of turns (5 or 8) depending on the circumstances of which it is summoned. Besides this, there may only ever be 2 weathers active at a given time, if a 3rd weather would be created, the oldest weather of the same rank or lower disappears.\nThose are the 2 ways that matter for this feature of 'ending a weather'.\n\nWhenever either of those 2 triggers occur, you can activate Perpetual Storm, spending the appropriate AP, to instead of ending, give the weather back (up to) 3 turns of duration, and failing whatever effect caused it to dissipate. So all the possible cases:\n\nWeather effect duration is over -> Spend AP, instead of ending, the weather still has 3 turns of duration\nA 3rd weather gets created that would remove this weather -> Spend AP, instead of ending this one, try to end the other weather -> then trigger 2.1. or 2.2, finally resolve 2.3.\n• 2.1. If the other weather was ended this way, effect is resolved, the 3rd weather has replaced the 2nd weather.\n• 2.2. If the other weather can't be ended (for example, through the activation of this same feature, or because it's a tier 2 weather, while the 3rd weather created is a tier 1 weather) -> the 3rd weather fails to be created completely.\n• 2.3. The duration of the original (1st) weather gets extended by up to 3 turns (this can't make it go above it's maximum duration of 5 or 8, depending on how it was created)\n\nTo make this even clearer, the following weathers are active, for simplicity sake, both created by the same Climatologist.\n\n\nWeather A: Rainy (3 turns left) (tier 1)\nWeather B: Hailstorm (5 turns left) (tier 2)\n\nAn opponent tries to create the following weather:\nWeather C: Dusty (tier 1)\n\nWeather C (Dusty) would replace weather A (Rainy) as A is the oldest active weather, and of the same tier or lower as the incoming weather C.\n\nThe climatologist activates the effect, paying 1 AP, making it so that weather A (Rainy) is not removed by C.\n\nC then still attempts to replace weather B.\n\nB however is not a valid target for C to overwrite; therefore the creation of weather C Fails.\n\nLet's imagine for a moment, that instead of Hailstorm (tier 2), weather B was just Snowy (tier 1)\n\nThen weather C would instead overwrite weather B, at which point since they're both made by the same Climatologist, they could spend another AP to also make it so that weather B doesn't get replaced; after which weather C has nothing left to replace, and therefore Fails.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "perpetual-storm-clarification",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "folder": null
+}

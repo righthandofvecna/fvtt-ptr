@@ -2,7 +2,7 @@
   "name": "Climate Change",
   "system": {
     "origin": "Class Rework",
-    "effect": "Target: Your Pokemon with at least 1 Tutor Point\n\nEffect: Your Pokemon loses 1 Tutor Points, and learns your choice of a @CompSearch[moves keywords=weather]{Weather creation moves}. The target must be able to learn the chosen Move through Level-Up, TM, or Tutor Moves. If the target has the chosen Move in their Level-Up List, Weather Systems costs no Tutor Points.\n\nBonus: Whenever you use a Weather Move, you may create the Weather at Tier 2 by spending 2 AP as a Free Action.\n",
+    "effect": "Target: Your Pokemon with at least 1 Tutor Slot\n\nEffect: Your Pokemon loses 1 Tutor Slot, and learns your choice of a @CompSearch[moves keywords=\"Weather Creation\"]{Weather Creation move}. The target must be able to learn the chosen Move through Level-Up, TM, or Tutor Moves. If the target has the chosen Move in their Level-Up List, Weather Systems costs no Tutor Points.\n\nBonus: Whenever you use a Weather Move, you may create the Weather at Tier 2 by spending 2 AP as a Free Action.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,7 +60,9 @@
     "class": "Researcher (Climatology)",
     "name": "Climatology [CR]",
     "contentSet": "weather-playtest",
-    "replacesSlug": "climate-change"
+    "replacesSlug": "climate-change",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -70,7 +73,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
