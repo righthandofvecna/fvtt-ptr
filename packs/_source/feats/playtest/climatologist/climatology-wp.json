@@ -2,7 +2,7 @@
   "name": "Climatology",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You may craft one of the @CompSearch[items keywords=Weather Clay]{Weather Clays}, for $1000, or one of the following combos of Shards:\n- Parched Clay: 2 Red, 2 Green\n- Moist Clay: 3 Blue, 1 Yellow\n- Frigid Clay: 2 Blue, 2 Orange\n- Rough Clay: 3 Yellow, 1 Orange\n- Powdery Clay: 2 Green, 2 Red\n- Porous Clay: 4 Blue\n- Chalky Clay: 2 Violet, 2 Red\n- Acidic Clay: 4 Violet\n- Pitch Clay: any 6 Shards\n- Iridescent Clay: any 5 Shards\n\nBonus: You are immune to negative effects of Weathers created by you or your allies.\n",
+    "effect": "Effect: You may craft one of the @CompSearch[items keywords=Weather Clay]{Weather Clays}, for $1000, or one of the following combos of Shards:\n- @UUID[Compendium.ptu.items.Item.MBlRfGOfQCxz14K7]{Parched Clay}: 2 Red, 2 Green\n- @UUID[Compendium.ptu.items.Item.p7fKMecIcZFjCDXB]{Moist Clay}: 3 Blue, 1 Yellow\n- @UUID[Compendium.ptu.items.Item.6o04VMGiV9tVBW47]{Frigid Clay}: 2 Blue, 2 Orange\n- @UUID[Compendium.ptu.items.Item.6Fr2tS7xPu5alnl7]{Rough Clay}: 3 Yellow, 1 Orange\n- @UUID[Compendium.ptu.items.Item.KxYsDovxRTmvFsh2]{Powdery Clay}: 2 Green, 2 Red\n- @UUID[Compendium.ptu.items.Item.norsWoYmSPBUAmLk]{Porous Clay}: 4 Blue\n- @UUID[Compendium.ptu.items.Item.beUnwCWWRd8J9ZIh]{Chalky Clay}: 2 Violet, 2 Red\n- @UUID[Compendium.ptu.items.Item.itMUJKNzKCqOeTjf]{Acidic Clay}: 4 Violet\n- @UUID[Compendium.ptu.items.Item.4xcn2bo7lUC9IjXg]{Pitch Clay}: any 6 Shards\n- @UUID[Compendium.ptu.items.Item.dXSbLpw3fLsIehsd]{Iridescent Clay}: any 5 Shards\n\nBonus: You are immune to negative effects of Weathers created by you or your allies.\n",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -28,7 +28,7 @@
       "Weather"
     ],
     "frequency": {
-      "type": "static",
+      "type": "at-will",
       "max": null,
       "custom": "Static",
       "modifiers": {
@@ -37,14 +37,15 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -58,7 +59,9 @@
     "class": "Researcher (Climatology)",
     "name": "Climatology [CR]",
     "contentSet": "weather-playtest",
-    "replacesSlug": "climatology"
+    "replacesSlug": "climatology",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -69,7 +72,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

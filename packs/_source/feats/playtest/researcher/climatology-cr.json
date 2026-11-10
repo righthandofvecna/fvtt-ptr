@@ -2,9 +2,16 @@
   "name": "Climatology",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Overcoat Ability.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.abilities.Item.aYpa4hA9aHeNGyeQ]{Overcoat} Ability.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.aYpa4hA9aHeNGyeQ"
+      }
+    ],
     "enabled": true,
     "slug": "climatology-cr",
     "schema": {
@@ -24,8 +31,7 @@
     },
     "stackSlugs": false,
     "keywords": [
-      "Playtest",
-      "Class Rework"
+      "Legacy"
     ],
     "frequency": {
       "type": "static",
@@ -37,7 +43,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +65,9 @@
     "class": "Researcher",
     "name": "Climatology [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "climatology"
+    "replacesSlug": "climatology",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -69,7 +78,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
