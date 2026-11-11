@@ -2,9 +2,16 @@
   "name": "Mental Resistance",
   "system": {
     "origin": "",
-    "effect": "You gain the Mindlock Capability and 10 Damage Reduction against Special Psychic, Ghost, and Dark-Type damage.",
+    "effect": "You gain the @UUID[Compendium.ptu.capabilities.Item.nWv1YhLcYfwOtDCF]{Mindlock} Capability and 10 Damage Reduction against Special Psychic, Ghost, and Dark-Type damage.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.nWv1YhLcYfwOtDCF"
+      }
+    ],
     "enabled": true,
     "slug": "mental-resistance",
     "schema": {
@@ -37,7 +44,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,7 +68,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -70,7 +80,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Witch Hunter"
+      "prereqBackup": "Witch Hunter",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -83,7 +96,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 10100000,
   "_id": "97h0sM3DubWFjaYw"
 }
