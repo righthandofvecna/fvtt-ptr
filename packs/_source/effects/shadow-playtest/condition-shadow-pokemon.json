@@ -4,7 +4,7 @@
   "img": "systems/ptu/static/css/images/types2/ShadowIC_Icon.png",
   "system": {
     "origin": "Shadow Subsytem",
-    "effect": "",
+    "effect": "Shadow Pokémon possess @UUID[Compendium.ptu.abilities.Item.6XpwCLUT2uMAN0aM] as a free, additional Ability.\n\nThey possess a default Speed Combat Stage of +2.\n\nThey can know and use Shadow-type Moves.\n\nAny of their known Moves beyond their Shadow-type Moves are considered “Unknown” and cannot be used while the Shadow Pokemon is at Friendship Level 1.\n\nThey cannot be subjected to actions that utilize Tutor Slots.\n\n@UUID[Compendium.ptu.feats.Item.xIpxTe5bmLD9rPLp]{Channeling} Shadow Pokemon requires a DC 20 Intuition Check, rather than 15, and only give off extremely primal intentions and thoughts.\n\nThey cannot utilize Experience, Level Up, Evolve, or undergo miscellaneous transforms (Transform, Mega Evolution, Dynamax, Terastalization, etc.). Any Experience earned is banked.",
     "snippet": "",
     "rules": [
       {
@@ -26,7 +26,8 @@
         "key": "TypeOverwrite",
         "value": [
           "Shadow"
-        ]
+        ],
+        "overwrite": false
       },
       {
         "key": "TokenImage",
@@ -48,8 +49,7 @@
           "animation": {
             "type": "ghost",
             "speed": 4,
-            "intensity": 7,
-            "reverse": false
+            "intensity": 7
           },
           "darkness": {
             "min": 0,
@@ -73,7 +73,8 @@
         "predicate": [
           "condition:save:condition-shadow-pokemon"
         ],
-        "value": "{actor|system.health.injuries}*2"
+        "value": "{actor|system.health.injuries}*2",
+        "hideIfDisabled": false
       }
     ],
     "enabled": true,
@@ -108,7 +109,8 @@
       "dc": 5,
       "decrease": false,
       "type": "save",
-      "saveEnds": false
+      "saveEnds": false,
+      "formula": ""
     },
     "level": {
       "value": 1
@@ -131,7 +133,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.2.2",
