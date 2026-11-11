@@ -2,7 +2,7 @@
   "name": "Emergency Reactivation",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You or your Pokémon suffer Augmentation Shock\nEffect: The triggering user does not suffer Augmentation Shock and their Augmentations are not disabled. This Feature may affect a target only once per Scene.",
+    "effect": "Trigger: You or your Pokémon suffer Augmentation Shock\nEffect: The triggering user does not suffer Augmentation Shock and their Augmentations are not disabled. This Feature may affect a target only once per Scene.\n\n@UUID[Compendium.ptu.references.Item.PnlcuG8lLi9xMmM2]{Limb Augments}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -75,7 +75,7 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": "",
       "showInTokenPanel": false
     }

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upgrader Recipes",
-    "effect": "Prerequisites: Upgrader Effect: You may build and install the Datajack Augmentaion for $250.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.13Imm686va83Ae4U]{Upgrader}\nEffect: You may build and install the Datajack @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.URXOXN8f0ra76uoM]{Augmentaion} for @Poke[250].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "pmH0X5jWdzgo3dQC",
   "effects": [],
-  "folder": null,
   "sort": 27100000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
