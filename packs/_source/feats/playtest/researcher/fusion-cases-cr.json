@@ -2,7 +2,7 @@
   "name": "Fusion Cases",
   "system": {
     "origin": "Class Rework",
-    "effect": "Ingredients: Two different types of Poké Ball Cases.\nEffect: You combine the two Poké Ball Cases into a single Fusion Case with both effects and types. Fusion Cases may not be used as Ingredients for this Feature.",
+    "effect": "Ingredients: Two different types of Poké Ball Cases\nEffect: You combine the two Poké Ball Cases into a single Fusion Case with both effects and types. Fusion Cases may not be used as Ingredients for this Feature.\n\n@UUID[Compendium.ptu.references.Item.azczlbQfO5y3J7XS]{Advanced Cases}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -75,7 +75,7 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": "",
       "showInTokenPanel": false
     }

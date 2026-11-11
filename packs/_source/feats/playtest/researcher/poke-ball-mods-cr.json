@@ -2,7 +2,7 @@
   "name": "Poke Ball Mods",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You may craft any of the Poké Ball Modifications listed below.\n\n@UUID[Compendium.ptu.references.Item.ZYpB23WkG26CNVNX]",
+    "effect": "Effect: You may craft any of the Poké Ball Modifications listed below.\n\n@UUID[Compendium.ptu.references.Item.0oCW9CsYNjRA6WXn]{Poké Ball Modifications}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -75,7 +75,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": ""
     }
   },

@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Jailbreaker Recipes",
-    "effect": "Prerequisites: Jailbreaker Effect: You may create a Contest Case, Lock Case, or Medicine Case for $200.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.3pBUKpQfiaVAmJIo]{Jailbreaker}\nEffect: You may create a @UUID[Compendium.ptu.items.Item.Ncbh0PQYi7uBcF6E]{Contest Case}, @UUID[Compendium.ptu.items.Item.Sb61NnY1QTJf6l1v]{Lock Case}, or @UUID[Compendium.ptu.items.Item.JpfkXVU1CrkQP937]{Medicine Case} for @Poke[200].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "YGBqoHCoHX8yesHt",
   "effects": [],
-  "folder": null,
   "sort": 17600000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
