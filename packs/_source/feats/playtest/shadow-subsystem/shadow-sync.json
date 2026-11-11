@@ -5,8 +5,8 @@
   "_id": "5wzCxnLJ3aC0FKx7",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
-    "origin": "",
-    "effect": "Target: Your Pokémon with at least 1 Tutor Point\nEffect: The target loses 1 Tutor Point. Select 1 Move the Pokémon knows and change its Type to Shadow. A Pokémon may have only one Shadow-Synced Move in their Move List at a time; to Sync a new Move, the old Move must be forgotten.\n\nNote: Shadow Sync, and all other Malfeasance Research Field Features, may be used on Shadow Pokémon, in spite of the restrictions normally in place for Shadow Pokémon.",
+    "origin": "Shadow Subsytem",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: The target loses 1 Tutor Slot. Select 1 Move the Pokémon knows and change its Type to Shadow. A Pokémon may have only one Shadow-Synced Move in their Move List at a time; to Sync a new Move, the old Move must be forgotten.\n\nNote: Shadow Sync, and all other Malfeasance Research Field Features, may be used on Shadow Pokémon, in spite of the restrictions normally in place for Shadow Pokémon.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,8 +61,10 @@
     "notes": "",
     "free": false,
     "class": "Researcher (Malfeasance)",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -70,7 +73,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_stats": {
