@@ -1,0 +1,69 @@
+{
+  "folder": "tC60PytLZZ9DJ2u6",
+  "name": "Primal Shell",
+  "type": "item",
+  "_id": "YO250Ydez3GKHNVV",
+  "img": "/systems/ptu/static/css/images/icons/item_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "A Fossil Pokémon may hold a single Primal Item without taking up their Held Item slot, but cannot hold two of same Primal Item this way.\nThe holder gains 10 Damage Reduction against Ranged Attacks.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "primal-shell",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item",
+      "Paleontology"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false,
+    "quantity": "1",
+    "category": "",
+    "cost": "",
+    "consumable": 0,
+    "subtype": "",
+    "container": false
+  },
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  }
+}
