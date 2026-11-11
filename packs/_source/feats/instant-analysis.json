@@ -2,7 +2,7 @@
   "name": "Instant Analysis",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 2 Tutor Points remaining\nEffect: Your Pokémon loses 2 Tutor Points and gains the Forewarn Ability.",
+    "effect": "Target: Your Pokémon with at least 2 Tutor Points remaining\nEffect: Your Pokémon loses 2 Tutor Points and gains the @UUID[Compendium.ptu.abilities.Item.QpPR5Ekvn9utWUTq]{Forewarn} Ability.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,7 +61,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -70,7 +73,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert General Education"
+      "prereqBackup": "Expert General Education",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -83,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 48900000,
   "_id": "i2XTo5TAwnjgGBSa"
 }
