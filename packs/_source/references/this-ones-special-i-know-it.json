@@ -1,0 +1,28 @@
+{
+  "name": "This One's Special, I Know It",
+  "type": "reference",
+  "_id": "MJFCmHIxSqRi4LXL",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Based on guidance from other long-time GMs, some of our suggestions for This One's Special, I Know It include:\n» Altered Type: Replace one of the Pokémon's Types with a Type of your choice that one of its parents possesses. Ask the GM to help you adjust the Pokemon's Move List and Abilities to properly fit the new Type.\n» Altered Ability: The Pokémon's starting Ability is one not normally native to its Species; ask the GM to help you with this.\n» Unique Move: The Pokémon knows a Move that matches one of its Types, but that is not normally available to its Species; ask the GM for help determining this Move.\n» Exceptionally Powerful: Increase two of the Pokémon's Base Stats by +2 each, and the Pokemon hatches at a Level equal to 5 + your Pokemon Education Rank doubled.\n» Savant: The Pokemon gains a Skill Template. You are not limited to the examples in the book, but must follow the same rules as them. Ask your GM for help assigning the Skills. Additionally, the Pokemon may use any Manipulate Maneuver for which it has Ranks in the necessary Skill, and may attempt to improve a wild Pokemon's Disposition if it possesses Ranks in Charm.\nNote: If the Skill Templates optional rule is already in effect, Savant's effect is as follows: The Pokemon is born with +1d6 in two Skills it has access to, or with Novice Ranks and a +2 bonus in two Skills it would not normally have access to. When the Pokemon reaches Levels 25 and 40, it may increase one of these Skills by 1d6 or by +2, and the other Skill by the other value. Additionally, the Pokemon may use any Manipulate Maneuver for which it has Ranks in the necessary Skill, and may attempt to improve a wild Pokemon's Disposition if it possesses Ranks in Charm.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "this-ones-special-i-know-it",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "folder": null
+}

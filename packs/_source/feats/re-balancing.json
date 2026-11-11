@@ -2,7 +2,7 @@
   "name": "Re-Balancing",
   "system": {
     "origin": "",
-    "effect": "Target: A Pokémon with 2 Tutor Points\nEffect: The target loses 2 Tutor Points, and gains one of the following: +1 to all Base Stats, +2 to two different Base Stats, or +3 to a single Base Stat. The target then redistributes their Stat Points. A Pokémon may be targeted by Re-Balancing only once.",
+    "effect": "Target: A Pokémon with 1 Tutor Slot\nEffect: The target loses 1 Tutor Slot, and gains one of the following: +1 to all Base Stats, +2 to two different Base Stats, or +3 to a single Base Stat. The target then redistributes their Stat Points. A Pokémon may be targeted by Re-Balancing only once.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -91,5 +91,6 @@
     "exportSource": null
   },
   "sort": 25500000,
-  "_id": "NYsEpTNL0K6nyGwa"
+  "_id": "NYsEpTNL0K6nyGwa",
+  "folder": null
 }
