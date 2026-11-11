@@ -2,7 +2,7 @@
   "name": "Efficient Installation",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You and your Pokémon gain a +2 boost to their maximum Augmentation Capacity and count their used Capacity as 2 lower for the purposes of Augmentation Shock. You and your Pokémon can install multiple Augmentations in the same Slot.",
+    "effect": "Effect: You and your Pokémon gain a +2 boost to their maximum Augmentation Capacity and count their used Capacity as 2 lower for the purposes of Augmentation Shock. You and your Pokémon can install multiple Augmentations in the same Slot.\n\n@UUID[Compendium.ptu.references.Item.zFN2psnsbSBIeGrm]{Body Augments}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -75,7 +75,7 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": "",
       "showInTokenPanel": false
     }
