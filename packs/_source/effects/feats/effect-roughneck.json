@@ -1,0 +1,89 @@
+{
+  "name": "Effect: Roughneck",
+  "type": "effect",
+  "_id": "yCWWXcTsnjknMMLJ",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "-1 CS in a stat of Roughneck's choice",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "atk",
+            "label": "-ATK"
+          },
+          {
+            "value": "def",
+            "label": "-DEF"
+          },
+          {
+            "value": "spatk",
+            "label": "-SpATK"
+          },
+          {
+            "value": "spdef",
+            "label": "-SpDEF"
+          },
+          {
+            "value": "spd",
+            "label": "-SPD"
+          }
+        ],
+        "flag": "roughneck"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "subtract",
+        "path": "system.stats.{item|flags.ptu.rulesSelections.roughneck}.stage.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-roughneck",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "encounter",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "Uv4mgOt4xtb28hzB",
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  }
+}

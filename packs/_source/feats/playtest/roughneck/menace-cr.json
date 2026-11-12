@@ -2,7 +2,7 @@
   "name": "Menace",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You hit a foe with the Terrorize Manipulation, or you activate Roughneck\nEffect: Until their next turn, the target has their Initiative lowered to 0. For one full round, attacks against them cause them to lose a Tick of Hit Points and become Vulnerable for one full round on 16+. Menace may only affect each foe once per Scene.",
+    "effect": "Trigger: You hit a foe with the @UUID[Compendium.ptu.moves.Item.EHk6fkrj1wuCHnCX]{Terrorize Manipulation}, or you activate @UUID[Compendium.ptu.feats.Item.ol8egvNeXzLicjy4]{Roughneck}\nEffect: Until their next turn, the target has their Initiative lowered to 0. For one full round, attacks against them cause them to lose a Tick of Hit Points and become @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI]{Vulnerable} for one full round on 16+. Menace may only affect each foe once per Scene.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +70,9 @@
     "class": "Roughneck",
     "name": "Menace [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "menace"
+    "replacesSlug": "menace",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -80,7 +83,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
