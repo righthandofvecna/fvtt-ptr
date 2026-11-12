@@ -1,7 +1,7 @@
 export const ItemPilesHooks = {
   listen() {
     Hooks.on("item-piles-preDropItemDetermined", function (a, b, dropData, d) {
-      if (dropData?.item?.type != "item") {
+      if (["item", "pokeball"].includes(dropData?.item?.type) == false) {
         return false; // Cancel Item Piles dialogue if the dragged item is not a 'real' item.
       }
     });
@@ -63,8 +63,9 @@ export const ItemPilesHooks = {
     });
 
     Hooks.once("item-piles-ready", async () => {
+      console.log("[PTU] Adding Item Piles system integration");
       game.itempiles.API.addSystemIntegration({
-        "VERSION": "1.0.1",
+        "VERSION": "1.0.2",
 
         // The actor class type is the type of actor that will be used for the default item pile actor that is created on first item drop.
         "ACTOR_CLASS_TYPE": "character",
@@ -79,7 +80,7 @@ export const ItemPilesHooks = {
         "ITEM_FILTERS": [
           {
             "path": "type",
-            "filters": "ability,capability,condition,contestmove,dexentry,edge,effect,feat,move,pokeball,pokeedge,reference,species,spiritaction"
+            "filters": "ability,capability,condition,contestmove,dexentry,edge,effect,feat,move,pokeedge,reference,species,spiritaction"
           }
         ],
 
@@ -93,6 +94,7 @@ export const ItemPilesHooks = {
         // In the case of items, it is recommended you export the item with `.toObject()` and strip out any module data
         "CURRENCIES": [{
           "primary": true,
+          "type": "attribute",
           "name": "Poké",
           "abbreviation": "{#}₽",
           "exchangeRate": 1,
