@@ -2,7 +2,7 @@
   "name": "Unexpected Attacks",
   "system": {
     "origin": "",
-    "effect": "You learn the Moves Pursuit and Sucker Punch.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.4zyVHZ1t6PJsYzGX]{Pursuit} and @UUID[Compendium.ptu.moves.Item.QGRRWu7evV8MKgs4]{Sucker Punch}.",
     "snippet": "",
     "rules": [
       {
@@ -59,7 +59,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -83,7 +84,9 @@
     "name": "Unexpected Attacks",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -94,7 +97,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Rogue, two Rogue Skills at Adept Rank",
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -107,7 +112,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 44700000,
   "_id": "eQJg4bS7LO0m38s0"
 }

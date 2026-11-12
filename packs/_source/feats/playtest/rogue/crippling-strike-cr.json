@@ -2,7 +2,7 @@
   "name": "Crippling Strike",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You hit with a Rogue Move\nEffect: The target gains the Vortex debuffs, as you inflict a debilitating wound on them.",
+    "effect": "Trigger: You hit with a Rogue Move\nEffect: The target gains the @UUID[Compendium.ptu.effects.Item.BuK1xNKNhBn1DZDu]{Vortex} debuff, as you inflict a debilitating wound on them.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "class": "Rogue",
     "name": "Crippling Strike [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "crippling-strike"
+    "replacesSlug": "crippling-strike",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
