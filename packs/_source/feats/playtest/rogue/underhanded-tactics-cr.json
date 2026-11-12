@@ -2,7 +2,7 @@
   "name": "Underhanded Tactics",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain your choice of Ambush or Cruelty.",
+    "effect": "Effect: You gain your choice of @UUID[Compendium.ptu.abilities.Item.rlnJ3Qo2U9bHJWnW]{Ambush} or @UUID[Compendium.ptu.abilities.Item.6XpwCLUT2uMAN0aM]{Cruelty}.",
     "snippet": "",
     "rules": [
       {
@@ -20,10 +20,12 @@
         "adjustName": false,
         "choices": [
           {
-            "value": "Compendium.ptu.abilities.Item.rlnJ3Qo2U9bHJWnW"
+            "value": "Compendium.ptu.abilities.Item.rlnJ3Qo2U9bHJWnW",
+            "label": "Ambush"
           },
           {
-            "value": "Compendium.ptu.abilities.Item.6XpwCLUT2uMAN0aM"
+            "value": "Compendium.ptu.abilities.Item.6XpwCLUT2uMAN0aM",
+            "label": "Cruelty"
           }
         ]
       },
@@ -67,7 +69,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -88,7 +91,9 @@
     "class": "Rogue",
     "name": "Underhanded Tactics [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "underhanded-tactics"
+    "replacesSlug": "underhanded-tactics",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -101,7 +106,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

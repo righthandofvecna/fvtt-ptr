@@ -2,7 +2,7 @@
   "name": "Street Brawler Rank 2",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You may learn 2 moves per rank from the following list;\nPursuit, Sucker Punch, Assurance, Payback, Spite, Sand Attack, Me First, Throat Chop.",
+    "effect": "Effect: You may learn 2 moves per rank from the following list:\n@UUID[Compendium.ptu.moves.Item.4zyVHZ1t6PJsYzGX]{Pursuit}, @UUID[Compendium.ptu.moves.Item.QGRRWu7evV8MKgs4]{Sucker Punch}, @UUID[Compendium.ptu.moves.Item.eQqKpKRD5wG1Hg7d]{Assurance}, @UUID[Compendium.ptu.moves.Item.8frJ1rnKqBmGvKC0]{Payback}, @UUID[Compendium.ptu.moves.Item.7sMVSFGaJax6lWuM]{Spite}, @UUID[Compendium.ptu.moves.Item.IU5XxUVfxPggP6Rx]{Sand Attack}, @UUID[Compendium.ptu.moves.Item.Zvyuo4sSpliuYCjX]{Me First}, @UUID[Compendium.ptu.moves.Item.lh8CZDIXVYVWsbCF]{Throat Chop}.",
     "snippet": "",
     "rules": [
       {
@@ -21,48 +21,56 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.4zyVHZ1t6PJsYzGX",
+            "label": "Pursuit",
             "predicate": {
               "not": "move:pursuit"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.QGRRWu7evV8MKgs4",
+            "label": "Sucker Punch",
             "predicate": {
               "not": "move:sucker-punch"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.eQqKpKRD5wG1Hg7d",
+            "label": "Assurance",
             "predicate": {
               "not": "move:assurance"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.8frJ1rnKqBmGvKC0",
+            "label": "Payback",
             "predicate": {
               "not": "move:payback"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.7sMVSFGaJax6lWuM",
+            "label": "Spite",
             "predicate": {
               "not": "move:spite"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.IU5XxUVfxPggP6Rx",
+            "label": "Sand Attack",
             "predicate": {
               "not": "move:sand-attack"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.Zvyuo4sSpliuYCjX",
+            "label": "Me First",
             "predicate": {
               "not": "move:me-first"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.lh8CZDIXVYVWsbCF",
+            "label": "Throat Chop",
             "predicate": {
               "not": "move:throat-chop"
             }
@@ -82,48 +90,56 @@
         "choices": [
           {
             "value": "Compendium.ptu.moves.Item.4zyVHZ1t6PJsYzGX",
+            "label": "Pursuit",
             "predicate": {
               "not": "move:pursuit"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.QGRRWu7evV8MKgs4",
+            "label": "Sucker Punch",
             "predicate": {
               "not": "move:sucker-punch"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.eQqKpKRD5wG1Hg7d",
+            "label": "Assurance",
             "predicate": {
               "not": "move:assurance"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.8frJ1rnKqBmGvKC0",
+            "label": "Payback",
             "predicate": {
               "not": "move:payback"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.7sMVSFGaJax6lWuM",
+            "label": "Spite",
             "predicate": {
               "not": "move:spite"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.IU5XxUVfxPggP6Rx",
+            "label": "Sand Attack",
             "predicate": {
               "not": "move:sand-attack"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.Zvyuo4sSpliuYCjX",
+            "label": "Me First",
             "predicate": {
               "not": "move:me-first"
             }
           },
           {
             "value": "Compendium.ptu.moves.Item.lh8CZDIXVYVWsbCF",
+            "label": "Throat Chop",
             "predicate": {
               "not": "move:throat-chop"
             }
@@ -171,7 +187,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -192,7 +209,9 @@
     "class": "Rogue",
     "name": "Street Brawler [CR]Rank 2 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "street-brawler-rank-2"
+    "replacesSlug": "street-brawler-rank-2",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -204,7 +223,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
