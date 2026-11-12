@@ -2,7 +2,7 @@
   "name": "Overrun",
   "system": {
     "origin": "",
-    "effect": "Trigger: Your Mount with Rock Head makes a Damage Roll for a Dash or Pass Move\nEffect: Your Pokémon adds their Speed Stat in addition to their normal attacking Stat to their Damage Roll. The target gains Damage Reduction against this attack equal to their own Speed Stat.",
+    "effect": "Trigger: Your Mount with @UUID[Compendium.ptu.abilities.Item.2N9Ih71fbWBeoUm0]{Rock Head} makes a Damage Roll for a Dash or Pass Move\nEffect: Your Pokémon adds their Speed Stat in addition to their normal attacking Stat to their Damage Roll. The target gains Damage Reduction against this attack equal to their own Speed Stat.",
     "snippet": "",
     "rules": [
       {
@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +72,9 @@
     "name": "Overrun",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -82,7 +85,10 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Conqueror's March, Expert Acrobatics or Athletics",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
@@ -95,7 +101,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 50700000,
   "_id": "jHVvNQeMyWDS7h4n"
 }
