@@ -2,7 +2,7 @@
   "name": "Fearsome Display",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You use Leer or a Roughneck Move\nEffect: The Move gains additional effects.\n- Leer: Attacks against affected foes gain a +2 Bonus to their Critical Range for one full round.\n- Chip Away: The target is considered Vulnerable against this attack, and may not activate Interrupts or Moves with the Shield Keyword in response to it.\n- Headbutt: The target is automatically Flinched, and you may initiate a Push Maneuver against the target, using your Intimidate or Athletics skill. This Maneuver automatically hits, but you must still roll an opposed check.\n- Glare: The target loses 2 Speed Combat Stages, and is Slowed for one full round. This occurs whether Glare hits or misses.\n- Mean Look: The target is Suppressed for one full round, and has a random Move Disabled.\n- Endure: You gain two Ticks of Temporary Hit Points.\n- Slack Off: You are cured of one Status Affliction.",
+    "effect": "Trigger: You use Leer or a Roughneck Move\nEffect: The Move gains additional effects.\n- @UUID[Compendium.ptu.moves.Item.XQOEuOenSzYNz4eO]{Leer}: Attacks against affected foes gain a +2 Bonus to their Critical Range for one full round.\n- @UUID[Compendium.ptu.moves.Item.jA1lUJTWb7izUm2l]{Chip Away}: The target is considered @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI]{Vulnerable} against this attack, and may not activate Interrupts or Moves with the @CompSearch[Moves keywords=Shield]{Shield} Keyword in response to it.\n- @UUID[Compendium.ptu.moves.Item.4a68jMGmkXi2pkfF]{Headbutt}: The target is automatically @UUID[Compendium.ptu.effects.Item.xE6uIFWZoYXAZQxA]{Flinched}, and you may initiate a @UUID[Compendium.ptu.moves.Item.79nCOdXheYY2AXTB]{Push Maneuver} against the target, using your Intimidate or Athletics skill. This Maneuver automatically hits, but you must still roll an opposed check.\n- @UUID[Compendium.ptu.moves.Item.VUD1mCjhImVmtttd]{Glare}: The target loses 2 Speed Combat Stages, and is @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed} for one full round. This occurs whether Glare hits or misses.\n- @UUID[Compendium.ptu.moves.Item.mddjD9rQYW5169un]{Mean Look}: The target is @UUID[Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY]{Suppressed} for one full round, and has a random Move @UUID[Compendium.ptu.effects.Item.GUKAMwsFi0EJ56WD]{Disabled}.\n- @UUID[Compendium.ptu.moves.Item.IAFYzSRQGxZM1SSQ]{Endure}: You gain two Ticks of Temporary Hit Points.\n- @UUID[Compendium.ptu.moves.Item.hP6wlI0unApyOP9E]{Slack Off}: You are cured of one Status Affliction.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +70,9 @@
     "class": "Roughneck",
     "name": "Fearsome Display [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "fearsome-display"
+    "replacesSlug": "fearsome-display",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -80,7 +83,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

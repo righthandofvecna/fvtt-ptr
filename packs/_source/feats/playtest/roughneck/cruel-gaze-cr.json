@@ -2,7 +2,7 @@
   "name": "Cruel Gaze",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Glare and Headbutt",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.VUD1mCjhImVmtttd]{Glare} and @UUID[Compendium.ptu.moves.Item.4a68jMGmkXi2pkfF]{Headbutt}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,18 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.VUD1mCjhImVmtttd"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.4a68jMGmkXi2pkfF"
       }
     ],
     "enabled": true,
@@ -48,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +83,9 @@
     "class": "Roughneck",
     "name": "Cruel Gaze [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "cruel-gaze"
+    "replacesSlug": "cruel-gaze",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +96,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
