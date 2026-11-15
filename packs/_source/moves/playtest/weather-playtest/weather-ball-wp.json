@@ -49,7 +49,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -73,7 +74,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "weather-playtest",
-    "replacesSlug": "weather-ball"
+    "replacesSlug": "weather-ball",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "GWZv0em5fcIPGnFo",
   "effects": [],
@@ -83,7 +86,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
