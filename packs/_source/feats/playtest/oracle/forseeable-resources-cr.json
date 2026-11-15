@@ -2,7 +2,7 @@
   "name": "Forseeable Resources",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You have just the right item for the moment, because you predicted it would be useful at this time. You create 1 Consumable item (like a Potion or Pokeball) that costs up to $250 times half your Perception Skill rank. You must use the item before the end of your turn or else the item disappears.",
+    "effect": "Effect: You have just the right item for the moment, because you predicted it would be useful at this time. You create 1 Consumable item (like a Potion or Pokeball) that costs up to @Poke[250] times half your Perception Skill rank. You must use the item before the end of your turn or else the item disappears.",
     "snippet": "",
     "rules": [
       {
@@ -39,7 +39,7 @@
       "Class Rework"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "custom",
       "max": 0,
       "custom": "Drain 2 AP - Rapid Action",
       "modifiers": {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +59,7 @@
       "extended": false
     },
     "ap": {
-      "cost": 0,
+      "cost": 2,
       "bind": false
     },
     "prerequisites": [
@@ -70,7 +71,9 @@
     "class": "Oracle",
     "name": "Forseeable Resources [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "forseeable-resources"
+    "replacesSlug": "forseeable-resources",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false,
+      "used": null
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
