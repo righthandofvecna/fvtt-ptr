@@ -2,7 +2,6 @@
   "name": "Smart Strike",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/SteelIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Smart Strike cannot miss.",
@@ -74,7 +73,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "_id": "ImFfaRbYkW1fzPPL",
   "effects": [],
@@ -82,7 +82,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.54",

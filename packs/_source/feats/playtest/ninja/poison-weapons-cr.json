@@ -2,7 +2,7 @@
   "name": "Poison Weapons",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You make a Weapon Attack.\nEffect: The attack or Move Poisons its targets on 16+, and you may have it deal Poison-Type Damage if you wish. If the Move would already inflict Poison, it may now instead inflict Badly Poisoned.\nBonus: You learn the Move Poison Fang, and any Damaging Physical Moves granted by Ninja Features may be used as Weapon Moves.",
+    "effect": "Trigger: You make a Weapon Attack.\nEffect: The attack or Move @UUID[Compendium.ptu.effects.Item.299X6pActAV8ITz7]{Poisons} its targets on 16+, and you may have it deal Poison-Type Damage if you wish. If the Move would already inflict Poison, it may now instead inflict @UUID[Compendium.ptu.effects.Item.39Ty93ddaWcIhagZ]{Badly Poisoned}.\nBonus: You learn the Move @UUID[Compendium.ptu.moves.Item.KbOJDmhqPMfCTmGr]{Poison Fang}, and any Damaging Physical Moves granted by Ninja Features may be used as Weapon Moves.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,12 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.KbOJDmhqPMfCTmGr"
       }
     ],
     "enabled": true,
@@ -49,7 +55,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +78,9 @@
     "class": "Ninja",
     "name": "Poison Weapons [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "poison-weapons"
+    "replacesSlug": "poison-weapons",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +91,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
