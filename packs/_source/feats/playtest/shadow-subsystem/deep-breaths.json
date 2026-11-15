@@ -6,9 +6,34 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Trigger: A Shadow Pokémon you own is about to enter Hyper Mode\nEffect: The target does not enter Hyper Mode, gains two Ticks of Temporary HP, and is healed of any Volatile Status ailments.\nBonus: Your Purified Pokémon gain a +3 bonus to their Save rolls.  when they are cured of a status condition, they gain a Tick of Temporary HP.",
+    "effect": "Trigger: A Shadow Pokémon you own is about to enter Hyper Mode\nEffect: The target does not enter Hyper Mode, gains two Ticks of Temporary HP, and is healed of any Volatile Status ailments.\nBonus: Your Purified Pokémon gain a +3 bonus to their Save rolls. When they are cured of a status condition, they gain a Tick of Temporary HP.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          }
+        ],
+        "flag": "stat",
+        "adjustName": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.stat}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "deep-breaths",
     "schema": {
@@ -22,7 +47,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.5v4bXxI1XVWa0oAm",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -40,7 +65,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": true
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,7 +86,9 @@
     "free": false,
     "class": "Redeemer",
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -69,7 +97,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
