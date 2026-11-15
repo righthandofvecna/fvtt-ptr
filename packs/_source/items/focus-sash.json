@@ -26,7 +26,6 @@
     "keywords": [
       "Held Item",
       "Accessory",
-      "Artificer",
       "Fashionista"
     ],
     "frequency": {
@@ -39,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -90,5 +90,6 @@
     "exportSource": null
   },
   "sort": 41900000,
-  "_id": "ZfsxzrZhl9B4gsqt"
+  "_id": "ZfsxzrZhl9B4gsqt",
+  "folder": null
 }
