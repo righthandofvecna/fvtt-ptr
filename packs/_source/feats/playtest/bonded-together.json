@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": true,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -56,14 +57,18 @@
     "notes": "",
     "free": false,
     "class": "Mystic",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "You’ve got it in you!"
+      "prereqBackup": "You’ve got it in you!",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
