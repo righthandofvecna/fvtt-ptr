@@ -2,7 +2,7 @@
   "name": "Warping Ground [Nomad]",
   "system": {
     "origin": "",
-    "effect": "You learn the Moves Gravity and Trick Room.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.IuGk58XiaSA0Gypi]{Gravity} and @UUID[Compendium.ptu.moves.Item.Uut6FpUzRObtZvBm]{Trick Room}.",
     "snippet": "",
     "rules": [
       {
@@ -11,7 +11,8 @@
         "path": "system.modifiers.baseStats.spd.mod",
         "value": 1,
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "GrantItem",
@@ -57,7 +58,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -80,8 +82,10 @@
     "automation": [],
     "name": "Warping Ground",
     "useCount": 0,
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -92,7 +96,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Nomad, Adept Focus"
+      "prereqBackup": "Nomad, Adept Focus",
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
