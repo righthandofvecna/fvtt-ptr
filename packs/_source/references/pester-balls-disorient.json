@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Chemistry Recipes",
-    "effect": "Prerequisites: Chemist Cost: $50 Effect: You create Pester Balls that can inflict Rage or Confusion.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.D2gdYC215goQ9kt2]{Chemist}\nCost: @Poke[50]\nEffect: You create @UUID[Compendium.ptu.items.Item.1e63A4th1XwoZ3Xf]{Pester Balls} that can inflict @UUID[Compendium.ptu.items.Item.TnH8XhDujs7ZgZMu]{Rage} or @UUID[Compendium.ptu.items.Item.4m5LFAoj13Xx5xqL]{Confusion}.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "puhMrcKwed0nEl9Q",
   "effects": [],
-  "folder": null,
   "sort": 27200000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

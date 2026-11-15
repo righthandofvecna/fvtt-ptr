@@ -2,7 +2,7 @@
   "name": "Caustic Chemistry",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You hit with a Pester Ball or apply a Repel to a okémon\nEffect: Make a Technology Education Roll. All targets ffected by this Feature’s trigger lose Hit Points equal to your roll. This may only affect a target once per Scene.",
+    "effect": "Trigger: You hit with a @UUID[Compendium.ptu.items.Item.1e63A4th1XwoZ3Xf]{Pester Ball} or apply a @UUID[Compendium.ptu.items.Item.vo6LUh99xOWwgAZP]{Repel} to a Pokémon\nEffect: Make a Technology Education Roll. All targets affected by this Feature’s trigger lose Hit Points equal to your roll. This may only affect a target once per Scene.\n\n@UUID[Compendium.ptu.references.Item.mU2KYq8NHPCkTQaO]{Pester Balls: Shut Down}",
     "snippet": "",
     "rules": [],
     "enabled": true,
