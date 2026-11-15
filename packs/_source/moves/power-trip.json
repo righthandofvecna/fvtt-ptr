@@ -2,7 +2,6 @@
   "name": "Power Trip",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "This Move gains 2 to its Damage Base for every positive Combat Stage held by the user, to a maximum of Damage Base 20.",
@@ -47,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -62,8 +62,8 @@
     },
     "type": "Dark",
     "category": "Physical",
-    "damageBase": 2,
-    "ac": 2,
+    "damageBase": "2",
+    "ac": "2",
     "range": "Melee",
     "contestType": "Tough - Incentives",
     "stab": false,
@@ -71,7 +71,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "kyClgL4mFoL9WQQJ",
   "effects": [],
@@ -79,7 +81,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

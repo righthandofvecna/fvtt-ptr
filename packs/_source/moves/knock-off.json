@@ -2,7 +2,6 @@
   "name": "Knock Off",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Choose one of the target's Held Items or Accessory Slot Items. It is knocked to the ground.",
@@ -47,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -62,8 +62,8 @@
     },
     "type": "Dark",
     "category": "Physical",
-    "damageBase": 7,
-    "ac": 2,
+    "damageBase": "7",
+    "ac": "2",
     "range": "Melee",
     "contestType": "Smart - Steady Performance",
     "stab": false,
@@ -71,7 +71,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "wXMLKSFvWlsa0ee6",
   "effects": [],
@@ -79,7 +81,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
