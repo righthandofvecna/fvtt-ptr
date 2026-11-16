@@ -2,7 +2,6 @@
   "name": "Thunderbolt",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/ElectricIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Thunderbolt Paralyzes the target on 19+.",
@@ -59,7 +58,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -84,7 +84,8 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "y9WyqqBWO4tAaX8G",
   "effects": [],
