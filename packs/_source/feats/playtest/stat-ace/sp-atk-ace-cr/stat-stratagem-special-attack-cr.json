@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -64,12 +65,15 @@
     "class": "Stat Ace (Special Attack)",
     "contentSet": "class-rework",
     "replacesSlug": "stat-stratagem-special-attack",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_id": "XVVqLAMWr7BVGgdt",
