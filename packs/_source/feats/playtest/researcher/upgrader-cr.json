@@ -2,7 +2,7 @@
   "name": "Upgrader",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You may craft any Augmentation Recipe for which you qualify and install them on yourself and willing Pokémon and Trainers.",
+    "effect": "Effect: You may craft any Augmentation Recipe for which you qualify and install them on yourself and willing Pokémon and Trainers.\n\n@UUID[Compendium.ptu.references.Item.pmH0X5jWdzgo3dQC]{Datajack}\n@UUID[Compendium.ptu.references.Item.5usmWZI8clt5xfSl]{Eye Augments}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -75,7 +75,7 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": "",
       "showInTokenPanel": false
     }
