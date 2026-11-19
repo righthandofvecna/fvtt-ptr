@@ -2,7 +2,7 @@
   "name": "Mountain of Faith",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose Wishmaster or Soothing Tone. You gain the Chosen Ability and learn its Connected Move.",
+    "effect": "Effect: Choose @UUID[Compendium.ptu.abilities.Item.ohuJHoGIulmlraYV]{Wishmaster} or @UUID[Compendium.ptu.abilities.Item.Fe2BUKq87beswtZ7]{Soothing Tone}. You gain the Chosen Ability and learn its Connected Move.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,27 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.ohuJHoGIulmlraYV",
+            "label": "Wishmaster"
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.Fe2BUKq87beswtZ7",
+            "label": "Soothing Tone"
+          }
+        ],
+        "flag": "mountainoffaith"
+      },
+      {
+        "key": "GrantItem",
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.mountainoffaith}",
+        "predicate": []
       }
     ],
     "enabled": true,
@@ -48,7 +69,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +92,9 @@
     "class": "Sage",
     "name": "Mountain of Faith [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "mountain-of-faith"
+    "replacesSlug": "mountain-of-faith",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +105,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
