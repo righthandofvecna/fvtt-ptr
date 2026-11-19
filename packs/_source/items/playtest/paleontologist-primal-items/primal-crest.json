@@ -1,26 +1,26 @@
 {
   "folder": "tC60PytLZZ9DJ2u6",
-  "name": "Primal Probiscis",
+  "name": "Primal Crest",
   "type": "item",
-  "_id": "3YYFz3isON9SGjMf",
+  "_id": "t0OFOwgFZcnfoJU6",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "",
-    "effect": "A Fossil Pokémon may hold a single Primal Item without taking up their Held Item slot, but cannot hold two of same Primal Item this way.\nThe holder’s Effect Range is extended by +1.",
+    "effect": "A Fossil Pokémon may hold a single Primal Item without taking up their Held Item slot, but cannot hold two of same Primal Item this way.\nThe holder gains a +3 Bonus to all Save Checks.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "predicate": [],
         "mode": "add",
-        "path": "system.modifiers.effectRange.mod",
-        "phase": "afterDerived",
-        "value": 1,
-        "priority": null
+        "path": "system.modifiers.saveChecks.mod",
+        "phase": "applyAEs",
+        "value": 3,
+        "priority": 20
       }
     ],
     "enabled": true,
-    "slug": "primal-probiscis",
+    "slug": "primal-crest",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -71,7 +71,7 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }

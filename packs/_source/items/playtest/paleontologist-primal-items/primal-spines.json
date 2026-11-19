@@ -1,16 +1,16 @@
 {
   "folder": "tC60PytLZZ9DJ2u6",
-  "name": "Primal Shell",
+  "name": "Primal Spines",
   "type": "item",
-  "_id": "YO250Ydez3GKHNVV",
+  "_id": "A2nUUIUYWMYl3KVb",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "",
-    "effect": "A Fossil Pokémon may hold a single Primal Item without taking up their Held Item slot, but cannot hold two of same Primal Item this way.\nThe holder gains 10 Damage Reduction against Ranged Attacks.",
+    "effect": "A Fossil Pokémon may hold a single Primal Item without taking up their Held Item slot, but cannot hold two of same Primal Item this way.\nWhen the holder is hit with a damaging Melee Attack, the attacker loses a Tick of Hit Points.",
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "primal-shell",
+    "slug": "primal-spines",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {

@@ -1,26 +1,16 @@
 {
   "folder": "tC60PytLZZ9DJ2u6",
-  "name": "Primal Crest",
+  "name": "Primal Shell",
   "type": "item",
-  "_id": "t0OFOwgFZcnfoJU6",
+  "_id": "YO250Ydez3GKHNVV",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "",
-    "effect": "A Fossil Pokémon may hold a single Primal Item without taking up their Held Item slot, but cannot hold two of same Primal Item this way.\nThe holder gains a +3 Bonus to all Save Checks.",
+    "effect": "A Fossil Pokémon may hold a single Primal Item without taking up their Held Item slot, but cannot hold two of same Primal Item this way.\nThe holder gains 10 Damage Reduction against Ranged Attacks.",
     "snippet": "",
-    "rules": [
-      {
-        "key": "ActiveEffectLike",
-        "predicate": [],
-        "mode": "add",
-        "path": "system.modifiers.saveChecks.mod",
-        "phase": "applyAEs",
-        "value": 3,
-        "priority": 20
-      }
-    ],
+    "rules": [],
     "enabled": true,
-    "slug": "primal-crest",
+    "slug": "primal-shell",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -71,7 +61,7 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "automationStatus": "completed",
+      "automationStatus": "needs-automation",
       "devNote": "",
       "showInTokenPanel": false
     }

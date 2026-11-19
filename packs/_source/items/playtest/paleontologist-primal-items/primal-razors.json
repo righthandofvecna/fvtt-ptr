@@ -1,16 +1,24 @@
 {
   "folder": "tC60PytLZZ9DJ2u6",
-  "name": "Primal Spines",
+  "name": "Primal Razors",
   "type": "item",
-  "_id": "A2nUUIUYWMYl3KVb",
+  "_id": "MpeKji9hcvUc69DG",
   "img": "/systems/ptu/static/css/images/icons/item_icon.png",
   "system": {
     "origin": "",
-    "effect": "A Fossil Pokémon may hold a single Primal Item without taking up their Held Item slot, but cannot hold two of same Primal Item this way.\nWhen the holder is hit with a damaging Melee Attack, the attacker loses a Tick of Hit Points.",
+    "effect": "A Fossil Pokémon may hold a single Primal Item without taking up their Held Item slot, but cannot hold two of same Primal Item this way.\nThe holder’s Critical Hit Range is extended by +1.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "crit-range",
+        "value": 1
+      }
+    ],
     "enabled": true,
-    "slug": "primal-spines",
+    "slug": "primal-razors",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
@@ -61,7 +69,7 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
