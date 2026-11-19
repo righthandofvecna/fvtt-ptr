@@ -2,7 +2,7 @@
   "name": "Scoundrel's Strike",
   "system": {
     "origin": "",
-    "effect": "Trigger - You hit with a Rogue Move\nEffect: The target loses Hit Points equal to your highest Rogue Skill Rank doubled, and an additional effect based on whether you have the Ambush or Cruelty Ability. You may use Scoundrel’s Strike only once per Scene per target.\n»» Ambush: For 1 Full Round, the target is Slowed, cannot make Attacks of Opportunity, and takes a -2 penalty to all rolls.\n»» Cruelty: For 1 Full Round, the target loses 5 Hit Points upon being hit by any damaging attack.",
+    "effect": "Trigger: You hit with a Rogue Move\nEffect: The target loses Hit Points equal to your highest Rogue Skill Rank doubled, and an additional effect based on whether you have the @UUID[Compendium.ptu.abilities.Item.rlnJ3Qo2U9bHJWnW]{Ambush} or @UUID[Compendium.ptu.abilities.Item.6XpwCLUT2uMAN0aM]{Cruelty} Ability. You may use Scoundrel’s Strike only once per Scene per target.\n»» Ambush: For 1 Full Round, the target is @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed}, cannot make @UUID[Compendium.ptu.moves.Item.lhaZXnE2PfttWp41]{Attacks of Opportunity}, and takes a -2 penalty to all rolls.\n»» Cruelty: For 1 Full Round, the target loses 5 Hit Points upon being hit by any damaging attack.",
     "snippet": "",
     "rules": [
       {
@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +72,9 @@
     "name": "Scoundrel's Strike",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -82,7 +85,10 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Underhanded Tactics, Street Fighter",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
@@ -95,7 +101,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 64600000,
   "_id": "wIMbwIaZKgfSowSm"
 }
