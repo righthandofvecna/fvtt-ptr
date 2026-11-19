@@ -2,7 +2,7 @@
   "name": "Twisted Soul",
   "system": {
     "origin": "",
-    "effect": "You gain the Twisted Power Ability.",
+    "effect": "You gain the @UUID[Compendium.ptu.abilities.Item.ICqgLnQVOe8bPIqT]{Twisted Power} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -10,6 +10,30 @@
         "predicate": [],
         "allowDuplicate": false,
         "uuid": "Compendium.ptu.abilities.Item.ICqgLnQVOe8bPIqT"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "atk",
+            "label": "ATK"
+          },
+          {
+            "value": "spatk",
+            "label": "SpATK"
+          }
+        ],
+        "adjustName": false,
+        "flag": "twistedsoul"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.twistedsoul}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
       }
     ],
     "enabled": true,
@@ -44,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -67,7 +92,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -78,7 +105,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Shade Caller",
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -91,7 +120,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 25600000,
   "_id": "NZEDVusWTAK1qLAz"
 }
