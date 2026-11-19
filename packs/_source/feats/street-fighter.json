@@ -2,7 +2,7 @@
   "name": "Street Fighter",
   "system": {
     "origin": "",
-    "effect": "You learn the Moves Assurance and Payback.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.eQqKpKRD5wG1Hg7d]{Assurance} and @UUID[Compendium.ptu.moves.Item.8frJ1rnKqBmGvKC0]{Payback}.",
     "snippet": "",
     "rules": [
       {
@@ -59,7 +59,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -83,7 +84,9 @@
     "name": "Street Fighter",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -94,7 +97,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Unexpected Attacks, two Rogue Skills at Expert Rank",
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -107,7 +112,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 67200000,
   "_id": "ydyRt3kDR8ZFUsLS"
 }

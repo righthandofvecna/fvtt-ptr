@@ -2,14 +2,17 @@
   "name": "Weapon Finesse",
   "system": {
     "origin": "",
-    "effect": "Trigger - You hit a foe with a Weapon Attack.\nEffect: After the attack is resolved, you may immediately use a Disarm, Trip, or Push Maneuver against that foe as a Free Action. The Maneuver automatically hits, but you must still make an Opposed Roll.",
+    "effect": "Trigger: You hit a foe with a Weapon Attack.\nEffect: After the attack is resolved, you may immediately use a @UUID[Compendium.ptu.moves.Item.h0slhD40dRasSRXj]{Disarm}, @UUID[Compendium.ptu.moves.Item.wF3ORK20xylO1ZGs]{Trip}, or @UUID[Compendium.ptu.moves.Item.79nCOdXheYY2AXTB]{Push} Maneuver against that foe as a Free Action. The Maneuver automatically hits, but you must still make an Opposed Roll.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -44,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -68,7 +72,9 @@
     "name": "Weapon Finesse",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -78,7 +84,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Counter Stance, Adept Combat or Acrobatics"
+      "prereqBackup": "Counter Stance, Adept Combat or Acrobatics",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -91,7 +100,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 14100000,
   "_id": "DHCEpEMaYnyApihF"
 }

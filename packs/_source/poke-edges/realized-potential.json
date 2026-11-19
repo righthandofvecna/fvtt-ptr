@@ -4,7 +4,20 @@
     "origin": "",
     "effect": "Subtract the user’s Species Base Stat Total from 45. The user gains Bonus Stat Points equal to the remainder. If the user evolves to a species with a Base Stat Total 45 or higher, Realized Potential is removed and the Tutor Slot is refunded.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [
+          "capability:underdog",
+          "self:level:30+"
+        ],
+        "mode": "add",
+        "path": "system.modifiers.statPoints.mod",
+        "phase": "applyAEs",
+        "value": "45 - @actor.system.stats.atk.base - @actor.system.stats.spatk.base - @actor.system.stats.hp.base - @actor.system.stats.def.base - @actor.system.stats.spdef.base - @actor.system.stats.spd.base",
+        "priority": null
+      }
+    ],
     "enabled": true,
     "slug": "realized-potential",
     "schema": {
@@ -34,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -56,7 +70,8 @@
     "useCount": 0,
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "type": "pokeedge",
   "img": "/systems/ptu/static/css/images/icons/poke_edge_icon.png",
@@ -67,7 +82,7 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Level 30, User is an Underdog Pokémon",
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -83,5 +98,6 @@
     "exportSource": null
   },
   "sort": 3000000,
-  "_id": "xIRaO706mDCXDG1t"
+  "_id": "xIRaO706mDCXDG1t",
+  "folder": null
 }

@@ -43,7 +43,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -57,13 +58,13 @@
       "bind": false
     },
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false
   },
   "effects": [],
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_id": "0C31b3ZhHHDPkI1A",
   "sort": 0,
   "_stats": {

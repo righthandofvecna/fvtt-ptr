@@ -2,7 +2,7 @@
   "name": "Genetic Memory",
   "system": {
     "origin": "",
-    "effect": "Target: Your Fossil Pokémon with at least 2 Tutor Points remaining\nEffect: The target loses 2 Tutor Points and learns any Move from its Egg Move or Tutor Move List. Genetic Memory may target a Pokémon only twice: once with a Tutor Move and once with an Egg Move. Egg Moves tutored this way do not count against the limit of 3 for TM and Tutor Moves.",
+    "effect": "Target: Your Fossil Pokémon with at least 1 Tutor Slot remaining\nEffect: The target loses 1 Tutor Slot and learns any Move from its Egg Move or Tutor Move List. Genetic Memory may target a Pokémon only twice: once with a Tutor Move and once with an Egg Move. Egg Moves tutored this way do not count against the limit of 3 for TM and Tutor Moves.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,7 +62,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -71,7 +74,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Ancient Heritage, Expert Pokemon Education"
+      "prereqBackup": "Ancient Heritage, Expert Pokemon Education",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -84,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 3900000,
   "_id": "3UD4e9sEgZ1tfC2i"
 }

@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -64,12 +65,15 @@
     "class": "Stat Ace (Speed)",
     "contentSet": "class-rework",
     "replacesSlug": "stat-stratagem-speed",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_id": "vNedHx5gQ5MvZWsb",

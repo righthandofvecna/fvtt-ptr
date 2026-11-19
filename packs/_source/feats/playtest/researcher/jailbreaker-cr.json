@@ -2,7 +2,7 @@
   "name": "Jailbreaker",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You may craft any Poké Ball Case Recipe for which you qualify.",
+    "effect": "Effect: You may craft any Poké Ball Case Recipe for which you qualify.\n\n@UUID[Compendium.ptu.references.Item.YGBqoHCoHX8yesHt]{Basic Cases}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -74,7 +74,7 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": "",
       "showInTokenPanel": false
     }

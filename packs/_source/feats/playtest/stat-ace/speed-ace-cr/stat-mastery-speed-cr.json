@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Effect: Stat Mastery’s Effect depends on your Chosen Stat:\n\nYour Pokémon may take Disengage Maneuvers as Rapid Actions.",
+    "effect": "Effect: Stat Mastery’s Effect depends on your Chosen Stat:\n\nYour Pokémon may take @UUID[Compendium.ptu.moves.Item.SY3j4DR2EGyRkvRr]{Disengage} Maneuvers as Rapid Actions.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,12 +62,16 @@
     "free": false,
     "class": "Stat Ace (Speed)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-mastery-speed"
+    "replacesSlug": "stat-mastery-speed",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_id": "wbBTBMbkXwCcZvqJ",

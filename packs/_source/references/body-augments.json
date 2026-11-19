@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upgrader Recipes",
-    "effect": "Prerequisites: Efficient Installation Effect: You may build and install the Medical Nanobots Augmentation for $1000 and the Wired Reflexes Augmentation for $1500.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.0uo02c8cKqHRvPQO]{Efficient Installation}\nEffect: You may build and install the Medical Nanobots @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.URXOXN8f0ra76uoM]{Augmentation} for @Poke[1000] and the Wired Reflexes Augmentation for @Poke[1500].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "zFN2psnsbSBIeGrm",
   "effects": [],
-  "folder": null,
   "sort": 31500000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
