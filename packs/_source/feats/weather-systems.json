@@ -2,7 +2,7 @@
   "name": "Weather Systems",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokemon with at least 2 Tutor Point\nEffect: Your Pokemon loses 2 Tutor Points, and learns your choice of Hail, Rain Dance, Sandstorm, or Sunny Day. The target must be able to learn the chosen Move through Level-Up, TM, or Tutor Moves. If the target has the chosen Move in their Level-Up List, Weather Systems costs no Tutor Points.",
+    "effect": "Target: Your Pokemon with at least 2 Tutor Point\nEffect: Your Pokemon loses 2 Tutor Points, and learns your choice of @UUID[Compendium.ptu.moves.Item.pRtupyIihgfCW09B]{Hail}, @UUID[Compendium.ptu.moves.Item.TQrk7QpDTMSD7Ycz]{Rain Dance}, @UUID[Compendium.ptu.moves.Item.XC3ObpOOy8mGk8s8]{Sandstorm}, or @UUID[Compendium.ptu.moves.Item.m787MkYyENqNyGOb]{Sunny Day}. The target must be able to learn the chosen Move through Level-Up, TM, or Tutor Moves. If the target has the chosen Move in their Level-Up List, Weather Systems costs no Tutor Points.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -38,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -62,7 +63,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -72,7 +75,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Climatology, Expert Survival"
+      "prereqBackup": "Climatology, Expert Survival",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -85,7 +91,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 66500000,
   "_id": "yChvcmaikGncLo2k"
 }
