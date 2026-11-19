@@ -2,7 +2,6 @@
   "name": "Baneful Bunker",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PoisonIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the user is hit by an attack, the user may use Baneful Bunker. The user is instead not hit by the Move. You do not take any damage nor are you affected by any of the Move's effect. In addition, if the triggering attack was Melee ranged, the attacker is Poisoned.",
@@ -76,7 +75,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "_id": "7ljNeJrRpucuLTSr",
   "effects": [],
@@ -84,7 +84,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.54",

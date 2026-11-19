@@ -33,8 +33,9 @@
         "priorityAdvanced": false,
         "priority": false,
         "reaction": false,
-        "interrupt": false
-      }
+        "interrupt": true
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,7 +60,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "class-rework",
-    "replacesSlug": "stat-maneuver-speed"
+    "replacesSlug": "stat-maneuver-speed",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +70,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Stat Ace, Adept Command or Focus",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "folder": "5f17VczTuQGcOBWv",

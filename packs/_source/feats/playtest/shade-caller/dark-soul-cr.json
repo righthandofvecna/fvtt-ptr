@@ -2,12 +2,11 @@
   "name": "Dark Soul",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose Shadow Tag or Super Luck. You gain the chosen Ability.",
+    "effect": "Effect: Choose @UUID[Compendium.ptu.abilities.Item.YMbaGLrWeNUadNkn]{Shadow Tag} or @UUID[Compendium.ptu.abilities.Item.z8xkCPTGTlVWDMqC]{Super Luck}. You gain the chosen Ability.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "darksoul",
         "choices": [
           {
@@ -18,7 +17,8 @@
             "value": "spatk",
             "label": "Special Attack"
           }
-        ]
+        ],
+        "adjustName": false
       },
       {
         "key": "ActiveEffectLike",
@@ -28,6 +28,33 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.YMbaGLrWeNUadNkn",
+            "label": "Shadow Tag",
+            "predicate": {
+              "not": "ability:shadow-tag"
+            }
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.z8xkCPTGTlVWDMqC",
+            "label": "Super Luck",
+            "predicate": {
+              "not": "ability:super-luck"
+            }
+          }
+        ],
+        "adjustName": false,
+        "flag": "darksoul1"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.darksoul1}"
       }
     ],
     "enabled": true,
@@ -63,7 +90,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -85,7 +113,9 @@
     "class": "Shade Caller",
     "name": "Dark Soul [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "dark-soul"
+    "replacesSlug": "dark-soul",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -96,7 +126,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -19,7 +19,8 @@
         "mode": "add",
         "path": "system.modifiers.effectRange.mod",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       },
       {
         "key": "FlatModifier",
@@ -36,11 +37,17 @@
       },
       {
         "key": "ActiveEffectLike",
-        "predicate": [],
+        "predicate": {
+          "gt": [
+            "{actor|system.spirit.value}",
+            0
+          ]
+        },
         "mode": "add",
         "path": "system.modifiers.capabilities.all",
         "phase": "applyAEs",
-        "value": 1
+        "value": 1,
+        "priority": null
       }
     ],
     "enabled": true,
@@ -68,7 +75,7 @@
     "duration": {
       "value": -1,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -80,7 +87,7 @@
     },
     "badge": null,
     "context": null,
-    "contentSet": "",
+    "contentSet": "friendship-spirit",
     "replacesSlug": ""
   },
   "effects": [],
@@ -89,7 +96,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

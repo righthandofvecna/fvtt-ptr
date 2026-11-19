@@ -2,7 +2,7 @@
   "name": "Divine Orations",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You use a Move with the Blessing Keyword.\nEffect: Spend 1 AP. You may use a Move with the Blessing Keyword as a Free Action. You can choose to instead spend 3 AP to use a Move with the Blessing Keyword, ignoring Frequency.",
+    "effect": "Trigger: You use a Move with the @CompSearch[Moves keywords=Blessing]{Blessing} Keyword.\nEffect: Spend 1 AP. You may use a Move with the Blessing Keyword as a Free Action. You can choose to instead spend 3 AP to use a Move with the Blessing Keyword, ignoring Frequency.",
     "snippet": "",
     "rules": [
       {
@@ -39,7 +39,7 @@
       "Class Rework"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "custom",
       "max": 0,
       "custom": "X AP – Rapid Action",
       "modifiers": {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "class": "Sage",
     "name": "Divine Orations [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "divine-orations"
+    "replacesSlug": "divine-orations",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

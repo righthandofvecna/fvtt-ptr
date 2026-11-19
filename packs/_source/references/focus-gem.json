@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Artificer Recipes",
-    "effect": "Prerequisites: Crystal Resonance Ingredients: Any Six Shards. Effect: You create a Focus that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.FjfnixbBiwMvFBbs]{Crystal Resonance}\nIngredients: Any Six Shards.\nEffect: You create a @CompSearch[Items keywords=Artificer Focus]{Focus} that may crafted to be worn as your choice of an Accessory Item, Head Slot Item, or Hand or Off-Hand Item.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "cEeEmFkD3dnBuvkv",
   "effects": [],
-  "folder": null,
   "sort": 20100000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
