@@ -2,7 +2,7 @@
   "name": "Experimental AI",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Increase the maximum complexity of all Pokébots you create by 2, and increase the maximum complexity of Pokébots you can control by 2.",
+    "effect": "Effect: Increase the maximum complexity of all Pokébots you create by 2, and increase the maximum complexity of Pokébots you can control by 2.\n@UUID[Compendium.ptu.references.Item.UpYQ1DK4AswzVGOE]{Futuretech}",
     "snippet": "",
     "rules": [],
     "enabled": true,
