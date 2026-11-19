@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -63,7 +64,9 @@
     "free": false,
     "class": "Stat Ace (Special Defense)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-stratagem-special-defense"
+    "replacesSlug": "stat-stratagem-special-defense",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
