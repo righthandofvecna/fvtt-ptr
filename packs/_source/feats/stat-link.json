@@ -2,7 +2,7 @@
   "name": "Stat Link",
   "system": {
     "origin": "",
-    "effect": "Trigger - At the end of your Pokémon’s turn, their Chosen Stat is at its default number of Combat Stages or less\nEffect: The triggering Pokémon gains +1 Combat Stage in your Chosen Stat. (Note: The “Default” number of Combat Stages is usually 0)",
+    "effect": "Trigger: At the end of your Pokémon’s turn, their Chosen Stat is at its default number of Combat Stages or less\nEffect: The triggering Pokémon gains +1 Combat Stage in your Chosen Stat. (Note: The “Default” number of Combat Stages is usually 0)",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,7 +61,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -71,7 +74,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Stat Ace",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -84,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 18000000,
   "_id": "HSmDVW1fiUmVtEJU"
 }
