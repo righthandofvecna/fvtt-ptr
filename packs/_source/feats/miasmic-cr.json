@@ -1,5 +1,4 @@
 {
-  "folder": null,
   "name": "Miasmic",
   "type": "feat",
   "_id": "5yu32GgLiIX9GDhv",
@@ -68,7 +67,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -89,12 +89,15 @@
     "notes": "",
     "free": false,
     "class": "Miasmic",
-    "name": "Miasmic [CR]"
+    "name": "Miasmic [CR]",
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "Can be removed in favor of Compendium.ptu.feats.Item.wu2Cq1Oc38Jqynv7"
     }
   }
 }

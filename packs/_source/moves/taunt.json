@@ -2,7 +2,6 @@
   "name": "Taunt",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The target becomes Enraged.",
@@ -84,7 +83,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "_id": "PPcOINwAtEYByNNN",
   "effects": [],

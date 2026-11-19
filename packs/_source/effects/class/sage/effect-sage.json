@@ -14,7 +14,8 @@
         "mode": "add",
         "path": "system.modifiers.damageReduction.physical.mod",
         "phase": "afterDerived",
-        "value": "max(floor({actor|system.health.total}/10),0)"
+        "value": "max(floor({actor|system.health.total}/10),0)",
+        "priority": null
       },
       {
         "key": "ActiveEffectLike",
@@ -22,7 +23,8 @@
         "mode": "add",
         "path": "system.modifiers.damageReduction.special.mod",
         "phase": "afterDerived",
-        "value": "max(floor({actor|system.health.total}/10),0)"
+        "value": "max(floor({actor|system.health.total}/10),0)",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -43,7 +45,7 @@
     "duration": {
       "value": -1,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "start": {
       "value": 0,
@@ -64,7 +66,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

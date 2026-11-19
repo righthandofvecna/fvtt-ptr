@@ -13,7 +13,8 @@
         "predicate": [],
         "hideIfDisabled": false,
         "selectors": "attack-roll",
-        "value": 2
+        "value": 2,
+        "label": "Paragon Mode"
       },
       {
         "key": "TokenLight",
@@ -31,8 +32,7 @@
           "animation": {
             "type": "radialrainbow",
             "speed": 5,
-            "intensity": 5,
-            "reverse": false
+            "intensity": 5
           },
           "darkness": {
             "min": 0,
@@ -72,7 +72,7 @@
     },
     "badge": null,
     "context": null,
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": ""
   },
   "effects": [],
@@ -81,7 +81,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "Could be renamed to Paragon Mode, Shadow-Type resistance not implemented, could add a roll option for the Combat Maneuver modifier"
     }
   },
   "_id": "azrDBZG5il1ybXfH",

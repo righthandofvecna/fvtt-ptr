@@ -1,5 +1,4 @@
 {
-  "folder": null,
   "name": "Corrupt Blood",
   "type": "feat",
   "_id": "lu16TBbgv1OhCA3p",
@@ -61,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -81,14 +81,15 @@
     "notes": "",
     "free": false,
     "class": "Miasmic",
-    "name": "Corrupt Blood [CR]"
+    "name": "Corrupt Blood [CR]",
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
       "automationStatus": "needs-automation",
-      "devNote": ""
+      "devNote": "Can be removed in favor of Compendium.ptu.feats.Item.TVdZh7CgKI9m1FhW"
     }
   }
 }

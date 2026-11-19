@@ -2,7 +2,7 @@
   "name": "Ninja Arts Rank 1",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn two of the following Moves:\nDouble Team, Substitute, Toxic, Venom Drench, Trick, Role Play, and Mat Block.",
+    "effect": "Effect: You learn two of the following Moves:\n@UUID[Compendium.ptu.moves.Item.BHmRIX70tqHROfdN]{Double Team}, @UUID[Compendium.ptu.moves.Item.IGk8nNBogMKp3seI]{Substitute}, @UUID[Compendium.ptu.moves.Item.eFxRUdqQgdnJybY4]{Toxic}, @UUID[Compendium.ptu.moves.Item.oYlTFgi4c74YPeW6]{Venom Drench}, @UUID[Compendium.ptu.moves.Item.5f5SrSIiFCEOkSWm]{Trick}, @UUID[Compendium.ptu.moves.Item.pg083RFf3Tf7a3pX]{Role Play}, and @UUID[Compendium.ptu.moves.Item.1tKJbsc36axljqEA]{Mat Block}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,130 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.BHmRIX70tqHROfdN",
+            "label": "Double Team",
+            "predicate": {
+              "not": "move:double-team"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.IGk8nNBogMKp3seI",
+            "label": "Substitute",
+            "predicate": {
+              "not": "move:substitute"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.eFxRUdqQgdnJybY4",
+            "label": "Toxic",
+            "predicate": {
+              "not": "move:toxic"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.oYlTFgi4c74YPeW6",
+            "label": "Venom Drench",
+            "predicate": {
+              "not": "move:venom-drench"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.5f5SrSIiFCEOkSWm",
+            "label": "Trick",
+            "predicate": {
+              "not": "move:trick"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.pg083RFf3Tf7a3pX",
+            "label": "Role Play",
+            "predicate": {
+              "not": "move:role-play"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.1tKJbsc36axljqEA",
+            "label": "Mat Block",
+            "predicate": {
+              "not": "move:mat-block"
+            }
+          }
+        ],
+        "flag": "ninjaarts1-1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.ninjaarts1-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.BHmRIX70tqHROfdN",
+            "label": "Double Team",
+            "predicate": {
+              "not": "move:double-team"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.IGk8nNBogMKp3seI",
+            "label": "Substitute",
+            "predicate": {
+              "not": "move:substitute"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.eFxRUdqQgdnJybY4",
+            "label": "Toxic",
+            "predicate": {
+              "not": "move:toxic"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.oYlTFgi4c74YPeW6",
+            "label": "Venom Drench",
+            "predicate": {
+              "not": "move:venom-drench"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.5f5SrSIiFCEOkSWm",
+            "label": "Trick",
+            "predicate": {
+              "not": "move:trick"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.pg083RFf3Tf7a3pX",
+            "label": "Role Play",
+            "predicate": {
+              "not": "move:role-play"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.1tKJbsc36axljqEA",
+            "label": "Mat Block",
+            "predicate": {
+              "not": "move:mat-block"
+            }
+          }
+        ],
+        "flag": "ninjaarts1-2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.ninjaarts1-2}"
       }
     ],
     "enabled": true,
@@ -49,7 +173,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +196,9 @@
     "class": "Ninja",
     "name": "Ninja Arts [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "ninja-arts-rank-1"
+    "replacesSlug": "ninja-arts-rank-1",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -84,7 +211,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

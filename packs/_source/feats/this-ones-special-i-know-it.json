@@ -2,7 +2,7 @@
   "name": "This One's Special, I Know It",
   "system": {
     "origin": "",
-    "effect": "Target: A hatching egg.\nEffect: The Pokémon is born with special qualities, determined by the GM. This Feature may be activated one time per Pokémon Education Rank above Untrained.",
+    "effect": "Target: A hatching egg\nEffect: The Pokémon is born with special qualities, determined by the GM. This Feature may be activated one time per Pokémon Education Rank above Untrained.\n<blockquote>GMs, see the @UUID[Compendium.ptu.references.Item.MJFCmHIxSqRi4LXL]{This One's Special, I Know It} note for suggestions.</Blockquote>",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -28,7 +28,7 @@
       "Branch"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "custom",
       "max": 0,
       "custom": "Special - Free Action",
       "modifiers": {
@@ -74,9 +74,10 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Pusher",
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": "",
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "used": null
     }
   },
   "_stats": {
@@ -90,5 +91,6 @@
     "exportSource": null
   },
   "sort": 43200000,
-  "_id": "ckwsdByQJD8YvkKC"
+  "_id": "ckwsdByQJD8YvkKC",
+  "folder": null
 }

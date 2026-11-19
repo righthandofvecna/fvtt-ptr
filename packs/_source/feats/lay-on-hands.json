@@ -2,7 +2,7 @@
   "name": "Lay on Hands",
   "system": {
     "origin": "",
-    "effect": "Choose Blessed Touch or Healer. You gain the Chosen Ability.",
+    "effect": "Choose @UUID[Compendium.ptu.abilities.Item.1XxCmfuerxn6eMFl]{Blessed Touch} or @UUID[Compendium.ptu.abilities.Item.FFAtOaEA7Ta5J6oA]{Healer}. You gain the Chosen Ability.",
     "snippet": "",
     "rules": [
       {
@@ -16,14 +16,16 @@
       },
       {
         "key": "ChoiceSet",
-        "flag": "move",
+        "flag": "ability",
         "adjustName": false,
         "choices": [
           {
-            "value": "Compendium.ptu.abilities.Item.1XxCmfuerxn6eMFl"
+            "value": "Compendium.ptu.abilities.Item.1XxCmfuerxn6eMFl",
+            "label": "Blessed Touch"
           },
           {
-            "value": "Compendium.ptu.abilities.Item.FFAtOaEA7Ta5J6oA"
+            "value": "Compendium.ptu.abilities.Item.FFAtOaEA7Ta5J6oA",
+            "label": "Healer"
           }
         ]
       },
@@ -31,7 +33,7 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "{item|flags.ptu.rulesSelections.move}"
+        "uuid": "{item|flags.ptu.rulesSelections.ability}"
       }
     ],
     "enabled": true,
@@ -66,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -90,7 +93,9 @@
     "name": "Lay on Hands",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -101,7 +106,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Sage, Expert Occult Education",
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -114,7 +121,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 5600000,
   "_id": "569laijANKYBXwqo"
 }

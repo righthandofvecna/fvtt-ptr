@@ -1,12 +1,11 @@
 {
-  "folder": null,
   "name": "Effect: Reactive Armour",
   "type": "effect",
   "_id": "lrQpcbxDL1LJJmn3",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "Effect: You gain Damage Reduction equal to double your Athletics or Focus Rank for one full round.",
     "snippet": "",
     "rules": [
       {
@@ -14,61 +13,23 @@
         "mode": "add",
         "path": "system.modifiers.damageReduction.physical.mod",
         "phase": "afterDerived",
-        "value": "(@actor.system.skills.athletics.value.total - @actor.system.skills.focus.value.total) * 2",
+        "value": "max(@actor.system.skills.athletics.value.total,@actor.system.skills.focus.value.total) * 2",
         "priority": null,
-        "predicate": {
-          "gte": [
-            "{actor|system.skills.athletics.value.total}",
-            "{actor|system.skills.focus.value.total}"
-          ]
-        }
+        "predicate": []
       },
       {
         "key": "ActiveEffectLike",
-        "predicate": {
-          "gte": [
-            "{actor|system.skills.athletics.value.total}",
-            "{actor|system.skills.focus.value.total}"
-          ]
-        },
         "mode": "add",
         "path": "system.modifiers.damageReduction.special.mod",
         "phase": "afterDerived",
-        "value": "(@actor.system.skills.athletics.value.total - @actor.system.skills.focus.value.total) * 2",
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": {
-          "gte": [
-            "{actor|system.skills.focus.value.total}",
-            "{actor|system.skills.athletics.value.total}"
-          ]
-        },
-        "mode": "add",
-        "path": "system.modifiers.damageReduction.physical.mod",
-        "phase": "afterDerived",
-        "value": "(@actor.system.skills.focus.value.total - @actor.system.skills.athletics.value.total) * 2",
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": {
-          "gte": [
-            "{actor|system.skills.focus.value.total}",
-            "{actor|system.skills.athletics.value.total}"
-          ]
-        },
-        "mode": "add",
-        "path": "system.modifiers.damageReduction.special.mod",
-        "phase": "afterDerived",
-        "value": "(@actor.system.skills.focus.value.total - @actor.system.skills.athletics.value.total) * 2",
-        "priority": null
+        "value": "max(@actor.system.skills.athletics.value.total,@actor.system.skills.focus.value.total) * 2",
+        "priority": null,
+        "predicate": []
       }
     ],
     "enabled": true,
     "slug": "effect-reactive-armour",
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -91,9 +52,9 @@
       "value": 1
     },
     "duration": {
-      "value": -1,
-      "unit": "unlimited",
-      "expiry": null
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-end"
     },
     "start": {
       "value": 0,
@@ -111,7 +72,7 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

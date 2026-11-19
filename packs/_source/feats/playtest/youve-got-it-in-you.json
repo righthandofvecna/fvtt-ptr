@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Trigger: Your Pokémon Spends Spirit\nEffect: Choose one of the following effects to give your Pokémon. Each Pokémon can only gain each effect once per day.\n\nOn this Pokemons next skill check, roll one less dice and +6 instead.\nGain +1 Accuracy until the end of its next turn (Including this turn)\nGain a Tick of Temporary Hit Points",
+    "effect": "Trigger: Your Pokémon Spends Spirit\nEffect: Choose one of the following effects to give your Pokémon. Each Pokémon can only gain each effect once per day.\n\nOn this Pokemons next skill check, roll one less dice and +6 instead.\nGain +1 Accuracy until the end of its next turn (Including this turn).\nGain a Tick of Temporary Hit Points.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -57,14 +58,18 @@
     "notes": "",
     "free": false,
     "class": "Mystic",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "friendship-spirit",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Mystic, Adept Pokémon Education"
+      "prereqBackup": "Mystic, Adept Pokémon Education",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

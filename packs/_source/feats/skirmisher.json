@@ -2,25 +2,36 @@
   "name": "Skirmisher",
   "system": {
     "origin": "",
-    "effect": "Choose Flutter or Vanguard. You gain the Chosen Ability.",
+    "effect": "Choose @UUID[Compendium.ptu.abilities.Item.NPu2GzghOUmik64d]{Flutter} or @UUID[Compendium.ptu.abilities.Item.LfQUndsQtprQgocE]{Vanguard}. You gain the Chosen Ability.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "ChoiceSet",
-        "flag": "move",
+        "flag": "ability",
         "adjustName": false,
         "choices": [
           {
-            "value": "Compendium.ptu.abilities.Item.NPu2GzghOUmik64d"
+            "value": "Compendium.ptu.abilities.Item.NPu2GzghOUmik64d",
+            "label": "Flutter",
+            "predicate": {
+              "not": "ability:flutter"
+            }
           },
           {
-            "value": "Compendium.ptu.abilities.Item.LfQUndsQtprQgocE"
+            "value": "Compendium.ptu.abilities.Item.LfQUndsQtprQgocE",
+            "label": "Vanguard",
+            "predicate": {
+              "not": "ability:vanguard"
+            }
           }
         ]
       },
@@ -28,7 +39,7 @@
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "{item|flags.ptu.rulesSelections.move}"
+        "uuid": "{item|flags.ptu.rulesSelections.ability}"
       }
     ],
     "enabled": true,
@@ -64,7 +75,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -88,7 +100,9 @@
     "name": "Skirmisher",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -98,7 +112,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Novice Combat, Novice Acrobatics"
+      "prereqBackup": "Novice Combat, Novice Acrobatics",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -111,7 +128,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 44900000,
   "_id": "eei3XS9xpLmwUdxZ"
 }

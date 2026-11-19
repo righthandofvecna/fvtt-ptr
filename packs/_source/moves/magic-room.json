@@ -2,7 +2,6 @@
   "name": "Magic Room",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "The area becomes Useless for 5 rounds. While Useless, Pokémon may not benefit from the effect of any Held Items, and Trainers cannot benefit from any Accessory-Slot equipment. This does not affect consumable or activated items, only Items with Static effect or Triggers.",
@@ -45,7 +44,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -69,7 +69,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "gkHbjclskfbhxEZs",
   "effects": [],
@@ -77,7 +79,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

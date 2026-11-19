@@ -2,14 +2,17 @@
   "name": "Nimble Steps",
   "system": {
     "origin": "",
-    "effect": "You may perform the Disengage Maneuver as a Rapid Action.",
+    "effect": "You may perform the @UUID[Compendium.ptu.moves.Item.SY3j4DR2EGyRkvRr]{Disengage Maneuver} as a Rapid Action.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -43,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -66,7 +70,9 @@
     "name": "Nimble Steps",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -76,7 +82,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Skirmisher"
+      "prereqBackup": "Skirmisher",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -89,7 +98,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 40200000,
   "_id": "adquc162X82BNF9t"
 }

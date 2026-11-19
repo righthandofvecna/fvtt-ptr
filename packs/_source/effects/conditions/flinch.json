@@ -71,7 +71,13 @@
       "overriddenBy": []
     },
     "overrides": [],
-    "persistent": null,
+    "persistent": {
+      "formula": "",
+      "type": "",
+      "dc": null,
+      "decrease": false,
+      "saveEnds": true
+    },
     "name": "",
     "tokenIcon": {
       "show": true
@@ -86,7 +92,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.1.4",

@@ -2,9 +2,41 @@
   "name": "Hidden Power",
   "system": {
     "origin": "",
-    "effect": "You learn the Move Hidden Power. Whenever you use Hidden Power, it may be either Physical or Special, adding the appropriate Attack Stat.",
+    "effect": "You learn the Move @UUID[Compendium.ptu.moves.Item.QyDgi8hL1jQLLhld]{Hidden Power}. Whenever you use Hidden Power, it may be either Physical or Special, adding the appropriate Attack Stat.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "atk",
+            "label": "ATK"
+          },
+          {
+            "value": "spatk",
+            "label": "SpATK"
+          }
+        ],
+        "allowedDrops": null,
+        "adjustName": false,
+        "flag": "stat"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.stat}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.QyDgi8hL1jQLLhld"
+      }
+    ],
     "enabled": true,
     "slug": "hidden-power",
     "schema": {
@@ -36,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,7 +92,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +104,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Rune Master"
+      "prereqBackup": "Rune Master",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -82,7 +120,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 27000000,
   "_id": "P3YHPSP6ZiIlK0lg"
 }

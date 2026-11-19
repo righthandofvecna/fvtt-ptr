@@ -17,7 +17,8 @@
           {
             "not": "capability:blindsense"
           }
-        ]
+        ],
+        "hideIfDisabled": false
       }
     ],
     "enabled": true,
@@ -42,7 +43,7 @@
     "duration": {
       "value": 0,
       "unit": "unlimited",
-      "expiry": "turn-start"
+      "expiry": null
     },
     "value": {
       "isValued": false,
@@ -55,7 +56,13 @@
       "overriddenBy": []
     },
     "overrides": [],
-    "persistent": null,
+    "persistent": {
+      "formula": "",
+      "type": "",
+      "dc": null,
+      "decrease": false,
+      "saveEnds": true
+    },
     "name": "",
     "tokenIcon": {
       "show": true
@@ -70,7 +77,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.0.0.beta.3",

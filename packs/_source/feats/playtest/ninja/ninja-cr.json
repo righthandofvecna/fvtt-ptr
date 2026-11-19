@@ -2,7 +2,7 @@
   "name": "Ninja",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Infiltrator Ability and the Stealth Capability.\nBonus: You gain the Sneak's Tricks Edge, even if you do not meet the prerequisites.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.abilities.Item.9nkIfAs2uDYCUGfb]{Infiltrator} Ability and the @UUID[Compendium.ptu.capabilities.Item.a1N1M1GMjMClaOdj]{Stealth} Capability.\nBonus: You gain the @UUID[Compendium.ptu.edges.Item.39LYcTE6X92OtliQ]{Sneak's Tricks} Edge, even if you do not meet the prerequisites.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,24 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.9nkIfAs2uDYCUGfb"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.a1N1M1GMjMClaOdj"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.edges.Item.39LYcTE6X92OtliQ"
       }
     ],
     "enabled": true,
@@ -49,7 +67,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +89,9 @@
     "class": "Ninja",
     "name": "Ninja [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "ninja"
+    "replacesSlug": "ninja",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -81,7 +102,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

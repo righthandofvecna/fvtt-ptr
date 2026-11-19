@@ -14,7 +14,8 @@
         "path": "system.modifiers.baseStats.spd.mod",
         "value": 1,
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -48,7 +49,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -68,8 +70,10 @@
     "notes": "",
     "free": false,
     "class": "Nomad",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "ownership": {
@@ -78,7 +82,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Nomad, Adept Focus"
+      "prereqBackup": "Nomad, Adept Focus",
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

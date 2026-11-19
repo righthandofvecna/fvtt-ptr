@@ -54,7 +54,10 @@
     "overrides": [],
     "persistent": {
       "formula": "td",
-      "type": "persistent"
+      "type": "persistent",
+      "dc": 10,
+      "decrease": false,
+      "saveEnds": false
     },
     "name": "",
     "tokenIcon": {
@@ -70,7 +73,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.2.2",
