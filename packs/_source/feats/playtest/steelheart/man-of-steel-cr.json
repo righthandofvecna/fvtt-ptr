@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves King’s Shield, Metal Burst, and Meteor Mash. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.Xn6aVa9qFZJxKJVm]{King’s Shield}, @UUID[Compendium.ptu.moves.Item.KqLVnz96kGfAWYtg]{Metal Burst}, and @UUID[Compendium.ptu.moves.Item.4Ph5FUIidlcv8CNI]{Meteor Mash}. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
     "snippet": "",
     "rules": [
       {
@@ -39,7 +39,7 @@
     ],
     "enabled": true,
     "slug": "man-of-steel-cr",
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -73,7 +73,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -94,12 +95,15 @@
     "notes": "",
     "free": false,
     "class": "Steelheart",
-    "name": "Man of Steel [CR]"
+    "name": "Man of Steel [CR]",
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   }
 }

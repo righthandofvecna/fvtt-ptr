@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Bullet Punch, Metal Claw, and Shift Gear. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.vIUPVX3M1r2jsyKN]{Bullet Punch}, @UUID[Compendium.ptu.moves.Item.XkiKEwN1gZtlAkUi]{Metal Claw}, and @UUID[Compendium.ptu.moves.Item.OJrKu4mCgMTQEJ6u]{Shift Gear}. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
     "snippet": "",
     "rules": [
       {
@@ -39,7 +39,7 @@
     ],
     "enabled": true,
     "slug": "steel-wind-cr",
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -73,7 +73,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -93,13 +94,14 @@
     "notes": "",
     "free": false,
     "class": "Steelheart",
-    "name": "Steel Wind [CR]"
+    "name": "Steel Wind [CR]",
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
       "devNote": ""
     }
   }

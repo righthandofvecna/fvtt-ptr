@@ -2,7 +2,7 @@
   "name": "Man of Steel",
   "system": {
     "origin": "",
-    "effect": "You learn the Moves Meteor Mash and King’s Shield. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.4Ph5FUIidlcv8CNI]{Meteor Mash} and @UUID[Compendium.ptu.moves.Item.Xn6aVa9qFZJxKJVm]{King’s Shield}. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
     "snippet": "",
     "rules": [
       {
@@ -21,7 +21,10 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.def.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -57,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -81,7 +85,9 @@
     "name": "Man of Steel",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -91,7 +97,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Steelheart, Master Athletics or Focus"
+      "prereqBackup": "Steelheart, Master Athletics or Focus",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -104,7 +113,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 53900000,
   "_id": "lcG3M7y491yReh6q"
 }

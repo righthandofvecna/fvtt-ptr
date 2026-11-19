@@ -2,7 +2,7 @@
   "name": "Steelheart",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: When wielding metal Melee Weapons, you may use Athletics or Focus instead of Combat to determine the Damage Base of your Struggle Attacks, to qualify for a Weapon’s Moves, and to resist Disarm Checks. Whenever your Weapon Attacks hit a foe who has previously hit you with a Melee attack in the same round, the foe loses a Tick of Hit Points.",
+    "effect": "Effect: When wielding metal Melee Weapons, you may use Athletics or Focus instead of Combat to determine the Damage Base of your Struggle Attacks, to qualify for a Weapon’s Moves, and to resist @UUID[Compendium.ptu.moves.Item.h0slhD40dRasSRXj]{Disarm} Checks. Whenever your Weapon Attacks hit a foe who has previously hit you with a Melee attack in the same round, the foe loses a Tick of Hit Points.",
     "snippet": "",
     "rules": [
       {
@@ -51,7 +51,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -73,7 +74,9 @@
     "class": "Steelheart",
     "name": "Steelheart [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "steelheart"
+    "replacesSlug": "steelheart",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -84,7 +87,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
