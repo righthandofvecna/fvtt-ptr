@@ -2,14 +2,17 @@
   "name": "Harrier",
   "system": {
     "origin": "",
-    "effect": "Trigger - You hit a foe with a damaging Attack\nEffect: Until the end of your next turn, that foe is considered Flanked, is Slowed, and cannot take actions as Priority or Interrupt. Harrier may only be used on a foe once per Scene.",
+    "effect": "Trigger: You hit a foe with a damaging Attack\nEffect: Until the end of your next turn, that foe is considered @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.LHiQAEKAcv7ms0P9]{Flanked}, is @UUID[Compendium.ptu.effects.Item.I2nVAxBFKDMe8EQt]{Slowed}, and cannot take actions as Priority or Interrupt. Harrier may only be used on a foe once per Scene.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -43,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -66,7 +70,9 @@
     "name": "Harrier",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -76,7 +82,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Skirmisher"
+      "prereqBackup": "Skirmisher",
+      "automationStatus": "needs-automation",
+      "devNote": "Harried condition/effect?",
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -89,7 +98,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 66600000,
   "_id": "yG0grfbOIsffDSYJ"
 }
