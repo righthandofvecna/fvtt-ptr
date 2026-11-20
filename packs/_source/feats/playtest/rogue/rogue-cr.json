@@ -2,7 +2,7 @@
   "name": "Rogue",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Feint Attack and Thief.\nNote: Acrobatics, Athletics, and Stealth are referred to as “Rogue Skills” as short-hand.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.16Ij0HJODJxOy5j9]{Feint Attack} and @UUID[Compendium.ptu.moves.Item.cu9K3c625G2F54lh]{Thief}.\nNote: Acrobatics, Athletics, and Stealth are referred to as “Rogue Skills” as short-hand.",
     "snippet": "",
     "rules": [
       {
@@ -61,7 +61,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -82,7 +83,9 @@
     "class": "Rogue",
     "name": "Rogue [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "rogue"
+    "replacesSlug": "rogue",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -95,7 +98,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

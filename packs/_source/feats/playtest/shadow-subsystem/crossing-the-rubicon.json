@@ -5,8 +5,8 @@
   "_id": "VvJxLgvVLtvju2rN",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
-    "origin": "",
-    "effect": "Target: Your Shadow Pokémon with at least 2 Tutor Points remaining.\nEffect: The target loses 2 Tutor Points and becomes an Apex Shadow Pokémon. The Pokémon's Base Stats increase by +1 each, and gains a Poke Edge that it qualifies for. Additionally, the Pokémon can learn 1 Shadow Move of your choice, ignoring move limit restrictions.\n\nA Shadow Pokémon may only every be affected by this Feature once.",
+    "origin": "Shadow Subsytem",
+    "effect": "Target: Your Shadow Pokémon with at least 1 Tutor Slot remaining.\nEffect: The target loses 1 Tutor Slot and becomes an Apex Shadow Pokémon. The Pokémon's Base Stats increase by +1 each, and gains a Poke Edge that it qualifies for. Additionally, the Pokémon can learn 1 Shadow Move of your choice, ignoring move limit restrictions.\n\nA Shadow Pokémon may only every be affected by this Feature once.\n\n<blockquote>See also the Apex Shadow Pokémon section in the @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.8EGJLU8Db3uLbt1K]{Shadow Pokémon} page. It is up to your GM to what extent, if any, those further improvements apply.</blockquote>",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,8 +62,10 @@
     "notes": "",
     "free": false,
     "class": "Researcher (Malfeasance)",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -71,7 +74,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

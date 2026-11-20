@@ -7,7 +7,7 @@
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
+        "adjustName": false,
         "flag": "livingshadow",
         "choices": [
           {
@@ -63,7 +63,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -84,7 +85,9 @@
     "class": "Shade Caller",
     "name": "Living Shadow [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "living-shadow"
+    "replacesSlug": "living-shadow",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -95,7 +98,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

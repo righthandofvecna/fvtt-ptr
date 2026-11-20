@@ -2,12 +2,12 @@
   "name": "World of Darkness",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the encounter. All targets without Darkvision attacking from or into the Shifting Darkness receive a -3 penalty to Accuracy. You may count Shifting Darkness as complete darkness for the purposes of activating your Living Shadow. As a Static effect, you also gain the Darkvision Capability.",
+    "effect": "Effect: You create a zone of Shifting Darkness in a Burst 2 around you, which persists until the end of the encounter. All targets without @UUID[Compendium.ptu.capabilities.Item.zzJWpOj40dLelBm5]{Darkvision} attacking from or into the Shifting Darkness receive a -3 penalty to Accuracy. You may count Shifting Darkness as complete darkness for the purposes of activating your @UUID[Compendium.ptu.feats.Item.SZi4lzF8aCQ6hW31]{Living Shadow}. As a Static effect, you also gain the Darkvision Capability.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
+        "adjustName": false,
         "flag": "worldofdarkness",
         "choices": [
           {
@@ -28,6 +28,12 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.capabilities.Item.zzJWpOj40dLelBm5"
       }
     ],
     "enabled": true,
@@ -63,7 +69,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -85,7 +92,9 @@
     "class": "Shade Caller",
     "name": "World of Darkness [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "world-of-darkness"
+    "replacesSlug": "world-of-darkness",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -96,7 +105,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

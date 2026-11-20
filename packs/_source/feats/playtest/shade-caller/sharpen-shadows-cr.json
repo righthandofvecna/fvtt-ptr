@@ -2,12 +2,12 @@
   "name": "Sharpen Shadows",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose three of the following Moves, and learn them:\nBrutal Swing, Dark Pulse, Night Slash, Obstruct, Throat Chop",
+    "effect": "Effect: Choose three of the following Moves, and learn them:\n@UUID[Compendium.ptu.moves.Item.MrGSomQEncQd3zt6]{Brutal Swing}, @UUID[Compendium.ptu.moves.Item.M9VSBteeyEya9Qcf]{Dark Pulse}, @UUID[Compendium.ptu.moves.Item.WRDjP0nlxlzd20a5]{Night Slash}, @UUID[Compendium.ptu.moves.Item.WIodahizi5Rkqd1d]{Obstruct}, @UUID[Compendium.ptu.moves.Item.lh8CZDIXVYVWsbCF]{Throat Chop}",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
+        "adjustName": false,
         "flag": "sharpenshadows",
         "choices": [
           {
@@ -28,6 +28,180 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.MrGSomQEncQd3zt6",
+            "label": "Brutal Swing",
+            "predicate": [
+              {
+                "not": "move:brutal-swing"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.M9VSBteeyEya9Qcf",
+            "label": "Dark Pulse",
+            "predicate": [
+              {
+                "not": "move:dark-pulse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.WRDjP0nlxlzd20a5",
+            "label": "Night Slash",
+            "predicate": [
+              {
+                "not": "move:night-slash"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.WIodahizi5Rkqd1d",
+            "label": "Obstruct",
+            "predicate": [
+              {
+                "not": "move:obstruct"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.lh8CZDIXVYVWsbCF",
+            "label": "Throat Chop",
+            "predicate": [
+              {
+                "not": "move:throat-chop"
+              }
+            ]
+          }
+        ],
+        "flag": "sharpenshadows1"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.sharpenshadows1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.MrGSomQEncQd3zt6",
+            "label": "Brutal Swing",
+            "predicate": [
+              {
+                "not": "move:brutal-swing"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.M9VSBteeyEya9Qcf",
+            "label": "Dark Pulse",
+            "predicate": [
+              {
+                "not": "move:dark-pulse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.WRDjP0nlxlzd20a5",
+            "label": "Night Slash",
+            "predicate": [
+              {
+                "not": "move:night-slash"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.WIodahizi5Rkqd1d",
+            "label": "Obstruct",
+            "predicate": [
+              {
+                "not": "move:obstruct"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.lh8CZDIXVYVWsbCF",
+            "label": "Throat Chop",
+            "predicate": [
+              {
+                "not": "move:throat-chop"
+              }
+            ]
+          }
+        ],
+        "adjustName": false,
+        "flag": "sharpenshadows2"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.sharpenshadows2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "sharpenshadows3",
+        "adjustName": false,
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.MrGSomQEncQd3zt6",
+            "label": "Brutal Swing",
+            "predicate": [
+              {
+                "not": "move:brutal-swing"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.M9VSBteeyEya9Qcf",
+            "label": "Dark Pulse",
+            "predicate": [
+              {
+                "not": "move:dark-pulse"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.WRDjP0nlxlzd20a5",
+            "label": "Night Slash",
+            "predicate": [
+              {
+                "not": "move:night-slash"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.WIodahizi5Rkqd1d",
+            "label": "Obstruct",
+            "predicate": [
+              {
+                "not": "move:obstruct"
+              }
+            ]
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.lh8CZDIXVYVWsbCF",
+            "label": "Throat Chop",
+            "predicate": [
+              {
+                "not": "move:throat-chop"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.sharpenshadows3}"
       }
     ],
     "enabled": true,
@@ -63,7 +237,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -85,7 +260,9 @@
     "class": "Shade Caller",
     "name": "Sharpen Shadows [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "sharpen-shadows"
+    "replacesSlug": "sharpen-shadows",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -96,7 +273,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

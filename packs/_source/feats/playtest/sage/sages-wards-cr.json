@@ -39,7 +39,7 @@
       "Class Rework"
     ],
     "frequency": {
-      "type": "at-will",
+      "type": "custom",
       "max": 0,
       "custom": "1 AP – Free Action",
       "modifiers": {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "class": "Sage",
     "name": "Sage’s Wards [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "sages-wards"
+    "replacesSlug": "sages-wards",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -83,7 +86,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

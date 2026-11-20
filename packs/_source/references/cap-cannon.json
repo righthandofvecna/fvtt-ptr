@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Gadgeteer Recipes",
-    "effect": "At-Will - Extended Action. Effect: You create a Cap Cannon for ₽2000.",
+    "effect": "At-Will - Extended Action\nEffect: You create a @UUID[Compendium.ptu.items.Item.er8OngHyAM0VUO4K]{Cap Cannon} for ₽2000.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "KLukPDAfZmpqZYo4",
   "effects": [],
-  "folder": null,
   "sort": 9900000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

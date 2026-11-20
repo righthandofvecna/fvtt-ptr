@@ -2,7 +2,6 @@
   "name": "Rising Voltage",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/ElectricIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "After Rising Voltage is resolved, you may create Electric Terrain in a Blast 7, centered on the user, that lasts for 5 turns. Any creatures in those spaces are affected as if by the Field Move Electric Terrain, rather than any other Field Move. This Effect may trigger only once per Scene.",
@@ -75,7 +74,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "_id": "gBjvziKyEyb7Jsnd",
   "effects": [],
@@ -92,6 +92,5 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  },
-  "flags": {}
+  }
 }
