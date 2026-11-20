@@ -2,12 +2,11 @@
   "name": "Heart of Darkness",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose two of the following Moves, and learn them:\nNight Daze, Punishment, Lash Out, and Power Trip",
+    "effect": "Effect: Choose two of the following Moves, and learn them:\n@UUID[Compendium.ptu.moves.Item.jzkJl5WWIowPQs2b]{Night Daze}, @UUID[Compendium.ptu.moves.Item.EIPvcavZN9cZIXET]{Punishment}, @UUID[Compendium.ptu.moves.Item.rwXswCVSP0XtQtHh]{Lash Out}, and @UUID[Compendium.ptu.moves.Item.kyClgL4mFoL9WQQJ]{Power Trip}",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "heartofdarkness",
         "choices": [
           {
@@ -18,7 +17,8 @@
             "value": "spatk",
             "label": "Special Attack"
           }
-        ]
+        ],
+        "adjustName": false
       },
       {
         "key": "ActiveEffectLike",
@@ -28,6 +28,88 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.jzkJl5WWIowPQs2b",
+            "label": "Night Daze",
+            "predicate": {
+              "not": "move:night-daze"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.EIPvcavZN9cZIXET",
+            "label": "Punishment",
+            "predicate": {
+              "not": "move:punishment"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.rwXswCVSP0XtQtHh",
+            "label": "Lash Out",
+            "predicate": {
+              "not": "move:lash-out"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.kyClgL4mFoL9WQQJ",
+            "label": "Power Trip",
+            "predicate": {
+              "not": "move:power-trip"
+            }
+          }
+        ],
+        "adjustName": false,
+        "flag": "heartofdarkness1"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.heartofdarkness1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.jzkJl5WWIowPQs2b",
+            "label": "Night Daze",
+            "predicate": {
+              "not": "move:night-daze"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.EIPvcavZN9cZIXET",
+            "label": "Punishment",
+            "predicate": {
+              "not": "move:punishment"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.rwXswCVSP0XtQtHh",
+            "label": "Lash Out",
+            "predicate": {
+              "not": "move:lash-out"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.kyClgL4mFoL9WQQJ",
+            "label": "Power Trip",
+            "predicate": {
+              "not": "move:power-trip"
+            }
+          }
+        ],
+        "flag": "heartofdarkness2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.heartofdarkness2}"
       }
     ],
     "enabled": true,
@@ -63,7 +145,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -85,7 +168,9 @@
     "class": "Shade Caller",
     "name": "Heart of Darkness [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "heart-of-darkness"
+    "replacesSlug": "heart-of-darkness",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -96,7 +181,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

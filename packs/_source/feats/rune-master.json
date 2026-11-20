@@ -2,7 +2,7 @@
   "name": "Rune Master",
   "system": {
     "origin": "",
-    "effect": "You gain the Gather Unown capability, and your Unown gain the Letter Press Capability. When using Gather Unown, you are treated as a level 20 Pokémon.",
+    "effect": "You gain the @UUID[Compendium.ptu.capabilities.Item.w7UgSRQQU9W87uPo]{Gather Unown} capability, and your Unown gain the @UUID[Compendium.ptu.capabilities.Item.aWsokSEb4MzM8puO]{Letter Press} Capability. When using Gather Unown, you are treated as a level 20 Pokémon.",
     "snippet": "",
     "rules": [
       {
@@ -10,6 +10,30 @@
         "predicate": [],
         "allowDuplicate": false,
         "uuid": "Compendium.ptu.capabilities.Item.w7UgSRQQU9W87uPo"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "atk",
+            "label": "ATK"
+          },
+          {
+            "value": "spatk",
+            "label": "SpATK"
+          }
+        ],
+        "flag": "stat",
+        "adjustName": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.stat}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
       }
     ],
     "enabled": true,
@@ -44,7 +68,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -68,7 +93,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -78,7 +105,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Own 2 Unown, Novice Occult Education"
+      "prereqBackup": "Own 2 Unown, Novice Occult Education",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -91,7 +121,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 15700000,
   "_id": "FK3lum9MjNh986IQ"
 }

@@ -4,7 +4,89 @@
     "origin": "",
     "effect": "Choose a Rank 1 Blessing. You gain this Blessing in the form of a Sign. Signs store the energy of the Divine, and may be activated as a Rapid Action. Signs can be used once per Scene, and cost 1 AP to activate.\nRank 1 Blessings: @UUID[Compendium.ptu.references.Item.bxAMXMpavL2OvhlA], @UUID[Compendium.ptu.references.Item.RU6ok1dtRlDhTo3a], @UUID[Compendium.ptu.references.Item.O6BYap68R4OMCHbk], @UUID[Compendium.ptu.references.Item.EfxmNFWRAWQ8aHQM]",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "hp",
+            "label": "HP"
+          },
+          {
+            "value": "atk",
+            "label": "ATK"
+          },
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spatk",
+            "label": "SpATK"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          },
+          {
+            "value": "spd",
+            "label": "SPD"
+          }
+        ],
+        "flag": "patron",
+        "adjustName": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.patron}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.capabilities.Item.irI10S0Ac862yBVT",
+            "label": "Ancient Wisdom",
+            "predicate": {
+              "not": "capability:ancient-wisdom"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.uIz7kJ3tVQvXnghu",
+            "label": "Blessed Strike",
+            "predicate": {
+              "not": "capability:blessed-strike"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.i3Cesfp4PaQ7qVL1",
+            "label": "Paragon",
+            "predicate": {
+              "not": "capability:paragon"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.ExEQE9O4ZDdW3qTt",
+            "label": "Spirit Mending",
+            "predicate": {
+              "not": "capability:spirit-mending"
+            }
+          }
+        ],
+        "adjustName": false,
+        "flag": "signer"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.signer}"
+      }
+    ],
     "enabled": true,
     "slug": "signer",
     "contentSet": "blessed-and-damned",
@@ -63,7 +145,8 @@
     "useCount": 0,
     "automation": [],
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -74,7 +157,7 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Touched, GM Permission",
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -90,5 +173,6 @@
     "exportSource": null
   },
   "sort": 6000000,
-  "_id": "5B2wuKKqsSaVOPG2"
+  "_id": "5B2wuKKqsSaVOPG2",
+  "folder": null
 }

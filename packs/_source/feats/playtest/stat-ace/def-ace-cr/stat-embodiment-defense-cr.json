@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: Your Pokémon loses 1 Tutor Slot and learns one Ability based on your Chosen Stat. You may target a Pokémon only once with Stat Embodiment.\n\n@UUID[Compendium.ptu.abilities.Item.6QGcPmP9cVKQnFRA]{Stamina}\n@UUID[Compendium.ptu.abilities.Item.gHfEkYe9Vdc6TqeX]{Battle Armor}",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: Your Pokémon loses 1 Tutor Slot and learns one Ability based on your Chosen Stat. You may target a Pokémon only once with Stat Embodiment.\n\n@UUID[Compendium.ptu.abilities.Item.6QGcPmP9cVKQnFRA]{Stamina} or @UUID[Compendium.ptu.abilities.Item.gHfEkYe9Vdc6TqeX]{Battle Armor}",
     "snippet": "",
     "rules": [],
     "enabled": true,

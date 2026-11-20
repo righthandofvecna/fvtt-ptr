@@ -9,7 +9,10 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -44,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -68,7 +72,9 @@
     "name": "Swift Strikes",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -78,7 +84,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "4 Skirmisher Features, Master Combat or Acrobatics"
+      "prereqBackup": "4 Skirmisher Features, Master Combat or Acrobatics",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -91,7 +100,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 9200000,
   "_id": "7sM3SzPOX6HsD5Ak"
 }

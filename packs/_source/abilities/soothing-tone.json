@@ -43,7 +43,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,10 +60,11 @@
     "tier": "",
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "effects": [],
-  "folder": null,
   "flags": {
     "ptu": {
       "showInTokenPanel": true

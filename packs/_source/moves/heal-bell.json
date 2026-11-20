@@ -2,7 +2,6 @@
   "name": "Heal Bell",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "All targets are cured of any Persistent Status ailments.",
@@ -48,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -72,7 +72,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "v8vXs3oV4YimX2AZ",
   "effects": [],
@@ -80,7 +82,14 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
