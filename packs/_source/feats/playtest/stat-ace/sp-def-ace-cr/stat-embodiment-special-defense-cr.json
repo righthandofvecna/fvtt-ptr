@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 2 Tutor Points\nEffect: Your Pokémon loses 2 Tutor Points, and learns one Ability based on your Chosen Stat. You may target a Pokémon only once with Stat Embodiment.\n\n@Embed[Compendium.ptu.abilities.Item.3zEQl6AsWskjTjQy]@Embed[Compendium.ptu.abilities.Item.7yg8Y7g7p8Uil1YT]",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: Your Pokémon loses 1 Tutor Slot and learns one Ability based on your Chosen Stat. You may target a Pokémon only once with Stat Embodiment.\n\n@UUID[Compendium.ptu.abilities.Item.3zEQl6AsWskjTjQy]{Magic Guard} or @UUID[Compendium.ptu.abilities.Item.7yg8Y7g7p8Uil1YT]{Tolerance}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -62,12 +63,16 @@
     "free": false,
     "class": "Stat Ace (Special Defense)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-embodiment-special-defense"
+    "replacesSlug": "stat-embodiment-special-defense",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "_id": "483tXxDG4oenUxl3",

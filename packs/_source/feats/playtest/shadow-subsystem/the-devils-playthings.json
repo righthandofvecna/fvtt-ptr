@@ -5,8 +5,8 @@
   "_id": "7x7XAab8fqPGumwJ",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
-    "origin": "",
-    "effect": "Cost - $3000, 1 empty syringe.\nEffect: Utilizing a Gene Extraction Kit, you can extract a Berserk Gene from a Pokémon. Using it on a Friendship 0 Pokémon produces one Berserk Gene after a successful Technology Education check of DC 18. If using a Gene Extraction Kit to do this with a Shadow Pokémon, this is reduced to DC 10.",
+    "origin": "Shadow Subsytem",
+    "effect": "Cost: @Poke[3000], 1 empty @UUID[Compendium.ptu.items.Item.1zhkPWy0nvVsZDWp]{Syringe}.\nEffect: Utilizing a @UUID[Compendium.ptu.items.Item.Nd5G332a3aJ8my4K]{Gene Extraction Kit}, you can extract a @UUID[Compendium.ptu.items.Item.SpLyU6bQjotLNGbv]{Berserk Gene} from a Pokémon. Using it on a Friendship 0 Pokémon produces one Berserk Gene after a successful Technology Education check of DC 18. If using a Gene Extraction Kit to do this with a Shadow Pokémon, this is reduced to DC 10.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,8 +61,10 @@
     "notes": "",
     "free": false,
     "class": "Researcher (Malfeasance)",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "sort": 0,
@@ -70,7 +73,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

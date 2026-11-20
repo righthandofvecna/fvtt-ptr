@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon\nEffect: While this Feature is Bound, the target has the following bonuses based on your Chosen Stat:\n\nThe target gains a +2 bonus to Save Checks for each positive Combat Stage they have in Defense, up to a maximum of +6.",
+    "effect": "Target: Your Pokémon\nEffect: While this Feature is Bound, the target has the following bonuses based on your Chosen Stat:\nThe target gains a +2 bonus to Save Checks for each positive Combat Stage they have in Defense, up to a maximum of +6.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -64,12 +65,15 @@
     "class": "Stat Ace (Defense)",
     "contentSet": "class-rework",
     "replacesSlug": "stat-stratagem-defense",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_id": "R7CGdTuo3zIBqcVU",

@@ -2,7 +2,7 @@
   "name": "Engineer",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You may craft any Engineer Recipe for which you qualify.",
+    "effect": "Effect: You may craft any Engineer Recipe for which you qualify.\n@UUID[Compendium.ptu.references.Item.ADALNbQLjpyt5R17]{Robotics 101}",
     "snippet": "",
     "rules": [],
     "enabled": true,

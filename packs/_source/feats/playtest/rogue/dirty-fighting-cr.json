@@ -2,7 +2,7 @@
   "name": "Dirty Fighting",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You hit a foe with Weapon Attack\nEffect: After the attack is Resolved, you may immediately use the Dirty Trick Maneuver if the target is within range. You automatically hit with Dirty Trick, but must still make an Opposed Roll.",
+    "effect": "Trigger: You hit a foe with Weapon Attack\nEffect: After the attack is resolved, you may immediately use the @UUID[Compendium.ptu.moves.Item.vINbKBHt2nQ7N37v]{Dirty Trick Maneuver} if the target is within range. You automatically hit with Dirty Trick, but must still make an Opposed Roll.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +70,9 @@
     "class": "Rogue",
     "name": "Dirty Fighting [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "dirty-fighting"
+    "replacesSlug": "dirty-fighting",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -80,7 +83,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

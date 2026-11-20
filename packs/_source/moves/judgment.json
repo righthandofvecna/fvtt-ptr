@@ -1,5 +1,5 @@
 {
-  "name": "Judgement",
+  "name": "Judgment",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
   "system": {
@@ -8,7 +8,7 @@
     "snippet": "",
     "rules": [],
     "enabled": true,
-    "slug": "judgement",
+    "slug": "judgment",
     "contentSet": "",
     "replacesSlug": "",
     "schema": {
