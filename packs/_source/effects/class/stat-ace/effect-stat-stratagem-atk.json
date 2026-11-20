@@ -21,7 +21,7 @@
     ],
     "enabled": true,
     "slug": "effect-stat-stratagem-atk",
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -45,7 +45,7 @@
     },
     "duration": {
       "value": -1,
-      "unit": "unlimited",
+      "unit": "encounter",
       "expiry": null
     },
     "start": {

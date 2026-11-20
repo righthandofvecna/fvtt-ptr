@@ -4,7 +4,130 @@
     "origin": "",
     "effect": "You acquire two Rank 1 Blessings in the form of Signs.\nRank 1 Blessings: @UUID[Compendium.ptu.references.Item.bxAMXMpavL2OvhlA], @UUID[Compendium.ptu.references.Item.RU6ok1dtRlDhTo3a], @UUID[Compendium.ptu.references.Item.O6BYap68R4OMCHbk], @UUID[Compendium.ptu.references.Item.EfxmNFWRAWQ8aHQM]",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "hp",
+            "label": "HP"
+          },
+          {
+            "value": "atk",
+            "label": "ATK"
+          },
+          {
+            "value": "def",
+            "label": "DEF"
+          },
+          {
+            "value": "spatk",
+            "label": "SpATK"
+          },
+          {
+            "value": "spdef",
+            "label": "SpDEF"
+          },
+          {
+            "value": "spd",
+            "label": "SPD"
+          }
+        ],
+        "adjustName": false,
+        "flag": "patron1"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.patron1}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.capabilities.Item.irI10S0Ac862yBVT",
+            "label": "Ancient Wisdom",
+            "predicate": {
+              "not": "capability:ancient-wisdom"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.uIz7kJ3tVQvXnghu",
+            "label": "Blessed Strike",
+            "predicate": {
+              "not": "capability:blessed-strike"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.i3Cesfp4PaQ7qVL1",
+            "label": "Paragon",
+            "predicate": {
+              "not": "capability:paragon"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.ExEQE9O4ZDdW3qTt",
+            "label": "Spirit Mending",
+            "predicate": {
+              "not": "capability:spirit-mending"
+            }
+          }
+        ],
+        "flag": "signmastery1-1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.signmastery1-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.capabilities.Item.irI10S0Ac862yBVT",
+            "label": "Ancient Wisdom",
+            "predicate": {
+              "not": "capability:ancient-wisdom"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.uIz7kJ3tVQvXnghu",
+            "label": "Blessed Strike",
+            "predicate": {
+              "not": "capability:blessed-strike"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.i3Cesfp4PaQ7qVL1",
+            "label": "Paragon",
+            "predicate": {
+              "not": "capability:paragon"
+            }
+          },
+          {
+            "value": "Compendium.ptu.capabilities.Item.ExEQE9O4ZDdW3qTt",
+            "label": "Spirit Mending",
+            "predicate": {
+              "not": "capability:spirit-mending"
+            }
+          }
+        ],
+        "flag": "signmastery1-2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.signmastery1-2}"
+      }
+    ],
     "enabled": true,
     "slug": "sign-mastery-rank-1",
     "schema": {
@@ -64,7 +187,8 @@
     "automation": [],
     "contentSet": "blessed-and-damned",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -75,7 +199,7 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Signer, GM Permission",
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }
@@ -91,5 +215,6 @@
     "exportSource": null
   },
   "sort": 33500000,
-  "_id": "UgOHy8K3DZd1ESH8"
+  "_id": "UgOHy8K3DZd1ESH8",
+  "folder": null
 }

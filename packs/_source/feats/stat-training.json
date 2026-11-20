@@ -2,7 +2,7 @@
   "name": "Stat Training",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 1 Tutor Point\nEffect: Your Pokémon loses 1 Tutor Point, and learns a Move based on your Chosen Stat, even if your Pokémon cannot normally learn this Move:\n»» Attack: Swords Dance or Rage\n»» Defense: Iron Defense or Reflect\n»» Special Attack: Nasty Plot or Hidden Power\n»» Special Defense: Amnesia or Light Screen\n»» Speed: Agility or After You",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Point\nEffect: Your Pokémon loses 1 Tutor Point, and learns a Move based on your Chosen Stat, even if your Pokémon cannot normally learn this Move:\n»» Attack: @UUID[Compendium.ptu.moves.Item.z5hgetbLhLvsd800]{Swords Dance} or @UUID[Compendium.ptu.moves.Item.K3PXmG9E0s7QEUQ2]{Rage}\n»» Defense: @UUID[Compendium.ptu.moves.Item.K7oM1QaqyugwZzbF]{Iron Defense} or @UUID[Compendium.ptu.moves.Item.eDFWwKCjaJ7vNNbJ]{Reflect}\n»» Special Attack: @UUID[Compendium.ptu.moves.Item.z0iMHqLi2ctCy2nb]{Nasty Plot} or @UUID[Compendium.ptu.moves.Item.QyDgi8hL1jQLLhld]{Hidden Power}\n»» Special Defense: @UUID[Compendium.ptu.moves.Item.0JDFAZ8Q0rDKNodB]{Amnesia} or @UUID[Compendium.ptu.moves.Item.weEc5wlOZ5H7Tguh]{Light Screen}\n»» Speed: @UUID[Compendium.ptu.moves.Item.aS33KlxhRCP0s5Zd]{Agility} or @UUID[Compendium.ptu.moves.Item.x8xJKEwM5Zp3jqGw]{After You}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,7 +61,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -71,7 +74,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Stat Ace",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -84,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 43500000,
   "_id": "d1fyUXfBZaKeuLZ8"
 }

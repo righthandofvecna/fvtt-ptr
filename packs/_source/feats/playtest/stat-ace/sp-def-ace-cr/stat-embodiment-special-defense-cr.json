@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: Your Pokémon loses 1 Tutor Slot and learns one Ability based on your Chosen Stat. You may target a Pokémon only once with Stat Embodiment.\n\n@UUID[Compendium.ptu.abilities.Item.3zEQl6AsWskjTjQy]{Magic Guard}\n@UUID[Compendium.ptu.abilities.Item.7yg8Y7g7p8Uil1YT]{Tolerance}",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: Your Pokémon loses 1 Tutor Slot and learns one Ability based on your Chosen Stat. You may target a Pokémon only once with Stat Embodiment.\n\n@UUID[Compendium.ptu.abilities.Item.3zEQl6AsWskjTjQy]{Magic Guard} or @UUID[Compendium.ptu.abilities.Item.7yg8Y7g7p8Uil1YT]{Tolerance}",
     "snippet": "",
     "rules": [],
     "enabled": true,

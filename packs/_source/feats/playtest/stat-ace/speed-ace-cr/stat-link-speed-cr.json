@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.1GseAWW8TpoQrvo6",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,12 +62,16 @@
     "free": false,
     "class": "Stat Ace (Speed)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-link-speed"
+    "replacesSlug": "stat-link-speed",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "UbybEeqbXKiO3Ie3",
