@@ -2,7 +2,7 @@
   "name": "Steel Wind",
   "system": {
     "origin": "",
-    "effect": "You learn the Moves Bullet Punch and Metal Claw. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
+    "effect": "You learn the Moves @UUID[Compendium.ptu.moves.Item.vIUPVX3M1r2jsyKN]{Bullet Punch} and @UUID[Compendium.ptu.moves.Item.XkiKEwN1gZtlAkUi]{Metal Claw}. You may use these Moves as Weapon Attacks when wielding Melee Weapons.",
     "snippet": "",
     "rules": [
       {
@@ -21,7 +21,10 @@
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.def.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -57,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -80,7 +84,9 @@
     "name": "Steel Wind",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -90,7 +96,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Steelheart"
+      "prereqBackup": "Steelheart",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -103,7 +112,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 38100000,
   "_id": "YlWmDMEFABS6tD4X"
 }

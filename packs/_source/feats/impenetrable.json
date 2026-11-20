@@ -2,14 +2,17 @@
   "name": "Impenetrable",
   "system": {
     "origin": "",
-    "effect": "You gain the Bulletproof Ability.",
+    "effect": "You gain the @UUID[Compendium.ptu.abilities.Item.sK4HKyvIQrumnNOm]{Bulletproof} Ability.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.def.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       },
       {
         "key": "GrantItem",
@@ -50,7 +53,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -74,7 +78,9 @@
     "name": "Impenetrable",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -84,7 +90,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Steelheart, Expert Athletics or Focus"
+      "prereqBackup": "Steelheart, Expert Athletics or Focus",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -97,7 +106,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 32300000,
   "_id": "ToLhXkdvBOdcdusy"
 }

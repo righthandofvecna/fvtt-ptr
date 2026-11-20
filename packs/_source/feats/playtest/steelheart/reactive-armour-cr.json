@@ -21,7 +21,7 @@
     ],
     "enabled": true,
     "slug": "reactive-armour-cr",
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -54,7 +54,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -75,13 +76,16 @@
     "notes": "",
     "free": false,
     "class": "Steelheart",
-    "name": "Reactive Armour [CR]"
+    "name": "Reactive Armour [CR]",
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "used": null
+      "used": null,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   }
 }

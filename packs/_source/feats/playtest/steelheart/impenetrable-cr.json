@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Bulletproof Ability.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.abilities.Item.sK4HKyvIQrumnNOm]{Bulletproof} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -27,7 +27,7 @@
     ],
     "enabled": true,
     "slug": "impenetrable-cr",
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": "",
     "schema": {
       "version": 0.119,
@@ -60,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -81,12 +82,15 @@
     "notes": "",
     "free": false,
     "class": "Steelheart",
-    "name": "Impenetrable [CR]"
+    "name": "Impenetrable [CR]",
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   }
 }

@@ -1,0 +1,60 @@
+{
+  "name": "Call to Arms",
+  "type": "capability",
+  "_id": "MxWe6rClXSRuYjDI",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisite: @UUID[Compendium.ptu.feats.Item.npzBvLZE0YTCVkdm]{Master of Arms}\nAt-Will – Extended Action\nTarget: A metal Weapon\nEffect: You create a Steelheart Bond with the target Weapon. You may only have one Steelheart Bond at a time; if you create a new Bond, all old Bonds are lost. As a Shift Action, you may beckon your Steelheart Bonded Weapon to your hands if it is within 10 meters. If it is being held by someone else who does not want to let go of the weapon, make an Athletics or Focus vs Athletics Opposed Check. If you win, they their lose grip on your Weapon and it flies to your hand as normal.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "call-to-arms",
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  }
+}
