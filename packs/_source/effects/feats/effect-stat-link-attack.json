@@ -1,18 +1,17 @@
 {
-  "name": "Effect: Stat Link (Attack)",
+  "name": "Effect: Stat Link (Speed)",
   "type": "effect",
-  "_id": "HRWH2k3sRNjJl7NK",
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "Effect: Your Pokémon's default Combat Stage for Attack is increased by +1.",
+    "effect": "Effect: Your Pokémon's default Combat Stage for Speed is increased by +1.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "predicate": [],
         "mode": "add",
-        "path": "system.stats.atk.stage.mod",
+        "path": "system.stats.spd.stage.mod",
         "phase": "applyAEs",
         "value": 1,
         "priority": 20
@@ -20,7 +19,7 @@
     ],
     "enabled": true,
     "slug": "effect-stat-link-attack",
-    "contentSet": "",
+    "contentSet": "class-rework",
     "replacesSlug": "",
     "schema": {
       "version": null,
@@ -59,5 +58,6 @@
       "devNote": "",
       "showInTokenPanel": true
     }
-  }
+  },
+  "_id": "1GseAWW8TpoQrvo6"
 }
