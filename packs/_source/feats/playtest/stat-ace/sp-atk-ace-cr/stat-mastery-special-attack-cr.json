@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,7 +62,9 @@
     "free": false,
     "class": "Stat Ace (Special Attack)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-mastery-special-attack"
+    "replacesSlug": "stat-mastery-special-attack",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
