@@ -2,7 +2,7 @@
   "name": "Stat Mastery",
   "system": {
     "origin": "",
-    "effect": "Stat Mastery’s Effect depends on your Chosen Stat:\nAttack Effect: When your Pokémon successfully uses a Push, Disarm, or Dirty Trick Combat Maneuver, the target of the Maneuver loses a Tick of Hit Points.\nDefense Effect: Whenever your Pokémon do not spend their Shift Action to Shift during a turn, they gain +5 Damage Reduction for one full round.\nSpecial Attack Effect: The Range of your Pokémon’s Special Non-Melee Moves is increased by +2. This does not affect the size of Area-Of-Effect moves (But does affect the range at which you can place Ranged Blasts).\nSpecial Defense Effect: Whenever your Pokémon would lose a Tick of Hit Points from Status Afflictions, Weather, or other effects, they lose 5 fewer Hit Points, to a minimum of 1.\nSpeed Effect: Your Pokémon may take Disengage Maneuvers as Rapid Actions.",
+    "effect": "Stat Mastery’s Effect depends on your Chosen Stat:\n<b>Attack Effect:</b> When your Pokémon successfully uses a @UUID[Compendium.ptu.moves.Item.79nCOdXheYY2AXTB]{Push}, @UUID[Compendium.ptu.moves.Item.h0slhD40dRasSRXj]{Disarm}, or @UUID[Compendium.ptu.moves.Item.vINbKBHt2nQ7N37v]{Dirty Trick} Combat Maneuver, the target of the Maneuver loses a Tick of Hit Points.\n<b>Defense Effect:</b> Whenever your Pokémon do not spend their Shift Action to Shift during a turn, they gain +5 Damage Reduction for one full round.\n<b>Special Attack Effect:</b> The Range of your Pokémon’s Special Non-Melee Moves is increased by +2. This does not affect the size of Area-Of-Effect moves (But does affect the range at which you can place Ranged Blasts).\n<b>Special Defense Effect:</b> Whenever your Pokémon would lose a Tick of Hit Points from Status Afflictions, Weather, or other effects, they lose 5 fewer Hit Points, to a minimum of 1.\n<b>Speed Effect:</b> Your Pokémon may take @UUID[Compendium.ptu.moves.Item.SY3j4DR2EGyRkvRr]{Disengage} Maneuvers as Rapid Actions.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,7 +61,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -71,7 +74,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Stat Maneuver",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -84,7 +89,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 10200000,
   "_id": "9MGkTQUPBmBFC96C"
 }

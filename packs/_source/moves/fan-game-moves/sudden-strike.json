@@ -3,7 +3,9 @@
   "type": "move",
   "flags": {
     "ptu": {
-      "automationStatus": "no-automation-needed"
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "effects": [],
@@ -53,7 +55,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -79,7 +82,9 @@
     "automation": [],
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "ownership": {
     "default": 0

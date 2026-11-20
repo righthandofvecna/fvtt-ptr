@@ -13,84 +13,18 @@
         "mode": "add",
         "path": "system.modifiers.damageReduction.physical.mod",
         "phase": "afterDerived",
-        "value": "(@actor.system.skills.athletics.value.total) * 2",
+        "value": "max(@actor.system.skills.athletics.value.total,@actor.system.skills.focus.value.total) * 2",
         "priority": null,
-        "predicate": {
-          "gt": [
-            "{actor|system.skills.athletics.value.total}",
-            "{actor|system.skills.focus.value.total}"
-          ]
-        }
+        "predicate": []
       },
       {
         "key": "ActiveEffectLike",
-        "predicate": {
-          "gt": [
-            "{actor|system.skills.athletics.value.total}",
-            "{actor|system.skills.focus.value.total}"
-          ]
-        },
         "mode": "add",
         "path": "system.modifiers.damageReduction.special.mod",
         "phase": "afterDerived",
-        "value": "(@actor.system.skills.athletics.value.total) * 2",
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": {
-          "gt": [
-            "{actor|system.skills.focus.value.total}",
-            "{actor|system.skills.athletics.value.total}"
-          ]
-        },
-        "mode": "add",
-        "path": "system.modifiers.damageReduction.physical.mod",
-        "phase": "afterDerived",
-        "value": "(@actor.system.skills.focus.value.total) * 2",
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": {
-          "gt": [
-            "{actor|system.skills.focus.value.total}",
-            "{actor|system.skills.athletics.value.total}"
-          ]
-        },
-        "mode": "add",
-        "path": "system.modifiers.damageReduction.special.mod",
-        "phase": "afterDerived",
-        "value": "(@actor.system.skills.focus.value.total) * 2",
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": {
-          "eq": [
-            "{actor|system.skills.focus.value.total}",
-            "{actor|system.skills.athletics.value.total}"
-          ]
-        },
-        "mode": "add",
-        "path": "system.modifiers.damageReduction.physical.mod",
-        "phase": "afterDerived",
-        "value": "(@actor.system.skills.athletics.value.total) * 2",
-        "priority": null
-      },
-      {
-        "key": "ActiveEffectLike",
-        "predicate": {
-          "eq": [
-            "{actor|system.skills.focus.value.total}",
-            "{actor|system.skills.athletics.value.total}"
-          ]
-        },
-        "mode": "add",
-        "path": "system.modifiers.damageReduction.special.mod",
-        "phase": "afterDerived",
-        "value": "(@actor.system.skills.athletics.value.total) * 2",
-        "priority": null
+        "value": "max(@actor.system.skills.athletics.value.total,@actor.system.skills.focus.value.total) * 2",
+        "priority": null,
+        "predicate": []
       }
     ],
     "enabled": true,

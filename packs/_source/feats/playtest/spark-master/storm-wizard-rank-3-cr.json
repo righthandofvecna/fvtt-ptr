@@ -2,7 +2,7 @@
   "name": "Storm Wizard Rank 3",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You may learn three Moves from the list below, marked with the Storm Wizard Rank you are gaining or lower.\nRank 1: Charge, Charge Beam, Eerie Impulse, Shock Wave, Spark\nRank 2: Electro Ball, Thunder Punch, Thunder Wave ,Thunderbolt , Wild Charge\nRank 3: Discharge, Rising Voltage, Thunder, Volt Tackle, Zap Cannon",
+    "effect": "Effect: You may learn three Moves from the list below, marked with the Storm Wizard Rank you are gaining or lower.\nRank 1: @UUID[Compendium.ptu.moves.Item.qRvLgOrsmdXEsBsU]{Charge}, @UUID[Compendium.ptu.moves.Item.Z38TtI0Rkj5fIHLD]{Charge Beam}, @UUID[Compendium.ptu.moves.Item.rW6YqKNIilq1npZJ]{Eerie Impulse}, @UUID[Compendium.ptu.moves.Item.i3pBrEvJz6tycWOT]{Shock Wave}, @UUID[Compendium.ptu.moves.Item.2Bldc8dEEOuOSx39]{Spark}\nRank 2: @UUID[Compendium.ptu.moves.Item.0OG6qacE7JQqxM5a]{Electro Ball}, @UUID[Compendium.ptu.moves.Item.0gi5EtY9Gq2yZ4eY]{Thunder Punch}, @UUID[Compendium.ptu.moves.Item.wxMkDV7tasspdddy]{Thunder Wave}, @UUID[Compendium.ptu.moves.Item.y9WyqqBWO4tAaX8G]{Thunderbolt}, @UUID[Compendium.ptu.moves.Item.idhhi7YJRDHnUUMR]{Wild Charge}\nRank 3: @UUID[Compendium.ptu.moves.Item.0KazDGc9T8CETH5f]{Discharge}, @UUID[Compendium.ptu.moves.Item.gBjvziKyEyb7Jsnd]{Rising Voltage}, @UUID[Compendium.ptu.moves.Item.w5E02WXdvxiY8n0Z]{Thunder}, @UUID[Compendium.ptu.moves.Item.l7sqm6Fyaz6kQL9A]{Volt Tackle}, @UUID[Compendium.ptu.moves.Item.xkb0LIHiVO23Vo1a]{Zap Cannon}",
     "snippet": "",
     "rules": [
       {
@@ -18,7 +18,7 @@
         "key": "ChoiceSet",
         "choices": [
           {
-            "value": "Compendium.ptu.moves.Item.hi7gAfufnGgdttyo",
+            "value": "Compendium.ptu.moves.Item.qRvLgOrsmdXEsBsU",
             "label": "Charge",
             "predicate": [
               {
@@ -36,7 +36,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.KKoqb3PXbdV2gpAA",
+            "value": "Compendium.ptu.moves.Item.rW6YqKNIilq1npZJ",
             "label": "Eerie Impulse",
             "predicate": [
               {
@@ -81,7 +81,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.rYgXflBIrAnN8GkK",
+            "value": "Compendium.ptu.moves.Item.wxMkDV7tasspdddy",
             "label": "Thunder Wave",
             "predicate": [
               {
@@ -165,7 +165,7 @@
         "key": "ChoiceSet",
         "choices": [
           {
-            "value": "Compendium.ptu.moves.Item.hi7gAfufnGgdttyo",
+            "value": "Compendium.ptu.moves.Item.qRvLgOrsmdXEsBsU",
             "label": "Charge",
             "predicate": [
               {
@@ -183,7 +183,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.KKoqb3PXbdV2gpAA",
+            "value": "Compendium.ptu.moves.Item.rW6YqKNIilq1npZJ",
             "label": "Eerie Impulse",
             "predicate": [
               {
@@ -228,7 +228,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.rYgXflBIrAnN8GkK",
+            "value": "Compendium.ptu.moves.Item.wxMkDV7tasspdddy",
             "label": "Thunder Wave",
             "predicate": [
               {
@@ -312,7 +312,7 @@
         "key": "ChoiceSet",
         "choices": [
           {
-            "value": "Compendium.ptu.moves.Item.hi7gAfufnGgdttyo",
+            "value": "Compendium.ptu.moves.Item.qRvLgOrsmdXEsBsU",
             "label": "Charge",
             "predicate": [
               {
@@ -330,7 +330,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.KKoqb3PXbdV2gpAA",
+            "value": "Compendium.ptu.moves.Item.rW6YqKNIilq1npZJ",
             "label": "Eerie Impulse",
             "predicate": [
               {
@@ -375,7 +375,7 @@
             ]
           },
           {
-            "value": "Compendium.ptu.moves.Item.rYgXflBIrAnN8GkK",
+            "value": "Compendium.ptu.moves.Item.wxMkDV7tasspdddy",
             "label": "Thunder Wave",
             "predicate": [
               {
@@ -490,7 +490,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -512,7 +513,8 @@
     "name": "Storm Wizard [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "storm-wizard-rank-3",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -524,8 +526,8 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
       "devNote": ""
     }
   },

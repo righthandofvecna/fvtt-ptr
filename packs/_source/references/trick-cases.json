@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Jailbreaker Recipes",
-    "effect": "Prerequisites: Case Specialist Effect: You may create a Spray Case, Flash Case, or Bounce Case for $400.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.JTxMdgEaqEOvVAEN]{Case Specialist}\nEffect: You may create a @UUID[Compendium.ptu.items.Item.mHuu0GrMLIKqS1So]{Spray Case}, @UUID[Compendium.ptu.items.Item.ODreo8uTxSpkZYdb]{Flash Case}, or @UUID[Compendium.ptu.items.Item.6NOzBaMomSiyiYnd]{Bounce Case} for @Poke[400].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "Waxwh0s7pPCy1jOT",
   "effects": [],
-  "folder": null,
   "sort": 16700000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

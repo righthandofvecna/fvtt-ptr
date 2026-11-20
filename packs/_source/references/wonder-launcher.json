@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Gadgeteer Recipes",
-    "effect": "At-Will - Extended Action. Effect: You create a Wonder Launcher for ₽5000.",
+    "effect": "At-Will - Extended Action\nEffect: You create a @UUID[Compendium.ptu.items.Item.fjWY3tkAYRxxnF5p]{Wonder Launcher} for ₽5000.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "GNdI0Lk6XwOvClYw",
   "effects": [],
-  "folder": null,
   "sort": 8400000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Effect: Stat Mastery’s Effect depends on your Chosen Stat:\n\nWhenever your Pokémon Intercept a Physical Attack, the attacking creature loses 1 Attack CS.",
+    "effect": "Effect: Stat Mastery’s Effect depends on your Chosen Stat:\n\nWhenever your Pokémon @CompSearch[Moves Intercept]{Intercept} a Physical Attack, the attacking creature loses 1 Attack CS.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,12 +62,16 @@
     "free": false,
     "class": "Stat Ace (Defense)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-mastery-defense"
+    "replacesSlug": "stat-mastery-defense",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_id": "BVC4PG90lLQ1YYNq",
