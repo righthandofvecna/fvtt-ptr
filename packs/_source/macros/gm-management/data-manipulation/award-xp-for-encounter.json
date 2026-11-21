@@ -1,0 +1,25 @@
+{
+  "name": "Award XP for Encounter",
+  "type": "script",
+  "command": "const participants = [...new Set([...game.canvas.tokens.controlledObjects.values()].map(t=>t.actor))].filter(p=>p.type === \"pokemon\");\n\nif (!participants.length) {\n  ui.notifications.error(\"Please select the participating Pokemon\")\n  return;\n}\n\nconst budgetField = new foundry.data.fields.NumberField({\n  label: \"XP Budget\",\n  placeholder: 100,\n  min: 0\n}, {\n  name: \"budget\"\n});\n\nconst expBudget = await foundry.applications.api.DialogV2.wait({\n  window: { title: \"XP Budget\" },\n  content: budgetField.toFormGroup({}).outerHTML,\n  buttons: [\n    {\n      action: \"apply\",\n      label: \"Apply\",\n      callback: (event, button) => {\n        const form = button.closest(\"form\");\n        const formData = new FormData(form);\n        return Number(formData.get(\"budget\"));\n      }\n    }\n  ]\n});\n\nif (!expBudget || expBudget < 0) {\n  return;\n}\n\nconst falseCombat = {\n  id: foundry.utils.randomID(),\n  combatants: participants.map(actor=>({actor})),\n  expBudget: expBudget,\n  hasEnemyTrainers: false\n}\n\nnew CONFIG.PTU.ui.combatXPDialog.sheetClass(falseCombat).render(true)",
+  "img": "icons/svg/upgrade.svg",
+  "_id": "zWedkVAI5MuRLnQs",
+  "author": "GFCVv4EMgQDa5fGR",
+  "scope": "global",
+  "folder": "CdoLlA1u5HNKnA2z",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.57",
+    "createdTime": 1795292046629,
+    "modifiedTime": 1795292059658,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0
+}

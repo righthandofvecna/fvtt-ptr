@@ -1,0 +1,22 @@
+{
+  "type": "Macro",
+  "folder": "gmManagement0000",
+  "name": "Data Manipulation",
+  "color": null,
+  "sorting": "a",
+  "_id": "CdoLlA1u5HNKnA2z",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.57",
+    "createdTime": 1795283036755,
+    "modifiedTime": 1795283036755,
+    "lastModifiedBy": "GFCVv4EMgQDa5fGR",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  }
+}
