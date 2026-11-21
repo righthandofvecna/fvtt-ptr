@@ -62,7 +62,8 @@
     "name": "Surge of Spirit [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "very-skilled",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -75,8 +76,8 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
-      "devNote": ""
+      "automationStatus": "requires-system-changes",
+      "devNote": "Will need to be worked when Skill Rank requirements have been automated/enforced and when Trainers have roll options based on trainer level. -WW"
     }
   },
   "_stats": {
