@@ -12,7 +12,7 @@ class TypeOverwriteForm extends RuleElementForm {
         const valueIsArray = Array.isArray(this.rule.value);
         const types = Object.keys(CONFIG.PTU.data.typeEffectiveness ?? {});
 
-        data.rule.overwrite ??= true;
+        data.rule.overwrite ??= false;
 
         return {
             ...data,

@@ -28,7 +28,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Signature"
+    ],
     "frequency": {
       "type": "static",
       "max": 0,
@@ -54,7 +56,8 @@
       "bind": false
     },
     "leagueLegal": false,
-    "tier": ""
+    "tier": "",
+    "tutorSlotCost": 0
   },
   "effects": [],
   "folder": null,
@@ -64,5 +67,19 @@
       "devNote": "",
       "showInTokenPanel": false
     }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.57",
+    "createdTime": 1793170293114,
+    "modifiedTime": 1793170293114,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
   }
 }

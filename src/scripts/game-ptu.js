@@ -106,6 +106,25 @@ const GamePTU = {
             });
         }
 
+        // Pre-load all Maneuver moves for phantom display on actor sheets.
+        game.ptu.maneuverCache = null;
+        const movesPack = game.packs.get("ptu.moves");
+        if (movesPack) {
+            movesPack.getDocuments().then(docs => {
+                game.ptu.maneuverCache = docs.filter(d => d.system?.keywords?.includes("Maneuver"));
+                // Re-prepare all actors so prepareMoves() can register maneuver phantoms in _phantomItems.
+                for (const actor of game.actors) {
+                    actor.prepareData();
+                }
+                // Re-render any open actor sheets so they pick up the newly prepared maneuvers.
+                for (const win of Object.values(ui.windows)) {
+                    if (win.actor) win.render();
+                }
+            }).catch(err => {
+                console.error("PTU | Failed to load maneuver cache:", err);
+            });
+        }
+
         
         // because this rendering seems to be acting quite silly, we ensure the token panel is refreshed at multiple points
         // TODO: figure out why without this, the token panel just sometimes doesn't appear until you select a token

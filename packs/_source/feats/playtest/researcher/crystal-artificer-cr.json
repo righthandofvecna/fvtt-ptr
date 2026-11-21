@@ -2,7 +2,7 @@
   "name": "Crystal Artificer",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effects: You may use any Crystal Artificer Recipe for which you qualify.",
+    "effect": "Effects: You may use any Crystal Artificer Recipe for which you qualify.\n@UUID[Compendium.ptu.references.Item.XowzwNxWBcgDpXQf]{Type Booster}\n@UUID[Compendium.ptu.references.Item.O59ah0hx6aIihlVf]{Type Brace}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -74,7 +74,7 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "no-automation-needed",
       "devNote": "",
       "showInTokenPanel": false
     }

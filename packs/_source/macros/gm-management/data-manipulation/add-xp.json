@@ -1,0 +1,25 @@
+{
+  "name": "Add XP",
+  "type": "script",
+  "command": "if (!actor) {\n  ui.notifications.error(\"You must select an actor to update.\");\n  return;\n}\n\nconst TITLE = \"Add XP\";\nconst FIELDNAME = actor.type === \"trainer\" ? \"system.level.xpPool\" : \"system.level.pendingExp\";\nconst FIELDLABEL = actor.type === \"trainer\" ? \"Add to XP Pool\" : \"Add to Pending Experience\";\nconst EXISTING = foundry.utils.getProperty(actor, FIELDNAME) ?? 0;\n\nconst field = new foundry.data.fields.NumberField({\n  label: FIELDLABEL,\n  placeholder: 0,\n  min: 0\n}, {\n  name: FIELDNAME.substring(FIELDNAME.lastIndexOf(\".\") + 1),\n  parent: {\n    fieldPath: FIELDNAME.substring(0, FIELDNAME.lastIndexOf(\".\"))\n  }\n});\n\nconst name = actor.trainer ? `${actor.trainer.name}'s ${actor.name}` : actor.name;\n\nconst content = `<div><h4>${name}</h4><img src=\"${actor.img}\" alt=\"${name}\" style=\"max-width: 100px; max-height: 100px;\"></div><fieldset>${field.toFormGroup({}).outerHTML}</fieldset>`\n\nconst { value } = await foundry.applications.api.DialogV2.wait({\n  window: { title: TITLE },\n  content,\n  buttons: [\n    {\n      action: \"apply\",\n      label: \"Apply\",\n      callback: (event, button) => {\n        const form = button.closest(\"form\");\n        const formData = new FormData(form);\n        return {\n          value: Number(formData.get(FIELDNAME)),\n        }\n      }\n    }\n  ]\n});\n\nif (value !== null && value !== undefined) {\n  await actor.update({ [FIELDNAME]: EXISTING + value });\n}",
+  "img": "icons/svg/lever.svg",
+  "author": "GFCVv4EMgQDa5fGR",
+  "scope": "global",
+  "folder": "CdoLlA1u5HNKnA2z",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.57",
+    "createdTime": 1795288060129,
+    "modifiedTime": 1795288060129,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "m1EDmw2t7CT1Djad",
+  "sort": 0
+}

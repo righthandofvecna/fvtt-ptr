@@ -38,6 +38,10 @@ Please note that this branch is no longer receiving updates and is only compatib
 
 
 ## 🚨 Changes From Stable 🚨
+- Item piles compatibility fixes
+- Added Maneuvers as phantom items
+- Added "Signature" keyword
+- Make type overwrite form match its default behavior
 - Fixed custom dice modifiers not applying to skill checks
 - Added Held Item generation system
 - Fix Shadow condition type overwrite (you'll have to re-drag the Shadow condition onto the pokemon)

@@ -564,5 +564,20 @@
   "folder": "irSNiCnUnI7il9mJ",
   "name": "Lucario-Mega-Z",
   "effects": [],
-  "_id": "TXZ01P3etfUfJU8c"
+  "_id": "TXZ01P3etfUfJU8c",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
 }

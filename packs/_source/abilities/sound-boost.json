@@ -55,7 +55,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,10 +71,25 @@
     },
     "leagueLegal": false,
     "tier": "",
+    "tutorSlotCost": 0,
     "name": "",
     "automation": [],
     "useCount": 0
   },
   "img": "/systems/ptu/static/css/images/icons/ability_icon.png",
-  "folder": null
+  "folder": null,
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
 }

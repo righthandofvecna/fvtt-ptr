@@ -2,7 +2,7 @@
   "name": "Ninja's Arsenal",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You may craft an Antidote, Smoke Ball, Caltrops, Toxic Caltrops, Oil Slick, and Shuriken for $100. Starting at Expert Stealth, you may also craft Poison Gas Bombs, Net Bombs, Exploding Knife, or a batch of Blinding Ink for $250.",
+    "effect": "Effect: You may craft an @UUID[Compendium.ptu.items.Item.HzoRdjFC7xbRj460]{Antidote}, @UUID[Compendium.ptu.items.Item.eLpDB3IBw8rB0IFM]{Smoke Ball}, @UUID[Compendium.ptu.items.Item.cCWwpE0CXZnur5qT]{Caltrops}, @UUID[Compendium.ptu.items.Item.PEYD11jzGQbpclRO]{Toxic Caltrops}, @UUID[Compendium.ptu.items.Item.Lg2H85KsccKeve6F]{Oil Slick}, and @UUID[Compendium.ptu.items.Item.GiLK83qzT6nbJk63]{Shuriken} for @Poke[100]. \nStarting at Expert Stealth, you may also craft @UUID[Compendium.ptu.items.Item.ymNzCkifoMHwSveU]{Poison Gas Bombs}, Net Bombs, @UUID[Compendium.ptu.items.Item.A5CGOHLscoHIwRUs]{Exploding Knife}, or a batch of @UUID[Compendium.ptu.items.Item.FYdXqw4fI8g7x06Y]{Blinding Ink} for @Poke[250].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -58,7 +59,9 @@
     "class": "Ninja",
     "name": "Ninja’s Arsenal [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "ninjas-arsenal"
+    "replacesSlug": "ninjas-arsenal",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -69,7 +72,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "Net Bomb not defined",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

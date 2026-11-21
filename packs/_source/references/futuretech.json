@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Engineer Recipes",
-    "effect": "Futuretech Prerequisites: Experimental AI Effect: You can create and install Wired Compatibility Cores for Pokébots.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.6gT6HG5tQOPFdOgy]{Experimental AI}\nEffect: You can create and install Wired Compatibility Cores for Pokébots.\n@UUID[Compendium.ptu.references.Item.Ca12l8J5X2kFNBu9]{Pokébot and Upgrade Parts}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "UpYQ1DK4AswzVGOE",
   "effects": [],
-  "folder": null,
   "sort": 16100000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

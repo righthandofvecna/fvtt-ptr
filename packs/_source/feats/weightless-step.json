@@ -2,7 +2,7 @@
   "name": "Weightless Step",
   "system": {
     "origin": "",
-    "effect": "You gain the Infiltrator Ability.",
+    "effect": "You gain the @UUID[Compendium.ptu.abilities.Item.9nkIfAs2uDYCUGfb]{Infiltrator} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -53,7 +53,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -77,7 +78,9 @@
     "name": "Weightless Step",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -88,7 +91,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Ninja, Expert Stealth",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -101,7 +106,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 52400000,
   "_id": "kB2igptUoeG5vG2v"
 }

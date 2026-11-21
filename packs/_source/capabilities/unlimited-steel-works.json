@@ -1,0 +1,60 @@
+{
+  "name": "Unlimited Steel Works",
+  "type": "capability",
+  "_id": "ktOPe4FWmHIsDVHu",
+  "img": "/systems/ptu/static/css/images/icons/capability_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Prerequisite: @UUID[Compendium.ptu.feats.Item.npzBvLZE0YTCVkdm]{Master of Arms}\nAt-Will – Extended Action\nTarget: Your @UUID[Compendium.ptu.capabilities.Item.MxWe6rClXSRuYjDI]{Steelheart Bond} Weapon\nEffect: You may replace the Move(s) granted by the target Weapon with any other standard Weapon Moves, within Limitations. Weapons may still only grant one Adept and one Master Move at a maximum.",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "unlimited-steel-works",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "frequency": {
+      "type": "at-will",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      },
+      "ppCost": null
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": true
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "leagueLegal": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "ptu": {
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  }
+}

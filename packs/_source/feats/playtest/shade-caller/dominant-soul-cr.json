@@ -2,12 +2,12 @@
   "name": "Dominant Soul",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Conqueror Ability.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.abilities.Item.Xz4QIzfP5tuvCiaU]{Conqueror} Ability.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
+        "adjustName": false,
         "flag": "dominantsoul",
         "choices": [
           {
@@ -28,6 +28,12 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.Xz4QIzfP5tuvCiaU"
       }
     ],
     "enabled": true,
@@ -63,7 +69,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -84,7 +91,9 @@
     "class": "Shade Caller",
     "name": "Dominant Soul [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "dominant-soul"
+    "replacesSlug": "dominant-soul",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -95,7 +104,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -102,7 +102,7 @@ class PTUMove extends PTUItem {
     }
 
     get learnedFrom() {
-        if (this.flags?.ptu?.learnedFrom) return this.flags.ptu.learnedFrom;
+        if (this.flags?.ptu?.learnedFrom !== undefined) return this.flags.ptu.learnedFrom;
         if (this.system.isStruggle) return null;
         if (this.actor === null) return null;
         const species = this.actor?.species;

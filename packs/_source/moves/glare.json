@@ -2,7 +2,6 @@
   "name": "Glare",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/NormalIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Glare Paralyzes the target.",
@@ -84,7 +83,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "_id": "VUD1mCjhImVmtttd",
   "effects": [],

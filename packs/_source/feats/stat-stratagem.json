@@ -2,7 +2,7 @@
   "name": "Stat Stratagem",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon\nEffect: While this Feature is Bound, the target has the following bonuses based on your Chosen Stat:\nAttack Effect: The target’s damaging Melee Attacks have their Critical Hit Range increased by 1 for each positive Combat Stage they have in Attack, up to a maximum of +3.\nDefense Effect: The target gains a +2 bonus to Save Checks against Paralysis, Sleep, and Freeze for each positive Combat Stage they have in Defense, up to a maximum of +6.\nSpecial Attack Effect: The target’s damaging Ranged Attacks have their Effect Range increased by 1 for each positive Combat Stage they have in Special Attack, up to a maximum of +3.\nSpecial Defense Effect: The target gains a +2 bonus to Save Checks against Confusion, Rage, and Infatuation for each positive Combat Stage they have in Special Defense, up to a maximum of +6.\nSpeed Effect: The target’s Movement Capabilities are increased by 1 for each positive Combat Stage they have in Speed, up to a maximum of +3.",
+    "effect": "Target: Your Pokémon\nEffect: While this Feature is Bound, the target has the following bonuses based on your Chosen Stat:\n<b>Attack Effect:</b> The target’s damaging Melee Attacks have their Critical Hit Range increased by 1 for each positive Combat Stage they have in Attack, up to a maximum of +3.\n<b>Defense Effect:</b> The target gains a +2 bonus to Save Checks against @UUID[Compendium.ptu.effects.Item.bzZaLfYxVyKbJOCo]{Paralysis}, @UUID[Compendium.ptu.effects.Item.RekZDOcIsADhrfH3]{Sleep}, and @UUID[Compendium.ptu.effects.Item.7F4dkJoDuD7wNcEK]{Freeze} for each positive Combat Stage they have in Defense, up to a maximum of +6.\n<b>Special Attack Effect:</b> The target’s damaging Ranged Attacks have their Effect Range increased by 1 for each positive Combat Stage they have in Special Attack, up to a maximum of +3.\n<b>Special Defense Effect:</b> The target gains a +2 bonus to Save Checks against @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confusion}, @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Rage}, and @UUID[Compendium.ptu.effects.Item.ABTHN2VM50VQabZq]{Infatuation} for each positive Combat Stage they have in Special Defense, up to a maximum of +6.\n<b>Speed Effect:</b> The target’s Movement Capabilities are increased by 1 for each positive Combat Stage they have in Speed, up to a maximum of +3.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -39,7 +39,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -64,7 +65,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -75,7 +78,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Stat Link, Stat Training, Master Focus or Command",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -88,7 +93,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 45400000,
   "_id": "erGoIhSCNvzT5jOa"
 }

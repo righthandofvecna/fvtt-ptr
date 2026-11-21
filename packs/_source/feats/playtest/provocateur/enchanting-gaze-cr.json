@@ -2,7 +2,7 @@
   "name": "Enchanting Gaze",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose a Manipulate Maneuver effect; apply that Effect to all foes in a Cone 2. This ignores Frequency Limitations with that Maneuver and automatically succeeds against all targets without an opposed roll.",
+    "effect": "Effect: Choose a @UUID[Compendium.ptu.moves.Item.EHk6fkrj1wuCHnCX]{Manipulate Maneuver} effect; apply that Effect to all foes in a Cone 2. This ignores Frequency Limitations with that Maneuver and automatically succeeds against all targets without an opposed roll.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -63,14 +64,16 @@
     },
     "prerequisites": [
       "Quick Wit",
-      "two Provocateur Skills at Expert Rank."
+      "two Provocateur Skills at Expert Rank"
     ],
     "notes": "",
     "free": false,
     "class": "Provocateur",
     "name": "Enchanting Gaze [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "enchanting-gaze"
+    "replacesSlug": "enchanting-gaze",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +84,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

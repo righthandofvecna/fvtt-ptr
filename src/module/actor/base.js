@@ -1506,13 +1506,30 @@ class PTUActor extends Actor {
         }, []);
     }
 
+    _prepareManeuvers() {
+        const cache = game.ptu?.maneuverCache;
+        if (!cache?.length) return [];
+
+        return cache.map(maneuver => {
+            const data = maneuver.toObject();
+            foundry.utils.setProperty(data, 'flags.ptu.phantom', true);
+            foundry.utils.setProperty(data, 'flags.ptu.sourceUuid', maneuver.uuid);
+            foundry.utils.setProperty(data, 'flags.ptu.learnedFrom', null);
+            return new Item.implementation(data, { parent: this, temporary: true });
+        });
+    }
+
     prepareMoves({ includeStruggles = true } = {}) {
         const struggles = includeStruggles ? this._prepareStruggles() : [];
+        const maneuvers = this._prepareManeuvers();
 
-        // Register struggle phantoms so sheets can look them up for materialization.
+        // Register struggle and maneuver phantoms so sheets can look them up.
         // Preserve existing phantom items (e.g. spirit action phantoms added during prepareRuleElements).
         for (const struggle of struggles) {
             this._phantomItems.set(struggle.realId, struggle);
+        }
+        for (const maneuver of maneuvers) {
+            this._phantomItems.set(maneuver.realId, maneuver);
         }
 
         const moves = [];
@@ -1549,10 +1566,23 @@ class PTUActor extends Actor {
         );
         const filteredStruggles = struggles.filter(s => !materializedPhantomRealIds.has(s.realId));
 
+        // Suppress phantom maneuvers when the actor already owns a real copy of that move (by slug).
+        const ownedManeuverSlugs = new Set(
+            this.itemTypes.move
+                .filter(m => m.system.keywords?.includes("Maneuver"))
+                .map(m => m.system.slug)
+                .filter(Boolean)
+        );
+        const filteredManeuvers = maneuvers.filter(m => {
+            if (materializedPhantomRealIds.has(m.realId)) return false;
+            if (ownedManeuverSlugs.has(m.system?.slug)) return false;
+            return true;
+        });
+
         // Return a Collection of PTUMove items keyed by their real ID.
         // The items themselves now carry roll(), damage(), consume(), and onCooldown.
         return new Collection(
-            [...moves, ...filteredStruggles]
+            [...moves, ...filteredStruggles, ...filteredManeuvers]
                 .map(move => [move.id ?? move.realId, move])
         );
     }

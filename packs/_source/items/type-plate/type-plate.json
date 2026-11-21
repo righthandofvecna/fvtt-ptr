@@ -1,0 +1,192 @@
+{
+  "name": "Type Plate",
+  "system": {
+    "origin": "",
+    "effect": "These Rare items come in a variety of each of the Elemental Types, and act as both a Type Booster and a Type Brace. Accessory Slot Item for Trainers.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "typeplate",
+        "choices": [
+          {
+            "value": "bug",
+            "label": "Bug"
+          },
+          {
+            "value": "dark",
+            "label": "Dark"
+          },
+          {
+            "value": "dragon",
+            "label": "Dragon"
+          },
+          {
+            "value": "electric",
+            "label": "Electric"
+          },
+          {
+            "value": "fairy",
+            "label": "Fairy"
+          },
+          {
+            "value": "fighting",
+            "label": "Fighting"
+          },
+          {
+            "value": "fire",
+            "label": "Fire"
+          },
+          {
+            "value": "flying",
+            "label": "Flying"
+          },
+          {
+            "value": "ghost",
+            "label": "Ghost"
+          },
+          {
+            "value": "grass",
+            "label": "Grass"
+          },
+          {
+            "value": "ground",
+            "label": "Ground"
+          },
+          {
+            "value": "ice",
+            "label": "Ice"
+          },
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "poison",
+            "label": "Poison"
+          },
+          {
+            "value": "psychic",
+            "label": "Psychic"
+          },
+          {
+            "value": "rock",
+            "label": "Rock"
+          },
+          {
+            "value": "steel",
+            "label": "Steel"
+          },
+          {
+            "value": "water",
+            "label": "Water"
+          }
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [],
+        "hideIfDisabled": false,
+        "selectors": "{item|flags.ptu.rulesSelections.typeplate}-damage",
+        "value": 5
+      },
+      {
+        "key": "EphemeralEffect",
+        "predicate": [],
+        "selectors": "{item|flags.ptu.rulesSelections.typeplate}-damage-received",
+        "affects": "origin",
+        "uuid": "Compendium.ptu.effects.Item.3Z0FXRjOLUkhlBLG"
+      }
+    ],
+    "enabled": true,
+    "slug": "type-plate",
+    "schema": {
+      "version": 0.116,
+      "lastMigration": {
+        "datetime": "2026-05-08T00:40:42.005Z",
+        "version": {
+          "schema": 0.11,
+          "foundry": "13.351",
+          "system": "4.4.3.16"
+        }
+      }
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [
+      "Held Item",
+      "Accessory",
+      "Artificer"
+    ],
+    "frequency": {
+      "type": "static",
+      "max": 0,
+      "custom": "",
+      "modifiers": {
+        "priorityLimited": false,
+        "priorityAdvanced": false,
+        "priority": false,
+        "reaction": false,
+        "interrupt": false
+      }
+    },
+    "actionCost": {
+      "standard": false,
+      "rapid": false,
+      "shift": false,
+      "free": false,
+      "extended": false
+    },
+    "ap": {
+      "cost": 0,
+      "bind": false
+    },
+    "quantity": "1",
+    "category": "",
+    "cost": "",
+    "consumable": "0",
+    "subtype": "",
+    "container": false,
+    "automation": [],
+    "name": "Type Plate",
+    "useCount": 0,
+    "contentSet": "",
+    "replacesSlug": "",
+    "leagueLegal": false
+  },
+  "type": "item",
+  "img": "/systems/ptu/static/images/item_icons/Dream_Any_Plate_Sprite.png",
+  "effects": [],
+  "flags": {
+    "ptu": {
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
+    }
+  },
+  "_stats": {
+    "systemId": "ptu",
+    "systemVersion": "4.4.3.16",
+    "coreVersion": "13.351",
+    "createdTime": 1683368861072,
+    "modifiedTime": 1778200842020,
+    "lastModifiedBy": "ptubuilder000000",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "kanto-adventures",
+      "uuid": null,
+      "coreVersion": "11.315",
+      "systemId": "ptu",
+      "systemVersion": "4.2.4"
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_id": "dUfMKdH0mKVrXLXq",
+  "sort": 300000,
+  "folder": "c90X3FUenGHxdEud"
+}

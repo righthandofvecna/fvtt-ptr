@@ -16,6 +16,8 @@
     ],
     "enabled": true,
     "slug": "sound-lance",
+    "contentSet": "",
+    "replacesSlug": "",
     "schema": {
       "version": 0.116,
       "lastMigration": {
@@ -32,7 +34,9 @@
       "value": "PTR Compendiums"
     },
     "stackSlugs": false,
-    "keywords": [],
+    "keywords": [
+      "Signature"
+    ],
     "frequency": {
       "type": "scene",
       "max": 2,
@@ -43,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -56,14 +61,13 @@
       "cost": 0,
       "bind": false
     },
+    "leagueLegal": false,
     "tier": "",
-    "automation": [],
-    "contentSet": "",
-    "replacesSlug": ""
+    "tutorSlotCost": 0,
+    "automation": []
   },
   "_id": "5Ggs5ri8KolxSCmx",
   "effects": [],
-  "folder": null,
   "sort": 6100000,
   "ownership": {
     "default": 0
@@ -75,10 +79,10 @@
   },
   "_stats": {
     "systemId": "ptu",
-    "systemVersion": "4.4.3.16",
-    "coreVersion": "13.351",
+    "systemVersion": "4.4.3.57",
+    "coreVersion": "14.367",
     "createdTime": 1692968394056,
-    "modifiedTime": 1778200816053,
+    "modifiedTime": 1793170292994,
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null

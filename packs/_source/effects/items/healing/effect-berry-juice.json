@@ -15,7 +15,7 @@
         "trigger": "onCreate",
         "mode": "add",
         "path": "system.health.value",
-        "value": 20,
+        "value": 30,
         "priority": null
       }
     ],

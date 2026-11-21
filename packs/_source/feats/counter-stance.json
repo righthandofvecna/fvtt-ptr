@@ -2,14 +2,17 @@
   "name": "Counter Stance",
   "system": {
     "origin": "",
-    "effect": "Trigger - An adjacent foe misses you with an attack\nEffect: You perform an Attack of Opportunity against them.",
+    "effect": "Trigger: An adjacent foe misses you with an attack\nEffect: You perform an @UUID[Compendium.ptu.moves.Item.lhaZXnE2PfttWp41]{Attack of Opportunity} against them.",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.spd.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -43,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": true
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -66,7 +70,9 @@
     "name": "Counter Stance",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -76,7 +82,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Skirmisher"
+      "prereqBackup": "Skirmisher",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -89,7 +98,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 44100000,
   "_id": "dpAXPMK8GrJSJnYR"
 }

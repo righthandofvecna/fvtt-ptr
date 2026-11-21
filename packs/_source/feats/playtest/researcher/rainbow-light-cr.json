@@ -2,7 +2,7 @@
   "name": "Rainbow Light",
   "system": {
     "origin": "Class Rework",
-    "effect": "Condition: You are wearing a Rainbow Gem\nEffects: You create a Rainbow lasting one full round. While this Rainbow persists, the Effect Range of all Allies is increased by +3.",
+    "effect": "Condition: You are wearing a Rainbow Gem\nEffects: You create a Rainbow lasting one full round. While this Rainbow persists, the Effect Range of all Allies is increased by +3.\n@UUID[Compendium.ptu.references.Item.bL7fkdXmofLXjoAn]{Rainbow Gem}\n@UUID[Compendium.ptu.references.Item.0I0O9vQIC5oxdItt]{Plate Crafter}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -76,7 +76,7 @@
   "flags": {
     "ptu": {
       "automationStatus": "needs-automation",
-      "devNote": "",
+      "devNote": "Making a Rainbow Gem item may be prudent",
       "showInTokenPanel": false
     }
   },

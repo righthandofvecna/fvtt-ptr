@@ -43,6 +43,7 @@ import { PTUContestMove } from '../../module/item/contestmove/document.js';
 import { PTUContestMoveSheet } from '../../module/item/contestmove/sheet.js';
 import { PTUHotBar } from '../../module/apps/hotbar.js';
 import { PTUTokenConfig } from '../../module/canvas/token/sheet.js';
+import { CombatXPDialog } from "../../module/apps/combat-xp-dialog/sheet.js";
 import { PackLoader } from '../../module/apps/compendium-browser/index.js';
 import PTURuleBookJournal from '../../module/apps/rulebook-journal.js';
 import { PTUKeywordJournalPage } from '../../module/journal/keyword-page.js';
@@ -285,6 +286,9 @@ const ui = {
   },
   hotbar: {
     documentClass: PTUHotBar
+  },
+  combatXPDialog: {
+    sheetClass: CombatXPDialog
   }
 }
 

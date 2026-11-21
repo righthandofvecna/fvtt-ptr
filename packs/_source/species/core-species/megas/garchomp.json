@@ -541,5 +541,20 @@
   "folder": "irSNiCnUnI7il9mJ",
   "name": "Garchomp-Mega-Z",
   "effects": [],
-  "_id": "qyFXA7Jp6RLZkO57"
+  "_id": "qyFXA7Jp6RLZkO57",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
 }

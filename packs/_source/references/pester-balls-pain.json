@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Chemistry Recipes",
-    "effect": "Prerequisites: Chemical Warfare Cost: $50 Effect: You create Pester Balls that can inflict Burn or Poison. ",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.BUOYI16M5yQ05NMw]{Chemical Warfare}\nCost: @Poke[50]\nEffect: You create @UUID[Compendium.ptu.items.Item.1e63A4th1XwoZ3Xf]{Pester Balls} that can inflict @UUID[Compendium.ptu.items.Item.ACWgf6PXKuZFEawZ]{Burn} or @UUID[Compendium.ptu.items.Item.MDrPagcMCLgcfebb]{Poison}. ",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "m4bcj46XVLE9vm02",
   "effects": [],
-  "folder": null,
   "sort": 25700000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

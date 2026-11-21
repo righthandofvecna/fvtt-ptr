@@ -2,7 +2,7 @@
   "name": "Pusher",
   "system": {
     "origin": "",
-    "effect": "Your Pokémon gain the Basic Ranged Attacks, Aura Pulse, Enticing Bait, Extended Invisibility, Far Reading, Precise Threadings, Seismometer, TK Mastery, and Trail Sniffer Poke Edges automatically if they qualify for them, without having to invest any Tutor Points.",
+    "effect": "Your Pokémon gain the @UUID[Compendium.ptu.poke-edges.Item.WkzCUjTOCTI60Uwg]{Basic Ranged Attacks}, @UUID[Compendium.ptu.poke-edges.Item.USLnQPfAyIKDFw1z]{Aura Pulse}, @UUID[Compendium.ptu.poke-edges.Item.ybZJ0nAa5nVWBokc]{Enticing Bait}, @UUID[Compendium.ptu.poke-edges.Item.W7ypEWqITFqNk6WK]{Extended Invisibility}, @UUID[Compendium.ptu.poke-edges.Item.ETu0f0LwOGOG57H5]{Far Reading}, @UUID[Compendium.ptu.poke-edges.Item.CnGM8br6blYjvk1x]{Precise Threadings}, @UUID[Compendium.ptu.poke-edges.Item.pmAlIedygO6Z5ZSR]{Seismometer}, @UUID[Compendium.ptu.poke-edges.Item.cyO53Jv3qVlwrVYJ]{TK Mastery}, and @UUID[Compendium.ptu.poke-edges.Item.9H5bRyrOeb5PyIHR]{Trail Sniffer} Poke Edges automatically if they qualify for them, without having to invest any Tutor Slots.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -90,5 +90,6 @@
     "exportSource": null
   },
   "sort": 57300000,
-  "_id": "oFcegQigVTE2YrzS"
+  "_id": "oFcegQigVTE2YrzS",
+  "folder": null
 }

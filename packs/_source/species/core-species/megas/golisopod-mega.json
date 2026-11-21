@@ -534,5 +534,20 @@
   "folder": "irSNiCnUnI7il9mJ",
   "name": "Golisopod-Mega",
   "effects": [],
-  "_id": "TEzIsqoewO5XkJ5R"
+  "_id": "TEzIsqoewO5XkJ5R",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
 }

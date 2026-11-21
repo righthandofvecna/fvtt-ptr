@@ -2,9 +2,34 @@
   "name": "Alarm Runes",
   "system": {
     "origin": "",
-    "effect": "Target: A Glyph you have put down, regardless of distance\nEffect: You give the Glyph a Trigger, which may be as vague or as precise as you like (i.e.: “If anyone enters the room”, “if James peeks in my diary”, “If a Torkoal uses Surf while I scream the word ‘Gelato’”). If the trigger is met within the Rune’s 30 meters, the Rune will become visible, and will begin screeching loudly, alerting anyone nearby. You are capable of hearing this screeching noise in your head, regardless of your current distance. Glyphs will remember their Triggers as long as the AP spent on the Feature is Bound. If you have the Explosive Runes or Sentry Runes Features, you may instruct this Glyph to automatically use the chosen Feature as a Free Action when it is triggered if you have the AP to spend. You may have only one Glyph use Explosive Runes per round, even if multiple Runes are triggered at the same time.",
+    "effect": "Target: A @UUID[Compendium.ptu.feats.Item.KllZ0sVx6tX5kMKl]{Glyph} you have put down, regardless of distance\nEffect: You give the Glyph a Trigger, which may be as vague or as precise as you like (i.e.: “If anyone enters the room”, “if James peeks in my diary”, “If a Torkoal uses Surf while I scream the word ‘Gelato’”). If the trigger is met within the Rune’s 30 meters, the Rune will become visible, and will begin screeching loudly, alerting anyone nearby. You are capable of hearing this screeching noise in your head, regardless of your current distance. Glyphs will remember their Triggers as long as the AP spent on the Feature is Bound. If you have the Explosive Runes or Sentry Runes Features, you may instruct this Glyph to automatically use the chosen Feature as a Free Action when it is triggered if you have the AP to spend. You may have only one Glyph use Explosive Runes per round, even if multiple Runes are triggered at the same time.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "atk",
+            "label": "ATK"
+          },
+          {
+            "value": "spatk",
+            "label": "SpATK"
+          }
+        ],
+        "flag": "stat",
+        "adjustName": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.stat}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      }
+    ],
     "enabled": true,
     "slug": "alarm-runes",
     "schema": {
@@ -36,7 +61,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -59,7 +85,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +97,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Glyph"
+      "prereqBackup": "Glyph",
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -82,7 +113,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 66800000,
   "_id": "yNyVkWXEbZvqWSZK"
 }

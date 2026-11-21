@@ -203,10 +203,12 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		sheetData.actions = await (async () => {
 			const moves = [];
 			const struggles = [];
+			const maneuvers = [];
 			const effects = {}
 
 			for (const move of this.actor.attacks) {
 				if (move.system.isStruggle) struggles.push(move);
+				else if (move.system.keywords?.includes("Maneuver")) maneuvers.push(move);
 				else moves.push(move);
 
 				const effect = move.system.effect + (move.effectReference ? "<br/></br>" + move.effectReference : "");
@@ -214,7 +216,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 			}
 
 			return {
-				moves: moves.sort((a, b) => (a.sort ?? 0) - (b.sort ?? 0)), struggles, effects
+				moves: moves.sort((a, b) => (a.sort ?? 0) - (b.sort ?? 0)), struggles, maneuvers, effects
 			}
 		})();
 
@@ -285,7 +287,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		html.find('.item .item-icon').click((event) => {
 			event.preventDefault();
 			const itemId = $(event.currentTarget).closest("li.item").data("item-id");
-			const item = this.actor.items.get(itemId) ?? this.actor.attacks?.get(itemId);
+			const item = this.actor.items.get(itemId) ?? this.actor.phantomItems?.get(itemId) ?? this.actor.attacks?.get(itemId);
 			if (!item) return;
 
 			return item.use?.({ event });
@@ -384,11 +386,11 @@ export class PTUCharacterSheet extends PTUActorSheet {
 				name: "Roll",
 				icon: '<i class="fas fa-dice"></i>',
 				condition: (el) => {
-					const item = this.actor.items.get(el.dataset.itemId) ?? this.actor.attacks?.get(el.dataset.itemId);
+					const item = this.actor.items.get(el.dataset.itemId) ?? this.actor.phantomItems?.get(el.dataset.itemId) ?? this.actor.attacks?.get(el.dataset.itemId);
 					return !!item?.rollable;
 				},
 				callback: (el) => {
-					const item = this.actor.items.get(el.dataset.itemId) ?? this.actor.attacks?.get(el.dataset.itemId);
+					const item = this.actor.items.get(el.dataset.itemId) ?? this.actor.phantomItems?.get(el.dataset.itemId) ?? this.actor.attacks?.get(el.dataset.itemId);
 					return item?.use?.({});
 				},
 			},

@@ -2,7 +2,7 @@
   "name": "Malice",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Mean Look and Chip Away.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.mddjD9rQYW5169un]{Mean Look} and @UUID[Compendium.ptu.moves.Item.jA1lUJTWb7izUm2l]{Chip Away}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,18 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.mddjD9rQYW5169un"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.jA1lUJTWb7izUm2l"
       }
     ],
     "enabled": true,
@@ -48,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +83,9 @@
     "class": "Roughneck",
     "name": "Malice [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "malice"
+    "replacesSlug": "malice",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +96,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

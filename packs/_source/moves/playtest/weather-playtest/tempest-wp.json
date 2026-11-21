@@ -37,7 +37,8 @@
     "keywords": [
       "Spirit Surge",
       "Weather",
-      "Playtest"
+      "Playtest",
+      "Weather Creation"
     ],
     "sheerForce": false,
     "toughClaws": false,
@@ -57,7 +58,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -83,7 +85,9 @@
     "automation": [],
     "useCount": 0,
     "contentSet": "weather-playtest",
-    "replacesSlug": "tempest"
+    "replacesSlug": "tempest",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "ownership": {
     "default": 0

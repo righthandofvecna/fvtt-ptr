@@ -53,7 +53,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -68,6 +69,7 @@
     },
     "leagueLegal": false,
     "tier": "",
+    "tutorSlotCost": 0,
     "automation": []
   },
   "_id": "lH9tO883bqPwIbSP",
@@ -80,5 +82,19 @@
       "automationStatus": "needs-automation",
       "devNote": ""
     }
+  },
+  "_stats": {
+    "coreVersion": "14.367",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
   }
 }
