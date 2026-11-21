@@ -54,7 +54,9 @@
   "folder": "SZNYZczlGhPPYLhI",
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     },
     "scene-packer": {
       "hash": "a5a0f5e90e5a9bb49c9d3bc6317816813fd2f85d",
