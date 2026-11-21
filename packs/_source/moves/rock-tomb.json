@@ -2,7 +2,6 @@
   "name": "Rock Tomb",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/RockIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Rock Tomb lowers the target's Speed by 1 Combat Stage. *Grants Materializer",
@@ -63,7 +62,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -87,7 +87,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "TYpDbl848dGUkN3q",
   "effects": [],
