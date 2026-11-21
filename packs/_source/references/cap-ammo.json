@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Gadgeteer Recipes",
-    "effect": "At-Will - Extended Action. Effect: You create a Bean Cap for ₽25, a Glue Cap for ₽50, or a Net Cap for ₽100.",
+    "effect": "At-Will - Extended Action\nEffect: You create a @UUID[Compendium.ptu.items.Item.2mtEpY0hgNfVgzd3]{Bean Cap} for ₽25, a @UUID[Compendium.ptu.items.Item.3qtWGQbViSwE7yuC]{Glue Cap} for ₽50, or a @UUID[Compendium.ptu.items.Item.B7OUx9nLzd2EfmdJ]{Net Cap} for ₽100.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "vyK4Gl2wIgNCNl3E",
   "effects": [],
-  "folder": null,
   "sort": 30500000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

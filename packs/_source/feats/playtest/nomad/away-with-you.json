@@ -5,7 +5,7 @@
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "system": {
     "origin": "",
-    "effect": "Range: Close Blast 5, Friendly\nAll foes within Range are forcibly Pushed X meters away from you, where X is the value of your Teleport Capability. Each foe that is Pushed must still follow the rules of the Teleporter Capability.",
+    "effect": "Range: Close Blast 5, Friendly\nAll foes within Range are forcibly Pushed X meters away from you, where X is the value of your Teleport Capability. Each foe that is Pushed must still follow the rules of the @UUID[Compendium.ptu.capabilities.Item.ylhIk5i0Xtp65asH]{Teleporter} Capability.",
     "snippet": "",
     "rules": [
       {
@@ -14,7 +14,8 @@
         "path": "system.modifiers.baseStats.spd.mod",
         "value": 1,
         "predicate": [],
-        "phase": "applyAEs"
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -48,7 +49,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -68,8 +70,10 @@
     "notes": "",
     "free": false,
     "class": "Nomad",
-    "contentSet": "",
-    "replacesSlug": ""
+    "contentSet": "class-rework",
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "ownership": {
@@ -78,7 +82,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Space Distortion, Expert Focus"
+      "prereqBackup": "Space Distortion, Expert Focus",
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

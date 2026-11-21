@@ -2,9 +2,34 @@
   "name": "Rewrite",
   "system": {
     "origin": "",
-    "effect": "Target: Self or a willing Pokémon with Hidden Power.\nEffect: Reroll the Type for an instance of Hidden Power the target knows If you target an Unown, you may transform the target into a different letter.",
+    "effect": "Target: Self or a willing Pokémon with @UUID[Compendium.ptu.moves.Item.QyDgi8hL1jQLLhld]{Hidden Power}\nEffect: Reroll the Type for an instance of Hidden Power the target knows. If you target an Unown, you may transform the target into a different letter.",
     "snippet": "",
-    "rules": [],
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "atk",
+            "label": "ATK"
+          },
+          {
+            "value": "spatk",
+            "label": "SpATK"
+          }
+        ],
+        "flag": "stat",
+        "adjustName": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.baseStats.{item|flags.ptu.rulesSelections.stat}.mod",
+        "phase": "applyAEs",
+        "value": 1,
+        "priority": 20
+      }
+    ],
     "enabled": true,
     "slug": "rewrite",
     "schema": {
@@ -36,7 +61,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -59,7 +85,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +97,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Hidden Power"
+      "prereqBackup": "Hidden Power",
+      "automationStatus": "completed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": false
     }
   },
   "_stats": {
@@ -82,7 +114,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 65100000,
   "_id": "wokND3lTs0c3BZpO"
 }

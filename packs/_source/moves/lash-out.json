@@ -2,7 +2,6 @@
   "name": "Lash Out",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/DarkIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "If the user has lost Combat Stages from a source other than itself since the end of its last turn, Lash Out is instead Damage Base 15 (4d10 + 20 / 45). Any given foe may be the target of this increased damage only once per Scene.",
@@ -47,7 +46,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -62,8 +62,8 @@
     },
     "type": "Dark",
     "category": "Physical",
-    "damageBase": 8,
-    "ac": 2,
+    "damageBase": "8",
+    "ac": "2",
     "range": "Melee",
     "contestType": "Smart - Reliable",
     "stab": false,
@@ -71,7 +71,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "rwXswCVSP0XtQtHh",
   "effects": [],
@@ -79,7 +81,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

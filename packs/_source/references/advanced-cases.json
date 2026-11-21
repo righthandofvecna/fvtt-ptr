@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Jailbreaker Recipes",
-    "effect": "Prerequisites: Fusion Cases Effect: You may create a Zap Case for $500, a Devil Case for $1000, or a Storage Case for $5000.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.GTX0Qow1nBVmvJyL]{Fusion Cases}\nEffect: You may create a @UUID[Compendium.ptu.items.Item.aWifcCgpkbMK3s32]{Zap Case} for @Poke[500], a @UUID[Compendium.ptu.items.Item.KjMNW4chvwGGEbOu]{Devil Case} for @Poke[1000], or a @UUID[Compendium.ptu.items.Item.BG222fa1pnch3FUf]{Storage Case} for @Poke[5000].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "azczlbQfO5y3J7XS",
   "effects": [],
-  "folder": null,
   "sort": 18900000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

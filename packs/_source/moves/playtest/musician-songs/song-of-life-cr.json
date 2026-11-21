@@ -45,7 +45,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -68,7 +69,9 @@
     "damageBonus": 0,
     "isStruggle": false,
     "contentSet": "class-rework",
-    "replacesSlug": "song-of-life"
+    "replacesSlug": "song-of-life",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "effects": [],
   "sort": 100000,

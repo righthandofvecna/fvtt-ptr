@@ -57,25 +57,15 @@
     },
     "evolutions": [
       {
-        "level": 1,
+        "requirementsDescription": "",
         "uuid": "Compendium.ptu.species.Item.LXCIqn5Knha0yT5f",
         "slug": "gimmighoul",
-        "other": {
-          "restrictions": [
-            ""
-          ]
-        },
         "predicate": []
       },
       {
-        "level": 30,
+        "requirementsDescription": "Level 30",
         "uuid": "Compendium.ptu.species.Item.royvDsOxjrSNb75E",
         "slug": "gholdengo",
-        "other": {
-          "restrictions": [
-            ""
-          ]
-        },
         "predicate": [
           "self:level:30+"
         ]
@@ -138,89 +128,89 @@
     "moves": {
       "level": [
         {
+          "level": "Evo",
           "uuid": "Compendium.ptu.moves.Item.hhrt3v2JFeROi3w8",
-          "slug": "mirror-shot",
-          "level": "Evo"
+          "slug": "mirror-shot"
         },
         {
+          "level": 1,
           "uuid": "Compendium.ptu.moves.Item.50Vtl0u0jPevwY4K",
-          "slug": "tackle",
-          "level": 1
+          "slug": "tackle"
         },
         {
+          "level": 1,
           "uuid": "Compendium.ptu.moves.Item.VtkRa05N67wR9RcG",
-          "slug": "astonish",
-          "level": 1
+          "slug": "astonish"
         },
         {
+          "level": 4,
           "uuid": "Compendium.ptu.moves.Item.l0VYJRDN4GADxkX2",
-          "slug": "night-shade",
-          "level": 4
+          "slug": "night-shade"
         },
         {
+          "level": 8,
           "uuid": "Compendium.ptu.moves.Item.WUgXHLrvnUAn2vky",
-          "slug": "confuse-ray",
-          "level": 8
+          "slug": "confuse-ray"
         },
         {
+          "level": 12,
           "uuid": "Compendium.ptu.moves.Item.IGk8nNBogMKp3seI",
-          "slug": "substitute",
-          "level": 12
+          "slug": "substitute"
         },
         {
+          "level": 15,
           "uuid": "Compendium.ptu.moves.Item.tDMkTUqGOU9Lxcw7",
-          "slug": "pay-day",
-          "level": 15
+          "slug": "pay-day"
         },
         {
+          "level": 18,
           "uuid": "Compendium.ptu.moves.Item.XbAfCHhH425Ldmj4",
-          "slug": "hex",
-          "level": 18
+          "slug": "hex"
         },
         {
+          "level": 21,
           "uuid": "Compendium.ptu.moves.Item.FrDQDljR3YE3roFi",
-          "slug": "metal-sound",
-          "level": 21
+          "slug": "metal-sound"
         },
         {
+          "level": 24,
           "uuid": "Compendium.ptu.moves.Item.JtVhKjrnr8wc4BAH",
-          "slug": "ancient-power",
-          "level": 24
+          "slug": "ancient-power"
         },
         {
+          "level": 27,
           "uuid": "Compendium.ptu.moves.Item.qJILuzcs4SDgylfD",
-          "slug": "recover",
-          "level": 27
+          "slug": "recover"
         },
         {
+          "level": 29,
           "uuid": "Compendium.ptu.moves.Item.66w0oT6I80QzeAMr",
-          "slug": "shadow-ball",
-          "level": 29
+          "slug": "shadow-ball"
         },
         {
+          "level": 32,
           "uuid": "Compendium.ptu.moves.Item.926T6mncd7CobCCr",
-          "slug": "flash-cannon",
-          "level": 32
+          "slug": "flash-cannon"
         },
         {
+          "level": 35,
           "uuid": "Compendium.ptu.moves.Item.supS2UO9UHy5af12",
-          "slug": "power-gem",
-          "level": 35
+          "slug": "power-gem"
         },
         {
+          "level": 37,
           "uuid": "Compendium.ptu.moves.Item.z0iMHqLi2ctCy2nb",
-          "slug": "nasty-plot",
-          "level": 37
+          "slug": "nasty-plot"
         },
         {
-          "uuid": "Compendium.ptu.moves.Item.tqoJF3EAgEEv3l1l",
-          "slug": "dazzling-gleam",
-          "level": 40
+          "level": 40,
+          "uuid": "Compendium.ptu.moves.Item.SSbH74xRRLbvnzVT",
+          "slug": "make-it-rain"
         },
         {
+          "level": 44,
           "uuid": "Compendium.ptu.moves.Item.GM2n72N4lfcq8Xrt",
-          "slug": "memento",
-          "level": 44
+          "slug": "memento"
         }
       ],
       "machine": [
@@ -666,7 +656,9 @@
       "Paldea"
     ],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "stackSlugs": false,
+    "enabled": false
   },
   "img": "/systems/ptu/static/css/images/icons/dex_icon.png",
   "folder": "dljUGxtO8AR0tERN",
@@ -677,7 +669,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.45",

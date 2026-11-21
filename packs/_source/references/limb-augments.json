@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Upgrader Recipes",
-    "effect": "Prerequisites: Emergency Reactivation Effect: You build and install the Synthetic Muscle Augmentation for $1000 and the Embedded Weaponry Augmentation for $2000.",
+    "effect": "Prerequisites: @UUID[Compendium.ptu.feats.Item.LRMM659oOFeUVoYz]{Emergency Reactivation}\nEffect: You build and install the Synthetic Muscle @UUID[Compendium.ptu.journals.JournalEntry.NuifZmyV41EwsMns.JournalEntryPage.URXOXN8f0ra76uoM]{Augmentation} for @Poke[1000] and the Embedded Weaponry Augmentation for @Poke[2000].",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "PnlcuG8lLi9xMmM2",
   "effects": [],
-  "folder": null,
   "sort": 13400000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

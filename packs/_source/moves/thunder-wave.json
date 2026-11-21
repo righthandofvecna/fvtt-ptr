@@ -2,7 +2,6 @@
   "name": "Thunder Wave",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/ElectricIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Thunder Wave Paralyzes the target. Pokémon immune to Electric Attacks are immune to Thunder Wave's effect.",
@@ -17,7 +16,8 @@
         "uuid": "Compendium.ptu.effects.Item.bzZaLfYxVyKbJOCo",
         "range": "",
         "value": "",
-        "affects": "target"
+        "affects": "target",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -85,7 +85,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "_id": "wxMkDV7tasspdddy",
   "effects": [],

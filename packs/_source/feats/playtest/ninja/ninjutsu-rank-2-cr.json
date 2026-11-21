@@ -2,7 +2,7 @@
   "name": "Ninjutsu Rank 2",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn two of the following Moves:\nPoison Jab, Cross Poison, Venoshock, Baneful Bunker, Smart Strike, Corrosive Gas.",
+    "effect": "Effect: You learn two of the following Moves:\n@UUID[Compendium.ptu.moves.Item.TFFIb8CygY9dB625]{Poison Jab}, @UUID[Compendium.ptu.moves.Item.md1c7GNgdwPlyKQL]{Cross Poison}, @UUID[Compendium.ptu.moves.Item.DKcoWwUTCJWg58nw]{Venoshock}, @UUID[Compendium.ptu.moves.Item.7ljNeJrRpucuLTSr]{Baneful Bunker}, @UUID[Compendium.ptu.moves.Item.ImFfaRbYkW1fzPPL]{Smart Strike}, @UUID[Compendium.ptu.moves.Item.xBfoYzf7sJYoVu2Z]{Corrosive Gas}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,116 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.TFFIb8CygY9dB625",
+            "label": "Poison Jab",
+            "predicate": {
+              "not": "move:poison-jab"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.md1c7GNgdwPlyKQL",
+            "label": "Cross Poison",
+            "predicate": {
+              "not": "move:cross-poison"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.DKcoWwUTCJWg58nw",
+            "label": "Venoshock",
+            "predicate": {
+              "not": "move:venoshock"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.7ljNeJrRpucuLTSr",
+            "label": "Baneful Bunker",
+            "predicate": {
+              "not": "move:baneful-bunker"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.ImFfaRbYkW1fzPPL",
+            "label": "Smart Strike",
+            "predicate": {
+              "not": "move:smart-strike"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.xBfoYzf7sJYoVu2Z",
+            "label": "Corrosive Gas",
+            "predicate": {
+              "not": "move:corrosive-gas"
+            }
+          }
+        ],
+        "flag": "ninjutsu2-1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.ninjutsu2-1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.TFFIb8CygY9dB625",
+            "label": "Poison Jab",
+            "predicate": {
+              "not": "move:poison-jab"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.md1c7GNgdwPlyKQL",
+            "label": "Cross Poison",
+            "predicate": {
+              "not": "move:cross-poison"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.DKcoWwUTCJWg58nw",
+            "label": "Venoshock",
+            "predicate": {
+              "not": "move:venoshock"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.7ljNeJrRpucuLTSr",
+            "label": "Baneful Bunker",
+            "predicate": {
+              "not": "move:baneful-bunker"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.ImFfaRbYkW1fzPPL",
+            "label": "Smart Strike",
+            "predicate": {
+              "not": "move:smart-strike"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.xBfoYzf7sJYoVu2Z",
+            "label": "Corrosive Gas",
+            "predicate": {
+              "not": "move:corrosive-gas"
+            }
+          }
+        ],
+        "flag": "ninjutsu2-2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.ninjutsu2-2}"
       }
     ],
     "enabled": true,
@@ -49,7 +159,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +182,9 @@
     "class": "Ninja",
     "name": "Ninjutsu [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "ninjutsu-rank-2"
+    "replacesSlug": "ninjutsu-rank-2",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -83,7 +196,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

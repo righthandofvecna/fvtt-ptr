@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "",
+    "referenceEffect": "Compendium.ptu.effects.Item.lAroi0UoNiNuJHab",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -41,7 +41,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,7 +62,9 @@
     "free": false,
     "class": "Stat Ace (Special Attack)",
     "contentSet": "class-rework",
-    "replacesSlug": "stat-link-special-attack"
+    "replacesSlug": "stat-link-special-attack",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {

@@ -2,7 +2,6 @@
   "name": "Esper Wing",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/PsychicIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Esper Wing is a Critical Hit on an 18+. Raise the user's Speed by 1 Combat Stage.",
@@ -19,10 +18,11 @@
         "key": "ApplyEffect",
         "predicate": [],
         "selectors": "{item|id}-damage-dealt",
-        "uuid": "Compendium.ptu.effects.Item.aHbD8Xyqg3NIVJXY",
+        "uuid": "Compendium.ptu.effects.Item.o5wKWO9OtUvgm6NO",
         "range": "1",
         "value": "",
-        "affects": "origin"
+        "affects": "origin",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -92,7 +92,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "_id": "KkMY9ELz4sIimIQB",
   "effects": [],
@@ -102,7 +103,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {

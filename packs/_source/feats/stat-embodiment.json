@@ -2,7 +2,7 @@
   "name": "Stat Embodiment",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon\nEffect: Your Pokémon gains an Ability, based on your Chosen Stat, for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.\n»» Attack Aces give Sheer Force or Defiant\n»» Defense Aces give Filter or Battle Armor\n»» Special Attack Aces give Tinted Lens or Competitive\n»» Special Defense Aces give Multiscale or Tolerance\n»» Speed Aces give Speed Boost or Vanguard",
+    "effect": "Target: Your Pokémon\nEffect: Your Pokémon gains an Ability, based on your Chosen Stat, for the remainder of the Scene. Switching does not end this effect. Stat Embodiment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.\n»» Attack Aces give @UUID[Compendium.ptu.abilities.Item.f2Wd9jSdqyZfsv7r]{Sheer Force} or @UUID[Compendium.ptu.abilities.Item.IKiA2uqsUeMpDYji]{Defiant}\n»» Defense Aces give @UUID[Compendium.ptu.abilities.Item.0cDFgfGwpSj2uYE2]{Filter} or @UUID[Compendium.ptu.abilities.Item.gHfEkYe9Vdc6TqeX]{Battle Armor}\n»» Special Attack Aces give @UUID[Compendium.ptu.abilities.Item.cdumkKxEQ2R7sNiG]{Tinted Lens} or @UUID[Compendium.ptu.abilities.Item.x1VbzOOsXuMk9Tzg]{Competitive}\n»» Special Defense Aces give @UUID[Compendium.ptu.abilities.Item.notS9vQ0jOhImwqe]{Multiscale} or @UUID[Compendium.ptu.abilities.Item.7yg8Y7g7p8Uil1YT]{Tolerance}\n»» Speed Aces give @UUID[Compendium.ptu.abilities.Item.xVTWtc7EvwwNyRqt]{Speed Boost} or @UUID[Compendium.ptu.abilities.Item.LfQUndsQtprQgocE]{Vanguard}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -32,12 +32,13 @@
       "max": 0,
       "custom": "1 AP - Rapid Action",
       "modifiers": {
-        "priorityLimited": false,
+        "priorityLimited": true,
         "priorityAdvanced": false,
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,7 +62,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -72,7 +75,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "4 Stat Ace Features, Expert Command or Focus",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -85,7 +90,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 32200000,
   "_id": "Tmjqpvx5zEDuvjnQ"
 }

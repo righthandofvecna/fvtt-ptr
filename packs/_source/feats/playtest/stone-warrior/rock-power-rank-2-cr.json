@@ -2,7 +2,7 @@
   "name": "Rock Power Rank 2",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Each Rank, choose one of Cave Crasher, Sturdy, Rock Head, or Sand Veil. You gain the chosen Ability. If you choose Sand Veil, you may consider sand a \"solid surface\" for the purposes of Stone Stance.",
+    "effect": "Effect: Each Rank, choose one of @UUID[Compendium.ptu.abilities.Item.KbDf9PYW1vwrlAg4]{Cave Crasher}, @UUID[Compendium.ptu.abilities.Item.AaDXWUAMnhxLbyn3]{Sturdy}, @UUID[Compendium.ptu.abilities.Item.2N9Ih71fbWBeoUm0]{Rock Head}, or @UUID[Compendium.ptu.abilities.Item.Ewr9Oh7DddMKcWLZ]{Sand Veil}. You gain the chosen Ability. If you choose Sand Veil, you may consider sand a \"solid surface\" for the purposes of Stone Stance.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,47 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.abilities.Item.KbDf9PYW1vwrlAg4",
+            "label": "Cave Crasher",
+            "predicate": {
+              "not": "ability:cave-crasher"
+            }
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.AaDXWUAMnhxLbyn3",
+            "label": "Sturdy",
+            "predicate": {
+              "not": "ability:sturdy"
+            }
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.2N9Ih71fbWBeoUm0",
+            "label": "Rock Head",
+            "predicate": {
+              "not": "ability:rock-head"
+            }
+          },
+          {
+            "value": "Compendium.ptu.abilities.Item.Ewr9Oh7DddMKcWLZ",
+            "label": "Sand Veil",
+            "predicate": {
+              "not": "ability:sand-veil"
+            }
+          }
+        ],
+        "flag": "rockpower2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.rockpower2}"
       }
     ],
     "enabled": true,
@@ -49,7 +90,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +112,9 @@
     "class": "Stone Warrior",
     "name": "Rock Power [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "rock-power-rank-2"
+    "replacesSlug": "rock-power-rank-2",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +126,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

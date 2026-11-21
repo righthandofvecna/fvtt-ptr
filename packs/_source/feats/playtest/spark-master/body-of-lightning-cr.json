@@ -2,7 +2,7 @@
   "name": "Body of Lightning",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose Volt Absorb or Motor Drive. You gain the Chosen Ability.",
+    "effect": "Effect: Choose @UUID[Compendium.ptu.abilities.Item.7Q8Gplr8sh2uNdxg]{Volt Absorb} or @UUID[Compendium.ptu.abilities.Item.Tc5HA3VQmm66bgYc]{Motor Drive}. You gain the Chosen Ability.",
     "snippet": "",
     "rules": [
       {
@@ -69,7 +69,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -91,7 +92,8 @@
     "name": "Body of Lightning [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "body-of-lightning",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -104,7 +106,7 @@
   },
   "flags": {
     "ptu": {
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": "",
       "showInTokenPanel": false
     }

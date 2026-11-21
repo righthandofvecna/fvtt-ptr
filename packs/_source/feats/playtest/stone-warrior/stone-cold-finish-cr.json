@@ -2,7 +2,7 @@
   "name": "Stone Cold Finish",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose two of Head Smash, Rock Wrecker, and Stone Edge. You gain the chosen Moves.",
+    "effect": "Effect: Choose two of @UUID[Compendium.ptu.moves.Item.IeLVMhoSWyAuznBv]{Head Smash}, @UUID[Compendium.ptu.moves.Item.uJIYs5b22o0rRX9s]{Rock Wrecker}, and @UUID[Compendium.ptu.moves.Item.K67dXQdgED0HJTut]{Stone Edge}. You gain the chosen Moves.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,74 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.IeLVMhoSWyAuznBv",
+            "label": "Head Smash",
+            "predicate": {
+              "not": "move:head-smash"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.uJIYs5b22o0rRX9s",
+            "label": "Rock Wrecker",
+            "predicate": {
+              "not": "move:rock-wrecker"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.K67dXQdgED0HJTut",
+            "label": "Stone Edge",
+            "predicate": {
+              "not": "move:stone-edge"
+            }
+          }
+        ],
+        "flag": "stonecold1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.stonecold1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.IeLVMhoSWyAuznBv",
+            "label": "Head Smash",
+            "predicate": {
+              "not": "move:head-smash"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.uJIYs5b22o0rRX9s",
+            "label": "Rock Wrecker",
+            "predicate": {
+              "not": "move:rock-wrecker"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.K67dXQdgED0HJTut",
+            "label": "Stone Edge",
+            "predicate": {
+              "not": "move:stone-edge"
+            }
+          }
+        ],
+        "adjustName": false,
+        "flag": "stonecold2"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.stonecold2}"
       }
     ],
     "enabled": true,
@@ -48,7 +116,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +139,9 @@
     "class": "Stone Warrior",
     "name": "Stone Cold Finish [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "stone-cold-finish"
+    "replacesSlug": "stone-cold-finish",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +152,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

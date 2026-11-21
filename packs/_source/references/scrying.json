@@ -4,7 +4,7 @@
   "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
   "system": {
     "origin": "Oracle",
-    "effect": "Target: An item you are touching, or your current location Effect: You see visions of what has happened to the target over the last 24 hours. The images may be jumbled or unclear, to the discretion of your GM. See the next page for more details.",
+    "effect": "Target: An item you are touching, or your current location \nEffect: You see visions of what has happened to the target over the last 24 hours. The images may be jumbled or unclear, to the discretion of your GM.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -31,12 +31,10 @@
   },
   "_id": "kTxUvwMNYtPNBPXQ",
   "effects": [],
-  "folder": null,
   "sort": 24600000,
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

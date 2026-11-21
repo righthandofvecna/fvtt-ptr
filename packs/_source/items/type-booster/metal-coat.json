@@ -2,7 +2,7 @@
   "name": "Metal Coat",
   "system": {
     "origin": "",
-    "effect": "Grants a +5 Damage Bonus to all direct-damage Steel Moves used by the holder. Accessory Item for Trainers.\n\nEvolves Onix and Scyther.",
+    "effect": "Grants a +5 Damage Bonus to all direct-damage Steel Moves used by the holder. Accessory Item for Trainers.\nEvolves Onix, Scyther.",
     "snippet": "",
     "rules": [
       {
@@ -39,6 +39,7 @@
       "Held Item",
       "Accessory",
       "Artificer",
+      "Keepsake",
       "Evo. Item"
     ],
     "frequency": {
@@ -59,7 +60,7 @@
       "rapid": false,
       "shift": false,
       "free": false,
-      "extended": false
+      "extended": true
     },
     "ap": {
       "cost": 0,
@@ -68,7 +69,7 @@
     "leagueLegal": false,
     "quantity": "1",
     "category": "",
-    "cost": "1800",
+    "cost": "3000",
     "consumable": "0",
     "subtype": "",
     "container": false,

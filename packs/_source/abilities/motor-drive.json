@@ -20,7 +20,8 @@
         "selectors": "electric-damage--received",
         "uuid": "Compendium.ptu.effects.Item.hCTbNW1Isw6W5BwJ",
         "range": "0",
-        "value": ""
+        "value": "",
+        "linked": false
       }
     ],
     "enabled": true,
@@ -52,7 +53,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,13 +71,15 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "effects": [],
-  "folder": null,
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

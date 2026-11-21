@@ -1,0 +1,28 @@
+{
+  "name": "Well-Known Tactics",
+  "type": "reference",
+  "_id": "BtqjhvytV3AkinHW",
+  "img": "/systems/ptu/static/css/images/icons/reference_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "<table>\n    <thead>\n        <tr>\n            <td>\n                <p>Name</p>\n            </td>\n            <td data-colwidth=\"182\">\n                <p>Spirit Cost</p>\n            </td>\n            <td>\n                <p>Effect</p>\n            </td>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>\n                <p>Recall</p>\n            </td>\n            <td data-colwidth=\"182\">\n                <p>Varies</p>\n            </td>\n            <td>\n                <p>Use any move in the Pokemons Level-Up List. - 1 Spirit for At-Will and EOT, - 2 Spirit for Scene, - 3 Spirit for Daily. This move cannot already be on its move list.</p>\n            </td>\n        </tr>\n        <tr>\n            <td>\n                <p>Baton Pass</p>\n            </td>\n            <td data-colwidth=\"182\">\n                <p>3</p>\n            </td>\n            <td>\n                <p>When this Pokemon faints, it grants all CS stats to the next Pokemon.</p>\n            </td>\n        </tr>\n        <tr>\n            <td>\n                <p>Patched Up</p>\n            </td>\n            <td data-colwidth=\"182\">\n                <p>3</p>\n            </td>\n            <td>\n                <p>Recover 50% max HP and 1 Injury (does not count towards limit for the day).</p>\n            </td>\n        </tr>\n        <tr>\n            <td>\n                <p>Stolen Idea</p>\n            </td>\n            <td data-colwidth=\"182\">\n                <p>2</p>\n            </td>\n            <td>\n                <p>Use @UUID[Compendium.ptu.moves.Item.SbluTZoOqsq2aRD0]{Copycat} or @UUID[Compendium.ptu.moves.Item.s6hVuNnG75HkMapT]{Snatch}, ignoring Frequency.</p>\n            </td>\n        </tr>\n        <tr>\n            <td>\n                <p>Perfect Skills</p>\n            </td>\n            <td data-colwidth=\"182\">\n                <p>2</p>\n            </td>\n            <td>\n                <p>Your next skill check is a max roll.</p>\n            </td>\n        </tr>\n        <tr>\n            <td>\n                <p>Intercept+</p>\n            </td>\n            <td data-colwidth=\"182\">\n                <p>1</p>\n            </td>\n            <td>\n                <p>You resist the attack you are intercepting 1 step further.</p>\n            </td>\n        </tr>\n        <tr>\n            <td>\n                <p>Helping Hand</p>\n            </td>\n            <td data-colwidth=\"182\">\n                <p>1</p>\n            </td>\n            <td>\n                <p>Use @UUID[Compendium.ptu.moves.Item.xhZNseKRJl3pPnTZ]{Helping Hand} as if it was on your move list, ignoring Frequency and as a Free Action.</p>\n            </td>\n        </tr>\n    </tbody>\n</table>",
+    "snippet": "",
+    "rules": [],
+    "enabled": true,
+    "slug": "well-known-tactics",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": []
+  },
+  "effects": [],
+  "folder": "3mspjPD8gPzP1jmO"
+}

@@ -52,7 +52,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -73,12 +74,16 @@
     "free": false,
     "class": "Provocateur",
     "contentSet": "class-rework",
-    "replacesSlug": "one-of-the-classic-blunders"
+    "replacesSlug": "one-of-the-classic-blunders",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "no-automation-needed",
+      "devNote": ""
     }
   },
   "ownership": {

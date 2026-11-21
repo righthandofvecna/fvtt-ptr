@@ -2,7 +2,7 @@
   "name": "Ramming Speed",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon with at least 2 Tutor Points\nEffect: The target loses 2 Tutor Points and gains the Rock Head Ability.",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: The target loses 1 Tutor Slot and gains the @UUID[Compendium.ptu.abilities.Item.2N9Ih71fbWBeoUm0]{Rock Head} Ability.",
     "snippet": "",
     "rules": [
       {
@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "name": "Ramming Speed",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -81,7 +84,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Rider",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -94,7 +99,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 22200000,
   "_id": "LOi3vL9A20TQCqEa"
 }

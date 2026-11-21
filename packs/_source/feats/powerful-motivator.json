@@ -2,7 +2,7 @@
   "name": "Powerful Motivator",
   "system": {
     "origin": "",
-    "effect": "Baby-Doll Eyes, Confide, Leer, and your Provocateur Moves gain additional effects. These effects occur whether the Move hits or misses.\n»» Baby-Doll Eyes: The target cannot Critically Strike for 1 full round.\n»» Confide: The target cannot trigger Effect Ranges for 1 full round.\n»» Leer: The target is Slowed for 1 Full Round.\n»» Sweet Kiss: The target gains a -3 penalty to Evasion for 1 full round.\n»» Taunt: The target gains a -3 penalty to Accuracy Rolls 1 full round.\n»» Torment: The target gains a -10 penalty to Damage Rolls against your allies for 1 full round.\n»» Lovely Kiss: The target gains a -3 penalty to Save Checks for 1 full round.",
+    "effect": "@UUID[Compendium.ptu.moves.Item.dIkyKSyZGctjHX9O]{Baby-Doll Eyes}, @UUID[Compendium.ptu.moves.Item.43i757GW8pptWB5j]{Confide}, @UUID[Compendium.ptu.moves.Item.XQOEuOenSzYNz4eO]{Leer}, and your Provocateur Moves gain additional effects. These effects occur whether the Move hits or misses.\n»» Baby-Doll Eyes: The target cannot Critically Strike for 1 full round.\n»» Confide: The target cannot trigger Effect Ranges for 1 full round.\n»» Leer: The target is Slowed for 1 Full Round.\n»» @UUID[Compendium.ptu.moves.Item.0cpoDUWBYwTiDlnG]{Sweet Kiss}: The target gains a -3 penalty to Evasion for 1 full round.\n»» @UUID[Compendium.ptu.moves.Item.PPcOINwAtEYByNNN]{Taunt}: The target gains a -3 penalty to Accuracy Rolls 1 full round.\n»» @UUID[Compendium.ptu.moves.Item.zgeymOL0WIKgT6lq]{Torment}: The target gains a -10 penalty to Damage Rolls against your allies for 1 full round.\n»» @UUID[Compendium.ptu.moves.Item.FtteBhLvsPR6XCEk]{Lovely Kiss}: The target gains a -3 penalty to Save Checks for 1 full round.",
     "snippet": "",
     "rules": [
       {
@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -71,7 +72,9 @@
     "name": "Powerful Motivator",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -82,7 +85,9 @@
   "flags": {
     "ptu": {
       "prereqBackup": "Provocateur, two Provocateur Skills at Adept Rank",
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
@@ -95,7 +100,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 56400000,
   "_id": "nQZrTcNZ3ld9OBpf"
 }

@@ -2,7 +2,7 @@
   "name": "Climate Control",
   "system": {
     "origin": "",
-    "effect": "Trigger - A Move or Ability creates a Weather Effect while non-standard Weather is already in effect\nEffect: The triggering Weather Effect does not replace the already extant Weather in effect; both exist simultaneously on the field. If a new Weather effect is placed on the field after the two that are out, both are replaced by the third, unless you activate this Feature again to replace only one.",
+    "effect": "Trigger: A Move or Ability creates a Weather Effect while non-standard Weather is already in effect\nEffect: The triggering Weather Effect does not replace the already extant Weather in effect; both exist simultaneously on the field. If a new Weather effect is placed on the field after the two that are out, both are replaced by the third, unless you activate this Feature again to replace only one.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -38,7 +38,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,7 +62,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -71,7 +74,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Climatology"
+      "prereqBackup": "Climatology",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -84,7 +90,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 52500000,
   "_id": "kJUJ6OR0e4VruBIQ"
 }

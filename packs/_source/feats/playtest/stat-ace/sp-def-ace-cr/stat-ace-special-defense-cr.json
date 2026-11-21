@@ -49,7 +49,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -78,7 +79,8 @@
     "automation": [],
     "contentSet": "class-rework",
     "replacesSlug": "stat-ace-special-defense",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
@@ -87,7 +89,7 @@
     "ptu": {
       "prereqBackup": "Ace Trainer or Style Expert, 1 Pokémon with the chosen stat at 15 or more, Novice Command or Focus\nOr\n3 Pokémon with the chosen stat at 20 or higher, Novice Command or Focus",
       "showInTokenPanel": true,
-      "automationStatus": "needs-automation",
+      "automationStatus": "completed",
       "devNote": ""
     }
   },

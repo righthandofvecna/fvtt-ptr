@@ -1,0 +1,63 @@
+{
+  "name": "Effect: Deep Breaths",
+  "type": "effect",
+  "_id": "5v4bXxI1XVWa0oAm",
+  "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
+  "system": {
+    "origin": "",
+    "effect": "Your Purified Pokémon gain a +3 bonus to their Save rolls. When they are cured of a status condition, they gain a Tick of Temporary HP.",
+    "snippet": "",
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "predicate": [],
+        "mode": "add",
+        "path": "system.modifiers.saveChecks.mod",
+        "phase": "applyAEs",
+        "value": 3,
+        "priority": null
+      }
+    ],
+    "enabled": true,
+    "slug": "effect-deep-breaths",
+    "contentSet": "",
+    "replacesSlug": "",
+    "schema": {
+      "version": null,
+      "lastMigration": null
+    },
+    "referenceEffect": "",
+    "source": {
+      "value": "PTR Compendiums"
+    },
+    "stackSlugs": false,
+    "keywords": [],
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null
+  },
+  "effects": [],
+  "folder": "Uv4mgOt4xtb28hzB",
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "This adds the Save modifier, but Tick of temp HP granting not implemented -WW",
+      "showInTokenPanel": false
+    }
+  }
+}

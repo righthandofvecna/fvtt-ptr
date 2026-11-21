@@ -2,12 +2,11 @@
   "name": "Shade Caller",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose three of the following Moves, and learn them:\nFaint Attack, Knock Off, New Moon, Snarl, and Sudden Strike.",
+    "effect": "Effect: Choose three of the following Moves, and learn them:\n@UUID[Compendium.ptu.moves.Item.16Ij0HJODJxOy5j9]{Feint Attack}, @UUID[Compendium.ptu.moves.Item.wXMLKSFvWlsa0ee6]{Knock Off}, @UUID[Compendium.ptu.moves.Item.rWwBnjs1LCKcQPeC]{New Moon}, @UUID[Compendium.ptu.moves.Item.jVruXIDWy3HEHAeA]{Snarl}, and @UUID[Compendium.ptu.moves.Item.tdurlCSyOvjVvTa1]{Sudden Strike}.",
     "snippet": "",
     "rules": [
       {
         "key": "ChoiceSet",
-        "adjustName": true,
         "flag": "shadecaller",
         "choices": [
           {
@@ -18,7 +17,8 @@
             "value": "spatk",
             "label": "Special Attack"
           }
-        ]
+        ],
+        "adjustName": false
       },
       {
         "key": "ActiveEffectLike",
@@ -28,6 +28,151 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.16Ij0HJODJxOy5j9",
+            "label": "Feint Attack",
+            "predicate": {
+              "not": "move:feint-attack"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.wXMLKSFvWlsa0ee6",
+            "label": "Knock Off",
+            "predicate": {
+              "not": "move:knock-off"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.rWwBnjs1LCKcQPeC",
+            "label": "New Moon",
+            "predicate": {
+              "not": "move:new-moon-wp"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.jVruXIDWy3HEHAeA",
+            "label": "Snarl",
+            "predicate": {
+              "not": "move:snarl"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.tdurlCSyOvjVvTa1",
+            "label": "Sudden Strike",
+            "predicate": {
+              "not": "move:sudden-strike"
+            }
+          }
+        ],
+        "allowedDrops": null,
+        "adjustName": false,
+        "flag": "shadecaller1"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.shadecaller1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.16Ij0HJODJxOy5j9",
+            "label": "Feint Attack",
+            "predicate": {
+              "not": "move:feint-attack"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.wXMLKSFvWlsa0ee6",
+            "label": "Knock Off",
+            "predicate": {
+              "not": "move:knock-off"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.rWwBnjs1LCKcQPeC",
+            "label": "New Moon",
+            "predicate": {
+              "not": "move:new-moon-wp"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.jVruXIDWy3HEHAeA",
+            "label": "Snarl",
+            "predicate": {
+              "not": "move:snarl"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.tdurlCSyOvjVvTa1",
+            "label": "Sudden Strike",
+            "predicate": {
+              "not": "move:sudden-strike"
+            }
+          }
+        ],
+        "flag": "shadecaller2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.shadecaller2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.16Ij0HJODJxOy5j9",
+            "label": "Feint Attack",
+            "predicate": {
+              "not": "move:feint-attack"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.wXMLKSFvWlsa0ee6",
+            "label": "Knock Off",
+            "predicate": {
+              "not": "move:knock-off"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.rWwBnjs1LCKcQPeC",
+            "label": "New Moon",
+            "predicate": {
+              "not": "move:new-moon-wp"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.jVruXIDWy3HEHAeA",
+            "label": "Snarl",
+            "predicate": {
+              "not": "move:snarl"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.tdurlCSyOvjVvTa1",
+            "label": "Sudden Strike",
+            "predicate": {
+              "not": "move:sudden-strike"
+            }
+          }
+        ],
+        "adjustName": false,
+        "flag": "shadecaller3"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.shadecaller3}"
       }
     ],
     "enabled": true,
@@ -65,7 +210,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -87,7 +233,9 @@
     "class": "Shade Caller",
     "name": "Shade Caller [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "shade-caller"
+    "replacesSlug": "shade-caller",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -98,7 +246,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

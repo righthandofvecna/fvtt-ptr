@@ -2,7 +2,7 @@
   "name": "Doom Prophecy",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the move Future Sight and gain the ability Probability Control.",
+    "effect": "Effect: You learn the move @UUID[Compendium.ptu.moves.Item.4gPfx0ONfNK8vio2]{Future Sight} and gain the ability @UUID[Compendium.ptu.abilities.Item.gLhfLgMdZn8Fhx4N]{Probability Control}.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,18 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.moves.Item.4gPfx0ONfNK8vio2"
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "Compendium.ptu.abilities.Item.gLhfLgMdZn8Fhx4N"
       }
     ],
     "enabled": true,
@@ -48,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +83,9 @@
     "class": "Oracle",
     "name": "Doom Prophecy [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "doom-prophecy"
+    "replacesSlug": "doom-prophecy",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -81,7 +96,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "completed",
+      "devNote": "",
+      "showInTokenPanel": false
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
