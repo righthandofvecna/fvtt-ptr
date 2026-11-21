@@ -2,7 +2,7 @@
   "name": "Shards of Stone",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose two of Rock Slide, Smack Down, and Stealth Rock. You gain the chosen Moves.",
+    "effect": "Effect: Choose two of @UUID[Compendium.ptu.moves.Item.AvGyaqir7qFsEzxk]{Rock Slide}, @UUID[Compendium.ptu.moves.Item.YG7EABDKQsFjDi8E]{Smack Down}, and @UUID[Compendium.ptu.moves.Item.XklsarNBfkknbU8O]{Stealth Rock}. You gain the chosen Moves.",
     "snippet": "",
     "rules": [
       {
@@ -13,6 +13,74 @@
         "priority": 20,
         "predicate": [],
         "phase": "applyAEs"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.AvGyaqir7qFsEzxk",
+            "label": "Rock Slide",
+            "predicate": {
+              "not": "move:rock-slide"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.YG7EABDKQsFjDi8E",
+            "label": "Smack Down",
+            "predicate": {
+              "not": "move:smack-down"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.XklsarNBfkknbU8O",
+            "label": "Stealth Rock",
+            "predicate": {
+              "not": "move:stealth-rock"
+            }
+          }
+        ],
+        "flag": "shardsofstone1",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.shardsofstone1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.ptu.moves.Item.AvGyaqir7qFsEzxk",
+            "label": "Rock Slide",
+            "predicate": {
+              "not": "move:rock-slide"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.YG7EABDKQsFjDi8E",
+            "label": "Smack Down",
+            "predicate": {
+              "not": "move:smack-down"
+            }
+          },
+          {
+            "value": "Compendium.ptu.moves.Item.XklsarNBfkknbU8O",
+            "label": "Stealth Rock",
+            "predicate": {
+              "not": "move:stealth-rock"
+            }
+          }
+        ],
+        "flag": "shardsofstone2",
+        "adjustName": false
+      },
+      {
+        "key": "GrantItem",
+        "predicate": [],
+        "allowDuplicate": false,
+        "uuid": "{item|flags.ptu.rulesSelections.shardsofstone2}"
       }
     ],
     "enabled": true,
@@ -48,7 +116,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +138,9 @@
     "class": "Stone Warrior",
     "name": "Shards of Stone [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "shards-of-stone"
+    "replacesSlug": "shards-of-stone",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -82,7 +153,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

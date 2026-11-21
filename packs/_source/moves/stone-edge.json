@@ -2,7 +2,6 @@
   "name": "Stone Edge",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/RockIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "Stone Edge is a Critical Hit on 17+.",
@@ -55,7 +54,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -79,7 +79,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "K67dXQdgED0HJTut",
   "effects": [],

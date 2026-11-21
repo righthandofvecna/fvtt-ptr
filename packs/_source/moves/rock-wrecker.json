@@ -2,7 +2,6 @@
   "name": "Rock Wrecker",
   "type": "move",
   "img": "/systems/ptu/static/css/images/types2/RockIC_Icon.png",
-  "folder": null,
   "system": {
     "origin": "",
     "effect": "*Grants Materializer",
@@ -50,7 +49,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -74,7 +74,9 @@
     "isStruggle": false,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "uJIYs5b22o0rRX9s",
   "effects": [],
@@ -82,7 +84,6 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",
