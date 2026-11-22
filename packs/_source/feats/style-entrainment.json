@@ -2,7 +2,7 @@
   "name": "Style Entrainment",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon\nEffect: Your Pokémon gains one of the following Abilities corresponding to your chosen Contest Stat for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.\n»» Beauty gives Gentle Vibe or Serene Grace\n»» Cool gives Defiant or Sniper\n»» Cute gives Cute Charm or Cute Tears\n»» Smart gives Analytic or Anticipation\n»» Tough gives Sturdy or Intimidate",
+    "effect": "Target: Your Pokémon\nEffect: Your Pokémon gains one of the following Abilities corresponding to your chosen Contest Stat for the rest of the Scene, even if it is switched out. Style Entrainment may only grant one Ability to a Pokémon at a time. If it is used a second time on the same target, it replaces the first granted Ability.\n»» Beauty gives @UUID[Compendium.ptu.abilities.Item.g57zV6QaJdzHO2Le]{Gentle Vibe} or @UUID[Compendium.ptu.abilities.Item.l1zthf1EjKeMd3R7]{Serene Grace}\n»» Cool gives @UUID[Compendium.ptu.abilities.Item.IKiA2uqsUeMpDYji]{Defiant} or @UUID[Compendium.ptu.abilities.Item.tc2hu0HycAIRYAPk]{Sniper}\n»» Cute gives @UUID[Compendium.ptu.abilities.Item.AgnYj2VubiCsPwJh]{Cute Charm} or @UUID[Compendium.ptu.abilities.Item.dlVPTqac1upNqHFb]{Cute Tears}\n»» Smart gives @UUID[Compendium.ptu.abilities.Item.BmvqFZyTXoO12Gik]{Analytic} or @UUID[Compendium.ptu.abilities.Item.ecHI9zYQZG8UWvuz]{Anticipation}\n»» Tough gives @UUID[Compendium.ptu.abilities.Item.AaDXWUAMnhxLbyn3]{Sturdy} or @UUID[Compendium.ptu.abilities.Item.NnYU42v8Ge5lmPQF]{Intimidate}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,8 @@
         "priority": true,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -59,7 +60,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +72,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "4 Style Expert Features"
+      "prereqBackup": "4 Style Expert Features",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -82,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 37100000,
   "_id": "XulNFx5kku51tvGA"
 }
