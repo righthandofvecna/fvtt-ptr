@@ -21,7 +21,7 @@
         }
       }
     },
-    "referenceEffect": "Compendium.ptu.effects.Item.pOjZ3iQZyoz82ZJZ",
+    "referenceEffect": "Compendium.ptu.effects.Item.wKlB25Mu17lmwpKB",
     "source": {
       "value": "PTR Compendiums"
     },
@@ -47,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "damageBonus": 0,
     "isStruggle": false,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "effects": [],
   "flags": {
