@@ -2,7 +2,7 @@
   "name": "Enticing Beauty",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon\nThe target acts as a Bait item as if it had the Alluring Capability. Add its number of Beauty Dice from Poffins as a Bonus to all d20 lure rolls.",
+    "effect": "Target: Your Pokémon\nThe target acts as a @UUID[Compendium.ptu.items.Item.hTnlXJmwPgdbDWXL]{Bait} item as if it had the @UUID[Compendium.ptu.capabilities.Item.kxQazrYjhK3WLEXG]{Alluring} Capability. Add its number of Beauty Dice from Poffins as a Bonus to all d20 lure rolls.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -34,7 +34,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -57,7 +58,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +70,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Beautiful Ballet Rank 1"
+      "prereqBackup": "Beautiful Ballet Rank 1",
+      "automationStatus": "no-automation-needed",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -80,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 24400000,
   "_id": "McgIAu6ExnEXTaMT"
 }
