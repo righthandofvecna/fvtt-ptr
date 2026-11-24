@@ -2,7 +2,7 @@
   "name": "Cute Cuddle Rank 1",
   "system": {
     "origin": "",
-    "effect": "Your Pokémon with at least 3d6 in their Cute Stat from Poffins may activate Cute Cuddle as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\nRank 1: Charm, Block",
+    "effect": "Your Pokémon with at least 3d6 in their Cute Stat from Poffins may activate Cute Cuddle as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\nRank 1: @UUID[Compendium.ptu.moves.Item.TgmOU36SFwwlN5di]{Charm}, @UUID[Compendium.ptu.moves.Item.PvmLk3AU04nOjH4x]{Block}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -59,7 +60,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +72,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Style Expert, Cute as Chosen Stat, Novice Charm"
+      "prereqBackup": "Style Expert, Cute as Chosen Stat, Novice Charm",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -82,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 23500000,
   "_id": "M5Z35JWJB7pSSuTF"
 }
