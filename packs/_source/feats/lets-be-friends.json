@@ -2,7 +2,7 @@
   "name": "Let's Be Friends!",
   "system": {
     "origin": "",
-    "effect": "Target: Your Pokémon:\nThe target may attempt to improve the disposition of a Wild Pokémon as if making a Charm Check. They roll their Cute Dice from Poffins and add their number of Cute Dice from Stats as a modifier. For example, a Pokémon with 4d6 Cute from Poffins and 3d6 Cute from Speed rolls 4d6+3 in place of a Charm Check.",
+    "effect": "Target: Your Pokémon\nEffect: The target may attempt to improve the disposition of a Wild Pokémon as if making a Charm Check. They roll their Cute Dice from Poffins and add their number of Cute Dice from Stats as a modifier. For example, a Pokémon with 4d6 Cute from Poffins and 3d6 Cute from Speed rolls 4d6+3 in place of a Charm Check.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -34,7 +34,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -57,7 +58,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +70,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Cute Cuddle Rank 1"
+      "prereqBackup": "Cute Cuddle Rank 1",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -80,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 35500000,
   "_id": "WbagDCAZfguIg1dx"
 }
