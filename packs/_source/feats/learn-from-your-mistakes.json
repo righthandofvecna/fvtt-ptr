@@ -2,7 +2,7 @@
   "name": "Learn From Your Mistakes",
   "system": {
     "origin": "",
-    "effect": "Trigger - Your Pokémon fails a Skill Check:\n  Your Pokémon may re-roll the Skill Check with a Bonus equal to its number of Smart Dice from Poffins.",
+    "effect": "Trigger: Your Pokémon fails a Skill Check\nEffect: Your Pokémon may re-roll the Skill Check with a Bonus equal to its number of Smart Dice from Poffins.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -34,7 +34,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -57,7 +58,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -67,7 +70,11 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Smart Scheme Rank 1"
+      "prereqBackup": "Smart Scheme Rank 1",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null,
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -80,7 +87,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 28600000,
   "_id": "QX9KvqOcGFSEN3wd"
 }
