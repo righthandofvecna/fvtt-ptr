@@ -6,7 +6,7 @@
   "img": "/systems/ptu/static/css/images/icons/effect_icon.png",
   "system": {
     "origin": "",
-    "effect": "",
+    "effect": "Decreases Damage Reduction by 5.",
     "snippet": "",
     "rules": [
       {
@@ -64,7 +64,9 @@
   "effects": [],
   "flags": {
     "ptu": {
-      "showInTokenPanel": false
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   }
 }
