@@ -2,7 +2,7 @@
   "name": "Tough Tumble Tank 2",
   "system": {
     "origin": "",
-    "effect": "Your Pokémon with at least 3d6 in their Tough Stat from Poffins may activate Tough Tumble as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\nRank 2: Glare, Bide",
+    "effect": "Your Pokémon with at least 3d6 in their Tough Stat from Poffins may activate Tough Tumble as a Standard Action to perform one of the following Moves. They must still follow frequency limits as usual for these Moves.\nRank 1: @UUID[Compendium.ptu.moves.Item.IRGZ3Cc7WrqjhF9u]{Scary Face}, @UUID[Compendium.ptu.moves.Item.7sMVSFGaJax6lWuM]{Spite}\nRank 2: @UUID[Compendium.ptu.moves.Item.VUD1mCjhImVmtttd]{Glare}, @UUID[Compendium.ptu.moves.Item.3vdmhkXenPgplUwb]{Bide}",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -36,7 +36,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -59,7 +60,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +72,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Expert Intimidate"
+      "prereqBackup": "Expert Intimidate",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -82,7 +88,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 55000000,
   "_id": "mDXTOGkuPSFVUmNn"
 }
