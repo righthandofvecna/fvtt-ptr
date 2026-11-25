@@ -63,14 +63,15 @@
     ],
     "notes": "",
     "free": false,
-    "class": ""
+    "class": "",
+    "repeatable": false
   },
   "effects": [],
   "flags": {
     "ptu": {
       "showInTokenPanel": false,
       "automationStatus": "needs-automation",
-      "devNote": ""
+      "devNote": "Remove in favor of Compendium.ptu.capabilities.Item.BvwoIQLgnqGjHwmW"
     }
   }
 }
