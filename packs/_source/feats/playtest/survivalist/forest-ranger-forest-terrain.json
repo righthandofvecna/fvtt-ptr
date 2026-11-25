@@ -61,7 +61,8 @@
     ],
     "notes": "",
     "free": false,
-    "class": ""
+    "class": "",
+    "repeatable": false
   },
   "effects": [],
   "flags": {

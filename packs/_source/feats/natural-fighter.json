@@ -2,14 +2,17 @@
   "name": "Natural Fighter",
   "system": {
     "origin": "",
-    "effect": "You and your Pokémon become adept at using the environment to your advantage in battle. You or your Pokémon may activate Natural Fighter as a Standard Action to use the Move below corresponding to the current terrain. You and your Pokémon must still follow all Frequency limitations for the Move.\n»» Grassland: Cotton Spore\n»» Forest: Grass Whistle\n»» Wetlands: Mud Slap\n»» Ocean: Aqua Ring\n»» Tundra: Haze\n»» Mountain: Smack Down\n»» Cave: Astonish\n»» Urban: Spikes\n»» Desert: Sand Attack.",
+    "effect": "You and your Pokémon become adept at using the environment to your advantage in battle. You or your Pokémon may activate Natural Fighter as a Standard Action to use the Move below corresponding to the current terrain. You and your Pokémon must still follow all Frequency limitations for the Move.\n»» Grassland: Cotton Spore\n»» Forest: Grass Whistle\n»» Wetlands: Mud Slap\n»» Ocean: Aqua Ring\n»» Tundra: Haze\n»» Mountain: Smack Down\n»» Cave: Astonish\n»» Urban: Spikes\n»» Desert: Sand Attack",
     "snippet": "",
     "rules": [
       {
         "key": "ActiveEffectLike",
         "mode": "add",
         "path": "system.modifiers.baseStats.hp.mod",
-        "value": 1
+        "value": 1,
+        "predicate": [],
+        "phase": "applyAEs",
+        "priority": null
       }
     ],
     "enabled": true,
@@ -44,7 +47,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -67,7 +71,9 @@
     "name": "Natural Fighter",
     "useCount": 0,
     "contentSet": "",
-    "replacesSlug": ""
+    "replacesSlug": "",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -77,7 +83,10 @@
   },
   "flags": {
     "ptu": {
-      "prereqBackup": "Survivalist"
+      "prereqBackup": "Survivalist",
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
     }
   },
   "_stats": {
@@ -90,7 +99,6 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "folder": null,
   "sort": 28900000,
   "_id": "QkOP4OTgu8H0zzsh"
 }

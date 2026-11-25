@@ -164,7 +164,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -186,7 +187,8 @@
     "name": "Survivalist [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "survivalist",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/class_feat_icon.png",
   "type": "feat",
@@ -200,7 +202,7 @@
   "flags": {
     "ptu": {
       "automationStatus": "needs-automation",
-      "devNote": "",
+      "devNote": "Currently no automation to add second, third, and fourth terrain types/Naturewalk",
       "showInTokenPanel": false
     }
   },

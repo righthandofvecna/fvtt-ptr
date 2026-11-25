@@ -2,7 +2,7 @@
   "name": "Wilderness Guide",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Wilderness Guide’s effect depends on your current terrain.\n» Grassland or Forest: All allies gain the Stealth Capability and a +2 bonus to their Overland Speed for one full round.\n» Ocean or Wetlands: All allies gain 5 Damage Reduction and a +2 bonus to their Swim Speed for one full round.\n» Desert or Tundra: All allies do not lose Hit Points from Weather and ignore any Evasion increases from foes' Abilities for one full round.\n» Mountain or Cave: All allies do not trigger Hazards and cannot be Blinded for one full round.\n» Urban: All allies gain +1 Evasion and a +2 bonus on Accuracy Rolls and Skill Checks to perform the Dirty Trick and Manipulate Combat Maneuvers for one full round.",
+    "effect": "Effect: Wilderness Guide’s effect depends on your current terrain.\n» Grassland or Forest: All allies gain the @UUID[Compendium.ptu.capabilities.Item.a1N1M1GMjMClaOdj]{Stealth} Capability and a +2 bonus to their Overland Speed for one full round.\n» Ocean or Wetlands: All allies gain 5 Damage Reduction and a +2 bonus to their Swim Speed for one full round.\n» Desert or Tundra: All allies do not lose Hit Points from Weather and ignore any Evasion increases from foes' Abilities for one full round.\n» Mountain or Cave: All allies do not trigger Hazards and cannot be @UUID[Compendium.ptu.effects.Item.g2QutQJutABxFIw6]{Blinded} for one full round.\n» Urban: All allies gain +1 Evasion and a +2 bonus on Accuracy Rolls and Skill Checks to perform the @UUID[Compendium.ptu.moves.Item.vINbKBHt2nQ7N37v]{Dirty Trick} and @UUID[Compendium.ptu.moves.Item.EHk6fkrj1wuCHnCX]{Manipulate} Combat Maneuvers for one full round.",
     "snippet": "",
     "rules": [
       {
@@ -49,7 +49,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": true,
@@ -71,7 +72,9 @@
     "class": "Survivalist",
     "name": "Wilderness Guide [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "wilderness-guide"
+    "replacesSlug": "wilderness-guide",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -84,7 +87,10 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "used": null
     }
   },
   "_stats": {
