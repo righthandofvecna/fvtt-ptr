@@ -63,7 +63,8 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "25NJNoqly3Vx4LiD",
   "effects": [],
@@ -85,6 +86,5 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  },
-  "folder": null
+  }
 }

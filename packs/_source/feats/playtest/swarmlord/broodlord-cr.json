@@ -1,8 +1,8 @@
 {
-  "name": "Broodlord [CR]",
+  "name": "Broodlord",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the following Ability based on your Embrace.\n- Arachnid’s Embrace: Tinted Lens\n- Monarch’s Embrace: Compound Eyes",
+    "effect": "Effect: You gain the following Ability based on your Embrace.\n- Arachnid’s Embrace: @UUID[Compendium.ptu.abilities.Item.cdumkKxEQ2R7sNiG]{Tinted Lens}\n- Monarch’s Embrace: @UUID[Compendium.ptu.abilities.Item.25NJNoqly3Vx4LiD]{Compound Eyes}",
     "snippet": "",
     "rules": [
       {
@@ -96,7 +96,7 @@
     ],
     "notes": "",
     "free": false,
-    "class": "Swarmlord [CR]",
+    "class": "Swarmlord",
     "name": "Broodlord [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "broodlord",
@@ -114,7 +114,7 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true,
+      "showInTokenPanel": false,
       "automationStatus": "needs-automation",
       "devNote": ""
     }

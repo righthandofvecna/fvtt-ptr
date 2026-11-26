@@ -84,7 +84,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "effects": [],
   "flags": {
@@ -103,7 +104,6 @@
       "ReplacementItemFlag": ""
     }
   },
-  "folder": null,
   "_stats": {
     "coreVersion": "14.367",
     "systemId": null,
