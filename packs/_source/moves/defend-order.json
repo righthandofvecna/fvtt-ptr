@@ -83,7 +83,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "effects": [],
   "flags": {
@@ -94,7 +95,6 @@
     }
   },
   "_id": "7hrNCJ06sxq0OB9q",
-  "folder": null,
   "_stats": {
     "coreVersion": "14.367",
     "systemId": "ptu",

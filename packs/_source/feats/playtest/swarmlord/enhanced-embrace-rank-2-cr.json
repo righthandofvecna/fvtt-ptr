@@ -1,8 +1,8 @@
 {
-  "name": "Enhanced Embrace Rank 2 [CR]",
+  "name": "Enhanced Embrace Rank 2",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Learn three Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen.\nRank 1: Defend Order (None), Fell Stinger (Arachnid’s Embrace), Fury Cutter (None), Rage Powder (Monarch’s Embrace), Rolling Fog (None), Struggle Bug (Monarch’s Embrace), Sticky Web (Arachnid’s Embrace)\nRank 2: Attack Order (Arachnid’s Embrace), Heal Order (Monarch's Embrace), Infestation (None), Powder (Monarch’s Embrace), Signal Beam (None), Steamroller (None), Spider Web (Arachnid’s Embrace)\nRank 3: Bug Buzz (None), Leech Life (Arachnid’s Embrace), Lunge (None), Megahorn (None), Pollen Puff (Monarch’s Embrace), Quiver Dance (Monarch’s Embrace), Skitter Smack (Arachnid’s Embrace)",
+    "effect": "Effect: Learn three Moves from the list below at the Rank of Enhanced Embrace you are taking or lower. Moves marked with an Embrace require that Embrace to be chosen.\nRank 1: @UUID[Compendium.ptu.moves.Item.7hrNCJ06sxq0OB9q]{Defend Order} (None), @UUID[Compendium.ptu.moves.Item.RjTMjxxZSdIu2xZL]{Fell Stinger} (Arachnid’s Embrace), @UUID[Compendium.ptu.moves.Item.4W8tzNRKdmn0WRYd]{Fury Cutter} (None), @UUID[Compendium.ptu.moves.Item.fM5WQyilyABYub1f]{Rage Powder} (Monarch’s Embrace), @UUID[Compendium.ptu.moves.Item.8LmPzewqrpdkMjcr]{Rolling Fog} (None), @UUID[Compendium.ptu.moves.Item.Hm5nTF5Wh5UusvYM]{Struggle Bug} (Monarch’s Embrace), @UUID[Compendium.ptu.moves.Item.vOj9bt7G9I4GixBZ]{Sticky Web} (Arachnid’s Embrace)\nRank 2: @UUID[Compendium.ptu.moves.Item.Vw24aXumiUVNg0CF]{Attack Order} (Arachnid’s Embrace), @UUID[Compendium.ptu.moves.Item.KSxmShLI0Gh8slev]{Heal Order} (Monarch's Embrace), @UUID[Compendium.ptu.moves.Item.trOCAfV84TLLTKk0]{Infestation} (None), @UUID[Compendium.ptu.moves.Item.oY92cZyfclUEtNVa]{Powder} (Monarch’s Embrace), @UUID[Compendium.ptu.moves.Item.XkVx9ch1TmBWwuwP]{Signal Beam} (None), @UUID[Compendium.ptu.moves.Item.z3qJIXk0WLYv9NqA]{Steamroller} (None), @UUID[Compendium.ptu.moves.Item.cVvKcL3mPp6NRRPG]{Spider Web} (Arachnid’s Embrace)\nRank 3: @UUID[Compendium.ptu.moves.Item.e6iWUraE813j6eXu]{Bug Buzz} (None), @UUID[Compendium.ptu.moves.Item.IqR2d6OPYZMNbYYl]{Leech Life} (Arachnid’s Embrace), @UUID[Compendium.ptu.moves.Item.GVdOLqamIf4d7wJU]{Lunge} (None), @UUID[Compendium.ptu.moves.Item.StGpIzCBfyxbhlSv]{Megahorn} (None), @UUID[Compendium.ptu.moves.Item.GFnHPgKrM7fZd7LX]{Pollen Puff} (Monarch’s Embrace), @UUID[Compendium.ptu.moves.Item.pn6JmfHRLpLv3rMe]{Quiver Dance} (Monarch’s Embrace), @UUID[Compendium.ptu.moves.Item.xSWKEGt7GbGNhXw8]{Skitter Smack} (Arachnid’s Embrace)",
     "snippet": "",
     "rules": [
       {
@@ -465,10 +465,7 @@
             ]
           }
         ],
-        "allowedDrops": {
-          "label": "",
-          "predicate": []
-        }
+        "allowedDrops": null
       },
       {
         "key": "GrantItem",
@@ -525,11 +522,11 @@
     },
     "prerequisites": [
       "Adept Command or Survival",
-      "Enhanced Embrace Rank 1 [CR]"
+      "Enhanced Embrace Rank 1"
     ],
     "notes": "",
     "free": false,
-    "class": "Swarmlord [CR]",
+    "class": "Swarmlord",
     "name": "Enhanced Embrace [CR]Rank 1 [CR]",
     "contentSet": "class-rework",
     "replacesSlug": "enhanced-embrace-rank-2",
@@ -546,7 +543,7 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true,
+      "showInTokenPanel": false,
       "automationStatus": "completed",
       "devNote": ""
     }

@@ -72,7 +72,8 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "effects": [],
   "flags": {
@@ -105,6 +106,5 @@
   "sort": 0,
   "ownership": {
     "default": 0
-  },
-  "folder": null
+  }
 }

@@ -75,7 +75,8 @@
     "stab": false,
     "damageBonus": 0,
     "isStruggle": false,
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "_id": "oY92cZyfclUEtNVa",
   "effects": [],
@@ -92,7 +93,5 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  },
-  "folder": null,
-  "flags": {}
+  }
 }
