@@ -2,7 +2,7 @@
   "name": "Pain Resistance",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Trigger - Your Pokémon with 1 or more injuries takes Damage\nEffect: Your Pokémon gains X Damage Reduction against the triggering attack, where X is its Tick Value multiplied by the number of Injuries it has. This may be triggered once per Scene per Pokémon.",
+    "effect": "Trigger: Your Pokémon with 1 or more injuries takes Damage\nEffect: Your Pokémon gains X Damage Reduction against the triggering attack, where X is its Tick Value multiplied by the number of Injuries it has. This may be triggered once per Scene per Pokémon.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,7 +62,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "friendship-spirit",
-    "replacesSlug": "pain-resistance"
+    "replacesSlug": "pain-resistance",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +72,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Taskmaster, Adept Intimidate"
+      "prereqBackup": "Taskmaster, Adept Intimidate",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

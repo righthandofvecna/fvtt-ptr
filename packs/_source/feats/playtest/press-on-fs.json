@@ -2,7 +2,7 @@
   "name": "Press On!",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Your Hardened Pokemon gain the following benefits, based on your Intimidate Rank\n»» Expert: When your Pokémon would Faint, you may pay 1 AP. If you do, your Pokémon does not Faint, has their HP set to 1, and then they gain 3 Ticks of HP. This may only be used once per Scene per Pokémon.\n»» Master: After you trigger the Expert Effect of Press On!, your Pokémon’s Critical Hit, Effect Range, Evasion, Initiative, Damage Reduction, and Resistance Bonuses from being Hardened are doubled until they Faint or the Scene ends.",
+    "effect": "Your @UUID[Compendium.ptu.references.Item.kKTs3eOXh8g9NAUY]{Hardened} Pokemon gain the following benefits, based on your Intimidate Rank\n»» Expert: When your Pokémon would Faint, you may pay 1 AP. If you do, your Pokémon does not Faint, has their HP set to 1, and then they gain 3 Ticks of HP. This may only be used once per Scene per Pokémon.\n»» Master: After you trigger the Expert Effect of Press On!, your Pokémon’s Critical Hit, Effect Range, Evasion, Initiative, Damage Reduction, and Resistance Bonuses from being Hardened are doubled until they Faint or the Scene ends.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,7 +62,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "friendship-spirit",
-    "replacesSlug": "press-on"
+    "replacesSlug": "press-on",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +72,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Taskmaster, Expert Intimidate"
+      "prereqBackup": "Taskmaster, Expert Intimidate",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

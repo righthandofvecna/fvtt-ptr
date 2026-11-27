@@ -2,7 +2,7 @@
   "name": "Savage Strike",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Target: Your Pokémon with at least 2 Tutor Points\nEffect: The target loses 2 Tutor Points, and gains the Cruelty Ability.\nBonus: Master Intimidate: All your Pokemon Cruelty abilities gain: When you trigger Cruelty, the target gains 1 Weary.",
+    "effect": "Target: Your Pokémon with at least 1 Tutor Slot\nEffect: The target loses 1 Tutor Slot, and gains the @UUID[Compendium.ptu.abilities.Item.6XpwCLUT2uMAN0aM]{Cruelty} Ability.\nBonus: Master Intimidate: All your Pokémon Cruelty abilities gain: When you trigger Cruelty, the target gains 1 Weary.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,7 +61,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "friendship-spirit",
-    "replacesSlug": "savage-strike"
+    "replacesSlug": "savage-strike",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +71,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Taskmaster"
+      "prereqBackup": "Taskmaster",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
