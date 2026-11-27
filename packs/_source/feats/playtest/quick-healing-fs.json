@@ -2,7 +2,7 @@
   "name": "Quick Healing",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Your Hardened Pokémon may use Quick Healing to remove up to three injuries, and gains two Ticks of Hit Points for each Injury removed this way.",
+    "effect": "Your @UUID[Compendium.ptu.references.Item.kKTs3eOXh8g9NAUY]{Hardened} Pokémon may use Quick Healing to remove up to three injuries, and gains two Ticks of Hit Points for each Injury removed this way.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -60,7 +61,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "friendship-spirit",
-    "replacesSlug": "quick-healing"
+    "replacesSlug": "quick-healing",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -68,7 +71,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Taskmaster"
+      "prereqBackup": "Taskmaster",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {

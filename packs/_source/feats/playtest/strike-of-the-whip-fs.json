@@ -2,7 +2,7 @@
   "name": "Strike of the Whip",
   "system": {
     "origin": "[F&S Playtest]",
-    "effect": "Trigger - You use Press\nEffect: You may apply 1 or more of the following effects to the Pokémon hit by Press:\n»» Give the target 1 Injury and a Tick of Temporary Hit Points.\n»» Spend 1 AP and cure the target of Confusion, Infatuation, Rage, and Suppression.\n»» Use an [Orders] with targets you have on the target as a Free Action.\n»» If the target is Weary, the target gains +1 temporary Spirit that can be spent as if not Weary.",
+    "effect": "Trigger: You use @UUID[Compendium.ptu.feats.Item.Q3fvI2MadGEPL0ag]{Press}\nEffect: You may apply 1 or more of the following effects to the Pokémon hit by Press:\n»» Give the target 1 Injury and a Tick of Temporary Hit Points.\n»» Spend 1 AP and cure the target of @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confusion}, @UUID[Compendium.ptu.effects.Item.ABTHN2VM50VQabZq]{Infatuation}, @UUID[Compendium.ptu.effects.Item.XWqLLq9Vb9h0eZwh]{Rage}, and @UUID[Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY]{Suppression}.\n»» Use an [Orders] with targets you have on the target as a Free Action.\n»» If the target is Weary, the target gains +1 temporary Spirit that can be spent as if not Weary.",
     "snippet": "",
     "rules": [],
     "enabled": true,
@@ -37,7 +37,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -61,7 +62,9 @@
     "useCount": 0,
     "automation": [],
     "contentSet": "friendship-spirit",
-    "replacesSlug": "strike-of-the-whip"
+    "replacesSlug": "strike-of-the-whip",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "type": "feat",
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
@@ -69,7 +72,9 @@
   "flags": {
     "ptu": {
       "showInTokenPanel": true,
-      "prereqBackup": "Taskmaster, Press"
+      "prereqBackup": "Taskmaster, Press",
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
