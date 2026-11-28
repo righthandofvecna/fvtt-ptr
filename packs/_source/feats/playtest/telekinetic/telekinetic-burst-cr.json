@@ -2,7 +2,7 @@
   "name": "Telekinetic Burst",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: Choose one of the following effects to activate:\n- You perform a Disarm, Trip, or Push Maneuver using your Telekinetic Capability, with a bonus of half of your Focus Rank to the roll.\n- Your Levitate Speed increases by half of your Focus Rank until your next turn.\n- The range of your Interference Ability increases to 5 meters, and its effect lasts for 2 rounds, rather than 1.",
+    "effect": "Effect: Choose one of the following effects to activate:\n- You perform a @UUID[Compendium.ptu.moves.Item.h0slhD40dRasSRXj]{Disarm}, @UUID[Compendium.ptu.moves.Item.wF3ORK20xylO1ZGs]{Trip}, or @UUID[Compendium.ptu.moves.Item.79nCOdXheYY2AXTB]{Push}Maneuver using your @UUID[Compendium.ptu.capabilities.Item.bYwetISXI1HZMl3M]{Telekinetic} Capability, with a bonus of half of your Focus Rank to the roll.\n- Your @UUID[Compendium.ptu.abilities.Item.WsNZitOqUrhu9k78]{Levitate} Speed increases by half of your Focus Rank until your next turn.\n- The range of your @UUID[Compendium.ptu.abilities.Item.NGesozzcq6yYzALH]{Interference} Ability increases to 5 meters, and its effect lasts for 2 rounds, rather than 1.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -69,7 +70,9 @@
     "class": "Telekinetic",
     "name": "Telekinetic Burst [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "telekinetic-burst"
+    "replacesSlug": "telekinetic-burst",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -80,7 +83,13 @@
   "ownership": {
     "default": 0
   },
-  "flags": {},
+  "flags": {
+    "ptu": {
+      "automationStatus": "needs-automation",
+      "devNote": "",
+      "showInTokenPanel": true
+    }
+  },
   "_stats": {
     "systemId": "ptu",
     "systemVersion": "4.4.3.16",

@@ -2,7 +2,7 @@
   "name": "Psionic Overload",
   "system": {
     "origin": "Class Rework",
-    "effect": "Trigger: You hit with a Damaging Telekinetic Move or use another Telekinetic Move\nEffect: The effect of this Feature depends on the Triggering Move.\n- Barrier: Place 2 additional segments of Barrier, and you may place the Barriers anywhere within 6 meters of yourself. They do not need to remain contiguous, nor does one segment have to touch you.\n- Kinesis: The user of the triggering attack becomes Confused and Suppressed.\n- Meditate: You gain +1 Defense, Special Attack, and Special Defense Combat Stages.\n- Psychic: The target becomes Vulnerable for one full round, and may be Pushed 2 additional meters.\n- Telekinesis: At the end of each turn that the target remains Lifted, they lose a Tick of Hit Points.\n- Twin Beam: You may use of Twin Beam again, ignoring Frequency, against the same or another target in range, although this use of Twin Beam lacks the \"Double Strike\" keyword.",
+    "effect": "Trigger: You hit with a Damaging Telekinetic Move or use another Telekinetic Move\nEffect: The effect of this Feature depends on the Triggering Move.\n- @UUID[Compendium.ptu.moves.Item.dwKfen4bsSh3Q640]{Barrier}: Place 2 additional segments of Barrier, and you may place the Barriers anywhere within 6 meters of yourself. They do not need to remain contiguous, nor does one segment have to touch you.\n- @UUID[Compendium.ptu.moves.Item.8SwtCsUUCbHbGWo6]{Kinesis}: The user of the triggering attack becomes @UUID[Compendium.ptu.effects.Item.pLKjxFPUOZQHAcXH]{Confused} and @UUID[Compendium.ptu.effects.Item.uxkB2vhF5HGjQAZY]{Suppressed}.\n- @UUID[Compendium.ptu.moves.Item.URD2vV0dvN5vhbsK]{Meditate}: You gain +1 Defense, Special Attack, and Special Defense Combat Stages.\n- @UUID[Compendium.ptu.moves.Item.mw0PcwRSYEbxYyWs]{Psychic}: The target becomes @UUID[Compendium.ptu.effects.Item.wqzPWKMbwvOWLVoI]{Vulnerable} for one full round, and may be Pushed 2 additional meters.\n- @UUID[Compendium.ptu.moves.Item.tNexDVIwrtPBsV0u]{Telekinesis}: At the end of each turn that the target remains Lifted, they lose a Tick of Hit Points.\n- @UUID[Compendium.ptu.moves.Item.Ad8f7gyjwE4CR0GJ]{Twin Beam}: You may use of Twin Beam again, ignoring Frequency, against the same or another target in range, although this use of Twin Beam lacks the \"Double Strike\" keyword.",
     "snippet": "",
     "rules": [
       {
@@ -48,7 +48,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -70,7 +71,9 @@
     "class": "Telekinetic",
     "name": "Psionic Overload [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "psionic-overload"
+    "replacesSlug": "psionic-overload",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -83,7 +86,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": true,
+      "automationStatus": "needs-automation",
+      "devNote": ""
     }
   },
   "_stats": {
