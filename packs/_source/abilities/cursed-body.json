@@ -54,7 +54,8 @@
     "automation": [],
     "contentSet": "",
     "replacesSlug": "",
-    "leagueLegal": false
+    "leagueLegal": false,
+    "tutorSlotCost": 0
   },
   "_id": "eq6HX7kv2a2Fo51U",
   "effects": [],
@@ -72,5 +73,5 @@
     "duplicateSource": null,
     "exportSource": null
   },
-  "flags": {}
+  "folder": null
 }

@@ -32,13 +32,14 @@
             }
           }
         ],
+        "flag": "hexmaniac",
         "adjustName": false
       },
       {
         "key": "GrantItem",
         "predicate": [],
         "allowDuplicate": false,
-        "uuid": "{item|flags.ptu.rulesSelections.hexManiacCR}"
+        "uuid": "{item|flags.ptu.rulesSelections.hexmaniac}"
       }
     ],
     "enabled": true,
