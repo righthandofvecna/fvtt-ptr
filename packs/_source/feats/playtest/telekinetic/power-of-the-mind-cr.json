@@ -2,7 +2,7 @@
   "name": "Power of the Mind",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You gain the Interference and Levitate Abilities.",
+    "effect": "Effect: You gain the @UUID[Compendium.ptu.abilities.Item.NGesozzcq6yYzALH]{Interference} and @UUID[Compendium.ptu.abilities.Item.WsNZitOqUrhu9k78]{Levitate} Abilities.",
     "snippet": "",
     "rules": [
       {
@@ -60,7 +60,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -81,7 +82,9 @@
     "class": "Telekinetic",
     "name": "Power of the Mind [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "power-of-the-mind"
+    "replacesSlug": "power-of-the-mind",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -94,7 +97,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {

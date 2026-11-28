@@ -79,7 +79,8 @@
     },
     "leagueLegal": false,
     "tier": "",
-    "automation": []
+    "automation": [],
+    "tutorSlotCost": 0
   },
   "_id": "WsNZitOqUrhu9k78",
   "effects": [],
@@ -103,5 +104,6 @@
     "lastModifiedBy": "ptubuilder000000",
     "duplicateSource": null,
     "exportSource": null
-  }
+  },
+  "folder": null
 }

@@ -2,7 +2,7 @@
   "name": "PK Omega",
   "system": {
     "origin": "Class Rework",
-    "effect": "Effect: You learn the Moves Psychic, Telekinesis, and Twin Beam.",
+    "effect": "Effect: You learn the Moves @UUID[Compendium.ptu.moves.Item.mw0PcwRSYEbxYyWs]{Psychic}, @UUID[Compendium.ptu.moves.Item.tNexDVIwrtPBsV0u]{Telekinesis}, and @UUID[Compendium.ptu.moves.Item.Ad8f7gyjwE4CR0GJ]{Twin Beam}.",
     "snippet": "",
     "rules": [
       {
@@ -66,7 +66,8 @@
         "priority": false,
         "reaction": false,
         "interrupt": false
-      }
+      },
+      "ppCost": null
     },
     "actionCost": {
       "standard": false,
@@ -79,13 +80,18 @@
       "cost": 0,
       "bind": false
     },
-    "prerequisites": [],
+    "prerequisites": [
+      "PK Alpha",
+      "Expert Focus"
+    ],
     "notes": "",
     "free": false,
     "class": "Telekinetic",
     "name": "PK Omega [CR]",
     "contentSet": "class-rework",
-    "replacesSlug": "pk-omega"
+    "replacesSlug": "pk-omega",
+    "leagueLegal": false,
+    "repeatable": false
   },
   "img": "/systems/ptu/static/css/images/icons/feat_icon.png",
   "type": "feat",
@@ -98,7 +104,9 @@
   },
   "flags": {
     "ptu": {
-      "showInTokenPanel": true
+      "showInTokenPanel": false,
+      "automationStatus": "completed",
+      "devNote": ""
     }
   },
   "_stats": {
